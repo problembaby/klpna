@@ -1,0 +1,27 @@
+@import url('./setting/root.css');  /** 루트 */
+@import url('./setting/common.css'); /** 공통 */
+@import url('./setting/board.css'); /** 게시판 */ 
+
+
+.main-container .inner{padding-top: 2rem}
+
+
+
+/** 노트북 */
+@media (max-width: 1440px) {
+}
+
+/** 테블릿 */
+@media (max-width: 1023px) {
+}
+
+/** 모바일 */
+@media (max-width: 767px) {
+}
+
+@media (max-width: 479px) {
+}
+
+@media (max-width: 320px) {
+}
+

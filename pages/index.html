@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+    
+    <!-- css -->
+     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+ <!--  <link rel="stylesheet" href="../resources/krds/css/component/output.css" /> -->
+    <link rel="stylesheet" href="../resources/krds/scss/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+
+    <!--js-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../resources/krds/js/component/ui-script.js"></script>
+    <script defer src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
+    
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <!-- Header 로드 영역 -->
+      <header id="header"></header>
+      
+      <div id="container" class="main-container">
+  
+        <!-- 컨텐츠 영역 -->
+        <div class="inner">
+          컨텐츠 영역
+
+          <a href="/resources/krds/html/code/taglib.html" target="_blank" class="krds-btn medium">컴포넌트 이동</a>
+          <a href="/resources/krds/html/sample/sample_main.html" target="_blank" class="krds-btn medium">메인 default 이동</a>
+          <a href="/resources/krds/html/sample/sample_main2.html" target="_blank" class="krds-btn medium">메인 샘플2 이동</a>
+          <a href="/resources/krds/html/sample/sample_main3.html" target="_blank" class="krds-btn medium">메인 샘플3 이동</a>
+          <a href="/resources/krds/html/sample/sample_main4.html" target="_blank" class="krds-btn medium">메인 샘플4 이동</a>
+        </div>
+        <!-- //컨텐츠 영역 -->
+      </div>
+  
+      <!-- Footer 로드 영역 -->
+      <footer id="footer"></footer>
+    </div>
+
+  </body>
+</html>
+
+
+
+<script>
+      $(document).ready(function() {
+        // 공통로드 파일 
+        // 퍼블리싱에서만 사용 개발단엔 삭제
+        $('#header').load('../pages/common/header.html');
+        $('#footer').load('../pages/common/footer.html');
+      });
+    </script>
