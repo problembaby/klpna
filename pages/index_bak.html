@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/resources/css/style.css" />
 
     <!--js-->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/resources/js/jquery-3.7.1.min.js"></script>
     <script src="/resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
     <script src="/resources/krds/js/component/ui-script.js" defer></script>
     <script src="/resources/krds/js/pattern/pattern.js" defer></script>
@@ -21,8 +21,7 @@
   </head>
   <body>
     <div id="wrap">
-      <!-- Header 로드 영역 -->
-      <header id="header"></header>
+      <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
       
 
       <!-- 컨테이너 영역 -->
@@ -41,8 +40,7 @@
       </div>
       <!-- // 컨테이너 영역 -->
   
-      <!-- Footer 로드 영역 -->
-      <footer id="footer"></footer>
+      <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
     </div>
 
   </body>
@@ -51,13 +49,35 @@
 
 
 <script>
-  // 공통로드 파일 
-  // 퍼블리싱에서만 사용, 개발단에선 삭제
-$(document).ready(function () {
-  $('#header').load('/pages/common/header_pubSample.html', function() {
-    initializeCommonScripts();
+
+  // 퍼블리싱 단에만 사용하는 공통 스크립트
+  // 개발에서는 절대 사용하지 말것!
+
+  document.addEventListener("DOMContentLoaded", function () {
+    loadHTML("/pages/common/header_pubSample.html", "beforebegin");
+    loadHTML("/pages/common/footer_pubSample.html", "afterend");
   });
-  $('#footer').load('/pages/common/footer_pubSample.html');
+
+  function loadHTML(url, position) {
+    fetch(url)
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          console.error(`Failed to load ${url}: ${response.status}`);
+          return "";
+        }
+      })
+      .then((html) => {
+        if (position === "beforebegin") {
+          document.body.insertAdjacentHTML("afterbegin", html);
+          initializeCommonScripts();
+        } else if (position === "afterend") {
+          document.body.insertAdjacentHTML("beforeend", html);
+        }
+      })
+      .catch((error) => console.error("Error loading HTML:", error));
+  }
 
   function initializeCommonScripts() {
     // 메뉴 스크립트 초기화
@@ -71,6 +91,4 @@ $(document).ready(function () {
       });
     }
   }
-});
-
 </script>
