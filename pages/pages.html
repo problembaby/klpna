@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>퍼블리싱 페이지 목록 - 간호조무사협회</title>
 
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+
+    <!--폰트 pretendard-->
+    <link rel="stylesheet" as="style" crossorigin href="/resources/css/fonts/pretendard-gov.css" />
     
     <!-- css -->
-     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
- <!--  <link rel="stylesheet" href="../resources/krds/css/component/output.css" /> -->
-    <link rel="stylesheet" href="../resources/krds/scss/component/output.css" />
-    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
-    <link rel="stylesheet" href="../resources/css/style.css" />
+     <link rel="stylesheet" href="/resources/krds/css/plugin/swiper-bundle.min.css">
+ <!--  <link rel="stylesheet" href="/resources/krds/css/component/output.css" /> -->
+    <link rel="stylesheet" href="/resources/krds/scss/component/output.css" />
+    <link rel="stylesheet" href="/resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
 
 
     <!--js-->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
-    <script defer src="../resources/krds/js/component/ui-script.js"></script>
-    <script defer src="../resources/krds/js/pattern/pattern.js"></script>
-    <script src="../resources/js/script.js"></script>
+    <script src="/resources/js/jquery-3.7.1.min.js"></script>
+    <script src="/resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="/resources/krds/js/component/ui-script.js"></script>
+    <script defer src="/resources/krds/js/pattern/pattern.js"></script>
+    <script src="/resources/js/script.js"></script>
     
     <style>
         #wrap{
@@ -36,6 +38,9 @@
         }
 
         section{margin-top: 20px;}
+        .table td, .table th {
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +48,7 @@
     
     
     <div id="wrap">
-    <h1>간호조무사협회 퍼블리싱 리스트</h1>
+    <h1>대표홈페이지 퍼블리싱 리스트</h1>
     <section class="">
         <h2>컴포넌트</h2>
         <div class="pageList">
@@ -74,7 +79,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <tr >
                     <th scope="row" class="row-number"></th>
                     <td></td>
                     <td></td>
@@ -128,7 +133,7 @@
                     <td>메인</td>
                     <td><a href="/pages/index.html" target="_blank"></a></td>
                     <td>Y</td>
-                    <td></td>
+                    <td>헤더/푸터 html에 같이 있음</td>
                 </tr>
                 <tr>
                     <th scope="row" class="row-number"></th>
@@ -158,7 +163,7 @@
     </section>
 
         <section class="">
-        <h2>메인</h2>
+        <h2>서브</h2>
         <div class="pageList">
             <table class="table table-hover">
                 <caption>퍼블리싱 목록</caption>
@@ -223,6 +228,9 @@
         updateRowNumbers();
         updateLinkText();
 
+    });
+    
+
         // 테이블의 행 번호 업데이트
         function updateRowNumbers() {
             $('section .pageList').each(function() {
@@ -239,8 +247,6 @@
                 $(this).text(href);
             })
         }
-    });
-    
     </script>
 </body>
 </html>
