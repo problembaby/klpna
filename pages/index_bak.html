@@ -24,6 +24,8 @@
       <!-- Header 로드 영역 -->
       <header id="header"></header>
       
+
+      <!-- 컨테이너 영역 -->
       <div id="container" class="main-container">
         
         <!-- 컨텐츠 영역 -->
@@ -37,6 +39,7 @@
         </div>
         <!-- //컨텐츠 영역 -->
       </div>
+      <!-- // 컨테이너 영역 -->
   
       <!-- Footer 로드 영역 -->
       <footer id="footer"></footer>
@@ -51,10 +54,10 @@
   // 공통로드 파일 
   // 퍼블리싱에서만 사용, 개발단에선 삭제
 $(document).ready(function () {
-  $('#header').load('/pages/common/header.html', function() {
+  $('#header').load('/pages/common/header_pubSample.html', function() {
     initializeCommonScripts();
   });
-  $('#footer').load('/pages/common/footer.html');
+  $('#footer').load('/pages/common/footer_pubSample.html');
 
   function initializeCommonScripts() {
     // 메뉴 스크립트 초기화
