@@ -1,0 +1,152 @@
+/**------------------------------------------
+버튼색상 정의
+--------------------------------------------*/
+
+.krds-btn.primary {
+    background-color: #256EF4;
+    border-color: #007bff;
+    color: var(--krds-button--color-primary-text);
+}
+
+
+.krds-btn.primary:hover {
+    background-color: #0048B7;
+}
+
+.krds-btn.primary:active,
+.krds-btn.primary:focus {
+    background-color: #003A92;
+}
+
+.krds-btn.primary[disabled],
+.krds-btn.primary.disabled {
+    background-color: var(--krds-button--color-primary-fill-disabled);
+    border-color: var(--krds-button--color-primary-border-disabled);
+    color: var(--krds-button--color-primary-text-disabled);
+}
+
+.krds-btn.primary[disabled]:not(.icon) .svg-icon,
+.krds-btn.primary.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-primary-text-disabled);
+}
+
+.krds-btn.primary[disabled]:hover,
+.krds-btn.primary.disabled:hover {
+    background-color: var(--krds-button--color-primary-fill-disabled);
+    border-color: var(--krds-button--color-primary-border-disabled);
+    color: var(--krds-button--color-primary-text-disabled);
+}
+
+
+.krds-btn.secondary {
+    background-color: #0AF;
+    border-color: #0091D9;
+    color: #fff;
+}
+
+.krds-btn.secondary:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.secondary:hover {
+    background-color: #0091D9;
+}
+
+.krds-btn.secondary:active,
+.krds-btn.secondary:focus {
+    background-color: #0079B5;
+}
+
+.krds-btn.secondary[disabled],
+.krds-btn.secondary.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.secondary[disabled]:not(.icon) .svg-icon,
+.krds-btn.secondary.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.secondary[disabled]:hover,
+.krds-btn.secondary.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.btn-bg-gray {
+    background-color: #666666;
+    color: #fff
+}
+
+.btn-bg-gray:hover,
+.btn-bg-gray:focus {
+    background-color: #555555;
+    color: #fff
+}
+
+
+.krds-btn.quaternary {
+    background-color: #666;
+    border-color: #666;
+    color: #fff;
+}
+
+.krds-btn.quaternary:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.quaternary:hover {
+    background-color: #444;
+}
+
+.krds-btn.quaternary:active,
+.krds-btn.quaternary:focus {
+    background-color: #252525;
+}
+
+.krds-btn.quaternary[disabled],
+.krds-btn.quaternary.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.quaternary[disabled]:not(.icon) .svg-icon,
+.krds-btn.quaternary.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.quaternary[disabled]:hover,
+.krds-btn.quaternary.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+
+/**-------------------------------------------
+탭 스타일 정의  
+--------------------------------------------*/
+
+.tab.line.full .btn-tab {
+    border: 0;
+    border-bottom: 2px solid #B1B8BE;
+}
+
+.tab.line .active .btn-tab {
+    color: #0050CA;
+}
+
+.tab.line .btn-tab:before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    width: 0;
+    height: 0.4rem;
+    background-color: #0050CA;
+    transition: var(--krds-transition-base);
+}

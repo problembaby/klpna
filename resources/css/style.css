@@ -1,5 +1,7 @@
 @import url('./setting/root.css');  /** 루트 */
 @import url('./setting/common.css'); /** 공통 */
+@import url('./setting/layout.css'); /** 컴포넌트 */ 
+@import url('./setting/component.css'); /** 컴포넌트 */ 
 @import url('./setting/board.css'); /** 게시판 */ 
 
 
@@ -18,31 +20,36 @@
   width: 38px; 
   height: 38px; 
   border-radius: 50%;
-  border:2px solid #DDDDDD; 
+  border:1px solid #DDDDDD; 
+}
+.icon-bg-round:hover, .icon-bg-round:focus {
+    background-color: var(--krds-breadcrumb--color-action-hover);
 }
 
-/* .krds-side-navigation .lnb-list .lnb-item .lnb-btn.selected {
-    color: #FFF;
-    border-radius: 20px 0px;
-    background: linear-gradient(90deg, #0065FF 0%, #003CFF 100%);
-  }
-
-  .krds-side-navigation .lnb-list > li > .lnb-btn.selected::before {
-  display: inline-flex;
-  content: "";
-  position: absolute;
-  bottom: -0.1rem;
-  left: 0%;
-  width: 0;
-  height: 0;
-  background-color: var(--krds-side-navigation--color-border-selected);
-  transition: var(--krds-transition-base);
+.krds-breadcrumb-wrap .breadcrumb .home .txt::before {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    content: "";
+    display: inline-flex;
+    width: var(--krds-icon--size-small);
+    height: var(--krds-icon--size-small);
+    background-color: #0050CA;
+    forced-color-adjust: none;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    -webkit-mask-image: url(../img/icon/home.svg);
+    mask-image: url(../img/icon/home.svg);
 }
 
-.krds-side-navigation .lnb-list .lnb-item.active {
-    border-bottom: 0;
-}
- */
+.breadcrumb-action{display: flex; gap:5px}
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {

@@ -230,33 +230,30 @@
         </div>   
     </section>
 
-
-    
 </div>
 
     <script>
-        $(document).ready(function() {
+    $(document).ready(function() {
         updateRowNumbers();
         updateLinkText();
 
     });
     
-
-        // 테이블의 행 번호 업데이트
-        function updateRowNumbers() {
-            $('section .pageList').each(function() {
-                $(this).find('tr').each(function(index){
-                    $(this).find('.row-number').text(index);
-                });
+    // 테이블의 행 번호 업데이트
+    function updateRowNumbers() {
+        $('section .pageList').each(function() {
+            $(this).find('tr').each(function(index){
+                $(this).find('.row-number').text(index);
             });
-        }
+        });
+    }
 
-        // 링크 텍스트를 href 속성으로 업데이트
-        function updateLinkText(){
-            $(".pageList a").each(function(){
-                const href = $(this).attr('href');
-                $(this).text(href);
-            })
+    // 링크 텍스트를 href 속성으로 업데이트
+    function updateLinkText(){
+        $(".pageList a").each(function(){
+            const href = $(this).attr('href');
+            $(this).text(href);
+        })
         }
     </script>
 </body>

@@ -1,0 +1,14 @@
+#krds-header .header-container .btn-navi {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: var(--krds-header--navi-gap);
+    min-height: var(--krds-header--navi-min-height);
+    padding: var(--krds-header--navi-padding);
+    border-radius: var(--krds-header--navi-border-radius);
+    font-size: var(--krds-header--navi-font-size-pc);
+    font-weight: var(--krds-font-weight-bold);
+    color: var(--krds-header--navi-color-text);
+    transition: var(--krds-transition-base);
+}
