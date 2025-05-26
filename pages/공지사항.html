@@ -36,7 +36,8 @@
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item active">
-                            <button type="button" class="lnb-btn active selected" aria-controls="lnbmenu-gbjkpo6">공지사항</button>
+                            <button type="button" class="lnb-btn active selected"
+                                aria-controls="lnbmenu-gbjkpo6">공지사항</button>
                         </li>
                         <li class="lnb-item">
                             <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-enuuwvl"
@@ -107,6 +108,7 @@
                         </ol>
                     </nav>
                     <!-- breadcrumb -->
+
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
                         <h1 class="h-tit">공지사항</h1>
@@ -114,36 +116,30 @@
                     <!-- //페이지 타이틀 영역 -->
 
                     <!-- 검색 입력폼 -->
-                    <fieldset class="bbs-search-wrap">
-                        <div class="search-top-box">
-                            <div class="form-col-group">
-                                <div class="form-group">
-                                    <div class="sch-form-wrap">
-                                        <div class="sch-select select-style">
-                                            <select class="krds-form-select" title="선택" id="ntt-type">
-                                                <option value="">전체</option>
-                                                <option value="">제목</option>
-                                            </select>
-                                        </div>
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                            <option value="">전체</option>
+                                            <option value="">제목</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="sch-form-wrap">
-                                        <div class="sch-input">
-                                            <input type="text" id="search-wrd" class="krds-input"
-                                                placeholder="검색어를 입력하세요." title="키워드 입력">
-                                            <button type="button" class="krds-btn medium icon ico-search btn-exec"
-                                                id="btn-search">
-                                                <span class="sr-only">검색</span>
-                                                <i class="svg-icon ico-sch"></i>
-                                            </button>
-                                        </div>
+                                    <div class="bbs-search-form-wrap">
+                                        <input type="text" id="search-wrd" class="krds-input medium"
+                                            placeholder="검색어를 입력하세요." title="키워드 입력">
                                     </div>
+                                    <button type="button" class="krds-btn medium"><i
+                                            class="svg-icon ico-sch"></i>검색</button>
                                 </div>
                             </div>
-                        </div>
-                    </fieldset>
+                        </fieldset>
+                    </form>
                     <!-- //검색 입력폼 -->
+
+
+
 
                     <!-- 검색 결과 : 리스트 상단 -->
                     <div class="search-list-top">

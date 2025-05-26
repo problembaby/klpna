@@ -9,16 +9,8 @@
 .page-title-wrap[data-type=responsive] .h-tit {
     display: block;
 }
-.bbs-search-wrap{
-    display: flex; 
-    justify-content: center;
-    background-color: #F8F8F8;
-    padding: 20px 0;
-    border-radius: 12px;
-}
 
 /* 아이콘 배경을 원형(라운드)으로 만드는 클래스 */
-
 .icon-bg-round {
   display: inline-flex;
   align-items: center;
@@ -28,6 +20,29 @@
   border-radius: 50%;
   border:2px solid #DDDDDD; 
 }
+
+/* .krds-side-navigation .lnb-list .lnb-item .lnb-btn.selected {
+    color: #FFF;
+    border-radius: 20px 0px;
+    background: linear-gradient(90deg, #0065FF 0%, #003CFF 100%);
+  }
+
+  .krds-side-navigation .lnb-list > li > .lnb-btn.selected::before {
+  display: inline-flex;
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0%;
+  width: 0;
+  height: 0;
+  background-color: var(--krds-side-navigation--color-border-selected);
+  transition: var(--krds-transition-base);
+}
+
+.krds-side-navigation .lnb-list .lnb-item.active {
+    border-bottom: 0;
+}
+ */
 
 /** 노트북 */
 @media (max-width: 1440px) {

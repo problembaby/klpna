@@ -1,5 +1,16 @@
 
 
+.bbs-search-wrap{
+    display: flex; 
+    justify-content: center;
+    background-color: #F8F8F8;
+    padding: 20px 0;
+    border-radius: 12px;
+}
+.bbs-search-form-wrap{}
+
+
+
 .btnList-sort{
   display: flex;
   justify-content: flex-end;
@@ -19,11 +30,11 @@
 
 /* 정보광장_ 게시판 */
 .no-contents {
-  height: 400px;
+  height: 250px;
 }
 .banner-list .no-contents,
 .boradBox__conf .no-contents {
-  height: 400px;
+  height: 250px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -1026,7 +1037,7 @@ td.cell-subject > * {
 
 .detailed-content {
   padding: 40px 20px;
-  min-height: 400px;
+  min-height: 250px;
   height: auto;
   word-break: break-all;
 }
@@ -1834,7 +1845,7 @@ td.cell-subject > * {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .table-num {
     width: 5%;
     display: none;
@@ -2305,7 +2316,8 @@ td.cell-subject > * {
 }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
 
   .table-overscroll{overflow-x: auto;}
   .table-overscroll table{min-width: 550px;}
@@ -2478,6 +2490,9 @@ td.cell-subject > * {
 .page-go .page-go__after .label::after {
   margin-left: 8px;
 }
+.bbs-search-wrap .form-col-group{
+  gap:8px
+}
 
 }
 
@@ -2601,7 +2616,7 @@ td.cell-subject > * {
   transform: rotate(0);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .acc-question::before {
     content: "Q.";
     display: flex;
