@@ -1,6 +1,14 @@
 
 
 
+
+/* 겔러리 게시판 커스텀*/
+.krds-structured-list.o-gallery-list{
+  display: grid;
+  grid-gap: 1rem;
+}
+
+
 .krds-btn.download{
   display: flex;
   height: 32px;
@@ -1915,6 +1923,10 @@ border-bottom: 1px solid #C6C6C6;
   .table-depart {
     width: 20%;
   }
+
+  .table-board table tbody tr td.num, .table-board table tbody tr td:last-child.file-td {
+    display: none;
+  }
   .table-board table tbody tr td.cell-subject {
     display: block;
     height: auto !important;
@@ -1939,7 +1951,7 @@ border-bottom: 1px solid #C6C6C6;
     width: 90% !important;
   }
   .table-board table tbody tr td.cell-subject img {
-    top: 10px;
+    top: 20px;
     right: 5%;
   }
   .table-board table tbody tr td.cell-subject:after {
@@ -2129,7 +2141,7 @@ border-bottom: 1px solid #C6C6C6;
     font-size: 16px;
   }
   .table-board table tbody tr td:last-child.file-td {
-    display: block;
+    display: none;
     width: 100%;
     margin-top: 10px;
   }

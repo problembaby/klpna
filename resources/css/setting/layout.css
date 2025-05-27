@@ -12,3 +12,37 @@
     color: var(--krds-header--navi-color-text);
     transition: var(--krds-transition-base);
 }
+
+
+#krds-header .header-container .logo.klpna {
+    display: inline-flex;
+    width: 25rem;
+    height: 4rem;
+}
+
+
+#krds-header .header-container .logo.klpna a {
+    background-image: url(../../img/logo/klpna-logo.svg);
+    background-repeat: no-repeat;
+}
+
+
+/** 노트북 */
+@media (max-width: 1440px) {
+}
+
+/** 테블릿 */
+@media (max-width: 1023px) {
+}
+
+/** 모바일 */
+@media (max-width: 767px) {
+.bbs-search-wrap .select-style{width: 100%;}
+}
+
+@media (max-width: 479px) {
+}
+
+@media (max-width: 320px) {
+}
+
