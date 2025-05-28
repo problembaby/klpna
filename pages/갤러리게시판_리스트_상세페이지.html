@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상세 | 공지사항 - 간호조무사협회</title>
+    <title>서브페이지 - 간호조무사협회</title>
 
     <!-- css -->
     <link rel="stylesheet" href="/resources/krds/css/plugin/swiper-bundle.min.css">
@@ -15,10 +15,10 @@
 
     <!--js-->
     <script src="/resources/js/jquery-3.7.1.min.js"></script>
-    <script src="/resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="/resources/krds/js/plugin/swiper-bundle.min.js"></script>
     <script src="/resources/krds/js/component/ui-script.js" defer></script>
     <script src="/resources/krds/js/pattern/pattern.js" defer></script>
-    <script src="/resources/js/script.js" defer></script>
+    <script src="/resources/js/script.js"></script>
 </head>
 
 <body>
@@ -32,12 +32,12 @@
             <div class="inner in-between">
                 <!-- 사이드 메뉴 -->
                 <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">홍보센터</h1>
+                    <h1 class="lnb-tit">메뉴</h1>
                     <!-- lnb-list -->
                     <ul class="lnb-list">
-                        <li class="lnb-item active">
+                        <li class="lnb-item">
                             <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-gbjkpo6"
-                                aria-expanded="false">공지사항</button>
+                                aria-expanded="false">2Depth-menu</button>
                             <!-- lnb-submenu -->
                             <div class="lnb-submenu">
                                 <ul id="lnbmenu-gbjkpo6">
@@ -130,7 +130,7 @@
                         <ol class="breadcrumb">
                             <li class="home"><a href="#" class="txt" ><span class="sr-only">홈</span></a></li>
                             <li><a href="#;" class="txt">홍보센터</a></li>
-                            <li><a href="#;" class="txt">공지사항</a></li>
+                            <li><a href="#;" class="txt">갤러리 리스트</a></li>
                         </ol>
 
                         <ol class="breadcrumb-action">
@@ -151,11 +151,11 @@
                     <!-- breadcrumb -->
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
-                        <h1 class="h-tit">공지사항</h1>
+                        <h1 class="h-tit">갤러리 게시판</h1>
                     </div>
                     <!-- //페이지 타이틀 영역 -->
 
-                  <!-- 게시판 상세페이지 start -->
+                             <!-- 게시판 상세페이지 start -->
                 <div class="board-detailed pageWrap">
                     <div class="page-content">
                         <div class="detailed-header">
@@ -179,6 +179,92 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- 이미지 슬라이디 영역 start-->
+                        <section class="gallery-bbs-slider">
+                            <div class="inner">
+                                <!-- 썸네일 이미지 -->
+                                <div class="swiper gallery-thumbs">
+                                    <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                </div>
+    
+                               
+                              </div>
+                                    
+                                <!-- 큰 이미지 -->
+                                <div class="swiper gallery-top">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                        <div class="swiper-slide"><img src="https://placehold.co/600x400" alt="대체이미지"></div>
+                                    </div>
+                                    <!-- 화살표 버튼 -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+    
+                            </div>
+                            
+                        </section>
+                      <script>
+                     
+                            window.addEventListener('DOMContentLoaded', function () {
+                                const galleryThumbs = new Swiper('.gallery-thumbs', {
+                                spaceBetween:10,
+                                slidesPerView: 5,
+                                // 반응형 
+                                breakpoints: {
+                                    320: {
+                                        slidesPerView: 2,
+                                    },
+                                    640: {
+                                        slidesPerView: 3,
+                                    },
+                                    768: {
+                                        slidesPerView: 4,
+                                    },
+                                    1024: {
+                                        slidesPerView: 5,
+                                    },
+                                },
+                                });
+
+                                const galleryTop = new Swiper('.gallery-top', {
+                                spaceBetween: 20,
+                                speed: 500,
+                                loop: true,
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                },
+
+                                
+                                navigation: {
+                                    nextEl: '.swiper-button-next',
+                                    prevEl: '.swiper-button-prev',
+                                },
+                                thumbs: {
+                                    swiper: galleryThumbs,
+                                },
+                                });
+                            });
+
+
+                    </script>
+
+                        <!-- // 이미지 슬라이디 영역 end-->
 
                         <div class="detailed-content">
                             <p>
@@ -230,6 +316,7 @@
                                 </li>
                             </ul>
                         </div>
+
                     </div>
 
 
@@ -238,6 +325,8 @@
                     </div>
                 </div>
                 <!-- 게시판 상세페이지 end-->
+
+
 
                 </div>
 
