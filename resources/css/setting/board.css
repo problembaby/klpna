@@ -21,7 +21,6 @@
   align-items: flex-start;
 }
 
-
 /** 겔러리 게시판 커스텀*/
 .krds-structured-list.o-gallery-list{
   display: grid;

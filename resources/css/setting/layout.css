@@ -1,3 +1,44 @@
+/** 버튼 재정의 */
+.krds-btn.black {
+    background-color: #252525;
+    border-color: #252525;
+    color: #fff;
+}
+
+.krds-btn.black:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.black:hover {
+    background-color: #444;
+}
+
+.krds-btn.black:active,
+.krds-btn.black:focus {
+    background-color: #252525;
+}
+
+.krds-btn.black[disabled],
+.krds-btn.black.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.black[disabled]:not(.icon) .svg-icon,
+.krds-btn.black.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.black[disabled]:hover,
+.krds-btn.black.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+
+
 #krds-header .header-container .btn-navi {
     display: inline-flex;
     align-items: center;

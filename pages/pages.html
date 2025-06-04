@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,10 @@
 
     <!--폰트 pretendard-->
     <link rel="stylesheet" as="style" crossorigin href="/resources/css/fonts/pretendard-gov.css" />
-    
+
     <!-- css -->
-     <link rel="stylesheet" href="/resources/krds/css/plugin/swiper-bundle.min.css">
- <!--  <link rel="stylesheet" href="/resources/krds/css/component/output.css" /> -->
+    <link rel="stylesheet" href="/resources/krds/css/plugin/swiper-bundle.min.css">
+    <!--  <link rel="stylesheet" href="/resources/krds/css/component/output.css" /> -->
     <link rel="stylesheet" href="/resources/krds/scss/component/output.css" />
     <link rel="stylesheet" href="/resources/krds/css/pattern/p_layout.css" />
     <link rel="stylesheet" href="/resources/css/style.css" />
@@ -23,274 +24,1268 @@
     <script defer src="/resources/krds/js/component/ui-script.js"></script>
     <script defer src="/resources/krds/js/pattern/pattern.js"></script>
     <script src="/resources/js/script.js"></script>
-    
+
     <style>
-        #wrap{
+        #wrap {
             padding: 20px
         }
-        tr.red td{
+
+        tr.red td {
             background-color: #f8d7da;
         }
 
-        a:hover{
+        a:hover {
             text-decoration: underline;
             color: #007bff;
         }
 
-        section{margin-top: 20px;}
-        .table td, .table th {
+        section {
+            margin-top: 20px;
+        }
+
+        .table td,
+        .table th {
             padding: 5px;
         }
     </style>
 </head>
+
 <body>
 
-    
-    
-    <div id="wrap">
-    <h1>대표홈페이지 퍼블리싱 리스트</h1>
-    <section class="">
-        <h2>컴포넌트</h2>
-        <div class="pageList">
-            <table class="table table-hover">
-                <caption>퍼블리싱 목록</caption>
-                <colgroup>
-                    <col style="width: 3%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: auto;">
-                    <col style="width: 4%;">
-                    <col style="width: 10%;">
-                </colgroup>
-                <thead>
-                <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">페이지 번호</th>
-                    <th scope="col">depth1</th>
-                    <th scope="col">depth2</th>
-                    <th scope="col">depth3</th>
-                    <th scope="col">페이지 명칭</th>
-                    <th scope="col">URL</th>
-                    <th scope="col">완료여부</th>
-                    <th scope="col">비고</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr >
-                    <th scope="row" class="row-number"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>컴포넌트</td>
-                    <td><a href="/resources/krds/html/code/taglib.html" target="_blank"></a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>   
-    </section>
-    <section class="">
-        <h2>메인 / 공통</h2>
-        <div class="pageList">
-            <table class="table table-hover">
-                <caption>퍼블리싱 목록</caption>
-                <colgroup>
-                    <col style="width: 3%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: auto;">
-                    <col style="width: 4%;">
-                    <col style="width: 10%;">
-                </colgroup>
-                <thead>
-                <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">페이지 번호</th>
-                    <th scope="col">depth1</th>
-                    <th scope="col">depth2</th>
-                    <th scope="col">depth3</th>
-                    <th scope="col">페이지 명칭</th>
-                    <th scope="col">URL</th>
-                    <th scope="col">완료여부</th>
-                    <th scope="col">비고</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row" class="row-number"></th>
-                    <td>SFR-001</td>
-                    <td>메인화면</td>
-                    <td></td>
-                    <td></td>
-                    <td>메인</td>
-                    <td><a href="/pages/index.html" target="_blank"></a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="row-number"></th>
-                    <td></td>
-                    <td>헤더</td>
-                    <td></td>
-                    <td></td>
-                    <td>헤더</td>
-                    <td><a href="/pages/common/header.html" target="_blank"></a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="row-number"></th>
-                    <td></td>
-                    <td>푸터</td>
-                    <td></td>
-                    <td></td>
-                    <td>푸터</td>
-                    <td><a href="/pages/common/footer.html" target="_blank"></a></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>   
-    </section>
 
+
+    <div id="wrap">
+        <h1>대표홈페이지 퍼블리싱 리스트</h1>
         <section class="">
-        <h2>서브</h2>
-        <div class="pageList">
-            <table class="table table-hover">
-                <caption>퍼블리싱 목록</caption>
-                <colgroup>
-                    <col style="width: 3%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: 10%;">
-                    <col style="width: auto;">
-                    <col style="width: 4%;">
-                    <col style="width: 10%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">페이지 번호</th>
-                        <th scope="col">depth1</th>
-                        <th scope="col">depth2</th>
-                        <th scope="col">depth3</th>
-                        <th scope="col">페이지 명칭</th>
-                        <th scope="col">URL</th>
-                        <th scope="col">완료여부</th>
-                        <th scope="col">비고</th>
-                    </tr>
+            <h2>컴포넌트</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row" class="row-number"></th>
-                        <td></td>
-                        <td>대한간호조무사협회</td>
-                        <td></td>
-                        <td></td>
-                        <td>서브공통 화면</td>
-                        <td><a href="/pages/sub.html" target="_blank"></a></td>
-                        <td></td>
-                        <td>서브 공통 레이아웃</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="row-number"></th>
-                        <td>SFR-001</td>
-                        <td>게시판</td>
-                        <td></td>
-                        <td></td>
-                        <td>공지사항</td>
-                        <td><a href="/pages/공지사항.html" target="_blank"></a></td>
-                        <td>Y</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="row-number"></th>
-                        <td>SFR-001</td>
-                        <td>게시판</td>
-                        <td></td>
-                        <td></td>
-                        <td>공지사항 상세페이지</td>
-                        <td><a href="/pages/공지사항_상세페이지.html" target="_blank"></a></td>
-                        <td>Y</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="row-number"></th>
-                        <td>SFR-001</td>
-                        <td>게시판</td>
-                        <td></td>
-                        <td></td>
-                        <td>갤러리 게시판 리스트</td>
-                        <td><a href="/pages/갤러리게시판_리스트.html" target="_blank"></a></td>
-                        <td>Y</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="row-number"></th>
-                        <td>SFR-001</td>
-                        <td>게시판</td>
-                        <td></td>
-                        <td></td>
-                        <td>갤러리 게시판 상세페이지</td>
-                        <td><a href="/pages/갤러리게시판_리스트_상세페이지.html" target="_blank"></a></td>
-                        <td>Y</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="row-number"></th>
-                        <td>SFR-001</td>
-                        <td>게시판</td>
-                        <td></td>
-                        <td></td>
-                        <td>faq</td>
-                        <td><a href="/pages/faq.html" target="_blank"></a></td>
-                        <td>Y</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>   
-    </section>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>컴포넌트</td>
+                            <td><a href="/resources/krds/html/code/taglib.html" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="">
+            <h2>메인 / 공통</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>메인화면</td>
+                            <td></td>
+                            <td></td>
+                            <td>메인</td>
+                            <td><a href="/pages/index.html" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>헤더</td>
+                            <td></td>
+                            <td></td>
+                            <td>헤더</td>
+                            <td><a href="/pages/common/header.html" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>푸터</td>
+                            <td></td>
+                            <td></td>
+                            <td>푸터</td>
+                            <td><a href="/pages/common/footer.html" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
 
-</div>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>대한간호조무사협회</td>
+                            <td></td>
+                            <td></td>
+                            <td>서비스바로가기</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회비납부</td>
+                            <td></td>
+                            <td></td>
+                            <td>퀵메뉴</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td></td>
+                            <td></td>
+                            <td>로그인페이지</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>아이디찾기</td>
+                            <td></td>
+                            <td>아이디찾기</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>비밀번호찾기</td>
+                            <td></td>
+                            <td>비밀번호찾기</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>약관동의</td>
+                            <td>약관동의</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>본인인증</td>
+                            <td>본인인증</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>회원정보등록</td>
+                            <td>회원정보등록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>회원가입완료확인</td>
+                            <td>회원가입완료확인</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>사업자번호중복가입확인</td>
+                            <td>사업자번호중복가입확인</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>실무담당자 정보 가입정보(실명인증)</td>
+                            <td>실무담당자 정보 가입정보</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>회원가입 신청완료 확인</td>
+                            <td>회원가입 신청완료 확인</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <section class="">
+            <h2>마이페이지</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>내정보</td>
+                            <td></td>
+                            <td></td>
+                            <td>내정보</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>내정보</td>
+                            <td></td>
+                            <td></td>
+                            <td>회원탈퇴</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>회원게시판</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>회원게시판</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>신고센터</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>신고센터</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>노무상담</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>노무상담</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>구직정보</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>나의게시물</td>
+                            <td>구직정보</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>원격지원서비스</td>
+                            <td></td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>원격지원서비스</td>
+                            <td></td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>1:1문의</td>
+                            <td></td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>1:1문의</td>
+                            <td></td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>기타모금 납부내역</td>
+                            <td>간호조무사 노조설립약정금 납무 목록</td>
+                            <td></td>
+                            <td>간호조무사 노조설립약정금 납무 목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>기타모금 납부내역</td>
+                            <td>정치세력화추진모금 납무 목록</td>
+                            <td></td>
+                            <td>정치세력화추진모금 납무 목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>회비/교육비내역</td>
+                            <td>회비목록</td>
+                            <td></td>
+                            <td>회비목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>회비/교육비내역</td>
+                            <td>회비목록</td>
+                            <td></td>
+                            <td>영수증발급</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>솔루션</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>회비/교육비내역</td>
+                            <td>교육비목록</td>
+                            <td></td>
+                            <td>교육비목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>회비/교육비내역</td>
+                            <td>교육비목록</td>
+                            <td></td>
+                            <td>영수증발급</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>솔루션</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>회비/교육비내역</td>
+                            <td>환불신청</td>
+                            <td></td>
+                            <td>환불신청</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>보수교육이수현황</td>
+                            <td>보수교육이수목록</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>보수교육이수현황</td>
+                            <td>보수교육이수목록</td>
+                            <td></td>
+                            <td>상세페이지 팝업</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>직무교육이수현황</td>
+                            <td></td>
+                            <td></td>
+                            <td>직무교육이수 목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>직무교육이수현황</td>
+                            <td></td>
+                            <td></td>
+                            <td>상세페이지 팝업</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>증명서발급</td>
+                            <td>이수증발급</td>
+                            <td></td>
+                            <td>이수증발급</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>솔루션</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>마이페이지</td>
+                            <td>증명서발급</td>
+                            <td>원본대조</td>
+                            <td></td>
+                            <td>원본대조</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="">
+            <h2>서브페이지</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>인사말</td>
+                            <td></td>
+                            <td>인사말</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>연혁</td>
+                            <td></td>
+                            <td>연혁</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>정관</td>
+                            <td></td>
+                            <td>정관</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>주요사업</td>
+                            <td></td>
+                            <td>주요사업</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>조직도</td>
+                            <td></td>
+                            <td>조직도</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>시도회</td>
+                            <td></td>
+                            <td>시도회</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>협회안내</td>
+                            <td>오시는길</td>
+                            <td></td>
+                            <td>오시는길</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>간호조무사</td>
+                            <td>간호조무사란</td>
+                            <td></td>
+                            <td>간호조무사란</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>간호조무사</td>
+                            <td>간호조무사 윤리선언/강령/지침</td>
+                            <td></td>
+                            <td>간호조무사 윤리선언/강령/지침</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>간호조무사</td>
+                            <td>간호조무사 자격제도</td>
+                            <td></td>
+                            <td>간호조무사 자격제도</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>간호조무사</td>
+                            <td>업무범위FAQ</td>
+                            <td></td>
+                            <td>업무범위FAQ</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>보도자료</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>보도자료</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>협회활동갤러리</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>협회활동갤러리</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>시도협회갤러리</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>시도협회갤러리</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>간호조무사뉴스</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>간호조무사뉴스</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>SNS홍보</td>
+                            <td></td>
+                            <td>카카오톡 채널</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>SNS홍보</td>
+                            <td></td>
+                            <td>유튜브</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>SNS홍보</td>
+                            <td></td>
+                            <td>인스타그램</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>링크</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>매거진</td>
+                            <td></td>
+                            <td>매거진</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>홍보센터</td>
+                            <td>인터넷신문</td>
+                            <td></td>
+                            <td>인터넷신문</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠연결</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>정보센터</td>
+                            <td>정책자료</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>정보센터</td>
+                            <td>정책자료</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>정보센터</td>
+                            <td>관련법규</td>
+                            <td></td>
+                            <td>관련법규</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>정보센터</td>
+                            <td>간호인력통계</td>
+                            <td></td>
+                            <td>간호조무사현황</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>정보센터</td>
+                            <td>간호인력통계</td>
+                            <td></td>
+                            <td>간호조무사자격취득현황</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>정보센터</td>
+                            <td>관련기관</td>
+                            <td></td>
+                            <td>관련기관</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원혜택</td>
+                            <td>드림복지</td>
+                            <td></td>
+                            <td>드림복지</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원혜택</td>
+                            <td>KLPNA상조회</td>
+                            <td></td>
+                            <td>KLPNA상조회</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>콘텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원혜택</td>
+                            <td>노무상담</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원혜택</td>
+                            <td>노무상담</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>취업정보</td>
+                            <td>구인</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>취업정보</td>
+                            <td>나라일터(채용)</td>
+                            <td></td>
+                            <td>나라일터(채용)</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>기능</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>취업정보</td>
+                            <td>구인</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원소통</td>
+                            <td>공지사항</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원소통</td>
+                            <td>공지사항</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원소통</td>
+                            <td>회원게시판</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원소통</td>
+                            <td>회원게시판</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>게시판</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원소통</td>
+                            <td>신고센터</td>
+                            <td></td>
+                            <td>신고센터</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>신청폼</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원소통</td>
+                            <td>원격서비스</td>
+                            <td></td>
+                            <td>원격서비스</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td>신청폼</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        
+
+        <section class="">
+            <h2>게시판</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>대한간호조무사협회</td>
+                            <td></td>
+                            <td></td>
+                            <td>서브공통 화면</td>
+                            <td><a href="/pages/sub.html" target="_blank"></a></td>
+                            <td></td>
+                            <td>서브 공통 레이아웃</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>게시판</td>
+                            <td></td>
+                            <td></td>
+                            <td>공지사항</td>
+                            <td><a href="/pages/공지사항.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>게시판</td>
+                            <td></td>
+                            <td></td>
+                            <td>공지사항 상세페이지</td>
+                            <td><a href="/pages/공지사항_상세페이지.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>게시판</td>
+                            <td></td>
+                            <td></td>
+                            <td>갤러리 게시판 리스트</td>
+                            <td><a href="/pages/갤러리게시판_리스트.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>게시판</td>
+                            <td></td>
+                            <td></td>
+                            <td>갤러리 게시판 상세페이지</td>
+                            <td><a href="/pages/갤러리게시판_리스트_상세페이지.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>게시판</td>
+                            <td></td>
+                            <td></td>
+                            <td>faq</td>
+                            <td><a href="/pages/faq.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>SFR-001</td>
+                            <td>게시판</td>
+                            <td></td>
+                            <td></td>
+                            <td>1:1문의 상세</td>
+                            <td><a href="/pages/contact.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
 
     <script>
-    $(document).ready(function() {
-        updateRowNumbers();
-        updateLinkText();
+        $(document).ready(function () {
+            updateRowNumbers();
+            updateLinkText();
 
-    });
-    
-    // 테이블의 행 번호 업데이트
-    function updateRowNumbers() {
-        $('section .pageList').each(function() {
-            $(this).find('tr').each(function(index){
-                $(this).find('.row-number').text(index);
-            });
         });
-    }
 
-    // 링크 텍스트를 href 속성으로 업데이트
-    function updateLinkText(){
-        $(".pageList a").each(function(){
-            const href = $(this).attr('href');
-            $(this).text(href);
-        })
+        // 테이블의 행 번호 업데이트
+        function updateRowNumbers() {
+            $('section .pageList').each(function () {
+                $(this).find('tr').each(function (index) {
+                    $(this).find('.row-number').text(index);
+                });
+            });
+        }
+
+        // 링크 텍스트를 href 속성으로 업데이트
+        function updateLinkText() {
+            $(".pageList a").each(function () {
+                const href = $(this).attr('href');
+                $(this).text(href);
+            })
         }
     </script>
 </body>
+
 </html>
-
-
-
