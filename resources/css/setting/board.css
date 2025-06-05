@@ -21,6 +21,29 @@
   align-items: flex-start;
 }
 
+
+.guide-p{
+  color: var(--gray-gray-90, #1D1D1D);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin:30px 0;
+} 
+
+.form-list .form-group{
+  flex-direction: row;
+  align-items: center;
+}
+.form-list .form-group .form-tit{
+ flex:1 200px;
+ 
+}
+
+.form-list-margin{margin:30px 0;}
+
+
+
 /** 겔러리 게시판 커스텀*/
 .krds-structured-list.o-gallery-list{
   display: grid;

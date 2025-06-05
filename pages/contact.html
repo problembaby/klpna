@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>faq - 간호조무사협회</title>
+    <title>1:1문의 - 간호조무사협회</title>
 
     <!-- css -->
     <link rel="stylesheet" href="/resources/krds/css/plugin/swiper-bundle.min.css">
@@ -129,7 +129,7 @@
                     <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
-                            <li><a href="#;" class="txt">FAQ</a></li>
+                            <li><a href="#;" class="txt">1:1문의</a></li>
                         </ol>
 
                         <ol class="breadcrumb-action">
@@ -150,173 +150,128 @@
                     <!-- breadcrumb -->
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
-                        <h1 class="h-tit">FAQ</h1>
+                        <h1 class="h-tit">1:1문의</h1>
                     </div>
                     <!-- //페이지 타이틀 영역 -->
 
-                    <!-- 검색 입력폼 -->
-                    <form id="" name="" action="#" method="post">
-                        <fieldset class="bbs-search-wrap">
-                            <div class="search-top-box">
-                                <div class="form-col-group">
-                                    <div class="sch-select select-style">
-                                        <select class="krds-form-select medium" title="선택" id="ntt-type">
-                                            <option value="">전체</option>
-                                            <option value="">제목</option>
-                                        </select>
+
+                    <div class="board-detailed pageWrap">
+                        <div class="page-content">
+                            <p class="guide-p">임금, 부당해고, 수당산정 등 노무상담은 노무상담하기 코너를 이용하시기 바랍니다.</p>
+                            <div class="guide-txt">
+                                <h2 class="guide-txt-title">문의하기 전에</h2>
+                                <p>작성하신 상담글에 대한 답변은 <span>중앙회 홈페이지→마이페이지→활동이력→1:1문의 답변확인</span> 에서 확인 가능합니다.</p>
+                                <ul>
+                                    <li>등록된 메일주소로는 답변내용이 발송되지 않는 점 안내 드립니다.</li>
+                                    <li>비방, 욕설, 광고 글이나 허위 또는 저속한 내용 등은 사전 통보 없이 삭제될 수 있습니다.</li>
+                                    <li>평일16시 이후 접수 건은 익일 오전 9시부터 순차적으로 답변이 가능합니다.(주말/공휴일 제외)</li>
+                                </ul>
+                            </div>
+
+                            <div class="form-list form-list-margin">
+                                <fieldset class="fieldset">
+                                    <!-- 폼그룹 -->
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="form_delete">분류</label>
+                                        </div>
+                                        <div class="form-conts">
+                                            <select id="select_size_medium" class="krds-form-select medium" title="선택">
+                                                <option value="">선택</option>
+                                                <option value="">분류</option>
+                                                <option value="">분류</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="bbs-search-form-wrap">
-                                        <input type="text" id="search-wrd" class="krds-input medium"
-                                            placeholder="검색어를 입력하세요." title="키워드 입력">
+                                    <!-- //폼그룹 -->
+
+                                    <!-- 폼그룹 -->
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="form_delete">작성자</label>
+                                        </div>
+                                        <div class="form-conts btn-ico-wrap" data-delete="true">
+                                            <input type="text" id="form_delete" class="krds-input medium"
+                                                placeholder="작성자를 입력하세요.">
+                                            <button type="button" class="krds-btn medium icon pure btn-delete-input">
+                                                <span class="sr-only">내용 삭제</span>
+                                                <i class="svg-icon ico-delete-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <button type="button" class="krds-btn medium black">
-                                        <i class="svg-icon ico-sch"></i>
-                                        검색
-                                    </button>
-                                </div>
+                                    <!-- //폼그룹 -->
+
+                                    <!-- 폼그룹 -->
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="form_delete">이메일</label>
+                                        </div>
+                                        <ul class="input-group range">
+                                            <li>
+                                                <input type="text" id="form_delete" class="krds-input medium"
+                                                    placeholder="">
+                                            </li>
+                                            <li class="mark">@</li>
+                                            <li>
+                                                <input type="text" id="form_delete" class="krds-input medium"
+                                                placeholder="">
+
+                                            </li>
+                                            <li>
+                                                <select name="" id="" class="krds-form-select medium">
+                                                    <option value=""></option>
+                                                </select>
+                                            </li>
+                                        
+                                        </ul>
+                                    </div>
+                                    <!-- //폼그룹 -->
+
+                                    <div class="form-group">
+                                        <div class="form-tit">
+                                            <label for="consult_name21">제목</label>
+                                        </div>
+                                        <div class="form-conts is-error">
+                                            <input type="text" id="consult_name21" class="krds-input medium" placeholder="플레이스홀더" value="에러">
+                                            <p class="form-hint-invalid">에러 메시지</p>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
                             </div>
-                        </fieldset>
-                    </form>
-                    <!-- //검색 입력폼 -->
 
 
-                    <!-- accordion -->
-                    <div class="krds-accordion type-line o-accordion-list">
-                        <div class="accordion-item">
-                            <h5 class="accordion-header">
-                                <span class="ico-q">Q</span>
-                                <button type="button" id="accordionHeaderSample01" class="btn-accordion"
-                                    aria-controls="accordionCollapseSample01">
-                                    <p>
-                                        <span class="krds-badge medium bg-primary">자격제도</span>
-                                        국군의무사령부 주관 ‘25-3차 전문군무경력관 및 채용공고
-                                    </p>
-                                </button>
-                            </h5>
-                            <div id="accordionCollapseSample01" class="accordion-collapse collapse"
-                                aria-labelledby="accordionHeaderSample01">
-                                <div class="accordion-body">
-                                    <span class="ico-a">A</span>
-                                    <!-- accordion contents -->
-                                    <p>아코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역코디언 내용 영역</p>
-                                    <!-- //accordion contents -->
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="accordion-item">
-                            <h5 class="accordion-header">
-                                <span class="ico-q">Q</span>
-                                <button type="button" id="accordionHeaderSample02" class="btn-accordion"
-                                    aria-controls="accordionCollapseSample02">
-                                    <p>
-                                        <span class="krds-badge medium bg-primary">자격제도</span>
-                                        타이틀 아코디언 질문
-                                    </p>
-                                </button>
-                            </h5>
-                            <div id="accordionCollapseSample02" class="accordion-collapse collapse"
-                                aria-labelledby="accordionHeaderSample02">
-                                <div class="accordion-body">
-                                    <span class="ico-a">A</span>
-                                    <!-- accordion contents -->
-                                    <p>아코디언 답변</p>
-                                    <!-- //accordion contents -->
-                                </div>
+                            <div class="detailed-file-wrap">
+                                <div class="tit">첨부파일</div>
+                                <ul class="list">
+                                    <li>
+                                        <a href="#" title="다운로드">
+                                            <p>보이스피싱 예방수칙.hwp</p>
+                                            <span>(64KB)</span>
+                                        </a>
+                                        <button type="button" class="krds-btn tertiary download">다운로드 <i
+                                                class="svg-icon ico-down"></i></button>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="다운로드">
+                                            <p>보이스피싱 예방수칙.hwp</p>
+                                            <span>(64KB)</span>
+                                        </a>
+                                        <button type="button" class="krds-btn tertiary download">다운로드 <i
+                                                class="svg-icon ico-down"></i></button>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
 
-                        <div class="accordion-item">
-                            <h5 class="accordion-header">
-                                <span class="ico-q">Q</span>
-                                <button type="button" id="accordionHeaderSample03" class="btn-accordion"
-                                    aria-controls="accordionCollapseSample03">
-                                    <p>
-                                        <span class="krds-badge medium bg-primary">자격제도</span>
-                                        타이틀 아코디언 질문
-                                    </p>
-                                </button>
-                            </h5>
-                            <div id="accordionCollapseSample03" class="accordion-collapse collapse"
-                                aria-labelledby="accordionHeaderSample03">
-                                <div class="accordion-body">
-                                    <span class="ico-a">A</span>
-                                    <!-- accordion contents -->
-                                    <p>아코디언 답변</p>
-                                    <!-- //accordion contents -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h5 class="accordion-header">
-                                <span class="ico-q">Q</span>
-                                <button type="button" id="accordionHeaderSample04" class="btn-accordion"
-                                    aria-controls="accordionCollapseSample04">
-                                    <p>
-                                        <span class="krds-badge medium bg-primary">자격제도</span>
-                                        타이틀 아코디언 질문
-                                    </p>
-                                </button>
-                            </h5>
-                            <div id="accordionCollapseSample04" class="accordion-collapse collapse"
-                                aria-labelledby="accordionHeaderSample04">
-                                <div class="accordion-body">
-                                    <span class="ico-a">A</span>
-                                    <!-- accordion contents -->
-                                    <p>아코디언 답변</p>
-                                    <!-- //accordion contents -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h5 class="accordion-header">
-                                <span class="ico-q">Q</span>
-                                <button type="button" id="accordionHeaderSample05" class="btn-accordion"
-                                    aria-controls="accordionCollapseSample05">
-                                    <p>
-                                        <span class="krds-badge medium bg-primary">자격제도</span>
-                                        타이틀 아코디언 질문
-                                    </p>
-                                </button>
-                            </h5>
-                            <div id="accordionCollapseSample05" class="accordion-collapse collapse"
-                                aria-labelledby="accordionHeaderSample05">
-                                <div class="accordion-body">
-                                    <span class="ico-a">A</span>
-                                    <!-- accordion contents -->
-                                    <p>아코디언 답변</p>
-                                    <!-- //accordion contents -->
-                                </div>
-                            </div>
                         </div>
 
 
-
-
-
-
-
+                        <div class="btnList-sort center">
+                            <button type="button" class="krds-btn medium tertiary">목록</button>
+                        </div>
                     </div>
-                    <!-- //accordion -->
-
-                    <!-- 페이지네이션 영역 -->
-                    <div class="krds-pagination">
-                        <span class="page-navi prev disabled" href="#">이전</span>
-                        <div class="page-links">
-                            <a class="page-link" href="#">1</a>
-                            <a class="page-link" href="#">2</a>
-                            <a class="page-link" href="#">3</a>
-                            <a class="page-link active" href="#">4</a>
-                            <a class="page-link" href="#">5</a>
-                            <a class="page-link" href="#">6</a>
-                            <a class="page-link" href="#">7</a>
-                            <a class="page-link" href="#">8</a>
-                            <span class="page-link link-dot"></span>
-                            <a class="page-link" href="#">99</a>
-                        </div>
-                        <a class="page-navi next" href="#">다음</a>
-                    </div>
-                    <!-- //페이지네이션 영역 -->
 
                 </div>
 
