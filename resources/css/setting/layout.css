@@ -119,6 +119,15 @@
 }
 
 
+/* popup */
+.krds-modal[data-type=small]{
+    
+}
+.krds-modal[data-type=small] .modal-dialog{
+width:var(--krds-modal--size-small);    
+}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
 }
