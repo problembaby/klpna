@@ -122,7 +122,7 @@
 
 
 
-.krds-btn.download{
+.krds-btn.fileBtn{
   display: flex;
   height: 32px;
   padding: 0 10px;
@@ -136,7 +136,7 @@
 
 }
 
-.krds-btn.download .svg-icon{
+.krds-btn.fileBtn .svg-icon{
   width: 16px;
   height: 16px;
   background-size: contain;
@@ -1223,15 +1223,17 @@ border-bottom: 1px solid #C6C6C6;
   gap: 10px;
   width: 100%;
 }
-.detailed-file-wrap .list li{
+
+.detailed-file-wrap .list li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   width: 100%;
-  flex:1 1 100%;
+  flex: 1 1 100%;
 }
+
 .detailed-file-wrap .list li a {
   display: flex;
   flex-direction: row;
@@ -1239,19 +1241,42 @@ border-bottom: 1px solid #C6C6C6;
   font-size: 17px;
   font-weight: 400;
   align-items: center;
+  position: relative;
+  padding-left: 35px; /* 아이콘 여백 확보 */
 }
+
 .detailed-file-wrap .list li a::before {
   display: block;
   content: "";
-  background: url(../../img/icon/ico-file2.svg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 25px;
   height: 25px;
   flex-shrink: 0;
   background-size: cover;
 }
+
+/* 기본 파일 아이콘 (기타 확장자) */
+.detailed-file-wrap .list li a.file-etc::before {
+  background-image: url(../../img/icon/ico-file2.svg);
+}
+
+/* 문서 파일 아이콘 */
+.detailed-file-wrap .list li a.file-doc::before {
+  background-image: url(../../img/icon/ico-file-doc.svg);
+}
+
+/* 이미지 파일 아이콘 */
+.detailed-file-wrap .list li a.file-img::before {
+  background-image: url(../../img/icon/ico-file-img.svg);
+}
+
 .detailed-file-wrap .list li a:hover {
   text-decoration: underline;
 }
+
 
 .page-go {
   display: flex;
@@ -1964,6 +1989,8 @@ border-bottom: 1px solid #C6C6C6;
    color:#1c4eba;
    margin-left: 5px;
   }
+
+  .req{color:#EB6053}
 
 
 @media (max-width: 1300px) {

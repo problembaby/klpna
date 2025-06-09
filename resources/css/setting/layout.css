@@ -45,7 +45,49 @@
     background: var(--gray-gray-5, #F8F8F8);
     border: 1px solid var(--color-border-nomal, #C6C6C6);
 }
+.guide-txt-title{display: inline-flex; align-items: center; gap:4px; margin-bottom: 20px;}
+.guide-txt-title::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  content: "";
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center center;
+  -webkit-background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-background-image: url(../../img/icon/guide_check.svg);
+  background-image: url(../../img/icon/guide_check.svg);
+}
 
+.guide-txt .bold{
+    color: #0050CA;
+}
+
+.guide-list li{display: inline-flex; align-items: center; gap:8px;}
+.guide-list li::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  content: "";
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center center;
+  -webkit-background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-background-image: url(../../img/icon/round_check.svg);
+  background-image: url(../../img/icon/round_check.svg);
+}
 
 
 #krds-header .header-container .btn-navi {
