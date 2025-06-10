@@ -1,3 +1,5 @@
+@import url(./header_footer.css);
+
 /** 버튼 재정의 */
 .krds-btn.black {
     background-color: #252525;
@@ -136,7 +138,6 @@ width:var(--krds-modal--size-small);
 }
 .login-wrap .login-img{
     flex:1 40%;
-    max-width: 700px;
     background: var(--color-bg-nomal, #F8F8F8);
     display: flex;
     padding: 200px 0;
