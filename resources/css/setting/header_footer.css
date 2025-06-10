@@ -34,20 +34,100 @@ letter-spacing: -0.35px;}
 }
 
 
+
+#krds-footer {
+    position: relative;
+    z-index: 50;
+    background-color: #F1F2F6;
+}
+
+
 .o-foot-quick{
+
+    --foot-width: 300px; /** 푸터 퀵너비 */
+    --foot-height: 58px; /** 푸터 퀵높이*/
+
+
     display: flex;
     align-items: center;
     width: 100%;;
-    height: 58px;
-    background-color: #fff;}
+    border-top: 1px solid var(--color-border-light, #D9D9D9);
+    border-bottom: 1px solid var(--color-border-light, #D9D9D9);
+    background: #FFF;}
 
-.o-foot-quick .inner{display:flex; justify-content: space-between; align-items: center; max-width: var(--krds-contents-wrap-size); width: 100%; margin:0 auto; padding: 0 20px;}
+.foot-link{display: flex;}
+.o-foot-quick .inner{display:flex; justify-content: space-between; align-items: center; max-width: var(--krds-contents-wrap-size); width: 100%; height: var(--foot-height); margin:0 auto; padding: 0 20px;}
+.foot-link-item{max-width: var(--foot-width); width: 100%; height: var(--foot-height); display: flex;}
+
+
+.o-foot-quick .link-sns{display: flex; gap:5px; align-items: center; justify-content: center;}
+
+.foot-link-item .link{border-left: 1px solid #D9D9D9;width: var(--foot-width); height: 100%; padding:0 20px; position: relative; text-align: left;}
+/* .foot-link-item .link::after {
+    position: absolute;
+    right:10px;
+    content:"";
+    width: 24px;
+    height:24px;
+    display: inline-flex;
+    background: url(/resources/krds/img/component/icon/ico_angle.svg)no-repeat;
+    transition: var(--krds-transition-base);
+    transform: rotate(0deg);
+} */
+
+
+
+.foot-link-item .link::after {
+    position: absolute;
+    right:25px;
+    content:"";
+    width: var(--krds-icon--size-medium);
+    height: var(--krds-icon--size-medium);
+    display: inline-flex;
+    background: url(/resources/krds/img/component/icon/ico_plus.svg)no-repeat;
+    transition: var(--krds-transition-base);
+    transform: rotate(0deg);
+} 
+.foot-link-item .link.active::after{
+    transform: rotate(180deg);
+}
+.foot-link-item.last .link{ border-right: 1px solid #D9D9D9;}
+
+.foot-link-item .drop-down{}
+
+.f-logo-p{color: #7E7B77;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.84px; margin-top: 24px;}
+.info-cs li{display: flex; gap:10px; }
+.info-cs li p{
+    color: #7E7B77;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: -0.84px;
+
+ }
+ 
+ .f-top{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; gap:20px}
+ .f-top .right{display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap:20px}
+ .f-top .right a{color:#7E7B77; font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.84px;} 
+ .f-top .right a:hover{color: var(--krds-color-text-action-hover, #0050CA); text-decoration: underline;} 
+ .f-top .right a.bold{color: #0050CA; font-weight: 700;} 
 
 .krds-btn.icon.border {
     background-color: var(--krds-light-color-background-gray-subtle);
     border: 0.1rem solid var(--krds-light-color-border-gray);
     border-radius: var(--krds-radius-max);
 }
+
 
 
 #krds-footer .f-logo {
@@ -58,3 +138,37 @@ letter-spacing: -0.35px;}
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.f-counseling{display: flex; gap:30px; align-items: center; justify-content: center; flex-direction: row; }
+.f-counseling h3{color: #7E7B77;
+text-align: center;
+font-size: 13px;
+font-style: normal;
+font-weight: 300;
+line-height: 20px; /* 153.846% */
+letter-spacing: -0.78px; }
+
+.f-counseling .f-counseling-tel{color: #0050CA;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 83.333% */
+letter-spacing: -2.16px;}
+.f-counseling .f-counseling-time{color: #7E7B77;
+font-size: 12px;
+font-style: normal;
+font-weight: 300;
+line-height: 15px; /* 125% */
+letter-spacing: -0.72px;}
+
+#krds-footer .f-cnt{flex-wrap: wrap;}
+.f-btn{
+   display: flex; gap:10px; align-items: center;}
+.f-btn > .krds-btn.tertiary{
+   background-color: #fff; color: #7E7B77;
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.84px;}
