@@ -127,13 +127,132 @@
 width:var(--krds-modal--size-small);    
 }
 
+/** login */
+.login-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.login-wrap .login-img{
+    flex:1 40%;
+    max-width: 700px;
+    background: var(--color-bg-nomal, #F8F8F8);
+    display: flex;
+    padding: 200px 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-self: stretch;
+    
+}
+.login-wrap .login-img::before{
+    content: "";
+    display: block;
+    width: 487px;
+    height: 529px;
+    background-image: url(../../img/login/login-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.login-wrap .login-contents{
+    flex:1 60%
+}
 
+.login-contents .login-inner{
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction:column;
+    justify-content: flex-start;
+}
+
+.login-form-wrap{
+    width: 100%;
+    max-width: 650px;
+    margin:80px auto;
+    padding: 0% 25px;
+}
+
+.login-title{width: 100%; text-align: center; margin-bottom:40px; }
+.login-title h1{color: var(--color-text-title, #0D0E10);
+text-align: center;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 48px */
+letter-spacing: 1px}
+
+.login-btn{width: 100%; height:64px;}
+
+.login-wrap .krds-check-area{
+    margin-top: 10px;
+}
+.social-login{display: flex; flex-direction: row; gap: 10px; justify-content: space-between;}
+.social-login > * {
+ display: flex;
+height: 64px;
+padding: 0px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;}
+.naver-login-btn {background: #03C75A; border-color: #03C75A;}
+.naver-login-btn:hover, .naver-login-btn:active, .naver-login-btn:focus {background: #03C75A; border-color: #03C75A;}
+.naver-login-btn::before {display: inline-flex; content:""; align-items: center; justify-content: center; width: 75px; height: 15px; background-image: url(../../img/login/login-naver.png); background-repeat: no-repeat; background-position: center center; background-size: contain;}
+.kakao-login-btn {background: #FFE839; border-color: #FFE839; color: var(--color-text-basic, #0D0E10);}
+.kakao-login-btn:hover, .kakao-login-btn:active, .kakao-login-btn:focus  {background: #FFE839; border-color: #FFE839; color: var(--color-text-basic, #0D0E10);}
+.kakao-login-btn::before {display: inline-flex; content:""; align-items: center; justify-content: center; width: 62px; height: 22px; background-image: url(../../img/login/login-kakao.png); background-repeat: no-repeat; background-position: center center; background-size: contain;}
+.login-link{
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;}
+.login-link a:hover{
+    color: #0050CA; text-decoration: underline;
+}
+    
+.login-link > .bar{  width: 1px; height:16px;  background: var(--gray-gray-30, #D8D8D8);}
+
+.krds-btn.regist-btn{color: #0050CA; border-color:#0050CA ; height: 64px;}
+
+.helper-box.gray{
+    background: var(--gray-gray-5, #F8F8F8);
+    border: 0 solid var(--color-border-nomal, #C6C6C6);
+    padding: 20px;
+    border-radius: var(--krds-radius-xlarge2);
+    font-size: var(--krds-pc-font-size-body-large);
+}
 /** 노트북 */
 @media (max-width: 1440px) {
 }
 
 /** 테블릿 */
 @media (max-width: 1023px) {
+    /** 로그인*/
+    .login-wrap .login-img{
+        display: none;
+    }
+    .login-contents .login-inner {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+    .login-form-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin: 80px auto;
+    padding: 0% 25px;
+    }
 }
 
 /** 모바일 */

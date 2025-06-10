@@ -389,98 +389,96 @@
                 </div>
 
                 <script>
+                    $(document).ready(function () {
+                        // 전역 파일 배열
+                        const uploadedFiles = [];
 
-                    // 이메일 도메인 자동 입력
-                    function handleEmailDomainChange(selectEl) {
-                        const domainInput = selectEl.closest('ul').querySelector('[data-role="email-domain"]');
-                        const selectedValue = selectEl.value;
+                        // 이메일 도메인 자동 입력
+                        window.handleEmailDomainChange = function (selectEl) {
+                            const $select = $(selectEl);
+                            const $domainInput = $select.closest("ul").find('[data-role="email-domain"]');
+                            const selectedValue = $select.val();
 
-                        if (selectedValue === "") {
-                            domainInput.value = "";
-                            domainInput.readOnly = false;
-                        } else if (selectedValue === "custom") {
-                            domainInput.value = "";
-                            domainInput.readOnly = false;
-                            domainInput.focus();
-                        } else {
-                            domainInput.value = selectedValue;
-                            domainInput.readOnly = true;
-                        }
-                    }
+                            if (selectedValue === "") {
+                                $domainInput.val("").prop("readonly", false);
+                            } else if (selectedValue === "custom") {
+                                $domainInput.val("").prop("readonly", false).focus();
+                            } else {
+                                $domainInput.val(selectedValue).prop("readonly", true);
+                            }
+                        };
 
-                    // textarea 글자 수 카운트 (최대 3000자)
-                    function updateTextareaCount(textareaEl) {
-                        const countNowEl = textareaEl.closest('.form-conts')?.querySelector('.count-now');
-                        if (!countNowEl) return;
+                        // textarea 글자 수 카운트 (최대 3000자)
+                        window.updateTextareaCount = function (textareaEl) {
+                            const $textarea = $(textareaEl);
+                            const $countNowEl = $textarea.closest('.form-conts').find('.count-now');
+                            if (!$countNowEl.length) return;
 
-                        let value = textareaEl.value;
-                        if (value.length > 3000) {
-                            value = value.substring(0, 3000);
-                            textareaEl.value = value;
-                        }
-                        countNowEl.textContent = value.length;
-                    }
+                            let value = $textarea.val();
+                            if (value.length > 3000) {
+                                value = value.substring(0, 3000);
+                                $textarea.val(value);
+                            }
+                            $countNowEl.text(value.length);
+                        };
 
-                    // 전역 파일 배열
-                    const uploadedFiles = [];
+                        // 파일 확장자 구분용 클래스 반환
+                        window.getFileTypeClass = function (fileName) {
+                            const ext = fileName.split('.').pop().toLowerCase();
+                            const imageExts = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];
+                            const docExts = ['pdf', 'hwp', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt', 'zip'];
 
-                    // 파일 선택 창 열기
-                    function openFileDialog(triggerEl) {
-                        const fileInput = document.querySelector('#q_file_input');
-                        if (fileInput) fileInput.click();
-                    }
+                            if (imageExts.includes(ext)) return 'file-img';
+                            if (docExts.includes(ext)) return 'file-doc';
+                            return 'file-etc';
+                        };
 
-                    // 파일 확장자 구분용 클래스 반환
-                    function getFileTypeClass(fileName) {
-                        const ext = fileName.split('.').pop().toLowerCase();
-                        const imageExts = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];
-                        const docExts = ['pdf', 'hwp', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt', 'zip'];
+                        // 파일 선택 창 열기
+                        window.openFileDialog = function () {
+                            $('#q_file_input').click();
+                        };
 
-                        if (imageExts.includes(ext)) return 'file-img';
-                        if (docExts.includes(ext)) return 'file-doc';
-                        return 'file-etc';
-                    }
+                        // 파일 선택 후 첨부 목록 출력
+                        window.handleFileSelect = function (inputEl) {
+                            const newFiles = Array.from(inputEl.files);
+                            const $fileList = $('.detailed-file-wrap .list');
+                            if (!$fileList.length) return;
 
-                    // 파일 선택 후 첨부 목록 출력
-                    function handleFileSelect(inputEl) {
-                        const newFiles = Array.from(inputEl.files);
-                        const fileList = document.querySelector('.detailed-file-wrap .list');
-                        if (!fileList) return;
+                            newFiles.forEach(file => {
+                                const uniqueId = Date.now() + Math.random().toString(36).substr(2, 9);
+                                uploadedFiles.push({ id: uniqueId, file });
 
-                        newFiles.forEach((file) => {
-                            const uniqueId = Date.now() + Math.random().toString(36).substr(2, 9);
-                            uploadedFiles.push({ id: uniqueId, file });
+                                const sizeKB = Math.round(file.size / 1024);
+                                const fileTypeClass = getFileTypeClass(file.name);
 
-                            const sizeKB = Math.round(file.size / 1024);
-                            const fileTypeClass = getFileTypeClass(file.name);
+                                const $li = $(`
+                                    <li data-id="${uniqueId}">
+                                        <a href="#" class="${fileTypeClass}" title="파일첨부">
+                                            <p>${file.name}</p>
+                                            <span>(${sizeKB}KB)</span>
+                                        </a>
+                                        <button type="button" class="krds-btn tertiary fileBtn" data-id="${uniqueId}">
+                                            삭제<i class="svg-icon ico-delete-fill"></i>
+                                        </button>
+                                    </li>
+                                `);
 
-                            const li = document.createElement('li');
-                            li.setAttribute('data-id', uniqueId);
-                            li.innerHTML = `
-                                <a href="#" class="${fileTypeClass}" title="파일첨부">
-                                <p>${file.name}</p>
-                                <span>(${sizeKB}KB)</span>
-                                </a>
-                                <button type="button" class="krds-btn tertiary fileBtn" onclick="removeFileItem(this, '${uniqueId}')">
-                                삭제<i class="svg-icon ico-delete-fill"></i>
-                                </button>
-                            `;
-                            fileList.appendChild(li);
+                                $fileList.append($li);
+                            });
+
+                            $(inputEl).val(''); // 동일 파일 다시 첨부 가능하도록 초기화
+                        };
+
+                        // 첨부 파일 삭제 (동적 요소 대응)
+                        $(document).on("click", ".fileBtn", function () {
+                            const fileId = $(this).data("id");
+                            const index = uploadedFiles.findIndex(f => f.id === fileId);
+                            if (index > -1) uploadedFiles.splice(index, 1);
+                            $(this).closest("li").remove();
                         });
-
-                        inputEl.value = ''; // 동일 파일 다시 첨부 가능하도록 초기화
-                    }
-
-                    // 첨부 파일 삭제
-                    function removeFileItem(buttonEl, fileId) {
-                        const index = uploadedFiles.findIndex(f => f.id === fileId);
-                        if (index > -1) uploadedFiles.splice(index, 1);
-
-                        const li = buttonEl.closest('li');
-                        if (li) li.remove();
-                    }
-
+                    });
                 </script>
+
 
 
 
