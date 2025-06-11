@@ -19,6 +19,7 @@
     <script src="/resources/krds/js/component/ui-script.js" defer></script>
     <script src="/resources/krds/js/pattern/pattern.js" defer></script>
     <script src="/resources/js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -60,7 +61,7 @@
 
                         <div class="agree-all-area">
                             <div class="krds-form-check large">
-                                <input type="checkbox" id="chk_all">
+                                <input type="checkbox" id="chk_all" onchange="handleCheckAll(this)">
                                 <label for="chk_all">전체 동의</label>
                             </div>
                         </div>
@@ -244,6 +245,25 @@
                         <button type="button" class="krds-btn black" onclick="">동의 및 회원가입</button>
                     </div>
                     <!-- //페이지 버튼 영역 -->
+
+
+                 <script>
+                    function handleCheckAll(el) {
+                        const isChecked = $(el).is(':checked');
+
+                        if (isChecked) {
+                            $('#terms_rdo1-1').prop('checked', true);
+                            $('#terms_rdo2-1').prop('checked', true);
+                            $('#terms_rdo3-1').prop('checked', true);
+                            $('#under14chk').prop('checked', true);
+                        } else {
+                            $('input[name="terms_rdo1"]').prop('checked', false);
+                            $('input[name="terms_rdo2"]').prop('checked', false);
+                            $('input[name="terms_rdo3"]').prop('checked', false);
+                            $('#under14chk').prop('checked', false);
+                        }
+                    }
+                 </script>
 
                 </div>
 
