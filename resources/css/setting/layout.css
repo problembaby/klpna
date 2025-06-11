@@ -172,7 +172,7 @@ width:var(--krds-modal--size-small);
 
 .login-form-wrap{
     width: 100%;
-    max-width: 650px;
+    max-width: 700px;
     margin:80px auto;
     padding: 0% 25px;
 }
@@ -224,10 +224,44 @@ flex: 1 0 0;}
 .helper-box.gray{
     background: var(--gray-gray-5, #F8F8F8);
     border: 0 solid var(--color-border-nomal, #C6C6C6);
-    padding: 20px;
     border-radius: var(--krds-radius-xlarge2);
     font-size: var(--krds-pc-font-size-body-large);
+    padding: 30px;
 }
+
+.login-idFind-area .fieldset{margin-top: 20px;}
+.login-idFind-area .fieldset .bar{
+    width: 100%;
+    height: 1px;
+    background-color: #C6C6C6;
+    margin: 10px 0;
+}
+
+.step .progress-bar{display:flex; width: 100%; align-items: center; margin-bottom: 30px; border-radius: 10px; overflow: hidden;}
+.step .progress-bar > *{flex:1 50%; }
+.progress-step{height:50px;background: var(--color-bg-secondary, #F7F8FB);display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+align-self: stretch;
+position: relative;}
+.progress-step.active{background: var(--color-primary, #0050CA); color:#fff;}
+.progress-step.active::after{
+    display: block;
+    content:"";
+    width: 29px;
+    height:50px;
+    background-color: #F7F8FB;
+    background-image: url(../../img/login/step_after.svg);
+    position: absolute;
+    z-index: 1;
+    right:-29px
+}
+
+.ico-find{}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
 }
