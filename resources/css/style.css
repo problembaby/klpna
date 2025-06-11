@@ -12,6 +12,10 @@
     display: block;
 }
 
+.page-title-wrap .h-tit {
+    font-size: var(--krds-pc-font-size-heading-large); /* 32px 재성정 */
+}
+
 /* 아이콘 배경을 원형(라운드)으로 만드는 클래스 */
 .icon-bg-round {
   display: inline-flex;

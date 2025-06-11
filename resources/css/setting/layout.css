@@ -259,7 +259,108 @@ position: relative;}
     right:-29px
 }
 
+
 .ico-find{}
+
+
+/**회원가입*/
+.krds-info-list.chkList > li::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url(../../img/icon/round_check.svg)no-repeat;
+}
+.krds-info-list.chkList > li{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 25.5px */
+}
+
+.join-area-box{margin-top:30px}
+.join-area-box .join-type-list{
+    display: flex;
+    width: 100%;
+    max-width: 840px;
+    margin:0 auto;
+    justify-content: space-around;
+    gap: 40px;
+}
+.join-area-box .join-type-list > .join-type-item{
+    flex: 1 50%;
+}
+
+.join-member-link{
+    display: flex;
+    max-width: 400px;
+    height:220px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-btn-teriary-stroke, #58616A);
+    background: #FFF;
+}
+.join-member-link h2{
+    color: var(--color-text-basic, #0D0E10);
+    text-align: center;
+    word-wrap: break-word;
+    ;
+    
+}
+
+.icon-persnal::before{
+    content:"";
+    display: block;
+    background: url(../../img/join/ico-persnal.png)no-repeat;
+    background-size: cover;
+    width: 100px;
+    height:101px
+}
+.icon-institution::before{
+    content:"";
+    display: block;
+    background: url(../../img/join/ico-institution.png)no-repeat;
+    background-size: cover;
+    width: 100px;
+    height:101px
+}
+
+.join-type-list .krds-info-list{
+    margin-top:30px
+}
+.join-type-list .krds-info-list span{
+    color:#0050CA
+}
+
+
+/* 공통 호버 효과 */
+.join-member-link {
+  transition: background 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 호버 시 배경색 및 테두리색 변경 */
+.join-member-link:hover {
+  background: var(--krds-light-color-action-secondary-hover);
+}
+
+/* 아이콘 회전용 스타일 */
+.icon-persnal::before,
+.icon-institution::before {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d; /* 3D 회전 효과를 자연스럽게 */
+}
+
+/* 호버 시 수평 회전 (Y축 기준 회전) */
+.join-member-link:hover .icon-persnal::before,
+.join-member-link:hover .icon-institution::before {
+  transform: rotateY(1turn);
+}
+
 
 
 /** 노트북 */
@@ -293,9 +394,30 @@ position: relative;}
 /** 모바일 */
 @media (max-width: 767px) {
 .bbs-search-wrap .select-style{width: 100%;}
+    .icon-persnal::before, .icon-institution::before {
+    width: 70px;
+    height: 70px;
+}
+
+.join-member-link h2 {
+    font-size: 18px;
+}
+.join-area-box .join-type-list {
+    display: flex;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 }
 
 @media (max-width: 479px) {
+    .join-area-box .join-type-list > .join-type-item{
+    flex: 1 50%;
+    width: 50%;
+}
 }
 
 @media (max-width: 320px) {
