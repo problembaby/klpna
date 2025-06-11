@@ -24,51 +24,6 @@
 <body>
     <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
 
-    <script>
-    $(document).ready(function () {
-        // 3. 로그인 유효성 검사
-        $(".login-btn").on("click", function (e) {
-            e.preventDefault();
-
-            const $tabSection = $(this).closest(".tab-conts");
-            const $idInput = $tabSection.find("#login-id");
-            const $pwInput = $tabSection.find("#login-pw");
-
-            let valid = true;
-            let firstInvalidInput = null;
-
-            [$idInput, $pwInput].forEach($input => {
-                const $formGroup = $input.closest(".form-group");
-                const $errorMsg = $formGroup.find(".form-hint-invalid");
-
-                if ($.trim($input.val()) === "") {
-                    $formGroup.addClass("is-error");
-                    $errorMsg.show();
-                    $errorMsg.text($input.attr("id") === "login-id" ? "아이디를 입력해주세요." : "비밀번호를 입력해주세요.");
-                    valid = false;
-                    if(!firstInvalidInput) {
-                        firstInvalidInput = $input; // 첫 번째 유효성 검사 실패 입력 필드 저장
-                    }
-                } else {
-                    $formGroup.removeClass("is-error");
-                    $errorMsg.hide();
-                }
-            });
-
-            // 가장 먼저 오류난 input 포커스 이동
-            if(!valid && firstInvalidInput){
-                firstInvalidInput.focus();
-
-            }
-
-            if (valid) {
-                // 로그인 submit 처리
-                alert("로그인 처리 진행 (예시)");
-                // 실제 처리: form 제출 또는 AJAX 호출로 교체 가능
-            }
-        });
-    });
-    </script>
 
      <div class="wrap">
         <div id="container">
