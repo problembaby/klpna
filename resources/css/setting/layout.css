@@ -175,6 +175,7 @@
 width:var(--krds-modal--size-small);    
 }
 
+
 /** login */
 .login-wrap{
     display: flex;

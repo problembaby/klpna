@@ -53,6 +53,8 @@
 
 .breadcrumb-action{display: flex; gap:5px}
 
+.bbs-search-wrap label{align-items: center;}
+
 
 
 /** 노트북 */
