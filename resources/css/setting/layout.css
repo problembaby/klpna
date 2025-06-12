@@ -1,6 +1,11 @@
 @import url(./header_footer.css);
 
-/** 버튼 재정의 */
+/***********************
+ 버튼 재정의 
+ *************************/
+
+
+ /** 블랙 */
 .krds-btn.black {
     background-color: #252525;
     border-color: #252525;
@@ -38,6 +43,47 @@
     border-color: var(--krds-button--color-secondary-border-disabled);
     color: var(--krds-button--color-secondary-text-disabled);
 }
+
+
+/** 딥 블루*/
+.krds-btn.deepBlue {
+    background-color: #0050CA;
+    border-color: #0050CA;
+    color: #fff;
+}
+
+.krds-btn.deepBlue:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.deepBlue:hover {
+    background-color: #164da0;
+}
+
+.krds-btn.deepBlue:active,
+.krds-btn.deepBlue:focus {
+    background-color: #164da0;
+}
+
+.krds-btn.deepBlue[disabled],
+.krds-btn.deepBlue.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.deepBlue[disabled]:not(.icon) .svg-icon,
+.krds-btn.deepBlue.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.deepBlue[disabled]:hover,
+.krds-btn.deepBlue.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
 
 
 .guide-txt {
@@ -258,6 +304,11 @@ position: relative;}
     z-index: 1;
     right:-29px
 }
+.progress-step.none{
+    background: var(--color-primary, #0050CA); color: rgba(255, 255, 255, 0.50);
+
+}
+
 
 
 .ico-find{}
@@ -432,6 +483,80 @@ position: relative;}
     font-weight: 600;
 }
 
+/****************************
+ 회원가입 - 회원정보입력 
+ ********************************/
+
+ .join-area.info .form-group{flex-direction: row; align-items: flex-start;}
+ .join-area.info .form-tit{width: 200px; padding-top:10px; flex: 0 0 200px}
+ .join-area.info .form-input{width: 100%; max-width: 500px;}
+ .join-area.info .form-input.w100{width: 100%; max-width: 100%; flex:1 100%;}
+
+ .join-area.info .input-txt{margin-top: 5px;}
+ .join-area.info .form-group .form-conts.mw400{max-width: 400px;}
+
+ .input-group.column{flex-direction: column; align-items: flex-start;}
+
+ .bar{ width: 100%; height:1px; background-color: #C6C6C6; margin:10px 0;}
+
+ .eduExemptArea{display: flex; justify-content: flex-end; margin-top: 20px;}
+ .eduExemptArea-btn-list{text-align: right;}
+ .eduExemptArea-btn-list p{color: var(--color-primary, #0050CA);
+text-align: right;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 22.5px */
+margin-top: 10px;}
+
+
+.input-group.date > li:not(.mark) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex: 1 1 0px;
+    min-width: 0;
+    gap: var(--krds-form-group--gap);
+    position: relative;
+}
+
+.info-title{margin: 20px 0; }
+.hideFieldset{width: 100%;}
+.password-rule-list{display:flex; gap:18px; padding:10px 0;}
+.password-rule-item{color: var(--color-text-disabled, #8A949E);
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+display: flex;
+align-items: center;
+justify-content: center;
+gap:5px
+}
+
+.form-group [class^=form-hint]::before{
+    flex: 0 0 auto;
+}
+
+.password-rule-item .ico-chk::before{
+    content:"";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../../img/join/ico-chk-none.svg)no-repeat;
+}
+.password-rule-item.active .ico-chk::before{
+    content:"";
+    display: block;
+    width: 20px;
+    height: 21px;
+    background: url(../../img/join/ico-chk-active.svg)no-repeat;
+}
+
+.password-rule-item.active{color:#0D0E10}
+
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
 }
@@ -459,6 +584,25 @@ position: relative;}
     padding: 0% 25px;
     }
     .step .progress-bar {
+    flex-wrap: wrap;
+}
+
+.join-area.info .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.join-area.info .form-tit {
+    width: 100%;
+    padding-top: 10px;
+    flex: 1 1 100%;
+    font-weight: bold;
+}
+.join-area.info .form-input {
+    width: 100%;
+    max-width: 100%;
+}
+
+.join-area.info  .krds-check-area {
     flex-wrap: wrap;
 }
 }
@@ -508,6 +652,33 @@ position: relative;}
     flex: 1 50%;
     width: 50%;
 }
+
+.input-group {
+    gap: var(--krds-gap-3);
+}
+
+.progress-step {
+    display: none;
+}
+.progress-step.active {
+    display: flex;
+}
+.progress-step.active::after {
+    right: 0px;
+}
+.step .progress-bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.info .helper-box.gray {padding: 20px 5px; }
+.info .helper-box.gray li{font-size: 13px;}
+
 }
 
 @media (max-width: 320px) {
