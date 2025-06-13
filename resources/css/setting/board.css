@@ -1259,17 +1259,17 @@ border-bottom: 1px solid #C6C6C6;
 }
 
 /* 기본 파일 아이콘 (기타 확장자) */
-.detailed-file-wrap .list li a.file-etc::before {
+.file-etc::before {
   background-image: url(../../img/icon/ico-file2.svg);
 }
 
 /* 문서 파일 아이콘 */
-.detailed-file-wrap .list li a.file-doc::before {
+.file-doc::before {
   background-image: url(../../img/icon/ico-file-doc.svg);
 }
 
 /* 이미지 파일 아이콘 */
-.detailed-file-wrap .list li a.file-img::before {
+.file-img::before {
   background-image: url(../../img/icon/ico-file-img.svg);
 }
 

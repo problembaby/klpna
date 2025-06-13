@@ -286,17 +286,14 @@
                                     <!-- 이름 -->
                                     <div class="form-group">
                                         <div class="form-tit">
-                                            <label for="userName">이름<i class="req">*</i></label>
+                                            <label for="userName">이름</label>
                                         </div>
                                         <div class="form-input">
                                             <div class="input-group">
                                                 <div class="form-conts">
                                                     <input type="text" id="userName" class="krds-input medium"
-                                                        placeholder="이름 입력" maxlength="30">
+                                                        placeholder="이름 입력" maxlength="30" value="홍길동" readonly>
                                                 </div>
-                                            </div>
-                                            <div class="input-txt">
-                                                <p class="form-hint-invalid" style="display: none;">이름을 입력해주세요.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -306,17 +303,14 @@
                                     <!-- 생년월일 -->
                                     <div class="form-group">
                                         <div class="form-tit">
-                                            <label for="userBirth">생년월일(6자)<i class="req">*</i></label>
+                                            <label for="userBirth">생년월일</label>
                                         </div>
                                         <div class="form-input">
                                             <div class="input-group">
                                                 <div class="form-conts">
                                                     <input type="text" id="userBirth" class="krds-input medium"
-                                                        placeholder="YYMMDD" maxlength="6">
+                                                        placeholder="YYMMDD" maxlength="6" value="900814" readonly>
                                                 </div>
-                                            </div>
-                                            <div class="input-txt">
-                                                <p class="form-hint-invalid" style="display: none;">생년월일을 입력해주세요.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -326,19 +320,12 @@
                                     <!-- 성별 -->
                                     <div class="form-group">
                                         <div class="form-tit">
-                                            <label for="userGender">성별<i class="req">*</i></label>
+                                            <label for="userGender">성별</label>
                                         </div>
                                         <div class="form-input">
                                             <div class="form-conts">
                                                 <div class="krds-check-area mt10">
-                                                    <div class="krds-form-check">
-                                                        <input type="radio" name="userGender" id="female" checked>
-                                                        <label for="female">여</label>
-                                                    </div>
-                                                    <div class="krds-form-check">
-                                                        <input type="radio" name="userGender" id="male">
-                                                        <label for="male">남</label>
-                                                    </div>
+                                                    <input type="text" class="krds-input medium" value="여자" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -509,7 +496,7 @@
                                                     <div class="krds-form-check">
                                                         <input type="radio" name="userEmploymentStatus"
                                                             id="userEmploymentStatus-y" value="Y"
-                                                            onclick="toggleEmploymentFields('Y')" checked>
+                                                            onclick="toggleEmploymentFields('Y')">
                                                         <label for="userEmploymentStatus-y">취업</label>
                                                     </div>
                                                     <div class="krds-form-check">
@@ -528,7 +515,7 @@
 
 
                                     <!-- 취업여부 : 취업 선택시   data-visible-when="Y" -->
-                                    <div class="fieldset hideFieldset" data-visible-when="Y">
+                                    <div class="fieldset hideFieldset" data-visible-when="Y"  style="display: none;">
                                         <!-- 근무처명 -->
                                         <div class="form-group">
                                             <div class="form-tit">
@@ -683,7 +670,7 @@
                                                     <div class="krds-check-area mt10">
                                                         <div class="krds-form-check">
                                                             <input type="radio" name="userMailReceive"
-                                                                id="muserMailReceive-work" required>
+                                                                id="userMailReceive-work" required>
                                                             <label for="userMailReceive-work">직장</label>
                                                         </div>
                                                         <div class="krds-form-check" required>
@@ -693,7 +680,7 @@
                                                         </div>
                                                         <div class="krds-form-check" required>
                                                             <input type="radio" name="userMailReceive"
-                                                                id="userMailReceive-none" checked>
+                                                                id="userMailReceive-none">
                                                             <label for="userMailReceive-none">수신안함</label>
                                                         </div>
                                                     </div>
@@ -735,17 +722,17 @@
                                                     <div class="krds-check-area mt10">
                                                         <div class="krds-form-check">
                                                             <input type="radio" name="userNoMailReceive"
-                                                                id="mailReceive-work" required>
+                                                                id="mailReceive-work">
                                                             <label for="mailReceive-work">직장</label>
                                                         </div>
-                                                        <div class="krds-form-check" required>
+                                                        <div class="krds-form-check">
                                                             <input type="radio" name="userNoMailReceive"
                                                                 id="mailReceive-home">
                                                             <label for="mailReceive-home">집</label>
                                                         </div>
-                                                        <div class="krds-form-check" required>
+                                                        <div class="krds-form-check">
                                                             <input type="radio" name="userNoMailReceive"
-                                                                id="mailReceive-none" checked>
+                                                                id="mailReceive-none">
                                                             <label for="mailReceive-none">수신안함</label>
                                                         </div>
                                                     </div>
