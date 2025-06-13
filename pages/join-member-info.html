@@ -84,63 +84,63 @@
 
 
         /** 유효성검사 */
-       function validateForm() {
-    let isValid = true;
-    let $firstInvalid = null;
+        function validateForm() {
+            let isValid = true;
+            let $firstInvalid = null;
 
-    $('.form-group').each(function () {
-        const $group = $(this);
-        const isRequired = $group.find('.form-tit .req').length > 0;
-        if (!isRequired) return;
+            $('.form-group').each(function () {
+                const $group = $(this);
+                const isRequired = $group.find('.form-tit .req').length > 0;
+                if (!isRequired) return;
 
-        const $input = $group.find('input, select, textarea').filter(':visible').first();
-        const $hint = $group.find('.form-hint-invalid');
+                const $input = $group.find('input, select, textarea').filter(':visible').first();
+                const $hint = $group.find('.form-hint-invalid');
 
-        let val = '';
-        let isEmpty = false;
+                let val = '';
+                let isEmpty = false;
 
-        if ($input.length) {
-            if ($input.is(':checkbox') || $input.is(':radio')) {
-                const $checked = $group.find('input:checked');
-                isEmpty = ($checked.length === 0);
-            } else {
-                val = $input.val()?.trim();
-                isEmpty = (val === '');
+                if ($input.length) {
+                    if ($input.is(':checkbox') || $input.is(':radio')) {
+                        const $checked = $group.find('input:checked');
+                        isEmpty = ($checked.length === 0);
+                    } else {
+                        val = $input.val()?.trim();
+                        isEmpty = (val === '');
+                    }
+
+                    if (isEmpty) {
+                        $group.addClass('is-error');
+                        $hint.css('display', 'flex');
+                        if (!$firstInvalid) $firstInvalid = $input;
+                        isValid = false;
+                    } else {
+                        $group.removeClass('is-error');
+                        $hint.hide();
+                    }
+                }
+            });
+
+            // 포커스 이동 보장
+            if (!isValid && $firstInvalid?.length) {
+                setTimeout(() => $firstInvalid.focus(), 10);
+                return;
             }
 
-            if (isEmpty) {
-                $group.addClass('is-error');
-                $hint.css('display', 'flex');
-                if (!$firstInvalid) $firstInvalid = $input;
-                isValid = false;
-            } else {
+            $('form').submit();
+        }
+
+        $(function () {
+            // 모든 입력 요소에 대해 실시간 오류 해제 처리
+            $('input, select, textarea').on('input change', function () {
+                const $input = $(this);
+                const $group = $input.closest('.form-group');
+                const $hint = $group.find('.form-hint-invalid');
+
+                // 에러 상태 해제
                 $group.removeClass('is-error');
                 $hint.hide();
-            }
-        }
-    });
-
-    // 포커스 이동 보장
-    if (!isValid && $firstInvalid?.length) {
-        setTimeout(() => $firstInvalid.focus(), 10);
-        return;
-    }
-
-    $('form').submit();
-}
-
-    $(function () {
-        // 모든 입력 요소에 대해 실시간 오류 해제 처리
-        $('input, select, textarea').on('input change', function () {
-            const $input = $(this);
-            const $group = $input.closest('.form-group');
-            const $hint = $group.find('.form-hint-invalid');
-
-            // 에러 상태 해제
-            $group.removeClass('is-error');
-            $hint.hide();
+            });
         });
-    });
 
 
 
@@ -542,7 +542,8 @@
                                                                 <input type="text" id="workplaceName"
                                                                     class="krds-input medium" placeholder="">
                                                             </div>
-                                                            <button type="button" class="krds-btn medium black">근무처 검색</button>
+                                                            <button type="button" class="krds-btn medium black">근무처
+                                                                검색</button>
                                                         </div>
                                                     </div>
                                                 </div>
