@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+
+/** 메인  section 01 */
+.mainSection01{padding-top:50px; width: 100%; }
+.mainSection01 > .inner{display: flex; gap:50px; height:460px}
+
+.main-banner{ border-radius: 30px;
+background: #fff;flex:1; max-width: 1039px; border-radius: 30px; overflow: hidden}
+
+.main-login-area{flex:0 0 340px;}
+.login-box{
+    width: 100%;
+    height:330px;
+    border-radius: 30px;
+    background: #0767C7;
+    padding: 18px;
+    color:#fff;
+}
+
+.login-info-top{background-color: #fff; color:#0D0E10; border-radius: 20px; padding:14px 22px;}
+.login-info-top .name { color: #0D0E10; font-size: 24px; font-style: normal; font-weight: 600; line-height: 135%; /* 32.4px */}
+.user-name-wrap{width: 100%; display: flex; justify-content: space-between; align-items: center;}
+
+.btn-edit { width: 52px; height: 24px; flex-shrink: 0; border-radius: 30px; background: #B1B5C4; color: #FFF; text-align: center; font-size: 14px; font-style: normal; font-weight: 500; line-height: normal; }
+
+.user-info-list{margin-top: 20px; display: flex; flex-direction: column; gap:12px}
+.user-info-list li{display: flex;}
+.user-info-list li .label{font-weight: 300; width: 50%;}
+.user-info-list li .value{width: 50%;}
+
+.edu-summary{display: flex; justify-content: space-between; margin-top: 20px; gap:20px}
+.edu-summary .edu-item{border-radius: 30px;
+background: #0767C7; width: 161.112px;
+height: 110px;
+flex-shrink: 0; text-align: center; display: block; color:#fff;}
+.edu-item .edu-title{display: flex; align-items: center; justify-content: center; margin-top:10px;}
+.edu-item .edu-count{color: var(--White, #FFF);
+text-align: center;
+font-size: 15px;
+font-weight: 300;
+}
+.edu-item .edu-count .value{color: var(--White, #FFF);
+text-align: right;
+font-size: 40px;
+font-style: normal;
+font-weight: 500; margin-right: 5px;}
+.mainSwiper .swiper-navigation{margin-left:20px}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-banner .mainSwiper{position: relative;}
+.main-banner .mainSwiper .swiper-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: var(--krds-gap-3);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.swiper-btn-pos{
+    position: absolute;
+    bottom:24px;
+    left:44px
+}
+.swiper-progress{width: 140px; border-radius: 10px;
+background: #D9D9D9;}
+.swiper-progress-fill {
+	width: 0%;
+	height: 4px;
+	border-radius: 10px;
+	background: #ffee00;
+	transition: width 0.1s linear;
+}
+
+.swiper-pagination.swiper-pagination-fraction {
+    gap: var(--krds-gap-2);
+    padding: 0 var(--krds-padding-6);
+    color: var(--krds-light-color-text-basic);
+    font-weight: var(--krds-font-weight-bold);
+    border: 0;
+    border-radius: var(--krds-radius-max);
+    background-color:transparent;
+}
+
+
+/** 섹션 2 */
+
+.mainSection02 {padding-top:50px}
+.shortcut-wrap{border-radius: 30px; background: #F1F2F6; padding:24px 28px;}
+
+.tab-conts-wrap.shortcut{margin-bottom: 20px;}
+.tab-conts-wrap.shortcut .tab-conts.active{display: flex; flex-direction: row; width: 100%; align-items: center; gap:50px}
+.tab-conts-wrap.shortcut .tab-conts.active .shortcut-tit{ width: 230px; text-align: left;} 
+.tab-conts-wrap.shortcut .tab-conts.active .shortcut-tit h3{color: #0D0E10; font-size: 24px; display: flex; align-items: center; gap:5px}
+.tab-conts-wrap.shortcut .tab-conts.active .shortcut-tit h3::after{content:""; display: block; background: url(../../img/main/ico-mainHome.svg); width: 24px; height:24px;}
+.tab-conts-wrap.shortcut .tab-conts.active .shortcut-tit p{color: #0D0E10;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 18px */ margin-top: 5px;}
+
+.shortcut-list{display: flex; gap:5rem; }
+.shortcut-list .shortcut-list-item{display: flex; width: 105px; flex-direction: column;}
+.shortcut-list-item .img {
+  width: 105px;
+  height: 105px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: center;
+}
+.shortcut-list-item .txt {
+  color: #0D0E10;
+text-align: center;
+font-family: Pretendard;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 18px */
+}
+
+
+/** 보수교육 바로가기 아이콘 */
+.shortImg_02_01::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_01.png) no-repeat center/contain;
+  width: 60px;
+  height: 52px;
+  display: block;
+}
+
+.shortImg_02_02::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_02.png) no-repeat center/contain;
+  width: 56px;
+  height: 49px;
+  display: block;
+}
+
+.shortImg_02_03::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_03.png) no-repeat center/contain;
+  width: 55px;
+  height: 57px;
+  display: block;
+}
+
+.shortImg_02_04::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_04.png) no-repeat center/contain;
+  width: 50px;
+  height: 54px;
+  display: block;
+}
+
+.shortImg_02_05::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_05.png) no-repeat center/contain;
+  width: 52px;
+  height: 53px;
+  display: block;
+}
+
+.shortImg_02_06::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_06.png) no-repeat center/contain;
+  width: 52px;
+  height: 55px;
+  display: block;
+}
+
+.shortImg_02_07::before {
+  content: "";
+  background: url(../../img/main/shortImg_02_07.png) no-repeat center/contain;
+  width: 53px;
+  height: 55px;
+  display: block;
+}
+
+
+
+.mainSection03{margin-top: 50px; background: rgba(241, 242, 246, 0.40); height:559px;}
+.mainSection03 .main-bbs-wrap{display: flex; gap:40px; padding:50px 0;}
+.mainSection03 .main-bbs-wrap .notice{width: 350px;}
+.main-bbs-wrap .notice-top{display: flex; justify-content: space-between; align-items: center;}
+.main-bbs-wrap .notice-top h3{color: #0D0E10;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 28px */}
+.main-bbs-wrap .notice-top .view-all{color: #7E7B77;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+align-items: center;
+gap:5px;
+}
+
+.view-all .svg-icon.ico-plus {
+  background-color: #7E7B77; /* 여기만 바꾸면 색 바뀜 */
+}
+

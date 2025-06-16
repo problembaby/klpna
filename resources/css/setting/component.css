@@ -131,6 +131,8 @@
 탭 스타일 정의  
 --------------------------------------------*/
 
+
+
 .tab.line.full .btn-tab {
     border: 0;
     border-bottom: 2px solid #B1B8BE;
@@ -150,3 +152,54 @@
     background-color: #0050CA;
     transition: var(--krds-transition-base);
 }
+
+
+.tab.fill.full > ul > li:last-of-type .btn-tab {
+    border-top-right-radius:  30px;
+    border-bottom-right-radius: 30px;;
+}
+.tab.fill.full > ul > li:first-of-type .btn-tab {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #8087A2;
+    color:#fff;
+    font-size: 18px;
+}
+
+.tab.full .btn-tab {
+    height: var(--krds-tab--button-size-height);
+    padding: 0;
+    font-size: var(--krds-tab--full-button-pc-font-size);
+}
+
+
+.tab.full > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    gap: 10px;
+}
+
+.tab.fill.full > ul > li + li .btn-tab {
+    border-left: none;
+    border: 0;
+    border-radius: 30px;
+    background: #8087A2;
+    color:#fff;
+    font-size: 18px;
+}
+.tab.fill.full > ul > li .btn-tab {
+    border-radius: 30px;
+}
+
+
+.tab.fill .active .btn-tab {
+    background-color: #0050CA!important;
+    border-color: #0050CA !important;
+    color: #fff;
+}
+
+
+
