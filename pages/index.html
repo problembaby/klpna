@@ -27,6 +27,40 @@
 
 	<div class="wrap">
 		<div id="container">
+
+
+			<!--퀵메뉴-->
+			<div class="quick-wrap" id="aside">
+				<div class="a_nav">
+					<ul class="quick-wrap-ul">
+						<li class="quick-wrap-item">
+							<a href="#" target="_blank" title="회비납부 페이지 이동" >
+								<div class="txt">회비납부</div>
+								<i class="quick-icon01"></i>
+							</a>
+						</li>
+						<li class="quick-wrap-item">
+							<a href="#" target="_blank" title="나의강의실 페이지 이동" >
+								<div class="txt">나의강의실</div>
+								<i class="quick-icon02"></i>
+							</a>
+						</li>
+						<li class="quick-wrap-item">
+							<a href="#" target="_blank" title="간무협챗봇 페이지 이동" >
+								<div class="txt">간무협챗봇</div>
+								<i class="quick-icon03"></i>
+							</a>
+						</li>
+					</ul>
+	
+					<button class="ico-plus blackRound a_control">
+						<div class="sr-only">퀵메뉴 제어 버튼</div>
+						<span class="ac_deco"></span>
+						<span class="ac_deco t1"></span>
+					</button>
+				</div>
+			</div>
+
 			<!-- 메인 섹션1 -->
 			<section class="mainSection01" id="mainSection01">
 				<div class="inner">
@@ -72,7 +106,9 @@
 
 					</div>
 					<!--//배너영역-->
-					<div class="main-login-area">
+
+					<!--로그인 후 화면 -->
+					<div class="main-login-area" style="display: none;">
 						<div class="login-box">
 							<div class="login-info-top">
 								<div class="user-name-wrap">
@@ -115,6 +151,27 @@
 							</a>
 						</div>
 					</div>
+					<!--//로그인 후 화면 -->
+
+					<!--비로그인 화면-->
+					<div class="main-login-area">
+						<div class="guest-box">
+							<div class="guest-btn-list">
+								<a href="#" class="krds-btn tertiary guest-box-btn" title="개인회원 로그인으로 페이지 이동"><i class="ico-loginBtn01"></i>개인회원 로그인</a>
+								<a href="#" class="krds-btn tertiary guest-box-btn" title="기관회원 로그인으로 페이지 이동"><i class="ico-loginBtn02"></i>기관회원 로그인</a>
+							</div>
+							<div class="main-join-find">
+								<a href="#" title="회원가입으로 페이지 이동">회원가입</a>
+								<a href="#" title="회원가입으로 페이지 이동">ID/PW 찾기</a>
+							</div>
+							<p class="login-noti">
+								로그인 하시면 <span class="bold">나의 자격정보와 교육 이수현황</span>을 확인 할 수있습니다.
+							</p>
+						</div>
+
+					</div>
+				
+					<!--//비로그인 화면-->
 				</div>
 			</section>
 
@@ -525,20 +582,22 @@
 						<div class="news-box-list">
 							<div class="video">
 								<h3>간호조무사 50년사</h3>
-								<iframe width="530" height="305"
-									src="https://www.youtube.com/embed/ML-MIXJ_eh0?si=WK8s9jFd0TEIPkMj"
-									title="YouTube video player" frameborder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-							</div>
-							<div class="newsSub-area">
-								<div class="projects">
-									<h3>주요산업</h3>
-									<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
-										<p>양질의 간호조무사 양성과 간호서비스의 질 향상을 위해 최선을 다하고 있습니다.</p>
-										<i class="ico-sec0401 pos"></i>
-									</a>
+								<div class="video-iframe">
+									<iframe width="100%" height="305"
+										src="https://www.youtube.com/embed/ML-MIXJ_eh0?si=WK8s9jFd0TEIPkMj"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 								</div>
+							</div>
+							<div class="projects">
+								<h3>주요산업</h3>
+								<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
+									<p>양질의 간호조무사 양성과 간호서비스의 질 향상을 위해 최선을 다하고 있습니다.</p>
+									<i class="ico-sec0401 pos"></i>
+								</a>
+							</div>
+							
 								<div class="welfare">
 									<h3>회원복지</h3>
 									<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
@@ -556,7 +615,7 @@
 
 									</a>
 									<a href="#" target="_self" title="페이지 이동" class="news-gray-box">
-										<p>협회 자문 공인노무사가정성을 다하여 상담해<br>
+										<p>협회 자문 공인노무사가정성을 다하여 상담해
 
 											드립니다.</p>
 										<i class="ico-sec0403 pos"></i>
@@ -598,7 +657,7 @@
 									</div>
 
 								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -868,50 +927,10 @@
 			<section class="related-org" id="related-org">
 				<div class="inner">
 					<!-- 배너3 -->
+
 					<div class="swiper mainSwiper3">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="https://placehold.co/163x48" alt="대체이미지">
-								</a>
-							</div>
-						</div>
-						<div class="swiper-indicator swiper-btn-pos">
+
+						<div class="swiper-indicator">
 							<h2>유관기관 바로가기</h2>
 							<div class="swiper-navigation">
 								<div class="swiper-button-prev"></div>
@@ -927,6 +946,41 @@
 							</div>
 
 						</div>
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="/resources/img/org/org01.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="/resources/img/org/org02.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="/resources/img/org/org03.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="/resources/img/org/org04.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="/resources/img/org/org05.png" alt="대체이미지">
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank" title="새창이동">
+									<img src="/resources/img/org/org06.png" alt="대체이미지">
+								</a>
+							</div>
+
+						</div>
+
 					</div>
 
 				</div>
@@ -939,9 +993,10 @@
 	<script>
 
 		// 메인 스와이퍼
-		let swiper1, swiper2;
+		let swiper1, swiper2, swiper3;
 		let isPlaying1 = true;
 		let isPlaying2 = true;
+		let isPlaying3 = true;
 		let progressInterval1;
 
 		function initSwiper1() {
@@ -983,6 +1038,34 @@
 				}
 			});
 		}
+
+		function initSwiper3() {
+			swiper3 = new Swiper(".mainSwiper3", {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				loop: true,
+				navigation: {
+					nextEl: ".mainSwiper3 .swiper-button-next",
+					prevEl: ".mainSwiper3 .swiper-button-prev",
+				},
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 3,
+					},
+					768: {
+						slidesPerView: 3,
+					},
+					1024: {
+						slidesPerView: 5,
+					}
+				}
+			});
+		}
+
 
 		function startProgressBar1() {
 			const $progress = $('.mainSwiper .swiper-progress-fill');
@@ -1037,15 +1120,35 @@
 			}
 		}
 
+		function togglePlayPause3() {
+			const $playBtn = $('.mainSwiper3 .swiper-button-play');
+			const $stopBtn = $('.mainSwiper3 .swiper-button-stop');
+			if (isPlaying3) {
+				swiper3.autoplay.stop();
+				isPlaying3 = false;
+				$playBtn.show();
+				$stopBtn.hide();
+			} else {
+				swiper3.autoplay.start();
+				isPlaying3 = true;
+				$playBtn.hide();
+				$stopBtn.show();
+			}
+		}
+
 		$(document).ready(function () {
 			initSwiper1();
 			initSwiper2();
+			initSwiper3();
 
 			$('.mainSwiper .swiper-button-play').on('click', togglePlayPause1);
 			$('.mainSwiper .swiper-button-stop').on('click', togglePlayPause1);
 
 			$('.mainSwiper2 .swiper-button-play').on('click', togglePlayPause2);
 			$('.mainSwiper2 .swiper-button-stop').on('click', togglePlayPause2);
+
+			$('.mainSwiper3 .swiper-button-play').on('click', togglePlayPause3);
+			$('.mainSwiper3 .swiper-button-stop').on('click', togglePlayPause3);
 		});
 
 
