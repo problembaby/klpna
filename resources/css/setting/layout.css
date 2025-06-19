@@ -319,6 +319,12 @@ position: relative;}
 background: var(--color-bg-nomal, #F8F8F8); margin: 30px auto }
 
 .ico-find::before { content:""; display: block; background: url(../../img/join/ico-find.svg)no-repeat; width: 100px; height:100px}
+.ico-find.find02::before { content:""; display: block; background: url(../../img/join/ico-find2.svg)no-repeat; width: 100px; height:100px}
+
+
+.find-id-area{width: 100%; display: flex; justify-content: center; align-items: center; padding:20px; 0}
+.find-id-area .label { color: var(--color-text-subtle, #464C53); font-size: 17px; font-style: normal; font-weight: 400; line-height: 150%; /* 24px */ margin-right:20px}
+.find-id-area .user-id { color: var(--color-text-title, #0D0E10); font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */}
 
 
 /**회원가입*/
@@ -717,6 +723,8 @@ line-height: 150%; /* 19.5px *//}
     background-color: #fff;
     right: 0px;
 }
+
+.progress-step.active:last-child{border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
 .step .progress-bar {
     display: flex;
     width: 100%;
