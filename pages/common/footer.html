@@ -33,7 +33,7 @@
 			<div class="foot-link">
 				<div class="foot-link-item">
 					<button type="button" class="link open-modal" title="서비스 모달 열림" aria-expanded="false"
-						data-target="popFootLink">서비스 바로가기</button>
+						data-target="serviceShortcut">서비스 바로가기</button>
 				</div>
 				<div class="foot-link-item last">
 					<button type="button" class="link open-modal" title="협회 리스트 모달 열림" aria-expanded="false"
@@ -42,26 +42,20 @@
 
 			</div>
 			<div class="link-sns">
-				<a href="#" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+				<a href="https://pf.kakao.com/_cbkxexl" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+					<span class="sr-only">카카오</span>
+					<i class="svg-icon ico-kakao"></i>
+				</a>
+
+				<a href="https://www.youtube.com/@KLPNA_%EA%B0%84%ED%98%B8%EC%A1%B0%EB%AC%B4%EC%82%AC%ED%98%91%ED%9A%8C" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
 					<span class="sr-only">인스타그램</span>
 					<i class="svg-icon ico-instagram"></i>
 				</a>
-				<a href="#" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
+				<a href="https://www.instagram.com/lpnnews/" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
 					<span class="sr-only">유튜브</span>
 					<i class="svg-icon ico-youtube"></i>
 				</a>
-				<a href="#" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
-					<span class="sr-only">X</span>
-					<i class="svg-icon ico-sns-x"></i>
-				</a>
-				<a href="#" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
-					<span class="sr-only">페이스북</span>
-					<i class="svg-icon ico-facebook"></i>
-				</a>
-				<a href="#" class="krds-btn xlarge icon border" target="_blank" title="새 창 열기">
-					<span class="sr-only">블로그</span>
-					<i class="svg-icon ico-blog"></i>
-				</a>
+
 			</div>
 		</div>
 	</div>
@@ -128,6 +122,49 @@
 <!-- //footer -->
 
 
+
+
+<!-- 모달 : 서비스 바로가기 -->
+<section id="serviceShortcut" class="krds-modal fade" data-type="full">
+	<!-- modal-dialog -->
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h1 class="modal-title">서비스 바로가기</h1>
+			</div>
+			<!-- //modal title -->
+
+			<!-- modal contents -->
+			<div class="modal-conts">
+				<!-- 서비스 바로가기 링크 -->
+				<ul class="pop-foot-links">
+					<li><a href="https://klpna.or.kr/"  title="대한간호조무사협회 새창열림" target="_blank">대한간호조무사협회</a></li>
+					<li><a href="https://klpnedu.or.kr/"  title="보수교육센터 새창열림" target="_blank">보수교육센터</a></li>
+					<li><a href="https://klpnacademy.or.kr/"  title="직무교육센터 새창열림" target="_blank">직무교육센터</a></li>
+					<li><a href="https://klpna.or.kr/"  title="자격신고센터 새창열림" target="_blank">자격신고센터</a></li>
+					<li><a href="https://klpna.or.kr/academy" title="학회센터 새창열림" target="_blank">학회센터</a></li>
+				</ul>
+				<!-- //서비스 바로가기 링크 -->
+			</div>
+			<!-- //modal contents -->
+
+			<!-- close button -->
+			<button type="button" class="krds-btn xlarge icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<!-- //modal-dialog -->
+	<div class="modal-back"></div>
+</section>
+<!-- //모달 : 서비스 바로가기 -->
+
+
+
+
 <!-- 모달 : 협회 바로가기 -->
 <section id="popFootLink" class="krds-modal fade" data-type="full">
 	<!-- modal-dialog -->
@@ -173,4 +210,4 @@
 	<div class="modal-back"></div>
 </section>
 
-<!-- //모달 : 소속기관 링크 -->
+<!-- //모달 : 협회 바로가기 -->

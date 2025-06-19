@@ -6,15 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * KRDSFormUtil
  * 공통 폼 인터랙션 유틸리티 객체
- * - 인풋 삭제 버튼 기능
- * - 비밀번호 보기 토글 기능
- * - 퀵메뉴 인터랙션
  */
 const KRDSFormUtil = {
     init() {
         this.bindInputClear();
         this.bindPasswordToggle();
-        this.bindQuickMenuToggle();  // ✅ 퀵메뉴 토글 기능
+        this.bindQuickMenuToggle();
+        this.bindGnbToggle(); // ✅ GNB 토글 기능
     },
 
     bindInputClear() {
@@ -61,11 +59,65 @@ const KRDSFormUtil = {
             quickWrap.classList.toggle('q-show', isOpen);
 
             if (isOpen) {
-               [...items].reverse().forEach((item, i) => {
+                [...items].reverse().forEach((item, i) => {
                     setTimeout(() => item.classList.add('q-show'), i * 100);
                 });
             } else {
                 items.forEach(item => item.classList.remove('q-show'));
+            }
+        });
+    },
+
+    /**
+     * [공통] GNB 열기/닫기 토글 기능
+     */
+    bindGnbToggle() {
+        const triggers = document.querySelectorAll('.gnb-main-trigger');
+        const depth2Menus = document.querySelectorAll('.depth2');
+        const gnbBg = document.querySelector('.gnb-bg');
+        const gnbBackdrop = document.querySelector('.gnb-backdrop');
+        const body = document.body;
+
+        function openGnb(trigger) {
+            triggers.forEach(t => t.classList.remove('active'));
+            trigger.classList.add('active');
+
+            depth2Menus.forEach(menu => menu.style.display = 'block');
+            gnbBg.style.display = 'block';
+            gnbBg.classList.add('active');
+            gnbBackdrop?.classList.add('active');
+            body.style.overflow = 'hidden';
+        }
+
+        function closeGnb() {
+            triggers.forEach(t => t.classList.remove('active'));
+            depth2Menus.forEach(menu => menu.style.display = 'none');
+            gnbBg.style.display = 'none';
+            gnbBg.classList.remove('active');
+            gnbBackdrop?.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = gnbBg.classList.contains('active');
+                const isThisActive = this.classList.contains('active');
+
+                if (!isOpen) {
+                    openGnb(this);
+                } else if (isThisActive) {
+                    closeGnb();
+                } else {
+                    triggers.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('#gnb')) {
+                closeGnb();
             }
         });
     }
