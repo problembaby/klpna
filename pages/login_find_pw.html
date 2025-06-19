@@ -23,10 +23,9 @@
 
 <body>
     <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
-
 <script>
-function handleIdFindSubmit(buttonEl) {
-    const $area = $(buttonEl).closest('.login-idFind-area');
+function handlePwFindSubmit(buttonEl) {
+    const $area = $(buttonEl).closest('.login-form-wrap');
     let isValid = true;
     let $firstInvalid = null;
 
@@ -35,30 +34,25 @@ function handleIdFindSubmit(buttonEl) {
         const isRequired = $group.find('.form-tit .req').length > 0;
         if (!isRequired) return;
 
-        const $input = $group.find('input, select, textarea').filter(':visible').first();
+        // 이름, 아이디 같은 일반 필드
+        const $inputs = $group.find('input, select, textarea').filter(':visible');
+
+        let isEmpty = false;
+        $inputs.each(function () {
+            const val = $(this).val()?.trim();
+            if (val === '') isEmpty = true;
+        });
+
         const $hint = $group.find('.form-hint-invalid');
 
-        let val = '';
-        let isEmpty = false;
-
-        if ($input.length) {
-            if ($input.is(':checkbox') || $input.is(':radio')) {
-                const $checked = $group.find('input:checked');
-                isEmpty = ($checked.length === 0);
-            } else {
-                val = $input.val()?.trim();
-                isEmpty = (val === '');
-            }
-
-            if (isEmpty) {
-                $group.addClass('is-error');
-                $hint.css('display', 'flex');
-                if (!$firstInvalid) $firstInvalid = $input;
-                isValid = false;
-            } else {
-                $group.removeClass('is-error');
-                $hint.hide();
-            }
+        if (isEmpty) {
+            $group.addClass('is-error');
+            $hint.css('display', 'flex');
+            if (!$firstInvalid) $firstInvalid = $inputs.first();
+            isValid = false;
+        } else {
+            $group.removeClass('is-error');
+            $hint.hide();
         }
     });
 
@@ -67,9 +61,9 @@ function handleIdFindSubmit(buttonEl) {
         return;
     }
 
-    // 실제 처리
-    alert('아이디 찾기 처리 진행 (예시)');
-    // $(buttonEl).closest('form').submit(); 
+    // 실제 인증 처리
+    alert('본인인증 처리 진행 (예시)');
+    // $(buttonEl).closest('form').submit(); 또는 pass 인증 로직
 }
 </script>
 
@@ -83,30 +77,47 @@ function handleIdFindSubmit(buttonEl) {
             <div class="login-inner">
                 <div class="login-form-wrap">
                     <div class="login-title">
-                        <h1>아이디 찾기</h1>
+                        <h1>비밀번호 찾기</h1>
                     </div>
 
-                    <!-- 아이디 찾기 -->
+                    <!-- 패스워드 찾기 -->
                     <div class="login-idFind-area">
                         <div class="step">
                             <ol class="progress-bar">
                                 <li class="progress-step active">1. 가입정보 확인</li>
-                                <li class="progress-step">2. 아이디 확인</li>
+                                <li class="progress-step">2. 비밀번호 변경</li>
                             </ol>
                         </div>
                         <div class="helper-box gray">
                             <div class="helper-wrap">
                                 <ul class="krds-info-list decimal" role="list">
                                     <li role="listitem">
-                                        아이디 찾기는 온라인 회원 이름과 회원가입 시 입력한 휴대전화번호로 찾으실 수 있습니다.
+                                        아이디와 이름을 입력하신 후 본인확인을 하셔야 비밀번호 변경하실 수 있습니다.
                                     </li>
-                                    <li role="listitem">입력하신 정보는 아이디 확인에만 사용되며, 저장되지 않습니다.</li>
+                                    <li role="listitem">입력하신 정보는 비밀번호 확인에만 사용되며, 저장되지 않습니다.</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="ico-find"></div>
+                        <div class="ico-find pw"></div>
                         <form action="#">
                             <div class="fieldset">
+                                <!-- 아이디 -->
+                                <div class="form-group">
+                                    <div class="form-tit">
+                                        <label for="user-id">아이디<i class="req">*</i></label>
+                                    </div>
+                                    <div class="form-conts btn-ico-wrap" data-delete="true">
+                                        <input type="text" id="user-id" class="krds-input" placeholder="이름입력">
+                                        <button type="button" class="krds-btn medium icon pure btn-delete-input">
+                                            <span class="sr-only">내용 삭제</span>
+                                            <i class="svg-icon ico-delete-fill"></i>
+                                        </button>
+                                    </div>
+                                    <p class="form-hint-invalid" style="display: none;">아이디을 입력해주세요.</p>
+                                </div>
+                                <!-- //아이디 -->
+
+
                                 <!-- 이름 -->
                                 <div class="form-group">
                                     <div class="form-tit">
@@ -122,63 +133,69 @@ function handleIdFindSubmit(buttonEl) {
                                     <p class="form-hint-invalid" style="display: none;">이름을 입력해주세요.</p>
                                 </div>
                                 <!-- //이름 -->
-    
-                                <!-- 연락처 -->
+
+                                <!-- 사업자등록번호 -->
                                 <div class="form-group">
                                     <div class="form-tit">
-                                        <label for="phone">휴대전화번호<i class="req">*</i></label>
+                                        <label for="bizNo1">사업자등록번호 <i class="req">*</i></label>
                                     </div>
-                                    <div class="form-conts">
-                                        <ul class="input-group range">
-                                            <li>
-                                                <select name="" id="phone" class="krds-form-select medium">
-                                                    <option value="">선택</option>
-                                                    <option value="010">010</option>
-                                                    <option value="011">011</option>
-                                                </select>
-                                            </li>
-                                            <li class="mark">-</li>
-                                            <li>
-                                                <input type="text" id="phone-mid" class="krds-input medium" placeholder=""
-                                                    maxlength="4">
-                                            </li>
-                                            <li class="mark">-</li>
-                                            <li>
-                                                <input type="text" id="phone-last" class="krds-input medium" placeholder=""
-                                                    maxlength="4">
-                                            </li>
-                                        </ul>
+                                    <div class="form-input">
+                                        <div class="input-group">
+                                            <div class="form-conts">
+                                                <ul class="input-group range">
+                                                    <li>
+                                                        <input type="text" id="bizNo1" class="krds-input medium"
+                                                            placeholder="" maxlength="" value="">
+                                                    </li>
+                                                    <li class="mark">-</li>
+                                                    <li>
+                                                        <input type="text" id="bizNo2" class="krds-input medium"
+                                                            placeholder="" maxlength="" value="">
+                                                    </li>
+                                                    <li class="mark">-</li>
+                                                    <li>
+                                                        <input type="text" id="bizNo3" class="krds-input medium"
+                                                            placeholder="" maxlength="" value="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="form-hint-invalid" style="display: none;">휴대전화번호를 입력하세요.</p>
+                                    <p class="form-hint-invalid" style="display: none;">사업자등록번호를 입력해주세요.</p>
                                 </div>
-                                <!-- //연락처 -->
-    
-                                <!-- 생년월일(6자) -->
-                                <div class="form-group">
-                                    <div class="form-tit">
-                                        <label for="birth-date">생년월일(6자)<i class="req">*</i></label>
-                                    </div>
-                                    <div class="form-conts btn-ico-wrap" data-delete="true">
-                                        <input type="text" id="birth-date" maxlength="6" class="krds-input" placeholder="YYMMDD" >
-                                        <button type="button" class="krds-btn medium icon pure btn-delete-input">
-                                            <span class="sr-only">내용 삭제</span>
-                                            <i class="svg-icon ico-delete-fill"></i>
-                                        </button>
-                                    </div>
-                                    <p class="form-hint-invalid" style="display: none;">생년월일을 입력하세요.</p>
-                                </div>
-                                <!-- //생년월일(6자) -->
-    
+                                <!-- //사업자등록번호 -->
+
                                 <div class="bar"></div>
-    
-                                <div class="form-group">
-                                    <button type="submit" id="idFindsubmit" class="krds-btn login-btn black"  onclick="handleIdFindSubmit(this)">아이디 찾기</button>
-                                </div>
-                                
+
                             </div>
                         </form>
                     </div>
-                    <!-- //아이디 찾기 -->
+                    <!-- //패스워드 찾기 -->
+
+                    <!-- 본인인증 -->
+
+                    <div class="pwVerify_area">
+                        <button type="button" class="phoneVerify " id="phoneVerify" onclick="handlePwFindSubmit(this)">
+                            <span class="ico-verti"></span>
+                            <div class="phoneVerify-txt">
+                                <div class="title">본인 명의 휴대전화로 인증</div>
+                                <div class="small">PASS 또는 문자(SMS) 이용</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- //본인인증 -->
+
+                    <div class="gray-box">
+                        <div class="phone-veri-txt">휴대폰 본인인증 오류 문의</div>
+                        <div class="nice-area">
+                            <div class="logo-nice"></div>
+                            <div class="nice-area-txt">
+                                <div class="nice-txt">나이스평가정보</div>
+                                <p class="nice-t">T. 1600-1522 고객센터</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
