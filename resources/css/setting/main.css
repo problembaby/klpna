@@ -153,9 +153,10 @@ font-style: normal;
 font-weight: 500;
 line-height: 100%; /* 18px */ margin-top: 5px;}
 
-.shortcut-list{display: flex; gap:5rem; }
+.shortcut-list{display: flex; gap:5rem; justify-content: space-between; width: 100%; max-width: 1000px; }
 .shortcut-list .shortcut-list-item{display: flex; width: 105px; flex-direction: column;}
 .shortcut-list .shortcut-list-item a{display: flex;  flex-direction: column; justify-content: center; align-items: center;}
+/* 회전 준비 - 3D 공간 설정 */
 .shortcut-list-item .img {
   width: 105px;
   height: 105px;
@@ -163,7 +164,18 @@ line-height: 100%; /* 18px */ margin-top: 5px;}
   background-color: #fff;
   border-radius: 50%;
   margin-bottom: 20px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  perspective: 800px;
+}
+
+/* hover 시 수평으로 회전 (동전처럼) */
+.shortcut-list-item:hover .img {
+  transform: rotateY(730deg);
 }
 .shortcut-list-item .txt {
   color: #0D0E10;
@@ -190,62 +202,218 @@ line-height: 100%; /* 18px */
 }
 
 
+.mainSection02 .tab.fill ul li:nth-child(2).active .btn-tab::after {
+    border-top: 8px solid #8261AC;
+}
+
+.mainSection02 .tab.fill ul li:nth-child(2).active .btn-tab {
+    background-color: #8261AC!important;
+    border-color: #8261AC !important;
+    color: #fff;
+}
+
+.mainSection02 .tab.fill ul li:nth-child(3).active .btn-tab::after {
+    border-top: 8px solid #05417C;
+}
+
+.mainSection02 .tab.fill ul li:nth-child(3).active .btn-tab {
+    background-color: #05417C!important;
+    border-color: #05417C !important;
+    color: #fff;
+}
+.shortcut-list-item .img {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.shortcut-list-item:hover .img::after {
+   transform: rotateY(360deg);
+}
+
+
+
+/** 대한간호조무사협회 바로가기 아이콘 */
+.shortImg_01_01::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_01.svg) no-repeat center/contain;
+  width: 50px;
+  height: 47px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_01_02::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_02.svg) no-repeat center/contain;
+  width: 59px;
+  height: 46px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_01_03::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_03.svg) no-repeat center/contain;
+  width: 41px;
+  height: 41px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_01_04::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_04.svg) no-repeat center/contain;
+  width: 54px;
+  height: 51px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_01_05::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_05.svg) no-repeat center/contain;
+  width: 51px;
+  height: 45px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_01_06::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_06.svg) no-repeat center/contain;
+  width: 55px;
+  height: 54px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_01_07::before {
+  content: "";
+  background: url(../../img/main/shortImg_01_07.svg) no-repeat center/contain;
+  width: 52px;
+  height: 54px;
+  display: block;
+  z-index: 1;
+}
+
+
 /** 보수교육 바로가기 아이콘 */
 .shortImg_02_01::before {
   content: "";
-  background: url(../../img/main/shortImg_02_01.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_01.svg) no-repeat center/contain;
   width: 60px;
   height: 52px;
-  display: block;
+  display: block; z-index: 1;
 }
 
 .shortImg_02_02::before {
   content: "";
-  background: url(../../img/main/shortImg_02_02.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_02.svg) no-repeat center/contain;
   width: 56px;
   height: 49px;
-  display: block;
+  display: block; z-index: 1;
 }
 
 .shortImg_02_03::before {
   content: "";
-  background: url(../../img/main/shortImg_02_03.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_03.svg) no-repeat center/contain;
   width: 55px;
   height: 57px;
-  display: block;
+  display: block; z-index: 1;
 }
 
 .shortImg_02_04::before {
   content: "";
-  background: url(../../img/main/shortImg_02_04.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_04.svg) no-repeat center/contain;
   width: 50px;
   height: 54px;
-  display: block;
+  display: block; z-index: 1;
 }
 
 .shortImg_02_05::before {
   content: "";
-  background: url(../../img/main/shortImg_02_05.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_05.svg) no-repeat center/contain;
   width: 52px;
   height: 53px;
-  display: block;
+  display: block; z-index: 1;
 }
 
 .shortImg_02_06::before {
   content: "";
-  background: url(../../img/main/shortImg_02_06.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_06.svg) no-repeat center/contain;
   width: 52px;
   height: 55px;
-  display: block;
+  display: block; z-index: 1;
 }
 
 .shortImg_02_07::before {
   content: "";
-  background: url(../../img/main/shortImg_02_07.png) no-repeat center/contain;
+  background: url(../../img/main/shortImg_02_07.svg) no-repeat center/contain;
   width: 53px;
   height: 55px;
-  display: block;
+  display: block; z-index: 1;
 }
+
+
+.shortImg_03_01::before {
+  content: "";
+  background: url(../../img/main/shortImg_03_01.svg) no-repeat center/contain;
+  width: 60px;
+  height: 52px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_03_02::before {
+  content: "";
+  background: url(../../img/main/shortImg_03_02.svg) no-repeat center/contain;
+  width: 56px;
+  height: 49px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_03_03::before {
+  content: "";
+  background: url(../../img/main/shortImg_03_03.svg) no-repeat center/contain;
+  width: 55px;
+  height: 57px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_03_04::before {
+  content: "";
+  background: url(../../img/main/shortImg_03_04.svg) no-repeat center/contain;
+  width: 50px;
+  height: 54px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_03_05::before {
+  content: "";
+  background: url(../../img/main/shortImg_03_05.svg) no-repeat center/contain;
+  width: 52px;
+  height: 53px;
+  display: block;
+  z-index: 1;
+}
+
+.shortImg_03_06::before {
+  content: "";
+  background: url(../../img/main/shortImg_03_06.svg) no-repeat center/contain;
+  width: 52px;
+  height: 55px;
+  display: block;
+  z-index: 1;
+}
+
+
+
+
 
 .mainSection03{margin-top: 50px; background: rgba(241, 242, 246, 0.40); height:559px;}
 .mainSection03 .main-bbs-wrap{display: flex; gap:40px; padding:50px 0;}
@@ -325,11 +493,58 @@ line-height: 22px; /* 146.667% */}
 .projects .news-gray-box p { padding: 48px 30px; color: #0D0E10; font-size: 16px; font-weight: 400;}
 .welfare .news-gray-box p { padding: 25px 20px; color: #0D0E10; font-size: 16px; font-weight: 400; width: 88%;}
 
-.ico-sec0401::before { content: ""; display: block; background: url(../../img/main/ico-sec401.png) no-repeat center/contain; width: 67px; height: 59px; }
+.ico-sec0401{position: relative;}
+.ico-sec0401::before { content: ""; display: block; background: url(../../img/main/ico-sec401.svg) no-repeat center/contain; width: 51px; height: 48px; }
 .ico-sec0402::before { content: ""; display: block; background: url(../../img/main/ico-sec402.png) no-repeat center/contain; width: 39px; height: 38px; }
 .ico-sec0403::before { content: ""; display: block; background: url(../../img/main/ico-sec403.png) no-repeat center/contain; width: 39px; height: 39px; }
 
-.projects .pos{position: absolute; bottom: 27px; right: 27px;}
+
+.ico-ro2{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #BCDEFF;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 0;
+    transform: translate(0, 0);
+    top:-15px;
+    right:-20px;
+     animation: bubbleUp 1.5s ease-in-out infinite;
+
+}
+.ico-ro{
+    content: "";
+    position: absolute;
+    width: 34.573px;
+    height: 34.573px;
+    background-color: #BCDEFF;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 0;
+    transform: translate(0, 0);
+    top:10px;
+    right:-10px;
+     animation: bubbleUp 3s ease-in-out infinite;
+     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* 부드러운 올라감 */
+
+}
+
+.ico-ro2.poss { top: -20px; right: 30px;    animation: bubbleUp 6s ease-in-out infinite;}
+
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+.projects .pos{position: absolute; bottom: 27px; right: 38px;}
 .welfare .pos{position: absolute; bottom: 27px; right: 27px;}
 
 .joinfo-list{display: flex; flex-direction: column; gap:10px}
@@ -837,6 +1052,7 @@ font-weight: 400; margin-top: 5px;}
     background: url(../../img/main/ico-sec401.png) no-repeat center/contain;
     width: 44px;
     height: 45px;
+    z-index: 3;
 }
 .news-wrap .news-box-list .welfare {
     width: 100%;
