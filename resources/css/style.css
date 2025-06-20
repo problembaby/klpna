@@ -11,6 +11,7 @@
 .page-title-wrap[data-type=responsive] .h-tit {
     display: block;
 }
+.page-title-wrap{display: flex; justify-content: space-between; flex-direction: row;}
 
 .page-title-wrap .h-tit {
     font-size: var(--krds-pc-font-size-heading-large); /* 32px 재성정 */
@@ -39,7 +40,7 @@
     display: inline-flex;
     width: var(--krds-icon--size-small);
     height: var(--krds-icon--size-small);
-    background-color: #0050CA;
+    background-color: #0D0E10;
     forced-color-adjust: none;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
@@ -51,7 +52,7 @@
     mask-image: url(../img/icon/home.svg);
 }
 
-.breadcrumb-action{display: flex; gap:5px}
+.breadcrumb-action{display: flex; gap:5px; }
 
 .bbs-search-wrap label{align-items: center;}
 
