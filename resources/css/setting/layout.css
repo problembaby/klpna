@@ -7,9 +7,61 @@
 서브 LNB
 ************************/
 
+.krds-side-navigation .lnb-tit {
+    font-size: var(--krds-side-navigation--title-font-size);
+    font-weight: var(--krds-font-weight-bold);
+    padding: 0 var(--krds-side-navigation--title-padding-x) var(--krds-side-navigation--title-padding-bottom) var(--krds-side-navigation--title-padding-x);
+    border-bottom: var(--krds-side-navigation--title-border-width) solid var(--krds-side-navigation--title-color-border);
+    height:170px;
+    border-radius: 20px 20px 0px 0px;
+    background: #0767C7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    position: relative;
+}
+
+.krds-side-navigation .lnb-tit::before{
+    content:"";
+    background: url(../../img/sub/LNB_bg.png)no-repeat;
+    display: block;
+    width: 211px;
+    height:114px;
+    position: absolute;
+    bottom:30px;
+    left:0
+}
+
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu-lv2.active {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    border-radius: 30px;
+}
+#container .in-between .krds-side-navigation {
+    width: 30rem;
+    padding: var(--krds-padding-10) var(--krds-padding-3) var(--krds-padding-10) 0;
+    border-right: 0;
+}
 
 
+.lnb-list {
+    padding: 36px 20px 80px 20px;
+    position: relative;
+    top: -30px;
+    border-radius: 20px;
+    border: 1px solid #DEDEDF;
+    background: #FFF;
+}
 
+#container .in-between {
+    display: flex;
+    align-items: normal;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: var(--krds-gap-10);
+}
 
 
 /***********************
