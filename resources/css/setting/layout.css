@@ -313,6 +313,7 @@ position: relative;}
 
 .progress-step:last-child.active::after{display: none;}
 
+
 .comp-btn-wrap a, .comp-btn-wrap button {
     display: flex;
     max-width: 200px;
@@ -736,7 +737,7 @@ font-style: normal;
 font-weight: 600;
 line-height: 150%; /* 24px */}
 
-
+.krds-info-list .bold{ color:#0050CA}
 
 
 
