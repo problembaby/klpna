@@ -64,6 +64,37 @@
 }
 
 
+.krds-side-navigation .lnb-list .lnb-item .link::after {
+    content: "";
+    flex-shrink: 0;
+    display: inline-flex;
+    width: var(--krds-icon--size-medium);
+    height: var(--krds-icon--size-medium);
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    -webkit-mask-image: url(../../krds/img/component/icon/ico_angle.svg);
+    mask-image: url(../../krds/img/component/icon/ico_angle.svg);
+    margin-top: var(--krds-padding-1);
+    margin-left: auto;
+    transition: var(--krds-transition-base);
+    transform: rotate(-90deg);
+}
+
+.krds-side-navigation .lnb-list .lnb-item .lnb-btn.selected {
+    background-color: transparent;
+    color: #0050CA;
+}
+
+.krds-side-navigation .lnb-list > li > .lnb-btn::before {
+    background-color:#0050CA;
+    transition: var(--krds-transition-base);
+}
 /***********************
  버튼 재정의 
  *************************/
@@ -107,6 +138,48 @@
     border-color: var(--krds-button--color-secondary-border-disabled);
     color: var(--krds-button--color-secondary-text-disabled);
 }
+
+
+ /** 선 블루 */
+.krds-btn.blue {
+    background-color: #fff;
+    border-color: #0050CA;
+    color: #0050CA;
+}
+
+.krds-btn.blue:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.blue:hover {
+    background-color: var(--krds-button--color-tertiary-fill-hover);
+}
+
+.krds-btn.blue:active,
+.krds-btn.blue:focus {
+    background-color: var(--krds-button--color-tertiary-fill-hover);
+}
+
+.krds-btn.blue[disabled],
+.krds-btn.blue.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.blue[disabled]:not(.icon) .svg-icon,
+.krds-btn.blue.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.blue[disabled]:hover,
+.krds-btn.blue.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+
 
 
 /** 딥 블루*/

@@ -1993,6 +1993,65 @@ border-bottom: 1px solid #C6C6C6;
   .req{color:#EB6053}
 
 
+
+  .no-input{border: 0; width: 100%;}
+
+
+  .responsive-table .table{border-top:2px solid #0767C7}
+  .responsive-table  .table th, .responsive-table .table td {
+    border: 1px solid #cccccc;
+    border-left: 0;
+    border-right: 0;
+}
+  .responsive-table  .table th {
+   color: var(--color-text-sub_title, #464C53);
+font-size: 15px;
+font-weight: 600;
+text-align: left;
+background-color: #F8F8F8;
+}
+
+.responsive-table  .table.bg2 th{
+background-color: #F7F8FB;
+}
+
+  .responsive-table  .table td {
+color: var(--color-text-medium, #333);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+
+}
+
+.info-sec{margin-bottom: 40px;}
+  .info-sec h2{
+    color: var(--color-text-title, #0D0E10);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+.ico-userBl::before{
+  content:"";
+  background: url(../../img/sub/ico-userBl.svg)no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.ico-userBk::before{
+  content:"";
+  background: url(../../img/sub/ico-userBk.svg)no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.flex-row{display: flex; gap:10px;  align-items: center;}
+
+.fc-blue{color: #0050CA; font-weight: 700;}
+.fc-black{color: #333; font-weight: 700;}
+
 @media (max-width: 1300px) {
   .board-search-wrap {
     background-color: #f6f9ff;
@@ -2690,6 +2749,49 @@ border-bottom: 1px solid #C6C6C6;
 .bbs-search-wrap .form-col-group{
   gap:8px
 }
+
+ .responsive-table table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;
+    width: 100%;
+  }
+
+
+
+  .responsive-table .table th,
+  .responsive-table .table td {
+    border: none;
+    border-bottom: 1px solid #C6C6C6;
+    
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+    background: #F8F8F8;
+    
+  }
+
+  .responsive-table th.label,
+  .responsive-table td {
+    width: 100% !important;
+    padding:10px
+  }
+
+  /* 아이콘 포함 td에도 문제없이 정렬되도록 */
+  .responsive-table td i {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .responsive-table input,
+  .responsive-table p {
+    width: 100%;
+    box-sizing: border-box;
+  }
 
 }
 
