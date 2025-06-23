@@ -226,3 +226,24 @@
     -webkit-line-clamp: 3;
 }
 
+.ico-file::before{
+    display: block;
+    content: "";
+
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-image: url(../../img/icon/ico-file2.svg);
+}
+.ico-chk::before{
+    display: block;
+    content: "";
+
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-image: url(../../img/icon/ico-chk.svg);
+}
+
