@@ -899,6 +899,10 @@ flex-direction: column; justify-content: flex-start; align-items: flex-start; ga
 
 .withdrawal-area .agree-wrap{text-align: center; margin-top: 20px;}
 
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
+    color:#0050CA;
+}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {

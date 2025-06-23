@@ -36,64 +36,21 @@
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item active">
-                            <button type="button" class="lnb-btn active selected"
-                                aria-controls="lnbmenu-gbjkpo6">공지사항</button>
+                            <a href="#" class="lnb-btn link active selected">공지사항</a>
                         </li>
                         <li class="lnb-item">
-                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-enuuwvl"
-                                aria-expanded="false">2Depth-menu</button>
-                            <!-- lnb-submenu -->
-                            <div class="lnb-submenu">
-                                <ul id="lnbmenu-enuuwvl">
-                                    <li class="lnb-subitem">
-                                        <button type="button" class="lnb-btn lnb-toggle-popup"
-                                            aria-controls="lnbmenu-44ejvxa" aria-expanded="false"
-                                            aria-haspopup="true">3Depth-menu</button>
-                                        <!-- lnb-submenu-lv2 -->
-                                        <div class="lnb-submenu-lv2" id="lnbmenu-44ejvxa">
-                                            <button type="button" class="lnb-btn-tit">3Depth-title</button>
-                                            <ul>
-                                                <li><a href="#" class="lnb-btn">4Depth</a></li>
-                                                <li><a href="#" class="lnb-btn">4Depth</a></li>
-                                                <li><a href="#" class="lnb-btn">4Depth</a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- //lnb-submenu-lv2 -->
-                                    </li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
-                                </ul>
-                            </div>
-                            <!-- //lnb-submenu -->
+                            <a href="#" class="lnb-btn link">회원게시판</a>
                         </li>
                         <li class="lnb-item">
-                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-vf9gqcy"
-                                aria-expanded="false">2Depth-menu</button>
-                            <!-- lnb-submenu -->
-                            <div class="lnb-submenu">
-                                <ul id="lnbmenu-vf9gqcy">
-                                    <li class="lnb-subitem">
-                                        <button type="button" class="lnb-btn lnb-toggle-popup"
-                                            aria-controls="lnbmenu-jcuzvp6" aria-expanded="false"
-                                            aria-haspopup="true">3Depth-menu</button>
-                                        <!-- lnb-submenu-lv2 -->
-                                        <div class="lnb-submenu-lv2" id="lnbmenu-jcuzvp6">
-                                            <button type="button" class="lnb-btn-tit">3Depth-title</button>
-                                            <ul>
-                                                <li><a href="#" class="lnb-btn">4Depth</a></li>
-                                                <li><a href="#" class="lnb-btn">4Depth</a></li>
-                                                <li><a href="#" class="lnb-btn">4Depth</a></li>
-                                            </ul>
-                                        </div>
-                                        <!-- //lnb-submenu-lv2 -->
-                                    </li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">3Depth-link</a></li>
-                                </ul>
-                            </div>
-                            <!-- //lnb-submenu -->
+                            <a href="#" class="lnb-btn link">신고센터</a>
                         </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">원격서비스</a>
+                        </li>
+
+
                     </ul>
+
                     <!-- //lnb-list -->
                 </nav>
                 <!-- //사이드 메뉴 -->
@@ -102,7 +59,7 @@
                     <!-- breadcrumb -->
                     <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="home"><a href="#" class="txt" ><span class="sr-only">홈</span></a></li>
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
                             <li><a href="#;" class="txt">홍보센터</a></li>
                             <li><a href="#;" class="txt">공지사항</a></li>
                         </ol>
@@ -113,7 +70,7 @@
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
                         <h1 class="h-tit">공지사항</h1>
-                        
+
                         <ol class="breadcrumb-action">
                             <li>
                                 <button class="icon-bg-round">
@@ -159,7 +116,7 @@
                     <!-- 검색 결과 : 리스트 상단 -->
                     <div class="search-list-top">
                         <ul class="sch-info" aria-live="polite">
-                            <li>검색 결과 <span class="point">249</span>건</li>
+                            <li>총 <span class="point">249</span>건</li>
                         </ul>
                     </div>
                     <!-- //검색 결과 : 리스트 상단 -->
@@ -192,6 +149,27 @@
                                 <tr>
                                     <td class="no-contents" colspan="6">등록 된 게시물이 없습니다.</td>
                                 </tr>
+
+                                <!-- 상단 고정 글 -->
+                                <tr class="bbsTopfixed">
+                                    <td class="num">
+                                        <img src="/resources//img/icon/ico-topNoti.svg" alt="new">
+                                    </td>
+                                    <td class="cell-subject">
+                                        <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
+                                        <img src="/resources//img/icon/new.svg" alt="new" class="new">
+                                    </td>
+                                    <td>관리자</td>
+                                    <td>2024.06.25</td>
+                                    <td>1,908</td>
+                                    <td class="file-td">
+                                        <i class="ico-link"></i>
+                                    </td>
+
+                                </tr>
+                                 <!-- //상단 고정 글 -->
+
+
                                 <tr>
                                     <td class="num">490</td>
                                     <td class="cell-subject">
@@ -330,42 +308,7 @@
                                         <i class="ico-link"></i>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="num">479</td>
-                                    <td class="cell-subject">
-                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2024.06.15</td>
-                                    <td>1,908</td>
-                                    <td class="file-td">
-                                        <i class="ico-link"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="num">479</td>
-                                    <td class="cell-subject">
-                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2024.06.15</td>
-                                    <td>1,908</td>
-                                    <td class="file-td">
-                                        <i class="ico-link"></i>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="num">479</td>
-                                    <td class="cell-subject">
-                                        <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
-                                    </td>
-                                    <td>관리자</td>
-                                    <td>2024.06.15</td>
-                                    <td>1,908</td>
-                                    <td class="file-td">
-                                        <i class="ico-link"></i>
-                                    </td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>

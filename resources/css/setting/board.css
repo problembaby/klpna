@@ -143,7 +143,19 @@
 }
 
 .krds-pagination .page-links .page-link.active {
-    background-color: #333333;
+    background-color: transparent;
+    color:#0050CA;
+    position: relative;
+}
+.krds-pagination .page-links .page-link.active::after {
+    display: block;
+    background-color: #0050CA;
+    width: 8px;
+    height: 8px;
+    content:"";
+    border-radius: 50%;
+    position: absolute;
+    bottom:0px
 }
 
 .krds-pagination .page-navi, .krds-pagination .page-link {
@@ -162,7 +174,7 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 0 60px 0;
   gap:10px
 }
 .btnList-sort.right{
@@ -698,9 +710,9 @@ table.table-hover tr:hover > td {
   padding: 0 5px;
   vertical-align: middle;
   height: 50px;
-  border-top: 2px solid #000;
+  border-top: 2px solid #0767C7;
   border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);
-  background: var(--color-bg-nomal, #F8F8F8);
+  background: var(--color-bg-nomal, #F7F8FB);
 }
 
 /* 테이블 본문 스타일 */
@@ -1143,7 +1155,7 @@ td.cell-subject > * {
   margin-top: 40px;
 }
 .board-detailed .page-content {
-  border-top: 2px solid #000;
+  border-top: 2px solid #0767C7;
   border-bottom: 0 solid #000;
   background: #fff;
   margin-top: 16px;
@@ -1169,7 +1181,7 @@ td.cell-subject > * {
   align-items: center;
   gap: 40px;
   align-self: stretch;
-  border-top: 1px solid var(--gray-gray-40, #C6C6C6);
+  border-top: 0 solid var(--gray-gray-40, #C6C6C6);
   border-bottom: 1px solid var(--gray-gray-40, #C6C6C6);
   background: var(--gray-gray-5, #F8F8F8);
 }
@@ -1281,13 +1293,15 @@ border-bottom: 1px solid #C6C6C6;
 .page-go {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid #676767;
+  border-bottom: 1px solid #676767;
 }
 .page-go a {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  height: 70px;
+  height: 60px;
   padding: 0 20px;
   
 }
@@ -1296,14 +1310,15 @@ border-bottom: 1px solid #C6C6C6;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 16px
   
 }
 
 .page-go .page-go__before {
-  border-top: 1px solid #cbd5e1;
+  border-top: 0;
 }
 .page-go .page-go__after {
-  border-top: 1px solid #cbd5e1;
+  border-top: 1px solid #C6C6C6;
 }
 
 .page-go .label {
@@ -2051,6 +2066,8 @@ font-weight: 400;
 
 .fc-blue{color: #0050CA!important; font-weight: 700;}
 .fc-black{color: #333!important; font-weight: 700;}
+
+.bbsTopfixed td{font-weight: bold!important;}
 
 @media (max-width: 1300px) {
   .board-search-wrap {
