@@ -895,7 +895,9 @@ text-align: center;
 
 .withdrawal-area .radio-list{display: flex;
 flex-direction: column; justify-content: flex-start; align-items: flex-start; gap:15px; margin-top: 20px;}
+.withdrawal-area .fc-blue{font-weight: 500;}
 
+.withdrawal-area .agree-wrap{text-align: center; margin-top: 20px;}
 
 
 /** 노트북 */

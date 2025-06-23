@@ -2049,8 +2049,8 @@ font-weight: 400;
 
 .flex-row{display: flex; gap:10px;  align-items: center;}
 
-.fc-blue{color: #0050CA; font-weight: 700;}
-.fc-black{color: #333; font-weight: 700;}
+.fc-blue{color: #0050CA!important; font-weight: 700;}
+.fc-black{color: #333!important; font-weight: 700;}
 
 @media (max-width: 1300px) {
   .board-search-wrap {
