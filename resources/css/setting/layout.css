@@ -474,6 +474,8 @@ background: var(--color-bg-nomal, #F8F8F8); margin: 30px auto }
 .ico-find.pw::before { content:""; display: block; background: url(../../img/join/ico-pw-find.svg)no-repeat; width: 100px; height:100px}
 .ico-find.pw2::before { content:""; display: block; background: url(../../img/join/ico-pw-find2.svg)no-repeat; width: 100px; height:100px}
 
+.ico-find.withdraw::before { content:""; display: block; background: url(../../img/icon/ico-withdraw.svg)no-repeat; width: 76px; height:100px}
+
 
 .find-id-area{width: 100%; display: flex; justify-content: center; align-items: center; padding:20px; 0}
 .find-id-area .label { color: var(--color-text-subtle, #464C53); font-size: 17px; font-style: normal; font-weight: 400; line-height: 150%; /* 24px */ margin-right:20px}
@@ -875,6 +877,24 @@ line-height: 150%; /* 24px */}
 
 .krds-info-list .bold{ color:#0050CA}
 
+/******************************
+ 회원탈퇴 
+ ******************************/
+
+.withdrawal-area{
+    width: 100%; max-width: 500px;
+    margin:0 auto
+}
+.withdrawal-area .why-text{
+  color: var(--color-text-title, #0D0E10);
+font-size: 24px;
+font-weight: 400;
+margin:20px 0;
+text-align: center;
+}
+
+.withdrawal-area .radio-list{display: flex;
+flex-direction: column; justify-content: flex-start; align-items: flex-start; gap:15px; margin-top: 20px;}
 
 
 

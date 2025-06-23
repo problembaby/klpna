@@ -247,3 +247,22 @@
     background-image: url(../../img/icon/ico-chk.svg);
 }
 
+
+/** 사이즈 일정 버튼 */
+.btnW140 button, .btnW140 a {
+    display: flex;
+    max-width: 140px;
+    width: auto;
+    height: var(--size-height-9, 64px);
+    min-width: 98px;
+    padding: 0px var(--padding-8, 24px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-2, 4px);
+    flex: 1;
+}
+
+.btn-wrap{width: 100%; display: flex; justify-content: center; align-items: center; gap : var(--krds-gap-5); margin-top:40px}
+@media (max-width: 479px) {
+    .btn-wrap button{width: 100%; max-width: 100%;}
+}
