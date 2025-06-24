@@ -2114,6 +2114,40 @@ font-weight: 400;
 .card-top .thumbnail{border-radius: 20px; overflow: hidden;}
 .thumbnail a{display: block}
 
+
+table.noborder{
+  width: 100%;
+}
+
+table.noborder  tbody tr td {
+    vertical-align: middle;
+    font-family: var(--body-font-family);
+    font-size: 16px;
+    color: #333;
+    padding: 10px 5px;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+    word-break: keep-all !important;
+    font-weight: 400;
+    background: #fff;
+}
+
+table.noborder tr th {
+    font-family: var(--body-font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #2c2e3f;
+    padding: 0 5px;
+    vertical-align: middle;
+    height: 50px;
+    border-top: 2px solid #0767C7;
+    border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);
+    background: var(--color-bg-nomal, #F7F8FB);
+    text-align: center;
+    
+}
+
+
 @media (max-width: 1300px) {
   .board-search-wrap {
     background-color: #f6f9ff;

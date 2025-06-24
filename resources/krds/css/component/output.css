@@ -2973,7 +2973,7 @@ caption {
 
 /* 모달 */
 .krds-modal {
-  --krds-modal--size-large: 76rem;
+  --krds-modal--size-large: 100rem;
   --krds-modal--size-medium: 56rem;
   --krds-modal--size-small: 40rem;
   --krds-modal--size-min-height: 26.4rem;

@@ -305,11 +305,15 @@
 
 
 /* popup */
-.krds-modal[data-type=small]{
-    
-}
 .krds-modal[data-type=small] .modal-dialog{
 width:var(--krds-modal--size-small);    
+}
+
+.krds-modal[data-type=medium] .modal-dialog{
+width:var(--krds-modal--size-medium);    
+}
+.krds-modal[data-type=large] .modal-dialog{
+width:var(--krds-modal--size-large);    
 }
 
 
@@ -903,6 +907,61 @@ flex-direction: column; justify-content: flex-start; align-items: flex-start; ga
     color:#0050CA;
 }
 
+/************************************
+아이디 통합팝업 
+*************************************/
+
+.ico-puzzle{width: 130px; text-align: center;}
+.ico-puzzle::before { content:""; display: inline-block; background: url(../../img/main/ico-puzzle.png)no-repeat; width: 100px; height:100px}
+.ico-couls::before { content:""; display: inline-block; background: url(../../img/main/ico-couls.png)no-repeat; width: 24px; height:25px}
+
+.helper-box.row{display: flex; gap:20px; align-items: center;} 
+
+.join-history{margin-top:20px;  }
+
+.idMerge h3{
+    color: var(--color-text-basic, #0D0E10);
+    font-family: "Pretendard GOV";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    margin-bottom: 10px;
+}
+
+
+.idmerge-btn-area{display: flex; justify-content: center; margin:50px 0 30px;}
+.idmerge-btn-area button{  background: var(--color-btn-primary, #0050CA); }
+
+.phone-box{display: flex;
+width: 100%;
+padding: 20px 30px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 12px;
+background: var(--color-bg-secondary, #F7F8FB); margin-bottom: 60px;}
+
+.phone-box .number-area{display: flex; gap:10px; align-items: center; justify-content: center;}
+.phone-box .consult{color: var(--color-text-basic, #0D0E10);
+font-size: 17px;
+font-style: normal;
+font-weight: 600;}
+.phone-box .phone-number{color: var(--color-text-basic, #0050CA);
+font-size: 22px;
+font-style: normal;
+font-weight: 600;}
+
+.phone-box .consultTime{
+    color: var(--color-text-sub_title, #464C53);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+text-align: center;
+}
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -1011,10 +1070,16 @@ flex-direction: column; justify-content: flex-start; align-items: flex-start; ga
     gap: 40px;
     padding: 0;
 }
+.ico-puzzle{display: none;}
 
 }
 
 @media (max-width: 479px) {
+
+    .idMerge .helper-box li{font-size: 14px;}
+    .idMerge table.noborder tr th, .idMerge table.noborder tr td{font-size: 14px;}
+    .idmerge-btn-area button{font-size: 14px;}
+    
 
 .ico-find { width: 175px; height: 175px; }
 .join-area-box .join-type-list > .join-type-item { flex: 1 50%; width: 50%; }
