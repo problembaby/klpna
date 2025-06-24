@@ -908,7 +908,7 @@ flex-direction: column; justify-content: flex-start; align-items: flex-start; ga
 }
 
 /************************************
-아이디 통합팝업 
+팝업 : 아이디 통합, 약관동의 
 *************************************/
 
 .ico-puzzle{width: 130px; text-align: center;}
@@ -960,6 +960,11 @@ font-style: normal;
 font-weight: 400;
 text-align: center;
 }
+
+.terms-exp{color: var(--color-text-sub_title, #464C53);
+font-size: 15px;
+font-weight: 400;}
+
 
 
 
