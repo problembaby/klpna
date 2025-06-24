@@ -267,6 +267,11 @@
 .red{color:#DE3412}
 .blue{color:#0050CA}
 
+@media (max-width: 1024px){
+    .krds-modal {
+    --krds-modal--size-large: 70rem;
+    }
+}
 
 @media (max-width: 479px) {
     .btn-wrap button{width: 100%; max-width: 100%;}
