@@ -343,9 +343,9 @@
   --krds-light-color-link-hover: var(--krds-color-light-primary-60);
   --krds-light-color-link-pressed: var(--krds-color-light-primary-70);
   --krds-light-color-link-visited: #5917b8;
-  --krds-light-color-button-primary-fill: var(--krds-color-light-primary-50);
-  --krds-light-color-button-primary-fill-hover: var(--krds-color-light-primary-60);
-  --krds-light-color-button-primary-fill-pressed: var(--krds-color-light-primary-70);
+  --krds-light-color-button-primary-fill: var(--krds-color-light-primary-60);
+  --krds-light-color-button-primary-fill-hover: var(--krds-color-light-primary-70);
+  --krds-light-color-button-primary-fill-pressed: var(--krds-color-light-primary-80);
   --krds-light-color-button-secondary-fill: var(--krds-color-light-primary-5);
   --krds-light-color-button-secondary-fill-hover: var(--krds-color-light-primary-10);
   --krds-light-color-button-secondary-fill-pressed: var(--krds-color-light-primary-20);

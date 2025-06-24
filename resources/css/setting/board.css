@@ -186,6 +186,12 @@
 .btnList-sort.center{
   justify-content: center;
 }
+.btnList-sort.both{
+  justify-content: space-between;
+}
+
+.btnList-sort .right{display: flex; gap:10px}
+.btnList-sort .left{display: flex; gap:10px}
 
 /* 정보광장_ 게시판 */
 .no-contents {
@@ -474,29 +480,18 @@
   font-weight: 700;
 }
 
-.reply .cell-subject::before {
-  content: "";
-  display: inline-block;
-  background: url(../../img/icon/ico-reply-before.svg) no-repeat;
-  width: 16px;
-  height: 18px;
-/*   margin-left: 90px; */
-}
 
+.ico-reply{position: relative;  width: 24px;
+ height:24px; display: inline-block;}
 .ico-reply::before {
-  content: "RE";
-  display: flex;
-  background-color: #1c4eba;
-  width: 29px;
-  height: 29px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 12px;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  font-weight: 500;
+ content:"";
+ background: url(../../img/bbs/ico-reply.svg)no-repeat;
+ width: 24px;
+ height:24px;
+ display: inline-block;
+ position: absolute;
+ top:5px
+
 }
 .reply .cell-subject a {
   color: #1c4eba;
@@ -1170,6 +1165,22 @@ td.cell-subject > * {
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.board-detailed .detailed-header .title .category{
+  color: var(--color-text-title, #0D0E10);
+
+/* font/body/large */
+font-family: "Pretendard GOV";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
 }
 
 
@@ -2147,6 +2158,34 @@ table.noborder tr th {
     
 }
 
+/* 댓글 */
+.comment-section{margin-bottom: 40px;}
+.comment-counter{display: flex; gap:3px; margin-bottom: 5px;}
+.ico-comment::before{content:""; display: block; background: url(../../img/bbs/ico-sReply.svg); width: 24px; height: 24px; }
+.comment-textarea{display: flex; gap:20px; padding:20px 14px; background-color: #F8F8F8; margin-bottom: 10px;}
+.comment-textarea textarea, .comment-textarea button{height:70px; border: 1px solid var(--color-border-nomal, #C6C6C6)!important; background-color: #fff!important;}
+.comment-textLimite-area{display: flex; justify-content: space-between; align-items: center;}
+
+.comment-list{display: flex; gap:10px; flex-direction: column;}
+.comment-list .comment-item{background: var(--color-bg-nomal, #F8F8F8); display: flex;
+padding: 14px var(--padding-6, 16px);
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;}
+
+.comment-item-top{display: flex; gap:10px; color: var(--color-text-small, #555);
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; }
+.comment-item-top .bar-y{display: block; width: 1px;
+height: 16px; background: var(--gray-gray-30, #D8D8D8);}
+
+.comment{font-size: 14px;}
+.comment-btn{display: flex; justify-content: flex-start; width: 100%;}
+
+
 
 @media (max-width: 1300px) {
   .board-search-wrap {
@@ -2443,7 +2482,6 @@ table.noborder tr th {
 
   .detailed-file-wrap .tit {
     font-size: 16px;
-    font-weight: 400;
     letter-spacing: -0.72px;
     width: 100px;
   }
@@ -2568,14 +2606,7 @@ table.noborder tr th {
     overflow-x: auto;
   }
 
-  .reply .cell-subject::before {
-    content: "";
-    display: inline-block;
-    background: url(../../img/icon/ico-reply-before.svg) no-repeat;
-    width: 16px;
-    height: 18px;
-    margin-left: 0;
-  }
+
 
   .input-file-container {
     width: 100%;
@@ -2904,6 +2935,15 @@ table.noborder tr th {
     justify-content: flex-start;
     overflow-x: scroll;
   }
+
+  .btnList-sort > * {width: 100%; gap:10px}
+  .btnList-sort .right {width: 100%; gap:10px; flex-direction: column;}
+  .btnList-sort .right > * {width: 100%;}
+
+  .page-go a {
+    padding: 0px;
+}
+
 }
 
 @media (max-width: 375px) {
@@ -2911,6 +2951,10 @@ table.noborder tr th {
     --page-el-width: 25px;
     --page-el-height: 25px;
   }
+
+  .page-go a .title {
+    width: 200px;
+}
 }
 
 /* 정렬 버튼 */

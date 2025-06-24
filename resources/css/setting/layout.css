@@ -1093,6 +1093,10 @@ font-weight: 400;}
 .info .helper-box.gray {padding: 20px 5px; }
 .info .helper-box.gray li{font-size: 13px;}
 
+#krds-header .header-container .logo.klpna {
+    width: 50%;
+}
+
 }
 
 @media (max-width: 320px) {
