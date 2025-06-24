@@ -2166,6 +2166,8 @@ table.noborder tr th {
 .comment-textarea textarea, .comment-textarea button{height:70px; border: 1px solid var(--color-border-nomal, #C6C6C6)!important; background-color: #fff!important;}
 .comment-textLimite-area{display: flex; justify-content: space-between; align-items: center;}
 
+.textarea-count{width: auto;}
+
 .comment-list{display: flex; gap:10px; flex-direction: column;}
 .comment-list .comment-item{background: var(--color-bg-nomal, #F8F8F8); display: flex;
 padding: 14px var(--padding-6, 16px);
@@ -2184,6 +2186,23 @@ height: 16px; background: var(--gray-gray-30, #D8D8D8);}
 
 .comment{font-size: 14px;}
 .comment-btn{display: flex; justify-content: flex-start; width: 100%;}
+
+.reply-section{background: var(--color-bg-secondary, #F7F8FB); padding:20px; margin: 20px 0;}
+
+.reply-header{display: flex; align-items: center; justify-content: center; text-align: center; margin-bottom: 20px;}
+.reply-header .re-title{ display: flex;
+height: 30px;
+padding: 0px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 4px;
+background: var(--color-secondary, #0AF);
+color:#fff;
+}
+
+.reply-section .detailed-info{background-color: #fff; border-bottom: 0;}
+.reply-section .btnList-sort{padding-bottom:20px;}
 
 
 
@@ -2943,6 +2962,8 @@ height: 16px; background: var(--gray-gray-30, #D8D8D8);}
   .page-go a {
     padding: 0px;
 }
+
+.comment-textLimite-area{flex-direction: column; align-items: flex-end; }
 
 }
 

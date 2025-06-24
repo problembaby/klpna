@@ -268,6 +268,13 @@
 .red{color:#DE3412}
 .blue{color:#0050CA}
 
+.krds-btn.tertiary {
+    background-color: #fff;
+    border-color: var(--krds-button--color-tertiary-border);
+    color: var(--krds-button--color-tertiary-text);
+}
+
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;
