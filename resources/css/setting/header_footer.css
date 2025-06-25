@@ -3,6 +3,13 @@
 
 .gnb-menu { display: flex; gap: 7rem; z-index: 9999; }
 .gnb-menu button.gnb-main-trigger { color: #0D0E10; text-align: center; font-size: 22px; font-weight: 600; }
+.gnb-menu button.gnb-main-trigger:focus{    
+    outline: 0rem solid var(--krds-light-color-border-inverse);
+    outline-offset: 0;
+    box-shadow: none;
+    transition: outline 0s, box-shadow 0s !important;
+    border:0
+  }
 
 .depth2{display: none; position: absolute; top: 100px; pointer-events: auto; z-index: 9999; }
 
@@ -155,13 +162,14 @@ letter-spacing: -0.35px;}
 
 .foot-link{display: flex;}
 .o-foot-quick .inner{display:flex; justify-content: space-between; align-items: center; max-width: var(--krds-contents-wrap-size); width: 100%; height: var(--foot-height); margin:0 auto; padding: 0 20px;}
-.foot-link-item{max-width: var(--foot-width); width: 100%; height: var(--foot-height); display: flex;}
 
 
+
+.foot-link-item{max-width: var(--foot-width); width: 100%; height: var(--foot-height); display: flex; position: relative; gap:5px}
 .o-foot-quick .link-sns{display: flex; gap:5px; align-items: center; justify-content: center;}
-
 .foot-link-item .link{border-left: 1px solid #D9D9D9;width: var(--foot-width); height: 100%; padding:0 20px; position: relative; text-align: left;}
-/* .foot-link-item .link::after {
+
+.foot-link-item .footSelect::after {
     position: absolute;
     right:10px;
     content:"";
@@ -170,28 +178,35 @@ letter-spacing: -0.35px;}
     display: inline-flex;
     background: url(/resources/krds/img/component/icon/ico_angle.svg)no-repeat;
     transition: var(--krds-transition-base);
-    transform: rotate(0deg);
-} */
-
-
-
-.foot-link-item .link::after {
-    position: absolute;
-    right:25px;
-    content:"";
-    width: var(--krds-icon--size-medium);
-    height: var(--krds-icon--size-medium);
-    display: inline-flex;
-    background: url(/resources/krds/img/component/icon/ico_plus.svg)no-repeat;
-    transition: var(--krds-transition-base);
-    transform: rotate(0deg);
-} 
-.foot-link-item .link.active::after{
     transform: rotate(180deg);
-}
-.foot-link-item.last .link{ border-right: 1px solid #D9D9D9;}
+} 
 
-.foot-link-item .drop-down{}
+.foot-link-item .footSelect.active::after{
+    transform: rotate(0deg);
+}
+.foot-link-item.last .footSelect{ border-right: 1px solid #D9D9D9;}
+
+.foot-link-item .drop-down{position: absolute; width: calc(var(--foot-width) + 1px) ; bottom:57px; border: 1px solid #D9D9D9;     min-height: 100px; display: flex; flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none; background-color: #fff; z-index: 1;}
+
+.foot-link-item.last .drop-down{ width: var(--foot-width) ;}
+
+.foot-link-item .drop-down a{width:100%; height:30px; display: flex; font-size: 13px; align-items: center; padding:0 20px }
+.foot-link-item .drop-down a:hover{ background-color: #F1F2F6;}
+
+/* 활성 상태 - .footSelect 바로 다음 형제 drop-down 노출 */
+.foot-link-item .footSelect.active + .drop-down {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
 
 .f-logo-p{color: #7E7B77;
 font-size: 14px;

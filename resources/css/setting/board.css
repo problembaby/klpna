@@ -2204,6 +2204,12 @@ color:#fff;
 .reply-section .detailed-info{background-color: #fff; border-bottom: 0;}
 .reply-section .btnList-sort{padding-bottom:20px;}
 
+.reply-submit-section{margin-top:40px; }
+.reply-submit-section h2.title{mcolor: var(--color-text-basic, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */ }
 
 
 @media (max-width: 1300px) {

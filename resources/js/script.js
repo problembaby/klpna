@@ -13,6 +13,7 @@ const KRDSFormUtil = {
         this.bindPasswordToggle();
         this.bindQuickMenuToggle();
         this.bindGnbToggle(); // ✅ GNB 토글 기능
+        this.bindFootSelectToggle(); // ✅ 추가된 footer 아코디언 셀렉트
     },
 
     bindInputClear() {
@@ -120,5 +121,42 @@ const KRDSFormUtil = {
                 closeGnb();
             }
         });
-    }
+    },
+
+    /**
+     * [공통] Footer 셀렉트 드롭다운 아코디언 토글
+     */
+    bindFootSelectToggle() {
+    const $buttons = $('.footSelect');
+
+    $buttons.on('click', function (e) {
+        e.preventDefault();
+
+        const $this = $(this);
+        const $dropdown = $this.next('.drop-down');
+        const isExpanded = $this.attr('aria-expanded') === 'true';
+
+        // 모든 다른 드롭다운 닫기
+        $buttons.not($this).removeClass('active').attr('aria-expanded', 'false')
+            .next('.drop-down').removeClass('active');
+
+        if (isExpanded) {
+            $this.removeClass('active').attr('aria-expanded', 'false');
+            $dropdown.removeClass('active');
+        } else {
+            $this.addClass('active').attr('aria-expanded', 'true');
+            $dropdown.addClass('active');
+        }
+    });
+
+    // 바깥 클릭 시 닫기
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.foot-link-item').length) {
+            $buttons.removeClass('active').attr('aria-expanded', 'false');
+            $('.drop-down').removeClass('active');
+        }
+    });
+}
+
+    
 };
