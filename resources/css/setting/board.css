@@ -611,6 +611,7 @@ table.table-hover tr:hover > td {
   border-spacing: 0;
   width: 100%;
   vertical-align: middle;
+  
 }
 .table th {
   background-color: #f7f7f7;
@@ -2210,6 +2211,41 @@ font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */ }
+
+
+.table.lineTable th{ color: var(--Text-02, #454545);
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.96px;
+background-color: transparent;
+border: 1px solid #7E7B77;
+}
+
+.table.lineTable td{
+  color: var(--Text-03, #7E7B77);
+text-align: center;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.9px;
+background-color: transparent;
+}
+
+.table.lineTable th:first-child{border-left: 0;}
+.table.lineTable th:last-child{border-right: 0;}
+.table.lineTable td:first-child{border-left: 0;}
+.table.lineTable td:last-child{border-right: 0;}
+
+.license-status{background-color: #EE4268; color:#fff; width: 106px;
+height: 31px;
+flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; border-radius: 10px;}
+
+.license-status.bg-target{background-color: #EE4268; color:#fff; }
+.license-status.bg-completed{background-color: #0767C7; color:#fff; }
 
 
 @media (max-width: 1300px) {

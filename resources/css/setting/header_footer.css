@@ -3,23 +3,22 @@
 
 .gnb-menu { display: flex; gap: 7rem; z-index: 9999; }
 .gnb-menu button.gnb-main-trigger { color: #0D0E10; text-align: center; font-size: 22px; font-weight: 600; }
-.gnb-menu button.gnb-main-trigger:focus{    
+/* .gnb-menu button.gnb-main-trigger:focus{    
     outline: 0rem solid var(--krds-light-color-border-inverse);
     outline-offset: 0;
     box-shadow: none;
     transition: outline 0s, box-shadow 0s !important;
     border:0
-  }
+  } */
 
 .depth2{display: none; position: absolute; top: 100px; pointer-events: auto; z-index: 9999; }
 
 .depth2 li{width:100%; display: flex; align-items: center;}
-.depth2 li a{display: block; width: 100%; word-break: keep-all;  padding:7px 0; color: #0D0E10;
+.depth2 li a{display: block; width: 100%; word-break: keep-all;  padding:7px; color: #0D0E10;
 font-size: 16px;
 font-weight: 500;
-letter-spacing: -0.32px;}
-.depth2 li a:hover{
-    color:#0767C7; font-weight: 600; 
+letter-spacing: -0.32px; width: 130px; }
+.depth2 li a:hover{ font-weight: 600; 
 }
 
 .header-container{height:90px; display: flex; align-items: center; border-bottom: 1px solid #D4D4D4;}
@@ -63,6 +62,27 @@ letter-spacing: -0.35px;}
 .depth01 .gnb-main-trigger.active {color: #0767C7; position: relative; font-weight: 700;}
 .depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/main/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
+.gnb-main-trigger + .depth2::before{
+  display: block;
+  content:"";
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(226deg, #0050CA 3.64%, #0AF 96.83%);
+  height:290px;
+  top:0;
+  left:0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.gnb-main-trigger.active + .depth2::before {
+  transform: scaleY(1);
+}
+
+.gnb-main-trigger.active + .depth2 a{color:#fff}
 
 .depth01 .gnb-main-trigger {
   position: relative;
@@ -95,6 +115,7 @@ letter-spacing: -0.35px;}
 .depth01 .gnb-main-trigger.active::before {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+  animation: bounceFade 1.2s ease-in-out forwards;
 }
 
 

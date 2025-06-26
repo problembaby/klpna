@@ -1,3 +1,4 @@
+
 /**------------------------------------------
 버튼색상 정의
 --------------------------------------------*/
@@ -245,6 +246,16 @@
     flex-shrink: 0;
     background-size: cover;
     background-image: url(../../img/icon/ico-chk.svg);
+}
+
+.ico-chk-wh::before{
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-image: url(../../img/icon/ico-chk-wh.svg);
 }
 
 

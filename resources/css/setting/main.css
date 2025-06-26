@@ -168,15 +168,16 @@ line-height: 100%; /* 18px */ margin-top: 5px;}
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease-out;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  perspective: 800px;
+}
+.shortcut-list-item .img::before {
+    transition: transform 1s ease-out;
+    perspective: 800px;
 }
 
+
 /* hover 시 수평으로 회전 (동전처럼) */
-.shortcut-list-item:hover .img {
-  transform: rotateY(730deg);
+.shortcut-list-item:hover .img::before {
+  transform: rotateY(360deg);
 }
 .shortcut-list-item .txt {
   color: #0D0E10;

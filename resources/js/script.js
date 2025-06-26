@@ -72,56 +72,116 @@ const KRDSFormUtil = {
     /**
      * [공통] GNB 열기/닫기 토글 기능
      */
-    bindGnbToggle() {
-        const triggers = document.querySelectorAll('.gnb-main-trigger');
-        const depth2Menus = document.querySelectorAll('.depth2');
-        const gnbBg = document.querySelector('.gnb-bg');
-        const gnbBackdrop = document.querySelector('.gnb-backdrop');
-        const body = document.body;
+bindGnbToggle() {
+    const gnb = document.querySelector('#gnb');
+    const depth2Menus = document.querySelectorAll('.depth2');
+    const gnbBg = document.querySelector('.gnb-bg');
+    const gnbBackdrop = document.querySelector('.gnb-backdrop');
+    const body = document.body;
+    let closeTimer = null;
+    const safeArea = [gnb, gnbBg];
 
-        function openGnb(trigger) {
-            triggers.forEach(t => t.classList.remove('active'));
-            trigger.classList.add('active');
-
-            depth2Menus.forEach(menu => menu.style.display = 'block');
+    function openAllGnb() {
+        depth2Menus.forEach(menu => menu.style.display = 'block');
+        if (gnbBg) {
             gnbBg.style.display = 'block';
             gnbBg.classList.add('active');
-            gnbBackdrop?.classList.add('active');
-            body.style.overflow = 'hidden';
         }
+        if (gnbBackdrop) gnbBackdrop.classList.add('active');
+        body.style.overflow = 'hidden';
+    }
 
-        function closeGnb() {
-            triggers.forEach(t => t.classList.remove('active'));
-            depth2Menus.forEach(menu => menu.style.display = 'none');
+    function closeAllGnb() {
+        depth2Menus.forEach(menu => menu.style.display = 'none');
+        if (gnbBg) {
             gnbBg.style.display = 'none';
             gnbBg.classList.remove('active');
-            gnbBackdrop?.classList.remove('active');
-            body.style.overflow = '';
         }
+        if (gnbBackdrop) gnbBackdrop.classList.remove('active');
+        body.style.overflow = '';
+        document.querySelectorAll('.gnb-main-trigger').forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-expanded', 'false');
+        });
+    }
 
-        triggers.forEach(trigger => {
-            trigger.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const isOpen = gnbBg.classList.contains('active');
-                const isThisActive = this.classList.contains('active');
+    function isDescendant(parent, child) {
+        return parent && child && (parent === child || parent.contains(child));
+    }
 
-                if (!isOpen) {
-                    openGnb(this);
-                } else if (isThisActive) {
-                    closeGnb();
-                } else {
-                    triggers.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
+    gnb.addEventListener('mouseenter', () => {
+        clearTimeout(closeTimer);
+        openAllGnb();
+    });
+    gnb.addEventListener('focusin', () => {
+        clearTimeout(closeTimer);
+        openAllGnb();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        clearTimeout(closeTimer);
+        closeTimer = setTimeout(() => {
+            const isInside = safeArea.some(el => el && el.contains(e.target));
+            if (!isInside) closeAllGnb();
+        }, 150);
+    });
+
+    document.addEventListener('focusout', () => {
+        closeTimer = setTimeout(() => {
+            const activeEl = document.activeElement;
+            const isInside = safeArea.some(el => isDescendant(el, activeEl));
+            if (!isInside) closeAllGnb();
+        }, 150);
+    });
+
+    // trigger 및 depth2 모두에 대해 포커스 시 active 토글
+    document.querySelectorAll('.gnb-main-trigger').forEach(trigger => {
+        trigger.addEventListener('focus', () => {
+            trigger.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
+        });
+        trigger.addEventListener('blur', () => {
+            setTimeout(() => {
+                if (!trigger.contains(document.activeElement)) {
+                    trigger.classList.remove('active');
+                    trigger.setAttribute('aria-expanded', 'false');
                 }
-            });
+            }, 100);
+        });
+    });
+
+    document.querySelectorAll('.depth2').forEach(menu => {
+        const trigger = menu.previousElementSibling;
+        if (!trigger || !trigger.classList.contains('gnb-main-trigger')) return;
+
+        menu.addEventListener('mouseenter', () => {
+            trigger.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
+        });
+        menu.addEventListener('mouseleave', () => {
+            trigger.classList.remove('active');
+            trigger.setAttribute('aria-expanded', 'false');
         });
 
-        document.addEventListener('click', function (e) {
-            if (!e.target.closest('#gnb')) {
-                closeGnb();
-            }
+        menu.addEventListener('focusin', () => {
+            trigger.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
         });
-    },
+
+        menu.addEventListener('focusout', () => {
+            setTimeout(() => {
+                if (!menu.contains(document.activeElement)) {
+                    trigger.classList.remove('active');
+                    trigger.setAttribute('aria-expanded', 'false');
+                }
+            }, 100);
+        });
+    });
+},
+
+
+
+
 
     /**
      * [공통] Footer 셀렉트 드롭다운 아코디언 토글

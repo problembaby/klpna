@@ -1,11 +1,18 @@
-@import url(./header_footer.css);
-@import url(./main.css);
+@import url('./header_footer.css');
+@import url('./main.css');
+@import url('./mypage.css');
 
 
 
 /*********************
 서브 LNB
 ************************/
+
+.krds-side-navigation .lnb-list .lnb-item {
+    border-bottom: var(--krds-side-navigation--item-border-width) dotted var(--krds-side-navigation--item-color-border);
+}
+
+
 
 .krds-side-navigation .lnb-tit {
     font-size: var(--krds-side-navigation--title-font-size);
@@ -43,6 +50,7 @@
     width: 30rem;
     padding: var(--krds-padding-10) var(--krds-padding-3) var(--krds-padding-10) 0;
     border-right: 0;
+    flex:0 0 30rem
 }
 
 
@@ -1077,6 +1085,11 @@ font-weight: 400;}
     padding: 0;
 }
 .ico-puzzle{display: none;}
+
+#container .in-between .contents {
+    padding-right: 0;
+    width: 100%;
+}
 
 }
 
