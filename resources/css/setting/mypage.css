@@ -234,6 +234,60 @@ letter-spacing: -1.08px;}
 .table-wrap{width: 100%; overflow-x: auto; display: block;}
 .table-wrap .table{min-width: 500px;}
 
+/*********************************
+1:1문의하기 
+************************************/
+
+.ico-q::before{content:"Q"; display: block; display: flex;
+width: 26px;
+height: 26px;
+padding: 0px 8px;
+justify-content: center;
+align-items: center;
+gap: 10px; border-radius: 50%;
+background: var(--color-primary, #0050CA); color: #FFF;
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; 
+margin-right:10px
+}
+.ico-a::before{content:"A"; display: block; display: flex;
+width: 26px;
+height: 26px;
+padding: 0px 8px;
+justify-content: center;
+align-items: center;
+gap: 10px; border-radius: 50%;
+background: var(--color-primary, #0AF); color: #FFF;
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; 
+margin-right:10px
+}
+
+
+.krds-structured-list.type-full .card-body .c-tit {
+    font-size: 20px;
+}
+.krds-structured-list.type-full .card-body .c-txt, .krds-structured-list.type2 .card-body .c-txt {
+    font-size: 16px; 
+}
+.krds-structured-list .card-body .c-text .c-date {
+  font-size: 14px;
+  color:#8A949E
+}
+
+.krds-structured-list > li {
+    padding: 20px 30px;
+}
+
+
+.ico-a.noReply::before{ background:#E9E9E9 ;}
+
 /** 노트북 */
 @media (max-width: 1440px) {
  
@@ -268,6 +322,21 @@ letter-spacing: -1.08px;}
 
 
 @media (max-width: 479px) {
+  .krds-structured-list.type-full .card-body .c-tit {
+    font-size: 20px;
+}
+.krds-structured-list.type-full .card-body .c-txt, .krds-structured-list.type2 .card-body .c-txt {
+    font-size: 16px; 
+}
+.krds-structured-list .card-body .c-text .c-date {
+  font-size: 14px;
+  color:#8A949E
+}
+
+.krds-structured-list > li {
+    padding: 20px 20px;
+}
+
 }
 
 @media (max-width: 320px) {
