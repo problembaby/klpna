@@ -627,7 +627,28 @@ line-height: 150%; /* 21px */}
 
 .ico-reply-svg::before{display: inline-block; content:""; background: url(../../img/sub/ico-reply.svg)no-repeat; width: 24px; height:25px}
 
+.ico-reply-a::before{display: inline-block; content:""; background: url(../../img/sub/ico-replyon.svg)no-repeat; width: 24px; height:24px}
+
+.ico-reply-a-disable::before{display: inline-block; content:""; background: url(../../img/sub/ico-replyon-disable.svg)no-repeat; width: 24px; height:24px}
+
 .reply-item{display: flex; gap:3px; }
+.card-btm-list{display: flex; flex-direction: column; }
+.card-btm-list li{display: flex;  align-items: center; gap:5px;
+}
+.card-btm{font-size:13px; display: flex; align-items: center;}
+
+.krds-structured-list .card-top {
+    gap:10px
+}
+
+
+.krds-badge.bg-skyBlue {
+    background-color: #0AF;
+    color: var(--krds-badge--color-text-basic);
+}
+
+.myarticles{text-align: center; width: 100%;}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {}
