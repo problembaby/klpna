@@ -3,6 +3,12 @@
 버튼색상 정의
 --------------------------------------------*/
 
+
+/* .krds-btn:active, .krds-btn:hover, .krds-btn:focus {
+    color: #fff;
+}
+ */
+
 .krds-btn.primary {
     background-color: #256EF4;
     border-color: #007bff;
