@@ -102,6 +102,7 @@
 .krds-side-navigation .lnb-list > li > .lnb-btn::before {
     background-color:#0050CA;
     transition: var(--krds-transition-base);
+    display:none
 }
 /***********************
  버튼 재정의 
@@ -972,6 +973,7 @@ text-align: center;
 .terms-exp{color: var(--color-text-sub_title, #464C53);
 font-size: 15px;
 font-weight: 400;}
+
 
 
 
