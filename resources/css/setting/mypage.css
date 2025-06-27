@@ -621,6 +621,14 @@ line-height: 150%; /* 21px */}
   height:201px;
 }
 
+/*****************************
+회원게시판
+********************************/
+
+.ico-reply-svg::before{display: inline-block; content:""; background: url(../../img/sub/ico-reply.svg)no-repeat; width: 24px; height:25px}
+
+.reply-item{display: flex; gap:3px; }
+
 /** 노트북 */
 @media (max-width: 1440px) {}
 
