@@ -1159,7 +1159,7 @@ td.cell-subject > * {
 .board-detailed .detailed-header .title {
   color: #1D1D1D;
   letter-spacing: -0.96px;
-  padding: 20px;
+  padding: 25px 20px;
   word-break: break-all;
   border-bottom: 1px solid #cbd5e1;
   text-align: center;
