@@ -650,6 +650,30 @@ line-height: 150%; /* 21px */}
 .myarticles{text-align: center; width: 100%;}
 
 
+/***************************************
+회원정보수정
+***************************************/
+
+.mypage.info .input-group.range {
+    align-items: center;
+    position: relative;
+}
+
+.mypage.info .form-tit {
+    width: 200px;
+    padding-top: 10px;
+    flex: 0 0 200px;
+}
+
+.mypage.info .form-group {
+    flex-direction: row;
+    align-items: flex-start;
+}
+.mypage.info .form-hint {
+    margin-top: 5px;
+}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {}
 

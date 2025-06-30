@@ -479,3 +479,17 @@
   .h950p { height: 950px !important; }
   .h1000p { height: 1000px !important; }
   
+
+  /**------------------------------------------
+  최대크기(Width ) 정의
+  --------------------------------------------*/
+.mw100 { max-width: 100px !important; }
+.mw200 { max-width: 200px !important; }
+.mw300 { max-width: 300px !important; }
+.mw400 { max-width: 400px !important; }
+.mw500 { max-width: 500px !important; }
+.mw600 { max-width: 600px !important; }
+.mw700 { max-width: 700px !important; }
+.mw800 { max-width: 800px !important; }
+.mw900 { max-width: 900px !important; }
+.mw1000 { max-width: 1000px !important; }
