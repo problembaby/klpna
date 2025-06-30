@@ -673,6 +673,36 @@ line-height: 150%; /* 21px */}
     margin-top: 5px;
 }
 
+.mypage.info .file-list .list li {
+    background: var(--color-bg-nomal, #F8F8F8);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 6px;
+}
+.mypage.info .file-list .list li a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+}
+
+.mypage.info .file-list .list li a::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    background-size: cover;
+}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {}
