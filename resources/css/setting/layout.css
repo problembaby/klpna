@@ -104,6 +104,10 @@
     transition: var(--krds-transition-base);
     display:none
 }
+
+.krds-breadcrumb-wrap .breadcrumb li:last-child a.txt{font-weight: 700;}
+
+
 /***********************
  버튼 재정의 
  *************************/

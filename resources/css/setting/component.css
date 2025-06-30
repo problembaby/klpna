@@ -291,6 +291,9 @@
     color: var(--krds-button--color-tertiary-text);
 }
 
+textarea.krds-input {
+        font-size: var(--krds-input--pc-font-size-medium);
+}
 
 @media (max-width: 1024px){
     .krds-modal {
