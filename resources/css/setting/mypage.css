@@ -689,7 +689,33 @@ line-height: 150%; /* 21px */}
 }
 
 /** 테블릿 */
-@media (max-width: 1023px) {}
+@media (max-width: 1023px) {
+
+  .mypage.info .form-tit {
+    width: 100%;
+    padding-top: 10px;
+    flex: 1 1 100%;
+    font-weight: bold;
+}
+.mypage.info .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.mypage.info .form-input {
+    width: 100%;
+    max-width: 100%;
+}
+.mypage.info .krds-check-area {
+    flex-wrap: wrap;
+}
+.mypage.info .tel-conts {
+    flex-direction: column;
+}
+.mypage.info .tel-conts button {
+    width: 100%;
+}
+
+}
 
 /** 모바일 */
 @media (max-width: 767px) {
