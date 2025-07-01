@@ -62,7 +62,6 @@
 .krds-structured-list.o-gallery-list .card-body .c-text .c-tit::after {
     display:none
 }
-
 .krds-structured-list.o-gallery-list .card-body .c-text {
     display: flex;
     align-items: normal;
@@ -2248,6 +2247,8 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
 .license-status.bg-completed{background-color: #0767C7; color:#fff; }
 
 .krds-structured-list > li { gap: 5px}
+.youtube-section{margin:30px 0}
+
 
 
 @media (max-width: 1300px) {
@@ -2992,6 +2993,13 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
     flex: 1 auto;
 }
 
+.bbs-top-cont {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+    border-top: 1px solid var(--color-border-nomal, #C6C6C6);
+    flex-direction: column;
+}
 
 }
 

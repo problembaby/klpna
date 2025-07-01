@@ -298,6 +298,25 @@ textarea.krds-input {
 .a-link{text-decoration: underline; transition:0s}
 .a-link:hover{color:#003A92; text-decoration: underline;}
 
+
+.svg-icon.small{
+       display: inline-flex;
+    width: var(--krds-icon--size-small);
+    height: var(--krds-icon--size-small);
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+}
+
+
+.svg-icon.medium{
+       display: inline-flex;
+    width: var(--krds-icon--size-medium);
+    height: var(--krds-icon--size-medium);
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+}
+
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;

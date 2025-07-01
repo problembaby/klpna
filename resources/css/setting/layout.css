@@ -107,6 +107,35 @@
 
 .krds-breadcrumb-wrap .breadcrumb li:last-child a.txt{font-weight: 700;}
 
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn {
+    align-items: center;
+}
+
+.bbs-top-cont{display: flex; gap:60px; padding: 40px 0; border-top: 1px solid var(--color-border-nomal, #C6C6C6);}
+.bbs-top-cont .youtube.logo::before{
+    content:"";
+    display: block;
+    background: url(../../img/bbs/youtube_logo.png)no-repeat;
+    width: 160px;
+    height:42px;
+}
+.bbs-top-cont .link{
+    display: flex;
+    align-items: center
+}
+.bbs-top-cont .link:hover{
+    color:#0050CA
+}
+
+.bbs-top-cont .link .svg-icon.medium {
+    background-color: #0050CA;
+    margin-left: 5px;
+}
+
+.thumbnail a{position: relative;}
+.ico-play{ position: absolute; top:50%; left:50%; transform: translateX(-50%) translateY(-50%);}
+.ico-play::after{display: block; content:""; background: url(../../img/bbs/ico-play.svg)no-repeat;width: 60px; height:60px; }
+
 
 /***********************
  버튼 재정의 
