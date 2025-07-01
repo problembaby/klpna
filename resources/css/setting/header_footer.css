@@ -18,7 +18,7 @@
 .depth2 li a{display: block; width: 100%; word-break: keep-all;  padding:7px; color: #0D0E10;
 font-size: 16px;
 font-weight: 500;
-letter-spacing: -0.32px; width: 130px; }
+letter-spacing: -0.32px; width: 130px; transition: 0s;}
 .depth2 li a:hover{ font-weight: 600; 
 }
 
