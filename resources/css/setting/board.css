@@ -1161,7 +1161,7 @@ td.cell-subject > * {
   letter-spacing: -0.96px;
   padding: 25px 20px;
   word-break: break-all;
-  border-bottom: 1px solid #cbd5e1;
+  border-bottom: 0 solid #cbd5e1;
   text-align: center;
   font-size: 2rem;
   font-style: normal;
@@ -1194,7 +1194,7 @@ line-height: 150%; /* 27px */
   gap: 40px;
   align-self: stretch;
   border-top: 0 solid var(--gray-gray-40, #C6C6C6);
-  border-bottom: 1px solid var(--gray-gray-40, #C6C6C6);
+  border-bottom: 0px solid var(--gray-gray-40, #C6C6C6);
   background: var(--gray-gray-5, #F8F8F8);
 }
 .detailed-info .ul {
@@ -2246,6 +2246,8 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
 
 .license-status.bg-target{background-color: #EE4268; color:#fff; }
 .license-status.bg-completed{background-color: #0767C7; color:#fff; }
+
+.krds-structured-list > li { gap: 5px}
 
 
 @media (max-width: 1300px) {
