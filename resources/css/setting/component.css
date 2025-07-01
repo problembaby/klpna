@@ -295,6 +295,9 @@ textarea.krds-input {
         font-size: var(--krds-input--pc-font-size-medium);
 }
 
+.a-link{text-decoration: underline; transition:0s}
+.a-link:hover{color:#003A92; text-decoration: underline;}
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;
