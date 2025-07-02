@@ -15,7 +15,8 @@
 
 
 .krds-side-navigation .lnb-tit {
-    font-size: var(--krds-side-navigation--title-font-size);
+    /* font-size: var(--krds-side-navigation--title-font-size); */
+    font-size: 32px;
     font-weight: var(--krds-font-weight-bold);
     padding: 0 var(--krds-side-navigation--title-padding-x) var(--krds-side-navigation--title-padding-bottom) var(--krds-side-navigation--title-padding-x);
     border-bottom: var(--krds-side-navigation--title-border-width) solid var(--krds-side-navigation--title-color-border);
@@ -111,7 +112,7 @@
     align-items: center;
 }
 
-.bbs-top-cont{display: flex; gap:60px; padding: 40px 0; border-top: 1px solid var(--color-border-nomal, #C6C6C6);}
+.bbs-top-cont{display: flex; gap:60px; padding: 40px 0; border-top: 1px solid var(--color-border-nomal, #C6C6C6); align-items:center}
 .bbs-top-cont .youtube.logo::before{
     content:"";
     display: block;
@@ -1007,6 +1008,18 @@ text-align: center;
 font-size: 15px;
 font-weight: 400;}
 
+
+/**************************************
+인터넷신문
+****************************************/
+
+.bbs-top-cont .news.logo::before{
+    content:"";
+    display: block;
+    background: url(../../img/bbs/news_logo.png)no-repeat;
+    width: 160px;
+    height:36px;
+}
 
 
 

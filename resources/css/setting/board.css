@@ -2251,7 +2251,86 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
 
 
 
+/* 뉴스갤러리 */
+
+.krds-structured-list.o-news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    grid-gap: var(--krds-structured-list--wrap-gap);
+}
+
+.krds-structured-list.o-news-list>li {
+    padding: 0;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.krds-structured-list.o-news-list .card-top .thumbnail {
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.krds-structured-list.o-news-list:not(.type-full) .card-top{
+    margin-bottom: 0;
+    flex:0 45%;
+}
+
+.krds-structured-list.o-news-list .card-body{ padding: 20px; flex:1 55%}
+.krds-structured-list.o-news-list .c-top .value{ font-size: 13px;}
+
+.krds-structured-list.o-news-list .card-body .c-text .c-tit .span {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2 ;
+    font-size: 16px;
+}
+
+.krds-structured-list.o-news-list .card-body .c-text .c-tit::after {
+    display: none;
+}
+.ico-topNoti{display: flex; align-items: center; gap:5px}
+
+.news-list .news-list-top{
+  border-bottom: 2px solid var(--color-border-top, #0767C7);
+  margin-bottom:20px;
+  padding:12px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+.news-list .news-list-top .view-all{
+  display: flex;
+  align-items: center;
+  gap:5px;
+  color: var(--color-text-small, #555);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+}
+.news-list .news-list-top h2{
+  color: var(--color-primary, #0050CA);
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */
+}
+.news-list.last .news-list-top{
+  border-bottom: 2px solid var(--color-border-top, #676767);
+  margin-top: 30px;
+}
+
+.news-list.last .news-list-top h2{
+  color: var(--color-primary, #0D0E10);
+}
+
+
 @media (max-width: 1300px) {
+
+
+
   .board-search-wrap {
     background-color: #f6f9ff;
     padding: 26px 10px;
@@ -2999,6 +3078,10 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
     padding: 40px 0;
     border-top: 1px solid var(--color-border-nomal, #C6C6C6);
     flex-direction: column;
+}
+
+.krds-structured-list.o-news-list {
+    grid-template-columns: 1fr;
 }
 
 }
