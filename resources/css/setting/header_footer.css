@@ -403,7 +403,8 @@ line-height: 150%; /* 27px */ flex: 0 150px; padding-left:10px}
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 150%; /* 24px */ transition: 0s;}
+line-height: 150%; /* 24px */ transition: 0s;
+}
 .allMenu-nav li.allMenu-nav-item .menu-list li a:hover{color:#0050CA; font-weight: 700; text-decoration: underline;}
 
 
@@ -415,6 +416,7 @@ line-height: 150%; /* 24px */ transition: 0s;}
 }
 
 .modal-content .inner{height:100%; overflow: auto; padding:0}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {

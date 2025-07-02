@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> 목록 | 노무상담 | 마이페이지 - 대한간호조무사협회</title>
+    <title>등록 | 노무상담 - 대한간호조무사협회</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
@@ -15,10 +15,10 @@
 
     <!--js-->
     <script src="../resources/js/jquery-3.7.1.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
-    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
     <script src="../resources/krds/js/pattern/pattern.js" defer></script>
-    <script src="../resources/js/script.js"></script>
+    <script src="../resources/js/script.js" defer></script>
 </head>
 
 <body>
@@ -32,41 +32,17 @@
             <div class="inner in-between">
                 <!-- 사이드 메뉴 -->
                 <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">마이페이지</h1>
+                    <h1 class="lnb-tit">회원혜택</h1>
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item">
-                            <a href="#" class="lnb-btn link ">교육현황</a>
+                            <a href="#" class="lnb-btn link">드림복지</a>
                         </li>
                         <li class="lnb-item">
-                            <a href="#" class="lnb-btn link ">강의실</a>
+                            <a href="#" class="lnb-btn link">KLPNA상조회</a>
                         </li>
-                        <li class="lnb-item">
-                            <a href="#" class="lnb-btn link ">회비/기금내역</a>
-                        </li>
-                        <li class="lnb-item">
-                            <a href="#" class="lnb-btn link ">1:1문의</a>
-                        </li>
-
-                        <li class="lnb-item active">
-                            <button type="button" class="lnb-btn lnb-toggle active selected"
-                                aria-controls="lnbmenu-vf9gqcy" aria-expanded="false">나의게시물</button>
-                            <!-- lnb-submenu -->
-                            <div class="lnb-submenu">
-                                <ul id="lnbmenu-vf9gqcy">
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">신고센터</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link active">노무상담</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
-                                </ul>
-                            </div>
-                            <!-- //lnb-submenu -->
-                        </li>
-                        <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">회원정보</a>
-                            <!-- lnb-submenu -->
-                            <!-- //lnb-submenu -->
+                         <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">노무상담</a>
                         </li>
                     </ul>
                     <!-- //lnb-list -->
@@ -75,16 +51,15 @@
 
                 <div class="contents">
                     <!-- breadcrumb -->
-                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
-                            <li><a href="#;" class="txt">마이페이지</a></li>
-                            <li><a href="#;" class="txt">나의게시물</a></li>
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">회원혜택</a></li>
                             <li><a href="#;" class="txt">노무상담</a></li>
                         </ol>
+
                     </nav>
                     <!-- breadcrumb -->
-
 
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
@@ -100,6 +75,7 @@
                         </ol>
                     </div>
                     <!-- //페이지 타이틀 영역 -->
+
 
                     <!-- 게시판 상세페이지 start -->
                     <!-- 게시판 등록 start -->
@@ -145,7 +121,7 @@
                         <form action="">
                             <div class="page-content">
                                 <div class="guide-txt mt20">
-                                    <p class="fw-medium mb20">신고 내용에 대한 답변은 기재하신 이메일 주소로 전송됩니다.</p>
+                                    <p class="fw-medium mb20">상담하신 내용에 대한 답변은 기재하신 이메일 주소로 전송됩니다.</p>
                                     <ul class="krds-info-list decimal" role="list">
                                         <li role="listitem">
                                             최대한 빠른 시일 내에 답변해 드리겠습니다.
@@ -194,14 +170,14 @@
                                                         <li>
 
                                                             <input type="text" id="phone-mid" class="krds-input medium"
-                                                                value="1234" maxlength="4">
+                                                                value="" maxlength="4">
 
                                                         </li>
                                                         <li class="mark">-</li>
                                                         <li>
 
                                                             <input type="text" id="phone-last" class="krds-input medium"
-                                                                maxlength="4" value="1234">
+                                                                maxlength="4" value="">
 
                                                         </li>
 
@@ -223,14 +199,14 @@
                                                     <ul class="input-group range">
                                                         <li>
                                                             <input type="text" id="email-id" class="krds-input medium"
-                                                                placeholder="" value="abcd">
+                                                                placeholder="" value="">
 
                                                         </li>
                                                         <li class="mark">@</li>
                                                         <li>
                                                             <input type="text" id="email-domain"
                                                                 class="krds-input medium" placeholder=""
-                                                                data-role="email-domain" value="naver.com" readonly>
+                                                                data-role="email-domain" value="" readonly>
                                                         </li>
                                                         <li>
 
@@ -267,7 +243,7 @@
                                                         <label for="rdo_1">4인 이하</label>
                                                     </div>
                                                     <div class="krds-form-check">
-                                                        <input type="radio" name="rdo_1" id="rdo_2" checked="">
+                                                        <input type="radio" name="rdo_1" id="rdo_2">
                                                         <label for="rdo_2">5인 이상</label>
                                                     </div>
                                                 </div>
@@ -283,7 +259,7 @@
                                             </div>
                                             <div class="form-conts">
                                                 <input type="text" id="title" class="krds-input medium" placeholder=""
-                                                    value="부당해고 상담합니다.">
+                                                    value="">
                                                 <p class="form-hint-invalid" style="display: none;">제목을 입력해주세요</p>
                                             </div>
                                         </div>
@@ -295,7 +271,7 @@
                                             <div class="form-conts">
                                                 <textarea name="" id="content" class="krds-input"
                                                     oninput="updateTextareaCount(this)"
-                                                    maxlength="3000">신고합니다.</textarea>
+                                                    maxlength="3000"></textarea>
                                                 <p class="form-hint-invalid" style="display: none;">내용을 입력해주세요</p>
                                                 <input type="file" id="q_file_input" multiple style="display:none;"
                                                     onchange="handleFileSelect(this)" />
@@ -327,16 +303,6 @@
                                 <div class="detailed-file-wrap">
                                     <div class="tit">첨부파일목록</div>
                                     <ul class="list">
-                                        <li data-id="1751248691118nv9xwbc3i">
-                                            <a href="#" class="file-etc" title="파일첨부">
-                                                <p>신고관련자료.pdf</p>
-                                                <span>(0KB)</span>
-                                            </a>
-                                            <button type="button" class="krds-btn tertiary fileBtn"
-                                                data-id="1751248691118nv9xwbc3i">
-                                                삭제<i class="svg-icon ico-delete-fill"></i>
-                                            </button>
-                                        </li>
                                     </ul>
                                 </div>
 
@@ -445,10 +411,12 @@
                     <!-- 게시판 상세페이지 end-->
 
                 </div>
+
             </div>
             <!-- //컨텐츠 영역 -->
         </div>
         <!-- //컨테이너 영역 -->
+
         <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
 
     </div>
@@ -456,6 +424,7 @@
 </body>
 
 </html>
+
 
 
 <script>
