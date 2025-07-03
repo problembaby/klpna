@@ -55,8 +55,8 @@ letter-spacing: -0.35px;}
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url(/resources/krds/img/component/icon/ico_all.svg);
-    mask-image: url(/resources/krds/img/component/icon/ico_all.svg);
+    -webkit-mask-image: url(../../krds/img/component/icon/ico_all.svg);
+    mask-image: url(../../krds/img/component/icon/ico_all.svg);
 }
 
 
@@ -198,7 +198,7 @@ letter-spacing: -0.35px;}
     width: 24px;
     height:24px;
     display: inline-flex;
-    background: url(/resources/krds/img/component/icon/ico_angle.svg)no-repeat;
+    background: url(../../krds/img/component/icon/ico_angle.svg)no-repeat;
     transition: var(--krds-transition-base);
     transform: rotate(180deg);
 } 

@@ -218,5 +218,80 @@ bindGnbToggle() {
     });
 }
 
+
     
 };
+
+
+
+$(function () {
+  // 한글 설정
+  $.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월','2월','3월','4월','5월','6월',
+      '7월','8월','9월','10월','11월','12월'],
+    dayNamesMin: ['일','월','화','수','목','금','토'],
+    showMonthAfterYear: true,
+    yearSuffix: '년'
+  });
+
+  // 범위 입력기(채용기간 등)에 자동 datepicker 적용
+  $('.input-group.range').each(function () {
+    var $inputs = $(this).find('input[type="text"].datepicker');
+    if ($inputs.length >= 2) {
+      $inputs.eq(0).datepicker({
+        beforeShowDay: highlightWeekend,
+        onSelect: function (selectedDate) {
+          $inputs.eq(1).datepicker("option", "minDate", selectedDate);
+        }
+      });
+      $inputs.eq(1).datepicker({
+        beforeShowDay: highlightWeekend,
+        onSelect: function (selectedDate) {
+          $inputs.eq(0).datepicker("option", "maxDate", selectedDate);
+        }
+      });
+    }
+  });
+
+  // 단독 datepicker (input-group.range 바깥)
+  $('input[type="text"].datepicker').each(function () {
+    // 이미 위에서 처리된 경우(범위 내 input) skip
+    if ($(this).closest('.input-group.range').length === 0) {
+      $(this).datepicker({
+        beforeShowDay: highlightWeekend
+      });
+    }
+  });
+
+  // 주말 색상 처리 함수
+  function highlightWeekend(date) {
+    var day = date.getDay();
+    if (day === 0) return [true, "datepicker-sunday"];   // 일요일
+    if (day === 6) return [true, "datepicker-saturday"]; // 토요일
+    return [true, ""];
+  }
+
+
+  /*************************
+   * 숫자만 입력 가능
+   */
+
+    // 숫자만 입력: only-number 클래스
+  $(document).on('input', '.only-number', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+
+  // 스크롤(마우스휠)로 값 바뀌는 것 방지 (UX 통일)
+  $(document).on('wheel', '.only-number', function (e) {
+    this.blur();
+  });
+
+  // 붙여넣기 제한
+  $(document).on('paste', '.only-number', function (e) {
+    var clipboard = (e.originalEvent || e).clipboardData.getData('text');
+    if (/[^0-9]/.test(clipboard)) e.preventDefault();
+  });
+});

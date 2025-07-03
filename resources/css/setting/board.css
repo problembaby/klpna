@@ -192,6 +192,10 @@
 .btnList-sort .right{display: flex; gap:10px}
 .btnList-sort .left{display: flex; gap:10px}
 
+.btnList-sort.pb0{
+  padding: 20px 0 0 0;
+}
+
 /* 정보광장_ 게시판 */
 .no-contents {
   height: 250px;
@@ -784,7 +788,7 @@ td.cell-subject > * {
   content: "";
   width: 18px;
   height: 19px;
-  background: url(/resources/img/icon/ic_new.png) center no-repeat;
+  background: url(../../img/icon/ic_new.png) center no-repeat;
   display: block;
   flex: 0 20px;
 }
@@ -2325,6 +2329,12 @@ line-height: 150%; /* 27px */
 .news-list.last .news-list-top h2{
   color: var(--color-primary, #0D0E10);
 }
+
+/*******************
+구인정보
+************************/
+
+.search-top-box{display: flex; gap:10px; flex-direction: column;}
 
 
 @media (max-width: 1300px) {
