@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>등록 | 노무상담 - 대한간호조무사협회</title>
+    <title>등록 | 신고센터 - 대한간호조무사협회</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
@@ -15,10 +15,10 @@
 
     <!--js-->
     <script src="../resources/js/jquery-3.7.1.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
-    <script src="../resources/krds/js/component/ui-script.js" defer></script>
-    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
-    <script src="../resources/js/script.js" defer></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
 </head>
 
 <body>
@@ -32,19 +32,25 @@
             <div class="inner in-between">
                 <!-- 사이드 메뉴 -->
                 <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">회원혜택</h1>
+                    <h1 class="lnb-tit">회원소통</h1>
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">드림복지</a>
+                            <a href="#" class="lnb-btn link">공지사항</a>
                         </li>
                         <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">KLPNA상조회</a>
+                            <a href="#" class="lnb-btn link">회원게시판</a>
                         </li>
-                         <li class="lnb-item active">
-                            <a href="#" class="lnb-btn link active selected">노무상담</a>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">신고센터</a>
                         </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">원격서비스</a>
+                        </li>
+
+
                     </ul>
+
                     <!-- //lnb-list -->
                 </nav>
                 <!-- //사이드 메뉴 -->
@@ -54,16 +60,15 @@
                     <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
-                            <li><a href="#;" class="txt">회원혜택</a></li>
-                            <li><a href="#;" class="txt">노무상담</a></li>
+                            <li><a href="#;" class="txt">회원소통</a></li>
+                            <li><a href="#;" class="txt">신고센터</a></li>
                         </ol>
 
                     </nav>
                     <!-- breadcrumb -->
-
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
-                        <h1 class="h-tit">노무상담</h1>
+                        <h1 class="h-tit">신고센터</h1>
 
                         <ol class="breadcrumb-action">
                             <li>
@@ -121,12 +126,12 @@
                         <form action="">
                             <div class="page-content">
                                 <div class="guide-txt mt20">
-                                    <p class="fw-medium mb20">상담하신 내용에 대한 답변은 기재하신 이메일 주소로 전송됩니다.</p>
+                                    <p class="fw-medium mb20">신고 내용에 대한 답변은 기재하신 이메일 주소로 전송됩니다.</p>
                                     <ul class="krds-info-list decimal" role="list">
                                         <li role="listitem">
-                                            최대한 빠른 시일 내에 답변해 드리겠습니다.
+                                            <span class="blue">평일16시 이후 접수 건은 익일 오전 9시부터 순차적으로 답변이 가능합니다. (주말/공휴일 제외)</span>
                                         </li>
-                                        <li role="listitem">작성하신 글에 대한 답변은 ’마이페이지 > 나의게시물 > 노무상담’에서 확인이 가능합니다.</li>
+                                        <li role="listitem">작성하신 글에 대한 답변은 ’마이페이지 > 나의게시물 > 신고센터’에서 확인이 가능합니다.</li>
                                     </ul>
                                 </div>
 
@@ -170,14 +175,14 @@
                                                         <li>
 
                                                             <input type="text" id="phone-mid" class="krds-input medium"
-                                                                value="" maxlength="4">
+                                                                value="1234" maxlength="4">
 
                                                         </li>
                                                         <li class="mark">-</li>
                                                         <li>
 
                                                             <input type="text" id="phone-last" class="krds-input medium"
-                                                                maxlength="4" value="">
+                                                                maxlength="4" value="1234">
 
                                                         </li>
 
@@ -232,24 +237,6 @@
                                         <!-- //폼그룹 -->
 
 
-                                        <div class="form-group">
-                                            <div class="form-tit">
-                                                <label for="">사업장규모<i class="req">*</i></label>
-                                            </div>
-                                            <div class="form-conts">
-                                                <div class="krds-check-area">
-                                                    <div class="krds-form-check">
-                                                        <input type="radio" name="rdo_1" id="rdo_1">
-                                                        <label for="rdo_1">4인 이하</label>
-                                                    </div>
-                                                    <div class="krds-form-check">
-                                                        <input type="radio" name="rdo_1" id="rdo_2">
-                                                        <label for="rdo_2">5인 이상</label>
-                                                    </div>
-                                                </div>
-                                                <p class="form-hint-invalid" style="display: none;">사업장규모을 선택해주세요</p>
-                                            </div>
-                                        </div>
 
 
 
@@ -270,8 +257,7 @@
                                             </div>
                                             <div class="form-conts">
                                                 <textarea name="" id="content" class="krds-input"
-                                                    oninput="updateTextareaCount(this)"
-                                                    maxlength="3000"></textarea>
+                                                    oninput="updateTextareaCount(this)" maxlength="3000"></textarea>
                                                 <p class="form-hint-invalid" style="display: none;">내용을 입력해주세요</p>
                                                 <input type="file" id="q_file_input" multiple style="display:none;"
                                                     onchange="handleFileSelect(this)" />
