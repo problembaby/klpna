@@ -730,6 +730,152 @@ line-height: 150%; /* 21px */
     border-bottom: 0
     
 }
+
+/**********************************
+회비기금내역 
+**********************************/
+
+.krds-structured-list.pay-list > li .in {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: var(--krds-structured-list--list-inner-gap);
+    width: 100%;
+}
+
+.krds-structured-list.pay-list > li .card-thum{
+
+}
+
+.krds-structured-list.pay-list .card-thumb{flex: 1 0 260px; border-radius: 10px;
+background: var(--color-bg-secondary, #F7F8FB); display: flex; align-items: center; height: 128px; justify-content: center;}
+.img-duesPay::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/dues-pay-img.png)no-repeat;
+    width: 101px;
+    height: 63px;
+    background-size: contain;
+}
+
+
+.krds-structured-list.pay-list .card-text{width: 100%;}
+.card-text .card-text-top{width: 100%; display: flex; justify-content: space-between; align-items: center;}
+
+.card-text-top .fis-year{font-size: 14px;}
+.card-text-top .fis-year .fis-year-value{color: var(--color-primary, #0050CA);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */}
+
+.btn-radius-print{
+  border-radius: 4px;
+background: var(--color-bg-nomal, #F8F8F8);
+font-size: 13px;
+font-style: normal;
+display: flex; align-items: center; gap:5px; padding:5px 10px
+}
+
+.btn-radius-print:hover {
+  background: var(--color-bg-hover, #F4F6FC);
+}
+.btn-radius-print .ico-print::before {
+background-color : #555555;
+width: 20px;
+height: 20px;
+}
+
+
+.pay-list-info li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-list-info li .label{
+  color: var(--Text-02, #454545);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 21px */
+}
+
+.pay-list-info li .value{
+color: var(--color-text-basic, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 21px */
+}
+
+.card-text .pay-date{display: flex; justify-content: flex-end;
+overflow: hidden;
+color: var(--color-text-disabled, #8A949E);
+text-align: right;
+text-overflow: ellipsis;
+
+/* font/body/xsmall */
+font-family: "Pretendard GOV";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 19.5px */
+margin-top: 10px;}
+
+
+.ico-star::before {
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-star.svg)no-repeat;
+  width: 20px;
+  height: 20px;
+
+}
+
+.member-benefit-btn{display: flex; align-items: center; justify-content: center; gap:5px; color:#0050CA
+}
+
+.ico-pay::before{
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-dues-pay.svg)no-repeat;
+  width: 20px;
+  height: 19px;
+  margin-right: 5px;
+}
+
+.pay-btn-wrap{margin-bottom: 10px; width: 100%; justify-content: space-between; display: flex; align-items: flex-end;}
+
+.img-labor::before {
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-labor.svg)no-repeat;
+  width: 100px;
+  height: 80px;
+}
+.img-politics::before {
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-political.png)no-repeat;
+  width: 100px;
+  height: 80px;
+}
+
+.card-text .card-title{ overflow: hidden;
+color: var(--color-text-title, #0D0E10);
+text-overflow: ellipsis;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; 
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+flex: 1 0 0;}
+
 /** 노트북 */
 @media (max-width: 1440px) {}
 
