@@ -2388,6 +2388,13 @@ line-height: 150%; /* 27px */
 }
 
 @media (max-width: 1023px) {
+
+  .table-board.borad-list{
+    border-top:2px solid #267ACE;
+    padding-top: 10px;
+  }
+
+
   .table-num {
     width: 5%;
     display: none;
@@ -2412,7 +2419,7 @@ line-height: 150%; /* 27px */
   }
 
   .table-board table tbody tr td.num, .table-board table tbody tr td:last-child.file-td {
-    display: none;
+    display: ;  /*보임*/
   }
   .table-board table tbody tr td.cell-subject {
     display: block;
@@ -2454,9 +2461,10 @@ line-height: 150%; /* 27px */
     display: block;
     padding: 10px;
     width: 100%;
-    border: 1px solid #ececec;
+    border: 1px solid #D9D9D9;
     border-radius: 10px;
     background: #fff;
+    box-sizing: border-box;
   }
   .table-board table colgroup {
     display: none;

@@ -197,9 +197,65 @@
   justify-content: center;
 }
 
+
+.edu-first-tr{background-color: #fff;}
+.edu-first-tr .edu-td .year{font-size: 16px;}
+.edu-first-tr .edu-td > * {color: #9157DA; color: var(--color-text-bosu_txt, #9157DA);
+text-align: center;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */}
+
+.edu-two-tr{background-color: ;}
+.edu-two-tr .edu-td .year{font-size: 16px;}
+.edu-two-tr .edu-td > * {color: #05417C; color: var(--color-text-bosu_txt, #05417C);
+text-align: center;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */}
+
+.krds-badge.in-person, .krds-badge.in-noPerson{ background-color: #0050CA; color:#fff; display: inline; flex:0 0 auto}
+.krds-badge.online{ background-color: #0AF; color:#fff; display: inline; flex:0 0 auto}
+
+.edu-cont-top{display: flex; gap:10px; align-items: center; margin-bottom: 10px;}
+.edu-cont-top .subject{color: var(--color-text-basic, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */}
+
+
 .mypage-education-top {
   margin-bottom: 10px;
 }
+
+.edu-cont-list li{display: flex; gap:5px; align-items: center; margin-bottom: 5px; color:#464C53; font-size: 13px;}
+
+
+.ico-edu-cal::before{
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-edu-cal.svg)no-repeat;
+  width: 18px;
+  height: 18px;
+}
+.ico-edu-location::before{
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-edu-location.svg)no-repeat;
+  width: 18px;
+  height: 19px;
+}
+.ico-edu-zoom::before{
+  content: "";
+  display: block;
+  background: url(../../img/sub/ico-edu-com.svg)no-repeat;
+  width: 18px;
+  height: 19px;
+}
+
 
 
 .lecturel-link {
@@ -862,6 +918,13 @@ margin-top: 10px;}
   background: url(../../img/sub/ico-political.png)no-repeat;
   width: 100px;
   height: 80px;
+}
+.img-point::before {
+  content: "";
+  display: block;
+  background: url(../../img/sub/img-point.png)no-repeat;
+  width: 66px;
+  height: 55px;
 }
 
 .card-text .card-title{ overflow: hidden;
