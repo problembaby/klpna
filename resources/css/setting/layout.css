@@ -212,7 +212,7 @@
 }
 
 .krds-btn.blue:not(.icon) .svg-icon {
-    background-color: #ffffff;
+    background-color: #0050CA;
 }
 
 .krds-btn.blue:hover {
@@ -1135,6 +1135,56 @@ line-height: 150%; /* 19.5px */
 .krds-form-check input[type=radio] ~ label:after, .krds-form-check input[type=checkbox] ~ label:after {
     z-index: 1;
 }
+
+/************************************
+매거진
+****************************************/
+
+.bbs-top-cont .magazine.logo::before{
+    content:"";
+    display: block;
+    background: url(../../img/sub/title-magazine.png)no-repeat;
+    width: 171px;
+    height:34px;
+}
+
+
+.o-megazine-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap:30px 22px;
+    margin-top: 20px;
+}
+.o-megazine-list .megazine-items{
+    border-radius: 10px;
+    border: 1px solid var(--color-border-input-nomal, #CDCDCD);
+    overflow: hidden;
+    display: flex;
+
+}
+
+.megazine-items-img{flex:0 0 220px}
+
+.megazine-items-txt{padding:20px 5px; flex:1 auto; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.megazine-items-txt .date{
+color: var(--gray-gray-70, #555);
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 19.5px */}
+
+
+.megazine-items-txt .title{
+    color: var(--color-text-basic, #0D0E10);
+font-family: "Pretendard GOV";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 36px */
+
+}
+
+
 
 
 
