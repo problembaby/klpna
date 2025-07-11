@@ -1300,6 +1300,108 @@ line-height: 150%; /* 24px */
 .dream-row-list .dream-row-item .btn-area{margin-bottom: 20px; display: flex; width: 100%; padding:0 20px; gap:10px}
 .dream-row-list .dream-row-item .btn-area > *{flex:1 auto;}
 
+
+/*****************************
+모달:페이
+*****************************/
+
+.pay-wrap{
+    border-top: 1px solid var(--color-border-light, #D9D9D9);
+    padding-top:20px
+}
+
+.pay-wrap{display: flex; flex-direction: column; gap:30px}
+.pay-wrap .pay-section{display: flex; flex-direction: column; gap:10px}
+
+.pay-wrap .pay-section h3{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+}
+
+.pay-wrap .pay-section .box{
+    display: flex;
+padding: 20px 30px;
+align-self: stretch;
+background: var(--color-bg-secondary, #F7F8FB);
+}
+.pay-wrap .pay-section.sec01 .box{
+gap:40px;
+align-items: center;
+}
+
+.pay-wrap .pay-section.sec01 .box .label{
+color: var(--color-text-title, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+
+}
+.pay-wrap .pay-section.sec01 .box .value{
+color: var(--color-system-danger, #DE3412);
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 36px */
+
+}
+.pay-radio-list{display: flex; flex-wrap: wrap; width: 100%; gap:20px}
+.pay-radio-list > li{flex:1 0 30%; width: 100%;}
+
+.pay-radio-list > li .krds-form-chip input[type=radio] ~ label, .pay-radio-list > li .krds-form-chip input[type=checkbox] ~ label{
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    gap: var(--krds-form-chip--gap);
+    height: var(--krds-form-chip--size-height-large);
+    padding: 0 var(--krds-form-chip--padding-x-medium);
+    background-color: var(--krds-form-chip--color-action);
+    border: 0.1rem solid var(--krds-form-chip--color-border);
+    border-radius: var(--krds-form-chip--radius-medium);
+    font-size: var(--krds-form-chip--pc-font-size-medium);
+    color: var(--krds-form-chip--color-text);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+    width: 100%;
+    justify-content: center;
+
+}
+
+.ico-naver-pay::before{
+    display: block;
+    content:"";
+    background: url(../../img/pay/naver-pay.png)no-repeat;
+    width: 86px;
+    height: 32px;
+}
+.ico-toss-pay::before{
+    display: block;
+    content:"";
+    background: url(../../img/pay/toss-pay.png)no-repeat;
+    width: 116px;
+    height: 22px;
+}
+.ico-kakao-pay::before{
+    display: block;
+    content:"";
+    background: url(../../img/pay/kakao-pay.png)no-repeat;
+    width: 72px;
+    height: 30px;
+}
+
+.pay-radio-list > li .krds-form-chip input[type=radio]:checked ~ label, .pay-radio-list > li .krds-form-chip input[type=checkbox]:checked ~ label{
+    border:5px solid #0050CA;
+}
+
+
+.pay-radio-list > li .krds-form-chip input[type=radio]:checked ~ label:before {
+    display: none!important;
+}
+
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .dream-col-list .dream-col-item {
@@ -1483,6 +1585,27 @@ line-height: 150%; /* 24px */
     flex: 1 100%;
 }
 
+
+.pay-radio-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0;
+    justify-content: center;
+}
+.pay-radio-list > li {
+    flex: 0 1 50%;
+    width: 100%;
+    box-sizing: border-box;
+    padding:10px
+}
+
+.pay-wrap .pay-section .box {
+    display: flex;
+    padding: 20px 10px;
+    align-self: stretch;
+    background: var(--color-bg-secondary, #F7F8FB);
+}
 }
 
 @media (max-width: 479px) {
@@ -1513,6 +1636,11 @@ line-height: 150%; /* 24px */
 .join-area.info .form-input, .join-area.check .form-input {
     width: 100%;
     max-width: 100%!important;
+}
+
+.pay-radio-list > li {
+    flex: 1 1 100%;
+    padding:5px
 }
 
 }

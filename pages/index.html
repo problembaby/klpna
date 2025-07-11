@@ -517,7 +517,7 @@
 				<div class="a_nav">
 					<ul class="quick-wrap-ul">
 						<li class="quick-wrap-item">
-							<a href="#" target="_blank" title="회비납부 페이지 이동">
+							<a href="#none" target="_blank" title="회비납부 페이지 이동" class="krds-btn open-modal" data-target="modal-dues-pay">
 								<div class="txt">회비납부</div>
 								<i class="quick-icon01"></i>
 							</a>
@@ -529,7 +529,7 @@
 							</a>
 						</li>
 						<li class="quick-wrap-item">
-							<a href="#" target="_blank" title="간무협챗봇 페이지 이동">
+							<a href="#none" target="_blank" title="간무협챗봇 페이지 이동">
 								<div class="txt">간무협챗봇</div>
 								<i class="quick-icon03"></i>
 							</a>
@@ -1725,8 +1725,7 @@
 					</div>
 
 					<div class="foot-link-item last">
-						<button type="button" class="link footSelect" title="시도회 바로가기" aria-expanded="false">협회
-							바로가기</button>
+						<button type="button" class="link footSelect" title="시도회 바로가기" aria-expanded="false">시도회 바로가기</button>
 						<div class="drop-down">
 							<a href="/index.jsp" target="_blank" class="link-item" title="대한간호조무사협회 중앙회 새창 열림">대한간호조무사협회
 								중앙회</a>
@@ -1842,6 +1841,137 @@
 		</div>
 	</footer>
 	<!-- //footer -->
+
+
+
+
+
+		<!-- 퀵메뉴 : 회비납부 모달 -->
+
+			<!-- modal -->
+	<section id="modal-dues-pay" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal-dues-pay"> 
+
+
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_modal-dues-pay" class="modal-title">
+						회비납부
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts duesPay">
+					<div class="pay-wrap">
+						<section class="pay-section sec01">
+							<h3>정회원 가입</h3>
+							<div class="box">
+								<div class="label">결제 금액</div>
+								<div class="value">20,000원</div>
+							</div>
+						</section>
+
+						<section class="pay-section">
+							<h4>간호조무사 매거진</h4>
+							<div class="box">
+								<div class="krds-check-area">
+									<div class="krds-form-check">
+										<input type="radio" name="rdo_1" id="rdo_1" checked="">
+										<label for="rdo_1">수령</label>
+									</div>
+									<div class="krds-form-check">
+										<input type="radio" name="rdo_1" id="rdo_2">
+										<label for="rdo_2">미수령</label>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="pay-section">
+							<h4>결제방법 선택</h4>
+							<div class="box">
+								<ul class="pay-radio-list">
+									<li>
+										<div class="krds-form-chip">
+											<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_1">
+											<label class="krds-form-chip-outline" for="rdo_chip_1">신용카드
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="krds-form-chip">
+											<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_2"
+												checked="">
+											<label class="krds-form-chip-outline" for="rdo_chip_2">가상계좌
+											</label>
+
+										</div>
+									</li>
+									<li>
+										<div class="krds-form-chip">
+											<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_3">
+											<label class="krds-form-chip-outline" for="rdo_chip_3">계좌이체
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="krds-form-chip">
+											<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_4">
+											<label class="krds-form-chip-outline" for="rdo_chip_4">
+												<span class="sr-only">네이버페이</span>
+												<i class="ico-naver-pay"></i>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="krds-form-chip">
+											<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_5">
+											<label class="krds-form-chip-outline" for="rdo_chip_5">
+												<span class="sr-only">토스페이</span>
+												<i class="ico-toss-pay"></i>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="krds-form-chip">
+											<input type="radio" class="radio" name="rdo_chip" id="rdo_chip_6">
+											<label class="krds-form-chip-outline" for="rdo_chip_6">
+												<span class="sr-only">카카오페이</span>
+												<i class="ico-kakao-pay"></i>
+											</label>
+										</div>
+									</li>
+									
+									
+								</ul>
+							</div>
+						</section>
+					</div>
+
+
+				</div>
+				<!-- //modal contents -->
+
+				<div class="modal-btn btn-wrap">
+					<button type="button" class="krds-btn close-modal">결제 <i class="svg-icon ico-angle right"></i></button>
+				</div>
+		
+				<!-- close button -->
+				<button type="button" class="krds-btn medium icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<div class="modal-back in"></div>
+	</section>
+
+
+
+		<!-- //퀵메뉴 : 회비납부 모달 -->
+
 
 
 

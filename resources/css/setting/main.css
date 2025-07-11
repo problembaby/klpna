@@ -236,7 +236,7 @@ line-height: 100%; /* 18px */
 
 
 
-/** 대한간호조무사협회 바로가기 아이콘 */
+/** 대한간호조무사시도회 바로가기 아이콘 */
 .shortImg_01_01::before {
   content: "";
   background: url(../../img/main/shortImg_01_01.svg) no-repeat center/contain;
