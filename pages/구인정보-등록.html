@@ -190,16 +190,16 @@
                                 const fileTypeClass = getFileTypeClass(file.name);
 
                                 const $li = $(`
-              <li data-id="${uniqueId}">
-                  <a href="#" class="${fileTypeClass}" title="파일첨부">
-                      <p>${file.name}</p>
-                      <span>(${sizeKB}KB)</span>
-                  </a>
-                  <button type="button" class="krds-btn tertiary fileBtn" data-id="${uniqueId}">
-                      삭제<i class="svg-icon ico-delete-fill"></i>
-                  </button>
-              </li>
-          `);
+                                    <li data-id="${uniqueId}">
+                                        <a href="#" class="${fileTypeClass}" title="파일첨부">
+                                            <p>${file.name}</p>
+                                            <span>(${sizeKB}KB)</span>
+                                        </a>
+                                        <button type="button" class="krds-btn tertiary fileBtn" data-id="${uniqueId}">
+                                            삭제<i class="svg-icon ico-delete-fill"></i>
+                                        </button>
+                                    </li>
+                            `);
 
                                 $fileList.append($li);
                             });
@@ -608,7 +608,7 @@
                                                     </li>
                                                 </ul>
                                                 <div class="input-txt">
-                                                    <p class="form-hint-invalid" style="display: none;">공고제목을
+                                                    <p class="form-hint-invalid" style="display: none;">채용기간을
                                                         입력해주세요.
                                                     </p>
                                                 </div>
@@ -818,7 +818,7 @@
                                                     <span>%</span>
                                                 </div>
                                                 <div class="input-txt">
-                                                    <p class="form-hint-invalid" style="display: none;">법정보험을
+                                                    <p class="form-hint-invalid" style="display: none;">보상제도를
                                                         선택해주세요.
                                                     </p>
                                                 </div>

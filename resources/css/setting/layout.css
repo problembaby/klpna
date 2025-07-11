@@ -1401,6 +1401,172 @@ line-height: 150%; /* 36px */
 }
 
 
+/************************************
+대체인력
+***********************************/
+
+.title-banner{
+    border-radius: 12px;
+    background: var(--color-bg-secondary, #F7F8FB);
+}
+.title-banner.subStaff{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+}
+.title-img-subStaff{height:250px; display: flex; align-items: flex-end; max-width:459px; width: 100%;} 
+.title-img-subStaff::before{
+    display: block;
+    content:"";
+    background: url(../../img/sub/title-subStaff.png)no-repeat;
+    width:100%;
+    height:210px
+}
+
+.title-banner .text{
+    padding:80px 0 50px 50px;
+    
+}
+.title-banner .text .title{
+   color: var(--color-text-title, #0D0E10);
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 48px */
+letter-spacing: 1px;
+margin-bottom: 10px;
+}
+
+.title-banner .text .p{
+color: var(--color-text-title, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 27px */
+
+}
+
+.subStaff-section h3{
+    color: var(--color-text-title, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */
+margin-bottom: 13px;
+}
+.subStaff-section .krds-info-list li{
+color: var(--color-text-basic, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+}
+.subStaff-section .krds-info-list li{
+color: var(--color-text-basic, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+}
+
+.subStaff-section{margin-top: 40px;}
+
+
+.process-list{display: flex; gap:10px; align-items: center; flex-wrap: wrap;}
+.process-list li .process-box{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-light, #D9D9D9);
+    width: 223px;
+    height: 120px;
+}
+
+
+.process-box .icon{
+    width: 50px;
+    height: 50px;
+    background-color: #0AF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50px;
+ 
+}
+
+.ico-substaff01::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-staff01.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.ico-substaff02::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-staff02.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.ico-substaff03::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-staff03.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.ico-substaff04::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-staff04.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.ico-process-arrow::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/process-arrow.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+
+.process-box .text .subject{font-size: 16px; margin-bottom: 4px; font-weight: 500;}
+.process-box .text .desc{color: var(--color-text-sub_title, #464C53);
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 15.6px */}
+
+.phone-box.subStaff .number-area {
+    gap: 20px;
+}
+.phone-box.subStaff .number-area .consult{
+    display: flex; align-items: center; gap:10px
+}
+
+.ico-hospital::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-hospital.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.ico-userApply::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-userApply.svg) no-repeat;
+    width: 24px;
+    height: 26px;
+}
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -1540,6 +1706,8 @@ line-height: 150%; /* 36px */
 
 
 
+
+
 }
 
 /** 모바일 */
@@ -1606,6 +1774,49 @@ line-height: 150%; /* 36px */
     align-self: stretch;
     background: var(--color-bg-secondary, #F7F8FB);
 }
+
+
+.process-list-item{flex:1 250px}
+.process-list li .process-box {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-light, #D9D9D9);
+    width: 100%;
+    height: 100px;
+}
+
+.phone-box.subStaff .number-area {
+    gap: 5px;
+    flex-direction: column;
+}
+
+.phone-box.subStaff .number-area .consult {
+    display: flex;
+    align-items: center;
+    gap:5px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title-img-subStaff {
+    max-width: 207px;
+    width: 100%;
+    display: none;
+}
+
+.title-banner .text {
+    padding: 30px ;
+}
+
+.title-banner .text .title {
+    font-size: 23px;
+}
+
+
 }
 
 @media (max-width: 479px) {

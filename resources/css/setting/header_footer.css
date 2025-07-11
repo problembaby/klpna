@@ -19,7 +19,7 @@
 font-size: 16px;
 font-weight: 500;
 letter-spacing: -0.32px; width: 130px; transition: 0s;}
-.depth2 li a:hover{ font-weight: 600; 
+.depth2 li a:hover{ font-weight: 600; color:#0050CA; text-decoration: underline;
 }
 
 .header-container{height:90px; display: flex; align-items: center; border-bottom: 1px solid #D4D4D4;}
@@ -63,7 +63,7 @@ letter-spacing: -0.35px;}
 .depth01 .gnb-main-trigger.active {color: #0767C7; position: relative; font-weight: 700;}
 .depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/main/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
-.gnb-main-trigger + .depth2::before{
+/* .gnb-main-trigger + .depth2::before{
   display: block;
   content:"";
   position: absolute;
@@ -77,13 +77,13 @@ letter-spacing: -0.35px;}
   transform-origin: top;
   transition: transform 0.3s ease-in-out;
   z-index: -1;
-}
+} */
 
 .gnb-main-trigger.active + .depth2::before {
   transform: scaleY(1);
 }
 
-.gnb-main-trigger.active + .depth2 a{color:#fff}
+/* .gnb-main-trigger.active + .depth2 a{color:#fff} */
 
 .depth01 .gnb-main-trigger {
   position: relative;
