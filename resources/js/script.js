@@ -295,3 +295,28 @@ $(function () {
     if (/[^0-9]/.test(clipboard)) e.preventDefault();
   });
 });
+
+
+
+
+/**********************************
+ * 탑이동
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+		const topBtn = document.getElementById('topBtn');
+		const threshold  = 500; // 스레드 높이값
+
+		// 스크롤 이벤트
+		window.addEventListener('scroll',() => {
+			window.scrollY > threshold ? topBtn.classList.add('show') : topBtn.classList.remove('show');
+		});
+
+		// 클릭시 부드러운 스크롤
+		topBtn.addEventListener('click', e => {
+			//e.preventDefault();
+			window.scrollTo({ top:0, behavior : 'smooth'});
+		});
+
+
+	});
