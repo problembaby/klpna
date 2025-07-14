@@ -418,6 +418,8 @@ html .ui-button.ui-state-disabled:active {
 
 .mainSection05 .mob-overflow-icon::before{right:5px; top: 50%; transform: translateY(77%);}
 
+.mypage-education  .mob-overflow-icon::before{right:5px; top:75px}
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;
