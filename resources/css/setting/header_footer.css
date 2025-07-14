@@ -588,8 +588,7 @@ line-height: 150%; /* 21px */}
     display: flex;
     align-items: flex-start;
     width: 100%;
-    border-bottom: 1px solid #D9D9D9;
-    padding: 20px 0;
+    padding: 20px 20px;
     flex-direction: column;
 }
 
@@ -612,6 +611,12 @@ line-height: 150%; /* 21px */}
 .allMenu-nav.mypage {
     background: var(--color-bg-secondary, #fff);
 
+}
+
+
+#popAllMenuVIew.krds-modal:not([data-type=bottom-sheet]) .modal-dialog .modal-conts{
+        padding-inline: 0;
+        padding-bottom: 0;
 }
 
 
