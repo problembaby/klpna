@@ -412,10 +412,20 @@ html .ui-button.ui-state-disabled:active {
 }
 
 
+.mob-overflow-icon{display: none;}
+.mob-overflow-icon::before{content: ""; display: block; background: url(../../img/icon/ico-mobSlide.svg); width: 30px; height:30px; position: absolute; z-index: 99; right:5px; top: 50%; transform: translateY(-50%);}
+
+
+.mainSection05 .mob-overflow-icon::before{right:5px; top: 50%; transform: translateY(77%);}
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;
     }
+}
+
+@media (max-width: 767px){
+    .mob-overflow-icon{display: block;}
 }
 
 @media (max-width: 479px) {

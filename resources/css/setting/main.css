@@ -871,6 +871,7 @@ font-weight: 400; margin-top: 5px;}
 .mainLocalTab .tab {
     width: 100%;
     max-width: 100%;
+    position: relative;
 }
 .mainLocalTab  .tab.full > ul > li {
     width: 10%;
@@ -1041,7 +1042,12 @@ font-weight: 400; margin-top: 5px;}
 .shortcut-list {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
+
+.shortcut-list-item{flex: 1 1 30%}
 
 .shortcut-list-item .img {
     width: 70px;
