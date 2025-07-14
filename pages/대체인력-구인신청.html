@@ -1,0 +1,1520 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구인신청 | 대체인력 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">취업정보</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">구인정보</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">대체인력</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn outLink">나라일터(채용)</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">취업정보</a></li>
+                            <li><a href="#;" class="txt">대체인력</a></li>
+                            <li><a href="#;" class="txt">구인신청</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">구인신청</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+
+                    <script>
+
+                        function validateForm() {
+                            let isValid = true;
+                            let $firstInvalid = null;
+
+                            $('.form-group').each(function () {
+                                const $group = $(this);
+                                const isRequired = $group.find('.form-tit .req').length > 0;
+                                if (!isRequired) return;
+
+                                // 체크박스, 라디오 그룹 처리
+                                const $inputs = $group.find('input, select, textarea').filter(':visible');
+                                const $hint = $group.find('.form-hint-invalid');
+
+                                let isEmpty = false;
+
+                                // 인풋 여러개면 radio/checkbox 우선 처리
+                                if ($inputs.length > 1 && ($inputs.first().is(':radio') || $inputs.first().is(':checkbox'))) {
+                                    const $checked = $inputs.filter(':checked');
+                                    isEmpty = ($checked.length === 0);
+                                } else {
+                                    $inputs.each(function () {
+                                        if ($(this).is('select')) {
+                                            if ($(this).val() === "") isEmpty = true;
+                                        } else if ($(this).is(':input')) {
+                                            if ($(this).val()?.trim() === "") isEmpty = true;
+                                        }
+                                    });
+                                }
+
+                                if (isEmpty) {
+                                    $group.addClass('is-error');
+                                    $hint.css('display', 'flex');
+                                    if (!$firstInvalid) $firstInvalid = $inputs.first();
+                                    isValid = false;
+                                } else {
+                                    $group.removeClass('is-error');
+                                    $hint.hide();
+                                }
+                            });
+
+                            // 개인정보 동의 "동의함" 필수 체크
+                            const agreeChecked = $('input[name="terms_rdo1"]:checked').length && $('#terms_rdo1-1').is(':checked');
+                            if (!agreeChecked) {
+                                alert('개인정보 수집 이용 동의에 "동의함"을 선택해주세요.');
+                                $('#terms_rdo1-1').focus();
+                                isValid = false;
+                                return;
+                            }
+
+                            // 첫 에러 포커스
+                            if (!isValid && $firstInvalid?.length) {
+                                setTimeout(() => $firstInvalid.focus(), 10);
+                                return;
+                            }
+
+                            // 실제 제출
+                            $('form').submit();
+                        }
+
+                        /** 이메일 도메인 핸들러 */
+                        function handleEmailDomainChange(selectEl) {
+                            const $select = $(selectEl);
+                            const $domainInput = $select.closest('ul').find('#email-domain');
+                            const selectedValue = $select.val();
+
+                            if (selectedValue === "") {
+                                $domainInput.val("").prop('readonly', true);
+                            } else if (selectedValue === "custom") {
+                                $domainInput.val("").prop('readonly', false).focus();
+                            } else {
+                                $domainInput.val(selectedValue).prop('readonly', true);
+                            }
+                        }
+
+                        $(function () {
+                            // 모든 입력 요소에 대해 실시간 오류 해제 처리
+                            $('input, select, textarea').on('input change', function () {
+                                const $input = $(this);
+                                const $group = $input.closest('.form-group');
+                                const $hint = $group.find('.form-hint-invalid');
+
+                                // 에러 상태 해제
+                                $group.removeClass('is-error');
+                                $hint.hide();
+                            });
+                        });
+
+
+
+                        /** 파일첨부 스크립트*/
+
+                        const uploadedFiles = [];
+
+                        // 확장자별 클래스 반환
+                        window.getFileTypeClass = function (fileName) {
+                            const ext = fileName.split('.').pop().toLowerCase();
+                            const imageExts = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];
+                            const docExts = ['pdf', 'hwp', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt', 'zip'];
+
+                            if (imageExts.includes(ext)) return 'file-img';
+                            if (docExts.includes(ext)) return 'file-doc';
+                            return 'file-etc';
+                        };
+
+                        // 파일 선택창 열기
+                        window.openFileDialog = function () {
+                            $('#q_file_input').click();
+                        };
+
+                        // 파일 선택 시 리스트에 출력
+                        window.handleFileSelect = function (inputEl) {
+                            const newFiles = Array.from(inputEl.files);
+                            const $fileList = $('.file-list .list');
+                            if (!$fileList.length) return;
+
+                            newFiles.forEach(file => {
+                                const uniqueId = Date.now() + Math.random().toString(36).substr(2, 9);
+                                uploadedFiles.push({ id: uniqueId, file });
+
+                                const sizeKB = Math.round(file.size / 1024);
+                                const fileTypeClass = getFileTypeClass(file.name);
+
+                                const $li = $(`
+                                    <li data-id="${uniqueId}">
+                                        <a href="#" class="${fileTypeClass}" title="파일첨부">
+                                            <p>${file.name}</p>
+                                            <span>(${sizeKB}KB)</span>
+                                        </a>
+                                        <button type="button" class="krds-btn tertiary fileBtn" data-id="${uniqueId}">
+                                            삭제<i class="svg-icon ico-delete-fill"></i>
+                                        </button>
+                                    </li>
+                            `);
+
+                                $fileList.append($li);
+                            });
+
+                            $(inputEl).val(''); // 동일 파일 다시 첨부 가능
+                        };
+
+                        // 삭제 버튼 클릭 처리
+                        $(document).on("click", ".fileBtn", function () {
+                            const fileId = $(this).data("id");
+                            const index = uploadedFiles.findIndex(f => f.id === fileId);
+                            if (index > -1) uploadedFiles.splice(index, 1);
+                            $(this).closest("li").remove();
+                        });
+
+
+
+                    </script>
+
+                    <!-- 대체인력-->
+                    <div class="sub-content">
+                        <div class="title-banner subStaff3">
+                            <div class="text">
+                                <div class="title">간호조무사 대체인력 지원사업</div>
+                                <div class="p">간호조무사의 휴가나 휴직 시 대체인력을 제공하여<br>
+                                    병원의 인력 공백을 최소화하고 의료 서비스의 연속성을 유지할 수 있습니다.</div>
+                                <div class="repo mt10">간호조무사협회는 여러분들이 보다 나은 환경에서 일할 수 있도록 지원하고, 전문성과 역량을 강화하는 데 기여하겠습니다.
+                                </div>
+                            </div>
+                            <div class="title-img-subStaff"></div>
+                        </div>
+
+
+
+                        <!-- 구인정보 영역 -->
+
+                        <div class="join-area info">
+                            <form action="">
+                                <h2 class="sr-only">구인정보 입력</h2>
+                                <section class="info-section">
+                                    <h3 class="info-title">기관정보 입력</h3>
+                                    <div class="fieldset">
+
+                                        <!-- 기관명 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="institutionName">기관명</label>
+                                            </div>
+                                            <div class="form-input mw300">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <input type="text" id="institutionName"
+                                                            class="krds-input medium" value="에이비피부과" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">기관명을 입력해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //기관명 -->
+
+
+
+
+                                        <!-- 대표자 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="reprName">대표자</label>
+                                            </div>
+                                            <div class="form-input mw200">
+                                                <div class="input-group">
+                                                    <div class="form-conts btn-ico-wrap">
+                                                        <input type="text" id="reprName" class="krds-input medium"
+                                                            value="홍길동" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //대표자 -->
+
+
+                                        <!-- 대표전화 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="phone-mid">대표전화</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <ul class="input-group range">
+                                                            <li>
+                                                                <select name="" id="" class="krds-form-select medium">
+                                                                    <option value="">선택</option>
+                                                                    <option value="02" selected>02</option>
+                                                                    <option value="031">031</option>
+                                                                    <option value="032">032</option>
+                                                                    <option value="033">033</option>
+                                                                    <option value="041">041</option>
+                                                                    <option value="042">042</option>
+                                                                    <option value="043">043</option>
+                                                                    <option value="044">044</option>
+                                                                    <option value="051">051</option>
+                                                                    <option value="052">052</option>
+                                                                    <option value="053">053</option>
+                                                                    <option value="054">054</option>
+                                                                    <option value="055">055</option>
+                                                                    <option value="061">061</option>
+                                                                    <option value="062">062</option>
+                                                                    <option value="063">063</option>
+                                                                    <option value="064">064</option>
+                                                                </select>
+
+                                                            </li>
+                                                            <li class="mark">-</li>
+                                                            <li>
+                                                                <input type="text" id="phone-mid"
+                                                                    class="krds-input medium" placeholder=""
+                                                                    maxlength="4" value="1234" readonly>
+                                                            </li>
+                                                            <li class="mark">-</li>
+                                                            <li>
+                                                                <input type="text" id="phone-last"
+                                                                    class="krds-input medium" placeholder=""
+                                                                    maxlength="4" value="1234" readonly>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- //대표전화 -->
+
+
+                                        <!-- 팩스번호 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="orgFax-mid">팩스번호</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <ul class="input-group range">
+                                                            <li>
+                                                                <select name="" id="workplacePhone"
+                                                                    class="krds-form-select medium">
+                                                                    <option value="">선택</option>
+                                                                    <option value="010">010</option>
+                                                                    <option value="011">011</option>
+                                                                </select>
+                                                            </li>
+                                                            <li class="mark">-</li>
+                                                            <li>
+                                                                <input type="text" id="orgFax-mid"
+                                                                    class="krds-input medium" placeholder=""
+                                                                    maxlength="4" value="">
+                                                            </li>
+                                                            <li class="mark">-</li>
+                                                            <li>
+                                                                <input type="text" id="orgFax-last"
+                                                                    class="krds-input medium" placeholder=""
+                                                                    maxlength="4" value="">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //팩스번호 -->
+
+
+
+                                        <!-- 근로자수 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="empCnt">근로자수</label>
+                                            </div>
+                                            <div class="form-input mw200">
+                                                <div class="input-group">
+                                                    <div class="form-conts btn-ico-wrap">
+                                                        <input type="text" id="empCnt" class="krds-input medium"
+                                                            value="">
+                                                    </div>
+                                                    <span>명</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //근로자수 -->
+
+
+                                        <!-- 기관소재지 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">기관소재지</label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <span>
+                                                        광역단체
+                                                    </span>
+                                                    <div class="form-conts mw200">
+                                                        <select name="" id="" class="krds-form-select medium">
+                                                            <option value="">선택</option>
+                                                            <option value="ALL">전체</option>
+                                                            <option value="서울특별시">서울특별시</option>
+                                                            <option value="부산광역시">부산광역시</option>
+                                                            <option value="대구광역시">대구광역시</option>
+                                                            <option value="인천광역시">인천광역시</option>
+                                                            <option value="광주광역시">광주광역시</option>
+                                                            <option value="대전광역시">대전광역시</option>
+                                                            <option value="울산광역시">울산광역시</option>
+                                                            <option value="세종특별자치시">세종특별자치시</option>
+                                                            <option value="경기도">경기도</option>
+                                                            <option value="강원도">강원도</option>
+                                                            <option value="충청북도">충청북도</option>
+                                                            <option value="충청남도">충청남도</option>
+                                                            <option value="전라북도">전라북도</option>
+                                                            <option value="전라남도">전라남도</option>
+                                                            <option value="경상북도">경상북도</option>
+                                                            <option value="경상남도">경상남도</option>
+                                                            <option value="제주특별자치도">제주특별자치도</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <span>
+                                                        시군구
+                                                    </span>
+                                                    <div class="form-conts mw200">
+                                                        <select name="" id="" class="krds-form-select medium">
+                                                            <option value="">선택</option>
+                                                            <option value="ALL">전체</option>
+                                                            <option value="">시군구</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //기관소재지-->
+
+                                        <!-- 기관주소 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">기관주소</label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group column">
+                                                    <div class="form-conts mw400">
+                                                        <div class="input-group">
+                                                            <div class="form-conts">
+                                                                <input type="text" id="" class="krds-input medium"
+                                                                    placeholder="" value="123456" readonly>
+                                                            </div>
+                                                            <button type="button" class="krds-btn medium black">우편번호
+                                                                검색</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-conts">
+                                                        <input type="text" id="" class="krds-input medium"
+                                                            value="서울시 광화문 세종대로 34" readonly>
+                                                    </div>
+                                                    <div class="form-conts">
+                                                        <input type="text" id="" class="krds-input medium" value="34-34"
+                                                            placeholder="상세주소입력">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //기관주소 -->
+
+                                        <!-- 기관분류 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="workplace">기관분류<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <div class="form-conts-title">의료기관</div>
+                                                        <div class="krds-check-area flex-wrap gap-4">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-all" value="전체">
+                                                                <label for="wpm-all">전체</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-clinic" value="의원">
+                                                                <label for="wpm-clinic">의원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-dentclinic" value="치과의원">
+                                                                <label for="wpm-dentclinic">치과의원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-hanclinic" value="한의원">
+                                                                <label for="wpm-hanclinic">한의원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-hospital" value="병원">
+                                                                <label for="wpm-hospital">병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-denthospital" value="치과병원">
+                                                                <label for="wpm-denthospital">치과병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-hanhospital" value="한방병원">
+                                                                <label for="wpm-hanhospital">한방병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-longhospital" value="요양병원">
+                                                                <label for="wpm-longhospital">요양병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-mental" value="정신병원">
+                                                                <label for="wpm-mental">정신병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-special" value="전문병원">
+                                                                <label for="wpm-special">전문병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-general" value="종합병원">
+                                                                <label for="wpm-general">종합병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-supergeneral" value="상급종합병원">
+                                                                <label for="wpm-supergeneral">상급종합병원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-medical"
+                                                                    id="wpm-public" value="국공립병원">
+                                                                <label for="wpm-public">국공립병원</label>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group mt20">
+                                                    <div class="form-conts">
+                                                        <div class="form-conts-title">장기요양기관</div>
+                                                        <div class="krds-check-area flex-wrap gap-4">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-care"
+                                                                    id="wpc-all" value="전체">
+                                                                <label for="wpc-all">전체</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-care"
+                                                                    id="wpc-nursing-home" value="요양원">
+                                                                <label for="wpc-nursing-home">요양원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-care"
+                                                                    id="wpc-daycare-center" value="주야간보호센터">
+                                                                <label for="wpc-daycare-center">주야간보호센터</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-care"
+                                                                    id="wpc-shortterm-facility" value="단기보호시설">
+                                                                <label for="wpc-shortterm-facility">단기보호시설</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-care"
+                                                                    id="wpc-home-nursing-center" value="방문간호센터">
+                                                                <label for="wpc-home-nursing-center">방문간호센터</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="input-group mt20">
+                                                    <div class="form-conts">
+                                                        <div class="form-conts-title">기타</div>
+                                                        <div class="krds-check-area flex-wrap gap-4">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-other"
+                                                                    id="wpo-all" value="전체">
+                                                                <label for="wpo-all">전체</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-other"
+                                                                    id="wpo-disabled-welfare" value="장애인 복지시설">
+                                                                <label for="wpo-disabled-welfare">장애인 복지시설</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-other"
+                                                                    id="wpo-postpartum-care" value="산후조리원">
+                                                                <label for="wpo-postpartum-care">산후조리원</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-other"
+                                                                    id="wpo-kindergarten" value="유치원/어린이집">
+                                                                <label for="wpo-kindergarten">유치원/어린이집</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        근무기관을 1개 이상 체크해주세요
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <!-- //근무기관-->
+
+
+                                        <!-- 구분선 -->
+                                        <div class="form-group">
+                                            <div class="form-tit"></div>
+                                            <div class="bar"></div>
+                                        </div>
+                                        <!-- //구분선 -->
+
+                                        <!-- 진료과 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="wpf-all">진료과<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <!-- 전체 -->
+                                                <div class="input-group mb10">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="workplace-field" id="wpf-all"
+                                                            value="전체">
+                                                        <label for="wpf-all">전체</label>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 전문분야 리스트 -->
+                                                <div class="input-group mb10">
+                                                    <div class="form-conts">
+                                                        <div class="krds-check-area flex-wrap gap-4">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-family-medicine" value="가정의학과">
+                                                                <label for="wpf-family-medicine">가정의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-tuberculosis" value="결핵과">
+                                                                <label for="wpf-tuberculosis">결핵과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-internal-medicine" value="내과">
+                                                                <label for="wpf-internal-medicine">내과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-anesthesiology" value="마취통증의학과">
+                                                                <label for="wpf-anesthesiology">마취통증의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-radiation-oncology" value="방사선종양학과">
+                                                                <label for="wpf-radiation-oncology">방사선종양학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-urology" value="비뇨의학과">
+                                                                <label for="wpf-urology">비뇨의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-ob-gyn" value="산부인과">
+                                                                <label for="wpf-ob-gyn">산부인과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-plastic-surgery" value="성형외과">
+                                                                <label for="wpf-plastic-surgery">성형외과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-pediatrics" value="소아청소년과">
+                                                                <label for="wpf-pediatrics">소아청소년과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-neurology" value="신경과">
+                                                                <label for="wpf-neurology">신경과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-neurosurgery" value="신경외과">
+                                                                <label for="wpf-neurosurgery">신경외과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-ophthalmology" value="안과">
+                                                                <label for="wpf-ophthalmology">안과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-radiology" value="영상의학과">
+                                                                <label for="wpf-radiology">영상의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-preventive-medicine" value="예방의학과">
+                                                                <label for="wpf-preventive-medicine">예방의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-surgery" value="외과">
+                                                                <label for="wpf-surgery">외과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-emergency-medicine" value="응급의학과">
+                                                                <label for="wpf-emergency-medicine">응급의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-ent" value="이비인후과">
+                                                                <label for="wpf-ent">이비인후과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-rehab-medicine" value="재활의학과">
+                                                                <label for="wpf-rehab-medicine">재활의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-psychiatry" value="정신건강의학과">
+                                                                <label for="wpf-psychiatry">정신건강의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-orthopedic-surgery" value="정형외과">
+                                                                <label for="wpf-orthopedic-surgery">정형외과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-lab-medicine" value="진단검사의학과">
+                                                                <label for="wpf-lab-medicine">진단검사의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-dermatology" value="피부과">
+                                                                <label for="wpf-dermatology">피부과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-nuclear-medicine" value="핵의학과">
+                                                                <label for="wpf-nuclear-medicine">핵의학과</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workplace-field"
+                                                                    id="wpf-thoracic-surgery" value="흉부외과">
+                                                                <label for="wpf-thoracic-surgery">흉부외과</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="workplace-field" id="wpf-etc"
+                                                            value="기타"
+                                                            onchange="document.getElementById('wpf-etc-text').disabled = !this.checked;">
+                                                        <label for="wpf-etc">기타</label>
+                                                    </div>
+                                                    <input type="text" id="wpf-etc-text" class="krds-input medium"
+                                                        disabled>
+                                                </div>
+
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        근무분야를 1개 이상 체크해주세요
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //근무분야 -->
+
+
+                                        <!-- 채용담당자명 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="owned">채용담당자명<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input mw200">
+                                                <div class="input-group">
+
+                                                    <div class="form-conts">
+                                                        <input type="text" id="owned" class="krds-input medium">
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        채용담당자명을 입력하세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //채용담당자명 -->
+
+
+
+                                        <!-- 채용문의 전화 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="orgFax-mid">채용문의 전화</label>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <ul class="input-group range">
+                                                            <li>
+                                                                <select name="" id="workplacePhone"
+                                                                    class="krds-form-select medium">
+                                                                    <option value="">선택</option>
+                                                                    <option value="010">010</option>
+                                                                    <option value="011">011</option>
+                                                                </select>
+                                                            </li>
+                                                            <li class="mark">-</li>
+                                                            <li>
+                                                                <input type="text" id="orgFax-mid"
+                                                                    class="krds-input medium only-number" placeholder=""
+                                                                    maxlength="4" value="">
+                                                            </li>
+                                                            <li class="mark">-</li>
+                                                            <li>
+                                                                <input type="text" id="orgFax-last"
+                                                                    class="krds-input medium only-number" placeholder=""
+                                                                    maxlength="4" value="">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint">숫자만 입력, 개인 휴대폰번호는 입력하지 마세요.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- //채용문의 전화 -->
+
+
+                                        <div class="bar"></div>
+                                    </div>
+
+                                </section>
+
+                                <section class="info-section">
+                                    <h3 class="info-title">기관정보 입력</h3>
+                                    <div class="fieldset">
+                                        <!-- 공고제목 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="owned">공고제목<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+
+                                                    <div class="form-conts">
+                                                        <input type="text" id="owned" class="krds-input medium"
+                                                            placeholder="제목을 40자 이하로 작성해 주세요.">
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        공고제목을 입력하세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //공고제목 -->
+
+
+                                        <!-- 구인기간 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="learningInstitution">구인기간<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input">
+                                                <ul class="input-group range set">
+                                                    <li>
+                                                        <input type="text" id="" class="krds-input datepicker medium"
+                                                            placeholder="YYYY-MM-DD">
+                                                    </li>
+                                                    <li class="mark">~</li>
+                                                    <li>
+                                                        <input type="text" id="" class="krds-input datepicker medium"
+                                                            placeholder="YYYY-MM-DD">
+                                                    </li>
+                                                </ul>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">구인기간을
+                                                        입력해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //구인기간 -->
+
+                                        <!-- 고용형태 -->
+                                        <div class="form-group bottom-bar">
+                                            <div class="form-tit">
+                                                <label for="employment-type-short">고용형태<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="form-conts">
+                                                    <div class="krds-check-area mt10">
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="employment-type"
+                                                                id="employment-type-short" value="short-term">
+                                                            <label for="employment-type-short">6개월 이하 단기 근무</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="employment-type"
+                                                                id="employment-type-mid" value="mid-term">
+                                                            <label for="employment-type-mid">6개월 이상 1년 이하 근무</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="employment-type"
+                                                                id="employment-type-full" value="full-time">
+                                                            <label for="employment-type-full">정규직</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        고용형태를 체크해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //고용형태 -->
+
+                                        <!-- 채용인원 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">채용인원<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input mw200">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <input type="number" id="" class="krds-input medium only-number"
+                                                            placeholder="">
+                                                    </div>
+                                                    <span>명</span>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">채용인원을
+                                                        입력해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //채용인원 -->
+
+                                        <!-- 경력 -->
+                                        <div class="form-group bottom-bar">
+                                            <div class="form-tit">
+                                                <label for="career-new">경력<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="form-conts">
+                                                    <div class="krds-check-area mt10">
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="career" id="career-new"
+                                                                value="new">
+                                                            <label for="career-new">신입</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="career" id="career-1year"
+                                                                value="1year">
+                                                            <label for="career-1year">1년 이상</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="career" id="career-3years"
+                                                                value="3years">
+                                                            <label for="career-3years">3년 이상</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="career" id="career-5years"
+                                                                value="5years">
+                                                            <label for="career-5years">5년 이상</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="career" id="career-10years"
+                                                                value="10years">
+                                                            <label for="career-10years">10년 이상</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="career" id="career-any"
+                                                                value="any">
+                                                            <label for="career-any">무관</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">경력을 체크해주세요.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //경력 -->
+
+
+                                        <!-- 근무요일 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="workDays">근무요일<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <div class="krds-check-area mt10">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_mon"
+                                                                    value="월">
+                                                                <label for="workDays_mon">월</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_tue"
+                                                                    value="화">
+                                                                <label for="workDays_tue">화</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_wed"
+                                                                    value="수">
+                                                                <label for="workDays_wed">수</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_thu"
+                                                                    value="목">
+                                                                <label for="workDays_thu">목</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_fri"
+                                                                    value="금">
+                                                                <label for="workDays_fri">금</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_sat"
+                                                                    value="토">
+                                                                <label for="workDays_sat">토</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="workDays" id="workDays_sun"
+                                                                    value="일">
+                                                                <label for="workDays_sun">일</label>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //근무요일-->
+
+                                        <!-- 1주당 근로기간 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="weekly-work-hours">1주당 근로기간<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input mw200">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <input type="number" name="weekly-work-hours"
+                                                            id="weekly-work-hours" class="krds-input medium only-number"
+                                                            placeholder="">
+                                                    </div>
+                                                    <span>시간</span>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        1주당 근로기간을 입력해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //1주당 근로기간 -->
+
+                                        <!-- 급여조건 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="salary-amount">급여조건 <i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts mw200">
+                                                        <input type="number" name="salary-amount" id="salary-amount"
+                                                            class="krds-input medium only-number" placeholder=""
+                                                            maxlength="3">
+                                                    </div>
+                                                    <div class="form-conts mw200">
+                                                        <select name="salary-type" id="salary-type"
+                                                            class="krds-form-select medium">
+                                                            <option value="">선택</option>
+                                                            <option value="hourly">시급</option>
+                                                            <option value="monthly">월급</option>
+                                                            <option value="annual">연봉</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="salary-negotiable"
+                                                            id="salary-negotiable" value="interview">
+                                                        <label for="salary-negotiable">면접 후 결정</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        급여조건을 입력해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //급여조건 -->
+
+                                        <!-- 법정보험 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">법정보험 <i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts mw200 mt10">
+                                                        <span>4대보험 + 임금채권부담금</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //법정보험 -->
+
+
+
+
+                                        <!-- 보상제도 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">보상제도 <i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts mw200">
+                                                        <select name="" id="" class="krds-form-select medium">
+                                                            <option value="">선택</option>
+                                                            <option value="고정급">고정급</option>
+                                                            <option value="성과급">성과급</option>
+                                                            <option value="퇴직금">퇴직금</option>
+                                                        </select>
+                                                    </div>
+                                                    <span>
+                                                        상여금(보너스) 연
+                                                    </span>
+                                                    <div class="form-conts mw100">
+                                                        <input type="number" id="" class="krds-input medium only-number"
+                                                            placeholder="" maxlength="3">
+                                                    </div>
+                                                    <span>%</span>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">보상제도를
+                                                        선택해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //보상제도-->
+
+
+                                        <!-- 휴무내용 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="holiday-annual">휴무내용<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <div class="krds-check-area mt10">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-annual" value="연차">
+                                                                <label for="holiday-annual">연차</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-monthly" value="월차">
+                                                                <label for="holiday-monthly">월차</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-refresh" value="리프레시">
+                                                                <label for="holiday-refresh">리프레시</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-family" value="경조">
+                                                                <label for="holiday-family">경조</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">휴무내용을
+                                                        선택해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //휴무내용 -->
+
+
+                                        <!-- 복리지원 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="holiday-annual">복리지원<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <div class="krds-check-area mt10">
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-annual" value="연차">
+                                                                <label for="holiday-annual">건강검진</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-monthly" value="월차">
+                                                                <label for="holiday-monthly">학자금</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-refresh" value="리프레시">
+                                                                <label for="holiday-refresh">취미활동</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-family" value="경조">
+                                                                <label for="holiday-family">경조금</label>
+                                                            </div>
+                                                            <div class="krds-form-check">
+                                                                <input type="checkbox" name="holiday-type"
+                                                                    id="holiday-family" value="경조">
+                                                                <label for="holiday-family">단체보험</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mt10">
+                                                    <span>기타복리후생</span>
+                                                    <div class="form-conts">
+                                                        <input type="text" class="krds-input medium">
+                                                    </div>
+                                                </div>
+                                                
+                                                 <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">복리지원을
+                                                        선택해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //복리지원 -->
+
+                                        <!-- 기타내용 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="etc-content">기타내용<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <textarea name="etc-content" id="etc-content" class="krds-input"
+                                                            oninput="updateTextareaCount(this)"
+                                                            maxlength="3000"></textarea>
+                                                        <p class="textarea-count">
+                                                            <span class="count-now">0</span><span
+                                                                class="count-total">/3000</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        기타내용을 입력해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //기타내용 -->
+
+                                        <!-- 파일첨부 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">파일첨부</label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group">
+                                                    <div class="form-conts">
+                                                        <button type="button" class="krds-btn black medium" id=""
+                                                            onclick="openFileDialog(this)">파일찾기</button>
+                                                        <input type="file" id="q_file_input" multiple
+                                                            style="display:none;" onchange="handleFileSelect(this)" />
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint">파일 최대 10MB / 전체 파일 최대 50MB</p>
+                                                </div>
+                                                <div class="file-list mt10">
+                                                    <ul class="list">
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //파일첨부-->
+
+                                         <!-- 참여경로 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="participation-route-1">참여경로<i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="form-conts">
+                                                    <div class="krds-check-area mt10">
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="participation-route"
+                                                                id="participation-route-1" value="경로1">
+                                                            <label for="participation-route-1">경로1</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="participation-route"
+                                                                id="participation-route-2" value="경로2">
+                                                            <label for="participation-route-2">경로2</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="participation-route"
+                                                                id="participation-route-3" value="경로3">
+                                                            <label for="participation-route-3">경로3</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="participation-route"
+                                                                id="participation-route-4" value="경로4">
+                                                            <label for="participation-route-4">경로4</label>
+                                                        </div>
+                                                        <div class="krds-form-check">
+                                                            <input type="radio" name="participation-route"
+                                                                id="participation-route-5" value="경로5">
+                                                            <label for="participation-route-5">경로5</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">참여경로를 체크해주세요.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //참여경로 -->
+
+
+
+
+
+
+
+                                    </div>
+                                </section>
+
+
+                                <section class="terms-section">
+                                    <h3 class="agree-title"> 개인정보 수집 이용 동의 <span class="req">(필수)</span></h3>
+                                    <div class="agree-box gray">
+                                        <p>개인정보 수집 이용 동의</p>
+
+
+                                    </div>
+                                    <div class="terms-content">
+                                        <span class="text">위 개인정보 수집에 동의하십니까?</span>
+                                        <div class="krds-check-area">
+                                            <div class="krds-form-check">
+                                                <input type="radio" name="terms_rdo1" id="terms_rdo1-1" required>
+                                                <label for="terms_rdo1-1">동의함</label>
+                                            </div>
+                                            <div class="krds-form-check">
+                                                <input type="radio" name="terms_rdo1" id="terms_rdo1-2" required>
+                                                <label for="terms_rdo1-2">동의안함</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-txt">
+                                            <p class="form-hint">등록된 정보 수정은 마이페이지에서 하실 수 있습니다.</p>
+                                        </div>
+                                    </div>
+
+
+                                </section>
+
+
+
+
+
+                            </form>
+
+                        </div>
+                        <!-- //구인정보 영역 -->
+
+                        <!-- 페이지 버튼 영역 -->
+                        <div class="btnList-sort mt30 center">
+                            <button type="button" class="krds-btn" onclick="validateForm()">구인신청 <i
+                                    class="ico-topArrow"></i></button>
+                        </div>
+                        <!-- //페이지 버튼 영역 -->
+
+
+
+
+                    </div>
+                    <!--// 대체인력-->
+
+
+
+
+                </div>
+
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
