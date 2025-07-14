@@ -256,7 +256,7 @@ $(function () {
     }
   });
 
-  // 단독 datepicker (input-group.range 바깥)
+  // 단독 datepicker (input-group.range 를 제외 처리)
   $('input[type="text"].datepicker').each(function () {
     // 이미 위에서 처리된 경우(범위 내 input) skip
     if ($(this).closest('.input-group.range').length === 0) {
@@ -294,6 +294,21 @@ $(function () {
     var clipboard = (e.originalEvent || e).clipboardData.getData('text');
     if (/[^0-9]/.test(clipboard)) e.preventDefault();
   });
+
+
+   // textarea 글자 수 카운트 (최대 3000자)
+    window.updateTextareaCount = function (textareaEl) {
+        const $textarea = $(textareaEl);
+        const $countNowEl = $textarea.closest('.form-conts').find('.count-now');
+        if (!$countNowEl.length) return;
+
+        let value = $textarea.val();
+        if (value.length > 3000) {
+            value = value.substring(0, 3000);
+            $textarea.val(value);
+        }
+        $countNowEl.text(value.length);
+    };
 });
 
 

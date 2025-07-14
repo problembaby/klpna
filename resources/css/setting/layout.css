@@ -381,6 +381,15 @@ width:var(--krds-modal--size-large);
 }
 
 
+.fieldset {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: var(--krds-gap-5);
+}
+
+
 /** login */
 .login-wrap{
     display: flex;
@@ -1409,7 +1418,7 @@ line-height: 150%; /* 36px */
     border-radius: 12px;
     background: var(--color-bg-secondary, #F7F8FB);
 }
-.title-banner.subStaff{
+.title-banner{
     display:flex;
     justify-content: space-between;
     gap:10px;
@@ -1424,7 +1433,11 @@ line-height: 150%; /* 36px */
 }
 
 .title-banner .text{
-    padding:80px 0 50px 50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content:center;
+    padding : 10px 0 0 40px
     
 }
 .title-banner .text .title{
@@ -1566,6 +1579,43 @@ line-height: 120%; /* 15.6px */}
     background: url(../../img/sub/ico-userApply.svg) no-repeat;
     width: 24px;
     height: 26px;
+}
+
+
+/*********************************
+대체인력 : 구직신청
+************************************/
+
+.subStaff2 .title-img-subStaff{height:auto; display: flex; align-items: flex-end; max-width:300px; width: 100%; height: 250px;} 
+.subStaff2 .title-img-subStaff::before{
+    display: block;
+    content:"";
+    background: url(../../img/sub/title-subStaff2.png)no-repeat;
+    width:100%;
+    height:195px;
+}
+
+.title-banner .repo{
+    color: var(--color-text-sub_title, #464C53);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+}
+
+.form-conts-title{color: var(--color-text-basic, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */}
+
+.ico-topArrow::before{
+    content: "";
+    display: block;
+    background: url(../../img/sub/ico-topArrow.svg)no-repeat;
+    width: 24px;
+    height:24px;
+    margin-left:10px
 }
 
 /** 노트북 */
@@ -1814,6 +1864,9 @@ line-height: 120%; /* 15.6px */}
 
 .title-banner .text .title {
     font-size: 23px;
+}
+.subStaff2 .title-img-subStaff{
+    display: none;
 }
 
 
