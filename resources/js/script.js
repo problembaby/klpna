@@ -45,29 +45,37 @@ const KRDSFormUtil = {
     /**
      * [공통] 퀵메뉴 열기/닫기 토글 기능
      */
-    bindQuickMenuToggle() {
-        const toggleBtn = document.querySelector('.a_control');
-        const quickWrap = document.querySelector('.quick-wrap-ul');
-        const items = document.querySelectorAll('.quick-wrap-item');
+   bindQuickMenuToggle() {
+	const toggleBtn = document.querySelector('.a_control');
+	const quickWrap = document.querySelector('.quick-wrap-ul');
+	const items = document.querySelectorAll('.quick-wrap-item');
 
-        if (!toggleBtn || !quickWrap) return;
+	if (!toggleBtn || !quickWrap) return;
 
-        let isOpen = false;
+	let isOpen = true; // 기본 상태를 열림으로 설정
 
-        toggleBtn.addEventListener('click', function () {
-            isOpen = !isOpen;
-            toggleBtn.classList.toggle('on', isOpen);
-            quickWrap.classList.toggle('q-show', isOpen);
+	// 초기 상태를 열림으로 설정
+	toggleBtn.classList.add('on');
+	quickWrap.classList.add('q-show');
+	items.forEach((item, i) => {
+		setTimeout(() => item.classList.add('q-show'), i * 100);
+	});
 
-            if (isOpen) {
-                [...items].reverse().forEach((item, i) => {
-                    setTimeout(() => item.classList.add('q-show'), i * 100);
-                });
-            } else {
-                items.forEach(item => item.classList.remove('q-show'));
-            }
-        });
-    },
+	toggleBtn.addEventListener('click', function () {
+		isOpen = !isOpen;
+		toggleBtn.classList.toggle('on', isOpen);
+		quickWrap.classList.toggle('q-show', isOpen);
+
+		if (isOpen) {
+			[...items].reverse().forEach((item, i) => {
+				setTimeout(() => item.classList.add('q-show'), i * 100);
+			});
+		} else {
+			items.forEach(item => item.classList.remove('q-show'));
+		}
+	});
+}
+,
 
     /**
      * [공통] GNB 열기/닫기 토글 기능
