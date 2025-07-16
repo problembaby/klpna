@@ -326,20 +326,40 @@ $(function () {
  * 탑이동
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-		const topBtn = document.getElementById('topBtn');
-		const threshold  = 500; // 스레드 높이값
+    document.addEventListener('DOMContentLoaded', () => {
+        const topBtn = document.getElementById('topBtn');
+        const threshold  = 500; // 스레드 높이값
 
-		// 스크롤 이벤트
-		window.addEventListener('scroll',() => {
-			window.scrollY > threshold ? topBtn.classList.add('show') : topBtn.classList.remove('show');
-		});
+        // 스크롤 이벤트
+        window.addEventListener('scroll',() => {
+            window.scrollY > threshold ? topBtn.classList.add('show') : topBtn.classList.remove('show');
+        });
 
-		// 클릭시 부드러운 스크롤
-		topBtn.addEventListener('click', e => {
-			//e.preventDefault();
-			window.scrollTo({ top:0, behavior : 'smooth'});
-		});
+        // 클릭시 부드러운 스크롤
+        topBtn.addEventListener('click', e => {
+            //e.preventDefault();
+            window.scrollTo({ top:0, behavior : 'smooth'});
+        });
 
 
-	});
+    });
+
+
+    /*****************************************
+     * cms 태그라이브러리 체크 박스 디자인 
+     */
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('label.radio-inline input[type="radio"]').forEach((input) => {
+        input.addEventListener('change', function () {
+        const name = this.name;
+
+        document.querySelectorAll(`label.radio-inline input[name="${name}"]`).forEach((el) => {
+            el.parentElement.classList.remove('checked');
+        });
+
+        if (this.checked) {
+            this.parentElement.classList.add('checked');
+        }
+        });
+    });
+    });
