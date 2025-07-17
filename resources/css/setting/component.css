@@ -522,6 +522,12 @@ label.radio-inline.checked::before {
 }
 
 @media (max-width: 767px){
+    .krds-modal{
+            --krds-modal--size-large: 95%;
+            --krds-modal--size-medium: 95%;
+            --krds-modal--size-small: 95%;
+
+    } 
     .mob-overflow-icon{display: block;}
 }
 
