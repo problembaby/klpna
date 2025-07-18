@@ -1414,6 +1414,10 @@ line-height: 150%; /* 36px */
 대체인력
 ***********************************/
 
+.input-group-item{display: flex; gap:10px; align-items: center; flex: 1 0 200;
+}
+.input-group-item.last{flex:1 auto;
+}
 .title-banner{
     border-radius: 12px;
     background: var(--color-bg-secondary, #F7F8FB);
@@ -1633,6 +1637,37 @@ line-height: 150%; /* 24px */}
     height:193px;
 }
 
+.form-input.addList{
+    background-color: #F8F8F8;
+    padding:20px;
+
+}
+.addBtn-wrap{width: 100%; display: flex; justify-content: flex-end; margin-bottom: 10px;}
+.form-input.addList .list{
+    display: flex; flex-direction: column; gap:10px
+}
+.form-input.addList .list .list-item{
+    display: flex; flex-direction: column;
+    gap:10px;
+    border-bottom:1px solid #B1B8BE;
+    padding: 20px 0;
+    
+}
+.form-input.addList .list .list-item:first-child{
+    border-top:0 solid #B1B8BE;
+    
+}
+
+
+.form-input.addList .list .list-item .input{
+    display: flex; gap:10px; align-items: center;
+}
+.form-input.addList .list .list-item .date{
+    display: flex; gap:10px; align-items: center;
+}
+.form-input.addList .list .list-item .date > span{margin-right: 10px; flex:0 100px; display: flex; justify-content: flex-end;}
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -1772,6 +1807,8 @@ line-height: 150%; /* 24px */}
 
 
 
+.form-input.addList .list .list-item .date{flex-direction: column; align-items: flex-start; gap:0}
+
 
 
 }
@@ -1885,10 +1922,24 @@ line-height: 150%; /* 24px */}
     display: none;
 }
 
+.form-input.addList .list .list-item .date > span{margin-right: 10px; flex:0 100%;}
+
 
 }
 
 @media (max-width: 479px) {
+
+    .input-group.col{display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;}
+
+    .input-group-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex: 1 100%;
+    flex-direction: column;
+    width: 100%;
+}
+.input-group-item > .form-conts{max-width: 100%!important;}
 
     .dream-title-img{display: none;}
 

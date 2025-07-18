@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>구직신청 | 대체인력 - 대한간호조무사협회</title>
 
+
+
     <!-- css -->
     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/lib/select2/select2.min.css" />
     <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
     <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
     <link rel="stylesheet" href="../resources/css/style.css" />
@@ -17,10 +20,13 @@
     <!--js-->
     <script src="../resources/js/jquery-3.7.1.min.js"></script>
     <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../resources/lib/select2/select2.min.js"></script>
     <script src="../resources/krds/js/component/ui-script.js"></script>
     <script src="../resources/krds/js/pattern/pattern.js"></script>
-    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
     <script src="../resources/js/script.js"></script>
+
+
 </head>
 
 <body>
@@ -91,26 +97,49 @@
                                 const isRequired = $group.find('.form-tit .req').length > 0;
                                 if (!isRequired) return;
 
-                                // 체크박스, 라디오 그룹 처리
                                 const $inputs = $group.find('input, select, textarea').filter(':visible');
                                 const $hint = $group.find('.form-hint-invalid');
-
                                 let isEmpty = false;
 
-                                // 인풋 여러개면 radio/checkbox 우선 처리
-                                if ($inputs.length > 1 && ($inputs.first().is(':radio') || $inputs.first().is(':checkbox'))) {
+                                // 1. 희망근무지역: 특별 조건 처리
+                                if ($group.find('#sido').length > 0) {
+                                    const sidoVal = $('#sido').val();
+                                    const sigunguVal = $('#sigungu').val();
+                                    const isAnyRegion = $('#any-region').is(':checked');
+
+                                    const regionValid =
+                                        isAnyRegion ||
+                                        sidoVal === 'ALL' ||
+                                        (sidoVal && sigunguVal && sigunguVal.length > 0);
+
+                                    if (!regionValid) isEmpty = true;
+                                }
+
+                                // 2. 일반적인 radio/checkbox 처리
+                                else if ($inputs.length > 1 && ($inputs.first().is(':radio') || $inputs.first().is(':checkbox'))) {
                                     const $checked = $inputs.filter(':checked');
                                     isEmpty = ($checked.length === 0);
-                                } else {
+                                }
+
+                                // 3. 나머지 input/select 검사
+                                else {
                                     $inputs.each(function () {
-                                        if ($(this).is('select')) {
-                                            if ($(this).val() === "") isEmpty = true;
-                                        } else if ($(this).is(':input')) {
-                                            if ($(this).val()?.trim() === "") isEmpty = true;
+                                        const $el = $(this);
+                                        const val = $el.val();
+
+                                        if ($el.prop('tagName') === 'SELECT') {
+                                            if ($el.prop('multiple')) {
+                                                if (!val || val.length === 0) isEmpty = true;
+                                            } else {
+                                                if (!val || val === '') isEmpty = true;
+                                            }
+                                        } else if ($el.is(':input')) {
+                                            if (val?.trim() === '') isEmpty = true;
                                         }
                                     });
                                 }
 
+                                // 에러 표시
                                 if (isEmpty) {
                                     $group.addClass('is-error');
                                     $hint.css('display', 'flex');
@@ -122,7 +151,7 @@
                                 }
                             });
 
-                            // 개인정보 동의 "동의함" 필수 체크
+                            // 개인정보 동의 필수
                             const agreeChecked = $('input[name="terms_rdo1"]:checked').length && $('#terms_rdo1-1').is(':checked');
                             if (!agreeChecked) {
                                 alert('개인정보 수집 이용 동의에 "동의함"을 선택해주세요.');
@@ -131,15 +160,16 @@
                                 return;
                             }
 
-                            // 첫 에러 포커스
+                            // 첫 에러 위치 포커스
                             if (!isValid && $firstInvalid?.length) {
                                 setTimeout(() => $firstInvalid.focus(), 10);
                                 return;
                             }
 
-                            // 실제 제출
+                            // 폼 제출
                             $('form').submit();
                         }
+
 
                         /** 이메일 도메인 핸들러 */
                         function handleEmailDomainChange(selectEl) {
@@ -230,6 +260,151 @@
                             $(this).closest("li").remove();
                         });
 
+
+
+
+                        /**
+                         * 시군구 선택 멀티 셀릭트 
+                         * 
+                         * 1. 광역단체 선택시 - 시군구 셀릭트 선택가능
+                         * 2. 광역단체 전체 선택시 - 시군구선택 불가능
+                         * 3. 지역무관 체크시 - 광역단체, 시군구 선택 불가능
+                         * 
+                         */
+
+                           const sigunguData = {
+                                "서울특별시": ["강남구", "서초구", "송파구"],
+                                "부산광역시": ["해운대구", "수영구", "동래구"],
+                                // ... 생략
+                            };
+
+
+                       $(document).ready(function () {
+                        $('#sigungu').select2({
+                            placeholder: "시군구 선택",
+                            allowClear: true,
+                            width: '100%',
+                            language: {
+                            noResults: function () {
+                                return "시군구 정보가 없습니다.";
+                            }
+                            }
+                        });
+
+                        $('#sido').on('change', function () {
+                            const selectedSido = $(this).val();
+                            const $sigungu = $('#sigungu');
+                            $sigungu.empty();
+
+                            if (selectedSido === 'ALL') {
+                            $sigungu.prop('disabled', true);
+                            $sigungu.val(null).trigger('change');
+                            $('#selected-regions').empty();
+                            return;
+                            }
+
+                            $sigungu.prop('disabled', false);
+
+                            if (sigunguData[selectedSido]) {
+                            sigunguData[selectedSido].forEach(function (gu) {
+                                $sigungu.append(new Option(gu, gu));
+                            });
+                            }
+
+                            $sigungu.val(null).trigger('change');
+                        });
+
+                        $('#sigungu').on('change', function () {
+                            const selected = $(this).val();
+                            const display = selected.map(v => `<span class="region-tag">${v}</span>`).join(' ');
+                            $('#selected-regions').html(display);
+                        });
+
+                        $('#any-region').on('change', function () {
+                            const checked = $(this).is(':checked');
+                            $('#sido, #sigungu').prop('disabled', checked);
+
+                            if (checked) {
+                            $('#sigungu').val(null).trigger('change');
+                            $('#selected-regions').empty();
+                            } else {
+                            const sidoVal = $('#sido').val();
+                            if (sidoVal && sidoVal !== 'ALL') {
+                                $('#sigungu').prop('disabled', false);
+                            }
+                            }
+                        });
+                        });
+
+
+                        $(document).ready(function () {
+    $('.addList').each(function () {
+        const $listWrap = $(this);
+        const $list = $listWrap.find('ul.list');
+        const type = $listWrap.closest('.form-group').find('label').text().trim();
+
+        $listWrap.find('.add-btn').on('click', function (e) {
+            e.preventDefault();
+
+            let $newItem = null;
+
+            if (type.includes('세부학력사항')) {
+                $newItem = $(`
+                    <li class="list-item">
+                        <div class="input">
+                            <input type="text" class="krds-input medium" placeholder="학교명 입력">
+                            <input type="text" class="krds-input medium" placeholder="졸업구분">
+                            <input type="text" class="krds-input medium" placeholder="전공">
+                        </div>
+                        <div class="date">
+                            <span>기간</span>
+                            <ul class="input-group range">
+                                <li><input type="text" class="krds-input datepicker medium" placeholder="YYYY-MM-DD"></li>
+                                <li class="mark">~</li>
+                                <li><input type="text" class="krds-input datepicker medium" placeholder="YYYY-MM-DD"></li>
+                            </ul>
+                        </div>
+                    </li>
+                `);
+            } else if (type.includes('보유자격증')) {
+                $newItem = $(`
+                    <li class="list-item">
+                        <div class="input">
+                            <input type="text" class="krds-input medium" placeholder="자격종류">
+                            <ul class="input-group set">
+                                <li><input type="text" class="krds-input datepicker medium" placeholder="취득연월일"></li>
+                            </ul>
+                        </div>
+                    </li>
+                `);
+            } else if (type.includes('근무경력')) {
+                $newItem = $(`
+                    <li class="list-item">
+                        <div class="input">
+                            <input type="text" class="krds-input medium" placeholder="회사명 입력">
+                            <input type="text" class="krds-input medium" placeholder="담당업무">
+                            <input type="text" class="krds-input medium" placeholder="직위">
+                        </div>
+                        <div class="date">
+                            <span>입/퇴사일</span>
+                            <ul class="input-group range">
+                                <li><input type="text" class="krds-input datepicker medium" placeholder="YYYY-MM-DD"></li>
+                                <li class="mark">~</li>
+                                <li><input type="text" class="krds-input datepicker medium" placeholder="YYYY-MM-DD"></li>
+                            </ul>
+                        </div>
+                    </li>
+                `);
+            }
+
+            if ($newItem) {
+                $list.append($newItem);
+                // 데이트피커 초기화
+                $newItem.find(".datepicker").datepicker();
+            }
+        });
+    });
+});
 
 
                     </script>
@@ -505,53 +680,75 @@
                                         </div>
                                         <!-- //경력여부 -->
 
-                                        <!-- 근무지역 -->
+                                        <!-- 현재주소 -->
                                         <div class="form-group">
                                             <div class="form-tit">
-                                                <label for="">근무지역 <i class="req">*</i></label>
+                                                <label for="owned">현재 주소</label>
                                             </div>
                                             <div class="form-input w100">
                                                 <div class="input-group">
-                                                    <span>
-                                                        광역단체
-                                                    </span>
-                                                    <div class="form-conts mw200">
-                                                        <select name="" id="" class="krds-form-select medium">
-                                                            <option value="">선택</option>
-                                                            <option value="ALL">전체</option>
-                                                            <option value="서울특별시">서울특별시</option>
-                                                            <option value="부산광역시">부산광역시</option>
-                                                            <option value="대구광역시">대구광역시</option>
-                                                            <option value="인천광역시">인천광역시</option>
-                                                            <option value="광주광역시">광주광역시</option>
-                                                            <option value="대전광역시">대전광역시</option>
-                                                            <option value="울산광역시">울산광역시</option>
-                                                            <option value="세종특별자치시">세종특별자치시</option>
-                                                            <option value="경기도">경기도</option>
-                                                            <option value="강원도">강원도</option>
-                                                            <option value="충청북도">충청북도</option>
-                                                            <option value="충청남도">충청남도</option>
-                                                            <option value="전라북도">전라북도</option>
-                                                            <option value="전라남도">전라남도</option>
-                                                            <option value="경상북도">경상북도</option>
-                                                            <option value="경상남도">경상남도</option>
-                                                            <option value="제주특별자치도">제주특별자치도</option>
-                                                        </select>
 
-                                                    </div>
-                                                    <span>
-                                                        시군구
-                                                    </span>
-                                                    <div class="form-conts mw200">
-                                                        <select name="" id="" class="krds-form-select medium">
-                                                            <option value="">선택</option>
-                                                            <option value="ALL">전체</option>
-                                                            <option value="">시군구</option>
-                                                        </select>
-
+                                                    <div class="form-conts">
+                                                        <input type="text" id="owned" class="krds-input medium" placeholder="동 단위까지 입력(예시, 서울시 송파구 잠실동">
                                                     </div>
                                                 </div>
                                                 <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        현재 주소를 입력해주세요
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //현재 주소 -->
+
+                                        <!-- 근무지역 -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">희망근무지역 <i class="req">*</i></label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <div class="input-group col">
+                                                    <div class="input-group-item">
+                                                        <span>
+                                                            광역단체
+                                                        </span>
+                                                        <div class="form-conts mw200">
+                                                            <select name="sido" id="sido" class="krds-form-select medium">
+                                                                <option value="">선택</option>
+                                                                <option value="ALL">전체</option>
+                                                                <option value="서울특별시">서울특별시</option>
+                                                                <option value="부산광역시">부산광역시</option>
+                                                            </select>
+    
+                                                   
+    
+                                                        </div>
+                                                    </div>
+                                                       <div class="input-group-item last">
+                                                             <span>
+                                                            시군구
+                                                            </span>
+                                                            <div class="form-conts">
+                                                                <select name="sigungu" id="sigungu" class="select-multiple" multiple="multiple">
+                                                                    <!-- 시군구 옵션 동적 생성 -->
+                                                                </select>
+                                                            
+    
+                                                            </div>
+                                                       </div>
+                                                  
+                                                </div>
+
+                                                <div class="input-group mt10">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="" id="any-region" value="지역무관">
+                                                        <label for="any-region">지역무관</label>
+                                                    </div>
+                                                     
+
+                                                </div>
+                                                <div class="input-txt">
+                                                    <p class="form-hint">시군구는 중복선택이 가능합니다.</p>
                                                     <p class="form-hint-invalid" style="display: none;">근무지역을
                                                         선택해주세요.
                                                     </p>
@@ -1023,36 +1220,155 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="input-txt">
-                                                <p class="form-hint-invalid" style="display: none;">
-                                                    최종학력을 선택해주세요
-                                                </p>
+                                                <div class="input-txt">
+                                                    <p class="form-hint-invalid" style="display: none;">
+                                                        최종학력을 선택해주세요
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- //최종학력 -->
-
-                                        <!-- 보유자격증 -->
-                                        <div class="form-group">
+                                         
+                                         <!--세부학력사항-->
+                                         <div class="form-group">
                                             <div class="form-tit">
-                                                <label for="owned">보유자격증<i class="req">*</i></label>
+                                                <label for="">세부학력사항</label>
                                             </div>
-                                            <div class="form-input w100">
-                                                <div class="input-group">
-
-                                                    <div class="form-conts">
-                                                        <input type="text" id="owned" class="krds-input medium">
-                                                    </div>
+                                            <div class="form-input addList w100">
+                                                <div class="addBtn-wrap">
+                                                    <button class="krds-btn black small add-btn">추가<i class="svg-icon ico-plus"></i></button>
                                                 </div>
-                                                <div class="input-txt">
-                                                    <p class="form-hint-invalid" style="display: none;">
-                                                        보유자격증을 입력해주세요
-                                                    </p>
-                                                    <p class="form-hint">자격증이 여러개 인 경우 쉼표( , ) 구분하여 작성</p>
+                                                <ul class="list">
+                                                    <li class="list-item">
+                                                        <div class="input">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="학교명 입력">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="졸업구분">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="전공">
+                                                        </div>
+                                                        <div class="date">
+                                                            <span>기간</span>
+                                                            <ul class="input-group range">
+                                                                <li>
+                                                                    <input type="text" id="" class="krds-input datepicker medium" placeholder="YYYY-MM-DD">
+                                                                </li>
+                                                                <li class="mark">~</li>
+                                                                <li>
+                                                                    <input type="text" id="" class="krds-input datepicker medium" placeholder="YYYY-MM-DD">
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                                <div class="input-txt mt10">
+                                                    <p class="form-hint">학력이 여러개 인 경우 추가하여 작성해주세요. </p>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <!--//세부학력사항-->
+
+
+                                        <!--보유자격증-->
+                                         <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">보유자격증</label>
+                                            </div>
+                                            <div class="form-input addList w100">
+                                                <div class="addBtn-wrap">
+                                                    <button class="krds-btn black small add-btn">추가<i class="svg-icon ico-plus"></i></button>
+                                                </div>
+                                                <ul class="list">
+                                                    <li class="list-item">
+                                                        <div class="input">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="자격종류">
+                                                             <ul class="input-group set">
+                                                                <li>
+                                                                    <input type="text" id="" class="krds-input datepicker medium" placeholder="취득연월일">
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                                
+                                                
+                                                <div class="input-txt mt10">
+                                                    <p class="form-hint">자격증이 여러개 인 경우 추가하여 작성해주세요.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- //보유자격증 -->
+
+                                        <!--//보유자격증-->
+
+                                        <!--근무경력-->
+                                         <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="">근무경력</label>
+                                            </div>
+                                            <div class="form-input addList w100">
+                                                <div class="addBtn-wrap">
+                                                    <button class="krds-btn black small add-btn">추가<i class="svg-icon ico-plus"></i></button>
+                                                </div>
+                                                <ul class="list">
+                                                    <li class="list-item">
+                                                        <div class="input">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="회사명 입력">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="담당업무">
+                                                            <input type="text" id="" class="krds-input medium" placeholder="직위">
+                                                        </div>
+                                                        <div class="date">
+                                                            <span>입/퇴사일</span>
+                                                            <ul class="input-group range">
+                                                                <li>
+                                                                    <input type="text" id="" class="krds-input datepicker medium" placeholder="YYYY-MM-DD">
+                                                                </li>
+                                                                <li class="mark">~</li>
+                                                                <li>
+                                                                    <input type="text" id="" class="krds-input datepicker medium" placeholder="YYYY-MM-DD">
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                                
+                                                
+                                                <div class="input-txt mt10">
+                                                    <p class="form-hint">근무경력이 여러개 인 경우 추가하여 작성해주세요.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--//보유자격증-->
+
+                                         <!-- 기타(장애여부/보훈여부) -->
+                                        <div class="form-group">
+                                            <div class="form-tit">
+                                                <label for="etc-dis-vet">기타(장애여부/보훈여부)</label>
+                                            </div>
+                                            <div class="form-input w100">
+                                                <!-- 전체 -->
+                                                <div class="input-group mt10">
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="etc-dis-vet" id="etc-dis-vet01" 
+                                                            value="장애여부">
+                                                        <label for="etc-dis-vet01">장애여부</label>
+                                                    </div>
+                                                    <div class="krds-form-check">
+                                                        <input type="checkbox" name="etc-dis-vet" id="etc-dis-vet02"
+                                                            value="보훈여부">
+                                                        <label for="etc-dis-vet02">보훈여부</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //기타(장애여부/보훈여부) -->
+
+                                        
+
+             
 
 
                                         <!-- 자기소개서 -->
