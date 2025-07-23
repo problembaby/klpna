@@ -217,8 +217,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */}
 
-.krds-badge.in-person, .krds-badge.in-noPerson{ background-color: #0050CA; color:#fff; display: inline; flex:0 0 auto}
-.krds-badge.online{ background-color: #0AF; color:#fff; display: inline; flex:0 0 auto}
+.krds-badge.in-person, .krds-badge.in-noPerson, .krds-badge.online{ background-color: #FFF3F5; color:#D92602; display: inline; flex:0 0 auto}
 
 .edu-cont-top{display: flex; gap:10px; align-items: center; margin-bottom: 10px;}
 .edu-cont-top .subject{color: var(--color-text-basic, #0D0E10);
