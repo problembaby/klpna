@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
     <title> 교육현황 | 마이페이지 - 대한간호조무사협회</title>
 
     <!-- css -->
@@ -11,8 +12,8 @@
     <link rel="stylesheet" href="../resources/lib/select2/select2.min.css" />
     <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
     <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
-    <link rel="stylesheet" href="../resources/css/style.css" />
     <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
 
     <!--js-->
     <script src="../resources/js/jquery-3.7.1.min.js"></script>
@@ -86,6 +87,8 @@
                 </nav>
                 <!-- //사이드 메뉴 -->
 
+
+
                 <div class="contents">
                     <!-- breadcrumb -->
                     <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
@@ -118,7 +121,7 @@
                     <form id="" name="" action="#" method="post">
                         <fieldset class="bbs-search-wrap">
                             <div class="search-top-box">
-                                <div class="form-col-group">
+                                <div class="form-row-group">
                                     <label for="">교육 년도</label>
                                     <div class="bbs-search-form-wrap">
 
@@ -137,8 +140,541 @@
                         </fieldset>
                     </form>
                     <!-- //검색 입력폼 -->
+
+
+                    <!-- 검색 결과 : 리스트 상단 -->
+                    <div class="search-list-top">
+                        <ul class="sch-info" aria-live="polite">
+                            <li>총 <span class="point">25</span>건</li>
+                        </ul>
+                    </div>
+                    <!-- //검색 결과 : 리스트 상단 -->
+
+                    <!-- 검색 결과 : 리스트 -->
+
+
+                    <div class="table table-overscroll border edu-stat">
+                        <table>
+                            <caption class="sr-only">교육현황 년도, 과정명, 변경, 취소, 발급/인쇄, 대체인정 을 확인할 수 있는 테이블 입니다.</caption>
+                            <colgroup>
+                                <col width="10%;">
+                                <col width="auto">
+                                <col width="10%;">
+                                <col width="10%;">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                                <tr class="border-black">
+                                    <th scope="col">년도</th>
+                                    <th scope="col">과정명</th>
+                                    <th scope="col">변경</th>
+                                    <th scope="col">취소</th>
+                                    <th scope="col">발급/인쇄</th>
+                                    <th scope="col">대체인정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="display: none;">
+                                    <td class="no-contents" colspan="6">데이터가 없습니다.</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="edu-td renew" rowspan="2">
+                                        <div class="year">2025</div>
+                                        <div class="txt">보수교육(정기)</div>
+                                    </td>
+                                    <td>
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <!-- <span class="krds-badge small in-person">온라인</span> -->
+                                                    <span class="krds-badge small in-person">대면</span>
+                                                    <!-- <span class="krds-badge small in-person">비대면</span>
+                                                    <span class="krds-badge small bg-light-primary">이동간호</span> -->
+                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="krds-btn small redbd">변경</button>
+                                        <!-- <button type="button" class="krds-btn small red">유료변경</button> -->
+                                    </td>
+                                    <td rowspan="2">
+                                        <button type="button" class="krds-btn small black">취소</button>
+                                        <!-- <span>환불대기</span>
+                                        <span>환불완료</span> -->
+                                    </td>
+                                    <td>
+
+                                        <div class="list-col">
+                                            <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
+                                            <!-- <button type="button" class="krds-btn small secondary open-modal" data-target="cert">이수증</button>
+                                            <button type="button" class="krds-btn small open-modal ac_deco" data-target="cert">수료증</button> -->
+                                            <div class="comple-before">이수 전</div>
+                                            <!--  <div class="deny-vaild">미 이수</div> -->
+                                        </div>
+
+                                    </td>
+                                    <td rowspan="2">
+                                        -
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+
+                                                    <span class="krds-badge small bg-light-primary">이동간호</span>
+                                                    <p class="subject ellipsis-1">기본공통과정</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="krds-btn small red">유료변경</button>
+                                    </td>
+
+                                    <td>
+
+                                        <div class="list-col">
+                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
+                                            <div class="comple-before">이수 전</div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                                <tr>
+                                    <td class="edu-td job">
+                                        <div class="year">2025</div>
+                                        <div class="txt">직무교육(대체인정)</div>
+                                    </td>
+                                    <td>
+
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <span class="krds-badge small in-person">온라인</span>
+                                                    <span class="krds-badge small in-person">대면</span>
+                                                    <span class="krds-badge small in-person">비대면</span>
+                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </td>
+                                    <td>
+                                        <button type="button" class="krds-btn small redbd">변경</button>
+
+                                    </td>
+                                    <td>
+                                        <button type="button" class="krds-btn small black">취소</button>
+
+                                    </td>
+                                    <td>
+
+                                        <div class="list-col">
+                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
+
+                                            <div class="comple-before">이수 전</div>
+
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" target="_blank" class="bosu-link" title="‘보수교육인정 신청’ 페이지로 이동">
+                                            보수교육<br>
+                                            인정신청
+                                        </a>
+                                    </td>
+
+
+                                </tr>
+
+                                <tr>
+                                    <td class="edu-td job">
+                                        <div class="year">2025</div>
+                                        <div class="txt">직무교육</div>
+                                    </td>
+                                    <td>
+
+
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <span class="krds-badge small in-person">온라인</span>
+                                                    <span class="krds-badge small in-person">대면</span>
+                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">7.01 (월), 07.02 (화), 07.03 (수), 07.08 (월),
+                                                            07.09
+                                                            (화)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        -
+
+                                    </td>
+                                    <td>
+                                        <div>환불대기</div>
+                                    </td>
+                                    <td>
+
+                                        <div class="list-col">
+                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
+
+                                            <div class="deny-vaild">미 이수</div>
+                                        </div>
+
+
+                                    </td>
+                                    <td>
+                                        <span class="deny-vaild">
+                                            보수교육<br>
+                                            인정불가
+                                        </span>
+                                    </td>
+
+
+                                </tr>
+
+
+                                <tr>
+                                    <td class="edu-td renew" rowspan="2">
+                                        <div class="year">2025</div>
+                                        <div class="txt">직무교육</div>
+                                    </td>
+                                    <td>
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <span class="krds-badge small in-person">비대면</span>
+                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2">
+                                        -
+
+                                    </td>
+                                    <td rowspan="2">
+                                        <div>환불완료</div>
+                                    </td>
+                                    <td rowspan="2">
+
+                                        -
+
+                                    </td>
+                                    <td rowspan="2">
+                                        -
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+
+                                    <td>
+
+
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <span class="krds-badge small in-person">온라인</span>
+                                                    <p class="subject ellipsis-1">기본공통과정</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+                                    <td class="edu-td job">
+                                        <div class="year">2025</div>
+                                        <div class="txt">직무교육</div>
+                                    </td>
+                                    <td>
+
+
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토) 까지</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        -
+
+                                    </td>
+                                    <td>
+                                        <div>환불대기</div>
+                                    </td>
+                                    <td>
+
+                                        <div class="list-col">
+                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
+                                            <button type="button" class="krds-btn small secondary open-modal" data-target="cert">이수증</button>
+                                        </div>
+
+
+                                    </td>
+                                    <td>
+                                        <span class="vaild">
+                                            보수교육<br>
+                                            인정완료
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td class="edu-td job">
+                                        <div class="year">2025</div>
+                                        <div class="txt">직무교육</div>
+                                    </td>
+                                    <td>
+
+
+                                        <div class="edu-subject-area">
+                                            <div class="left">
+                                                <div class="edu-cont-top">
+                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                </div>
+                                                <ul class="edu-cont-list">
+                                                    <li>
+                                                        <i class="ico-edu-cal"></i>
+                                                        <span class="text">~ 2025.05.03 (토) 까지</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="right">
+                                                <button type="button">
+                                                    <span class="sr-only">상세보기</span>
+                                                    <i class="ico-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        -
+
+                                    </td>
+                                    <td>
+                                        <!-- tooltip : 위치 - 상단 왼쪽 -->
+                                        <div class="krds-contextual-help top left flex-center">
+                                            <p class="tooltip-txt">환불거절</p>
+                                            <div class="tooltip-action">
+                                                <button type="button" class="krds-btn medium icon tooltip-btn">
+                                                    <span class="sr-only">도움말</span>
+                                                    <i class="svg-icon ico-tooltip"></i>
+                                                </button>
+                                                <div class="tooltip-popover" role="tooltip">
+                                                    <h4 class="tooltip-title">환불거절 사유</h4>
+                                                    <div class="tooltip-contents">
+                                                        <p>환불이 이러한 사유로 거절 되었습니다.</p>
+                                                    </div>
+                                                    <button type="button" class="krds-btn xsmall icon tooltip-close">
+                                                        <span class="sr-only">닫기</span>
+                                                        <i class="svg-icon ico-modal-close"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //tooltip : 위치 - 상단 왼쪽 -->
+                                    </td>
+                                    <td>
+
+                                        <div class="list-col">
+                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
+                                            <button type="button" class="krds-btn small open-modal ac_deco" data-target="cert">수료증</button> 
+                                        </div>
+
+
+                                    </td>
+                                    <td>
+                                        <span class="deny-vaild">
+                                            보수교육<br>
+                                            인정불가
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //검색 결과 : 리스트 -->
+
+
+                    <div class="helper-box gray mt30">
+                        <h3 class="helper-title"><i class="ico-chk-sky"></i>필독사항</h3>
+                        <ol class="o-list">
+                            <li>
+                                <span class="num">1.</span>
+                                교육 시작 시 입실 불가 (교통상황 및 주차시간 고려 요망)
+                            </li>
+                            <li>
+                                <span class="num">2.</span>
+                                교육 시작 전 수기 접수자는 신분증 확인 후 서명, 교육 종료 후 만족도조사 및 수강확인서를 제출해야 보수교육 이수 인정
+                                <ol class="o-list indent">
+                                    <li>(비)대면교육 변경 및 불참 시 "KLPNA 보수교육센터 > 마이페이지 > 강의실 > 대면교육'에서 변경 가능</li>
+                                    <li>
+                                        ※ 교육일 1일 전 정오(낮 12시) 이전 2회에 한하여 무료 변경 가능
+                                    </li>
+                                    <li>
+                                        ※ 교육일 1일 전 정오(낮 12시) 이후 교육 변경 시마다 추가비 납부(변경 횟수 제한 없음)
+                                    </li>
+                                    <li>
+                                        * 교육일이 토,일, 월요일이면 교육일 전 금요일 정오(낮 12시)까지 환불 및 무료 2회 변경 가능
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span class="num">3.</span>
+                                (비)대면교육은 동일한 교육과정에 한해 변경이 가능
+                                <ol class="o-list indent">
+                                    <li>예) 기본공동과정 기본공통과정, 전문선택과정 전문선택과정</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span class="num">4.</span>
+                                교육생 외 입장 불가 (자녀 및 가족, 애완동물 등)
+                            </li>
+                            <li>
+                                <span class="num">5.</span>
+                                음식물 및 음료 등 반입금지
+                            </li>
+                            <li>
+                                <span class="num">6.</span>
+                                각종 소음을 유발하는 행동주의 (교육 중 대화, 휴대전화 소음 등)
+                                <ol class="o-list indent">
+                                    <li>(비)대면교육 신청자 수가 일정 인원 미만일 경우 폐강될 수 있음</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <span class="num">7.</span>
+                                보수교육비 환불 및 교육변경 시 추가비 관련 내용은 "KLPNA 보수교육센터 > 공지사항'에서 확인 가능
+                            </li>
+                            <li>
+                                <span class="num">8.</span>
+                                환불이 불가하거나 환불 가능금액이 없는 경우 [취소]버튼이 나타나지 않음, 자세한 사항은 소속시도회로 문의
+                            </li>
+
+                        </ol>
+
+                    </div>
+
+
                     <script>
-                          const now = new Date().getFullYear();
+                        /*  교육년도 스크립트
+                        * - 올해년도 계산해서 옵션 포함
+                        */
+
+                        const now = new Date().getFullYear();
                         const $select = document.getElementById("onlyYear");
 
                         for (let y = now; y >= 1950; y--) {
@@ -150,15 +686,6 @@
                         }
                     </script>
 
-                    <div class="sub-content mypage">
-
-
-
-
-
-
-
-                    </div>
 
                 </div>
             </div>
@@ -172,6 +699,92 @@
 </body>
 
 </html>
+
+
+<!-- modal : 영수증 -->
+<section id="receipt" class="krds-modal fade" role="dialog" aria-labelledby="tit_receipt" data-type="medium"> 
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_receipt" class="modal-title">
+				영수증 양식을 선택해 주세요.
+				</h2>
+			</div>
+			<!-- //modal title -->
+			<!-- modal contents -->
+			<div class="modal-conts">
+                <div class="bar"></div>
+				<ul class="receipt-list mb50">
+                    <li>
+                        <p>교육비 영수증</p>
+                        <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
+                    </li>
+                    <li>
+                        <p>교육비(회비포함) 영수증</p>
+                        <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
+                    </li>
+                    <li>
+                        <p>추가비 영수증</p>
+                        <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
+                    </li>
+                </ul>
+			</div>
+			<!-- //modal contents -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back in"></div>
+</section>
+<!--// modal : 영수증 -->
+
+<!-- modal : 영수증 -->
+<section id="cert" class="krds-modal fade" role="dialog" aria-labelledby="tit_cert" data-type="medium"> 
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_cert" class="modal-title">
+				이수증 양식을 선택해 주세요.
+				</h2>
+			</div>
+			<!-- //modal title -->
+			<!-- modal contents -->
+			<div class="modal-conts">
+                <div class="bar"></div>
+				<ul class="receipt-list mb50">
+                    <li>
+                        <p>교육기간 표시 이수증</p>
+                        <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
+                    </li>
+                    <li>
+                        <p>교육기간 미 표시 이수증</p>
+                        <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
+                    </li>
+                </ul>
+			</div>
+			<!-- //modal contents -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back in"></div>
+</section>
+<!--// modal : 영수증 -->
+
+
+
+
+
 
 
 <script>

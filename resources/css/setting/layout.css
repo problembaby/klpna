@@ -245,6 +245,88 @@
 
 
 
+ /** 버튼 : 레드 */
+.krds-btn.redbd {
+    background-color: #fff;
+    border-color: #DE3412;
+    color: #DE3412;
+}
+
+.krds-btn.redbd:not(.icon) .svg-icon {
+    background-color: #DE3412;
+}
+
+.krds-btn.redbd:hover {
+    background-color: var(--krds-button--color-tertiary-fill-hover);
+}
+
+.krds-btn.redbd:active,
+.krds-btn.redbd:focus {
+    background-color: var(--krds-button--color-tertiary-fill-hover);
+}
+
+.krds-btn.redbd[disabled],
+.krds-btn.redbd.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.redbd[disabled]:not(.icon) .svg-icon,
+.krds-btn.redbd.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.redbd[disabled]:hover,
+.krds-btn.redbd.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+
+ /** 블랙 */
+.krds-btn.red {
+    background-color: #EB6053;
+    border-color: #EB6053;
+    color: #fff;
+}
+
+.krds-btn.red:not(.icon) .svg-icon {
+    background-color: #ffffff;
+}
+
+.krds-btn.red:hover {
+    background-color: #DE3412;
+}
+
+.krds-btn.red:active,
+.krds-btn.red:focus {
+    background-color: #EB6053;
+}
+
+.krds-btn.red[disabled],
+.krds-btn.red.disabled {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.red[disabled]:not(.icon) .svg-icon,
+.krds-btn.red.disabled:not(.icon) .svg-icon {
+    background-color: var(--krds-button--color-secondary-text-disabled);
+}
+
+.krds-btn.red[disabled]:hover,
+.krds-btn.red.disabled:hover {
+    background-color: var(--krds-button--color-secondary-fill-disabled);
+    border-color: var(--krds-button--color-secondary-border-disabled);
+    color: var(--krds-button--color-secondary-text-disabled);
+}
+
+
+
+
 
 /** 딥 블루*/
 .krds-btn.deepBlue {

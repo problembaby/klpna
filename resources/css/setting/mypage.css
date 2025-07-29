@@ -219,7 +219,7 @@ line-height: 150%; /* 27px */}
 
 .krds-badge.in-person, .krds-badge.in-noPerson, .krds-badge.online{ background-color: #FFF3F5; color:#D92602; display: inline; flex:0 0 auto}
 
-.edu-cont-top{display: flex; gap:10px; align-items: center; margin-bottom: 10px;}
+.edu-cont-top{display: flex; gap:5px; align-items: center; margin-bottom: 10px;}
 .edu-cont-top .subject{color: var(--color-text-basic, #0D0E10);
 font-size: 16px;
 font-style: normal;
@@ -940,6 +940,84 @@ display: -webkit-box;
 -webkit-line-clamp: 2;
 flex: 1 0 0;}
 
+/************************************
+교육현황
+*************************************/
+
+
+
+
+.edu-subject-area{display: flex; gap:10px; width: 100%;}
+.edu-subject-area .left{flex: 1 auto;}
+.edu-subject-area .right{padding:0 20px; display: flex; align-items: center;}
+
+.ico-plus-circle::before{
+  content:"";
+  display: block;
+  background: url(../../img/sub/plus-circle.svg)no-repeat;
+  width:24px;
+  height:25px;
+}
+
+.bosu-link{
+  padding:5px 10px;
+gap: 2px;
+border-radius: 4px;
+display: inline-block;
+border:1px solid #0050CA;
+color: var(--color-primary, #0050CA);
+text-align: center;
+font-size: 14px;
+font-weight: 400;
+line-height: 17px;
+}
+
+
+.edu-stat .deny-vaild{font-size: 14px; color: #DE3412; line-height: 17px!important;}
+.edu-stat .vaild{font-size: 14px; color: #0050CA; line-height: 17px!important;}
+.edu-stat .comple-before{font-size: 14px; }
+
+
+.o-list > li{
+  color: var(--color-text-basic, #0D0E10);
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 180%;
+}
+.o-list > li > .o-list li  {
+  color: var(--color-text-basic, #0D0E10);
+font-size: 14px;
+font-weight: 400;
+}
+.indent{margin-left:10px}
+
+.helper-title{display: flex; align-items: center; gap:5px; font-size: 17px; margin-bottom: 5px;}
+.ico-chk-sky{
+  content:"";
+  display: block;
+  background: url(../../img/icon/ico-chk-sky.svg);
+  width: 16px;
+  height: 16px;
+} 
+
+.receipt-list{display: flex; flex-direction: column; gap:10px}
+.receipt-list li{display: flex; flex-direction: row; justify-content: space-between; 
+padding: 20px 30px;
+align-items: center; background: var(--color-bg-secondary, #F7F8FB); }
+
+.receipt-list li > p{display: flex; align-items: center; gap:5px}
+.receipt-list li > p::before{
+  display:inline-block;
+  content:"";
+  background-color: #0D0E10;
+  width: 4px;
+  height:4px;
+  border-radius: 50%;
+}
+
+.ico-print-wh::before{content:""; background: url(../../img/icon/ico-print-wh.svg)no-repeat; display: block; width: 20px; height:20px; margin-left:5px;}
+
 /** 노트북 */
 @media (max-width: 1440px) {}
 
@@ -1026,6 +1104,8 @@ flex: 1 0 0;}
     height: 150px;
     background-size: contain;
 }
+
+
 
   }
 
