@@ -1025,6 +1025,33 @@ align-items: center; background: var(--color-bg-secondary, #F7F8FB); }
 
 
 
+td.cell-subject .smallBtn {
+display: inline-flex!important;
+height: 26px;
+padding: 0px 12px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+border-radius: 4px;
+border: 1px solid #CCC;
+background: #FFF;
+font-size: 13px;
+}
+td.cell-subject .smallBtn:hover{
+    background-color: #C6D0D8;
+}
+
+td.cell-subject .subject-title{display: flex!important; align-items: center; gap:10px}
+td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
+
+
+.ico-splay::before{
+    display: block;
+    content:"";
+    background: url(../../img/icon/ico-play.svg)no-repeat;
+    width: 16px;
+    height: 16px;
+}
 
 .ico-splay::before{
     display: block;
@@ -1103,6 +1130,27 @@ line-height: 150%; /* 27px */
 
 .select-subject li .mark::before{display: block; content:""; background: #C6C6C6; width: 1px; height:12px}
 
+.sch-sort-chklist{display: flex; flex-direction: row; gap:10px; margin-right: 10px;}
+
+.sch-sort-chklist .krds-check-area {
+    display: flex;
+    gap: 10px;
+}
+
+.sch-sort .right{display: flex; gap: 0.5rem }
+
+
+.krds-modal .modal-dialog .modal-btn.center{justify-content: center!important;}
+
+
+.videoSample .s-name{
+    font-size: 24px;
+}
+
+.videoSample .c-name{
+    color: var(--color-text-title, #0D0E10);
+    font-size: 18px;
+}
 
 
 
@@ -1284,7 +1332,13 @@ font-size: 18px;
     display: none;
   }
   .select-subject li .date{font-size:13px}
-  .select-subject li .date{font-size:13px}
+
+
+  .sch-sort-chklist{display: flex; flex-direction: row; gap:10px}
+.search-list-top .sch-sort.in-checkbox {
+    flex-direction: column;
+    align-items: flex-end;
+}
   }
 
 

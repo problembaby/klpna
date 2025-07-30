@@ -92,33 +92,33 @@
                 <script>
                     //유효성 검사
 
-                    function eduChange_apply(){
+                    function eduChange_apply() {
                         const $checked = $('input[name="subject-radio"]:checked');
 
-                            if ($checked.length === 0) {
-                                alert("과정을 선택해주세요.");
-                                return;
-                            }
-
-                            const subjectName = $checked.data('subject') || '선택한 과정';
-
-                            if (!confirm("과정을 변경하실 경우, '추가 결제가 필요합니다.'\n변경하시겠습니까?")) {
-                                return; 
-                            }
-
-                            if (!confirm("정말로 교육 변경 신청을 하시겠습니까?")) {
-                                return;
-                            }
-
-                            alert("변경되었습니다.");
-
-                           
-                            //$('form').submit(); 
+                        if ($checked.length === 0) {
+                            alert("과정을 선택해주세요.");
+                            return;
                         }
 
-                    
-                    
-       
+                        const subjectName = $checked.data('subject') || '선택한 과정';
+
+                        if (!confirm("과정을 변경하실 경우, '추가 결제가 필요합니다.'\n변경하시겠습니까?")) {
+                            return;
+                        }
+
+                        if (!confirm("정말로 교육 변경 신청을 하시겠습니까?")) {
+                            return;
+                        }
+
+                        alert("변경되었습니다.");
+
+
+                        //$('form').submit(); 
+                    }
+
+
+
+
                 </script>
 
 
@@ -163,26 +163,7 @@
 
                                         <div class="sch-select select-style">
                                             <select class="krds-form-select medium" title="선택" id="ntt-type">
-                                                <option value="">시도회 전체</option>
-                                                <option value="대한간호조무사협회 중앙회">대한간호조무사협회 중앙회</option>
-                                                <option value="서울시간호조무사회">서울시간호조무사회</option>
-                                                <option value="부산시간호조무사회">부산시간호조무사회</option>
-                                                <option value="대구시간호조무사회">대구시간호조무사회</option>
-                                                <option value="인천시간호조무사회">인천시간호조무사회</option>
-                                                <option value="광주·전남간호조무사회">광주·전남간호조무사회</option>
-                                                <option value="대전·충남간호조무사회">대전·충남간호조무사회</option>
-                                                <option value="울산·경남간호조무사회">울산·경남간호조무사회</option>
-                                                <option value="경기도간호조무사회">경기도간호조무사회</option>
-                                                <option value="강원도간호조무사회">강원도간호조무사회</option>
-                                                <option value="충청북도간호조무사회">충청북도간호조무사회</option>
-                                                <option value="전북도간호조무사회">전북도간호조무사회</option>
-                                                <option value="경상북도간호조무사회">경상북도간호조무사회</option>
-                                                <option value="제주도간호조무사회">제주도간호조무사회</option>
-                                            </select>
-                                        </div>
-                                        <div class="sch-select select-style">
-                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
-                                                <option value="">접수상태 전체</option>
+                                                <option value="">교육분야 전체</option>
                                                 <option value="접수중">접수중</option>
                                                 <option value="접수마감">접수마감</option>
                                             </select>
@@ -207,19 +188,38 @@
                             <ul class="sch-info" aria-live="polite">
                                 <li>총 <span class="point">24</span>건</li>
                             </ul>
-                            <div class="sch-sort gap-2">
-                                <select name="" id="" class="krds-form-select small">
-                                    <option value="20">20</option>
-                                    <option value="30">30</option>
-                                    <option value="50">50</option>
-                                </select>
-                                <button type="button" class="krds-btn black small">적용</button>
+                            <div class="sch-sort gap-2 in-checkbox">
+                                <div class="sch-sort-chklist">
+                                    <div class="label">교육형태:</div>
+                                    <div class="krds-check-area">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_1">
+                                            <label for="chk_1">온라인</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_2" checked>
+                                            <label for="chk_2">대면</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_3">
+                                            <label for="chk_3">비대면</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <select name="" id="" class="krds-form-select small">
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <button type="button" class="krds-btn black small">적용</button>
+                                </div>
                             </div>
                         </div>
                         <!-- //검색 결과 : 리스트 상단 -->
 
                         <!-- 검색 결과 : 리스트 -->
-                        <div class="table-board borad-list black">
+                        <div class="table-board borad-list">
                             <table>
                                 <caption class="sr-only">대면교육일정 일정 목록이며 NO, 과정명,일자/시간/장소 접수상태, 과정선택을 제공합니다.</caption>
                                 <colgroup>
@@ -245,10 +245,19 @@
                                         <td class="num">1</td>
                                         <td class="cell-subject">
                                             <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">아동간호</span>
                                                 <a href="#none" title="페이지 이동" target="_self" class="open-modal"
                                                     data-target="modal_detail">
                                                     <p class="ellipsis-2 subject-">간호실무의 개념 및 병태생리</p>
                                                 </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
+
+                                                </div>
                                             </div>
                                         </td>
                                         <td class="edu-period">
@@ -259,7 +268,7 @@
                                                 </li>
                                                 <li>
                                                     <i class="ico-time"></i>
-                                                    <p>4H</p>
+                                                    <p>14:00 ~ 16:00</p>
                                                 </li>
                                                 <li>
                                                     <i class="ico-location"></i>
@@ -288,11 +297,19 @@
                                         <td class="num">1</td>
                                         <td class="cell-subject">
                                             <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
                                                 <a href="#none" title="페이지 이동" target="_self" class="open-modal"
                                                     data-target="modal_detail">
-                                                    <p class="ellipsis-2 subject-name">현대 정신건강의 실무</p>
+                                                    <p class="ellipsis-2 subject-">간호실무의 개념 및 병태생리</p>
                                                 </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
 
+                                                </div>
                                             </div>
                                         </td>
                                         <td class="edu-period">
@@ -303,7 +320,7 @@
                                                 </li>
                                                 <li>
                                                     <i class="ico-time"></i>
-                                                    <p>4H</p>
+                                                    <p>14:00 ~ 16:00</p>
                                                 </li>
                                                 <li>
                                                     <i class="ico-location"></i>
@@ -332,12 +349,19 @@
                                         <td class="num">2</td>
                                         <td class="cell-subject">
                                             <div class="subject-title">
+                                                <span class="krds-badge small bg-light-primary">지역사회간호</span>
                                                 <a href="#none" title="페이지 이동" target="_self" class="open-modal"
                                                     data-target="modal_detail">
-                                                    <p class="ellipsis-2 subject-name">과정명이 최대 2줄로 나옴, 말 줄임 적용
-                                                    </p>
+                                                    <p class="ellipsis-2 subject-">간호실무의 개념 및 병태생리</p>
                                                 </a>
+                                                <div class="btn-list">
+                                                    <button type="button" class="smallBtn open-modal"
+                                                        data-target="modal_sample">
+                                                        <i class="ico-splay"></i>
+                                                        샘플보기
+                                                    </button>
 
+                                                </div>
                                             </div>
                                         </td>
                                         <td class="edu-period">
@@ -348,7 +372,7 @@
                                                 </li>
                                                 <li>
                                                     <i class="ico-time"></i>
-                                                    <p>4H</p>
+                                                    <p>14:00 ~ 16:00</p>
                                                 </li>
                                                 <li>
                                                     <i class="ico-location"></i>
@@ -419,7 +443,7 @@
 
 
                         <div class="btnList-sort right">
-                            <button type="button" class="krds-btn blue">뒤로</button>
+                            <button type="button" class="krds-btn blue">목록</button>
                             <button type="button" class="krds-btn" onclick="eduChange_apply()">변경신청 <i
                                     class="svg-icon ico-angle right"></i></button>
                         </div>
@@ -444,7 +468,48 @@
 </html>
 
 
+    <!-- 모달 : 샘플보기 -->
 
+    <!--    <section id="modal_sample" class="videoSample krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_sample" data-type="medium"> -->
+    <section id="modal_sample" class="videoSample krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample"
+        data-type="medium">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <p class="c-name">과정명</p>
+                    <h2 id="tit_modal_sample" class="s-name">2025년 기본공통과정(필수과목 포함) <span
+                            class="fc-blue fw-lighter">교육년도:2025</span>
+                    </h2>
+                </div>
+                <!-- //modal title -->
+                <!-- modal contents -->
+                <div class="modal-conts">
+                    <div class="video-area">
+                        <video width="100%" height="400" controls>
+                            <source src="#" type="video/mp4">
+                            브라우저가 비디오 태그를 지원하지 않습니다.
+                        </video>
+                    </div>
+                </div>
+                <!-- //modal contents -->
+                <!-- modal btn -->
+                <div class="modal-btn btn-wrap center">
+                    <button type="button" class="krds-btn medium black close-modal">학습종료</button>
+                </div>
+                <!-- //modal btn -->
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+
+    <!-- // 모달 : 샘플보기 -->
 
 
 
