@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+    <title> 교육변경 | 교육현황 | 마이페이지 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/lib/select2/select2.min.css" />
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../resources/lib/select2/select2.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">마이페이지</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">교육현황</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">강의실</a>
+                        </li>
+                        <li class="lnb-item">
+                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-vf9gqcy"
+                                aria-expanded="ture">회비/기금내역</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-vf9gqcy">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회비 납부내역</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">정치세력화 추진모금내역</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노조설립 약정금 납부내역</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">포인트 내역</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">1:1문의</a>
+                        </li>
+
+                        <li class="lnb-item">
+                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-vf9gqcy"
+                                aria-expanded="ture">나의게시물</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-vf9gqcy">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link ">신고센터</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노무상담</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">대체인력 구인</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">회원정보</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+
+
+                <script>
+                    //유효성 검사
+
+                    function eduChange_apply(){
+                        const $checked = $('input[name="subject-radio"]:checked');
+
+                            if ($checked.length === 0) {
+                                alert("과정을 선택해주세요.");
+                                return;
+                            }
+
+                            const subjectName = $checked.data('subject') || '선택한 과정';
+
+                            if (!confirm("과정을 변경하실 경우, '추가 결제가 필요합니다.'\n변경하시겠습니까?")) {
+                                return; 
+                            }
+
+                            if (!confirm("정말로 교육 변경 신청을 하시겠습니까?")) {
+                                return;
+                            }
+
+                            alert("변경되었습니다.");
+
+                           
+                            //$('form').submit(); 
+                        }
+
+                    
+                    
+       
+                </script>
+
+
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
+                            <li><a href="#;" class="txt">마이페이지</a></li>
+                            <li><a href="#;" class="txt">교육현황</a></li>
+                            <li><a href="#;" class="txt">교육변경</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">교육변경</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+
+
+                    <!--마이페이지-->
+                    <div class="sub-content mypage">
+                        <!-- 검색 입력폼 -->
+                        <form id="" name="" action="#" method="post" class="mt30">
+                            <fieldset class="bbs-search-wrap">
+                                <div class="search-top-box full">
+                                    <div class="form-col-group">
+
+                                        <div class="sch-select select-style">
+                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                                <option value="">시도회 전체</option>
+                                                <option value="대한간호조무사협회 중앙회">대한간호조무사협회 중앙회</option>
+                                                <option value="서울시간호조무사회">서울시간호조무사회</option>
+                                                <option value="부산시간호조무사회">부산시간호조무사회</option>
+                                                <option value="대구시간호조무사회">대구시간호조무사회</option>
+                                                <option value="인천시간호조무사회">인천시간호조무사회</option>
+                                                <option value="광주·전남간호조무사회">광주·전남간호조무사회</option>
+                                                <option value="대전·충남간호조무사회">대전·충남간호조무사회</option>
+                                                <option value="울산·경남간호조무사회">울산·경남간호조무사회</option>
+                                                <option value="경기도간호조무사회">경기도간호조무사회</option>
+                                                <option value="강원도간호조무사회">강원도간호조무사회</option>
+                                                <option value="충청북도간호조무사회">충청북도간호조무사회</option>
+                                                <option value="전북도간호조무사회">전북도간호조무사회</option>
+                                                <option value="경상북도간호조무사회">경상북도간호조무사회</option>
+                                                <option value="제주도간호조무사회">제주도간호조무사회</option>
+                                            </select>
+                                        </div>
+                                        <div class="sch-select select-style">
+                                            <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                                <option value="">접수상태 전체</option>
+                                                <option value="접수중">접수중</option>
+                                                <option value="접수마감">접수마감</option>
+                                            </select>
+                                        </div>
+                                        <div class="bbs-search-form-wrap">
+                                            <input type="text" id="search-wrd" class="krds-input medium"
+                                                placeholder="과정명을 입력하세요." title="키워드 입력">
+                                        </div>
+                                        <button type="button" class="krds-btn medium black">
+                                            <i class="svg-icon ico-sch"></i>
+                                            검색
+                                        </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!-- //검색 입력폼 -->
+
+
+                        <!-- 검색 결과 : 리스트 상단 -->
+                        <div class="search-list-top">
+                            <ul class="sch-info" aria-live="polite">
+                                <li>총 <span class="point">24</span>건</li>
+                            </ul>
+                            <div class="sch-sort gap-2">
+                                <select name="" id="" class="krds-form-select small">
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                </select>
+                                <button type="button" class="krds-btn black small">적용</button>
+                            </div>
+                        </div>
+                        <!-- //검색 결과 : 리스트 상단 -->
+
+                        <!-- 검색 결과 : 리스트 -->
+                        <div class="table-board borad-list black">
+                            <table>
+                                <caption class="sr-only">대면교육일정 일정 목록이며 NO, 과정명,일자/시간/장소 접수상태, 과정선택을 제공합니다.</caption>
+                                <colgroup>
+                                    <col width="8%;">
+                                    <col width="auto">
+                                    <col width="20%">
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">과정명</th>
+                                        <th scope="col">일자/시간/장소</th>
+                                        <th scope="col">신청현황</th>
+                                        <th scope="col">과정선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="display:none">
+                                        <td class="no-contents" colspan="5">등록 된 게시물이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-">간호실무의 개념 및 병태생리</p>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>2025.05.03 (토)</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4H</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-location"></i>
+                                                    <p>서귀포시 청사 강의실</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-appl">
+                                            <div class="td-appl-area">
+                                                <div class="appl-stat ing">접수중</div>
+                                                <!-- <div class="appl-stat end">접수마감</div> -->
+                                                <div class="appl-num">
+                                                    (<span class="red fw-bold">28</span>/100)
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject-radio" class="chk-subject"
+                                                    value="S001" data-subject="간호실무의 개념 및 병태생리 (4시간)" id="rdo-1">
+                                                <label for="rdo-1"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">1</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">현대 정신건강의 실무</p>
+                                                </a>
+
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>2025.05.03 (토)</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4H</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-location"></i>
+                                                    <p>서귀포시 청사 강의실</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-appl">
+                                            <div class="td-appl-area">
+                                                <div class="appl-stat ing">접수중</div>
+                                                <!-- <div class="appl-stat end">접수마감</div> -->
+                                                <div class="appl-num">
+                                                    (<span class="red fw-bold">28</span>/100)
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject-radio" class="chk-subject"
+                                                    value="S002" data-subject="현대 정신건강의 실무 (4시간)" id="rdo-2">
+                                                <label for="rdo-2"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td class="cell-subject">
+                                            <div class="subject-title">
+                                                <a href="#none" title="페이지 이동" target="_self" class="open-modal"
+                                                    data-target="modal_detail">
+                                                    <p class="ellipsis-2 subject-name">과정명이 최대 2줄로 나옴, 말 줄임 적용
+                                                    </p>
+                                                </a>
+
+                                            </div>
+                                        </td>
+                                        <td class="edu-period">
+                                            <ul class="edu-priod-list">
+                                                <li>
+                                                    <i class="ico-calendar"></i>
+                                                    <p>2025.05.03 (토)</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-time"></i>
+                                                    <p>4H</p>
+                                                </li>
+                                                <li>
+                                                    <i class="ico-location"></i>
+                                                    <p>서귀포시 청사 강의실</p>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="td-appl">
+                                            <div class="td-appl-area">
+                                                <!-- <div class="appl-stat ing">접수중</div> -->
+                                                <div class="appl-stat end">접수마감</div>
+                                                <div class="appl-num">
+                                                    (<span class="red fw-bold">100</span>/100)
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="td-chk">
+                                            <div class="krds-form-check large">
+                                                <input type="radio" name="subject-radio" class="chk-subject"
+                                                    value="S003" data-subject="과정명이 최대 2줄로 나옴, 말 줄임 적용 (4시간)" id="rdo-3"
+                                                    disabled>
+                                                <label for="rdo-3"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //검색 결과 : 리스트 -->
+
+
+
+                        <!-- 페이지네이션 영역 -->
+                        <div class="krds-pagination">
+                            <a class="page-navi prev disabled" href="#">이전</a>
+                            <div class="page-links">
+                                <a class="page-link" href="#">1</a>
+                                <a class="page-link" href="#">2</a>
+                                <a class="page-link" href="#">3</a>
+                                <a class="page-link active" href="#">4</a>
+                                <a class="page-link" href="#">5</a>
+                                <a class="page-link" href="#">6</a>
+                                <a class="page-link" href="#">7</a>
+                                <a class="page-link" href="#">8</a>
+                                <span class="page-link link-dot"></span>
+                                <a class="page-link" href="#">99</a>
+                            </div>
+                            <a class="page-navi next" href="#">다음</a>
+                        </div>
+                        <!-- //페이지네이션 영역 -->
+
+
+                        <!-- 선택된 : 과정명 노출 -->
+                        <div class="select-subject-area">
+                            <div class="label">선택한 과정</div>
+                            <ul class="select-subject">
+                                <li>
+                                    <p><i class="ico-chk-list"></i>현대 정신건강의 실무</p>
+                                    <div class="mark"></div>
+                                    <div class="date">2025.05.03 (토)</div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="btnList-sort right">
+                            <button type="button" class="krds-btn blue">뒤로</button>
+                            <button type="button" class="krds-btn" onclick="eduChange_apply()">변경신청 <i
+                                    class="svg-icon ico-angle right"></i></button>
+                        </div>
+
+
+                    </div>
+                    <!--//마이페이지-->
+
+
+
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
