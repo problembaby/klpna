@@ -332,6 +332,18 @@ input[type="text"].datepicker {
     cursor: pointer;
     
 }
+input[type="text"].monthPicker {
+    padding: 0 50px 0 20px;
+    background: url(../../krds/img/component/icon/ico_calendar.svg) no-repeat right;
+    background-color: #fff;
+    background-size: 18px;
+    background-position: right 10px center;
+    cursor: pointer;
+    
+}
+
+.ui-datepicker-title{display: flex; gap:10px; align-items: center; justify-content: center;}
+
 
 
 /**------------------------------------------ 
@@ -400,7 +412,6 @@ html .ui-button.ui-state-disabled:active {
 }
 .ui-datepicker .ui-datepicker-title {
     margin: 0 2.3em;
-    line-height: 3.8em;
 }
 .ui-state-active, .ui-widget-content .ui-state-active, 
 .ui-widget-header .ui-state-active, a.ui-button:active, 
@@ -410,6 +421,20 @@ html .ui-button.ui-state-disabled:active {
   font-weight: normal;
   color: #fff !important;
 }
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 45%;
+    height: 30px;
+    padding:0 10px;
+    background-position: center right 10px;
+    background-size: 10px !important;
+    border-radius: 5px;
+    font-size: 13px;
+    background-image: url(../../krds/img/component/icon/ico_angle.svg);
+    background-repeat: no-repeat;
+}
+
+
 
 
 .mob-overflow-icon{display: none;}

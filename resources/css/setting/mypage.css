@@ -944,7 +944,9 @@ flex: 1 0 0;}
 교육현황
 *************************************/
 
-
+.ico-tooltip::before{ content:""; display: block; background: url(../../img/icon/ico-tooltip.svg)no-repeat; width: 21px; height:20px
+}
+.tooltip-area{display: flex; align-items: center; gap:3px}
 
 
 .edu-subject-area{display: flex; gap:10px; width: 100%;}
@@ -1087,6 +1089,13 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
     width: 18px;
     height: 19px;
 }
+.ico-won::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-won.svg)no-repeat;
+    width: 16px;
+    height: 16px;
+}
 
 .appl-stat{
     color: var(--color-text-bosu_txt, #0050CA);
@@ -1151,6 +1160,9 @@ line-height: 150%; /* 27px */
     color: var(--color-text-title, #0D0E10);
     font-size: 18px;
 }
+
+.table-board .credit-area{display: flex; flex-direction: column; gap:5px; align-items: center;}
+.table-board .credit-area p{font-size: 14px;}
 
 
 
