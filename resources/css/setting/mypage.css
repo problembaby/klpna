@@ -2037,6 +2037,13 @@ font-size: 18px;
 }
 .edu-list-item .title .mark{display: none;}
 
+.edu-complite-area .text {
+    font-size: 20px;
+}
+
+  .acct-issue-text .num {
+      font-size: 20px;
+  }
 
   }
 
