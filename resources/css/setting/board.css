@@ -2914,7 +2914,7 @@ table tbody tr td .list-col{
 @media (max-width: 767px) {
 
   .table-overscroll{overflow-x: auto;}
-  .table-overscroll table{min-width: 550px;}
+  .table-overscroll table{min-width: 1000px;}
   .table-board table tbody tr td.txt-ell-2::after {
     display: none;
   }

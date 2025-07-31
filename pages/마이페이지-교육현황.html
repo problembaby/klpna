@@ -153,451 +153,465 @@
                     <!-- 검색 결과 : 리스트 -->
 
 
-                    <div class="table table-overscroll border edu-stat">
-                        <table>
-                            <caption class="sr-only">교육현황 년도, 과정명, 변경, 취소, 발급/인쇄, 대체인정 을 확인할 수 있는 테이블 입니다.</caption>
-                            <colgroup>
-                                <col width="10%;">
-                                <col width="auto">
-                                <col width="10%;">
-                                <col width="10%;">
-                                <col width="10%">
-                                <col width="10%">
-                            </colgroup>
-                            <thead>
-                                <tr class="border-black">
-                                    <th scope="col">년도</th>
-                                    <th scope="col">과정명</th>
-                                    <th scope="col">변경</th>
-                                    <th scope="col">취소</th>
-                                    <th scope="col">발급/인쇄</th>
-                                    <th scope="col">대체인정</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="display: none;">
-                                    <td class="no-contents" colspan="6">데이터가 없습니다.</td>
-                                </tr>
+                    <div class="table-overscroll-wrap">
+                        <div class="mob-overflow-icon"><!--모바일 스크롤아이콘--></div>
 
-                                <tr>
-                                    <td class="edu-td renew" rowspan="2">
-                                        <div class="year">2025</div>
-                                        <div class="txt">보수교육(정기)</div>
-                                    </td>
-                                    <td>
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <!-- <span class="krds-badge small in-person">온라인</span> -->
-                                                    <span class="krds-badge small in-person">대면</span>
-                                                    <!-- <span class="krds-badge small in-person">비대면</span>
-                                                    <span class="krds-badge small bg-light-primary">이동간호</span> -->
-                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                        <div class="table table-overscroll border edu-stat">
+                            <table>
+                                <caption class="sr-only">교육현황 구분, 과정명, 변경, 취소, 발급/인쇄, 대체인정 을 확인할 수 있는 테이블 입니다.</caption>
+                                <colgroup>
+                                    <col width="10%;">
+                                    <col width="auto">
+                                    <col width="10%;">
+                                    <col width="10%;">
+                                    <col width="10%">
+                                    <col width="10%">
+                                </colgroup>
+                                <thead>
+                                    <tr class="border-black">
+                                        <th scope="col">구분</th>
+                                        <th scope="col">과정명</th>
+                                        <th scope="col">변경</th>
+                                        <th scope="col">취소</th>
+                                        <th scope="col">발급/인쇄</th>
+                                        <th scope="col">대체인정</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="display: none;">
+                                        <td class="no-contents" colspan="6">데이터가 없습니다.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="edu-td renew" rowspan="2">
+                                            <div class="year">2025</div>
+                                            <div class="txt">보수교육(정기)</div>
+                                        </td>
+                                        <td>
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <!-- <span class="krds-badge small in-person">온라인</span> -->
+                                                        <span class="krds-badge small in-person">대면</span>
+                                                        <!-- <span class="krds-badge small in-person">비대면</span>
+                                                        <span class="krds-badge small bg-light-primary">이동간호</span> -->
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토)</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토)</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="right">
-                                                <button type="button" class="open-modal" data-target="modal_detail">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="krds-btn small redbd">변경</button>
-                                        <!-- <button type="button" class="krds-btn small red">유료변경</button> -->
-                                    </td>
-                                    <td rowspan="2">
-                                        <button type="button" class="krds-btn small black">취소</button>
-                                        <!-- <span>환불대기</span>
-                                        <span>환불완료</span> -->
-                                    </td>
-                                    <td>
-
-                                        <div class="list-col">
-                                            <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
-                                            <!-- <button type="button" class="krds-btn small secondary open-modal" data-target="cert">이수증</button>
-                                            <button type="button" class="krds-btn small open-modal ac_deco" data-target="cert">수료증</button> -->
-                                            <div class="comple-before">이수 전</div>
-                                            <!--  <div class="deny-vaild">미 이수</div> -->
-                                        </div>
-
-                                    </td>
-                                    <td rowspan="2">
-                                        -
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-
-                                                    <span class="krds-badge small bg-light-primary">이동간호</span>
-                                                    <p class="subject ellipsis-1">기본공통과정</p>
+                                                <div class="right">
+                                                    <button type="button" class="open-modal" data-target="modal_detail">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토)</span>
-                                                    </li>
-                                                </ul>
                                             </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="krds-btn small redbd">변경</button>
+                                            <!-- <button type="button" class="krds-btn small red">유료변경</button> -->
+                                        </td>
+                                        <td rowspan="2">
+                                            <button type="button" class="krds-btn small black">취소</button>
+                                            <!-- <span>환불대기</span>
+                                            <span>환불완료</span> -->
+                                        </td>
+                                        <td>
+
+                                            <div class="list-col">
+                                                <button type="button" class="krds-btn small tertiary open-modal"
+                                                    data-target="receipt">영수증</button>
+                                                <!-- <button type="button" class="krds-btn small secondary open-modal" data-target="cert">이수증</button>
+                                                <button type="button" class="krds-btn small open-modal ac_deco" data-target="cert">수료증</button> -->
+                                                <div class="comple-before">이수 전</div>
+                                                <!--  <div class="deny-vaild">미 이수</div> -->
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="krds-btn small red">유료변경</button>
-                                    </td>
 
-                                    <td>
+                                        </td>
+                                        <td rowspan="2">
+                                            -
+                                        </td>
 
-                                        <div class="list-col">
-                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
-                                            <div class="comple-before">이수 전</div>
-
-                                        </div>
-
-                                    </td>
+                                    </tr>
 
 
-                                </tr>
+                                    <tr>
 
+                                        <td>
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
 
-                                <tr>
-                                    <td class="edu-td job">
-                                        <div class="year">2025</div>
-                                        <div class="txt">직무교육(대체인정)</div>
-                                    </td>
-                                    <td>
-
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <span class="krds-badge small in-person">온라인</span>
-                                                    <span class="krds-badge small in-person">대면</span>
-                                                    <span class="krds-badge small in-person">비대면</span>
-                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                        <span class="krds-badge small bg-light-primary">이동간호</span>
+                                                        <p class="subject ellipsis-1">기본공통과정</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토)</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토)</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-
-
-
-                                    </td>
-                                    <td>
-                                        <button type="button" class="krds-btn small redbd">변경</button>
-
-                                    </td>
-                                    <td>
-                                        <button type="button" class="krds-btn small black">취소</button>
-
-                                    </td>
-                                    <td>
-
-                                        <div class="list-col">
-                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
-
-                                            <div class="comple-before">이수 전</div>
-
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#" target="_blank" class="bosu-link" title="‘보수교육인정 신청’ 페이지로 이동">
-                                            보수교육<br>
-                                            인정신청
-                                        </a>
-                                    </td>
-
-
-                                </tr>
-
-                                <tr>
-                                    <td class="edu-td job">
-                                        <div class="year">2025</div>
-                                        <div class="txt">직무교육</div>
-                                    </td>
-                                    <td>
-
-
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <span class="krds-badge small in-person">온라인</span>
-                                                    <span class="krds-badge small in-person">대면</span>
-                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">7.01 (월), 07.02 (화), 07.03 (수), 07.08 (월),
-                                                            07.09
-                                                            (화)</span>
-                                                    </li>
-                                                </ul>
                                             </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="krds-btn small red">유료변경</button>
+                                        </td>
+
+                                        <td>
+
+                                            <div class="list-col">
+                                                <button type="button" class="krds-btn small tertiary open-modal"
+                                                    data-target="receipt">영수증</button>
+                                                <div class="comple-before">이수 전</div>
+
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        -
 
-                                    </td>
-                                    <td>
-                                        <div>환불대기</div>
-                                    </td>
-                                    <td>
-
-                                        <div class="list-col">
-                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
-
-                                            <div class="deny-vaild">미 이수</div>
-                                        </div>
+                                        </td>
 
 
-                                    </td>
-                                    <td>
-                                        <span class="deny-vaild">
-                                            보수교육<br>
-                                            인정불가
-                                        </span>
-                                    </td>
+                                    </tr>
 
 
-                                </tr>
+                                    <tr>
+                                        <td class="edu-td job">
+                                            <div class="year">2025</div>
+                                            <div class="txt">직무교육(대체인정)</div>
+                                        </td>
+                                        <td>
 
-
-                                <tr>
-                                    <td class="edu-td renew" rowspan="2">
-                                        <div class="year">2025</div>
-                                        <div class="txt">직무교육</div>
-                                    </td>
-                                    <td>
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <span class="krds-badge small in-person">비대면</span>
-                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-person">온라인</span>
+                                                        <span class="krds-badge small in-person">대면</span>
+                                                        <span class="krds-badge small in-person">비대면</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토)</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토)</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td rowspan="2">
-                                        -
-
-                                    </td>
-                                    <td rowspan="2">
-                                        <div>환불완료</div>
-                                    </td>
-                                    <td rowspan="2">
-
-                                        -
-
-                                    </td>
-                                    <td rowspan="2">
-                                        -
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-
-                                    <td>
-
-
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <span class="krds-badge small in-person">온라인</span>
-                                                    <p class="subject ellipsis-1">기본공통과정</p>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토)</span>
-                                                    </li>
-                                                </ul>
                                             </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
+
+
+
+                                        </td>
+                                        <td>
+                                            <button type="button" class="krds-btn small redbd">변경</button>
+
+                                        </td>
+                                        <td>
+                                            <button type="button" class="krds-btn small black">취소</button>
+
+                                        </td>
+                                        <td>
+
+                                            <div class="list-col">
+                                                <button type="button" class="krds-btn small tertiary open-modal"
+                                                    data-target="receipt">영수증</button>
+
+                                                <div class="comple-before">이수 전</div>
+
                                             </div>
-                                        </div>
-
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-                                    <td class="edu-td job">
-                                        <div class="year">2025</div>
-                                        <div class="txt">직무교육</div>
-                                    </td>
-                                    <td>
+                                        </td>
+                                        <td>
+                                            <a href="#" target="_blank" class="bosu-link" title="‘보수교육인정 신청’ 페이지로 이동">
+                                                보수교육<br>
+                                                인정신청
+                                            </a>
+                                        </td>
 
 
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="edu-td job">
+                                            <div class="year">2025</div>
+                                            <div class="txt">직무교육</div>
+                                        </td>
+                                        <td>
+
+
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-person">온라인</span>
+                                                        <span class="krds-badge small in-person">대면</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">7.01 (월), 07.02 (화), 07.03 (수), 07.08
+                                                                (월),
+                                                                07.09
+                                                                (화)</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토) 까지</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        -
-
-                                    </td>
-                                    <td>
-                                        <div>환불대기</div>
-                                    </td>
-                                    <td>
-
-                                        <div class="list-col">
-                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
-                                            <button type="button" class="krds-btn small secondary open-modal" data-target="cert">이수증</button>
-                                        </div>
-
-
-                                    </td>
-                                    <td>
-                                        <span class="vaild">
-                                            보수교육<br>
-                                            인정완료
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-                                <tr>
-                                    <td class="edu-td job">
-                                        <div class="year">2025</div>
-                                        <div class="txt">직무교육</div>
-                                    </td>
-                                    <td>
-
-
-                                        <div class="edu-subject-area">
-                                            <div class="left">
-                                                <div class="edu-cont-top">
-                                                    <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
                                                 </div>
-                                                <ul class="edu-cont-list">
-                                                    <li>
-                                                        <i class="ico-edu-cal"></i>
-                                                        <span class="text">~ 2025.05.03 (토) 까지</span>
-                                                    </li>
-                                                </ul>
                                             </div>
-                                            <div class="right">
-                                                <button type="button">
-                                                    <span class="sr-only">상세보기</span>
-                                                    <i class="ico-plus-circle"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        -
+                                        </td>
+                                        <td>
+                                            -
 
-                                    </td>
-                                    <td>
-                                        <!-- tooltip : 위치 - 상단 왼쪽 -->
-                                        <div class="tooltip-area">
-                                            <p class="tooltip-txt" >환불거절</p>
-                                                <button type="button" class="ico- krds-tooltip tooltip-box" data-tooltip="이러한 사유로 환불이 거절되었습니다.">
+                                        </td>
+                                        <td>
+                                            <div>환불대기</div>
+                                        </td>
+                                        <td>
+
+                                            <div class="list-col">
+                                                <button type="button" class="krds-btn small tertiary open-modal"
+                                                    data-target="receipt">영수증</button>
+
+                                                <div class="deny-vaild">미 이수</div>
+                                            </div>
+
+
+                                        </td>
+                                        <td>
+                                            <span class="deny-vaild">
+                                                보수교육<br>
+                                                인정불가
+                                            </span>
+                                        </td>
+
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="edu-td renew" rowspan="2">
+                                            <div class="year">2025</div>
+                                            <div class="txt">직무교육</div>
+                                        </td>
+                                        <td>
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-person">비대면</span>
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td rowspan="2">
+                                            -
+
+                                        </td>
+                                        <td rowspan="2">
+                                            <div>환불완료</div>
+                                        </td>
+                                        <td rowspan="2">
+
+                                            -
+
+                                        </td>
+                                        <td rowspan="2">
+                                            -
+                                        </td>
+
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+
+
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <span class="krds-badge small in-person">온라인</span>
+                                                        <p class="subject ellipsis-1">기본공통과정</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="edu-td job">
+                                            <div class="year">2025</div>
+                                            <div class="txt">직무교육</div>
+                                        </td>
+                                        <td>
+
+
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토) 까지</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            -
+
+                                        </td>
+                                        <td>
+                                            <div>환불대기</div>
+                                        </td>
+                                        <td>
+
+                                            <div class="list-col">
+                                                <button type="button" class="krds-btn small tertiary open-modal"
+                                                    data-target="receipt">영수증</button>
+                                                <button type="button" class="krds-btn small secondary open-modal"
+                                                    data-target="cert">이수증</button>
+                                            </div>
+
+
+                                        </td>
+                                        <td>
+                                            <span class="vaild">
+                                                보수교육<br>
+                                                인정완료
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td class="edu-td job">
+                                            <div class="year">2025</div>
+                                            <div class="txt">직무교육</div>
+                                        </td>
+                                        <td>
+
+
+                                            <div class="edu-subject-area">
+                                                <div class="left">
+                                                    <div class="edu-cont-top">
+                                                        <p class="subject ellipsis-1">간호조무사 근골격계 질환에 대해 알아보기</p>
+                                                    </div>
+                                                    <ul class="edu-cont-list">
+                                                        <li>
+                                                            <i class="ico-edu-cal"></i>
+                                                            <span class="text">~ 2025.05.03 (토) 까지</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="right">
+                                                    <button type="button">
+                                                        <span class="sr-only">상세보기</span>
+                                                        <i class="ico-plus-circle"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            -
+
+                                        </td>
+                                        <td>
+                                            <!-- tooltip : 위치 - 상단 왼쪽 -->
+                                            <div class="tooltip-area">
+                                                <p class="tooltip-txt">환불거절</p>
+                                                <button type="button" class="ico- krds-tooltip tooltip-box"
+                                                    data-tooltip="이러한 사유로 환불이 거절되었습니다.">
                                                     <i class="ico-tooltip"></i>
                                                 </button>
-                                        </div>
-                                        <!-- //tooltip : 위치 - 상단 왼쪽 -->
-                                    </td>
-                                    <td>
+                                            </div>
+                                            <!-- //tooltip : 위치 - 상단 왼쪽 -->
+                                        </td>
+                                        <td>
 
-                                        <div class="list-col">
-                                             <button type="button" class="krds-btn small tertiary open-modal" data-target="receipt">영수증</button>
-                                            <button type="button" class="krds-btn small open-modal ac_deco" data-target="cert">수료증</button> 
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="deny-vaild">
-                                            보수교육<br>
-                                            인정불가
-                                        </span>
-                                    </td>
+                                            <div class="list-col">
+                                                <button type="button" class="krds-btn small tertiary open-modal"
+                                                    data-target="receipt">영수증</button>
+                                                <button type="button" class="krds-btn small open-modal ac_deco"
+                                                    data-target="cert">수료증</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="deny-vaild">
+                                                보수교육<br>
+                                                인정불가
+                                            </span>
+                                        </td>
 
-                                </tr>
+                                    </tr>
 
 
 
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- //검색 결과 : 리스트 -->
 
 
                     <div class="helper-box gray mt30">
                         <h3 class="helper-title"><i class="ico-chk-sky"></i>필독사항</h3>
-                        <ol class="o-list">
+                        <ol class="o-list-text">
                             <li>
                                 <span class="num">1.</span>
                                 교육 시작 시 입실 불가 (교통상황 및 주차시간 고려 요망)
@@ -605,7 +619,7 @@
                             <li>
                                 <span class="num">2.</span>
                                 교육 시작 전 수기 접수자는 신분증 확인 후 서명, 교육 종료 후 만족도조사 및 수강확인서를 제출해야 보수교육 이수 인정
-                                <ol class="o-list indent">
+                                <ol class="o-list-text indent">
                                     <li>(비)대면교육 변경 및 불참 시 "KLPNA 보수교육센터 > 마이페이지 > 강의실 > 대면교육'에서 변경 가능</li>
                                     <li>
                                         ※ 교육일 1일 전 정오(낮 12시) 이전 2회에 한하여 무료 변경 가능
@@ -621,7 +635,7 @@
                             <li>
                                 <span class="num">3.</span>
                                 (비)대면교육은 동일한 교육과정에 한해 변경이 가능
-                                <ol class="o-list indent">
+                                <ol class="o-list-text indent">
                                     <li>예) 기본공동과정 기본공통과정, 전문선택과정 전문선택과정</li>
                                 </ol>
                             </li>
@@ -636,7 +650,7 @@
                             <li>
                                 <span class="num">6.</span>
                                 각종 소음을 유발하는 행동주의 (교육 중 대화, 휴대전화 소음 등)
-                                <ol class="o-list indent">
+                                <ol class="o-list-text indent">
                                     <li>(비)대면교육 신청자 수가 일정 인원 미만일 경우 폐강될 수 있음</li>
                                 </ol>
                             </li>
@@ -687,20 +701,20 @@
 
 
 <!-- modal : 영수증 -->
-<section id="receipt" class="krds-modal fade" role="dialog" aria-labelledby="tit_receipt" data-type="medium"> 
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<!-- modal title -->
-			<div class="modal-header">
-				<h2 id="tit_receipt" class="modal-title">
-				영수증 양식을 선택해 주세요.
-				</h2>
-			</div>
-			<!-- //modal title -->
-			<!-- modal contents -->
-			<div class="modal-conts">
+<section id="receipt" class="krds-modal fade" role="dialog" aria-labelledby="tit_receipt" data-type="medium">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+                <h2 id="tit_receipt" class="modal-title">
+                    영수증 양식을 선택해 주세요.
+                </h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
                 <div class="bar"></div>
-				<ul class="receipt-list mb50">
+                <ul class="receipt-list mb50">
                     <li>
                         <p>교육비 영수증</p>
                         <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
@@ -714,35 +728,35 @@
                         <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
                     </li>
                 </ul>
-			</div>
-			<!-- //modal contents -->
-			<!-- close button -->
-			<button type="button" class="krds-btn medium icon btn-close close-modal">
-				<span class="sr-only">닫기</span>
-				<i class="svg-icon ico-popup-close"></i>
-			</button>
-			<!-- //close button -->
-		</div>
-	</div>
-	<div class="modal-back in"></div>
+            </div>
+            <!-- //modal contents -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+        </div>
+    </div>
+    <div class="modal-back in"></div>
 </section>
 <!--// modal : 영수증 -->
 
 <!-- modal : 영수증 -->
-<section id="cert" class="krds-modal fade" role="dialog" aria-labelledby="tit_cert" data-type="medium"> 
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<!-- modal title -->
-			<div class="modal-header">
-				<h2 id="tit_cert" class="modal-title">
-				이수증 양식을 선택해 주세요.
-				</h2>
-			</div>
-			<!-- //modal title -->
-			<!-- modal contents -->
-			<div class="modal-conts">
+<section id="cert" class="krds-modal fade" role="dialog" aria-labelledby="tit_cert" data-type="medium">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+                <h2 id="tit_cert" class="modal-title">
+                    이수증 양식을 선택해 주세요.
+                </h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
                 <div class="bar"></div>
-				<ul class="receipt-list mb50">
+                <ul class="receipt-list mb50">
                     <li>
                         <p>교육기간 표시 이수증</p>
                         <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
@@ -752,17 +766,17 @@
                         <button class="krds-btn small">출력 <i class="ico-print-wh"></i></button>
                     </li>
                 </ul>
-			</div>
-			<!-- //modal contents -->
-			<!-- close button -->
-			<button type="button" class="krds-btn medium icon btn-close close-modal">
-				<span class="sr-only">닫기</span>
-				<i class="svg-icon ico-popup-close"></i>
-			</button>
-			<!-- //close button -->
-		</div>
-	</div>
-	<div class="modal-back in"></div>
+            </div>
+            <!-- //modal contents -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+        </div>
+    </div>
+    <div class="modal-back in"></div>
 </section>
 <!--// modal : 영수증 -->
 
@@ -771,373 +785,372 @@
 <!--modal : 보수교육 상세-->
 <!--     <section id="modal_detail" class="detailed krds-modal fade in shown" role="dialog"
         aria-labelledby="tit_modal_detail" data-type="large"> -->
-        <section id="modal_detail" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail" data-type="large"> 
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- modal title -->
-                <div class="modal-header">
-                    <h2 id="tit_modal_detail">
-                        강의 상세정보
-                    </h2>
-                </div>
-                <!-- //modal title -->
+<section id="modal_detail" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_detail" data-type="large">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+                <h2 id="tit_modal_detail">
+                    강의 상세정보
+                </h2>
+            </div>
+            <!-- //modal title -->
 
-                <!-- modal contents -->
-                <div class="modal-conts pb40">
-                    <div class="lec-top">
-                        <div class="lec-title">
-                            <span class="krds-badge small bg-light-primary">지역사회간호</span>
-                            <h3>유아와 학령전기 아동의 건강문제와 가족의 건강증진</h3>
-                        </div>
-
-
-                        <ul class="lec-detail-list">
-                            <li>
-                                <div class="label"><i class="ico-calendar"></i>교육기간 :</div>
-                                <div class="date">2025년 7월 18일(금) 13:00 ~17:00</div>
-                            </li>
-                            <li>
-                                <div class="label"><i class="ico-write"></i>특이사항 :</div>
-                                <div class="text">특이사항.....</div>
-                            </li>
-                            <li>
-                                <div class="label"><i class="ico-call"></i>담당자 연락처 :</div>
-                                <div class="text">02-1234-5678</div>
-                            </li>
-                        </ul>
-                        <ul class="lec-bottom-list">
-                            <li>
-                                <div class="label">접수현황 : </div>
-                                <div class="text"><span class="value">45</span>/100</div>
-                            </li>
-                            <li>
-                                <div class="label">마감일 : </div>
-                                <div class="text">2025-06-31</div>
-                            </li>
-
-                        </ul>
-
+            <!-- modal contents -->
+            <div class="modal-conts pb40">
+                <div class="lec-top">
+                    <div class="lec-title">
+                        <span class="krds-badge small bg-light-primary">지역사회간호</span>
+                        <h3>유아와 학령전기 아동의 건강문제와 가족의 건강증진</h3>
                     </div>
-                    <div class="lec-tab-contents">
 
-                        <!-- tab -->
-                        <div class="krds-tab-area layer mt40">
-                            <!-- tab list -->
-                            <div class="tab fill gary bot-line">
-                                <ul role="tablist">
-                                    <li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01"
-                                        class="active">
-                                        <button type="button" class="btn-tab">
-                                            강의소개
-                                            <i class="sr-only created">
-                                                선택됨</i></button>
+
+                    <ul class="lec-detail-list">
+                        <li>
+                            <div class="label"><i class="ico-calendar"></i>교육기간 :</div>
+                            <div class="date">2025년 7월 18일(금) 13:00 ~17:00</div>
+                        </li>
+                        <li>
+                            <div class="label"><i class="ico-write"></i>특이사항 :</div>
+                            <div class="text">특이사항.....</div>
+                        </li>
+                        <li>
+                            <div class="label"><i class="ico-call"></i>담당자 연락처 :</div>
+                            <div class="text">02-1234-5678</div>
+                        </li>
+                    </ul>
+                    <ul class="lec-bottom-list">
+                        <li>
+                            <div class="label">접수현황 : </div>
+                            <div class="text"><span class="value">45</span>/100</div>
+                        </li>
+                        <li>
+                            <div class="label">마감일 : </div>
+                            <div class="text">2025-06-31</div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="lec-tab-contents">
+
+                    <!-- tab -->
+                    <div class="krds-tab-area layer mt40">
+                        <!-- tab list -->
+                        <div class="tab fill gary bot-line">
+                            <ul role="tablist">
+                                <li id="tab_login_01" role="tab" aria-selected="true" aria-controls="panel_login_01"
+                                    class="active">
+                                    <button type="button" class="btn-tab">
+                                        강의소개
+                                        <i class="sr-only created">
+                                            선택됨</i></button>
+                                </li>
+                                <li id="tab_login_02" role="tab" aria-selected="false" aria-controls="panel_login_02">
+                                    <button type="button" class="btn-tab">시간표</button>
+                                </li>
+                            </ul>
+
+                            <div class="bottom-border"></div>
+                        </div>
+                        <!-- //tab list -->
+
+                        <!-- tab contents -->
+                        <div class="tab-conts-wrap">
+                            <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active"
+                                data-quick-nav="false">
+                                <div class="lec-box mh200">
+                                    <p>과정소개, 학습목표등 text...</p>
+                                </div>
+
+                            </section>
+                            <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts"
+                                data-quick-nav="false">
+                                <h3 class="mb10">1. 대면교육</h3>
+                                <div class="lec-box">
+                                    <ul class="lec-detail-list">
+                                        <li>
+                                            <div class="label"><i class="ico-write"></i>수강방법 :</div>
+                                            <div class="text">마이페이지 강의실에서 온라인 수강</div>
+                                        </li>
+                                        <li>
+                                            <div class="label"><i class="ico-clock"></i>이수시간 :</div>
+                                            <div class="text">180분</div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <ul class="edu-list">
+                                    <li class="edu-list-item">
+                                        <div class="title">
+                                            <small>1교시</small>
+                                            <h4>유아의 정상성장발달</h4>
+                                        </div>
+                                        <ul class="o-list" role="list">
+                                            <li role="listitem">유아의 성장발달</li>
+                                            <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                            <li role="listitem">간호조력자의 역할</li>
+                                        </ul>
+
+                                        <div class="lect-info">
+                                            <div class="krds-disclosure conts-expand-area">
+                                                <ul class="lect-info-list">
+                                                    <li>
+                                                        <i class="ico-time"></i>
+                                                        <div class="text">60분</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ico-user"></i>
+                                                        <div class="text">강사 : 이순신</div>
+                                                        <button type="button" class="btn-conts-expand">강사
+                                                            프로필보기</button>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="expand-wrap">
+                                                    <div class="expand-in lect-expend">
+                                                        <div class="lect-expend-thumb">
+                                                            <div class="lect-name">
+                                                                <span class="name">이순신</span>
+                                                                강사
+                                                            </div>
+                                                            <div class="img">
+                                                                <img src="../resources/img/refre/lect-img.png" alt="사진">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lect-expend-cont">
+                                                            <h4>대표 프로필</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                            <h4>학력 및 경력사항 (주요사항)</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
                                     </li>
-                                    <li id="tab_login_02" role="tab" aria-selected="false"
-                                        aria-controls="panel_login_02">
-                                        <button type="button" class="btn-tab">시간표</button>
+
+
+                                    <li class="edu-list-item">
+                                        <div class="title">
+                                            <small>2교시</small>
+                                            <h4>유아기 최적의 건강증진</h4>
+                                        </div>
+                                        <ul class="o-list" role="list">
+                                            <li role="listitem">유아의 성장발달</li>
+                                            <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                            <li role="listitem">간호조력자의 역할</li>
+                                        </ul>
+
+                                        <div class="lect-info">
+                                            <div class="krds-disclosure conts-expand-area">
+                                                <ul class="lect-info-list">
+                                                    <li>
+                                                        <i class="ico-time"></i>
+                                                        <div class="text">60분</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ico-user"></i>
+                                                        <div class="text">강사 : 이순신</div>
+                                                        <button type="button" class="btn-conts-expand">강사
+                                                            프로필보기</button>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="expand-wrap">
+                                                    <div class="expand-in lect-expend">
+                                                        <div class="lect-expend-thumb">
+                                                            <div class="lect-name">
+                                                                <span class="name">이순신</span>
+                                                                강사
+                                                            </div>
+                                                            <div class="img">
+                                                                <img src="../resources/img/refre/lect-img.png" alt="사진">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lect-expend-cont">
+                                                            <h4>대표 프로필</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                            <h4>학력 및 경력사항 (주요사항)</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </li>
+
+
+                                    <li class="edu-list-item">
+                                        <div class="title">
+                                            <small>3교시</small>
+                                            <h4>학령전기 아동의 정상성장발달</h4>
+                                        </div>
+                                        <ul class="o-list" role="list">
+                                            <li role="listitem">유아의 성장발달</li>
+                                            <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                            <li role="listitem">간호조력자의 역할</li>
+                                        </ul>
+
+                                        <div class="lect-info">
+                                            <div class="krds-disclosure conts-expand-area">
+                                                <ul class="lect-info-list">
+                                                    <li>
+                                                        <i class="ico-time"></i>
+                                                        <div class="text">60분</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ico-user"></i>
+                                                        <div class="text">강사 : 이순신</div>
+                                                        <button type="button" class="btn-conts-expand">강사
+                                                            프로필보기</button>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="expand-wrap">
+                                                    <div class="expand-in lect-expend">
+                                                        <div class="lect-expend-thumb">
+                                                            <div class="lect-name">
+                                                                <span class="name">이순신</span>
+                                                                강사
+                                                            </div>
+                                                            <div class="img">
+                                                                <img src="../resources/img/refre/lect-img.png" alt="사진">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lect-expend-cont">
+                                                            <h4>대표 프로필</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                            <h4>학력 및 경력사항 (주요사항)</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </li>
+
+
+
+                                    <li class="edu-list-item">
+                                        <div class="title">
+                                            <small>4교시</small>
+                                            <h4>유아기와 학령전기 아동의 건강문제</h4>
+                                        </div>
+                                        <ul class="o-list" role="list">
+                                            <li role="listitem">유아의 성장발달</li>
+                                            <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
+                                            <li role="listitem">간호조력자의 역할</li>
+                                        </ul>
+
+                                        <div class="lect-info">
+                                            <div class="krds-disclosure conts-expand-area">
+                                                <ul class="lect-info-list">
+                                                    <li>
+                                                        <i class="ico-time"></i>
+                                                        <div class="text">60분</div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="ico-user"></i>
+                                                        <div class="text">강사 : 이순신</div>
+                                                        <button type="button" class="btn-conts-expand">강사
+                                                            프로필보기</button>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="expand-wrap">
+                                                    <div class="expand-in lect-expend">
+                                                        <div class="lect-expend-thumb">
+                                                            <div class="lect-name">
+                                                                <span class="name">이순신</span>
+                                                                강사
+                                                            </div>
+                                                            <div class="img">
+                                                                <img src="../resources/img/refre/lect-img.png" alt="사진">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lect-expend-cont">
+                                                            <h4>대표 프로필</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">서울다나운연합의원(대표원장)</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                            <h4>학력 및 경력사항 (주요사항)</h4>
+                                                            <ul class="o-list" role="list">
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                                <li role="listitem">text</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
                                     </li>
                                 </ul>
 
-                                <div class="bottom-border"></div>
-                            </div>
-                            <!-- //tab list -->
-
-                            <!-- tab contents -->
-                            <div class="tab-conts-wrap">
-                                <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active"
-                                    data-quick-nav="false">
-                                    <div class="lec-box mh200">
-                                        <p>과정소개, 학습목표등 text...</p>
-                                    </div>
-
-                                </section>
-                                <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts"
-                                    data-quick-nav="false">
-                                    <h3 class="mb10">1. 대면교육</h3>
-                                    <div class="lec-box">
-                                        <ul class="lec-detail-list">
-                                            <li>
-                                                <div class="label"><i class="ico-write"></i>수강방법 :</div>
-                                                <div class="text">마이페이지 강의실에서 온라인 수강</div>
-                                            </li>
-                                            <li>
-                                                <div class="label"><i class="ico-clock"></i>이수시간 :</div>
-                                                <div class="text">180분</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <ul class="edu-list">
-                                        <li class="edu-list-item">
-                                            <div class="title">
-                                                <small>1교시</small>
-                                                <h4>유아의 정상성장발달</h4>
-                                            </div>
-                                            <ul class="o-list" role="list">
-                                                <li role="listitem">유아의 성장발달</li>
-                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
-                                                <li role="listitem">간호조력자의 역할</li>
-                                            </ul>
-
-                                            <div class="lect-info">
-                                                <div class="krds-disclosure conts-expand-area">
-                                                    <ul class="lect-info-list">
-                                                        <li>
-                                                            <i class="ico-time"></i>
-                                                            <div class="text">60분</div>
-                                                        </li>
-                                                        <li>
-                                                            <i class="ico-user"></i>
-                                                            <div class="text">강사 : 이순신</div>
-                                                            <button type="button" class="btn-conts-expand">강사
-                                                                프로필보기</button>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="expand-wrap">
-                                                        <div class="expand-in lect-expend">
-                                                            <div class="lect-expend-thumb">
-                                                                <div class="lect-name">
-                                                                    <span class="name">이순신</span> 
-                                                                    강사</div>
-                                                                <div class="img">
-                                                                    <img src="../resources/img/refre/lect-img.png"
-                                                                        alt="사진">
-                                                                </div>
-                                                            </div>
-                                                            <div class="lect-expend-cont">
-                                                                <h4>대표 프로필</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                                <h4>학력 및 경력사항 (주요사항)</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-
-
-                                        </li>
-
-
-                                        <li class="edu-list-item">
-                                            <div class="title">
-                                                <small>2교시</small>
-                                                <h4>유아기 최적의 건강증진</h4>
-                                            </div>
-                                            <ul class="o-list" role="list">
-                                                <li role="listitem">유아의 성장발달</li>
-                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
-                                                <li role="listitem">간호조력자의 역할</li>
-                                            </ul>
-
-                                            <div class="lect-info">
-                                                <div class="krds-disclosure conts-expand-area">
-                                                    <ul class="lect-info-list">
-                                                        <li>
-                                                            <i class="ico-time"></i>
-                                                            <div class="text">60분</div>
-                                                        </li>
-                                                        <li>
-                                                            <i class="ico-user"></i>
-                                                            <div class="text">강사 : 이순신</div>
-                                                            <button type="button" class="btn-conts-expand">강사
-                                                                프로필보기</button>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="expand-wrap">
-                                                        <div class="expand-in lect-expend">
-                                                            <div class="lect-expend-thumb">
-                                                                <div class="lect-name">
-                                                                    <span class="name">이순신</span> 
-                                                                    강사</div>
-                                                                <div class="img">
-                                                                    <img src="../resources/img/refre/lect-img.png"
-                                                                        alt="사진">
-                                                                </div>
-                                                            </div>
-                                                            <div class="lect-expend-cont">
-                                                                <h4>대표 프로필</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                                <h4>학력 및 경력사항 (주요사항)</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-
-
-                                        </li>
-
-
-                                        <li class="edu-list-item">
-                                            <div class="title">
-                                                <small>3교시</small>
-                                                <h4>학령전기 아동의 정상성장발달</h4>
-                                            </div>
-                                            <ul class="o-list" role="list">
-                                                <li role="listitem">유아의 성장발달</li>
-                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
-                                                <li role="listitem">간호조력자의 역할</li>
-                                            </ul>
-
-                                            <div class="lect-info">
-                                                <div class="krds-disclosure conts-expand-area">
-                                                    <ul class="lect-info-list">
-                                                        <li>
-                                                            <i class="ico-time"></i>
-                                                            <div class="text">60분</div>
-                                                        </li>
-                                                        <li>
-                                                            <i class="ico-user"></i>
-                                                            <div class="text">강사 : 이순신</div>
-                                                            <button type="button" class="btn-conts-expand">강사
-                                                                프로필보기</button>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="expand-wrap">
-                                                        <div class="expand-in lect-expend">
-                                                            <div class="lect-expend-thumb">
-                                                                <div class="lect-name">
-                                                                    <span class="name">이순신</span> 
-                                                                    강사</div>
-                                                                <div class="img">
-                                                                    <img src="../resources/img/refre/lect-img.png"
-                                                                        alt="사진">
-                                                                </div>
-                                                            </div>
-                                                            <div class="lect-expend-cont">
-                                                                <h4>대표 프로필</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                                <h4>학력 및 경력사항 (주요사항)</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-
-
-                                        </li>
-
-
-
-                                        <li class="edu-list-item">
-                                            <div class="title">
-                                                <small>4교시</small>
-                                                <h4>유아기와 학령전기 아동의 건강문제</h4>
-                                            </div>
-                                            <ul class="o-list" role="list">
-                                                <li role="listitem">유아의 성장발달</li>
-                                                <li role="listitem">정상적인 성장발달과 관련된 문제 대처방법</li>
-                                                <li role="listitem">간호조력자의 역할</li>
-                                            </ul>
-
-                                            <div class="lect-info">
-                                                <div class="krds-disclosure conts-expand-area">
-                                                    <ul class="lect-info-list">
-                                                        <li>
-                                                            <i class="ico-time"></i>
-                                                            <div class="text">60분</div>
-                                                        </li>
-                                                        <li>
-                                                            <i class="ico-user"></i>
-                                                            <div class="text">강사 : 이순신</div>
-                                                            <button type="button" class="btn-conts-expand">강사
-                                                                프로필보기</button>
-                                                        </li>
-                                                    </ul>
-
-                                                    <div class="expand-wrap">
-                                                        <div class="expand-in lect-expend">
-                                                            <div class="lect-expend-thumb">
-                                                                <div class="lect-name">
-                                                                    <span class="name">이순신</span> 
-                                                                    강사</div>
-                                                                <div class="img">
-                                                                    <img src="../resources/img/refre/lect-img.png"
-                                                                        alt="사진">
-                                                                </div>
-                                                            </div>
-                                                            <div class="lect-expend-cont">
-                                                                <h4>대표 프로필</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">서울다나운연합의원(대표원장)</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                                <h4>학력 및 경력사항 (주요사항)</h4>
-                                                                 <ul class="o-list" role="list">
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                    <li role="listitem">text</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-
-
-                                        </li>
-                                    </ul>
-
-                                </section>
-                            </div>
-                            <!-- //tab contents -->
+                            </section>
                         </div>
-                        <!-- //tab -->
-
+                        <!-- //tab contents -->
                     </div>
+                    <!-- //tab -->
+
                 </div>
-                <!-- //modal contents -->
-
-
-                <!-- close button -->
-                <button type="button" class="krds-btn medium icon btn-close close-modal">
-                    <span class="sr-only">닫기</span>
-                    <i class="svg-icon ico-popup-close"></i>
-                </button>
-                <!-- //close button -->
             </div>
+            <!-- //modal contents -->
+
+
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
         </div>
-        <div class="modal-back in"></div>
-    </section>
+    </div>
+    <div class="modal-back in"></div>
+</section>
 <!--// modal : 보수교육 상세-->
 
 
