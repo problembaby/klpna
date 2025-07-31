@@ -462,6 +462,10 @@ line-height: 150%; /* 21px */}
     margin-left: 0;
     margin-bottom: 10px;
 }
+
+.header-container{
+    padding-top:10px
+}
 }
 
 

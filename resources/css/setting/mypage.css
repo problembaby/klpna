@@ -668,6 +668,16 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 21px */}
 
+.krds-structured-list.type-full .card-body .c-txt, .krds-structured-list.type2 .card-body .c-txt {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+
 .ico-bbs-nodata::before{
   content:"";
   display: block;
@@ -1108,6 +1118,14 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
     background: url(../../img/icon/ico-send.svg)no-repeat;
     width: 18px;
     height: 19px;
+}
+
+.ico-classroom-calendar::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-classroom-calendar.svg)no-repeat;
+    width: 18px;
+    height: 18px;
 }
 
 .appl-stat{
@@ -1820,10 +1838,92 @@ line-height: 150%; /* 24px */
 강의실 
 **************************************/
 
-.table-overscroll-wrap{position: relative;}
+.table-overscroll-wrap{position: relative; overflow-x: auto;}
 .table-overscroll-wrap  .mob-overflow-icon::before {
     right: 5px;
     top: 25px;
+}
+
+.prog-circ{width:45px; height:45px; border-radius: 50%; display: inline-flex;
+background: var(--color-jigmu, #05417C); color:#fff;  align-items: center; justify-content: center; font-size: 14px;}
+
+.prog-circ.compl{background: var(--color-jigmu, #05417C); color:#fff;}
+.prog-circ.incompl{background: var(--color-accnet, #EB6053);}
+.prog-circ.step{background: var(--color-jigmu, #fff); color:#05417C; border:2px dotted #05417C }
+
+.td-enter{display: inline-flex; flex-direction: column; gap:5px}
+
+.classroom-detailed .detailed-header{width: 100%; border-top: 1px solid var(--color-border-gray, #676767);
+
+}
+.classroom-detailed .detailed-header .title {
+    color: #1D1D1D;
+    letter-spacing: -0.96px;
+    padding: 25px 20px;
+    word-break: break-all;
+    border-bottom: 0 solid #cbd5e1;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.classroom-rate-wrap{
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+  background: var(--color-bg-secondary, #F7F8FB);
+}
+
+.classroom-rate-top{display: flex; justify-content: space-between;} 
+.classroom-rate-top .title { font-size: 18px; font-style: normal; font-weight: 700; line-height: 150%; /* 27px */}
+.classroom-rate-top .date { display: flex; align-items: center;}
+.classroom-rate-top .date .label { display: flex; align-items: center; margin-right: 10px;}
+.classroom-rate-top .date .text { color: var(--color-text-title, #0D0E10);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 16.8px */}
+
+.classroom-rate-top{border-bottom: 1px solid var(--color-border-light, #D9D9D9); padding-bottom:10px}
+
+.classroom-rate-bottom-header{display: flex; justify-content: space-between;}
+.classroom-rate-bottom-header .title{color: var(--color-text-title, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */}
+.classroom-rate-bottom-header .btn-row{display: flex; gap:10px}
+
+
+
+.cls-bot-progress {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #AF77F5;
+  transition: width 1.5s ease-out;
 }
 
 
