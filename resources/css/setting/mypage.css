@@ -208,7 +208,6 @@ font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */}
 
-.edu-two-tr{background-color: ;}
 .edu-two-tr .edu-td .year{font-size: 16px;}
 .edu-two-tr .edu-td > * {color: #05417C; color: var(--color-text-bosu_txt, #05417C);
 text-align: center;
@@ -393,7 +392,6 @@ line-height: 150%; /* 24px */}
   letter-spacing: -1.08px;
 }
 
-.myposts-section {}
 
 .myposts-section h2 {
   color: var(--Text-02, #454545);
@@ -801,9 +799,7 @@ line-height: 150%; /* 21px */
     width: 100%;
 }
 
-.krds-structured-list.pay-list > li .card-thum{
 
-}
 
 .krds-structured-list.pay-list .card-thumb{flex: 1 0 260px; border-radius: 10px;
 background: var(--color-bg-secondary, #F7F8FB); display: flex; align-items: center; height: 128px; justify-content: center;}
@@ -938,6 +934,7 @@ line-height: 150%;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 2;
+line-clamp: 2;
 flex: 1 0 0;}
 
 /************************************
@@ -1102,6 +1099,13 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
     background: url(../../img/icon/ico-gchk.svg)no-repeat;
     width: 18px;
     height: 18px;
+}
+.ico-send::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-send.svg)no-repeat;
+    width: 18px;
+    height: 19px;
 }
 
 .appl-stat{
@@ -1410,7 +1414,6 @@ line-height: 150%; /* 19.5px */
   
 }
 
-.lect-detail-wrap{}
 .lect-detail-info{display: flex; width: 100%;}
 .lect-detail-info > *{flex: 1 50%}
 
@@ -1628,10 +1631,6 @@ padding:20px;
 
 }
 
-.o-accordion-list.edu{
-
-}
-
 .ico-chk-pp::before{
     content: "";
     display: block;
@@ -1659,7 +1658,6 @@ line-height: 150%; /* 24px */  }
 .edu-time-items__list li > p{font-size: 16px; background-color: #FFF0F5; display: inline-block;}
 
 .edu-time-items__clock {display: flex; align-items: center; gap:5px; font-size: 16px;}
-.edu-time-items__clock .edu-time{}
 .edu-time-items__clock .edu-time .time{font-weight: 600; color:#9157DA}
 
 .fs14{font-size: 14px;}
