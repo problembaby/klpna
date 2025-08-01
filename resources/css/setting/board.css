@@ -1,7 +1,7 @@
 
 /** 게시판 accordian */
 .o-accordion-list .ico-q { color: #0050CA; font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */ margin-right: 10px;}
-.o-accordion-list .ico-a{color:#1D1D1D; font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */ margin-right: 10px;}}
+.o-accordion-list .ico-a{color:#1D1D1D; font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */ margin-right: 10px;}
 .o-accordion-list .o-acc-title{
   display: flex;
   flex-direction: row;
@@ -2212,7 +2212,7 @@ color:#fff;
 .reply-section .btnList-sort{padding-bottom:20px;}
 
 .reply-submit-section{margin-top:40px; }
-.reply-submit-section h2.title{mcolor: var(--color-text-basic, #0D0E10);
+.reply-submit-section h2.title{color: var(--color-text-basic, #0D0E10);
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
@@ -2291,6 +2291,7 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2 ;
+    line-clamp: 2 ;
     font-size: 16px;
 }
 

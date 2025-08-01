@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>모달 - 간호조무사협회</title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../resources/css/style.css" />
+
+	<!--js-->
+	<script src="../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+	<script src="../resources/krds/js/component/ui-script.js" defer></script>
+	<script src="../resources/krds/js/pattern/pattern.js" defer></script>
+	<script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+
+	<script>
+		// textarea 글자 수 카운트 (최대 3000자)
+		window.updateTextareaCount = function (textareaEl) {
+			const $textarea = $(textareaEl);
+			const $countNowEl = $textarea.closest('.form-conts').find('.count-now');
+			if (!$countNowEl.length) return;
+
+			let value = $textarea.val();
+			if (value.length > 3000) {
+				value = value.substring(0, 3000);
+				$textarea.val(value);
+			}
+			$countNowEl.text(value.length);
+		};
+	</script>
+
+	<button type="button" class="krds-btn tertiary fileBtn open-modal" data-target="modal-servey">설문작성 <i class="svg-icon ico-angle right"></i></button>
+
+
+	<section id="modal-servey" class="krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal-servey"
+		data-type="large">
+<!-- 	<section id="modal-servey" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal-servey"
+		data-type="large">
+ -->
+
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- modal title -->
+				<div class="modal-header">
+					<h2 id="tit_modal-servey" class="modal-title">
+						설문조사
+					</h2>
+				</div>
+				<!-- //modal title -->
+				<!-- modal contents -->
+				<div class="modal-conts">
+					<div class="servey-cont">
+						<div class="servey-banner">
+							<div class="img">
+								<img src="../resources/img/sub/img-servey.svg" alt="">
+							</div>
+							<div class="msg-group">
+								<h3 class="msg-group-h3 mb5">홍*동 님께서는 교육 수강을 완료하였습니다.</h3>
+								<p class="fs-16">더 좋은 교육을 위해 간단한 설문조사를 진행하고 있습니다.</p>
+								<p class="fs-16">퇴실 처리를 위해 설문조사에 참여해 주세요.</p>
+								<p class="fs-16 fc-blue fw-normal mt5">설문조사 완료 시 퇴실 처리가 완료됩니다.</p>
+								<p class="fc-gray fs-13 mt5">(소요시간 약 5분)</p>
+							</div>
+						</div>
+
+						<div class="survey-contents">
+
+							<!--설문 : 라디오 -->
+							<sectioin class="survey-section">
+								<div class="servey-question">
+									<p class="qna">1. 강의 내용이 현장 실무에 도움이 되셨는지요.</p>
+									<span class="req">*</span>
+								</div>
+								<div class="survey-options-area">
+									<ul class="survey-option-list">
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_1" id="rdo_1_1">
+												<label for="rdo_1_1">매우만족</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_1" id="rdo_1_2">
+												<label for="rdo_1_2">만족</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_1" id="rdo_1_3">
+												<label for="rdo_1_3">모름</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_1" id="rdo_1_4">
+												<label for="rdo_1_4">불만족</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="radio" name="rdo_1" id="rdo_1_5">
+												<label for="rdo_1_5">매우 불만족</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</sectioin>
+
+							<!--설문 : 체크박스 -->
+							<sectioin class="survey-section">
+								<div class="servey-question">
+									<p class="qna">2. 강의 내용이 현장 실무에 도움이 되셨는지요.</p>
+									<span class="chk-vail">(중복체크가능)</span>
+								</div>
+								<div class="survey-options-area">
+									<ul class="survey-option-list">
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="checkbox" name="chk_1" id="chk_1_1">
+												<label for="chk_1_1">선택1</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="checkbox" name="chk_1" id="chk_1_2">
+												<label for="chk_1_2">선택2</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="checkbox" name="chk_1" id="chk_1_3">
+												<label for="chk_1_3">선택3</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="checkbox" name="chk_1" id="chk_1_4">
+												<label for="chk_1_4">선택4</label>
+											</div>
+										</li>
+										<li class="survey-option-item">
+											<div class="krds-form-check">
+												<input type="checkbox" name="chk_1" id="chk_1_5">
+												<label for="chk_1_5">선택5</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</sectioin>
+
+
+							<!--설문 : 서술형 -->
+							<sectioin class="survey-section">
+								<div class="servey-question">
+									<p class="qna">3. 강의 내용이 현장 실무에 도움이 되셨는지요.</p>
+								</div>
+								<div class="survey-options-area">
+									<div class="survey-option-textarea form-conts">
+										<textarea name="" id="content" class="krds-input"
+											oninput="updateTextareaCount(this)"></textarea>
+										<p class="form-hint-invalid" style="display: none;">내용을 입력해주세요</p>
+										<input type="file" id="q_file_input" multiple style="display:none;"
+											onchange="handleFileSelect(this)" />
+										<p class="textarea-count">
+											<span class="count-now">0</span><span class="count-total">/3000</span>
+										</p>
+									</div>
+								</div>
+							</sectioin>
+						</div>
+					</div>
+				</div>
+				<!-- //modal contents -->
+				<!-- modal btn -->
+				<div class="modal-btn btn-wrap center">
+					<button type="button" class="krds-btn medium close-modal">설문조사 제출 및 퇴실하기<i class="svg-icon ico-angle right"></i></button>
+				</div>
+				<!-- //modal btn -->
+				<!-- close button -->
+				<button type="button" class="krds-btn medium icon btn-close close-modal">
+					<span class="sr-only">닫기</span>
+					<i class="svg-icon ico-popup-close"></i>
+				</button>
+				<!-- //close button -->
+			</div>
+		</div>
+		<div class="modal-back in"></div>
+	</section>
+	<!-- //modal -->
+
+</body>
+
+</html>

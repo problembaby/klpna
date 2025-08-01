@@ -2031,6 +2031,34 @@ line-height: 150%; /* 24px */ }
     border-bottom: 1px solid var(--color-border-light, #D9D9D9);
 }
 
+
+/**********************************
+모달 : 설문조사 
+**********************************/
+.servey-cont .servey-banner{
+  display: flex;
+  padding:20px;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--color-bg-secondary, #F7F8FB);
+}
+
+.servey-banner .img{padding: 0 40px;}
+.servey-question{}
+.survey-contents{display: flex; gap:30px; flex-direction: column; padding:40px 0;}
+.survey-contents .qna{font-size: 16px; font-weight: bold; display: inline; }
+
+.survey-option-list, .survey-option-textarea{display: flex; flex-direction: column; gap:8px; padding:20px 0;}
+
+.chk-vail{ color: var(--color-primary, #0050CA);
+
+/* font/body/medium */
+font-family: "Pretendard GOV";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;}
+
 /** 노트북 */
 @media (max-width: 1440px) {
   .tab.bot-line::before{
@@ -2227,6 +2255,10 @@ font-size: 18px;
 
 /** 모바일 */
 @media (max-width: 767px) {
+
+  .servey-banner .img{display: none;}
+  .msg-group .msg-group-h3{font-size: 16px;}
+  .msg-group p.fs-16{font-size: 14px!important;}
 
 .enr-progress .cls-bot-progress-rate .label{display: block;}
 
