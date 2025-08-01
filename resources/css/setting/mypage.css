@@ -2051,13 +2051,57 @@ line-height: 150%; /* 24px */ }
 .survey-option-list, .survey-option-textarea{display: flex; flex-direction: column; gap:8px; padding:20px 0;}
 
 .chk-vail{ color: var(--color-primary, #0050CA);
-
-/* font/body/medium */
-font-family: "Pretendard GOV";
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 150%;}
+
+
+
+/**********************************
+모달 : 시험문제 
+**********************************/
+
+.exam-info{
+padding: 10px 20px;
+border-radius: 10px;
+border: 1px solid var(--color-border-top, #0767C7);
+}
+
+.exam-info-title{font-style: 18px; border-bottom: 1px solid var(--color-border-nomal, #C6C6C6); padding-bottom: 10px;}
+
+.exam-info-body{width:100%; display: flex; justify-content:space-between; padding:10px 0;}
+
+.exam-meta-list > li{display: flex; gap:5px; align-items: center;}
+.exam-meta-list .label{
+color: var(--color-text-sub_title, #464C53);
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 19.5px */
+display: flex;
+align-items: center; gap:5px}
+.exam-meta-list .text{
+color: var(--color-text-basic, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */}
+
+.exam-meta-list .label::before{display:block; width: 3px; height:3px; border-radius: 50%; content:""; background-color: #464C53;}
+
+.exam-count{background: var(--color-jigmu, #05417C); color:#fff; font-size: 14px; padding:5px 10px; font-weight: bold;}
+
+
+
+
+
+
+
+
+
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
