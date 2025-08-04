@@ -23,39 +23,14 @@
 
 <body>
 
-	<script>
 
-		$(document).ready(function () {
-			$('.exam-options-area input[type="radio"]').on('change', function () {
-				const $currentOption = $(this).closest('.exam-option-item');
-				const name = $(this).attr('name');
-
-				// 동일한 name의 항목들에서 selected 클래스 제거
-				$('input[name="' + name + '"]').each(function () {
-					$(this).closest('.exam-option-item').removeClass('selected');
-				});
-
-				// 현재 선택된 항목에 selected 클래스 추가
-				if ($(this).is(':checked')) {
-					$currentOption.addClass('selected');
-				}
-			});
-
-			// 페이지 로딩 시 checked 상태 반영
-			$('.exam-options-area input[type="radio"]:checked').each(function () {
-				$(this).closest('.exam-option-item').addClass('selected');
-			});
-		});
-
-	</script>
-
-	<button type="button" class="krds-btn tertiary fileBtn open-modal" data-target="modal-exam">설문작성 <i
+	<button type="button" class="krds-btn tertiary fileBtn open-modal" data-target="modal-solution">문제풀이 <i
 			class="svg-icon ico-angle right"></i></button>
 
 
-	<section id="modal-exam" class="krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal-exam"
+	<section id="modal-solution" class="krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal-solution"
 		data-type="large">
-		<!-- 	<section id="modal-exam" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal-exam"
+		<!-- 	<section id="modal-solution" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal-solution"
 		data-type="large"> -->
 
 
@@ -63,13 +38,13 @@
 			<div class="modal-content">
 				<!-- modal title -->
 				<div class="modal-header">
-					<h2 id="tit_modal-servey" class="modal-title">
-						시험문제
+					<h2 id="tit_modal-solution" class="modal-title">
+						문제풀이
 					</h2>
 				</div>
 				<!-- //modal title -->
 				<!-- modal contents -->
-				<div class="modal-conts">
+				<div class="modal-conts exam-result">
 					<div class="exam-cont">
 
 						<div class="exam-info">
@@ -94,26 +69,30 @@
 
 						<div class="exam-contents">
 
-							<!--설문 : 라디오 -->
+							<!-- 
+								정답일시 :  <li class="exam-option-item correct">
+								오답일시 : <li class="exam-option-item incorrect">
+							-->
+
 							<section class="exam-box">
 								<div class="exam-question">
 									<p class="qna">1. 다음 중 2024년 협회 교육사업 활동과 성과에 해당하지 않는 것은?</p>
-									
+
 								</div>
 								<div class="exam-options-area">
 									<ul class="exam-option-list">
-										<li class="exam-option-item">
+										<li class="exam-option-item correct">
 											<div class="krds-form-check">
 												<label for="rdo_1_1">
-													<input type="radio" name="rdo_1" id="rdo_1_1" value="1">
+													<input type="radio" name="rdo_1" id="rdo_1_1" value="1" disabled>
 													① 간호조무사 교육훈련기관 지정평가 공식 참여
 												</label>
 											</div>
 										</li>
-										<li class="exam-option-item">
+										<li class="exam-option-item incorrect">
 											<div class="krds-form-check">
 												<label for="rdo_1_2">
-													<input type="radio" name="rdo_1" id="rdo_1_2" value="2">
+													<input type="radio" name="rdo_1" id="rdo_1_2" value="2" disabled>
 													② 간호조무사 대체인력지원 시범사업 운영
 												</label>
 											</div>
@@ -121,7 +100,7 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_1_3">
-													<input type="radio" name="rdo_1" id="rdo_1_3" value="3">
+													<input type="radio" name="rdo_1" id="rdo_1_3" value="3" disabled>
 													③ 시도회 보수교육장 QR출결시스템 상용화
 												</label>
 											</div>
@@ -129,7 +108,7 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_1_4">
-													<input type="radio" name="rdo_1" id="rdo_1_4" value="4">
+													<input type="radio" name="rdo_1" id="rdo_1_4" value="4" disabled>
 													④ 간호조무사 직무교육 운영
 												</label>
 											</div>
@@ -137,12 +116,25 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_1_5">
-													<input type="radio" name="rdo_1" id="rdo_1_5" value="5">
+													<input type="radio" name="rdo_1" id="rdo_1_5" value="5" disabled>
 													⑤ 신규 및 유휴 간호조무사 대상 주사실무 교육 운영
 												</label>
 											</div>
 										</li>
 									</ul>
+								</div>
+								<div class="exam-explanation">
+									<h3 class="exam-explanation-title">정답해설</h3>
+									<p class="exam-explanation-content">
+										2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....
+									</p>
+
 								</div>
 							</section>
 
@@ -150,14 +142,14 @@
 							<section class="exam-box">
 								<div class="exam-question">
 									<p class="qna">3. 다음 중 2024년 협회 교육사업 활동과 성과에 해당하지 않는 것은?</p>
-									
+
 								</div>
 								<div class="exam-options-area">
 									<ul class="exam-option-list">
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_2_1">
-													<input type="radio" name="rdo_2" id="rdo_2_1" value="1">
+													<input type="radio" name="rdo_2" id="rdo_2_1" value="1" disabled>
 													① 간호조무사 교육훈련기관 지정평가 공식 참여
 												</label>
 											</div>
@@ -165,7 +157,7 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_2_2">
-													<input type="radio" name="rdo_2" id="rdo_2_2" value="2">
+													<input type="radio" name="rdo_2" id="rdo_2_2" value="2" disabled>
 													② 간호조무사 대체인력지원 시범사업 운영
 												</label>
 											</div>
@@ -173,15 +165,15 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_2_3">
-													<input type="radio" name="rdo_2" id="rdo_2_3" value="3">
+													<input type="radio" name="rdo_2" id="rdo_2_3" value="3" disabled>
 													③ 시도회 보수교육장 QR출결시스템 상용화
 												</label>
 											</div>
 										</li>
-										<li class="exam-option-item">
+										<li class="exam-option-item correct">
 											<div class="krds-form-check">
 												<label for="rdo_2_4">
-													<input type="radio" name="rdo_2" id="rdo_2_4" value="4">
+													<input type="radio" name="rdo_2" id="rdo_2_4" value="4" disabled>
 													④ 간호조무사 직무교육 운영
 												</label>
 											</div>
@@ -189,26 +181,39 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_2_5">
-													<input type="radio" name="rdo_2" id="rdo_2_5" value="5">
+													<input type="radio" name="rdo_2" id="rdo_2_5" value="5" disabled>
 													⑤ 신규 및 유휴 간호조무사 대상 주사실무 교육 운영
 												</label>
 											</div>
 										</li>
 									</ul>
 								</div>
+								<div class="exam-explanation">
+									<h3 class="exam-explanation-title">정답해설</h3>
+									<p class="exam-explanation-content">
+										2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....
+									</p>
+
+								</div>
 							</section>
 
 							<section class="exam-box">
 								<div class="exam-question">
 									<p class="qna">3. 다음 중 2024년 협회 교육사업 활동과 성과에 해당하지 않는 것은?</p>
-									
+
 								</div>
 								<div class="exam-options-area">
 									<ul class="exam-option-list">
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_3_1">
-													<input type="radio" name="rdo_3" id="rdo_3_1" value="1">
+													<input type="radio" name="rdo_3" id="rdo_3_1" value="1" disabled>
 													① 간호조무사 교육훈련기관 지정평가 공식 참여
 												</label>
 											</div>
@@ -216,7 +221,7 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_3_2">
-													<input type="radio" name="rdo_3" id="rdo_3_2" value="2">
+													<input type="radio" name="rdo_3" id="rdo_3_2" value="2" disabled>
 													② 간호조무사 대체인력지원 시범사업 운영
 												</label>
 											</div>
@@ -224,28 +229,41 @@
 										<li class="exam-option-item">
 											<div class="krds-form-check">
 												<label for="rdo_3_3">
-													<input type="radio" name="rdo_3" id="rdo_3_3" value="3">
+													<input type="radio" name="rdo_3" id="rdo_3_3" value="3" disabled>
 													③ 시도회 보수교육장 QR출결시스템 상용화
 												</label>
 											</div>
 										</li>
-										<li class="exam-option-item">
+										<li class="exam-option-item incorrect">
 											<div class="krds-form-check">
 												<label for="rdo_3_4">
-													<input type="radio" name="rdo_3" id="rdo_3_4" value="4">
+													<input type="radio" name="rdo_3" id="rdo_3_4" value="4" disabled>
 													④ 간호조무사 직무교육 운영
 												</label>
 											</div>
 										</li>
-										<li class="exam-option-item">
+										<li class="exam-option-item correct">
 											<div class="krds-form-check">
 												<label for="rdo_3_5">
-													<input type="radio" name="rdo_3" id="rdo_3_5" value="5">
+													<input type="radio" name="rdo_3" id="rdo_3_5" value="5" disabled>
 													⑤ 신규 및 유휴 간호조무사 대상 주사실무 교육 운영
 												</label>
 											</div>
 										</li>
 									</ul>
+								</div>
+								<div class="exam-explanation">
+									<h3 class="exam-explanation-title">정답해설</h3>
+									<p class="exam-explanation-content">
+										2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....2024년 협회 교육사업 활동과 성과에 해당하는 항목은...
+										text....
+									</p>
+
 								</div>
 							</section>
 
@@ -256,12 +274,27 @@
 					</div>
 				</div>
 				<!-- //modal contents -->
-				<!-- modal btn -->
-				<div class="modal-btn btn-wrap center">
-					<button type="button" class="krds-btn medium close-modal">설문조사 제출 및 퇴실하기<i
-							class="svg-icon ico-angle right"></i></button>
+
+
+				<!-- exam-user & btn -->
+				<div class="exam-submit-wrap">
+					<ul class="exam-user-info">
+						<li>
+							<div class="label">응시자 :</div>
+							<div class="text">홍길동</div>
+						</li>
+						<li>
+							<div class="label">생년월일 :</div>
+							<div class="text fw-bold">2025-06-31</div>
+						</li>
+					</ul>
+					<div class="exam-submit-btn">
+						<button type="button" class="krds-btn small"><i class="svg-icon ico-angle left"></i>재시험</button>
+					</div>
 				</div>
-				<!-- //modal btn -->
+				<!-- // exam-user & btn -->
+
+
 				<!-- close button -->
 				<button type="button" class="krds-btn medium icon btn-close close-modal">
 					<span class="sr-only">닫기</span>
