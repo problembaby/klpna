@@ -461,6 +461,9 @@ width:var(--krds-modal--size-medium);
 .krds-modal[data-type=large] .modal-dialog{
 width:var(--krds-modal--size-large);    
 }
+.krds-modal[data-type=xlarge] .modal-dialog{
+    width:120rem;    
+}
 
 
 .fieldset {
@@ -2061,3 +2064,13 @@ line-height: 150%; /* 24px */}
 @media (max-width: 320px) {
 }
 
+
+
+
+
+
+
+/* 모달  xrage 레이아웃 */
+@media (max-width:1230px) {
+    .krds-modal[data-type=xlarge] .modal-dialog { width: 95%; }
+}

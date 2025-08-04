@@ -2257,6 +2257,62 @@ line-height: 120%; /* 16.8px */
 }
 
 
+/*********************************
+강의실 : 강의
+*********************************/
+.lecture .c-name {
+    color: var(--color-text-title, #0D0E10);
+    font-size: 18px;
+}
+.lecture .s-name{font-style: 24px;}
+
+.video-player-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex:1 1 auto
+}
+
+.video-wrap{display: flex; gap:20px}
+.video-info-panel{padding:20px; background: var(--color-bg-secondary, #F7F8FB); border-radius: 12px; display: flex; flex-direction: column; gap:10px; min-width: 250px; width: 100%;}
+
+.video-info-area{position: relative;}
+
+
+.video-subject-title{
+  color: var(--color-text-title, #0D0E10);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+.video-chapter-title{
+  font-size: 16px;
+}
+.video-chapter-list{
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.video-chapter-item{font-size: 14px; display: flex; align-items: center; gap:10px; padding:5px;}
+.video-chapter-item.selected{color: var(--color-text-basic, #0D0E10);
+
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 16.8px */
+background: #E3ECFF;}
+
+.video-charpter-a{word-break: break-all;}
+.video-info-top{margin-bottom: 10px; display: flex; justify-content: flex-end; display: none;}
+
+.btn-fold{ width: 100px; height:30px}
 
 
 /** 노트북 */
@@ -2282,7 +2338,22 @@ line-height: 120%; /* 16.8px */
 /** 테블릿 */
 @media (max-width: 1023px) {
 
+  .video-wrap{display: flex; flex-direction: column;}
+  .video-info-panel {
+    padding: 20px;
+    background: var(--color-bg-secondary, #F7F8FB);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
 
+
+.video-chapter-list {
+    min-height: 100px;
+    max-height: 125px;
+}
   
 .edu-sel-section .pay-radio-list {
     gap: 0;
