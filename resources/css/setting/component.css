@@ -447,7 +447,6 @@ html .ui-button.ui-state-disabled:active {
 .mypage-education  .mob-overflow-icon::before{right:5px; top:75px}
 
 
-
 /* 감싼 구조 대응용 스타일 */
 label.radio-inline> input[type="radio"],
 label.radio-inline> input[type="checkbox"] {
@@ -491,7 +490,7 @@ label.radio-inline:before {
 label.radio-inline:after {
   content: "";
   position: absolute;
-  top: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2 + var(--krds-form-check--button-margin-top));
+  top: 9px;
   left: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2);
   width: var(--krds-form-check--radio-check-size-medium);
   height: var(--krds-form-check--radio-check-size-medium);
@@ -519,8 +518,8 @@ label.radio-inline:before {
 label.radio-inline:after {
   content: "";
   position: absolute;
-      top: 10px;
-    left: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2);
+  top: 9px;
+  left: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--radio-check-size-medium)) / 2);
   width: var(--krds-form-check--radio-check-size-medium);
   height: var(--krds-form-check--radio-check-size-medium);
   background-color: transparent; /* 초기엔 비움 */
@@ -540,6 +539,82 @@ label.radio-inline.checked::before {
 
 
 .krds-form-check > label.radio-inline{margin-right:10px}
+
+/* 체크박스 외곽 스타일 */
+label.checkbox-inline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--krds-form-check--gap);
+  font-size: var(--krds-form-check--pc-font-size-medium);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  label.checkbox-inline {
+    font-size: var(--krds-form-check--mobile-font-size-medium);
+  }
+}
+
+/* input 숨기기 */
+label.checkbox-inline > input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* before: 외곽 네모 */
+label.checkbox-inline:before {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  width: var(--krds-form-check--button-size-medium);
+  height: var(--krds-form-check--button-size-medium);
+  margin-top: var(--krds-form-check--button-margin-top);
+  background-color: var(--krds-form-check--button-color-element);
+  border: 0.1rem solid var(--krds-form-check--button-color-border);
+  border-radius: var(--krds-form-check--checkbox-button-radius-medium);
+  transition: 0.3s;
+}
+
+/* after: 체크 표시 */
+label.checkbox-inline:after {
+  content: "";
+  position: absolute;
+  transition: 0.3s;
+      top: 8px;
+    left: calc((var(--krds-form-check--button-size-medium) - var(--krds-form-check--checkbox-check-size-medium)) / 2);
+    display: inline-flex;
+    width: var(--krds-form-check--checkbox-check-size-medium);
+    height: var(--krds-form-check--checkbox-check-size-medium);
+    background-color: var(--krds-light-color-text-basic);
+    forced-color-adjust: none;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    -webkit-mask-image: url(../../krds/img/component/icon/ico_checkbox_checked.svg);
+    mask-image: url(../../krds/img/component/icon/ico_checkbox_checked.svg);
+    background-color: var(--krds-form-check--checkbox-check-color-element);
+}
+
+
+
+/* 체크된 상태일 때 after에 색상 표시 */
+label.checkbox-inline.checked:after {
+  background-color: var(--krds-form-check--checkbox-check-color-element-checked);
+}
+
+label.checkbox-inline.checked:before {
+     background-color: var(--krds-form-check--checkbox-button-color-element-checked);
+    border-color: var(--krds-form-check--button-color-border-checked);
+        border-radius: var(--krds-form-check--checkbox-button-radius-medium);
+}
+
 
 .select2-container--default .select2-selection--multiple {
   padding: 6px 8px;

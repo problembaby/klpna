@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*****************************************
  * cms 태그라이브러리 체크 박스 디자인 
- */
+ *************************/
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('label.radio-inline input[type="radio"]').forEach((input) => {
         input.addEventListener('change', function () {
@@ -363,6 +363,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('label.checkbox-inline input[type="checkbox"]').forEach((input) => {
+    input.addEventListener('change', function () {
+      const label = this.parentElement;
+
+      if (this.checked) {
+        label.classList.add('checked');
+      } else {
+        label.classList.remove('checked');
+      }
+    });
+
+    // 초기 상태 반영 (페이지 로드 시 체크되어 있다면)
+    if (input.checked) {
+      input.parentElement.classList.add('checked');
+    }
+  });
+});
+
 
 
 /*****************************************
