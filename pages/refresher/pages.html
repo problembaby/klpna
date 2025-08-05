@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 페이지 목록 - 간호조무사협회</title>
+
+
+    <!--폰트 pretendard-->
+    <link rel="stylesheet" as="style" crossorigin href="../resources/css/fonts/pretendard-gov.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css" />
+<link rel="stylesheet" href="../../resources/css/setting/edu_skin.css" />
+    <link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+
+
+    <!--js-->
+    <script src="../../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../../resources/krds/js/component/ui-script.js"></script>
+    <script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../../resources/js/script.js"></script>
+    <script src="../../resources/lib/aos/aos.js"></script>
+
+    <style>
+        #wrap {
+            padding: 20px
+        }
+
+        tr.red td {
+            background-color: #f8d7da;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #007bff;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        .table td,
+        .table th {
+            padding: 5px;
+        }
+
+        .del td {
+            background-color: #f8d7da;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="wrap">
+        <h1>보수교육 퍼블리싱 리스트</h1>
+        <section class="">
+            <h2>컴포넌트</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>컴포넌트</td>
+                            <td><a href="../../resources/krds/html/code/taglib.html" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>모달</td>
+                            <td></td>
+                            <td></td>
+                            <td>알림 모달</td>
+                            <td><a href="./alert.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="">
+            <h2>메인 / 공통</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>메인화면</td>
+                            <td></td>
+                            <td></td>
+                            <td>메인</td>
+                            <td><a href="./index.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                                헤더 푸터 한페이지에 모두 적용되어있는 화면입니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>헤더</td>
+                            <td></td>
+                            <td></td>
+                            <td>헤더</td>
+                            <td><a href="./common/header.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>푸터</td>
+                            <td></td>
+                            <td></td>
+                            <td>푸터</td>
+                            <td><a href="./common/footer.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>전체메뉴</td>
+                            <td></td>
+                            <td></td>
+                            <td>전체메뉴</td>
+                            <td><a href="./common/header_전체보기.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>서브페이지</td>
+                            <td>LNB</td>
+                            <td></td>
+                            <td>LNB</td>
+                            <td><a href="./sub.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                                LNB 퍼블리싱
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>에러페이지</td>
+                            <td></td>
+                            <td></td>
+                            <td>404</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>에러페이지</td>
+                            <td></td>
+                            <td></td>
+                            <td>500</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>에러페이지</td>
+                            <td></td>
+                            <td></td>
+                            <td>점검중</td>
+                            <td><a href="#" target="_blank"></a></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td></td>
+                            <td></td>
+                            <td>로그인페이지</td>
+                            <td><a href="./login.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>개인회원</td>
+                            <td>본인인증1회</td>
+                            <td>아이디 통합 팝업</td>
+                            <td><a href="./팝업-아이디통합.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>아이디 통합대상인 경우</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>개인회원</td>
+                            <td>본인인증1회</td>
+                            <td>위치기반 약관동의</td>
+                            <td><a href="./팝업-위치정보이용약관동의.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>아이디 통합대상이 아닌경우</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>아이디찾기</td>
+                            <td></td>
+                            <td>아이디찾기</td>
+                            <td><a href="./login_find_id.html" target="_blank"></a></td>
+                            <td> Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>아이디찾기</td>
+                            <td></td>
+                            <td>확인</td>
+                            <td><a href="./login_find_id_confirm.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>비밀번호찾기</td>
+                            <td></td>
+                            <td>비밀번호찾기</td>
+                            <td><a href="./login_find_pw.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>로그인</td>
+                            <td>비밀번호찾기</td>
+                            <td></td>
+                            <td>확인</td>
+                            <td><a href="./login_find_pw_confirm.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td></td>
+                            <td></td>
+                            <td>회원가입 화면</td>
+                            <td><a href="./join.html" target="_blank"></a></td>
+                            <td> Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>약관동의</td>
+                            <td>약관동의</td>
+                            <td><a href="./join-terms-p.html" target="_blank"></a></td>
+                            <td> Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>회원정보등록</td>
+                            <td>회원정보등록</td>
+                            <td><a href="./join-member-info.html" target="_blank"></a></td>
+                            <td> Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>근무처정보검색</td>
+                            <td>근무처정보검색</td>
+                            <td><a href="./work-place-search.html" target="_blank"></a></td>
+                            <td> Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>개인회원가입</td>
+                            <td>회원가입완료확인</td>
+                            <td>회원가입완료확인</td>
+                            <td><a href="./join-complete.html" target="_blank"></a></td>
+                            <td> Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>약관동의</td>
+                            <td>약관동의</td>
+                            <td><a href="./institution-terms.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>사업자번호중복가입확인</td>
+                            <td>사업자번호중복가입확인</td>
+                            <td><a href="./institution-biznum-check.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>실무담당자 정보 가입정보(실명인증)</td>
+                            <td>실무담당자 정보 가입정보</td>
+                            <td><a href="./institution-join-info.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>회원가입</td>
+                            <td>법인(기관)단체</td>
+                            <td>회원가입 신청완료 확인</td>
+                            <td>회원가입 신청완료 확인</td>
+                            <td><a href="./institution-join-complete.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+        <section class="">
+            <h2>서브페이지</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소개</td>
+                            <td>관련법규</td>
+                            <td></td>
+                            <td>관련법규</td>
+                            <td><a href="./관련법규.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>컨텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소개</td>
+                            <td>신청방법</td>
+                            <td></td>
+                            <td>신청방법</td>
+                            <td><a href="./신청방법.html" target="_blank"></a></td>
+                            <td></td>
+                            <td>컨텐츠</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소개</td>
+                            <td>교육일정</td>
+                            <td>온라인교육</td>
+                            <td>목록</td>
+                            <td><a href="./교육일정-온라인교육-목록.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                                [모달 있음]
+                                모달 : 샘플보기 <br>
+                                모달 : 상세보기
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소개</td>
+                            <td>교육일정</td>
+                            <td>대면교육</td>
+                            <td>목록</td>
+                            <td><a href="./교육일정-대면교육-목록.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                                [모달 있음]
+                                모달 : 상세보기
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소개</td>
+                            <td>교육일정</td>
+                            <td>대면교육</td>
+                            <td>목록</td>
+                            <td><a href="./교육일정-비대면교육-목록.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                                [모달 있음]
+                                모달 : 상세보기
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육신청</td>
+                            <td>신청안내</td>
+                            <td></td>
+                            <td>신청안내</td>
+                            <td><a href="./교육신청-신청안내.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육신청</td>
+                            <td>교육선택</td>
+                            <td></td>
+                            <td>step1</td>
+                            <td><a href="./교육신청-교육선택-(비)대면교육선택.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육신청</td>
+                            <td>교육선택</td>
+                            <td></td>
+                            <td>step2</td>
+                            <td><a href="./교육신청-교육선택-온라인교육선택.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육신청</td>
+                            <td>교육선택</td>
+                            <td></td>
+                            <td>step3</td>
+                            <td><a href="./교육신청-교육선택-유예해소자교육선택.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육신청</td>
+                            <td>선택내역확인</td>
+                            <td></td>
+                            <td>신청안내</td>
+                            <td><a href="./교육신청-선택내역확인.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육신청</td>
+                            <td>교육선택</td>
+                            <td></td>
+                            <td>신청안내</td>
+                            <td><a href="./교육신청-결제완료.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소식</td>
+                            <td>공지사항</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="./공지사항_목록.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소식</td>
+                            <td>공지사항</td>
+                            <td></td>
+                            <td>상세</td>
+                            <td><a href="./공지사항_상세.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>교육소식</td>
+                            <td>자주묻는질문</td>
+                            <td></td>
+                            <td>목록</td>
+                            <td><a href="./자주묻는질문.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            updateRowNumbers();
+            updateLinkText();
+
+        });
+
+        // 테이블의 행 번호 업데이트
+        function updateRowNumbers() {
+            $('section .pageList').each(function () {
+                $(this).find('tr').each(function (index) {
+                    $(this).find('.row-number').text(index);
+                });
+            });
+        }
+
+        // 링크 텍스트를 href 속성으로 업데이트
+        function updateLinkText() {
+            $(".pageList a").each(function () {
+                const href = $(this).attr('href');
+                $(this).text(href);
+            })
+        }
+    </script>
+</body>
+
+</html>
