@@ -1127,6 +1127,20 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
     width: 18px;
     height: 18px;
 }
+.ico-classroom-location::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-classroom-location.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-classroom-alert::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-classroom-alert.svg)no-repeat;
+    width: 18px;
+    height: 19px;
+}
 .ico-submit-wh::before{
      display: block;
     content:"";
@@ -1494,6 +1508,8 @@ height: 14px;
 .ico-subject::before{content:""; display: block; background: url(../../img/refre/ico-subject.svg)no-repeat; width: 18px; height:19px; }
 .ico-base-bullet-pupl::before{content:""; display: block; background: url(../../img/refre/ico-base-bullet.svg)no-repeat; width: 24px; height:25px; }
 .ico-subject::before{content:""; display: block; background: url(../../img/refre/ico-subject.svg)no-repeat; width: 18px; height:19px; }
+
+.ico-base-bullet-academy::before{content:""; display: block; background: url(../../img/academy/ico-base-bullet.svg)no-repeat; width: 24px; height:25px; }
 
 
 .edu-sel-section .section-title{display: flex; align-items: center; font-size: 18px; margin-bottom: 10px;}
@@ -2019,6 +2035,40 @@ line-height: 150%; /* 24px */
     
 }
 
+.krds-btn.fileBtn.AcademyComplite {
+    display: flex;
+    height: 32px;
+    padding: 0 10px;
+    justify-content: center;
+    font-size: 14px;
+    align-items: center;
+    gap: 2px;
+    border-radius: 4px;
+    border: 1px solid #F8F3FF;
+    color:#05417C;
+    background: #ECF2FE;
+    font-weight: 700;
+    cursor: inherit;
+    
+}
+.krds-btn.fileBtn.zoomBtn {
+    display: flex;
+    height: 32px;
+    padding: 0 10px;
+    justify-content: center;
+    font-size: 14px;
+    align-items: center;
+    gap: 2px;
+    border-radius: 4px;
+    border: 1px solid #05417C;
+    color:#fff;
+    background: #05417C;
+    font-weight: 700;
+    cursor: inherit;
+    font-weight: 400;
+    
+}
+
 .materials-list .no-data{min-height: 100px; text-align: center; display: flex; align-items: center; justify-content: center;}
 .materials-list .no-data p{color: var(--color-text-disabled, #8A949E);
 font-size: 16px;
@@ -2314,6 +2364,63 @@ background: #E3ECFF;}
 
 .btn-fold{ width: 100px; height:30px}
 
+/*************************************
+직무교육강의실 
+*************************************/
+
+.job-classroom-rate-title{color: var(--color-jigmu, #05417C);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */}
+.job-classroom-rate-list{display: flex; flex-direction: row; gap:30px; margin-top: 10px;}
+.job-classroom-rate-list li{flex: 1 1 40%;}
+.job-clsBox{width:100%; border-radius: 12px;
+background: var(--color-bg-secondary, #F7F8FB); padding:20px}
+.job-clsBox-title{width: 100%; text-align: center; padding-bottom:10px; border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);
+color: var(--color-text-title, #0D0E10);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 27px */} 
+
+.job-clsBox-cont{display:flex; flex-direction: column; padding:20px 0; min-height: 300px; }
+.job-clsBox-cont .label{display:flex; align-items: center; gap:5px; color: var(--color-text-sub_title, #0D0E10); font-size: 14px;}
+.job-clsBox-cont .text{font-size: 14px;}
+
+.job-clsBox-cont .cls-bot-progress {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.job-clsBox-cont .cls-bot-progress-rate {
+    flex: 0 auto;
+}
+
+.job-clsBox-cont .progress-action-bar {
+    background-color: #fff;
+}
+
+.progress-fill {
+    background-color: #05417C;
+}
+
+.cls-bot-progress-rate .label, .cls-bot-progress-rate .rate-num {
+    color: var(--color-text-bosu_txt, #05417C);
+    font-size: 16px;
+}
+
+.job-clsBox-btnList{
+  border-top: 1px solid var(--color-border-nomal, #C6C6C6);
+  padding-top:20px;
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  justify-content:center;
+  align-items: center;
+}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -2526,6 +2633,16 @@ font-size: 18px;
 
 /** 모바일 */
 @media (max-width: 767px) {
+
+  .job-classroom-rate-list {
+    flex-direction: column;
+}
+.job-clsBox-cont {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    min-height: auto;
+}
 
   .servey-banner .img{display: none;}
   .msg-group .msg-group-h3{font-size: 16px;}
