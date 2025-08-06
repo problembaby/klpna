@@ -96,7 +96,7 @@ const KRDSFormUtil = {
                 gnbBg.classList.add('active');
             }
             if (gnbBackdrop) gnbBackdrop.classList.add('active');
-            body.style.overflow = 'hidden';
+            //body.style.overflow = 'hidden';
         }
 
         function closeAllGnb() {
@@ -106,7 +106,7 @@ const KRDSFormUtil = {
                 gnbBg.classList.remove('active');
             }
             if (gnbBackdrop) gnbBackdrop.classList.remove('active');
-            body.style.overflow = '';
+          //  body.style.overflow = '';
             document.querySelectorAll('.gnb-main-trigger').forEach(btn => {
                 btn.classList.remove('active');
                 btn.setAttribute('aria-expanded', 'false');
