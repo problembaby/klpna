@@ -66,13 +66,33 @@ font-weight: 500;
 .edu-summary .edu-item{border-radius: 30px;
 background: #0767C7; width: 161.112px;
 height: 110px;
-flex-shrink: 0; text-align: center; display: block; color:#fff;}
+flex-shrink: 0; text-align: center; display: block; color:#fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.edu-summary .edu-item::before{
+    display:block;
+    content:"";
+    width:300px;
+    height: 300px;
+    background:rgba(0, 0, 0, 0.1);
+    position: absolute;
+    border-radius: 50%;
+    top:0%;
+    left:30%;
+    z-index:0
+}
+
 .edu-item .edu-title{display: flex; align-items: center; justify-content: center; margin-top:10px;}
 .edu-item .edu-count{color: var(--White, #FFF);
 text-align: center;
 font-size: 15px;
 font-weight: 300;
+position: relative;
+z-index: 1;
 }
+
 .edu-item .edu-count .value{color: var(--White, #FFF);
 text-align: right;
 font-size: 40px;

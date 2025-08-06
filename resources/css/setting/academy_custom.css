@@ -1577,30 +1577,6 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     height: 32px;
 }
 
-/****************************
-로그인 
-******************************/
-
-.naver-login-btn {
-    background: #03C75A;
-    border-color: #03C75A;
-}
-
-.kakao-login-btn {
-    background: #FFE839;
-    border-color: #FFE839;
-    color: var(--color-text-basic, #0D0E10);
-}
-
-.login-btn {
-    background-color: var(--krds-button--color-primary-fill);
-    border-color: var(--krds-button--color-primary-border);
-    color: var(--krds-button--color-primary-text);
-}
-.krds-btn.login-btn:hover {
-    background-color: var(--krds-button--color-primary-fill-hover);
-}
-
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
