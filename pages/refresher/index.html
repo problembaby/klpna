@@ -485,7 +485,7 @@
 					<!--//배너영역-->
 
 					<!--로그인 후 화면 -->
-					<div class="main-login-area" style="display: ;" data-aos="flip-left">
+					<div class="main-login-area" style="display: none;" data-aos="flip-left">
 						<div class="login-box">
 							<div class="login-info-top">
 								<div class="user-name-wrap">
@@ -726,10 +726,8 @@
 	<script>
 
 		// 메인 스와이퍼
-		let swiper1, swiper2, swiper3;
+		let swiper1;
 		let isPlaying1 = true;
-		let isPlaying2 = true;
-		let isPlaying3 = true;
 		let progressInterval1;
 
 		function initSwiper1() {
@@ -754,51 +752,6 @@
 			});
 			startProgressBar1();
 		}
-
-		function initSwiper2() {
-			swiper2 = new Swiper(".mainSwiper2", {
-				navigation: {
-					nextEl: ".mainSwiper2 .swiper-button-next",
-					prevEl: ".mainSwiper2 .swiper-button-prev",
-				},
-				pagination: {
-					el: ".mainSwiper2 .swiper-pagination",
-					type: "fraction",
-				},
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				}
-			});
-		}
-
-		function initSwiper3() {
-			swiper3 = new Swiper(".mainSwiper3", {
-				slidesPerView: 3,
-				spaceBetween: 20,
-				loop: true,
-				navigation: {
-					nextEl: ".mainSwiper3 .swiper-button-next",
-					prevEl: ".mainSwiper3 .swiper-button-prev",
-				},
-				autoplay: {
-					delay: 2000,
-					disableOnInteraction: false,
-				},
-				breakpoints: {
-					0: {
-						slidesPerView: 3,
-					},
-					768: {
-						slidesPerView: 3,
-					},
-					1024: {
-						slidesPerView: 5,
-					}
-				}
-			});
-		}
-
 
 		function startProgressBar1() {
 			const $progress = $('.mainSwiper .swiper-progress-fill');
@@ -837,81 +790,13 @@
 			}
 		}
 
-		function togglePlayPause2() {
-			const $playBtn = $('.mainSwiper2 .swiper-button-play');
-			const $stopBtn = $('.mainSwiper2 .swiper-button-stop');
-			if (isPlaying2) {
-				swiper2.autoplay.stop();
-				isPlaying2 = false;
-				$playBtn.show();
-				$stopBtn.hide();
-			} else {
-				swiper2.autoplay.start();
-				isPlaying2 = true;
-				$playBtn.hide();
-				$stopBtn.show();
-			}
-		}
-
-		function togglePlayPause3() {
-			const $playBtn = $('.mainSwiper3 .swiper-button-play');
-			const $stopBtn = $('.mainSwiper3 .swiper-button-stop');
-			if (isPlaying3) {
-				swiper3.autoplay.stop();
-				isPlaying3 = false;
-				$playBtn.show();
-				$stopBtn.hide();
-			} else {
-				swiper3.autoplay.start();
-				isPlaying3 = true;
-				$playBtn.hide();
-				$stopBtn.show();
-			}
-		}
 
 		$(document).ready(function () {
 			initSwiper1();
-			initSwiper2();
-			initSwiper3();
 
 			$('.mainSwiper .swiper-button-play').on('click', togglePlayPause1);
 			$('.mainSwiper .swiper-button-stop').on('click', togglePlayPause1);
-
-			$('.mainSwiper2 .swiper-button-play').on('click', togglePlayPause2);
-			$('.mainSwiper2 .swiper-button-stop').on('click', togglePlayPause2);
-
-			$('.mainSwiper3 .swiper-button-play').on('click', togglePlayPause3);
-			$('.mainSwiper3 .swiper-button-stop').on('click', togglePlayPause3);
 		});
-
-
-
-		//탭에 따른 지역 타이틀 수정
-		$(document).ready(function () {
-			const localNameMap = {
-				tab_local_01: '대한간호조무사협회',
-				tab_local_02: '서울시간호조무사회',
-				tab_local_03: '부산시간호조무사회',
-				tab_local_04: '대구시간호조무사회',
-				tab_local_05: '인천시간호조무사회',
-				tab_local_06: '광주·전남간호조무사회',
-				tab_local_07: '대전·충남간호조무사회',
-				tab_local_08: '울산·경남간호조무사회',
-				tab_local_09: '경기도간호조무사회',
-				tab_local_10: '강원도간호조무사회',
-				tab_local_11: '충청북도간호조무사회',
-				tab_local_12: '전라북도간호조무사회',
-				tab_local_13: '경상북도간호조무사회',
-				tab_local_14: '제주도간호조무사회'
-			};
-
-			$('.mainLocalTab .tab [role=tab]').on('click', function () {
-				const tabId = $(this).attr('id');
-				const newName = localNameMap[tabId] || '대한간호조무사협회';
-				$('.local-name').html(`${newName} <i class="ico-homeGo"></i>`);
-			});
-		});
-
 
 	</script>
 
