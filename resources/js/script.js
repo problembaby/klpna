@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // ✅ 초기 checked 상태 반영 (페이지 로딩 시)
+        // 초기 checked 상태 반영 (페이지 로딩 시)
         if (input.checked) {
             input.parentElement.classList.add('checked');
         }

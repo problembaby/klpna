@@ -1,3 +1,39 @@
+/** 아이콘 정리*/
+.ico-phone::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-phone.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-email::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-email.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-parking::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-parking.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-transit::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-transit.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+
+
+
+
+
+
 
 /***********************
 헤더 푸터
@@ -1648,6 +1684,65 @@ font-weight: 400;
 line-height: 120%; /* 16.8px */
 }
 
+
+/** 오시는길 */
+
+.center-map {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1044 / 500;
+}
+
+.center-map .root_daum_roughmap_landing {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+.center-info{margin-top:30px; }
+.center-address { color: var(--color-text-title, #0D0E10); font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+
+.center-info-list{display:flex; flex-direction:column; gap:10px}
+.center-info-list > li{display: flex; gap:10px; align-items: center; }
+
+.center-info .label{flex: 0 0 auto; display: flex; align-items: center; gap:10px; font-size: 14px; color:#464C53}
+.center-info .text{flex: 1 auto; display: flex;  gap:10px; justify-content: flex-start; font-size: 16px; color:#0D0E10}
+.center-info-contact .contact-list {
+    display: flex;
+    gap:10px;
+    width: 100%;
+    align-items: center;
+}
+.center-info-contact .contact-list .contact-item{
+    display: flex;
+    gap:10px
+}
+
+.contact-divider::before{width: 1px;
+height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; flex-shrink: 0;}
+
+.center-info-transit > .text{display: flex; gap:10px; flex-wrap: wrap;}
+
+.transit-line .line-name{
+    display: inline-flex;
+    height: 24px;
+    padding: 0 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.transit-line .line-name.subway4 { background: var(--color-secondary, #0AF)}
+.transit-line .line-name.subway1 { background: var(--color-secondary, #0050CA)}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -1869,7 +1964,39 @@ body.edu-appl-step03 .step02 {
 
 /** 모바일 */
 @media (max-width: 767px) {
-    
+.center-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    .center-info-contact .contact-list {
+    align-items: flex-start;
+    flex-direction: column;
+    gap:0
+}
+.center-info-list > li {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contact-divider::before {
+    display: none;
+}
+
+.center-info-transit > .text {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+    .center-map {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1044 / 700;
+}
 
     .edu-summary {
     margin-top: 0;
@@ -1995,6 +2122,7 @@ body.edu-appl-step03 .step02 {
 .banner-area .title-img-center {
     display: none;
 }
+
 
 
 }
