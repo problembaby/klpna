@@ -350,6 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
  *************************/
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('label.radio-inline input[type="radio"]').forEach((input) => {
+        // change 이벤트 바인딩
         input.addEventListener('change', function () {
             const name = this.name;
 
@@ -361,8 +362,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.parentElement.classList.add('checked');
             }
         });
+
+        // ✅ 초기 checked 상태 반영 (페이지 로딩 시)
+        if (input.checked) {
+            input.parentElement.classList.add('checked');
+        }
     });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
