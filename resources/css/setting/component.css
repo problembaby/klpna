@@ -708,6 +708,10 @@ label.checkbox-inline.checked:before {
     top: 0;
 }
 
+.input-group.range {
+    align-items: center;
+    position: relative;
+}
 
 @media (max-width: 1024px){
     .krds-modal {
