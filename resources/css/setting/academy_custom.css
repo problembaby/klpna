@@ -1185,14 +1185,14 @@ line-height: 150%; /* 27px */
 선택내역확인
 *************************/
 
-.ico-base-bullet::before{content:""; display: block; background: url(../../img/refre/ico-base-bullet.svg)no-repeat; width: 24px; height:25px; }
+.ico-base-bullet::before{content:""; display: block; background: url(../../img/academy/ico-base-bullet.svg)no-repeat; width: 24px; height:25px; }
 .ico-subject::before{content:""; display: block; background: url(../../img/refre/ico-subject.svg)no-repeat; width: 18px; height:19px; }
 
 
 .edu-sel-section .section-title{display: flex; align-items: center; font-size: 18px; margin-bottom: 10px;}
 
 .edu-sel-lsit{display: flex; width: 100%; gap:30px}
-.edu-sel-lsit .edu-sel-items{flex: 0 1 450px}
+.edu-sel-lsit .edu-sel-items{flex: 1 450px}
 
 .edu-sel-summary{border-radius: 10px;
 border: 1px solid var(--color-border-light, #D9D9D9);
@@ -1243,7 +1243,7 @@ line-height: 150%; /* 27px */
 .edu-pay-list > li:last-child{border-right: 0;}
 .edu-pay-list .edu-pay-item{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .edu-join-head{display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
@@ -1837,6 +1837,10 @@ line-height: 150%; /* 27px */}
 .card-radio-btn{padding:10px 0; width: 100%; background: var(--color-bg-nomal, #F8F8F8); display: flex; align-items: center; justify-content: center;}
 
 
+/** 교육신청 : 선택내역확인 */
+
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -2342,6 +2346,7 @@ body.edu-appl-step03 .step02 {
     padding: 20px 10px;
 }
 
+.edu-pay-item.addPay, .edu-total-item.addPay{flex-wrap: wrap;}
 
 }
 

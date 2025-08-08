@@ -3,27 +3,28 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../resources/img/logo/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
-    <title> 강의상세 | 교육현황 | 마이페이지 - 대한간호조무사협회</title>
+    <title>교육신청 - KLPNA 직무교육센터</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../resources/lib/select2/select2.min.css" />
-    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
-    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
-    <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
-    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css" />
+    <link rel="stylesheet" href="../../resources/css/setting/academy_custom.css" /> <!-- 직무교육 커스텀 css -->
+    <link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+
 
     <!--js-->
-    <script src="../resources/js/jquery-3.7.1.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
-    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
-    <script src="../resources/lib/select2/select2.min.js"></script>
-    <script src="../resources/krds/js/component/ui-script.js"></script>
-    <script src="../resources/krds/js/pattern/pattern.js"></script>
-    <script src="../resources/js/script.js"></script>
-</head>
+    <script src="../../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../../resources/krds/js/component/ui-script.js"></script>
+    <script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../../resources/js/script.js"></script>
+    <script src="../../resources/lib/aos/aos.js"></script>
 
 <body>
     <div id="wrap">
@@ -34,79 +35,21 @@
         <div id="container">
             <!-- 컨텐츠 영역 -->
             <div class="inner in-between">
-                <!-- 사이드 메뉴 -->
-                <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">마이페이지</h1>
-                    <!-- lnb-list -->
-                    <ul class="lnb-list">
-                        <li class="lnb-item active">
-                            <a href="#" class="lnb-btn link active selected">교육현황</a>
-                        </li>
-                        <li class="lnb-item">
-                            <a href="#" class="lnb-btn link ">강의실</a>
-                        </li>
-                        <li class="lnb-item">
-                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-vf9gqcy"
-                                aria-expanded="ture">회비/기금내역</button>
-                            <!-- lnb-submenu -->
-                            <div class="lnb-submenu">
-                                <ul id="lnbmenu-vf9gqcy">
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회비 납부내역</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">정치세력화 추진모금내역</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노조설립 약정금 납부내역</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">포인트 내역</a></li>
-                                </ul>
-                            </div>
-                            <!-- //lnb-submenu -->
-                        </li>
-                        <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">1:1문의</a>
-                        </li>
-
-                        <li class="lnb-item">
-                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-vf9gqcy"
-                                aria-expanded="ture">나의게시물</button>
-                            <!-- lnb-submenu -->
-                            <div class="lnb-submenu">
-                                <ul id="lnbmenu-vf9gqcy">
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link ">신고센터</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노무상담</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">대체인력 구인</a></li>
-                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
-                                </ul>
-                            </div>
-                            <!-- //lnb-submenu -->
-                        </li>
-                        <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">회원정보</a>
-                        </li>
-                    </ul>
-                    <!-- //lnb-list -->
-                </nav>
-                <!-- //사이드 메뉴 -->
-
-
 
                 <div class="contents">
                     <!-- breadcrumb -->
-                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
-                            <li><a href="#;" class="txt">마이페이지</a></li>
-                            <li><a href="#;" class="txt">교육현황</a></li>
-                            <li><a href="#;" class="txt">교육변경</a></li>
-                            <li><a href="#;" class="txt">상세정보</a></li>
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">교육신청</a></li>
                         </ol>
+
                     </nav>
                     <!-- breadcrumb -->
 
-
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
-                        <h1 class="h-tit">강의 상세정보</h1>
-
+                        <h1 class="h-tit">교육신청</h1>
                         <ol class="breadcrumb-action">
                             <li>
                                 <button class="icon-bg-round" onclick="window.print(); return false;">
@@ -119,17 +62,28 @@
                     <!-- //페이지 타이틀 영역 -->
 
 
+                    <!--스탭-->
+                    <div class="step bg-purple">
+                        <ol class="progress-bar">
+                            <li class="progress-step active">1. 교육선택</li>
+                            <li class="progress-step">2. 선택내역 확인</li>
+                            <li class="progress-step">3. 결제 완료</li>
+                        </ol>
+                    </div>
+                    <!--//스탭-->
 
-                    <!--마이페이지-->
-                    <div class="sub-content mypage">
+                    <!--컨텐츠  :교육신청-->
+                    <div class="edu-appl-cont">
+
 
                         <div class="lect-detail-wrap">
 
 
                             <div class="lec-top">
                                 <div class="lec-title">
-                                    <span class="krds-badge small bg-light-primary">지역사회간호</span>
-                                    <h3>유아와 학령전기 아동의 건강문제와 가족의 건강증진</h3>
+                                    <span class="krds-badge small bg-light-primary">아동간호</span>
+                                    <h3>보험청구 실무 <3회차>
+                                    </h3>
                                 </div>
 
 
@@ -280,7 +234,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -339,7 +293,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -397,7 +351,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -455,7 +409,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -560,7 +514,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -611,7 +565,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -673,7 +627,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -726,7 +680,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -789,7 +743,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -842,7 +796,7 @@
                                                                                 강사
                                                                             </div>
                                                                             <div class="img">
-                                                                                <img src="../resources/img/refre/lect-img.png"
+                                                                                <img src="../../resources/img/refre/lect-img.png"
                                                                                     alt="사진">
                                                                             </div>
                                                                         </div>
@@ -877,33 +831,7 @@
                                                 </ul>
                                             </article>
 
-                                            <article class="edu-arti-box">
-                                                <h3 class="mb10">3. 현장실습</h3>
-                                                <div class="lec-box">
-                                                    <ul class="lec-detail-list">
-                                                        <li>
-                                                            <div class="label"><i class="ico-ghospital"></i>실습기관 섭외 :
-                                                            </div>
-                                                            <div class="text">국가치매교육 홈페이지</div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="label"><i class="ico-ghospital"></i>실습가능 기관 :
-                                                            </div>
-                                                            <div class="text">
-                                                                <ul class="o-list">
-                                                                    <li class="fs-16">용산구기관</li>
-                                                                    <li class="fs-16">관악구기관</li>
-
-                                                                </ul>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="label"><i class="ico-clock"></i>실습가능 시간 :</div>
-                                                            <div class="text">18H</div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </article>
+                            
 
                                         </section>
 
@@ -919,25 +847,33 @@
 
 
 
-                    </div>
-                    <!--//마이페이지-->
 
+
+                    </div>
+
+                    <!--//컨텐츠  :교육신청-->
 
 
                 </div>
+
+
+
             </div>
-            <!-- //컨텐츠 영역 -->
+
         </div>
-        <!-- //컨테이너 영역 -->
-        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+
+
+        <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+
+    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
 
     </div>
-
 </body>
 
 </html>
-
-
 
 <script>
 
@@ -945,8 +881,8 @@
     // 개발에서는 절대 사용하지 말것!
 
     document.addEventListener("DOMContentLoaded", function () {
-        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
-        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+        loadHTML("../refresher/common/header_pubSample.html", "beforebegin");
+        loadHTML("../refresher/common/footer_pubSample.html", "afterend");
     });
 
     function loadHTML(url, position) {
