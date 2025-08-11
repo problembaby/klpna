@@ -65,18 +65,37 @@
                     <div class="step bg-purple">
                         <ol class="progress-bar">
                             <li class="progress-step none">1. 교육선택</li>
-                            <li class="progress-step active">2. 선택내역 확인</li>
-                            <li class="progress-step">3. 결제 완료</li>
+                            <li class="progress-step none">2. 선택내역 확인</li>
+                            <li class="progress-step active">3. 결제 완료</li>
                         </ol>
                     </div>
                     <!--//스탭-->
 
                     <!--컨텐츠  :교육신청-->
-                   <div class="edu-appl-cont">
-                        <section class="edu-sel-section">
+                  <div class="edu-appl-cont">
+
+                        <div class="edu-complite-area">
+                            <div class="img-complite"></div>
+
+
+                            <h2 class="text" style="display: block;"><span class="fw-bold">‘교육신청’</span>이 완료되었습니다.</h2>
+                            <!--가상계좌 입금시 아래 문구로 대체 -->
+                            <div class="acct-issue-text" style="display: none">
+                                <h2 class="text">가상계좌번호 발급이 완료되었습니다. (유효기간 : 3시간)</h2>
+                                <p class="num">계좌번호 : 79018617949031 (농협)</p>
+                            </div>
+                            <div class="pay-area">
+                                <div class="label">결제금액</div>
+                                <div class="pay">65,000원</div>
+                            </div>
+                        </div>
+
+
+
+                        <section class="edu-sel-section mt50">
                             <h2 class="section-title">
                                 <i class="ico-base-bullet"></i>
-                                <span>선택 내역</span>
+                                <span>신청 내역</span>
                             </h2>
 
                             <ul class="edu-sel-lsit">
@@ -113,114 +132,49 @@
                             </ul>
                         </section>
 
-                        <section class="ea-section sky mt10">
-                            <h2>※ 필독 사항</h2>
-                            <ol class="ea-list">
+                        <div class="text-box sky mt30">
+                            <ol class="ea-list fs14">
                                 <li>
-                                    <div class="ea-list-p">
-                                        <p class="fw-normal">보수교육비 환불 및 추가비 관련 내용은 “KLPNA 보수교육센터> 게시판 > 공지사항”에서 확인 가능
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="ea-list-p">
-                                        <p class="fw-normal">결제 완료 후 협회에 요청하여 현금영수증을 발급받는 경우 결제자의 성명이 미기재되오니 현금영수증의 발급이 필요하신 분은 결제 시 발급을 받으시기 바랍니다.
-                                        </p>
-                                    </div>
+                                    <p>교육 변경, 취소, 영수증출력은 ‘마이페이지 > 교육현황’에서 하실 수 있습니다.</p>
                                 </li>
                             </ol>
-                        </section>
+                        </div>
 
-                        <section class="edu-sel-section mt30">
-                            <h2 class="section-title">
-                                <i class="ico-base-bullet"></i>
-                                <span>결제금액 확인</span>
-                            </h2>
+                        <section class="edu-sel-section mt30 mb30">
+                            <ul class="edu-pay-list"> <!-- ✅ 결제 관련 리스트 전체 -->
 
-                            <ul class="edu-pay-list"> 
-                                <li class="edu-pay-item addPay"> 
-                                    <h3 class="label">회비</h3>  
-                                    <p class="pay-amount">65,000원</p>  
+                                <li class="edu-join-item"> <!-- ✅ 정회원 가입 항목 -->
+                                    <div class="edu-join-head">
+                                        <h3 class="edu-pay-title">보수교육 인정 신청</h3>
+                                        <button class="krds-btn xsmall black open-modal" data-target="modal-benefit">정회원
+                                            혜택보기 <i class="svg-icon ico-angle right"></i></button>
+                                    </div>
+                                    <p class="mb10 fs-16">
+                                        회원님께서는 <span class="fc-blue">보수교육 대체인정 대상자</span>로 아래 내역을 결제하실 수 있습니다.
+                                    </p>
+                                    <div class="krds-check-area">
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_1" checked>
+                                            <label for="rdo_1">정회원</label>
+                                        </div>
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_2">
+                                            <label for="rdo_2">비회원</label>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class="edu-total-item addPay">
-                                    <h3 class="label">총 결제 금액</h3>
-                                    <p class="edu-total-amount">65,000원</p>
-                                    <span class="fs-13">정회원 입회비 포함</span>
-                                </li>
-
-
                             </ul>
                         </section>
 
 
-                        <section class="edu-sel-section mt30">
-                            <h2 class="section-title">
-                                <i class="ico-base-bullet"></i>
-                                <span>결제방법 선택</span>
-                            </h2>
-                            <div class="pay-box">
-                                <ul class="pay-radio-list">
-                                    <li>
-                                        <div class="krds-form-chip">
-                                            <input type="radio" class="radio" name="rdo_chip" id="rdo_chip_1">
-                                            <label class="krds-form-chip-outline" for="rdo_chip_1">신용카드
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="krds-form-chip">
-                                            <input type="radio" class="radio" name="rdo_chip" id="rdo_chip_2"
-                                                checked="">
-                                            <label class="krds-form-chip-outline" for="rdo_chip_2">가상계좌
-                                            </label>
 
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="krds-form-chip">
-                                            <input type="radio" class="radio" name="rdo_chip" id="rdo_chip_3">
-                                            <label class="krds-form-chip-outline" for="rdo_chip_3">계좌이체
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="krds-form-chip">
-                                            <input type="radio" class="radio" name="rdo_chip" id="rdo_chip_4">
-                                            <label class="krds-form-chip-outline" for="rdo_chip_4">
-                                                <span class="sr-only">네이버페이</span>
-                                                <i class="ico-naver-pay"></i>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="krds-form-chip">
-                                            <input type="radio" class="radio" name="rdo_chip" id="rdo_chip_5">
-                                            <label class="krds-form-chip-outline" for="rdo_chip_5">
-                                                <span class="sr-only">토스페이</span>
-                                                <i class="ico-toss-pay"></i>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="krds-form-chip">
-                                            <input type="radio" class="radio" name="rdo_chip" id="rdo_chip_6">
-                                            <label class="krds-form-chip-outline" for="rdo_chip_6">
-                                                <span class="sr-only">카카오페이</span>
-                                                <i class="ico-kakao-pay"></i>
-                                            </label>
-                                        </div>
-                                    </li>
+                        <div class="btnList-sort center">
+                            <a href="/index.do" target="_self" title="홈으로" class="krds-btn blue">홈으로</a>
+                            <a href="#" target="_self" title="마이페이지로 이동" class="krds-btn blue">마이페이지로</a>
+
+                        </div>
 
 
-                                </ul>
-                            </div>
-                        </section>
-
-                          <div class="btnList-sort right">
-                                <button type="button" class="krds-btn blue">뒤로</button>
-                                <button type="button" class="krds-btn" onclick="eduChange_apply()">결제 <i
-                                        class="svg-icon ico-angle right"></i></button>
-                            </div>
 
 
 
