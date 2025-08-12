@@ -1675,6 +1675,13 @@ line-height: 120%; /* 15.6px */}
 대체인력 : 구직신청
 ************************************/
 
+
+
+.input-tag-list{padding:10px; border:1px solid #D9D9D9; margin:10px 0;}
+.input-tag-list .select-tag {    background-color: #EFF5FF; color: #1D56BC; border-radius: 4px; padding: 5px 10px; display: inline-flex; align-items: center; gap:10px; justify-content: center; font-size: 14px; font-weight: 700; margin:2px}
+
+
+
 .subStaff2 .title-img-subStaff{height:auto; display: flex; align-items: flex-end; max-width:300px; width: 100%; height: 250px;} 
 .subStaff2 .title-img-subStaff::before{
     display: block;
@@ -1683,6 +1690,14 @@ line-height: 120%; /* 15.6px */}
     width:100%;
     height:195px;
 }
+/* 태그가 하나도 없을 때 전체 블록 숨김(초기 상태 보장) */
+#select-tag-list { display: none; }
+
+/* 태그 스타일(선택) */
+#select-tag-list .select-tag{display:inline-flex;align-items:center;gap:.25rem;margin:.25rem .25rem 0 0}
+#select-tag-list .select-tag .tag-name{margin:0}
+
+.input-tag-header{width: 100%; display: flex; justify-content: flex-end; color:#8A949E}
 
 .title-banner .repo{
     color: var(--color-text-sub_title, #464C53);
