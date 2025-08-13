@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인 - 간호조무사협회</title>
+    <title>비밀번호변경 | 마이페이지 - 대한간호조무사협회</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
@@ -15,17 +15,18 @@
 
     <!--js-->
     <script src="../resources/js/jquery-3.7.1.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
-    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
     <script src="../resources/krds/js/pattern/pattern.js" defer></script>
-    <script src="../resources/js/script.js" defer></script>
+    <script src="../resources/js/script.js"></script>
 </head>
 
 <body>
-    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
 
 
-    <script>
+          <script>
         /** 비밀번호 실시간 유효성 체크 */
         function checkPasswordRules(el) {
             let $el = $(el);
@@ -103,30 +104,79 @@
 
     </script>
 
-    <!-- 로그인 영역 -->
-    <div class="login-wrap">
-        <div class="login-img">
-        </div>
-        <div class="login-contents">
-            <div class="login-inner">
-                <div class="login-form-wrap">
-                    <div class="login-title">
-                        <h1>비밀번호 찾기</h1>
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">마이페이지</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">교육현황</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">강의실</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">회비/기금내역</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">1:1문의</a>
+                        </li>
+
+                        <li class="lnb-item">
+                            <button type="button" class="lnb-btn lnb-toggle"
+                                aria-controls="lnbmenu-vf9gqcy" aria-expanded="false">나의게시물</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-vf9gqcy">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">신고센터</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노무상담</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">대체인력 구인</a></li>
+<li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">회원정보</a>
+                            <!-- lnb-submenu -->
+                            <!-- //lnb-submenu -->
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
+                            <li><a href="#;" class="txt">마이페이지</a></li>
+                            <li><a href="#;" class="txt">회원정보</a></li>
+                            <li><a href="#;" class="txt">비밀번호찾기</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">비밀번호찾기</h1>
                     </div>
+                    <!-- //페이지 타이틀 영역 -->
 
                     <!-- 비밀번호 찾기 -->
-                    <div class="login-idFind-area">
-                        <div class="step">
-                            <ol class="progress-bar">
-                                <li class="progress-step none">1. 가입정보 확인</li>
-                                <li class="progress-step active">2. 비밀번호 변경</li>
-                            </ol>
-                        </div>
+                    <div class="login-idFind-area mypage-pwFind ">
                         <div class="helper-box gray">
                             <div class="helper-wrap">
                                 <ul class="krds-info-list decimal" role="list">
                                     <li role="listitem">
-                                        아래에 새로운 비밀번호를 기입하시고 확인 버튼을 누르시면 해당 비밀번호로 변경됩니다.
+                                        아래에 새로운 비밀번호를 기입하시고 저장 버튼을 누르시면 해당 비밀번호로 변경됩니다.
                                     </li>
                                     <li role="listitem">
                                         <span class="bold">6자~20자 영문 혼용(대소문자구분), 숫자, 특수문자(!@#$^&*만 허용)</span>
@@ -209,9 +259,11 @@
 
                                 <div class="bar"></div>
                             </div>
-                            <div class="comp-btn-wrap ">
-                                <button type="button" id="idFindsubmit" class="krds-btn login-btn black"
-                                    onclick="handlePwResetSubmit(this)">확인</button>
+                            <div class="btn-wrap center btnW140">
+                                <button type="button" id="idFindsubmit" class="krds-btn black"
+                                    >뒤로</button>
+                                <button type="button" id="idFindsubmit" class="krds-btn tertiary"
+                                    onclick="handlePwResetSubmit(this)">저장</button>
                             </div>
                             <div class="krds-disclosure conts-expand-area active mt30">
                                 <button type="button" class="btn-conts-expand">안내 및 유의사항</button>
@@ -228,17 +280,19 @@
 
                     </div>
                     <!-- //비밀번호 찾기 -->
+
+
+
+
+
                 </div>
-
             </div>
+            <!-- //컨텐츠 영역 -->
         </div>
+        <!-- //컨테이너 영역 -->
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
     </div>
-    <!-- //로그인 영역 -->
-
-    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
-
-
-
 
 </body>
 
