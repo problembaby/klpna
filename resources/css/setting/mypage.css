@@ -2421,6 +2421,7 @@ line-height: 150%; /* 27px */}
   align-items: center;
 }
 
+.mypage-pwFind{max-width: 680px; margin:0 auto}
 
 /** 노트북 */
 @media (max-width: 1440px) {

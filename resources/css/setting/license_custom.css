@@ -38,8 +38,44 @@
      display: block;
     content:"";
     background: url(../../img/license/ico-mian-doc.svg)no-repeat;
+    width: 21px;
+    height: 21px;
+}
+.ico-main-doc2::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-mian-doc2.svg)no-repeat;
     width: 16px;
-    height: 19px;
+    height: 16px;
+}
+
+.ico-certi01::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-certi01.svg)no-repeat;
+    width: 45px;
+    height: 41px;
+}
+.ico-certi02::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-certi02.svg)no-repeat;
+    width: 38px;
+    height: 45px;
+}
+.ico-certi03::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-certi03.svg)no-repeat;
+    width: 43px;
+    height: 45px;
+}
+.ico-certi04::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-certi04.svg)no-repeat;
+    width: 37px;
+    height: 37px;
 }
 
 
@@ -148,7 +184,7 @@ letter-spacing: -0.64px;
 
 .depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#356900; }
 #krds-header .header-container .header-actions{margin: 0 auto;}
-.login-box, .guest-box { background: #356900; }
+.login-box, .guest-box { background: #418200; }
 .guest-btn-list a.krds-btn {
     color: #356900;
 }
@@ -177,7 +213,7 @@ letter-spacing: -0.64px;
 
 .edu-summary .edu-item {
     border-radius: 30px;
-    background: #356900;
+    background: #418200;
     width: 161.112px;
     height: 110px;
     flex-shrink: 0;
@@ -1476,14 +1512,14 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 
 .ico-mypage::before {
     content: "";
-    background: url(../../img/academy/ico-mypage.svg)no-repeat;
+    background: url(../../img/license/ico-mypage.svg)no-repeat;
     width: 25px;
     height: 24px;
     display: block;
 }
 
 .ico-blue-home::before{content: ""; background: url(../../img/license/ico-blueHome.svg)no-repeat; width: 25px; height:24px; display: block;}
-.depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/academy/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
+.depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/license/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
 /* 기본 상태 - before 숨김 */
 .depth01 .gnb-main-trigger::before {
@@ -1684,10 +1720,8 @@ line-height: 150%; /* 27px */}
 
 /** 자격신고 :메인세션 3 */
 
-.main-bbs-list{padding:20px 0; display: flex;}
-.mbl-card-items{display: block; border-radius: 20px;
-border: 1px solid var(--BG-01, #F4F6FC);
-background: var(--White, #FFF); padding:20px; flex: 0 0 400px;}
+.main-bbs-list{padding:50px 0; display: flex; justify-content: flex-start; gap:20px}
+.mbl-card-items{display: block; flex: 0 1 34%;}
 .mbl-badge{
     padding:5px 10px; border-radius: 10px;
     background: #418200;
@@ -1697,7 +1731,9 @@ background: var(--White, #FFF); padding:20px; flex: 0 0 400px;}
     gap:5px;
     align-items: center;
 }
-.mbl-box{display: inline-flex; flex-direction: column;}
+.mbl-box{display: inline-flex; flex-direction: column;  border-radius: 20px;
+border: 1px solid var(--BG-01, #F4F6FC);
+background: var(--White, #FFF); padding:20px; width: 100%;}
 .mbl-box-top{margin-bottom: 20px;}
 .mbl-title{display:flex; align-items: center; margin-bottom: 20px; height:51px; gap:5px}
 .mbl-box .date{color: #7E7B77;
@@ -1707,6 +1743,33 @@ font-weight: 400;
 line-height: normal;
 letter-spacing: -0.7px;}
 
+/** 자격신고 :메인세션 4 */
+.main-print-list{padding:50px 0; display: flex; justify-content: flex-start; gap:20px}
+.mpl-card-items{display: block; flex: 0 1 25%}
+.mpl-box { display: flex; border-radius: 20px; padding:10px; border: 1px solid var(--BG-01, #F4F6FC); background: #F1F2F6;
+height: 134px;
+flex-shrink: 0; align-items: center; justify-content: center; gap:20px }
+.mpl-box p { color: #0D0E10;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 110% */}
+
+
+.mpl-box:hover {
+  animation: btnHoverUpDown 0.5s ease forwards;
+}
+
+ @keyframes btnHoverUpDown {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-8px); }
+    60% { transform: translateY(2px); }
+    100% { transform: translateY(0); }
+    
+ }
+
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -1714,6 +1777,41 @@ letter-spacing: -0.7px;}
 
 /** 테블릿 */
 @media (max-width: 1023px) {
+
+    .main-print-list, .main-bbs-list {
+    flex-wrap: wrap;
+    padding:0
+    }
+    .mpl-card-items {
+        display: block;
+        flex: 1 40%;
+    }
+
+    .mbl-card-items {
+        flex: 1 100%;
+    }
+    .mainSection04 {margin-bottom: 50px;}
+    .mbl-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 51px;
+    gap: 5px;
+    margin:10px 0;
+}
+.mbl-box-top {
+    margin-bottom: 0;
+}
+.mbl-badge {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #418200;
+    display: inline-flex;
+    color: #fff;
+    font-size: 14px;
+    gap: 5px;
+    align-items: center;
+}
 
     .edu-priod-list{display: flex; flex-direction: row; gap:0 10px; flex-wrap: wrap;}
       .table-board table tbody td.cell-edu-date, .table-board table tbody td.cell-place{width:100%; display: block;}
@@ -1736,7 +1834,7 @@ letter-spacing: -0.7px;}
 
 
 
-    #krds-header .header-container .header-actions{margin-right:0; margin-left: auto; }
+#krds-header .header-container .header-actions{margin-right:0; margin-left: auto; }
 
 
 
@@ -1912,6 +2010,32 @@ body.edu-appl-step03 .step02 {
 /** 모바일 */
 @media (max-width: 767px) {
 
+    .mpl-card-items {
+    flex: 1 100%
+}
+
+.mpl-box {
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid var(--BG-01, #F4F6FC);
+    background: #F1F2F6;
+    height: 100px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.mpl-box i{flex: 0 0 60px; display: flex; justify-content: center;}
+.mpl-box p {
+    color: #0D0E10;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+.mbl-title .title{font-size: 14px;}
     .systemGuide-wrap .banner-area .title-img-center {
     display:none
 }
