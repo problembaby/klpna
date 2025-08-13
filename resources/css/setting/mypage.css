@@ -1398,7 +1398,7 @@ font-weight: 400;
     border-radius: 50%;
 
 } 
-
+.edu-list .o-list > li::before{display:none}
 .lect-info-list{display: flex; gap:30px; margin:20px 0;}
 .lect-info-list li{display: flex; gap:10px; align-items: center; color: var(--color-text-basic, #0D0E10);
 font-size: 14px;
@@ -1431,6 +1431,8 @@ gap: 4px;
 
 
 .lect-expend{display: flex; gap:40px}
+
+.lect-expend-thumb{flex: 0 0 160px}
 
 .lect-expend-thumb .name{
     color: var(--color-text-title, #0D0E10);

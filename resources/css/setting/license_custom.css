@@ -272,7 +272,7 @@ letter-spacing: -0.64px;
     padding: 0 5px;
     vertical-align: middle;
     height: 50px;
-    border-top: 2px solid #356900;
+    border-top: 2px solid #2c2e3f;
     border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);
     background: var(--color-bg-nomal, #F7F8FB);
 }
@@ -1506,7 +1506,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url(../../img/academy/ico-file2.svg) no-repeat;
+    background: url(../../img/license/ico-file2.svg) no-repeat;
     background-size: 100%;
 }
 

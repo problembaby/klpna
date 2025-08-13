@@ -36,11 +36,14 @@
             <div class="inner in-between">
                 <!-- 사이드 메뉴 -->
                 <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">교육소식</h1>
+                    <h1 class="lnb-tit">게시판</h1>
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item active">
                             <a href="#" class="lnb-btn link active selected">공지사항</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">관련서식</a>
                         </li>
                         <li class="lnb-item">
                             <a href="#" class="lnb-btn link">자주하는질문</a>
@@ -55,7 +58,7 @@
                     <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
-                            <li><a href="#;" class="txt">교육소식</a></li>
+                            <li><a href="#;" class="txt">게시판</a></li>
                             <li><a href="#;" class="txt">공지사항</a></li>
                         </ol>
 
@@ -140,11 +143,11 @@
                                 <!-- 상단 고정 글 -->
                                 <tr class="bbsTopfixed">
                                     <td class="num">
-                                        <img src="../../resources/img/academy/ico-topNoti.svg" alt="new">
+                                        <img src="../../resources/img/license/ico-topNoti.svg" alt="new">
                                     </td>
                                     <td class="cell-subject">
                                         <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
-                                        <img src="../../resources/img/academy/new.svg" alt="new" class="new">
+                                        <img src="../../resources/img/license/new.svg" alt="new" class="new">
                                     </td>
                                     <td>중앙회</td>
                                     <td>2024.06.25</td>
@@ -161,7 +164,7 @@
                                     <td class="num">490</td>
                                     <td class="cell-subject">
                                         <a href="#" title="페이지 이동" target="_self">보이스피싱 예방수칙</a>
-                                        <img src="../../resources/img/academy/new.svg" alt="new" class="new">
+                                        <img src="../../resources/img/license/new.svg" alt="new" class="new">
                                     </td>
                                     <td>중앙회</td>
                                     <td>2024.06.25</td>
@@ -175,7 +178,7 @@
                                     <td class="num">490</td>
                                     <td class="cell-subject">
                                         <a href="#" title="페이지 이동" target="_self">[경기도] 도민이 뽑은 경기도 책임계약은?</a>
-                                        <img src="../../resources/img/academy/new.svg" alt="new" class="new">
+                                        <img src="../../resources/img/license/new.svg" alt="new" class="new">
                                     </td>
                                     <td>중앙회</td>
                                     <td>2024.06.25</td>
@@ -344,8 +347,8 @@
     // 개발에서는 절대 사용하지 말것!
 
     document.addEventListener("DOMContentLoaded", function () {
-        loadHTML("../academy/common/header_pubSample.html", "beforebegin");
-        loadHTML("../academy/common/footer_pubSample.html", "afterend");
+        loadHTML("../license/common/header_pubSample.html", "beforebegin");
+        loadHTML("../license/common/footer_pubSample.html", "afterend");
     });
 
     function loadHTML(url, position) {

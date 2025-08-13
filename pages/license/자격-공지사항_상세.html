@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../../resources/img/logo/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="../../../resources/img/logo/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상세 | 공지사항 - KLPNA 직무교육센터</title>
+    <title>목록 | 공지사항 - KLPNA 직무교육센터</title>
 
     <!-- css -->
 	<link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
 	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
 	<link rel="stylesheet" href="../../resources/css/style.css" />
-    <link rel="stylesheet" href="../../resources/css/setting/license_custom.css" /> <!-- 자격신고 커스텀 css -->
+	<link rel="stylesheet" href="../../resources/css/setting/license_custom.css" /> <!-- 자격신고 커스텀 css -->
 	<link rel="stylesheet" href="../../resources/lib/aos/aos.css">
 
 
@@ -24,7 +24,6 @@
 	<script defer src="../../resources/krds/js/pattern/pattern.js"></script>
 	<script src="../../resources/js/script.js"></script>
 	<script src="../../resources/lib/aos/aos.js"></script>
-</head>
 
 <body>
     <div id="wrap">
@@ -37,11 +36,14 @@
             <div class="inner in-between">
                 <!-- 사이드 메뉴 -->
                 <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">교육소식</h1>
+                    <h1 class="lnb-tit">게시판</h1>
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item active">
                             <a href="#" class="lnb-btn link active selected">공지사항</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">관련서식</a>
                         </li>
                         <li class="lnb-item">
                             <a href="#" class="lnb-btn link">자주하는질문</a>
@@ -56,12 +58,13 @@
                     <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
-                            <li><a href="#;" class="txt">교육소식</a></li>
+                            <li><a href="#;" class="txt">게시판</a></li>
                             <li><a href="#;" class="txt">공지사항</a></li>
                         </ol>
 
                     </nav>
                     <!-- breadcrumb -->
+
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
                         <h1 class="h-tit">공지사항</h1>
@@ -201,8 +204,8 @@
     // 개발에서는 절대 사용하지 말것!
 
     document.addEventListener("DOMContentLoaded", function () {
-        loadHTML("../academy/common/header_pubSample.html", "beforebegin");
-        loadHTML("../academy/common/footer_pubSample.html", "afterend");
+        loadHTML("../license/common/header_pubSample.html", "beforebegin");
+        loadHTML("../license/common/footer_pubSample.html", "afterend");
     });
 
     function loadHTML(url, position) {
