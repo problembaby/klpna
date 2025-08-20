@@ -1,4 +1,30 @@
 @charset "UTF-8";
+.bbs-search-wrap.sido_search{
+    display: block;
+    padding: 20px 30px;
+}
+.bbs-search-wrap.sido_search .search-top-box{
+    display: block;
+}
+.bbs-search-wrap .search-top-box .form-tit label{
+    line-height: 48px;
+}
+.bbs-search-wrap.sido_search .search-top-box .guide::before{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 99px;
+    background: #999999;
+    display: inline-block;
+    vertical-align: middle;
+}
+.bbs-search-wrap.sido_search .search-top-box .guide{
+    font-size: 14px;
+    line-height: 120%;
+    color: #464C53;
+    float: right;
+    margin-top: -34px;
+}
 .depth4_tab ul {
     display: table;
     width: calc(100% + 0px);
@@ -299,7 +325,7 @@
     width: 100%;
     border-radius: 12px;
     background: var(--gray-gray-5, #F8F8F8);
-    padding: 30px 40px;
+    padding: 20px 40px;
     row-gap: 10px;
     column-gap: 20px;
 }
@@ -319,11 +345,14 @@
     background:url(../../img/icon/rule_list.svg) no-repeat;
     background-position: 0 center;
 }
+.rule_bookmark ul li.last{
+    width: auto;
+}
 .rule{
-    margin-top: 40px;;
+
 }
 .rule_info{
-
+    padding-top: 40px;;
 }
 .rule_info .tit{
     color: #0050CA;
@@ -336,10 +365,14 @@
     margin-top: 20px;;
     margin-bottom: 10px;
 }
-.rule_info p{
-
+.rule_info p.small{
+    font-size: 14px;
 }
 @media (max-width: 768px) {
+    .bbs-search-wrap.sido_search .search-top-box .guide{
+    float: none;
+    margin-top: 10px;
+    }
     .depth4_tab {
     position: relative;
     margin-bottom: 60px;
@@ -474,5 +507,16 @@
         right:10px;
         bottom:0px;
         left: auto;
+    }
+    .rule_pdf{
+        line-height: 24px;
+        margin-bottom: 0px;
+    }
+    .rule_pdf button{
+        margin-top: 10px;
+        float: none;
+    }
+    .rule_bookmark{
+        display: none;
     }
 }
