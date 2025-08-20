@@ -385,6 +385,7 @@ html .ui-button.ui-state-disabled:active {
     border: 1px solid var(--krds-calendar--color-border);
     border-radius: var(--krds-calendar--radius);
     overflow: hidden;
+    border: 1px solid #c5c5c5;
 }
 .ui-widget-header {
     border: 0 solid #ddd!important;
