@@ -25,6 +25,7 @@
     float: right;
     margin-top: -34px;
 }
+/*연혁*/
 .depth4_tab ul {
     display: table;
     width: calc(100% + 0px);
@@ -69,7 +70,6 @@
 .depth4_tab ul a:hover, .depth4_tab ul a:focus {
     color: #111;
 }
-
 .depth4_tab_sido ul {
     display: table;
     width: calc(100% + 0px);
@@ -313,6 +313,7 @@
 .greeting_sign img{
     margin-left:20px
 }
+/*정관*/
 .rule_pdf{
     line-height: 32px;
     margin-bottom: 14px;
@@ -368,77 +369,144 @@
 .rule_info p.small{
     font-size: 14px;
 }
+/*주요사업*/
+.business_title{
+    border-radius: 12px;
+    background:url(../../img/sub/business_man.png) no-repeat right bottom #f7f8fb;
+    height: 300px;
+    position: relative;
+}
+.business_title .text{
+    font-size: 28px;
+    color: #0D0E10;
+    font-weight: 700;
+    padding-left: 40px;
+    position: absolute;
+    top: 50%;
+    margin-top: -55px;
+}
+.business_title .text p{
+    font-size: 24px;
+    color: #464C53;
+    font-weight: 400;
+}
+.business_title .text p b{
+    color: #0050CA;
+    font-weight: 700;
+}
+.business_info{
+    margin: 40px auto;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.business_info .work1{
+    background:url(../../img/sub/business_work1.png) no-repeat center top;
+}
+.business_info .work2{
+    background:url(../../img/sub/business_work2.png) no-repeat center top;
+}
+.business_info .work3{
+    background:url(../../img/sub/business_work3.png) no-repeat center top;
+}
+.business_info .work4{
+    background:url(../../img/sub/business_work4.png) no-repeat center top;
+}
+.business_info div{
+    padding-top: 161px;
+}
+.business_info div p{
+    text-align: center;
+    color: #0050CA;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+.business_info div ul li::before{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 99px;
+    background: #0050CA;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.business_info div ul li{
+
+}
 @media (max-width: 768px) {
     .bbs-search-wrap.sido_search .search-top-box .guide{
-    float: none;
-    margin-top: 10px;
+        float: none;
+        margin-top: 10px;
     }
     .depth4_tab {
-    position: relative;
-    margin-bottom: 60px;
-    height: 50px;
-  }
-  .depth4_tab ul {
-    padding: 0;
-    border-radius: 20px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    background: #F9F9F9;
-    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
-  }
-  .depth4_tab ul > li {
-    visibility: hidden;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    display: block;
-  }
-  .depth4_tab ul > li a {
-    position: relative;
-    text-align: left;
-    padding: 13px 40px 13px 20px;
-    display: block;
-    height: auto !important;
-    line-height: 1.5;
-    font-size: 18px;
-  }
-  .depth4_tab ul > li.active {
-    visibility: visible;
-    overflow: visible;
-    width: auto;
-    height: auto;
-    opacity: 1;
-  }
-    .depth4_tab ul > li.active a::after {
-    position: absolute;
-    top: auto;
-    left: auto;
-    right: auto;
-    right: 15px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    content: "";
-      background-image: url(../img/icon/arrow-down.svg);
-      filter: invert(100%) sepia(57%) saturate(1%) hue-rotate(256deg) brightness(105%) contrast(100%);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-      width: 24px;
-      height: 24px;
-      }
-      .depth4_tab.active ul > li {
+        position: relative;
+        margin-bottom: 60px;
+        height: 50px;
+    }
+    .depth4_tab ul {
+        padding: 0;
+        border-radius: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: #F9F9F9;
+        box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
+    }
+    .depth4_tab ul > li {
+        visibility: hidden;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        display: block;
+    }
+    .depth4_tab ul > li a {
+        position: relative;
+        text-align: left;
+        padding: 13px 40px 13px 20px;
+        display: block;
+        height: auto !important;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+    .depth4_tab ul > li.active {
         visibility: visible;
         overflow: visible;
         width: auto;
         height: auto;
         opacity: 1;
-      }
-      .depth4_tab.active ul > li.active a::after {
+    }
+    .depth4_tab ul > li.active a::after {
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: auto;
+        right: 15px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        content: "";
+        background-image: url(../img/icon/arrow-down.svg);
+        filter: invert(100%) sepia(57%) saturate(1%) hue-rotate(256deg) brightness(105%) contrast(100%);
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 24px;
+        height: 24px;
+    }
+    .depth4_tab.active ul > li {
+        visibility: visible;
+        overflow: visible;
+        width: auto;
+        height: auto;
+        opacity: 1;
+    }
+    .depth4_tab.active ul > li.active a::after {
         display: none; /*transform: rotate(180deg);*/
-      }
+    }
     .history_wrap .list{
         padding-left: 30px;
     }
@@ -518,5 +586,38 @@
     }
     .rule_bookmark{
         display: none;
+    }
+    .business_title {
+        background-size: 300px;
+        height: 320px;
+    }
+    .business_title .text{
+        padding: 20px 0px 0px 20px;
+        font-size: 20px;
+        top: auto;
+        margin-top: auto;
+    }
+    .business_title .text p {
+        font-size: 18px;
+    }
+    .business_title .text p br{
+        display: none;
+    }
+    .business_info{
+        display: block;
+        margin: 40px 0px 0px;
+        width: 100%;
+    }
+    .business_info div {
+        display: inline-block;
+        width: 50%;
+        float: left;
+        margin-bottom: 40px;
+    }
+    .business_info div ul li::before{
+        display: none;
+    }
+    .business_info div ul li{
+        text-align: center;
     }
 }

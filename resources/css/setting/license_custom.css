@@ -1768,7 +1768,12 @@ line-height: 22px; /* 110% */}
     
  }
 
-
+ /** 근거법령 */
+ .legal-section .ls-title{
+    margin-bottom:20px
+ }
+.ls-box-title{margin-bottom:10px; font-size: 18px;}
+.ls-box-p{font-size: 16px}
 
 /** 노트북 */
 @media (max-width: 1440px) {
