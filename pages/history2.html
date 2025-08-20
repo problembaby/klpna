@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연혁 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/css/contents.css" /><!--0820추가-->
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+    
+    <script><!--연혁-->
+    $(function () {
+
+        // 탭메뉴 반응형일 때
+        $('.depth4_tab').classtoggle
+        ({
+            'button': '.active a',  // 이벤트 받을 타겟 선택
+            'respond': true          // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
+        });
+        //주요연혁 효과   
+        $(window).on('load scroll resize', function () {
+            var scrollTop = $(this).scrollTop() + 400;
+
+            $(".history_wrap .list > li").filter(function () {
+                return $(this).offset().top <= scrollTop;
+            }).addClass('effect').end().filter(function () {
+                return $(this).offset().top > scrollTop;
+            }).removeClass('effect');
+        });
+
+    });
+        
+    <!---->
+    $.fn.classtoggle = function (options) {
+            var settings = $.extend
+                ({
+                    'button': '.open',      // 이벤트 받을 타겟 선택
+                    'action': 'click',      // 액션 선택 (click | over)
+                    'classname': 'active',     // 추가할 클래스명
+                    'accordion': false,		// active 될 때 형제요소의 반응 여부
+                    'respond': false,        // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
+                    'respondWidth': '768',        // 반응형 가로 사이즈
+                    'close': '.close'      // 닫기 버튼이 별도로 존재하는 경우 (닫기 버튼은 클릭시에만)
+                },
+                    options);
+
+            return this.each(function () {
+                var $selecter = $(this);
+
+                function clickActive() {
+                    if ($selecter.hasClass(settings.classname) == false) {
+                        $selecter.addClass(settings.classname);
+
+                        if (settings.accordion == true) {
+                            $selecter.siblings().removeClass(settings.classname);
+                        }
+                    }
+                    else {
+                        // 닫기 버튼 존재할 경우 토글되지 않음
+                        if ($selecter.find(settings.close).length == 0) {
+                            $selecter.removeClass(settings.classname);
+                        }
+                    }
+                }
+
+                if (settings.action == 'click') {
+                    $selecter.find(settings.button).on(settings.action, function () {
+                        if (settings.respond == false) {
+                            clickActive();
+
+                            return false;
+                        }
+                        else {
+                            if ($(window).width() <= settings.respondWidth) {
+                                clickActive();
+
+                                return false;
+                            }
+                            else {
+                                $selecter.find(settings.button).off();
+                            }
+                        }
+                    });
+                }
+                else {
+                    $selecter.find(settings.button).on
+                        ({
+                            mouseenter: function () {
+                                $selecter.addClass(settings.classname);
+                            },
+                            focusin: function () {
+                                $selecter.addClass(settings.classname);
+                            },
+                            mouseleave: function () {
+                                $selecter.removeClass(settings.classname);
+                            },
+                            focusout: function () {
+                                $selecter.removeClass(settings.classname);
+                            }
+                        });
+                }
+
+                // 닫기 버튼이 별도로 존재하는 경우
+                if ($selecter.find(settings.close).length > 0) {
+                    $selecter.find(settings.close).on('click', function () {
+                        $selecter.removeClass(settings.classname);
+
+                        return false;
+                    });
+                }
+                else {
+                    // 탭 아웃
+                    $selecter.find('a:last').keydown(function (e) {
+                        if (e.keyCode === 9) {
+                            $selecter.removeClass(settings.classname);
+                        }
+                    });
+
+                    // 역탭 아웃
+                    $selecter.find('a:first').keydown(function (e) {
+                        if (e.keyCode === 9 && e.shiftKey) {
+                            $selecter.removeClass(settings.classname);
+                        }
+                    });
+                }
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">협회안내</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">인사말</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link active selected">연혁</a>
+                        </li>
+                         <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">정관</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">주요사업</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">조직도</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">시도회</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">오시는 길</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">협회안내</a></li>
+                            <li><a href="#;" class="txt">연혁</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">연혁</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="form-tit">
+                                        <label for="local-option">전국시도회</label>
+                                    </div>
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="local-option">
+                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <option value="서울시">서울시간호조무사회</option>
+                                            <option value="부산시">부산시간호조무사회</option>
+                                            <option value="대구시">대구시간호조무사회</option>
+                                            <option value="인천시">인천시간호조무사회</option>
+                                            <option value="광주전남">광주전남간호조무사회</option>
+                                            <option value="대전충남">대전충남간호조무사회</option>
+                                            <option value="울산경남">울산경남간호조무사회</option>
+                                            <option value="경기도">경기도간호조무사회</option>
+                                            <option value="강원도">강원도간호조무사회</option>
+                                            <option value="충청북도">충청북도간호조무사회</option>
+                                            <option value="전북도">전북도간호조무사회</option>
+                                            <option value="경상북도">경상북도간호조무사회</option>
+                                            <option value="제주도">제주도간호조무사회</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                                <div class="c-date">
+                                    각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+                    <div class="sub-content">
+                        <!--연혁-->
+                        <div id="contents_body">
+                            <div id="depth4_menu_div" class="depth4_tab">
+                                <ul id="depth4_menu_ul">
+                                    <li><a href="history1.html" title="비활성 메뉴">2021-현재</a></li>
+                                    <li class="active"><a href="history2.html" title="활성 메뉴">2011-2020</a></li>                                    
+                                    <li><a href="history3.html" title="비활성 메뉴">2001-2010</a></li>
+                                    <li class="last"><a href="history4.html" title="비활성 메뉴">1973-2000</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="history_wrap">
+                                <ol class="list">   
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2020</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2020">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.04</strong>
+                                                    <span>밀양세종병원 화재사고(2018) 故 김라희 간호조무사 의사자 인정</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.09</strong>
+                                                    <span>파독 광부 간호사·간호조무사에 대한 지원 및 기념사업에 관한 법률 제정(시행 2021.06.10.)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.21</strong>
+                                                    <span>고양맞춤형 일자리학교 ‘의료기관 취업을 위한 간호조무사 기초실무교육’ 위탁수행기관 선정</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2019</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2019">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">11.03</strong>
+                                                    <span>간호조무사 차별철폐·법정단체 인정 촉구 전국 간호조무사 결의대회 개최(1만 명 참가)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.14</strong>
+                                                    <span>제1회 간호조무사 아카데미 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.05</strong>
+                                                    <span>노인복지법시행규칙 일부개정령안 개정 (간호조무사 시설장 자격 포함)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.14</strong>
+                                                    <span>‘5인 미만 사업장 근로자 근로기준법 동등적용’ 국회청원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03</strong>
+                                                    <span>보건의료인력지원법 통과 (간무협 보건의료인력 정책심의위 위원 명시)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03</strong>
+                                                    <span>2019년도 간호조무사 직무교육 개발 및 운영사업 위탁기관 선정</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.25</strong>
+                                                    <span>‘간호조무사 보수교육비 지원 및 유급휴가 보장’ 국회 청원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.13</strong>
+                                                    <span>‘의료법 일부개정법률안‘ 발의 (국회의원 최도자 대표발의)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2018</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2018">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.12~15</strong>
+                                                    <span>캄보디아 해외의료봉사</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.28</strong>
+                                                    <span>‘아이 키우기 좋은 나라 만들기 운동본부’ 창립모임 공동 참여 (홍옥녀 회장 공동대표)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.18</strong>
+                                                    <span>국·공립특별위원회 구성</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.17</strong>
+                                                    <span>커뮤니티케어 간호조무사협의회 발족</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.14</strong>
+                                                    <span>‘커뮤니티케어 어떻게 할 것인가’ 국회토론회 개최(국회의원 김순례 주최)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.14</strong>
+                                                    <span>2018년 간호조무사 근로환경 개선을 위한 국회토론회 개최(국회의원 윤소하 공동주최)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11</strong>
+                                                    <span>간호인력 취업지원사업 중 시범직무교육(1차의료 건강관리 간호조무사 직무교육) 시행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.24</strong>
+                                                    <span>2018년 간호조무사 임금·근로조건 실태조사 시행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08</strong>
+                                                    <span>간호인력 취업지원사업 중 시범직무교육(병원급 의료기관 간호·간병통합서비스 간호조무사 직무교육) 시행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.04</strong>
+                                                    <span>간호등급제 시행 20년 평가와 대안 모색 토론회 개최(국회의원 최도자 주최)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.04</strong>
+                                                    <span>인터넷 간호조무사신문 창간</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04</strong>
+                                                    <span>‘2018년 간호조무사 치매전문교육’ 실시 (보건복지부 위탁)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04</strong>
+                                                    <span>‘의원급 간호조무사 최저임금 실태조사’ 시행 (국회의원 윤소하 공동 조사)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.24</strong>
+                                                    <span>제20대 홍옥녀 회장 선출 (제45차 정기대의원총회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03</strong>
+                                                    <span>‘근로환경 개선 등을 위한 간호조무사 활동현황 및 활용방안 연구용역’ 시행 (보건복지부 위탁)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.30.~31</strong>
+                                                    <span>간호조무사 리더양성 대표자 워크숍</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.19.~26</strong>
+                                                    <span>간호조무사 정치아카데미 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.10</strong>
+                                                    <span>파독간호조무사위원회 위원 구성</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01</strong>
+                                                    <span>간호조무사 치매전문교육 예산 확정 편성</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2017</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2017">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.10</strong>
+                                                    <span>2018 평창 동계올림픽 및 패럴림픽 대회 자원봉사단 발족</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.21</strong>
+                                                    <span>‘간호간병통합서비스 확대 등에 따른 간호조무사 활용 증대 제도 마련’ 국회청원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10</strong>
+                                                    <span>일자리위원회 간호조무사 활용 제언</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10</strong>
+                                                    <span>‘2017 근로조건 자율개선지원사업’ 시행 (고용노동부 위탁)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.13</strong>
+                                                    <span>‘2017 간호조무사 근로환경 개선을 위한 국회 토론회’ 개최 (국회의원 윤소하 공동 개최)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.12</strong>
+                                                    <span>의료법 일부개정법률안 발의 (김명연 의원 대표 발의)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08</strong>
+                                                    <span>강동경희대병원 간호간병통합병동 간호조무사 계약해지 및 비정규직 양산 규탄대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08</strong>
+                                                    <span>방문간호 간호조무사 치매 특별 5등급 전문 교육 시행 (보건복지부 위탁)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05</strong>
+                                                    <span>대정부 및 국회 ‘간호조무사 10대 차별정책 개선방향’ 추진</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05-10</strong>
+                                                    <span>경기도의회, 제주특별자치도의회, 부산광역시의회 ‘간호조무사 재가요양기관 시설장 자격부여 촉구 결의안’ 채택 및 통과</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.21</strong>
+                                                    <span>간호조무사 근로환경을 위한 국회토론회(국회의원 윤소하 공동 주최)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03</strong>
+                                                    <span>간호조무사 교육훈련기관 지정평가사업 공동 참여</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.07</strong>
+                                                    <span>노인장기요양보험제도 현안과제 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.21</strong>
+                                                    <span>제1차 2017년 보수교육 강사 훈련 연수</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.21</strong>
+                                                    <span>간호간병통합서비스 비상대책 연석회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.01</strong>
+                                                    <span>개정 의료법 시행<br>
+                                                        - 간호조무사 자격 보건복지부장관 자격으로 전환<br>
+                                                        - 간호조무사 자격신고제 도입<br>
+                                                        - 교육훈련기관 지정 평가제 도입<br>
+                                                        - 간호조무사 업무</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2016</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2016">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">11</strong>
+                                                    <span>의료법시행령 일부개정령 및 간호조무사 및 의료유사업자에 관한 규칙 일부개정안 입법예고</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.05</strong>
+                                                    <span>간호조무사 교육훈련기관 지정평기위원세미나 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.27</strong>
+                                                    <span>노인장기요양기관 간호인력 역량 강화 국회토론회 (국회의원 정춘숙 공동 주최)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09</strong>
+                                                    <span>간호조무사 보수교육 위탁사업 업무협약 체결 (병협, 요양병협, 의협 등)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.28</strong>
+                                                    <span>보건복지부, 2016년 간호조무사 보수교육 총괄 관리 위탁</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.16</strong>
+                                                    <span>간호조무사교육원 출범</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.26</strong>
+                                                    <span>제 43차 정기대의원총회 개최(세종대학교 컨벤션센터)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.10</strong>
+                                                    <span>건강보험공단과 간호간병통합서비스 병원 대책 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.28</strong>
+                                                    <span>임상분과위원회 연석회의(종합병원·중소병원·요양병원·의원·치과·한방분과)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2015</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2015">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.29</strong>
+                                                    <span>제 19대 국회 제 337회 국회(정기회)에서 의료법 개정(보건복지부장관 자격으로 전환, 자격신고제 도입, 교육훈련기관 지정 평가제 도입, 간호조무사 업무규정)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.31</strong>
+                                                    <span>전국 간호조무사 대표자 결의대회 개최(임상위원회 출범식)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.03</strong>
+                                                    <span>간호인력개편 의료법 개악추진 보건복지부 규탄대회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.31</strong>
+                                                    <span>LPN day 제 49주년 및 협회창립 제 42주년 기념식 - 간호조무사와 함께하는 어울림콘서트 '선물'</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.05</strong>
+                                                    <span>전국 간호조무사대표자 워크샵</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.21</strong>
+                                                    <span>제 42차 정기대의원총회 개최, 제19대 홍옥녀 회장 선출</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2014</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2014">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.19</strong>
+                                                    <span>간호인력 개편 2차 협의체 2차 회의개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.04</strong>
+                                                    <span>간호인력 개편 2차 협의체 1차 회의개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.21</strong>
+                                                    <span>개인정보보호법 관련 협회 홈페이지 본인인증시스템 도입</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.24</strong>
+                                                    <span>치과간호조무사 업무보장을 위한 대책회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.30</strong>
+                                                    <span>포괄간호 시범사업 개선을 위한 간담회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.08</strong>
+                                                    <span>치매특별등급 신설에 따른 방문간호 치매전문 교육실시(8.8~8.31)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.25</strong>
+                                                    <span>사무행정능력향상을 위한 실무자 교육실시(현대인재개발원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.25</strong>
+                                                    <span>제 41차 협회창립기념식 개최(현대인재개발원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.01</strong>
+                                                    <span>당직의료인에 대한 보건복지부 유권해석(요양병원 당직의료인 중 3분의 2 범위내에서 간호조무사로 대체가능)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.30~07.04</strong>
+                                                    <span>몽골 치과진료조무사 법제화 위한 국제행사 참석 및 의료봉사(울란바트로)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.27</strong>
+                                                    <span>회원관리프로그램 개발완료(유진정보기술(주) 납품승인)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.26</strong>
+                                                    <span>치매특별 5등급 수급자 급여제공 간호조무사 수가가산제 도입</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.07</strong>
+                                                    <span>제 5차 간호인력협의체 회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.22</strong>
+                                                    <span>제 41차 정기 대의원총회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.09</strong>
+                                                    <span>1~8차 치과의료기관 종사 직역간 협력강화위한 TF</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.04</strong>
+                                                    <span>제 4차 간호인력협의체 회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02</strong>
+                                                    <span>포괄간호서비스병원 시범사업 간호조무사 인력채용</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.10</strong>
+                                                    <span>제 3차 간호인력개편협의체 회의</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2013</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2013">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.28</strong>
+                                                    <span>제 40차 임시대의원 총회 개최, 제 18대 김현숙 회장 선출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.03</strong>
+                                                    <span>김현자 수석부회장 겸 서울시회장, 회장직무대행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.03</strong>
+                                                    <span>강순심 회장 서거</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.15</strong>
+                                                    <span>간호인력개편 협의체 제 1차 회의개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.05</strong>
+                                                    <span>캐나다 Holland College와 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.08</strong>
+                                                    <span>공무원 직급표상 간호직렬 뒤에 간호조무 직렬배치</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.30</strong>
+                                                    <span>협회 홈페이지 전면개편</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.29~06.09</strong>
+                                                    <span>간호인력 개편관련 일본, 미국 견학(보건복지부, 한국보건산업진흥원, 대한간호조무사협회, 대한간호협회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.29</strong>
+                                                    <span>협회 인터넷 도메인 주소변경(www.klpna.or.kr)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.12</strong>
+                                                    <span>제 1차 노인장기요양기관 분과위원회 회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.08</strong>
+                                                    <span>의료기사등에 관한 법률 시행령 합의(대한간호조무사협회 - 보건복지부 - 대한치과의사협회 - 대한치과위생사협회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.07</strong>
+                                                    <span>사이버연수원 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.06</strong>
+                                                    <span>LPN News 창간호 발간(통권 제 171호)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.02</strong>
+                                                    <span>보수교육 전용 대표전화 개설(1661-6932~3)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.20</strong>
+                                                    <span>협회보 LPN News 정기간행물 신고(신고번호 구로바00027/계간)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.15</strong>
+                                                    <span>협회정관 보건복지부 허가</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.01</strong>
+                                                    <span>간호조무사 및 의료 유사업자에 관한 규칙 개정안 공포</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.01</strong>
+                                                    <span>국제대학교 간호조무과에 장학금(3천만원) 기탁</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.01</strong>
+                                                    <span>학술국 신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.29~30</strong>
+                                                    <span>의료선진국형 보수교육 성공적 착수를 위한 전국시도회 사무처 워크숍 실시(부산)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.16</strong>
+                                                    <span>제 39차 정기대의원총회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.09</strong>
+                                                    <span>치과근무 간호조무사 진료보조권 및 생존권 사수대책위원회 구성</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.06</strong>
+                                                    <span>PA 불법행위 신고센터 개설운영</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.05</strong>
+                                                    <span>유은혜 국회의원 대표발의, 장애인 등에 대한 특수교육법 일부 개정안 국회 본회의 통과<br>
+                                                        (학교법인이 설립한 특수학교 기숙사에 간호사 또는 간호조무사 인력배치 의무화)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.04</strong>
+                                                    <span>건강검진기관 간호사 인력대신 간호조무사 대체 가능(2013 건강검진사업안내)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.14</strong>
+                                                    <span>보건복지부, 간호인력을 3단계로 개편하는 '간호인력개편방향'발표(간호사-1급 실무간호인력-2급실무간호인력)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.24</strong>
+                                                    <span>보건복지부, 2013년도 결핵관리지침에 간호조무사 포함 회신</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2012</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2012">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.07</strong>
+                                                    <span>간호조무사 및 의료유사업자에 관한 규칙 개정안 규제개혁위원회 통과<br>
+                                                        (2018년부터 전문대학의 간호조무과 졸업자에게 간호조무사 응시자격부여)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12</strong>
+                                                    <span>간호조무사 교육제도 개선 연구(조재국 박사), 의료선진국형 간호인력개편안 도출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.09</strong>
+                                                    <span>미국 워싱턴 레이크대학과 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.05</strong>
+                                                    <span>노무상담코너 개설 운영</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.04</strong>
+                                                    <span>제 18대 대통령 후보 경선 모바일 선거인단 3만 4천명 모집</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10</strong>
+                                                    <span>치과근무 간호조무사의 업무와 역할에 관한 치과의사 설문조사 연구보고서 발간</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10</strong>
+                                                    <span>간호조무사 업무에 관한 비교분석 연구보고서 발간</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.24</strong>
+                                                    <span>의료기관내 음란물 제보센터 개설운영</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.09</strong>
+                                                    <span>의료법 개정안 통과촉구 결의대회(충남 천안 700여명 참석)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.06</strong>
+                                                    <span>보건복지부 임채민 장관 면담(의료법 제 80조 개정관련 현안문제 논의)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09</strong>
+                                                    <span>질병관리본부, 결핵관리업무에 간호조무사포함 적극검토</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.30</strong>
+                                                    <span>국무총리실 산하규제개혁위원회, 보건복지부의 '간호조무사 및 의료유사업자에 관한 규칙' 개정안을 중요규제로 판단하고 반려결정</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.06</strong>
+                                                    <span>의료법 개정안 발의(양승조 민주통합당), 주요내용-자격재신고, 명칭변경, 면허환원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.27</strong>
+                                                    <span>중앙회 사무처 이전(구로4동 97-3)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.06</strong>
+                                                    <span>손학교 후보 초청간담회 개최(간호조무사와 함께하는 저녁이 있는 삶)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.14</strong>
+                                                    <span>주한 캄보디아 대사 면담(간호조무사 국제봉사활동 관련)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.15</strong>
+                                                    <span>치과전문간호조무사 자격인증시험실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.17</strong>
+                                                    <span>제 38차 정기대의원총회 개최, 제 17대 강순심회장 선출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.06</strong>
+                                                    <span>'간호조무사 진료보조권 박탈'을 위한 대한간호협회의 연구용역 즉각 중단을 요구하는 기자회견 실시(이화여대 국제교육관)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.27</strong>
+                                                    <span>개인정보취급방침 및 협회 홈페이지 이용약관 홈페이지 탑재 및 시행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.08</strong>
+                                                    <span>'전문대학 간호조무사 양성금지 개정안 총력저지'를 위한 기자회견실시(보건복지부 앞)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2011</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2011">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.05</strong>
+                                                    <span>장기요양급여비용 등에 관한 고시 중 간호조무사 배치시 추가가산제 적용 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.19</strong>
+                                                    <span>간정회 창립총회 출범식 및 임상위원회 워크숍</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.18</strong>
+                                                    <span>원광대학교 보건대학 산학협약체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.03</strong>
+                                                    <span>치과전문간호조무사 인증시험 합격자 인증서 발급</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.01</strong>
+                                                    <span>간호조무사 및 의료유사업자에 관한 규칙 일부개정안 입법예고(자격시험 응시자격의 기준 명확화)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08</strong>
+                                                    <span>건강보험 간호등급제 및 간호조무사 교육과정 등에 관한 발전방안 연구보고서 발간(양명생 고려대학교 보건과학연구소 교수)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.21</strong>
+                                                    <span>직업소개사업 신고필증 13개 시도회에 교부</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.16</strong>
+                                                    <span>파독 간호조무사 45년 및 협회창립 제 38주년 기념식 개최(1천여명 참석)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.11</strong>
+                                                    <span>고용노동부, 유휴간호조무사 재취업지원사업 위탁사업자로 선정(서울, 부산, 경기)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.17</strong>
+                                                    <span>'간호조무사 3년 재신고'를 위한 의료법 일부개정안 정하균 국회의원 발의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.01</strong>
+                                                    <span>강릉시청의 보수교육 미이수자에 대한 과태료 부과 통보</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05</strong>
+                                                    <span>간호조무사 3년 자격신고제 관철 및 간호조무사 법적지위 향상을 위한 서명운동 전개</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05</strong>
+                                                    <span>병원급 이상 간호조무사 정원규정 쟁취 릴레이 출정식 개최(부산, 대전충남, 충북, 서울 등)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.22~06.02</strong>
+                                                    <span>보건복지부 TF팀회의(중소병원 간호인력 확충을 위한 TF)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.20</strong>
+                                                    <span>국립소록도병원 방문 '사슴섬 간호일기' 열 번째 발간 기념식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.19</strong>
+                                                    <span>제 37차 정기대의원총회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.17</strong>
+                                                    <span>의료기사등에 관한 법률 시행령 개정 검토안에 대한 반대의견서 발송</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.08</strong>
+                                                    <span>간호등급제에 간호조무사 포함 요청 건의서 제출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.21</strong>
+                                                    <span>의료기사 등에 관한 법률 시행령 개정안에 대한 협회 의견서 제출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.16</strong>
+                                                    <span>건강관리서비스 법안에 대한 의견제출</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--//연혁-->
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
