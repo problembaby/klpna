@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연혁 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/css/contents.css" /><!--0820추가-->
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js" defer></script>
+    
+    <script><!--연혁-->
+    $(function () {
+
+        // 탭메뉴 반응형일 때
+        $('.depth4_tab').classtoggle
+        ({
+            'button': '.active a',  // 이벤트 받을 타겟 선택
+            'respond': true          // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
+        });
+        //주요연혁 효과   
+        $(window).on('load scroll resize', function () {
+            var scrollTop = $(this).scrollTop() + 400;
+
+            $(".history_wrap .list > li").filter(function () {
+                return $(this).offset().top <= scrollTop;
+            }).addClass('effect').end().filter(function () {
+                return $(this).offset().top > scrollTop;
+            }).removeClass('effect');
+        });
+
+    });
+        
+    <!---->
+    $.fn.classtoggle = function (options) {
+            var settings = $.extend
+                ({
+                    'button': '.open',      // 이벤트 받을 타겟 선택
+                    'action': 'click',      // 액션 선택 (click | over)
+                    'classname': 'active',     // 추가할 클래스명
+                    'accordion': false,		// active 될 때 형제요소의 반응 여부
+                    'respond': false,        // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
+                    'respondWidth': '768',        // 반응형 가로 사이즈
+                    'close': '.close'      // 닫기 버튼이 별도로 존재하는 경우 (닫기 버튼은 클릭시에만)
+                },
+                    options);
+
+            return this.each(function () {
+                var $selecter = $(this);
+
+                function clickActive() {
+                    if ($selecter.hasClass(settings.classname) == false) {
+                        $selecter.addClass(settings.classname);
+
+                        if (settings.accordion == true) {
+                            $selecter.siblings().removeClass(settings.classname);
+                        }
+                    }
+                    else {
+                        // 닫기 버튼 존재할 경우 토글되지 않음
+                        if ($selecter.find(settings.close).length == 0) {
+                            $selecter.removeClass(settings.classname);
+                        }
+                    }
+                }
+
+                if (settings.action == 'click') {
+                    $selecter.find(settings.button).on(settings.action, function () {
+                        if (settings.respond == false) {
+                            clickActive();
+
+                            return false;
+                        }
+                        else {
+                            if ($(window).width() <= settings.respondWidth) {
+                                clickActive();
+
+                                return false;
+                            }
+                            else {
+                                $selecter.find(settings.button).off();
+                            }
+                        }
+                    });
+                }
+                else {
+                    $selecter.find(settings.button).on
+                        ({
+                            mouseenter: function () {
+                                $selecter.addClass(settings.classname);
+                            },
+                            focusin: function () {
+                                $selecter.addClass(settings.classname);
+                            },
+                            mouseleave: function () {
+                                $selecter.removeClass(settings.classname);
+                            },
+                            focusout: function () {
+                                $selecter.removeClass(settings.classname);
+                            }
+                        });
+                }
+
+                // 닫기 버튼이 별도로 존재하는 경우
+                if ($selecter.find(settings.close).length > 0) {
+                    $selecter.find(settings.close).on('click', function () {
+                        $selecter.removeClass(settings.classname);
+
+                        return false;
+                    });
+                }
+                else {
+                    // 탭 아웃
+                    $selecter.find('a:last').keydown(function (e) {
+                        if (e.keyCode === 9) {
+                            $selecter.removeClass(settings.classname);
+                        }
+                    });
+
+                    // 역탭 아웃
+                    $selecter.find('a:first').keydown(function (e) {
+                        if (e.keyCode === 9 && e.shiftKey) {
+                            $selecter.removeClass(settings.classname);
+                        }
+                    });
+                }
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">협회안내</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">인사말</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link active selected">연혁</a>
+                        </li>
+                         <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">정관</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">주요사업</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">조직도</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">시도회</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link">오시는 길</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">협회안내</a></li>
+                            <li><a href="#;" class="txt">연혁</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">연혁</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="form-tit">
+                                        <label for="local-option">전국시도회</label>
+                                    </div>
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="local-option">
+                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <option value="서울시">서울시간호조무사회</option>
+                                            <option value="부산시">부산시간호조무사회</option>
+                                            <option value="대구시">대구시간호조무사회</option>
+                                            <option value="인천시">인천시간호조무사회</option>
+                                            <option value="광주전남">광주전남간호조무사회</option>
+                                            <option value="대전충남">대전충남간호조무사회</option>
+                                            <option value="울산경남">울산경남간호조무사회</option>
+                                            <option value="경기도">경기도간호조무사회</option>
+                                            <option value="강원도">강원도간호조무사회</option>
+                                            <option value="충청북도">충청북도간호조무사회</option>
+                                            <option value="전북도">전북도간호조무사회</option>
+                                            <option value="경상북도">경상북도간호조무사회</option>
+                                            <option value="제주도">제주도간호조무사회</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                                <div class="c-date">
+                                    각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+                    <div class="sub-content">
+                        <!--연혁-->
+                        <div id="contents_body">
+                            <div id="depth4_menu_div" class="depth4_tab">
+                                <ul id="depth4_menu_ul">
+                                    <li><a href="history1.html" title="비활성 메뉴">2021-현재</a></li>                                   
+                                    <li><a href="history2.html" title="비활성 메뉴">2011-2020</a></li>                                    
+                                    <li><a href="history3.html" title="비활성 메뉴">2001-2010</a></li> 
+                                    <li class="active last"><a href="history4.html" title="활성 메뉴">1973-2000</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="history_wrap">
+                                <ol class="list">   
+                                    <li class="from">
+                                        <div class="year_box">
+                                            <b class="year">1996~</b>
+                                        </div>
+                                        <div class="his_inner" id="his_1996~">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">1999.05.11</strong>
+                                                    <span>정관변경허가 : 윤리위원회 구성 및 임무 신설등 개정</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.08</strong>
+                                                    <span>보건직공무원 직무전문교육 불균등 조치 재시정건의 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.06</strong>
+                                                    <span>한국직능단체 총연합회 가입</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.05.26</strong>
+                                                    <span>유관부처, 유관단체장과의 시·도회장 및 회원대표자 간담회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.04.14</strong>
+                                                    <span>정관변경허가 : 임원 임기등 개정</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.03</strong>
+                                                    <span>호스피스제도화 추진위원회 가입</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.02</strong>
+                                                    <span>파견근로자 보호등에 관한 법률('98. 2. 20 공포) 시행령안의 파견근로 허용대상 직종에서 타의료인력과 함께 간호조무사제외 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.02.28</strong>
+                                                    <span>제 24차 정기대의원총회 : 제 13대 김한순 회장 취임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1997.06.13~14</strong>
+                                                    <span>제 2회 간호조무사 지도자연수 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1997.04.26</strong>
+                                                    <span>협회 인사규정등 14개 규정을 9개규정으로 통폐합 개정 및 보수교육위원회 운영규정 신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1997.04.15</strong>
+                                                    <span>정관변경허가 : 시·도지부를 시·도회로 명칭변경</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1996.11</strong>
+                                                    <span>지역보건소법시행규칙 중 전문인력등의 배치기준에 간호조무사제의 시정 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1996.10</strong>
+                                                    <span>보건분야 공무원 직무전문교육 불균등 시정사업 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1996.05.10~11</strong>
+                                                    <span>제 1회 간호조무사 지도자연수 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1996.05</strong>
+                                                    <span>국가기능직 간호조무사 승급기간단축 사업 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1996.01</strong>
+                                                    <span>전국보건직공무원 민간근무경력 인정 및 보건진료보조원 호봉합산 사업 관철</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li class="from">
+                                        <div class="year_box ing">
+                                            <b class="year">1990~</b>
+                                        </div>
+                                        <div class="his_inner" id="his_1990~">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">1995.10.14</strong>
+                                                    <span>제주도지부 재조직</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1995.04.04</strong>
+                                                    <span>서울시지부 중앙회와 분리 설치</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1995.02.18</strong>
+                                                    <span>제 6차 회비인상 (대의원총회 의결로서 확정)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1995.02.18</strong>
+                                                    <span>제 21차 정기대의원총회 : 제 12대 이경자 회장 6차 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1994.06</strong>
+                                                    <span>보사부 간호조무사 예방접종 및 주사행위 금지조치 철회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1994.06</strong>
+                                                    <span>요양병원 신설에 따른 간호조무사 정원규정 신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1994.05.22</strong>
+                                                    <span>지난 '90. 8월 공무회 활동중지에 이어 임상분과 활동중지(지부장 재량으로 운영가능)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1994.04</strong>
+                                                    <span>보건요원 승진기회 부여 (8급 → 7급)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1994.01.10</strong>
+                                                    <span>중앙회 사무실 매입(서울 구로구 구로동 106-4 구로선경오피스텔 1401호, 1408호)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1993.04.10</strong>
+                                                    <span>대전(충남)지부 통폐합</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.11.13</strong>
+                                                    <span>응급구조사제도 신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.09</strong>
+                                                    <span>치과진료조무사 및 한방간호조무사제도 신설저지</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.05.13</strong>
+                                                    <span>간호조무사 및 의료유사업자에 관한 규칙 개정 (간호학원 입학 자격 "고교졸업자에서 高 - 3 재학중"으로 등)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.03</strong>
+                                                    <span>서울지역 '92 간호조무사자격증 발급업무 대행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.03</strong>
+                                                    <span>회원 경제복지 증진위한 임금인상 (초임 38만원, 상여금 200%이상, 퇴직금지급의 정착화)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.02.22</strong>
+                                                    <span>제 5차 회비인상 (대의원총회 의결로서 확정)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1992.01</strong>
+                                                    <span>전국 보건지소 근무 1,300여명 보건진료보조원 임시직에서 보건직으로 정규직화 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1991.06.05</strong>
+                                                    <span>정관변경허가 : 제 3장 (임원) 제 10조 중 "임원의 임기는 2년으로 하고 각각 연임"을 3년으로 하고 1차 연임한다. 외 2개 조항</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1991.03.18</strong>
+                                                    <span>서울지역 간호조무사자격증 발급명의 시정건의("구청장"을 "서울시장" 환원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.09.29~11.29</strong>
+                                                    <span>14개 시·도지부 제 1차 보수교육 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.07.28</strong>
+                                                    <span>간호조무사 임상분과 조직</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.05.03</strong>
+                                                    <span>회원의 자질향상을 위한 보수교육 법제화 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.04.16</strong>
+                                                    <span>정관개정허가 : 제 3장 (임원) 제 8, 9, 23조 제 6장 (상임이사회) 신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.03.23</strong>
+                                                    <span>보건사회부 고시상 치과의원 및 한의원까지 정원규정확산적용 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.03.10</strong>
+                                                    <span>'90 제 16차 정기대의원총회 : 제 10대 이경자 회장 4차 연임</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li class="from">
+                                        <div class="year_box ing">
+                                            <b class="year">1986~</b>
+                                        </div>
+                                        <div class="his_inner" id="his_1986~">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">1989.12.08</strong>
+                                                    <span>"간호보조원 및 의료유사업자에 관한 규칙" 개정 : "간호조보원"을 "간호조무사"로, 치의학 및 한의학기초개론 포함 등</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1989.11.04</strong>
+                                                    <span>경상북도지부, 대구직할시지부와 분리설치</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1989.07.26</strong>
+                                                    <span>WHO 후원 한국인구보건연구원 주최, "간호조무사 인력수급 전망에 관한 워크샵" 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1989.05.01</strong>
+                                                    <span>종합병원급 신형 CAP 착용 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1989.03</strong>
+                                                    <span>서울특별시 보건요원 전보, 전직제한조치철폐 및 승진기회부여</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1989.02.23</strong>
+                                                    <span>충청남도지부, 대전직할시지부와 분리 설치</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.12.05</strong>
+                                                    <span>정관개정허가 : 제 9조 (임원선출) 제 2항 "임원승인제를 보고제로", 제 23조 (이사회규정) 제 3항 신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.11.10</strong>
+                                                    <span>정원증원 (신규인가) 억제 및 학력완화 반대건의서 제출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.10.08</strong>
+                                                    <span>제주도지부 재결성 및 대의원총회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.05.27</strong>
+                                                    <span>협회지 제호변경 看護助務士報 제 80호 첫 발행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.05.19</strong>
+                                                    <span>'88 제 1차 전국공무회 회의 (회칙제정, 운용방법, 회비)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.05.01~10.31</strong>
+                                                    <span>전국 보건지소 근무 1,300여명 보건진료보조원 임시직에서 보건직으로 정규직화 관철</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.04.23</strong>
+                                                    <span>看護助務士公協會 조직 (전국공무회장 공춘자)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.04.14</strong>
+                                                    <span>정관 2조 (명칭) 개정 허가 (사단법인 한국간호보조원협회를 한국간호조무사협회로)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.03.16</strong>
+                                                    <span>임금인상 요청서 제출최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.03.05</strong>
+                                                    <span>'88 제 4차 임시대의원총회 제 9대 이경자 회장 3차 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.02.18</strong>
+                                                    <span>보건지소 진료보조원 직급양성화 및 임금현실화 건의 (보사부, 내무부)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.11.27</strong>
+                                                    <span>看護助務士 명칭 개정 공포 의료법 중 개정법률 제 3948호 (공포일 : 1987. 11. 28 시행일 : 1988. 3. 28)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.10.30</strong>
+                                                    <span>제 137회 정기국회에서 看護補助員 명칭을 看護助務士로 변경통과</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.09.18</strong>
+                                                    <span>명칭개선 국회 이재형 의장 앞으로 청원서 제출 (민정당 김중위 의원을 소개의원으로)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.07.31</strong>
+                                                    <span>제 76호 지면 확대판 발행 (타블로이드판을 타블로이드 배판으로))</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.05.07</strong>
+                                                    <span>회비인상 보사부 1987. 1. 10자 소급승인 (입회비 1,000원에서 2,000원으로, 연회비 10,000원에서 13,000원으로)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.03.07</strong>
+                                                    <span>간호학원 증원 및 신규허가 억제 관철 (문교부 회신 접수)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1987.01.14</strong>
+                                                    <span>협회 인사규정등 14 규정 및 사무국 운영내규, 신설 및 개정</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.11.21</strong>
+                                                    <span>간호학원 교육제도 개선 관철 (문교부 회신문 접수)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.10.23</strong>
+                                                    <span>간호조무사 조기정년퇴직규정 철폐 (만 21세 - 55세)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.04.14~26</strong>
+                                                    <span>해외취업자 100명 출국 (사우디아라비아)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.02.01</strong>
+                                                    <span>'86 제 12차 정기대의원총회 개최 : 제 8대 회장 이경자 2차 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.01.25</strong>
+                                                    <span>인천직할시지부 결성 (초대지부장 강순복 피선)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li class="from">
+                                        <div class="year_box ing">
+                                            <b class="year">1980~</b>
+                                        </div>
+                                        <div class="his_inner" id="his_1980~">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">1985.11.15~16</strong>
+                                                    <span>보건사회부 법인 정기감사 (중앙회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1985.08.10</strong>
+                                                    <span>지부 명칭 변경 (경북지부를 대구(경북) 지부로)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1985.02.18</strong>
+                                                    <span>학력상향조정 (중졸이상을 고졸이상으로) 관철 : 보건사회부령 제 765호 공포 후 3월이 경과한 날로부터 시행 (1985. 5. 18)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1985.01.01</strong>
+                                                    <span>서울특별시 산하 17개구 보건소 근무 보건요원 52명 : 고용직에서 정규직 발령 (협회건의)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1984.01.14</strong>
+                                                    <span>제 10차 정기대의원총회 : 제 7대 회장 이경자 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1983.05.14</strong>
+                                                    <span>협회 기관지 제호변경 (韓國看報를 看報協會報로)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1982.07.12~13</strong>
+                                                    <span>보건사회부 법인 정기감사 (중앙회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1982.02.27</strong>
+                                                    <span>제 8차 정기대의원총회 : 제 6대 회장 이경자 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1981.07.01</strong>
+                                                    <span>전국 내무부 산하 보건요원 : 임시직에서 보건직으로 (협회건의) ※ 서울특별시 보건요원 52명 제외</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1980.03.31</strong>
+                                                    <span>협회기관지 「韓國看報」 격월간 발행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1980.03.15</strong>
+                                                    <span>제 6차 정기대의원총회 : 제 5대 회장 김진용 피선</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li class="from">
+                                        <div class="year_box ing">
+                                            <b class="year">1973~</b>
+                                        </div>
+                                        <div class="his_inner" id="his_1973~">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">1979.03.04</strong>
+                                                    <span>제 2차 임시대의원총회 : 제 4대 박숙희 회장 임기전 사퇴로 후임 김진용 승계, 잔여기간 재임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1978.08.01</strong>
+                                                    <span>협회 기관지 제호 「韓國看報」로 변경</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1978.01.27</strong>
+                                                    <span>제 4차 정기대의원총회 : 제 4대 회장 박숙희 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1976.04.04</strong>
+                                                    <span>(1) 제 2차 정기대의원총회 : 제 3대 회장 김금순 피선<br>
+                                                        (2) 제 1차 정관개정안 의결 : 사무국장, 직제신설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.12.31</strong>
+                                                    <span>의료법 개정안 국회 통과 (협회 건의) 제 58조 2항 신설 (간호보조원 업무한계)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.12.31</strong>
+                                                    <span>협회 기관지 「한국간보」 창간호 발행</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.08.26</strong>
+                                                    <span>협회 기관지 월간 「한국간보」 발간 허가 (문화공보부 정기간행물 등록번호 바 - 867)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.06.28</strong>
+                                                    <span>제 1차 임시대의원총회 (대구), 제 2대 회장 문귀자 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.05.10</strong>
+                                                    <span>제 1차 정기대의원총회 : 초대회장 김명자 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.01.11</strong>
+                                                    <span>법인 등기필 (민사지방법원 등기번호 제 1382호)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1974.12.31</strong>
+                                                    <span>각 시·도 10개지부 조직 완료</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1974.12.24</strong>
+                                                    <span>정관승인 (보건사회부장관)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1974.12.24</strong>
+                                                    <span>사단법인 한국간호보조원협회 설립허가 (보사부장관 허가번호 제 45호)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1973.08.01</strong>
+                                                    <span>회장 서리 김명자 취임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1973.07.28</strong>
+                                                    <span>가칭 사단법인 한국간호조무사협회 창립총회</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                                                       
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--//연혁-->
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
