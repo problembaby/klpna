@@ -84,6 +84,20 @@
     width: 20px;
     height: 21px;
 }
+.ico-license-location::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-location.svg)no-repeat;
+    width: 20px;
+    height: 21px;
+}
+.ico-gov::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-gov.png)no-repeat;
+    width: 14px;
+    height: 14px;
+}
 
 
 
@@ -1816,6 +1830,15 @@ align-self: stretch;
  .legal-section .ls-sub-title{ display: flex;  align-items: center; font-size: 18px; gap:10px}
 .ls-box-text{margin-top: 30px;}
 
+
+/** 신고방법*/
+.o-list > .li-row-items{display: flex; align-items: center; flex-wrap: wrap; gap:10px}
+.o-list > li.li-row-items::before {
+    top: 15px;
+    left: 0px;
+}
+
+.lic-loc-title{display: flex; align-items: center; gap:0 7px; flex-wrap: wrap;}
 
 /** 노트북 */
 @media (max-width: 1440px) {
