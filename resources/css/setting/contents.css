@@ -1,4 +1,34 @@
 @charset "UTF-8";
+/** 아이콘 정리*/
+.ico-phone::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-phone.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-email::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-email.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-parking::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-parking.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-transit::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-transit.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
 .sub-content.line{
     border-top: 1px solid #C6C6C6;
     padding-top: 30px;
@@ -366,11 +396,15 @@
 
 }
 .rule_info{
-    padding-top: 40px;;
+    padding-top: 20px;;
 }
 .rule_info .tit{
     color: #0050CA;
     font-size: 24px;
+}    
+.rule_info .tit a{
+    padding-top: 20px;
+    display: block;
 }
 .rule_info .sub_tit{
     color: #000;
@@ -596,6 +630,69 @@
     background: url('../../img/icon/arrow-right_w.svg') no-repeat 90% center #0D0E10;    
     border-radius: 99px;
 }
+/** 오시는길 */
+
+.center-map {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1044 / 500;
+  margin-top: 40px;
+}
+
+.center-map .root_daum_roughmap_landing {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px;
+}
+
+.center-info{margin-top:30px; }
+.center-address { color: var(--color-text-title, #0D0E10); font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+
+.center-info-list{display:flex; flex-direction:column; gap:10px}
+.center-info-list > li{display: flex; gap:10px; align-items: center; }
+
+.center-info .label{flex: 0 0 auto; display: flex; align-items: center; gap:10px; font-size: 14px; color:#464C53}
+.center-info .text{flex: 1 auto; display: flex;  gap:10px; justify-content: flex-start; font-size: 16px; color:#0D0E10}
+.center-info .text.point{
+    color: #0050CA;
+    font-weight: 600;
+}
+.center-info-contact .contact-list {
+    display: flex;
+    gap:10px;
+    width: 100%;
+    align-items: center;
+}
+.center-info-contact .contact-list .contact-item{
+    display: flex;
+    gap:10px
+}
+
+.contact-divider::before{width: 1px;
+height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; flex-shrink: 0;}
+
+.center-info-transit > .text{display: flex; gap:10px; flex-wrap: wrap;}
+
+.transit-line .line-name{
+    display: inline-flex;
+    height: 24px;
+    padding: 0 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.transit-line .line-name.subway4 { background: var(--color-secondary, #0AF)}
+.transit-line .line-name.subway1 { background: var(--color-secondary, #0050CA)}
+
+.sch-right{display: flex; align-items: center; gap:20px; padding:0 10px}
 @media (max-width: 768px) {
     .sub-content.line p br{
         display: none;
@@ -798,19 +895,27 @@
     }
     .cont_menu{
         float: none;
+        position: relative;
     }
     .sido_info{
         margin-top: 30px;
     }
     .sido_info .list{
         width: auto;
-        gap: 4px;
+        gap: 0px;
         flex-wrap: nowrap;
         overflow-x: scroll;
+        padding-bottom: 10px;
+    }
+    .sido_info .list .mob-overflow-icon::before{
+        top: 75%;
+        right: -10px;
     }
     .sido_info .list .btn{
         padding: 0px 10px;
         line-height: 36px;
+        border-radius: 0px;
+        margin-left: -1px;
     }
     .sido_info .cont_area{
         width: 100%;
@@ -818,5 +923,38 @@
     }
     .sido .btn_go{
         font-size: 14px;
+    }
+    .center-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+        .center-info-contact .contact-list {
+        align-items: flex-start;
+        flex-direction: column;
+        gap:0
+    }
+    .center-info-list > li {
+        display: flex;
+        gap: 5px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-divider::before {
+        display: none;
+    }
+
+    .center-info-transit > .text {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+        .center-map {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1044 / 700;
     }
 }
