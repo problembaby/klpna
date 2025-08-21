@@ -84,6 +84,34 @@
     width: 20px;
     height: 21px;
 }
+.ico-license-location::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-location.svg)no-repeat;
+    width: 20px;
+    height: 21px;
+}
+.ico-gov::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-gov.png)no-repeat;
+    width: 14px;
+    height: 14px;
+}
+.ico-report::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-report.svg)no-repeat;
+    width: 90px;
+    height: 91px;
+}
+.ico-report-chk::before{
+     display: block;
+    content:"";
+    background: url(../../img/license/ico-report-chk.svg)no-repeat;
+    width: 90px;
+    height: 91px;
+}
 
 
 
@@ -919,7 +947,7 @@ margin-bottom: 10px;
 
 
 .krds-btn.blue:not(.icon) .svg-icon {
-    background-color: #9157Da;
+    background-color: #356900;
 }
 
 .krds-btn.btn-expand .svg-icon.ico-angle.right{transform: rotate(0deg)}
@@ -1817,6 +1845,71 @@ align-self: stretch;
 .ls-box-text{margin-top: 30px;}
 
 
+/** 신고방법*/
+.o-list > .li-row-items{display: flex; align-items: center; flex-wrap: wrap; gap:10px}
+.o-list > li.li-row-items::before {
+    top: 15px;
+    left: 0px;
+}
+
+.lic-loc-title{display: flex; align-items: center; gap:0 7px; flex-wrap: wrap;}
+
+.license-report-area{width: 100%; text-align: center; margin-top: 50px;}
+.lic-rep-p{
+    color: var(--gray-gray-90, #1D1D1D);
+    font-size: 18px;
+    font-style: normal;
+    margin:30px 0;
+}
+
+.license-report-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin:0 auto;
+     gap: 20px 0;
+}
+.license-report-wrap > li{flex: 1 0 50%; display: flex; justify-content: center;}
+.btn-report{width: 400px; height:200px; display: flex; align-items: center; justify-content: center; 
+    flex-direction: column; gap:20px;
+    border-radius: 8px;
+    border: 2px solid var(--color-license, #418200);
+}
+.btn-report.green{
+    background: var(--color-license, #418200);
+}
+.btn-report.white{
+    background: var(--color-license, white);
+}
+
+.btn-report .text{
+    color: var(--color-text-inverse, #FFF);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    display: flex; align-items: center; gap:5px
+}
+.btn-report.white .text{
+    color: var(--color-text-inverse, #418200);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    display: flex; align-items: center; gap:5px
+}
+
+.btn-report .text .svg-icon {
+    background-color: #fff;
+}
+.btn-report.white .text .svg-icon {
+    background-color: #418200;
+}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -2374,6 +2467,9 @@ body.edu-appl-step03 .step02 {
 
 .report-year-layout .input-list{flex-direction: column; width: 100%;}
 .report-year-layout .input-list > *{width: 100%;}
+
+.btn-report{width: 300px; height:130px; gap:10px; padding:10px}
+.btn-report .icon i::before{width: 50px; height:51px; background-size: cover;}
 
 }
 
