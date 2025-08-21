@@ -1,4 +1,16 @@
 @charset "UTF-8";
+.sub-content.line{
+    border-top: 1px solid #C6C6C6;
+    padding-top: 30px;
+}
+.sub-content.line .info_tit{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.sub-content.line p{
+    font-size: 16px;
+}
 .bbs-search-wrap.sido_search{
     display: block;
     padding: 20px 30px;
@@ -294,6 +306,7 @@
 }
 .greeting p{
     padding: 10px 0px;
+    line-height: 30px;
 }
 .greeting span{
     color:#0050CA;
@@ -436,7 +449,157 @@
 .business_info div ul li{
 
 }
+/*조직도*/
+.chart_info{
+    margin-top: 40px;
+}
+.chart_pc{
+    display: block;
+}
+.chart_mo{
+    display: none;
+}
+.organizaion_info{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #C6C6C6;
+}
+.organizaion_info .info_tit{
+    font-size: 18px;
+    font-weight: 700;
+}
+.organizaion_info p{
+    font-size: 16px;
+}
+.organizaion_box{
+    margin-top: 20px;
+}
+.organizaion_box .tit{ 
+    font-size: 18px;
+    font-weight: 700;
+}
+.organizaion_box .tit::before{ 
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 99px;
+    background: #0D0E10;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.organizaion_box ul{ 
+    display: flex;
+    /*flex-direction: column;*/
+    gap: 10px;
+    flex: 1 0 0;
+    margin-top: 6px;
+}
+.organizaion_box ul li{     
+    border-radius: 10px;
+    border: 1px solid #C6C6C6;    
+    padding: 10px 20px;
+    flex: 1;
+    position: relative;
+    padding-bottom: 40px;
+    letter-spacing: -1px;
+}
+.organizaion_box ul li p{ 
+    margin-top: 6px;
+    font-size: 14px;
+    background:url(../../img/icon/phone.svg) no-repeat left center;
+    padding-left: 24px;
+    position: absolute;
+    bottom: 10px;
+    letter-spacing: 0px;
+}
+/*시도회*/
+.sido_info{
+    margin-top: 40px;
+}
+.cont_menu{float: right;}
+.cont_menu p{
+    color: #7D7D7D;
+    font-size: 14px;
+}
+.sido_info .list{
+    margin-top: 10px;
+    overflow:hidden;
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.sido_info .list li{
+
+}
+.sido_info .list li.is_on .btn{
+    color: #ffffff;
+    background: #08A895;
+    border: 1px solid #08A895;
+}
+.sido_info .list .btn{
+    font-size:16px; 
+    border-radius: 99px;
+    border: 1px solid #C6C6C6;
+    background: #FFF;
+    width: 180px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+}
+.sido_info .cont_area{
+    margin-top:10px; 
+    width: calc(100% - 430px);
+    padding: 30px;
+    background:#F7F8FB;
+}
+.sido_info .cont_area .cont{
+    display:none; 
+}
+.sido{
+    font-size: 16px;
+    border-top: 1px solid #C6C6C6;
+    padding-top: 20px;
+    margin-top: 30px;
+    position: relative;
+}
+.sido .tit{
+    color: #0D0E10;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 6px;
+    display: block;
+}
+.sido ul li{
+    padding-left: 24px;
+    line-height: 30px;
+}
+.sido ul li.address{
+    background:url(../../img/icon/ico-location.svg) no-repeat left 5px;
+}
+.sido ul li.phone{
+    background:url(../../img/icon/phone.svg) no-repeat left center;    
+}
+.sido .btn_go{
+    position: absolute;
+    right: 0px;
+    top: 14px;    
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;    
+}
+.sido .btn_go a{
+    padding: 6px 30px 6px 20px;
+    cursor: pointer;
+    display: inline-block;
+    background: url('../../img/icon/arrow-right_w.svg') no-repeat 90% center #0D0E10;    
+    border-radius: 99px;
+}
 @media (max-width: 768px) {
+    .sub-content.line p br{
+        display: none;
+    }
     .bbs-search-wrap.sido_search .search-top-box .guide{
         float: none;
         margin-top: 10px;
@@ -545,7 +708,7 @@
         position:static;
         display:block;
         text-align:center;
-        margin:auto
+        margin:auto;
     }
     .greeting_img{
         padding-top:30px;
@@ -619,5 +782,41 @@
     }
     .business_info div ul li{
         text-align: center;
+    }
+    .chart_pc{
+        display: none;
+    }
+    .chart_mo{
+        display: block;
+        margin: 0 auto;
+    }
+    .organizaion_box ul{ 
+        display: grid;
+    }
+    .organizaion_box ul li{ 
+        letter-spacing: 0px;
+    }
+    .cont_menu{
+        float: none;
+    }
+    .sido_info{
+        margin-top: 30px;
+    }
+    .sido_info .list{
+        width: auto;
+        gap: 4px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .sido_info .list .btn{
+        padding: 0px 10px;
+        line-height: 36px;
+    }
+    .sido_info .cont_area{
+        width: 100%;
+        padding: 20px;
+    }
+    .sido .btn_go{
+        font-size: 14px;
     }
 }
