@@ -1,4 +1,46 @@
 @charset "UTF-8";
+/** 아이콘 정리*/
+.ico-phone::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-phone.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-email::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-email.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-parking::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-parking.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+.ico-transit::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-transit.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+.sub-content.line{
+    border-top: 1px solid #C6C6C6;
+    padding-top: 30px;
+}
+.sub-content.line .info_tit{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.sub-content.line p{
+    font-size: 16px;
+}
 .bbs-search-wrap.sido_search{
     display: block;
     padding: 20px 30px;
@@ -294,6 +336,7 @@
 }
 .greeting p{
     padding: 10px 0px;
+    line-height: 30px;
 }
 .greeting span{
     color:#0050CA;
@@ -353,11 +396,15 @@
 
 }
 .rule_info{
-    padding-top: 40px;;
+    padding-top: 20px;;
 }
 .rule_info .tit{
     color: #0050CA;
     font-size: 24px;
+}    
+.rule_info .tit a{
+    padding-top: 20px;
+    display: block;
 }
 .rule_info .sub_tit{
     color: #000;
@@ -436,7 +483,220 @@
 .business_info div ul li{
 
 }
+/*조직도*/
+.chart_info{
+    margin-top: 40px;
+}
+.chart_pc{
+    display: block;
+}
+.chart_mo{
+    display: none;
+}
+.organizaion_info{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #C6C6C6;
+}
+.organizaion_info .info_tit{
+    font-size: 18px;
+    font-weight: 700;
+}
+.organizaion_info p{
+    font-size: 16px;
+}
+.organizaion_box{
+    margin-top: 20px;
+}
+.organizaion_box .tit{ 
+    font-size: 18px;
+    font-weight: 700;
+}
+.organizaion_box .tit::before{ 
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 99px;
+    background: #0D0E10;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.organizaion_box ul{ 
+    display: flex;
+    /*flex-direction: column;*/
+    gap: 10px;
+    flex: 1 0 0;
+    margin-top: 6px;
+}
+.organizaion_box ul li{     
+    border-radius: 10px;
+    border: 1px solid #C6C6C6;    
+    padding: 10px 20px;
+    flex: 1;
+    position: relative;
+    padding-bottom: 40px;
+    letter-spacing: -1px;
+}
+.organizaion_box ul li p{ 
+    margin-top: 6px;
+    font-size: 14px;
+    background:url(../../img/icon/phone.svg) no-repeat left center;
+    padding-left: 24px;
+    position: absolute;
+    bottom: 10px;
+    letter-spacing: 0px;
+}
+/*시도회*/
+.sido_info{
+    margin-top: 40px;
+}
+.cont_menu{float: right;}
+.cont_menu p{
+    color: #7D7D7D;
+    font-size: 14px;
+}
+.sido_info .list{
+    margin-top: 10px;
+    overflow:hidden;
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.sido_info .list li{
+
+}
+.sido_info .list li.is_on .btn{
+    color: #ffffff;
+    background: #08A895;
+    border: 1px solid #08A895;
+}
+.sido_info .list .btn{
+    font-size:16px; 
+    border-radius: 99px;
+    border: 1px solid #C6C6C6;
+    background: #FFF;
+    width: 180px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+}
+.sido_info .cont_area{
+    margin-top:10px; 
+    width: calc(100% - 430px);
+    padding: 30px;
+    background:#F7F8FB;
+}
+.sido_info .cont_area .cont{
+    display:none; 
+}
+.sido{
+    font-size: 16px;
+    border-top: 1px solid #C6C6C6;
+    padding-top: 20px;
+    margin-top: 30px;
+    position: relative;
+}
+.sido .tit{
+    color: #0D0E10;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 6px;
+    display: block;
+}
+.sido ul li{
+    padding-left: 24px;
+    line-height: 30px;
+}
+.sido ul li.address{
+    background:url(../../img/icon/ico-location.svg) no-repeat left 5px;
+}
+.sido ul li.phone{
+    background:url(../../img/icon/phone.svg) no-repeat left center;    
+}
+.sido .btn_go{
+    position: absolute;
+    right: 0px;
+    top: 14px;    
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;    
+}
+.sido .btn_go a{
+    padding: 6px 30px 6px 20px;
+    cursor: pointer;
+    display: inline-block;
+    background: url('../../img/icon/arrow-right_w.svg') no-repeat 90% center #0D0E10;    
+    border-radius: 99px;
+}
+/** 오시는길 */
+
+.center-map {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1044 / 500;
+  margin-top: 40px;
+}
+
+.center-map .root_daum_roughmap_landing {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 10px;
+}
+
+.center-info{margin-top:30px; }
+.center-address { color: var(--color-text-title, #0D0E10); font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+
+.center-info-list{display:flex; flex-direction:column; gap:10px}
+.center-info-list > li{display: flex; gap:10px; align-items: center; }
+
+.center-info .label{flex: 0 0 auto; display: flex; align-items: center; gap:10px; font-size: 14px; color:#464C53}
+.center-info .text{flex: 1 auto; display: flex;  gap:10px; justify-content: flex-start; font-size: 16px; color:#0D0E10}
+.center-info .text.point{
+    color: #0050CA;
+    font-weight: 600;
+}
+.center-info-contact .contact-list {
+    display: flex;
+    gap:10px;
+    width: 100%;
+    align-items: center;
+}
+.center-info-contact .contact-list .contact-item{
+    display: flex;
+    gap:10px
+}
+
+.contact-divider::before{width: 1px;
+height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; flex-shrink: 0;}
+
+.center-info-transit > .text{display: flex; gap:10px; flex-wrap: wrap;}
+
+.transit-line .line-name{
+    display: inline-flex;
+    height: 24px;
+    padding: 0 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.transit-line .line-name.subway4 { background: var(--color-secondary, #0AF)}
+.transit-line .line-name.subway1 { background: var(--color-secondary, #0050CA)}
+
+.sch-right{display: flex; align-items: center; gap:20px; padding:0 10px}
 @media (max-width: 768px) {
+    .sub-content.line p br{
+        display: none;
+    }
     .bbs-search-wrap.sido_search .search-top-box .guide{
         float: none;
         margin-top: 10px;
@@ -545,7 +805,7 @@
         position:static;
         display:block;
         text-align:center;
-        margin:auto
+        margin:auto;
     }
     .greeting_img{
         padding-top:30px;
@@ -619,5 +879,82 @@
     }
     .business_info div ul li{
         text-align: center;
+    }
+    .chart_pc{
+        display: none;
+    }
+    .chart_mo{
+        display: block;
+        margin: 0 auto;
+    }
+    .organizaion_box ul{ 
+        display: grid;
+    }
+    .organizaion_box ul li{ 
+        letter-spacing: 0px;
+    }
+    .cont_menu{
+        float: none;
+        position: relative;
+    }
+    .sido_info{
+        margin-top: 30px;
+    }
+    .sido_info .list{
+        width: auto;
+        gap: 0px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding-bottom: 10px;
+    }
+    .sido_info .list .mob-overflow-icon::before{
+        top: 75%;
+        right: -10px;
+    }
+    .sido_info .list .btn{
+        padding: 0px 10px;
+        line-height: 36px;
+        border-radius: 0px;
+        margin-left: -1px;
+    }
+    .sido_info .cont_area{
+        width: 100%;
+        padding: 20px;
+    }
+    .sido .btn_go{
+        font-size: 14px;
+    }
+    .center-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+        .center-info-contact .contact-list {
+        align-items: flex-start;
+        flex-direction: column;
+        gap:0
+    }
+    .center-info-list > li {
+        display: flex;
+        gap: 5px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-divider::before {
+        display: none;
+    }
+
+    .center-info-transit > .text {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+        .center-map {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1044 / 700;
     }
 }
