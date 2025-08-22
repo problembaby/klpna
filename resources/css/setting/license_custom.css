@@ -1995,6 +1995,9 @@ display: flex; align-items: center;
     background-color: #418200;
 }
 
+.appl-msg-text{display:flex; gap:10px; flex-wrap: wrap;}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
