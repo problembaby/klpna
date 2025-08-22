@@ -870,6 +870,16 @@ font-weight: 700; background: var(--color-text-bosu_txt, #9157DA); padding:0 10p
     width: 100%;
     margin-top: 10px;
 }
+.ea-terms-desc.col{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap:10px
+}
+.ea-terms-desc.col .btn-list{display: flex;gap:10px; flex-wrap: wrap;}
+.ea-terms-desc.col .btn-list > a{
+    width: 200px;
+}
 .ea-list{display: flex; flex-direction: column; gap:10px}
 .ea-list li{display: flex; gap:5px; align-items: center; position: relative; padding-left: 12px; font-size: 14px; }
 .ea-list li::before{content:""; display: block; width: 4px; height:4px; background-color: #333; border-radius: 50%; flex:0 5px; position: absolute; left:0; top:10px}
@@ -1610,6 +1620,13 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 /** 테블릿 */
 @media (max-width: 1023px) {
 
+    .ea-terms-desc.col{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px
+}
+
     .edu-summary {
     display: flex;
     justify-content: flex-start;
@@ -1950,6 +1967,14 @@ body.edu-appl-step03 .step02 {
 }
 
 @media (max-width: 479px) {
+
+    .ea-terms-desc.col .btn-list > a {
+    width: 100%;
+    heiog
+
+}
+
+
     .header-util .inner.edu .logo.klpna a::before {
     width: 140px;
     height: 25px;
