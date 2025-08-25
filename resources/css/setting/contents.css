@@ -368,6 +368,9 @@
 .rule_pdf button{
     float: right;
 }
+.rule_pdf button i{
+    vertical-align: middle;
+}
 .rule_bookmark{
     display: table;
     width: 100%;
@@ -810,6 +813,39 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
 }
 .nurse_info .nurse b{
     color: #0AF;
+}
+/*등록 완료*/
+.register_end-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.register_end{
+
+}
+.ico-find.register_end::before{
+    content: "";
+    display: block;
+    background: url(../../img/icon/icon_register_end.svg) no-repeat;
+    width: 84px;
+    height: 90px;
+}
+.register_end-area h3{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.register_end-area p{
+    color: var(--color-text-sub_title, #464C53);
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
 }
 @media (max-width: 768px) {
     .sub-content.line p br{
