@@ -358,7 +358,7 @@
 }
 /*정관*/
 .rule_guide{
-    line-height: normal;
+    line-height: 24px;
     margin-bottom: 14px;
 }
 .rule_pdf{
@@ -405,6 +405,7 @@
 .rule_info .tit{
     color: #0050CA;
     font-size: 24px;
+    letter-spacing: -0.5px;
 }    
 .rule_info .tit a{
     padding-top: 20px;
@@ -424,10 +425,14 @@
     font-size: 14px;
 }
 .rule_info .list{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .rule_info .list ul li{
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.rule_info .list ul li:last-child{
+    padding-bottom: 0px;
 }
 .rule_info .list ul li::before{
     content: '';
@@ -440,9 +445,28 @@
     margin-right: 5px;
 }
 .rule_info .list.small{
-    font-size: 14px;
+    font-size: 15px;
     color:#464C53;
     padding-left: 20px;
+}
+.rule_info .subject{ 
+    border-left: 1px solid #0050CA;
+    padding-left: 20px;
+    color: #464C53;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.rule_info .subject ul li{
+    border-bottom: 1px solid #C6C6C6;
+        padding-bottom: 6px;
+}
+.rule_info .subject ul li:last-child{
+    border-bottom: none;
+}
+.rule_info .subject b{
+    color: #0D0E10;
+    display: block;
+    line-height: 30px;
 }
 .Moral .tit{
     text-align: center;
@@ -474,7 +498,7 @@
 .Moral .rule_info .sub_tit a{
     padding-top: 20px;
 }
-.tab.full > ul{
+.tab.full.tab.xscroll > ul{
     gap: 0;
 }
 .tab.line.full a{
@@ -844,7 +868,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         content: "";
-        background-image: url(../img/icon/arrow-down.svg);
+        background-image: url(../../img/icon/arrow-down.svg);
         filter: invert(100%) sepia(57%) saturate(1%) hue-rotate(256deg) brightness(105%) contrast(100%);
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
@@ -929,6 +953,12 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         right:10px;
         bottom:0px;
         left: auto;
+    }
+    .rule_info{
+        padding-top: 0px;
+    }
+    .rule_guide{
+        margin-bottom: 0px;
     }
     .rule_pdf{
         line-height: 24px;
