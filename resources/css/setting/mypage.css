@@ -2490,6 +2490,9 @@ border: 1px solid var(--color-border-light, #D9D9D9); padding:20px}
   .reco-card .reco-card-symbol.bg-symbol2{
   background:url(../../img/sub/bg-cadidate-symbol2.png)no-repeat;
 }
+  .reco-card .reco-card-symbol.bg-symbol3{
+  background:url(../../img/sub/bg-cadidate-symbol3.png)no-repeat;
+}
 
 .reco-card-symbol.position{
   position:absolute;
@@ -2554,6 +2557,9 @@ background: var(--color-bg-secondary, #F7F8FB); padding:20px; position: relative
 
  .cadidate-box.popup .reco-card-symbol.bg-symbol2{
   background:url(../../img/sub/bg-cadidate-symbol2.png)no-repeat;
+}
+ .cadidate-box.popup .reco-card-symbol.bg-symbol3{
+  background:url(../../img/sub/bg-cadidate-symbol3.png)no-repeat;
 }
 
 
@@ -2631,6 +2637,25 @@ line-height: 120%; /* 16.8px */ margin-top: 5px;}
   font-size: 15px;
 }
 
+
+/** 감사 */
+.recomend-card-layout.auditor .candidate-list .candidate-box {
+    flex: 1 100%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+}
+.recomend-card-layout.auditor .candidate-list .candidate-box .cadidate-info {
+    flex: 1 50%;
+    border-right: 1px solid var(--color-border-nomal, #C6C6C6);
+
+
+}
+
+.recomend-card-layout.auditor .candidate-list .candidate-box .candidate-msg {
+ flex :1 50%;
+ padding:20px
+}
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -2843,6 +2868,17 @@ font-size: 18px;
 
 /** 모바일 */
 @media (max-width: 767px) {
+
+  .recomend-card-layout.auditor .candidate-list .candidate-box {
+    flex-direction: column;
+}
+
+.recomend-card-layout.auditor .candidate-list .candidate-box .cadidate-info {
+    border-right: 0
+}
+.recomend-card-layout.auditor .candidate-list .candidate-box .candidate-msg {
+    padding: 0;
+}
 
   .candidate-list {
     flex-direction: column;
