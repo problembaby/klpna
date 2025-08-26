@@ -396,6 +396,10 @@
     background:url(../../img/icon/rule_list.svg) no-repeat;
     background-position: 0 center;
 }
+.rule_bookmark.d_block ul li{
+    display: block;
+    width: 100%;
+}
 .rule_bookmark ul li.last{
     width: auto;
 }
@@ -413,6 +417,21 @@
 .rule_info .tit a{
     padding-top: 20px;
     display: block;
+}
+.rule_info .tit_list button{
+    margin-top : 20px;
+}
+.rule_info .tit_list table{
+    margin-top : 20px;
+}
+.rule_info .krds-table-wrap .tbl.data thead th, 
+.rule_info .krds-table-wrap .tbl.data tbody th{
+    text-align: center;
+}
+.rule_info .tit_list p{
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 15px;
 }
 .rule_info .sub_tit{
     color: #000;
