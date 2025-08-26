@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시도회장단 | 마이페이지 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/lib/select2/select2.min.css" />
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <script src="../resources/lib/select2/select2.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">마이페이지</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">교육현황</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">강의실</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">회비/기금내역</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link ">1:1문의</a>
+                        </li>
+
+                        <li class="lnb-item">
+                            <button type="button" class="lnb-btn lnb-toggle" aria-controls="lnbmenu-vf9gqcy"
+                                aria-expanded="false">나의게시물</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-vf9gqcy">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">신고센터</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">회원게시판</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">노무상담</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">구인정보</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">대체인력 구인</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">원격지원서비스</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+
+                        <li class="lnb-item active">
+                            <button type="button" class="lnb-btn lnb-toggle active selected" aria-controls="lnbmenu-p1"
+                                aria-expanded="true">대의원추천</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul id="lnbmenu-p1">
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">중앙회장단</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link active">시도회장단</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">감사</a></li>
+                                    <li class="lnb-subitem"><a href="#" class="lnb-btn lnb-link">나의추천현황</a></li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+
+
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">회원정보</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="/" class="txt" title="홈으로"></a></li>
+                            <li><a href="#;" class="txt">마이페이지</a></li>
+                            <li><a href="#;" class="txt">대의원추천</a></li>
+                            <li><a href="#;" class="txt">시도회장단</a></li>
+                        </ol>
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">시도회장단</h1>
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+
+                    <!-- 본문 -->
+                    <div class="sub-content mypage">
+                        <div class="recommend-wrap">
+                            <h2 class="recmmend-exp-h2"><span class="fc-blue">2025년</span> 시도회장단(회장, 부회장) 후보 대의원추천</h2>
+
+                            <!--탭영역-->
+                            <div class="link-tab border mt30">
+                                <a href="./마이페이지-대의원추천-시도회장단후보소개.html" class="link-tab-items" target="_self">후보소개</a>
+                                <a href="./마이페이지-대의원추천-시도회장단추천참여.html" class="link-tab-items active" target="_self"
+                                    title="선택됨">추천참여</a>
+                            </div>
+                            <!--//탭영역-->
+
+
+                            <div class="recomend-layout">
+                                <div class="recomend-period">
+                                    <div class="label">추천기간 :</div>
+                                    <span class="value fw-bold"> 2025.05.01 ~ 2025.05.31</span>
+                                </div>
+                                <p class="recomend-period-p">※ 추천할 후보자의 [추천] 버튼을 클릭하여 추천해 주세요.</p>
+
+                                <ul class="recomend-card-layout column">
+                                    <li>
+                                        <div class="reco-card">
+                                            <div class="reco-card-symbol bg-symbol2 position">
+                                                기호 1
+                                            </div>
+
+                                            <ul class="candidate-list">
+                                                <li class="candidate-list-item candidate-chair">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">회장</div>
+                                                        <div class="candidate-name">홍길동</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                    <button class="krds-btn blue candidate-recommend-btn mt10 open-modal"
+                                                        data-target="modal_candidate">
+                                                        <i class="ico-thumbs-up blue"></i>추천
+                                                    </button>
+                                                </li>
+
+
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">김한국</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">김구</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">신사임당</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="reco-card">
+                                            <div class="reco-card-symbol bg-symbol2 position">
+                                                기호 2
+                                            </div>
+
+                                            <ul class="candidate-list">
+                                                <li class="candidate-list-item candidate-chair">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">회장</div>
+                                                        <div class="candidate-name">홍길동</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                    <button class="krds-btn blue candidate-recommend-btn mt10 open-modal"
+                                                        data-target="modal_candidate">
+                                                        <i class="ico-thumbs-up blue"></i>추천
+                                                    </button>
+                                                </li>
+
+
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">김한국</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">김구</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">신사임당</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="reco-card">
+                                            <div class="reco-card-symbol bg-symbol2 position">
+                                                기호 3
+                                            </div>
+
+                                            <ul class="candidate-list">
+                                                <li class="candidate-list-item candidate-chair">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">회장</div>
+                                                        <div class="candidate-name">홍길동</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                    <button class="krds-btn blue candidate-recommend-btn mt10 open-modal"
+                                                        data-target="modal_candidate">
+                                                        <i class="ico-thumbs-up blue"></i>추천
+                                                    </button>
+                                                </li>
+
+
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">김한국</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">김구</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                                <li class="candidate-list-item">
+                                                    <div class="candidate-info">
+                                                        <div class="candidate-position">부회장</div>
+                                                        <div class="candidate-name">신사임당</div>
+                                                    </div>
+                                                    <div class="candidate-photo">
+                                                        <img src="../resources/img/sub/img-cadidate.png" alt="후보자 사진">
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                    <!--// 본문 -->
+
+
+
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+        <section id="modal_candidate" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_candidate" data-type="large"> 
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <h2 id="tit_modal_candidate">
+                        2025년 시도회장단(회장, 부회장) 후보 대의원추천서
+                    </h2>
+                </div>
+                <!-- //modal title -->
+
+                <!-- modal contents -->
+                <div class="modal-conts pb40">
+                    <div class="bar"></div>
+                    <section class="candidate-section">
+                        <h3 class="candi-sec-title">피추천인</h3>
+                        <div class="cadidate-box popup sky">
+                            <div class="reco-card-symbol bg-symbol2 position"> 기호 1 </div>
+                            <div class="cadidate-info">
+                                <div class="thumb">
+                                    <img src="../resources/img/sub/img-cadidate.png" alt="후보자 썸네일">
+                                </div>
+
+                                <ul class="info o-list">
+                                    <li>
+                                        <div class="info-area">
+                                            <span class="info-area-position">회장 후보</span>
+                                            <span class="info-area-name">홍길동</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-area">
+                                            <span class="info-area-position">부회장 후보</span>
+                                            <span class="info-area-name">아무개, 이순신, 박영숙, 김좌</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="candidate-section">
+                        <h3 class="candi-sec-title">추천인</h3>
+                        <div class="text-box gray">
+                            <ul class="o-list recomend">
+                                <li>성명 : 김좌진</li>
+                                <li>소속시도회  서울시</li>
+                            </ul>
+
+                        </div>
+                    </section>
+                    <p class="recomend-pop-msg">귀하를 대한간호조무사협회 회장단(회장, 부회장) 후보로 추천합니다.</p>
+                    <div class="cadidate-verti-info">
+                        <div class="cvi-date">2025년 00월 00일</div>
+                        <h2 class="cvi-adm">대한간호조무사협회 선거관리위원장</h2>
+                    </div>
+                    <div class="cadidate-recomend-chkArea">
+                        <div class="recom-user-name">추천인 김좌진</div>
+                        <div class="krds-form-check large">
+                            <input type="checkbox" id="chk_1-3a">
+                            <label for="chk_1-3a">추천</label>
+                        </div>
+                    </div>
+
+                    <div class="btnList-sort right mt30">
+                        <button type="button" class="krds-btn">제출<i class="svg-icon ico-angle right"></i></button>
+                    </div>
+
+                </div>
+                <!-- //modal contents -->
+
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

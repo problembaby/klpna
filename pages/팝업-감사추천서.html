@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> 감사 추천서 | 간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js" defer></script>
+    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+
+    <button type="button" class="krds-btn open-modal" data-target="modal_candidate">감사 추천서 팝업
+    </button>
+
+
+
+
+    <section id="modal_candidate" class="detailed krds-modal fade in shown" role="dialog"
+        aria-labelledby="tit_modal_candidate" data-type="large">
+        <!--    <section id="modal_candidate" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_candidate" data-type="large">  -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <h2 id="tit_modal_candidate">
+                        2025년 감사 후보 대의원추천서
+                    </h2>
+                </div>
+                <!-- //modal title -->
+
+                <!-- modal contents -->
+                <div class="modal-conts pb40">
+                    <div class="bar"></div>
+                    <section class="candidate-section">
+                        <h3 class="candi-sec-title">피추천인</h3>
+                        <div class="cadidate-box popup sky">
+                            <div class="reco-card-symbol bg-symbol3 position"> 기호 1 </div>
+                            <div class="cadidate-info">
+                                <div class="thumb">
+                                    <img src="../resources/img/sub/img-cadidate.png" alt="후보자 썸네일">
+                                </div>
+
+                                <ul class="info o-list">
+                                    <li>
+                                        <div class="info-area">
+                                            <span class="info-area-position">감사 후보</span>
+                                            <span class="info-area-name">홍길동</span>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="candidate-section">
+                        <h3 class="candi-sec-title">추천인</h3>
+                        <div class="text-box gray">
+                            <ul class="o-list recomend">
+                                <li>성명 : 김좌진</li>
+                                <li>소속시도회  서울시</li>
+                            </ul>
+
+                        </div>
+                    </section>
+                    <p class="recomend-pop-msg">귀하를 대한간호조무사협회 회장단(회장, 부회장) 후보로 추천합니다.</p>
+                    <div class="cadidate-verti-info">
+                        <div class="cvi-date">2025년 00월 00일</div>
+                        <h2 class="cvi-adm">대한간호조무사협회 선거관리위원장</h2>
+                    </div>
+                    <div class="cadidate-recomend-chkArea">
+                        <div class="recom-user-name">추천인 김좌진</div>
+                        <div class="krds-form-check large">
+                            <input type="checkbox" id="chk_1-3a">
+                            <label for="chk_1-3a">추천</label>
+                        </div>
+                    </div>
+
+                    <div class="btnList-sort right mt30">
+                        <button type="button" class="krds-btn">제출<i class="svg-icon ico-angle right"></i></button>
+                    </div>
+
+                </div>
+                <!-- //modal contents -->
+
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+
+    <!-- // 모달 : 상세보기 -->

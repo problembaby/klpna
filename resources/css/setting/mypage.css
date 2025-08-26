@@ -1,5 +1,24 @@
 @charset "utf-8";
 
+.ico-thumbs-up::before{
+  content:"";
+  display: block;
+  background: url(../../img/sub/ico-thumbs-up.svg)no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+}
+
+.ico-thumbs-up.blue::before{
+  content:"";
+  display: block;
+  background: url(../../img/sub/ico-thumbs-up-blue.svg)no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+}
+
+
 
 .sub-content.mypage.home {
   display: flex;
@@ -1676,7 +1695,7 @@ background: var(--color-primary-bg, #ECF2FE);
 
 .link-tab {display: flex; width: 100%; margin-bottom: 30px; border-bottom: 2px solid #B1B8BE;}
 
-.link-tab .link-tab-items{font-size: 18px; flex:1 auto; color: var(--color-text-disabled, #8A949E);
+.link-tab .link-tab-items{font-size: 18px; flex:1 50%; color: var(--color-text-disabled, #8A949E);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -1689,8 +1708,8 @@ padding:20px;
 }
 
 .link-tab .link-tab-items.active{
-    color:#9157DA;
-    border-bottom: 4px solid var(--color-text-bosu_txt, #9157DA);
+    color:#0050CA;
+    border-bottom: 4px solid var(--color-text-bosu_txt, #0050CA);
 
 }
 
@@ -2440,6 +2459,204 @@ line-height: 150%; /* 27px */}
 
 .mypage-pwFind{max-width: 680px; margin:0 auto}
 
+
+
+
+/** 중앙회장단 */
+.recomend-period{
+  display:flex; gap:0 10px; font-size: 18px; flex-wrap: wrap;
+} 
+
+.recomend-card-layout{margin-top: 30px; display: flex; flex-direction: column; gap:30px;}
+.recomend-card-layout li{flex:1 100%;}
+.recomend-card-layout li .reco-card{display: block; position: relative; border-radius: 10px;
+border: 1px solid var(--color-border-light, #D9D9D9); padding:20px}
+.reco-card .reco-card-symbol{
+  background:url(../../img/sub/bg-cadidate-symbol.png)no-repeat;
+  width: 150px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 27px */
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+  
+  .reco-card .reco-card-symbol.bg-symbol2{
+  background:url(../../img/sub/bg-cadidate-symbol2.png)no-repeat;
+}
+  .reco-card .reco-card-symbol.bg-symbol3{
+  background:url(../../img/sub/bg-cadidate-symbol3.png)no-repeat;
+}
+
+.reco-card-symbol.position{
+  position:absolute;
+  top:-1px
+}
+
+.candidate-list{display: flex; gap:10px;  margin-top: 30px;}
+.candidate-list .candidate-box{flex: 0 50%; border-radius: 10px; padding:20px}
+.candidate-list .candidate-box.sky{
+background: var(--color-bg-secondary, #F7F8FB);}
+.candidate-list .candidate-box.gray{
+background: var(--color-bg-nomal, #F8F8F8);}
+
+.candidate-box .cadidate-info{
+ display: flex; gap:20px; align-items: center;
+}
+.candidate-box .cadidate-info .info-area{
+  font-size: 18px;
+}
+.candidate-box .cadidate-info .thumb{
+  width:120px;
+  height:120px;
+  overflow: hidden;
+  border-radius: 10px;
+border: 1px solid var(--color-border-light, #D9D9D9);
+}
+.candidate-box .cadidate-info .info{
+ flex: 1 auto;
+}
+.candidate-box .cadidate-info .thumb img{
+ width: 100%
+}
+
+.info-area-name{font-weight: 700;}
+.candidate-msg{font-size: 14px; padding:20px 0; width: 100%;}
+
+
+/** 팝업 : 중앙회장단 */
+.candidate-section{
+  margin-top:20px
+}
+
+.candi-sec-title{font-size: 18px; margin-bottom: 10px;}
+.cadidate-box.popup{border-radius: 10px;
+background: var(--color-bg-secondary, #F7F8FB); padding:20px; position: relative;}
+
+.cadidate-box.popup .reco-card-symbol {
+    background: url(../../img/sub/bg-cadidate-symbol.png)no-repeat;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+ .cadidate-box.popup .reco-card-symbol.bg-symbol2{
+  background:url(../../img/sub/bg-cadidate-symbol2.png)no-repeat;
+}
+ .cadidate-box.popup .reco-card-symbol.bg-symbol3{
+  background:url(../../img/sub/bg-cadidate-symbol3.png)no-repeat;
+}
+
+
+.cadidate-box.popup .cadidate-info{
+   display: flex; gap:20px; align-items: center; margin-top:40px
+}
+
+.cadidate-box.popup .cadidate-info .thumb {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-light, #D9D9D9);
+}
+.cadidate-box.popup .cadidate-info .info-area {
+   font-size: 16px;
+   
+}
+.cadidate-box.popup .cadidate-info .info-area .info-area-name {
+   font-size: 18px;
+   
+}
+
+.o-list.recomend li{ font-size:16px}
+.recomend-pop-msg{margin-top: 30px;}
+.cadidate-verti-info{margin-top:30px; text-align: center;}
+.cvi-date{font-size: 16px;}
+.cvi-adm{font-size: 18px; margin-top:30px }
+
+.cadidate-recomend-chkArea{margin-top: 30px; display: flex; justify-content: space-between; align-items: center; background: var(--color-text-sub_title, #464C53); padding:10px 20px; color:#fff}
+
+.recmmend-exp-h2{font-size: 19px;}
+.recomend-period-p{color: var(--color-text-sub_title, #464C53);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 16.8px */ margin-top: 5px;}
+
+
+/** 중앙회장단 추천참여 */
+
+.recomend-card-layout.column {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px 2%;
+    flex-wrap: wrap;
+}
+
+.recomend-card-layout.column > li {
+    flex: 0 32%;
+}
+
+
+.recomend-card-layout.column .candidate-list{width:100%; text-align: center; flex-direction: column;}
+.recomend-card-layout.column .candidate-list .candidate-list-item{width:100%; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; gap:10px; border-bottom:1px solid #D9D9D9; padding-bottom:20px}
+.recomend-card-layout.column .candidate-list .candidate-list-item:last-child{border-bottom:0}
+
+
+.recomend-card-layout.column .candidate-info{display: flex; gap:5px; justify-content: center; margin-top: 10px; font-size: 18px;}
+.recomend-card-layout.column .candidate-info .candidate-name{font-weight: 700;}
+.recomend-card-layout.column .candidate-photo{width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-light, #D9D9D9);}
+
+.candidate-recommend-btn{
+  padding:0 20px; height:40px; width: 100%;
+  border-radius: var(--radius-medium4, 8px);
+  background: var(--color-element-inverse, #FFF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+
+/** 감사 */
+.recomend-card-layout.auditor .candidate-list .candidate-box {
+    flex: 1 100%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+}
+.recomend-card-layout.auditor .candidate-list .candidate-box .cadidate-info {
+    flex: 1 50%;
+    border-right: 1px solid var(--color-border-nomal, #C6C6C6);
+
+
+}
+
+.recomend-card-layout.auditor .candidate-list .candidate-box .candidate-msg {
+ flex :1 50%;
+ padding:20px
+}
+
 /** 노트북 */
 @media (max-width: 1440px) {
   .tab.bot-line::before{
@@ -2652,6 +2869,40 @@ font-size: 18px;
 /** 모바일 */
 @media (max-width: 767px) {
 
+  .recomend-card-layout.auditor .candidate-list .candidate-box {
+    flex-direction: column;
+}
+
+.recomend-card-layout.auditor .candidate-list .candidate-box .cadidate-info {
+    border-right: 0
+}
+.recomend-card-layout.auditor .candidate-list .candidate-box .candidate-msg {
+    padding: 0;
+}
+
+  .candidate-list {
+    flex-direction: column;
+    
+}
+
+.candidate-box .cadidate-info {
+    gap: 10px;
+    flex-direction: column;
+    
+}
+
+.candidate-box .cadidate-info .info {
+    flex: 1 auto;
+    text-align:center ;
+}
+
+.candidate-msg {
+    font-size: 14px;
+    padding: 0;
+    padding-top: 10px;
+    width: 100%;
+}
+
   .job-classroom-rate-list {
     flex-direction: column;
 }
@@ -2809,10 +3060,20 @@ font-size: 18px;
     margin: 10px 0;
 }
 
+    .recomend-card-layout.column > li {
+    flex: 0 49%;
+}
+
   }
 
 
   @media (max-width: 479px) {
+
+
+    .recomend-card-layout.column > li {
+    flex: 0 100%;
+}
+
 
     .ea-section p {
         font-size: 14px;
@@ -2889,7 +3150,6 @@ font-size: 18px;
 .exam-option-item.correct .krds-form-check::before, .exam-option-item.incorrect .krds-form-check::before {
     left: -4px;
 }
-
 
 
   }
