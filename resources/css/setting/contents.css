@@ -358,7 +358,7 @@
 }
 /*정관*/
 .rule_guide{
-    line-height: normal;
+    line-height: 24px;
     margin-bottom: 14px;
 }
 .rule_pdf{
@@ -367,6 +367,9 @@
 }
 .rule_pdf button{
     float: right;
+}
+.rule_pdf button i{
+    vertical-align: middle;
 }
 .rule_bookmark{
     display: table;
@@ -393,6 +396,10 @@
     background:url(../../img/icon/rule_list.svg) no-repeat;
     background-position: 0 center;
 }
+.rule_bookmark.d_block ul li{
+    display: block;
+    width: 100%;
+}
 .rule_bookmark ul li.last{
     width: auto;
 }
@@ -405,10 +412,26 @@
 .rule_info .tit{
     color: #0050CA;
     font-size: 24px;
+    letter-spacing: -0.5px;
 }    
 .rule_info .tit a{
     padding-top: 20px;
     display: block;
+}
+.rule_info .tit_list button{
+    margin-top : 20px;
+}
+.rule_info .tit_list table{
+    margin-top : 20px;
+}
+.rule_info .krds-table-wrap .tbl.data thead th, 
+.rule_info .krds-table-wrap .tbl.data tbody th{
+    text-align: center;
+}
+.rule_info .tit_list p{
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 15px;
 }
 .rule_info .sub_tit{
     color: #000;
@@ -424,10 +447,14 @@
     font-size: 14px;
 }
 .rule_info .list{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .rule_info .list ul li{
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.rule_info .list ul li:last-child{
+    padding-bottom: 0px;
 }
 .rule_info .list ul li::before{
     content: '';
@@ -440,9 +467,28 @@
     margin-right: 5px;
 }
 .rule_info .list.small{
-    font-size: 14px;
+    font-size: 15px;
     color:#464C53;
     padding-left: 20px;
+}
+.rule_info .subject{ 
+    border-left: 1px solid #0050CA;
+    padding-left: 20px;
+    color: #464C53;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.rule_info .subject ul li{
+    border-bottom: 1px solid #C6C6C6;
+        padding-bottom: 6px;
+}
+.rule_info .subject ul li:last-child{
+    border-bottom: none;
+}
+.rule_info .subject b{
+    color: #0D0E10;
+    display: block;
+    line-height: 30px;
 }
 .Moral .tit{
     text-align: center;
@@ -474,7 +520,7 @@
 .Moral .rule_info .sub_tit a{
     padding-top: 20px;
 }
-.tab.full > ul{
+.tab.full.tab.xscroll > ul{
     gap: 0;
 }
 .tab.line.full a{
@@ -787,6 +833,39 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
 .nurse_info .nurse b{
     color: #0AF;
 }
+/*등록 완료*/
+.register_end-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.register_end{
+
+}
+.ico-find.register_end::before{
+    content: "";
+    display: block;
+    background: url(../../img/icon/icon_register_end.svg) no-repeat;
+    width: 84px;
+    height: 90px;
+}
+.register_end-area h3{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.register_end-area p{
+    color: var(--color-text-sub_title, #464C53);
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
 @media (max-width: 768px) {
     .sub-content.line p br{
         display: none;
@@ -844,7 +923,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         content: "";
-        background-image: url(../img/icon/arrow-down.svg);
+        background-image: url(../../img/icon/arrow-down.svg);
         filter: invert(100%) sepia(57%) saturate(1%) hue-rotate(256deg) brightness(105%) contrast(100%);
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
@@ -929,6 +1008,12 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         right:10px;
         bottom:0px;
         left: auto;
+    }
+    .rule_info{
+        padding-top: 0px;
+    }
+    .rule_guide{
+        margin-bottom: 0px;
     }
     .rule_pdf{
         line-height: 24px;

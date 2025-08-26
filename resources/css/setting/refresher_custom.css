@@ -880,7 +880,28 @@ font-weight: 700; background: var(--color-text-bosu_txt, #9157DA); padding:0 10p
 .ea-terms-desc.col .btn-list > a{
     width: 200px;
 }
+.ea-terms-desc .ea-guide{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.ea-terms-desc .ea-guide .bold-blue{
+    color: var(--color-primary, #0050CA);
+    font-weight: 700;
+    font-size: 18px;
+}
+.ea-terms-desc .ea-guide.big{
+    font-size: 18px;
+    margin-top: 20px;
+}
+.ea-terms-desc .ea-guide.big p{
+    font-weight: bold;
+    line-height: 30px;
+}
+.ea-terms-desc .ea-guide.big .ea-list li{
+    font-size: 16px;
+}
 .ea-list{display: flex; flex-direction: column; gap:10px}
+.ea-list.gap3{gap:3px}
 .ea-list li{display: flex; gap:5px; align-items: center; position: relative; padding-left: 12px; font-size: 14px; }
 .ea-list li::before{content:""; display: block; width: 4px; height:4px; background-color: #333; border-radius: 50%; flex:0 5px; position: absolute; left:0; top:10px}
 .ea-list .bold-blue{

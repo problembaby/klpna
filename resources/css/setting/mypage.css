@@ -831,7 +831,14 @@ background: var(--color-bg-secondary, #F7F8FB); display: flex; align-items: cent
     height: 63px;
     background-size: contain;
 }
-
+.refund .img-duesPay::before {
+    content: "";
+    display: block;
+    background: url(../../img/sub/dues-pay-re-img.png)no-repeat;
+    width: 101px;
+    height: 63px;
+    background-size: contain;
+}
 
 .krds-structured-list.pay-list .card-text{width: 100%;}
 .card-text .card-text-top{width: 100%; display: flex; justify-content: space-between; align-items: center;}
@@ -842,6 +849,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */}
+.card-text-top .fis-year .fis-year-value.black{color: #0D0E10;}
 
 .btn-radius-print{
   border-radius: 4px;
@@ -884,6 +892,13 @@ font-weight: 600;
 line-height: 150%; /* 21px */
 }
 
+.refund .pay-list-info li .value{
+color: var(--color-text-basic, #DE3412);
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 21px */
+}
 .card-text .pay-date{display: flex; justify-content: flex-end;
 overflow: hidden;
 color: var(--color-text-disabled, #8A949E);
