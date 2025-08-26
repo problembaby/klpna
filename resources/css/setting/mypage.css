@@ -2587,7 +2587,7 @@ background: var(--color-bg-secondary, #F7F8FB); padding:20px; position: relative
 .recomend-pop-msg{margin-top: 30px;}
 .cadidate-verti-info{margin-top:30px; text-align: center;}
 .cvi-date{font-size: 16px;}
-.cvi-adm{font-size: 18px; margin-top:30px }
+.cvi-adm{font-size: 18px;  }
 
 .cadidate-recomend-chkArea{margin-top: 30px; display: flex; justify-content: space-between; align-items: center; background: var(--color-text-sub_title, #464C53); padding:10px 20px; color:#fff}
 
@@ -2656,6 +2656,10 @@ line-height: 120%; /* 16.8px */ margin-top: 5px;}
  flex :1 50%;
  padding:20px
 }
+
+.seal-area{display: flex; align-items: center; justify-content: center; margin-top: 30px; gap:10px}
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
