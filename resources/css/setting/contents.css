@@ -882,6 +882,31 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     width: 84px;
     height: 90px;
 }
+.page-title-wrap.error{
+    display: block;
+    text-align: center;
+}
+.ico-find.error1::before{
+    content: "";
+    display: block;
+    background: url(../../img/sub/error1.svg) no-repeat;
+    width: 110px;
+    height: 104px;
+}
+.ico-find.error2::before{
+    content: "";
+    display: block;
+    background: url(../../img/sub/error2.svg) no-repeat;
+    width: 120px;
+    height: 105px;
+}
+.ico-find.error3::before{
+    content: "";
+    display: block;
+    background: url(../../img/sub/error3.svg) no-repeat;
+    width: 110px;
+    height: 100px;
+}
 .register_end-area h3{
     color: var(--color-text-basic, #0D0E10);
     font-size: 24px;
@@ -897,6 +922,41 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+}
+.register_end-area p.small{
+    font-size: 14px;
+}
+.site_ban ul{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.site_ban ul li{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-light, #D9D9D9);
+}
+.site_ban ul li img{
+    height: 70px;
+}
+.site_ban ul li .fr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+}
+.site_ban ul li .fr.small{
+    font-size: 14px;
+}
+.site_ban ul li .fr button{
+
+}
+.krds-side-navigation .lnb-list .lnb-item.active .link::after{
+    background-color: #002BC6;
 }
 @media (max-width: 768px) {
     .sub-content.line p br{
@@ -1204,5 +1264,25 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         height: auto;
         padding-bottom: 4px;
         letter-spacing: -1px;
+    }
+    .site_ban ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .site_ban ul li{
+        display: block;
+        text-align: center;
+    }
+    .site_ban ul li .fr{
+        text-align: center;
+        display: block;
+    }
+    .site_ban ul li .fr a{
+        display: block;
+    }
+    .site_ban ul li .fr button{
+        margin-top: 4px;
+    }
+    .site_ban ul li img {
+        height: 60px;
     }
 }
