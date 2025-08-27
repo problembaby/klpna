@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 페이지 목록 - 간호조무사협회</title>
+
+
+    <!--폰트 pretendard-->
+    <link rel="stylesheet" as="style" crossorigin href="../resources/css/fonts/pretendard-gov.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css" />
+    <link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+    <link rel="stylesheet" href="../../resources/css/setting/branch_custom.css" /> <!-- 시도회 커스텀 css -->
+
+
+    <!--js-->
+    <script src="../../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../../resources/krds/js/component/ui-script.js"></script>
+    <script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../../resources/js/script.js"></script>
+    <script src="../../resources/lib/aos/aos.js"></script>
+
+    <style>
+        #wrap {
+            padding: 20px
+        }
+
+        tr.red td {
+            background-color: #f8d7da;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #007bff;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        .table td,
+        .table th {
+            padding: 5px;
+        }
+
+        .del td {
+            background-color: #f8d7da;
+            text-decoration: line-through;
+        }
+
+        .table th {
+            background-color: #3BB8A6;
+            color: #fff;
+            padding: 10px;
+            vertical-align: middle;
+            border: 1px solid #cccccc;
+            line-height: 1.5;
+            word-break: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="wrap">
+        <h1><span style="">시도회</span> 퍼블리싱 리스트</h1>
+        <p>
+            - 폴더가 한번 더 들어가서 상대 경로에 유의해 주세요
+        </p>
+
+        <section class="">
+            <h2>메인 / 공통</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td>
+                            </td>
+                            <td>메인화면</td>
+                            <td></td>
+                            <td></td>
+                            <td>메인</td>
+                            <td><a href="./시도회-메인.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td>
+                                헤더 푸터 한페이지에 모두 적용되어있는 화면입니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>헤더</td>
+                            <td></td>
+                            <td></td>
+                            <td>헤더</td>
+                            <td><a href="./common/header.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>푸터</td>
+                            <td></td>
+                            <td></td>
+                            <td>푸터</td>
+                            <td><a href="./common/footer.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-number"></th>
+                            <td></td>
+                            <td>전체메뉴</td>
+                            <td></td>
+                            <td></td>
+                            <td>전체메뉴</td>
+                            <td><a href="./common/header_전체보기.html" target="_blank"></a></td>
+                            <td>Y</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+        <section class="">
+            <h2>서브페이지</h2>
+            <div class="pageList">
+                <table class="table table-hover">
+                    <caption>퍼블리싱 목록</caption>
+                    <colgroup>
+                        <col style="width: 3%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: auto;">
+                        <col style="width: 4%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">페이지 번호</th>
+                            <th scope="col">depth1</th>
+                            <th scope="col">depth2</th>
+                            <th scope="col">depth3</th>
+                            <th scope="col">페이지 명칭</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">완료여부</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th scope="row" class="row-number"></th>
+                        <td>
+                        </td>
+                        <td>게시판</td>
+                        <td>공지사항</td>
+                        <td></td>
+                        <td>목록</td>
+                        <td><a href="./시도회-공지사항_목록.html" target="_blank"></a></td>
+                        <td>Y</td>
+                        <td>게시판</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="row-number"></th>
+                        <td>
+                        </td>
+                        <td>게사판</td>
+                        <td>공지사항</td>
+                        <td></td>
+                        <td>상세</td>
+                        <td><a href="./시도회-공지사항_상세.html" target="_blank"></a></td>
+                        <td>Y</td>
+                        <td>게시판</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" class="row-number"></th>
+                        <td>
+                        </td>
+                        <td>게시판</td>
+                        <td>자주하는질문</td>
+                        <td></td>
+                        <td>목록</td>
+                        <td><a href="./시도회-자주하는질문.html" target="_blank"></a></td>
+                        <td>Y</td>
+                        <td>게시판</td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            updateRowNumbers();
+            updateLinkText();
+
+        });
+
+        // 테이블의 행 번호 업데이트
+        function updateRowNumbers() {
+            $('section .pageList').each(function () {
+                $(this).find('tr').each(function (index) {
+                    $(this).find('.row-number').text(index);
+                });
+            });
+        }
+
+        // 링크 텍스트를 href 속성으로 업데이트
+        function updateLinkText() {
+            $(".pageList a").each(function () {
+                const href = $(this).attr('href');
+                $(this).text(href);
+            })
+        }
+    </script>
+</body>
+
+</html>

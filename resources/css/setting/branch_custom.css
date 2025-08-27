@@ -140,8 +140,11 @@
 헤더 푸터
 *************************/
 
+
+
+
 .quick-wrap-item a:hover {
-    background-color: #356900;
+    background-color: #08A895;
 }
 
 .allMenu-nav li.allMenu-nav-item .menu-title {
@@ -154,39 +157,13 @@
     padding-left: 20px;
 }
 
+
+
 #krds-header .header-container .logo.klpna a {
-    background-image: none;
+    background-image: url(../../img/sub/ico_logo_krds_seoul.png);
     background-repeat: no-repeat;
 }
 
-.gnb .gnb-menu {
-    display: flex;
-    gap: 10rem; 
-    z-index: 9999;
-}
-
-.gnb-bg {
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: 234px;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99;
-    overflow: hidden;
-}
-
-.gnb-bg::after {
-    content: "";
-    display: block;
-    background: url(../../img/main/gnbBg.png)no-repeat center;
-    width: 310px;
-    height: 258px;
-    position: absolute;
-    left: 267px;
-    bottom: -41px;
-}
 
 
 .header-util .inner.edu{
@@ -204,26 +181,18 @@
     background-size: contain;
 }
 
-.fc-puple{color:#356900}
-.logo-color{color:#356900}
+.fc-puple{color:#08A895}
+.logo-color{color:#08A895}
 
-#krds-header .header-container .logo a {
-color: #333;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -0.64px;
-}
 
 .header-util-list li .btn-navi.all::before{margin-top: 3px;}
 
 .f-top .right a.bold {
-    color: #356900;
+    color: #08A895;
     font-weight: 700;
 }
 .f-counseling .f-counseling-tel {
-    color: #356900;
+    color: #08A895;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -237,11 +206,10 @@ letter-spacing: -0.64px;
     width: 180px;
 }
 
-.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#356900; }
-#krds-header .header-container .header-actions{margin: 0 auto;}
-.login-box, .guest-box { background: #418200; }
+.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#08A895; }
+.login-box, .guest-box { background: #34AA9C; }
 .guest-btn-list a.krds-btn {
-    color: #356900;
+    color: #34AA9C;
 }
 .login-noti .bold {
     color: #fdff80;
@@ -268,7 +236,7 @@ letter-spacing: -0.64px;
 
 .edu-summary .edu-item {
     border-radius: 30px;
-    background: #418200;
+    background: #34AA9C;
     width: 161.112px;
     height: 110px;
     flex-shrink: 0;
@@ -291,7 +259,7 @@ letter-spacing: -0.64px;
     border-bottom: var(--krds-side-navigation--title-border-width) solid var(--krds-side-navigation--title-color-border);
     height: 170px;
     border-radius: 20px 20px 0px 0px;
-    background: #356900;
+    background: #08A895;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,10 +271,10 @@ letter-spacing: -0.64px;
 
  .krds-side-navigation .lnb-list .lnb-item .lnb-btn.selected {
     background-color: transparent;
-    color: #356900;
+    color: #08A895;
 }
 .krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
-    color: #356900;
+    color: #08A895;
 }
 
 
@@ -316,7 +284,7 @@ letter-spacing: -0.64px;
 
 
 .search-list-top .sch-info .point {
-    color: #356900;
+    color: #08A895;
 }
 
 .table-board table thead tr th {
@@ -334,13 +302,13 @@ letter-spacing: -0.64px;
 
 .krds-pagination .page-links .page-link.active {
     background-color: transparent;
-    color: #356900;
+    color: #08A895;
     position: relative;
 }
 
 .krds-pagination .page-links .page-link.active::after {
     display: block;
-    background-color: #356900;
+    background-color: #08A895;
     width: 8px;
     height: 8px;
     content: "";
@@ -350,7 +318,7 @@ letter-spacing: -0.64px;
 }
 
 .board-detailed .page-content {
-    border-top: 2px solid #356900;
+    border-top: 2px solid #08A895;
     border-bottom: 0 solid #000;
     background: #fff;
     margin-top: 16px;
@@ -358,8 +326,8 @@ letter-spacing: -0.64px;
 
 .krds-btn.blue {
     background-color: #fff;
-    border-color: #356900;
-    color: #356900;
+    border-color: #08A895;
+    color: #08A895;
 }
 
 
@@ -375,7 +343,7 @@ letter-spacing: -0.64px;
     gap: 10px;
     border-radius: 50%;
     background: var(--color-primary, #fff);
-    color: #356900;
+    color: #08A895;
     text-align: center;
     font-size: 23px;
     font-style: normal;
@@ -407,7 +375,7 @@ letter-spacing: -0.64px;
 
 
 .krds-badge.bg-primary {
-    background-color: #356900;
+    background-color: #08A895;
     color: var(--krds-badge--color-text-basic);
 }
 
@@ -428,8 +396,8 @@ background: var(--gray-gray-5, #F8F8F8);
 }
 
 .krds-btn {
-    background-color: #356900;
-    border-color:#356900;
+    background-color: #08A895;
+    border-color:#08A895;
     color: var(--krds-button--color-primary-text);
 }
 
@@ -735,7 +703,7 @@ line-height: 150%;
 .lect-expend-cont{flex:1 auto;}
 .lect-expend-cont h4{
     margin:10px 0;
-    color: var(--color-jigmu, #356900);
+    color: var(--color-jigmu, #08A895);
 font-size: 13px;
 font-style: normal;
 font-weight: 700;
@@ -751,7 +719,7 @@ line-height: 150%; /* 19.5px */
 대면교육 
 *******************************/
 .appl-stat{
-    color: var(--color-text-bosu_txt, #356900);
+    color: var(--color-text-bosu_txt, #08A895);
     text-align: center;
     font-size: 18px;
     font-style: normal;
@@ -779,13 +747,13 @@ text-underline-offset: auto;
 교육신청 
 **************************/
 .bg-purple .progress-step.active{
-    background: var(--color-bosu, #356900);
+    background: var(--color-bosu, #08A895);
     color: #fff;
 
 }
 
 .progress-step.none {
-    background: var(--color-primary, #356900);
+    background: var(--color-primary, #08A895);
     color: rgba(255, 255, 255, 0.50);
 }
 
@@ -910,7 +878,7 @@ font-weight: 400;}
 .ea-top-area h3 .bold{color: var(--color-text-inverse, #FFF);
 font-size: 20px;
 font-style: normal;
-font-weight: 700; background: var(--color-text-bosu_txt, #356900); padding:0 10px}
+font-weight: 700; background: var(--color-text-bosu_txt, #08A895); padding:0 10px}
 
 .ea-terms-desc{
     padding: 20px;
@@ -967,7 +935,7 @@ margin-bottom: 10px;
 
 
 .krds-btn.blue:not(.icon) .svg-icon {
-    background-color: #356900;
+    background-color: #08A895;
 }
 
 .krds-btn.btn-expand .svg-icon.ico-angle.right{transform: rotate(0deg)}
@@ -1033,7 +1001,7 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 .div-expand{display: none;}
 
 .krds-btn:hover {
-    background-color: #356900;
+    background-color: #08A895;
 }
 .krds-btn:active, .krds-btn:focus {
     background-color: #1f3b03;
@@ -1065,11 +1033,11 @@ width: 100%;
 .ea-section.action .krds-btn.bot-close-btn .svg-icon.ico-angle{transform: rotate(180deg);}
 
 .krds-form-check input[type=radio]:checked ~ label:before {
-    border-color:#356900 ;
+    border-color:#08A895 ;
 }
 
 .krds-form-check input[type=radio]:checked ~ label:after {
-    background-color: #356900;
+    background-color: #08A895;
 }
 
 
@@ -1113,7 +1081,7 @@ display: flex; align-items: center;
 }
 
 .eab-subject-list li{display: flex; gap:5px; align-items: center;}
-.eab-subject-list li::before{content:""; display: block; width: 3px; height:3px; border-radius: 50%; background-color: #356900; flex:0 auto; }
+.eab-subject-list li::before{content:""; display: block; width: 3px; height:3px; border-radius: 50%; background-color: #08A895; flex:0 auto; }
 
 .ico-white-write::before{content: ""; background: url(../../img/refre/ico-white-write.svg)no-repeat; display: block; width: 24px; height:24px; margin-right: 10px;}
 .ico-chk-list::before{content: ""; background: url(../../img/refre/ico-chk-list.svg)no-repeat; display: block; width: 30px; height:31px; margin-right: 10px;}
@@ -1131,7 +1099,7 @@ line-height: 150%; /* 19.5px */}
 
 .edu-item-subject{
 display: none;
-color: var(--color-text-bosu_txt, #356900);
+color: var(--color-text-bosu_txt, #08A895);
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
@@ -1161,7 +1129,7 @@ line-height: 150%; /* 27px */}
 .ea-section h2{font-size: 18px}
 
 .modal-terms-conf .modal-terms-title{
-    color: var(--color-text-bosu_txt, #356900);
+    color: var(--color-text-bosu_txt, #08A895);
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
@@ -1185,7 +1153,7 @@ padding: 0px 12px;
 justify-content: center;
 align-items: center;
 border-radius: 99px;
-background: var(--color-text-bosu_txt, #356900);
+background: var(--color-text-bosu_txt, #08A895);
 font-size: 13px; color:#fff;
 }
 
@@ -1194,7 +1162,7 @@ font-size: 13px; color:#fff;
 
 
 .sch-info .req-noti{
-    color: var(--color-text-bosu_txt, #356900);
+    color: var(--color-text-bosu_txt, #08A895);
 font-size: 16px;
 font-style: normal;
 font-weight: 600;
@@ -1202,12 +1170,12 @@ line-height: 150%; /* 24px */
 }
 
 .krds-form-check input[type=checkbox]:checked ~ label:before {
-    background-color: #356900;
-    border-color: #356900;
+    background-color: #08A895;
+    border-color: #08A895;
 }
 
 .eab-subject-list{
-    color: var(--color-text-bosu_txt, #356900);
+    color: var(--color-text-bosu_txt, #08A895);
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
@@ -1256,7 +1224,7 @@ line-height: 150%;
     font-size: 14px;
 }
 .edu-sel-summary  .lec-detail-list li .subject {
-color: var(--color-text-bosu_txt, #356900);
+color: var(--color-text-bosu_txt, #08A895);
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
@@ -1332,7 +1300,7 @@ background: var(--color-primary-bg, #ECF2FE);
 
 
 .pay-radio-list > li .krds-form-chip input[type=radio]:checked ~ label, .pay-radio-list > li .krds-form-chip input[type=checkbox]:checked ~ label {
-    border: 5px solid #356900;
+    border: 5px solid #08A895;
 }
 
 
@@ -1373,8 +1341,8 @@ padding:20px;
 }
 
 .link-tab .link-tab-items.active{
-    color:#356900;
-    border-bottom: 4px solid var(--color-text-bosu_txt, #356900);
+    color:#08A895;
+    border-bottom: 4px solid var(--color-text-bosu_txt, #08A895);
 
 }
 
@@ -1407,7 +1375,7 @@ line-height: 150%; /* 24px */  }
 .edu-time-items__list li > p{font-size: 16px; background-color: #FFF0F5; display: inline-block;}
 
 .edu-time-items__clock {display: flex; align-items: center; gap:5px; font-size: 16px;}
-.edu-time-items__clock .edu-time .time{font-weight: 600; color:#356900}
+.edu-time-items__clock .edu-time .time{font-weight: 600; color:#08A895}
 
 .fs14{font-size: 14px;}
 .fs16{font-size: 16px;}
@@ -1530,7 +1498,7 @@ line-height: 120%;}
 }
 
 .appl-way-section .border-box{
-    border: 2px solid var(--color-bosu, #356900);
+    border: 2px solid var(--color-bosu, #08A895);
     padding:20px;
 }
 
@@ -1540,7 +1508,7 @@ line-height: 120%;}
 padding: 5px 10px;
 justify-content: center;
 align-items: center;
-background: #356900;
+background: #08A895;
 color:#fff;
 font-size: 13px;
 font-weight: 700;
@@ -1571,7 +1539,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 
 .ico-mypage::before {
     content: "";
-    background: url(../../img/license/ico-mypage.svg)no-repeat;
+    background: url(../../img/branch/ico-mypage.svg)no-repeat;
     width: 25px;
     height: 24px;
     display: block;
@@ -1607,7 +1575,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 .ico-loginBtn02::before {
     content: "";
     display: block;
-    background: url(../../img/license/ico-loginBtn02.svg)no-repeat center;
+    background: url(../../img/branch/ico-loginBtn02.svg)no-repeat center;
     width: 38px;
     height: 29px;
 }
@@ -1615,7 +1583,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 .ico-loginBtn01::before {
     content: "";
     display: block;
-    background: url(../../img/license/ico-loginBtn01.svg)no-repeat center;
+    background: url(../../img/branch/ico-loginBtn01.svg)no-repeat center;
     width: 29px;
     height: 32px;
 }
@@ -1777,13 +1745,13 @@ line-height: 150%; /* 27px */}
 
 
 
-/** 자격신고 :메인세션 3 */
+/** 시도회 :메인세션 3 */
 
-.main-bbs-list{padding:50px 0; display: flex; justify-content: flex-start; gap:20px}
-.mbl-card-items{display: block; flex: 0 1 34%;}
+.main-bbs-list.branch{padding:0; display: flex; flex-direction: column; justify-content: flex-start; gap:20px 2%;}
+.mbl-card-items{display: block; flex:1 100%;}
 .mbl-badge{
     padding:5px 10px; border-radius: 10px;
-    background: #418200;
+    background: #08A895;
     display: inline-flex;
     color:#fff;
     font-size: 16px;
@@ -1792,9 +1760,10 @@ line-height: 150%; /* 27px */}
 }
 .mbl-box{display: inline-flex; flex-direction: column;  border-radius: 20px;
 border: 1px solid var(--BG-01, #F4F6FC);
-background: var(--White, #FFF); padding:20px; width: 100%;}
-.mbl-box-top{margin-bottom: 20px;}
-.mbl-title{display:flex; align-items: center; margin-bottom: 20px; height:51px; gap:5px}
+background: var(--White, #FFF); padding:20px; width: 100%; height:100%}
+.mbl-box-top{margin-bottom: 2px;}
+.mbl-title{display:flex; align-items: center;  height:50px; gap:5px; }
+.mbl-text{margin-bottom: 10px; font-size: 14px; }
 .mbl-box .date{color: #7E7B77;
 font-size: 14px;
 font-style: normal;
@@ -1998,6 +1967,12 @@ display: flex; align-items: center;
 .appl-msg-text{display:flex; gap:10px; flex-wrap: wrap;}
 
 
+/** 시도회 메인 */
+
+.sido-gallery-wrap{padding:50px 0; display: flex;}
+.sido-gallery-banner{flex:1 0 370px;}
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -2023,7 +1998,7 @@ display: flex; align-items: center;
     display: flex;
     align-items: center;
     margin-bottom: 0;
-    height: 51px;
+    height: 30px;
     gap: 5px;
     margin:10px 0;
 }
@@ -2033,7 +2008,6 @@ display: flex; align-items: center;
 .mbl-badge {
     padding: 5px 10px;
     border-radius: 10px;
-    background: #418200;
     display: inline-flex;
     color: #fff;
     font-size: 14px;
@@ -2056,7 +2030,7 @@ display: flex; align-items: center;
 }
 
     .table-board.borad-list {
-    border-top: 2px solid #356900;
+    border-top: 2px solid #08A895;
     padding-top: 10px;
 }
 
@@ -2229,8 +2203,19 @@ body.edu-appl-step03 .step02 {
     border-radius: 12px;
 }
 
-
-
+.mainSection03 .main-bbs-wrap {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    flex-direction: column;
+}
+.main-bbs-list.branch {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px 2%;
+}
 
 
 }
@@ -2327,12 +2312,6 @@ body.edu-appl-step03 .step02 {
     width: calc(50% - 10px);
     height: 80px;
 }
-
-
-    #krds-header .header-container .logo a {
-    font-size: 23px;
-    text-align: left;
-    }
 
     .lec-title {
     flex-direction: column;
@@ -2573,7 +2552,7 @@ body.edu-appl-step03 .step02 {
 }
 
 .appl-way-section .border-box {
-    border: 2px solid var(--color-bosu, #356900);
+    border: 2px solid var(--color-bosu, #08A895);
     padding: 20px 10px;
 }
 

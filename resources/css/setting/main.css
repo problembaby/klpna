@@ -243,6 +243,26 @@ line-height: 100%; /* 18px */
     border-color: #05417C !important;
     color: #fff;
 }
+
+.mainSection02 .tab.fill ul li:nth-child(4).active .btn-tab::after {
+    border-top: 8px solid #356900;
+}
+
+.mainSection02 .tab.fill ul li:nth-child(4).active .btn-tab {
+    background-color: #356900!important;
+    border-color: #356900 !important;
+    color: #fff;
+}
+
+.mainSection02 .tab.fill ul li:nth-child(5).active .btn-tab::after {
+    border-top: 8px solid #414189;
+}
+
+.mainSection02 .tab.fill ul li:nth-child(5).active .btn-tab {
+    background-color: #414189!important;
+    border-color: #414189 !important;
+    color: #fff;
+}
 .shortcut-list-item .img {
   position: relative;
   z-index: 1;
@@ -497,7 +517,7 @@ line-height: 100%; /* 18px */
 
 .mainSection03 .main-bbs-wrap .notice{width: 400px;}
 .mainSection03 .main-bbs-wrap .press{width: 600px;}
-.mainSection03 .main-bbs-wrap .banner{width: 336px; overflow: hidden; border-radius: 30px;}
+.mainSection03 .main-bbs-wrap .banner{width: 336px; overflow: hidden; border-radius: 30px; flex: 1 0 auto;}
 
 
 
