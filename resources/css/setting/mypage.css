@@ -2587,7 +2587,7 @@ background: var(--color-bg-secondary, #F7F8FB); padding:20px; position: relative
 .recomend-pop-msg{margin-top: 30px;}
 .cadidate-verti-info{margin-top:30px; text-align: center;}
 .cvi-date{font-size: 16px;}
-.cvi-adm{font-size: 18px; margin-top:30px }
+.cvi-adm{font-size: 18px;  }
 
 .cadidate-recomend-chkArea{margin-top: 30px; display: flex; justify-content: space-between; align-items: center; background: var(--color-text-sub_title, #464C53); padding:10px 20px; color:#fff}
 
@@ -2656,6 +2656,42 @@ line-height: 120%; /* 16.8px */ margin-top: 5px;}
  flex :1 50%;
  padding:20px
 }
+
+.seal-area{display: flex; align-items: center; justify-content: center; margin-top: 30px; gap:10px}
+
+
+/** 나의추천현황 */
+.recommend-count{padding:5px 10px; border-radius: 4px;
+background: var(--color-bg-nomal, #F8F8F8); display: flex; gap:5px; margin-right: 16px; }
+
+.acc-recommend-title{display: flex; gap:0 16px; flex-wrap: wrap;}
+.recommend-date{font-weight: 400;}
+.accordion-body.gray{
+  background: var(--gray-gray-5, #F8F8F8)!important;
+  padding:20px!important;
+  display: block!important;
+}
+
+.acc-recommend-p{font-size: 16px; font-weight: 700; margin-bottom: 20px;}
+.acc-recommend-list{display: flex; gap:10px 2%; flex-wrap: wrap;}
+.acc-recommend-list li{flex:0 1 200px;}
+.reco-user{
+  border-radius: 10px;
+border: 1px solid var(--color-border-nomal, #C6C6C6);
+width: 100%;
+height:40px;
+display: flex;
+align-items: center;
+font-size: 16px;
+font-weight: 500;
+justify-content: center;
+gap:5px
+
+}
+.reco-user .user-name {font-weight: 400;}
+
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -3151,6 +3187,9 @@ font-size: 18px;
     left: -4px;
 }
 
+.acc-recommend-list li {
+    flex: 0 1 48%;
+}
 
   }
 
