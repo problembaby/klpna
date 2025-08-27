@@ -421,9 +421,6 @@
 .rule_info .tit_list button{
     margin-top : 20px;
 }
-.rule_info .tit_list table{
-    margin-top : 20px;
-}
 .rule_info .krds-table-wrap .tbl.data thead th, 
 .rule_info .krds-table-wrap .tbl.data tbody th{
     text-align: center;
@@ -489,6 +486,41 @@
     color: #0D0E10;
     display: block;
     line-height: 30px;
+}
+.rule_info .subject.large{
+    font-size: 16px;
+    font-weight: 700;
+}
+.rule_info .subject.large ul li{
+    border: 0px;
+}
+.rule_info .subject.large p{
+    font-weight: normal;
+    font-size: 14px;
+    padding: 10px 0px;
+}
+.rule_info table .backslash {
+    background: url('../../img/sub/backslash.svg');
+}
+.rule_info table .backslash svg{
+    fill:#ccc
+}
+.rule_info .krds-table-wrap.line{
+    margin-top: 10px;
+    border-top: 2px solid #666666;
+}
+.rule_info .krds-table-wrap.line .tbl.data thead th, .rule_info .krds-table-wrap.line .tbl.data tbody th{
+    border-right:var(--krds-table--data-border-width) solid var(--krds-table--data-tbody-color-divider);
+}
+.rule_info .krds-table-wrap.line .tbl.data thead th:last-child, .rule_info .krds-table-wrap.line .tbl.data tbody th:last-child{
+    border-right: 0px
+}
+.rule_info .krds-table-wrap.line .tbl.data tbody th, .rule_info .krds-table-wrap.line .tbl.data tbody td{
+    border-right:var(--krds-table--data-border-width) solid var(--krds-table--data-tbody-color-divider);
+    text-align: center;
+}
+.rule_info .krds-table-wrap.line .tbl.data tbody th:last-child, .rule_info .krds-table-wrap.line .tbl.data tbody td:last-child{
+    border-right: 0px
 }
 .Moral .tit{
     text-align: center;
@@ -1011,6 +1043,14 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     }
     .rule_info{
         padding-top: 0px;
+    }
+    .rule_info button{
+        white-space: unset;
+        font-size: 16px;
+        letter-spacing: -1px;
+        height: auto;
+        padding: 8px 10px;
+        text-align: left;
     }
     .rule_guide{
         margin-bottom: 0px;
