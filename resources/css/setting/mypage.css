@@ -2664,7 +2664,7 @@ line-height: 120%; /* 16.8px */ margin-top: 5px;}
 .recommend-count{padding:5px 10px; border-radius: 4px;
 background: var(--color-bg-nomal, #F8F8F8); display: flex; gap:5px; margin-right: 16px; }
 
-.acc-recommend-title{display: flex; gap:16px; flex-wrap: wrap;}
+.acc-recommend-title{display: flex; gap:0 16px; flex-wrap: wrap;}
 .recommend-date{font-weight: 400;}
 .accordion-body.gray{
   background: var(--gray-gray-5, #F8F8F8)!important;
@@ -3187,6 +3187,9 @@ font-size: 18px;
     left: -4px;
 }
 
+.acc-recommend-list li {
+    flex: 0 1 48%;
+}
 
   }
 
