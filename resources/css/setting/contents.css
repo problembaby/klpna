@@ -46,7 +46,12 @@
     padding: 20px 30px;
 }
 .bbs-search-wrap.sido_search .search-top-box{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    gap: unset;
+    flex-direction: unset;
 }
 .bbs-search-wrap .search-top-box .form-tit label{
     line-height: 48px;
@@ -64,8 +69,9 @@
     font-size: 14px;
     line-height: 120%;
     color: #464C53;
-    float: right;
-    margin-top: -34px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 /*연혁*/
 .depth4_tab ul {
@@ -1284,5 +1290,10 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     }
     .site_ban ul li img {
         height: 60px;
+    }
+    .bbs-search-wrap.sido_search .search-top-box{
+        align-items: normal;
+        gap: 10px;
+        flex-direction: column;
     }
 }
