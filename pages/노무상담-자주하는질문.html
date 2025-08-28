@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목록 | 자주하는질문 - 대한간호조무사협회</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <!--js-->
+    <script src="../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+    <script src="../resources/krds/js/component/ui-script.js"></script>
+    <script src="../resources/krds/js/pattern/pattern.js"></script>
+    <script src="../resources/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">회원혜택</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">드림복지사업</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">KLPNA상조회</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <button type="button" class="lnb-btn lnb-toggle active selected"
+                               aria-expanded="true">노무상담</button>
+                            <!-- lnb-submenu -->
+                            <div class="lnb-submenu">
+                                <ul>
+                                    <li class="lnb-subitem">
+                                        <a href="#" class="lnb-btn lnb-link active">자주하는 질문</a>
+                                    </li>
+                                    <li class="lnb-subitem">
+                                        <a href="#" class="lnb-btn lnb-link">상담하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //lnb-submenu -->
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">회원혜택</a></li>
+                            <li><a href="#;" class="txt">자주하는 질문</a></li>
+                        </ol>
+
+
+                    </nav>
+                    <!-- breadcrumb -->
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">자주하는 질문</h1>
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="ntt-type">
+                                            <option value="">전체</option>
+                                            <option value="">임금</option>
+                                            <option value="">최저임금</option>
+                                            <option value="">연차휴가</option>
+                                            <option value="">퇴직 및 해고</option>
+                                            <option value="">성희롱 및 폭행</option>
+                                            <option value="">인사일반</option>
+                                        </select>
+                                    </div>
+                                    <div class="bbs-search-form-wrap">
+                                        <input type="text" id="search-wrd" class="krds-input medium"
+                                            placeholder="검색어를 입력하세요." title="키워드 입력">
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+
+
+                    <!-- accordion -->
+                    <div class="krds-accordion type-line o-accordion-list mt30">
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-q"></span>
+                                <button type="button" id="accordionHeaderSample01" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample01">
+                                    <p>
+                                        <span class="krds-badge medium bg-primary">인사일반</span>
+                                         개인적인 사유로 사직을 하는 경우에 실업급여를 받을 수 있나요?
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample01" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample01">
+                                <div class="accordion-body">
+                                    <span class="ico-a"></span>
+                                    <!-- accordion contents -->
+                                    <p>실업급여란 정확하게 ‘고용보험 실업급여’를 말합니다. 고용보험에 가입한 근로자가 실직하여 재취업활동을 하는 동안 소정의 급여를 지급하는 제도이죠. 실업급여를 통해 근로자는 생계 불안을 떨치고 생활의 안정을 도모할 수 있으며 재취업 역시 지원받을 수 있습니다.
+
+실업급여는 부득이하게 퇴사했지만 구직의사가 있어 구직활동을 하는 경우에만 지급되는 ‘구직급여’로 보는 것이 더욱 정확합니다. 이렇게 실업급여는 구직급여를 기본으로 취업촉진수당, 연장급여, 상병급여 등으로 나누어져 있습니다.
+
+▶  구직급여의 수급 요건
+
+구직급여를 받으려면 고용보험에 가입한 사업장에서 실직 전 18개월 중 보수를 지급받은 일수(피보험단위기간)가 180일 이상이어야 합니다. 즉 실직 전 고용보험에 가입한 상태로 180일 이상 일해야 하죠. 또한 일할 의사와 능력, 그리고 적극적인 재취업 의지가 있지만 비자발적으로 이직한 근로자에게 실업급여가 지급됩니다.   
+
+따라서 자발적으로 이직하거나 중대한 귀책사유로 해고된 경우엔 실업급여를 받을 수 없습니다. 본인이 사표를 쓴 경우엔 받을 수 없는 것이죠. 하지만 퇴사나 이직 사유가 권고사직, 계약 만료 등 비자발적으로 이루어졌거나 정당한 사유가 있는 자발적 퇴사일 경우 실업급여를 받을 수 있습니다.
+
+▶ 구직급여를 받을 수 있는 퇴직 사유<br>
+<br>
+
+
+  - 실제 근로조건이 채용 시 제시된 근로조건과 달라진 경우<br>
+  
+
+  - 사업장의 임금체불이 있는 경우<br>
+  
+
+  - 소정근로에 대해 지급받은 임금이 최저임금에 미달할 경우<br>
+  
+
+  - 사업장의 휴업으로 휴업 전 평균 임금의 70% 미만을 받은 경우<br>
+  
+
+  - 사업장에서 종교·성별·신체장애·노조활동 등을 이유로 차별대우를 받은 경우<br>
+  
+  - 사업장에서 성희롱, 성폭력 등의 성적인 괴롭힘을 당한 경우<br>
+  
+
+  - 통근이 곤란하거나 사업장이 이전한 경우</p>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-q"></span>
+                                <button type="button" id="accordionHeaderSample02" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample02">
+                                    <p>
+                                        <span class="krds-badge medium bg-primary">성희롱 및 폭행</span>
+                                       직장내 성희롱 판단기준은 무엇입니까?
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample02" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample02">
+                                <div class="accordion-body">
+                                    <span class="ico-a"></span>
+                                    <!-- accordion contents -->
+                                    <p>아코디언 답변</p>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-q"></span>
+                                <button type="button" id="accordionHeaderSample03" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample03">
+                                    <p>
+                                        <span class="krds-badge medium bg-primary">퇴직 및 해고</span>
+                                        퇴직금 계산을 평균임금산정시 "식대/교통비"가 포함되는지요?
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample03" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample03">
+                                <div class="accordion-body">
+                                    <span class="ico-a"></span>
+                                    <!-- accordion contents -->
+                                    <p>아코디언 답변</p>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-q"></span>
+                                <button type="button" id="accordionHeaderSample04" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample04">
+                                    <p>
+                                        <span class="krds-badge medium bg-primary">연차휴가</span>
+                                    1년 미만을 근무하고 퇴사를 한 경우에 연차휴가는 어떻게 되나요?
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample04" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample04">
+                                <div class="accordion-body">
+                                    <span class="ico-a"></span>
+                                    <!-- accordion contents -->
+                                    <p>아코디언 답변</p>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="ico-q"></span>
+                                <button type="button" id="accordionHeaderSample05" class="btn-accordion"
+                                    aria-controls="accordionCollapseSample05">
+                                    <p>
+                                        <span class="krds-badge medium bg-primary">최저임금</span>
+                                       최저임금에 포함되는 임금은 무엇인가요?
+                                    </p>
+                                </button>
+                            </h5>
+                            <div id="accordionCollapseSample05" class="accordion-collapse collapse"
+                                aria-labelledby="accordionHeaderSample05">
+                                <div class="accordion-body">
+                                    <span class="ico-a"></span>
+                                    <!-- accordion contents -->
+                                    <p>아코디언 답변</p>
+                                    <!-- //accordion contents -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+        
+                    <!-- //accordion -->
+
+                    <!-- 페이지네이션 영역 -->
+                    <div class="krds-pagination">
+                        <span class="page-navi prev disabled" href="#">이전</span>
+                        <div class="page-links">
+                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="#">3</a>
+                            <a class="page-link active" href="#">4</a>
+                            <a class="page-link" href="#">5</a>
+                            <a class="page-link" href="#">6</a>
+                            <a class="page-link" href="#">7</a>
+                            <a class="page-link" href="#">8</a>
+                            <span class="page-link link-dot"></span>
+                            <a class="page-link" href="#">99</a>
+                        </div>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>
+                    <!-- //페이지네이션 영역 -->
+
+                </div>
+
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
+        loadHTML("../pages/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
