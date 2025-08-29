@@ -797,7 +797,7 @@ background: var(--color-bg-nomal, #F8F8F8); margin: 30px auto }
 
 /*약관내용규칙*/
 .agree-box .ul_tlist01 {
-    font-size: 14px;
+    font-size: 15px;
 }
 .agree-box .ul_tlist01 li p {
     padding: 7px 0;
