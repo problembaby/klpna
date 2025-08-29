@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="../../../resources/img/logo/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>목록 | 공지사항 - KLPNA 자격신고센터</title>
+    <title>목록 | 공지사항 - KLPNA</title>
 
     <!-- css -->
 	<link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
@@ -26,7 +26,7 @@
 	<script src="../../resources/lib/aos/aos.js"></script>
 
 <body>
-    <div id="wrap">
+     <div id="wrap">
         <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
 
 
@@ -36,19 +36,25 @@
             <div class="inner in-between">
                 <!-- 사이드 메뉴 -->
                 <nav class="krds-side-navigation">
-                    <h1 class="lnb-tit">게시판</h1>
+                    <h1 class="lnb-tit">회원소통</h1>
                     <!-- lnb-list -->
                     <ul class="lnb-list">
                         <li class="lnb-item active">
                             <a href="#" class="lnb-btn link active selected">공지사항</a>
                         </li>
                         <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">관련서식</a>
+                            <a href="#" class="lnb-btn link">회원게시판</a>
                         </li>
                         <li class="lnb-item">
-                            <a href="#" class="lnb-btn link">자주하는질문</a>
+                            <a href="#" class="lnb-btn link">신고센터</a>
                         </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">원격서비스</a>
+                        </li>
+
+
                     </ul>
+
                     <!-- //lnb-list -->
                 </nav>
                 <!-- //사이드 메뉴 -->
@@ -58,13 +64,12 @@
                     <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
-                            <li><a href="#;" class="txt">게시판</a></li>
+                            <li><a href="#;" class="txt">회원소통</a></li>
                             <li><a href="#;" class="txt">공지사항</a></li>
                         </ol>
 
                     </nav>
                     <!-- breadcrumb -->
-
                     <!-- 페이지 타이틀 영역 -->
                     <div class="page-title-wrap" data-type="responsive">
                         <h1 class="h-tit">공지사항</h1>
@@ -191,7 +196,6 @@
         <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
 
     </div>
-
 </body>
 
 </html>
@@ -204,8 +208,8 @@
     // 개발에서는 절대 사용하지 말것!
 
     document.addEventListener("DOMContentLoaded", function () {
-        loadHTML("../license/common/header_pubSample.html", "beforebegin");
-        loadHTML("../license/common/footer_pubSample.html", "afterend");
+        loadHTML("../branch/common/header_pubSample.html", "beforebegin");
+        loadHTML("../branch/common/footer_pubSample.html", "afterend");
     });
 
     function loadHTML(url, position) {

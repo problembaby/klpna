@@ -30,21 +30,21 @@
 .ico-main-notice::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-main-notice.svg)no-repeat;
+    background: url(../../img/branch/ico-main-notice.svg)no-repeat;
     width: 16px;
     height: 19px;
 }
 .ico-main-doc::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-mian-doc.svg)no-repeat;
+    background: url(../../img/branch/ico-mian-doc.svg)no-repeat;
     width: 21px;
     height: 21px;
 }
 .ico-main-doc2::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-mian-doc2.svg)no-repeat;
+    background: url(../../img/branch/ico-mian-doc2.svg)no-repeat;
     width: 16px;
     height: 16px;
 }
@@ -52,63 +52,63 @@
 .ico-certi01::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi01.svg)no-repeat;
+    background: url(../../img/branch/ico-certi01.svg)no-repeat;
     width: 45px;
     height: 41px;
 }
 .ico-certi02::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi02.svg)no-repeat;
+    background: url(../../img/branch/ico-certi02.svg)no-repeat;
     width: 38px;
     height: 45px;
 }
 .ico-certi03::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi03.svg)no-repeat;
+    background: url(../../img/branch/ico-certi03.svg)no-repeat;
     width: 43px;
     height: 45px;
 }
 .ico-certi04::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi04.svg)no-repeat;
+    background: url(../../img/branch/ico-certi04.svg)no-repeat;
     width: 37px;
     height: 37px;
 }
 .ico-license::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-license.svg)no-repeat;
+    background: url(../../img/branch/ico-license.svg)no-repeat;
     width: 20px;
     height: 21px;
 }
 .ico-license-location::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-location.svg)no-repeat;
+    background: url(../../img/branch/ico-location.svg)no-repeat;
     width: 20px;
     height: 21px;
 }
 .ico-gov::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-gov.png)no-repeat;
+    background: url(../../img/branch/ico-gov.png)no-repeat;
     width: 14px;
     height: 14px;
 }
 .ico-report::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-report.svg)no-repeat;
+    background: url(../../img/branch/ico-report.svg)no-repeat;
     width: 90px;
     height: 91px;
 }
 .ico-report-chk::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-report-chk.svg)no-repeat;
+    background: url(../../img/branch/ico-report-chk.svg)no-repeat;
     width: 90px;
     height: 91px;
 }
@@ -160,26 +160,20 @@
 
 
 #krds-header .header-container .logo.klpna a {
-    background-image: url(../../img/sub/ico_logo_krds_seoul.png);
+    background-image: none;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 }
 
 
 
-.header-util .inner.edu{
+.header-util .inner.addLogo{
     display: flex;
     justify-content: space-between;
 }
 
-.header-util .inner.edu .logo.klpna a{display: block;}
-.header-util .inner.edu .logo.klpna a::before{
-    display: block;
-    content:"";
-    background: url(../../img/logo/topUtill_logo.png)no-repeat;
-    width: 195px;
-    height: 29px;
-    background-size: contain;
-}
+.header-util .inner.addLogo .logo.klpna a{display: block;}
 
 .fc-puple{color:#08A895}
 .logo-color{color:#08A895}
@@ -1351,7 +1345,7 @@ padding:20px;
 .ico-chk-pp::before{
     content: "";
     display: block;
-    background:url(../../img/license/ico-chk-pp.svg);
+    background:url(../../img/branch/ico-chk-pp.svg);
     width:24px;
     height:25px;
     margin-right:16px
@@ -1435,28 +1429,28 @@ line-height: 150%; /* 24px */  }
 .ico-appl-action::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-action.svg)no-repeat;
+    background: url(../../img/branch/ico-wayStep-action.svg)no-repeat;
     width:22px;
     height:28px
 }
 .ico-appl-flow::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-flow.svg)no-repeat;
+    background: url(../../img/branch/ico-wayStep-flow.svg)no-repeat;
     width:21px;
     height:22px
 }
 .ico-appl-none::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-none.svg)no-repeat;
+    background: url(../../img/branch/ico-wayStep-none.svg)no-repeat;
     width:21px;
     height:20px
 }
 .ico-appl-end::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-end.svg)no-repeat;
+    background: url(../../img/branch/ico-wayStep-end.svg)no-repeat;
     width:21px;
     height:20px
 }
@@ -1545,8 +1539,9 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     display: block;
 }
 
-.ico-blue-home::before{content: ""; background: url(../../img/license/ico-blueHome.svg)no-repeat; width: 25px; height:24px; display: block;}
-.depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/license/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
+.ico-blue-home::before{content: ""; background: url(../../img/branch/ico-blueHome.svg)no-repeat; width: 25px; height:24px; display: block;}
+.ico-blue-home.wh::before{content: ""; background: url(../../img/branch/ico-blueHome-wh.svg)no-repeat; width: 25px; height:24px; display: block;}
+.depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/branch/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
 /* 기본 상태 - before 숨김 */
 .depth01 .gnb-main-trigger::before {
@@ -1557,7 +1552,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
   transform: translateX(-50%) translateY(0);
   width: 19px;
   height: 8px;
-  background: url(../../img/license/ico-menu-action.svg) no-repeat;
+  background: url(../../img/branch/ico-menu-action.svg) no-repeat;
   opacity: 0;
   pointer-events: none;
   transition: none;
@@ -1567,7 +1562,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     content: "";
     display: inline-block;
     margin-right: 5px;
-    background: url(../../img/license/ico-notice.svg)no-repeat center;
+    background: url(../../img/branch/ico-notice.svg)no-repeat center;
     width: 19px;
     height: 18px;
 }
@@ -2786,7 +2781,7 @@ body.edu-appl-step03 .step02 {
 
 .btn-report{width: 300px; height:130px; gap:10px; padding:10px}
 .btn-report .icon i::before{width: 50px; height:51px; background-size: cover;}
-
+.header-util .inner.addLogo .logo.klpna a{display: none;}
 }
 
 @media (max-width: 360px) {
