@@ -278,7 +278,7 @@
 /*인사말*/
 .greeting_img{
     position:relative;
-    padding-top:62px;
+    padding-top:80px;
     margin-bottom: 40px;
 }
 .greeting_img .title{
@@ -295,6 +295,9 @@
     color:#0050CA
 }
 .greeting_img .title > span.secondary{
+    color:#00AAFF
+}
+.greeting span.secondary{
     color:#00AAFF
 }
 .greeting_img .title:before{
@@ -340,6 +343,37 @@
     bottom:0;
     width: 300px;
 }
+.greeting p.title{
+    color:#222;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:-0.43px;
+    line-height:1.5;
+    display:inline-block;
+    position:relative;
+    padding: 0px 30px;
+}
+.greeting p.title:before,
+.greeting p.title:after{
+    content:'';
+    background-image:url(../../img/sub/talk_s.png);
+    background-repeat:no-repeat;
+    width:26px;
+    height:23px;
+    position:absolute;
+    left:70px;
+    top:-30px;
+    background-size:cover
+}
+.greeting p.title:after{
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+    left:inherit;
+    left:20px;
+    bottom:-30px;
+    top:inherit;
+    margin-left:10px
+}
 .greeting p{
     padding: 10px 0px;
     line-height: 30px;
@@ -361,6 +395,63 @@
 }
 .greeting_sign img{
     margin-left:20px
+}
+.greeting_img.greet_sido .img{
+    width: 340px;
+    border-radius: 0 99px 0 0;
+    box-shadow: -40px 40px 4px 0 rgba(0, 0, 0, 0.05);
+    right: 0px;
+    bottom: auto;
+    position: relative;
+}
+.greeting_img.greet_sido .img img{
+    border-radius: 0 99px 0 0;
+}
+.greeting_img.greet_sido .img .name{
+    padding: 10px 0px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 340px;
+    color: #ffffff;
+    text-align: center;
+}
+.greeting_img.greet_sido .img .name b{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 1px;
+    display: block;
+}
+.greeting_info{
+    position: relative;
+    display: block;
+}
+.greeting_info .greeting{
+    padding-top: 80px;
+    width: calc(100% - 420px);
+}
+.greeting_info .greeting p.title:before{
+    left: auto;
+}
+.greeting_info .greeting p.title:after{
+    left: 0px;
+    margin-left: 0px;
+}
+.greeting_info .greeting .title{
+    margin-bottom: 60px;
+    padding: 0px;
+}
+.greeting_info .greeting .sub_title{
+    font-weight: 700;
+    font-size: 22px;
+}
+.greeting_info .greeting_img{
+    padding-top: 40px;
+    position: absolute;
+    right: 0;
 }
 /*정관*/
 .rule_guide{
@@ -1106,6 +1197,41 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         right:10px;
         bottom:0px;
         left: auto;
+    }
+    .greeting_info .greeting_img{
+        padding-top: 40px;
+        position:relative;
+        right: 0;
+    }
+    .greeting_info .greeting{
+        width: 100%;
+    }
+    .greeting p.title{
+        font-size: 22px;
+        text-align: center;
+        display: block;
+    }
+    .greeting p.title:before {
+        left: 0px;
+        top: 0px;
+    }
+    .greeting p.title:after {
+        right: 0px;
+        bottom: 0px;
+    }
+    .greeting_info .greeting .title{
+        margin-bottom: 40px;
+    }
+    .greeting_info .greeting p.title:before{
+        left: 0px;
+        top: -24px;
+    }
+    .greeting_info .greeting p.title:after{
+        left: auto;
+        bottom: -24px;
+    }
+    .greeting_info .greeting .title br{
+        display: none;
     }
     .rule_info{
         padding-top: 0px;
