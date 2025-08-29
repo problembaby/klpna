@@ -92,7 +92,7 @@ function handlePwFindSubmit(buttonEl) {
                             <div class="helper-wrap">
                                 <ul class="krds-info-list decimal" role="list">
                                     <li role="listitem">
-                                        아이디와 이름을 입력하신 후 본인확인을 하셔야 비밀번호 변경하실 수 있습니다.
+                                       아이디와 사업자등록번호를 입력하신 후 본인확인을 하셔야 비밀번호 변경하실 수 있습니다
                                     </li>
                                     <li role="listitem">입력하신 정보는 비밀번호 확인에만 사용되며, 저장되지 않습니다.</li>
                                 </ul>
@@ -118,23 +118,52 @@ function handlePwFindSubmit(buttonEl) {
                                 <!-- //아이디 -->
 
 
-                                <!-- 이름 -->
+                                <!-- 담당자명 -->
                                 <div class="form-group">
                                     <div class="form-tit">
-                                        <label for="name">이름<i class="req">*</i></label>
+                                        <label for="name">담당자명<i class="req">*</i></label>
                                     </div>
                                     <div class="form-conts btn-ico-wrap" data-delete="true">
-                                        <input type="text" id="name" class="krds-input" placeholder="이름입력">
+                                        <input type="text" id="name" class="krds-input" placeholder="담당자명 입력">
                                         <button type="button" class="krds-btn medium icon pure btn-delete-input">
                                             <span class="sr-only">내용 삭제</span>
                                             <i class="svg-icon ico-delete-fill"></i>
                                         </button>
                                     </div>
-                                    <p class="form-hint-invalid" style="display: none;">이름을 입력해주세요.</p>
+                                    <p class="form-hint-invalid" style="display: none;">담당자명을 입력해주세요.</p>
                                 </div>
-                                <!-- //이름 -->
+                                <!-- //담당자명 -->
 
-
+                                <!-- 사업자등록번호 -->
+                                <div class="form-group">
+                                    <div class="form-tit">
+                                        <label for="bizNo1">사업자등록번호 <i class="req">*</i></label>
+                                    </div>
+                                    <div class="form-input">
+                                        <div class="input-group">
+                                            <div class="form-conts">
+                                                <ul class="input-group range">
+                                                    <li>
+                                                        <input type="text" id="bizNo1" class="krds-input medium"
+                                                            placeholder="" maxlength="" value="">
+                                                    </li>
+                                                    <li class="mark">-</li>
+                                                    <li>
+                                                        <input type="text" id="bizNo2" class="krds-input medium"
+                                                            placeholder="" maxlength="" value="">
+                                                    </li>
+                                                    <li class="mark">-</li>
+                                                    <li>
+                                                        <input type="text" id="bizNo3" class="krds-input medium"
+                                                            placeholder="" maxlength="" value="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="form-hint-invalid" style="display: none;">사업자등록번호를 입력해주세요.</p>
+                                </div>
+                                <!-- //사업자등록번호 -->
 
                                 <div class="bar"></div>
 
