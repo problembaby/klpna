@@ -2077,6 +2077,23 @@ line-height: 150%; /* 24px */}
     padding:5px
 }
 
+.social-login > * {
+    padding: 0px 0px;
+}
+
+.helper-box .helper-desc-wrap {
+    margin-top: var(--krds-gap-3);
+    margin-left:0;
+}
+
+.krds-info-list > li {
+        font-size: 1.5rem
+}
+
+    .login-form-wrap {
+    padding: 0% 10px;
+    }
+
 }
 
 @media (max-width: 320px) {

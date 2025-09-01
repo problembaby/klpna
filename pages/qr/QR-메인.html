@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/svg+xml" href="../../resources/img/logo/favicon.ico" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>QR 출결 | 대한간호조무사협회</title>
+
+	<!-- SEO -->
+	<meta name="author" content="대한간호조무사협회">
+	<meta name="description" content="대한간호주무사협회 QR 출결 시스템 입니다.">
+	<meta name="keywords" content="대한간호조무사협회, 간호주무사, QR출석시스템">
+	<meta name="robots" content="index, follow">
+
+	<!-- Open Graph (OG) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="대한간호조무사협회 QR 출결">
+	<meta property="og:description" content="대한간호조무사협회 QR 출결 시스템 입니다.">
+	<meta property="og:image" content="[대표 이미지 경로]">
+	<meta property="og:url" content="[페이지 URL]">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="대한간호조무사협회 QR 출결">
+	<meta name="twitter:description" content="대한간호조무사협회 QR 출결 시스템 입니다.">
+	<meta name="twitter:image" content="[대표 이미지 경로]">
+
+
+	<!-- css -->
+	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../resources/css/style.css" />
+	<link rel="stylesheet" href="../../resources/css/setting/qr_custom.css" />
+
+	<!--js-->
+	<script src="../../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../../resources/krds/js/pattern/pattern.js" defer></script>
+	<script src="../../resources/krds/js/component/ui-script.js" defer></script>
+	
+
+	<script>
+	// 문서 로딩 완료 시 KRDSFormUtil 초기화
+document.addEventListener("DOMContentLoaded", function () {
+    KRDSFormUtil.init();
+});
+
+/**
+ * KRDSFormUtil
+ * 공통 폼 인터랙션 유틸리티 객체
+ */
+const KRDSFormUtil = {
+    init() {
+        this.bindInputClear();
+        this.bindPasswordToggle();
+        this.bindQuickMenuToggle();
+        this.bindGnbToggle(); // ✅ GNB 토글 기능
+        this.bindFootSelectToggle(); // ✅ 추가된 footer 아코디언 셀렉트
+    },
+
+    bindInputClear() {
+        document.querySelectorAll(".btn-delete-input").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const input = this.closest(".btn-ico-wrap").querySelector("input");
+                if (input) input.value = "";
+            });
+        });
+    },
+
+    bindPasswordToggle() {
+        document.querySelectorAll(".btn-pw-visible").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const icon = this.querySelector("i");
+                const input = this.closest(".btn-ico-wrap").querySelector("input");
+
+                if (!icon || !input) return;
+
+                const isVisible = input.type === "text";
+                input.type = isVisible ? "password" : "text";
+
+                icon.classList.toggle("ico-pw-visible", isVisible);
+                icon.classList.toggle("ico-pw-visible-on", !isVisible);
+            });
+        });
+    },
+
+    /**
+     * [공통] 퀵메뉴 열기/닫기 토글 기능
+     */
+    /**
+     * [공통] 탭메뉴 기능
+     */
+    bindTabMenu() {
+        const tabButtons = document.querySelectorAll('.tab-menu-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const target = button.dataset.tabTarget;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                tabPanels.forEach(panel => {
+                    if (panel.id === target) {
+                        panel.classList.add('active');
+                    } else {
+                        panel.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // 초기 로드 시 첫 번째 탭 활성화
+        if (tabButtons.length > 0 && tabPanels.length > 0) {
+            tabButtons[0].classList.add('active');
+            tabPanels[0].classList.add('active');
+        }
+    },
+
+    bindQuickMenuToggle() {
+        const toggleBtn = document.querySelector('.a_control');
+        const quickWrap = document.querySelector('.quick-wrap-ul');
+        const items = document.querySelectorAll('.quick-wrap-item');
+
+        if (!toggleBtn || !quickWrap) return;
+
+        let isOpen = true; // 기본 상태를 열림으로 설정
+
+        // 초기 상태를 열림으로 설정
+        toggleBtn.classList.add('on');
+        quickWrap.classList.add('q-show');
+        items.forEach((item, i) => {
+            setTimeout(() => item.classList.add('q-show'), i * 100);
+        });
+
+        toggleBtn.addEventListener('click', function () {
+            isOpen = !isOpen;
+            toggleBtn.classList.toggle('on', isOpen);
+            quickWrap.classList.toggle('q-show', isOpen);
+
+            if (isOpen) {
+                [...items].reverse().forEach((item, i) => {
+                    setTimeout(() => item.classList.add('q-show'), i * 100);
+                });
+            } else {
+                items.forEach(item => item.classList.remove('q-show'));
+            }
+        });
+    }
+    ,
+
+    /**
+     * [공통] GNB 열기/닫기 토글 기능
+     */
+    bindGnbToggle() {
+        const gnb = document.querySelector('#gnb');
+        const depth2Menus = document.querySelectorAll('.depth2');
+        const gnbBg = document.querySelector('.gnb-bg');
+        const gnbBackdrop = document.querySelector('.gnb-backdrop');
+        const body = document.body;
+        let closeTimer = null;
+        const safeArea = [gnb, gnbBg];
+
+        function openAllGnb() {
+            depth2Menus.forEach(menu => menu.style.display = 'block');
+            if (gnbBg) {
+                gnbBg.style.display = 'block';
+                gnbBg.classList.add('active');
+            }
+            if (gnbBackdrop) gnbBackdrop.classList.add('active');
+            //body.style.overflow = 'hidden';
+        }
+
+        function closeAllGnb() {
+            depth2Menus.forEach(menu => menu.style.display = 'none');
+            if (gnbBg) {
+                gnbBg.style.display = 'none';
+                gnbBg.classList.remove('active');
+            }
+            if (gnbBackdrop) gnbBackdrop.classList.remove('active');
+          //  body.style.overflow = '';
+            document.querySelectorAll('.gnb-main-trigger').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        function isDescendant(parent, child) {
+            return parent && child && (parent === child || parent.contains(child));
+        }
+
+        gnb.addEventListener('mouseenter', () => {
+            clearTimeout(closeTimer);
+            openAllGnb();
+        });
+        gnb.addEventListener('focusin', () => {
+            clearTimeout(closeTimer);
+            openAllGnb();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            clearTimeout(closeTimer);
+            closeTimer = setTimeout(() => {
+                const isInside = safeArea.some(el => el && el.contains(e.target));
+                if (!isInside) closeAllGnb();
+            }, 150);
+        });
+
+        document.addEventListener('focusout', () => {
+            closeTimer = setTimeout(() => {
+                const activeEl = document.activeElement;
+                const isInside = safeArea.some(el => isDescendant(el, activeEl));
+                if (!isInside) closeAllGnb();
+            }, 150);
+        });
+
+        // trigger 및 depth2 모두에 대해 포커스 시 active 토글
+        document.querySelectorAll('.gnb-main-trigger').forEach(trigger => {
+            trigger.addEventListener('focus', () => {
+                trigger.classList.add('active');
+                trigger.setAttribute('aria-expanded', 'true');
+            });
+            trigger.addEventListener('blur', () => {
+                setTimeout(() => {
+                    if (!trigger.contains(document.activeElement)) {
+                        trigger.classList.remove('active');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
+                }, 100);
+            });
+        });
+
+        document.querySelectorAll('.depth2').forEach(menu => {
+            const trigger = menu.previousElementSibling;
+            if (!trigger || !trigger.classList.contains('gnb-main-trigger')) return;
+
+            menu.addEventListener('mouseenter', () => {
+                trigger.classList.add('active');
+                trigger.setAttribute('aria-expanded', 'true');
+            });
+            menu.addEventListener('mouseleave', () => {
+                trigger.classList.remove('active');
+                trigger.setAttribute('aria-expanded', 'false');
+            });
+
+            menu.addEventListener('focusin', () => {
+                trigger.classList.add('active');
+                trigger.setAttribute('aria-expanded', 'true');
+            });
+
+            menu.addEventListener('focusout', () => {
+                setTimeout(() => {
+                    if (!menu.contains(document.activeElement)) {
+                        trigger.classList.remove('active');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
+                }, 100);
+            });
+        });
+    },
+
+
+
+
+
+    /**
+     * [공통] Footer 셀렉트 드롭다운 아코디언 토글
+     */
+    bindFootSelectToggle() {
+        const $buttons = $('.footSelect');
+
+        $buttons.on('click', function (e) {
+            e.preventDefault();
+
+            const $this = $(this);
+            const $dropdown = $this.next('.drop-down');
+            const isExpanded = $this.attr('aria-expanded') === 'true';
+
+            // 모든 다른 드롭다운 닫기
+            $buttons.not($this).removeClass('active').attr('aria-expanded', 'false')
+                .next('.drop-down').removeClass('active');
+
+            if (isExpanded) {
+                $this.removeClass('active').attr('aria-expanded', 'false');
+                $dropdown.removeClass('active');
+            } else {
+                $this.addClass('active').attr('aria-expanded', 'true');
+                $dropdown.addClass('active');
+            }
+        });
+
+        // 바깥 클릭 시 닫기
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.foot-link-item').length) {
+                $buttons.removeClass('active').attr('aria-expanded', 'false');
+                $('.drop-down').removeClass('active');
+            }
+        });
+    }
+
+
+
+};
+
+
+	</script>
+
+
+</head>
+
+
+<div class="wrap">
+
+	<div class="login-title qr">
+		<div class="login-title-wrap">
+			<div class="login-sb-title">대한간호조무사협회</div>
+			<h1 class="login-title-h1">QR출결</h1>
+			<i class="bg-item01"></i>
+			<i class="bg-item02"></i>
+		</div>
+	</div>
+
+
+	<!--로그인 영역-->
+	<div class="login-container qr">
+		<div class="login-inner">
+			<div class="login-form-wrap">
+				<!-- 로그인 탭 -->
+				<div class="krds-tab-area layer login-tab">
+
+					<!--탭 컨텐츠 -->
+					<div class="tab-conts-wrap">
+						<form action="#">
+							<section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active"
+								data-quick-nav="false" role="tabpanel">
+								<h2 class="sr-only">개인회원 로그인 폼</h2>
+	
+								<div class="fieldset">
+									<!-- 폼그룹 -->
+									<div class="form-group">
+										<div class="form-tit">
+											<label for="login-id">아이디</label>
+										</div>
+										<div class="form-conts btn-ico-wrap" data-delete="true">
+											<input type="text" id="login-id" class="krds-input" placeholder="영문 소문자" required>
+											<button type="button" class="krds-btn medium icon pure btn-delete-input">
+												<span class="sr-only">내용 삭제</span>
+												<i class="svg-icon ico-delete-fill"></i>
+											</button>
+										</div>
+									</div>
+									<!-- //폼그룹 -->
+	
+									<div class="form-group">
+										<div class="form-tit">
+											<label for="login-pw">비밀번호</label>
+										</div>
+										<div class="form-conts btn-ico-wrap" data-delete="true">
+											<input type="password" id="login-pw" class="krds-input"
+												placeholder="8-12자의 영문자, 숫자, 특수문자 조합" required>
+											<div class="btn-group">
+												<button type="button" class="krds-btn medium icon pure btn-delete-input">
+													<span class="sr-only">내용 삭제</span>
+													<i class="svg-icon ico-delete-fill"></i>
+												</button>
+												<button type="button" class="krds-btn medium icon btn-pw-visible"
+													id="btn-pw-visible">
+													<span class="sr-only">입력한 비밀번호 보기</span>
+													<i class="svg-icon ico-pw-visible"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-group krds-check-area ">
+										<div class="krds-form-check medium">
+											<input type="checkbox" id="login-save">
+											<label for="login-save">아이디 저장</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<button type="submit" class="krds-btn login-btn primary"
+											onclick="handleLoginClick(this)">로그인</button>
+									</div>
+									<div class="form-group">
+										<div class="social-login">
+											<button type="button" class="krds-btn naver-login-btn">네이버</button>
+											<button type="button" class="krds-btn kakao-login-btn">카카오</button>
+										</div>
+									</div>
+								</div>
+	
+							</section>
+						</form>
+
+					</div>
+					<!-- //탭 컨텐츠 -->
+					<div class="helper-box gray mt50 mb50">
+						<p class="helper-tit">로그인에 어려움이 있으신가요?</p>
+						<div class="helper-desc-wrap">
+							<ul class="krds-info-list decimal" role="list">
+								<li role="listitem">
+									로그인 관련 1661-6933 (내선번호 1번)으로 전화주세요.
+								</li>
+								<li role="listitem">서비스에 로그인할 수 있도록 도와드리겠습니다.</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<!-- //로그인 탭 -->
+			</div>
+
+		</div>
+	</div>
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
