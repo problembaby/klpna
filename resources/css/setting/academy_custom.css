@@ -27,6 +27,13 @@
     width: 18px;
     height: 18px;
 }
+.ico-location::before{
+     display: block;
+    content:"";
+    background: url(../../img/icon/ico-location.svg)no-repeat;
+    width: 18px;
+    height: 18px;
+}
 
 
 
@@ -467,7 +474,7 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
 .ico-location::before{
      display: block;
     content:"";
-    background: url(../../img/icon/ico-location.svg)no-repeat;
+    background: url(../../img/icon/ico-location2.svg)no-repeat;
     width: 18px;
     height: 19px;
 }
@@ -1740,12 +1747,36 @@ line-height: 120%; /* 16.8px */
 
 
 /** 오시는길 */
-
+.two-map{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.two-map .ceter-directions{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.two-map .ceter-directions .center-map{
+    margin-top: 0px;
+}
+.two-map .center-info-transit.line2{
+    display: block;
+}
+.two-map .center-info-transit.line2 > .label{
+    margin-bottom: 10px ;
+}
+.root_daum_roughmap .cont{
+    display: none;
+}
 .center-map {
   position: relative;
   width: 100%;
   max-width: 100%;
   aspect-ratio: 1044 / 500;
+  height: 300px;
 }
 
 .center-map .root_daum_roughmap_landing {
@@ -1792,7 +1823,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     color: #FFF;
     font-size: 14px;
 }
-
+.transit-line .line-name.subway5 { background: var(--color-secondary, #8936e0)}
 .transit-line .line-name.subway4 { background: var(--color-secondary, #0AF)}
 .transit-line .line-name.subway1 { background: var(--color-secondary, #0050CA)}
 
@@ -1919,7 +1950,19 @@ line-height: 150%; }
 
 /** 테블릿 */
 @media (max-width: 1023px) {
-
+    .two-map {
+        display: block;
+    }
+    .two-map .ceter-directions{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .ceter-directions.location2{
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid #eee;
+    }
     .edu-priod-list{display: flex; flex-direction: row; gap:0 10px; flex-wrap: wrap;}
       .table-board table tbody td.cell-edu-date, .table-board table tbody td.cell-place{width:100%; display: block;}
     .table-board table tbody td.cell-edu-date:after, .table-board table tbody td.cell-place:after, .table-board table tbody td.cell-date:after {
@@ -2138,8 +2181,7 @@ body.edu-appl-step03 .step02 {
 }
 
 /** 모바일 */
-@media (max-width: 767px) {
-
+@media (max-width: 767px) {    
     .systemGuide-wrap .banner-area .title-img-center {
     display:none
 }

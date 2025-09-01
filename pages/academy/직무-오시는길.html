@@ -26,9 +26,6 @@
     <script src="../../resources/js/script.js"></script>
     <script src="../../resources/lib/aos/aos.js"></script>
 
-
-
-
 <body>
     <div id="wrap">
         <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
@@ -45,6 +42,9 @@
                     <ul class="lnb-list">
                         <li class="lnb-item">
                             <a href="#" class="lnb-btn link">센터소개</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">연혁</a>
                         </li>
                         <li class="lnb-item active">
                             <a href="#" class="lnb-btn link active selected">오시는길</a>
@@ -83,7 +83,7 @@
                     <!-- //페이지 타이틀 영역 -->
 
                     <!--컨텐츠 : 내용-->
-                    <div class="sub-content">
+                    <div class="sub-content two-map">
 
                         <div class="ceter-directions">
                             <div class="center-map">
@@ -101,54 +101,94 @@
                                     new daum.roughmap.Lander({
                                         "timestamp": "1754467260976",
                                         "key": "6w5whgz8zx4",
-                                        "mapWidth": "1044",
-                                        "mapHeight": "500"
+                                        "mapWidth" : "640",
+                                        "mapHeight" : "360"
                                     }).render();
                                 </script>
 
                             </div>
                             <div class="center-info">
                                 <div class="center-address">
-                                    (우 04379) 서울특별시 용산구 한강대로 15길 11 5층
+                                    대한간호조무사협회 LPN홀
                                 </div>
 
                                 <ul class="center-info-list"> <!-- 전체 리스트 -->
+                                    <li class="center-info-email">
+                                        <span class="label"><i class="ico-location"></i>주소 :</span>
+                                        <span class="text">서울특별시 용산구 한강대로15길 11, 4층</span>
+                                    </li>
                                     <li class="center-info-contact"> <!-- 전화 & 팩스 -->
                                         <ul class="contact-list">
                                             <li class="contact-item">
-                                                <span class="label"><i class="ico-phone"></i>대표전화 :</span>
-                                                <span class="text">02-1234-5678</span>
+                                                <span class="label"><i class="ico-phone"></i>전화번호 :</span>
+                                                <span class="text">02-6951-4086</span>
                                             </li>
-                                            <li class="contact-divider mark"></li>
+                                        </ul>
+                                    </li>                                   
+
+                                    <li class="center-info-transit line2">
+                                        <span class="label"><i class="ico-transit"></i>대중교통 이용방법 :</span>
+                                        <span class="text">
+                                            <div class="transit-line">
+                                                <span class="line-name subway1">1호선</span>
+                                                서울 지하철 1호선 용산역 1번 출구 도보 7분
+                                            </div>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="ceter-directions location2">
+                            <div class="center-map">
+                                <!-- * 카카오맵 - 지도퍼가기 -->
+                                <!-- 1. 지도 노드 -->
+                                <div id="daumRoughmapContainer1756702439907" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                                <!--
+                                    2. 설치 스크립트
+                                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                                -->
+                                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                                <!-- 3. 실행 스크립트 -->
+                                <script charset="UTF-8">
+                                    new daum.roughmap.Lander({
+                                        "timestamp" : "1756702439907",
+                                        "key" : "vj8xgyhnaer",
+                                        "mapWidth" : "640",
+                                        "mapHeight" : "360"
+                                    }).render();
+                                </script>
+                            </div>
+                            <div class="center-info">
+                                <div class="center-address">
+                                    KLPNA 임상실습교육센터
+                                </div>
+
+                                <ul class="center-info-list"> <!-- 전체 리스트 -->                                   
+
+                                    <li class="center-info-email">
+                                        <span class="label"><i class="ico-location"></i>주소 :</span>
+                                        <span class="text">서울특별시 영등포구 영중로 60, 5층</span>
+                                    </li>
+                                    <li class="center-info-contact"> <!-- 전화 & 팩스 -->
+                                        <ul class="contact-list">
                                             <li class="contact-item">
-                                                <span class="label">팩스 :</span>
-                                                <span class="text">02-859-8917</span>
+                                                <span class="label"><i class="ico-phone"></i>전화번호 :</span>
+                                                <span class="text">02-6951-4040</span>
                                             </li>
                                         </ul>
                                     </li>
 
-                                    <li class="center-info-email">
-                                        <span class="label"><i class="ico-email"></i>이메일 :</span>
-                                        <span class="text">mylpn@klpna.or.kr</span>
-                                    </li>
-
-                                    <li class="center-info-transit">
+                                    <li class="center-info-transit line2">
                                         <span class="label"><i class="ico-transit"></i>대중교통 이용방법 :</span>
                                         <span class="text">
                                             <div class="transit-line">
-                                                <span class="line-name subway4 ">4호선</span>
-                                                지하철 4호선 신용산역 3번 출구 (도보 5분, 500m)
-                                            </div>
-                                            <div class="transit-line">
-                                                <span class="line-name subway1">1호선</span>
-                                                1호선 용산역 1번 출구 (도보 5분, 550m)
+                                                <span class="line-name subway5">5호선</span>
+                                                서울 지하철 5호선 영등포시장역 3번출구 도보 1분
                                             </div>
                                         </span>
-                                    </li>
-
-                                    <li class="center-info-parking">
-                                        <span class="label"><i class="ico-parking"></i>주차장 이용 :</span>
-                                        <span class="text">빌딩 지상 주차장 이용가능</span>
                                     </li>
                                 </ul>
                             </div>
