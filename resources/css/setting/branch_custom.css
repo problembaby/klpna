@@ -1989,7 +1989,7 @@ line-height: normal;}
   grid-template-rows: repeat(2, auto);  /* 2행 */
   gap: 20px 50px; /* 간격 (선택사항) */}
 
-  .sido-gallery-card{}
+  .sido-gallery-card{display:block}
   .sido-gallery-card .sgc-img{overflow: hidden; border-radius: 10px; border:1px solid #fff}
   .sido-gallery-card .sgc-img img{width: 100%; }
 .sgc-p{font-size: 16px; margin-top: 5px;}
@@ -2081,6 +2081,15 @@ color:#fff;
 padding:5px 0;
 
 }
+
+
+.sido_info .list .btn:focus {
+    box-shadow: none;                               
+    outline: 3px solid #08A895;
+}
+
+
+
 
 .sido_info .list li.is_on .btn {
     color: #ffffff;
