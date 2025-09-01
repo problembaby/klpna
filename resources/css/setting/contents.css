@@ -226,6 +226,9 @@
     top: 26px;
     left: -36px;
 }
+.history_wrap .list.big li::before{
+    top: 21px;
+}
 .history_wrap .list li::after {
     content: "";
     width: 2px;
@@ -269,6 +272,34 @@
     width: 100%;
     flex:auto;
     flex-grow: 1;
+}
+.history_wrap .list.big li .txt_box{
+    display: block;
+    margin-bottom:30px;
+}
+.history_wrap .list.big li .month{
+    font-size: 22px;
+    padding-bottom:6px;
+    display: block;
+}
+.history_wrap .list.big li .txt_box {
+    position: relative;
+}
+.history_wrap .list.big li .month::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 99px;
+    background-color: #333;
+    position: absolute;
+    top: 10px;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    left: -40px;
+}
+.history_wrap .list.big li span{
+    display: block;
+    font-size: 18px;
 }
 .history_wrap .his_inner {
     position: relative;
@@ -1156,6 +1187,9 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     }
     .history_wrap .list li .month {
         font-size: 16px;
+    }
+    .history_wrap .list.big li .month::before{
+        left: -30px;
     }
     .grades article > ul > li .txt .tit{
         width:260px;
