@@ -714,6 +714,13 @@ label.checkbox-inline.checked:before {
     position: relative;
 }
 
+.zoomimg img{transition: all 0.2s ease;}
+.zoomimg img:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;

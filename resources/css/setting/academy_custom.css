@@ -1657,7 +1657,7 @@ font-size: 14px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-letter-spacing: 1.5px; display: flex; align-items: center; justify-content: center;}
+letter-spacing: 1.5px; display: flex; align-items: center; justify-content: center; z-index:2;}
 
 .ms-card-item-link .txt{padding:20px 0;}
 .ms-card-item-link .txt .title{color: var(--Text-02, #454545);
