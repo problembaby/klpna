@@ -978,8 +978,12 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     font-size: 14px;
 }
 
-.transit-line .line-name.subway4 { background: var(--color-secondary, #0AF)}
-.transit-line .line-name.subway1 { background: var(--color-secondary, #0050CA)}
+.transit-line .line-name.subway4 {background: #0AF}
+.transit-line .line-name.subway1 {background: #0050CA}
+.transit-line .line-name.subwaysuin {background: #EBA900}
+.transit-line .line-name.subway-gyeongshun {background: #08AF7B}
+.transit-line .line-name.subway-daejeon {background: #3CB44A}
+.transit-line .line-name.subway-busan1 {background: #F0602F}
 
 .sch-right{display: flex; align-items: center; gap:20px; padding:0 10px}
 /*간호조무사란*/
