@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../../resources/img/logo/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR 출결 | 대한간호조무사협회</title>
+
+    <!-- SEO -->
+    <meta name="author" content="대한간호조무사협회">
+    <meta name="description" content="대한간호주무사협회 QR 출결 시스템 입니다.">
+    <meta name="keywords" content="대한간호조무사협회, 간호주무사, QR출석시스템">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (OG) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="대한간호조무사협회 QR 출결">
+    <meta property="og:description" content="대한간호조무사협회 QR 출결 시스템 입니다.">
+    <meta property="og:image" content="[대표 이미지 경로]">
+    <meta property="og:url" content="[페이지 URL]">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="대한간호조무사협회 QR 출결">
+    <meta name="twitter:description" content="대한간호조무사협회 QR 출결 시스템 입니다.">
+    <meta name="twitter:image" content="[대표 이미지 경로]">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css" />
+    <link rel="stylesheet" href="../../resources/css/setting/qr_custom.css" />
+
+    <!--js-->
+    <script src="../../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../../resources/krds/js/component/ui-script.js" defer></script>
+
+    <script>
+        $(document).ready(function () {
+            // 모바일 메뉴 열기/닫기 토글
+            $('.mob-menu').on('click', function () {
+                $('.right-menu-panel').addClass('expand');
+                $('.bg-right-menu').fadeIn();
+                $('body').addClass('scroll-no');
+            });
+            $('.btn-close, .bg-right-menu').on('click', function () {
+                $('.right-menu-panel').removeClass('expand');
+                $('.bg-right-menu').fadeOut();
+                $('body').removeClass('scroll-no');
+            });
+        });
+    </script>
+</head>
+
+
+<div class="wrap" id="mob-fixed">
+    <div class="mob-inner">
+
+        <header>
+            <div class="header-nav">
+                <h1 class="header-nav-title">교육정보</h1>
+                <button type="button" class="mob-menu" aria-expanded="false" title="메뉴열림">
+                    <span class="sr-only">전체메뉴</span>
+                </button>
+
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <div class="main-img">
+                <img src="../../resources/img/qr/test-lecture-image.png" alt="테스트 썸네일">
+            </div>
+
+            <div class="lecture-content">
+                <div class="inner">
+                    <div class="lecture-title">
+                        <div class="lecture-title-top">
+                            <span class="lecture-title-year">2025</span>
+                            <span class="krds-badge bg-light-primary">보수교육</span>
+                        </div>
+                        <h2 class="title-text">
+                            유아와 학령전기 아동의 건강문제와 가족의 건강증진
+                        </h2>
+                    </div>
+
+                    <div class="bar"></div>
+
+                    <div class="lecture-info-wrap">
+                        <ul class="lec-detail-list qr">
+                            <li>
+                                <div class="label"><i class="ico-box"></i>교육기관 :</div>
+                                <div class="text">서울시간호조무사회</div>
+                            </li>
+                            <li>
+                                <div class="label"><i class="ico-clock"></i>교육시간 :</div>
+                                <div class="text">09:00 ~13:00 (4시간)</div>
+                            </li>
+                            <li>
+                                <div class="label"><i class="ico-location"></i>교육장소 :</div>
+                                <div class="text">서울 간호조무사회 3층 SLPN홀</div>
+                            </li>
+                            <li>
+                                <div class="label"><i class="ico-calendar"></i>교육일자 :</div>
+                                <div class="text fc-blue">2025.06.21.(화) 14:00 - 18:002025.06.21.(화)</div>
+                            </li>
+                        </ul>
+
+
+                        <!-- 탭 -->
+
+                        <div class="lec-tab-contents">
+
+                            <!-- tab -->
+                            <div class="krds-tab-area layer mt40">
+                                <!-- tab list -->
+                                <div class="tab fill gary bot-line qr">
+                                    <ul role="tablist">
+                                        <li id="tab_login_01" role="tab" aria-selected="true"
+                                            aria-controls="panel_login_01" class="active">
+                                            <button type="button" class="btn-tab">
+                                                학습목표
+                                                <i class="sr-only created">
+                                                    선택됨</i></button>
+                                        </li>
+                                        <li id="tab_login_02" role="tab" aria-selected="false"
+                                            aria-controls="panel_login_02">
+                                            <button type="button" class="btn-tab">교육과정</button>
+                                        </li>
+                                        <li id="tab_login_03" role="tab" aria-selected="false"
+                                            aria-controls="panel_login_03">
+                                            <button type="button" class="btn-tab">운영방침</button>
+                                        </li>
+                                    </ul>
+
+                                    <div class="bottom-border"></div>
+                                </div>
+                                <!-- //tab list -->
+
+                                <!-- tab contents -->
+                                <div class="tab-conts-wrap">
+                                    <section id="panel_login_01" aria-labelledby="tab_login_01" class="tab-conts active"
+                                        data-quick-nav="false">
+                                        <div class="lec-box mh200">
+                                            <h3 class="lec-box-title">학습목표</h3>
+
+                                            <ul>
+                                                <li>- 간호법을 이해하고 간호조무사 활용에 대한 다양한 역할에 대 해 알아본다.
+                                                </li>
+                                                <li>- 의료기관에서 필요한 감염 관리의 개념을 이해하고 손위생 및 전파경로별 주의 사항을 이해한다.
+
+                                                </li>
+                                                <li>- 초고령사회 노인환자를 간호하는 간호조무사로서 노인학대의 개념을 이해하고 노인학대 예방과 대처 방법을 이해함으로써,
+                                                    노인인권 향상에 기여할 수 있는 역량을 키운다.
+
+                                                </li>
+                                                <li>- 임상 간호현장에서 발생할 수 있는 근골격계 질환에 대하여 깊이 있는 이해와 질환에 대한 지식습득으로 대상자의 건강회복과
+                                                    건강증진을 돕도록 한다.
+
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                    </section>
+                                    <section id="panel_login_02" aria-labelledby="tab_login_02" class="tab-conts"
+                                        data-quick-nav="false">
+
+                                        <div style="width:100%">
+                                            <!-- accordion -->
+                                            <div class="krds-accordion type-border">
+                                                <div class="accordion-item active">
+                                                    <h5 class="accordion-header">
+                                                        <button type="button" id="acc-header-subject01"
+                                                            class="btn-accordion" aria-controls="acc-subject01">
+                                                            <span class="acc-type">1교시</span>
+                                                            <div class="acc-title">유아의 정상성장발달</div>
+                                                        </button>
+                                                    </h5>
+                                                    <div id="acc-subject01" class="accordion-collapse collapse active"
+                                                        aria-labelledby="acc-header-subject01">
+                                                        <div class="accordion-body">
+                                                            <!-- accordion contents -->
+                                                            <ol class="o-list">
+                                                                <li>간호조무사 현황</li>
+                                                                <li>유아의 성장발달</li>
+                                                                <li>유아의 성장발달</li>
+                                                            </ol>
+                                                            <div class="video-info-area">
+                                                                <div>
+                                                                    <i class="ico-clock"></i>
+                                                                    <div class="value">60분</div>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="ico-user"></i>
+                                                                    <div class="value">강사 : 이순신</div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //accordion contents -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <div class="accordion-item">
+                                                    <h5 class="accordion-header">
+                                                        <button type="button" id="acc-header-subject02"
+                                                            class="btn-accordion" aria-controls="acc-subject02">
+                                                            <span class="acc-type">2교시</span>
+                                                            <div class="acc-title">(필수) 의료기관 감염관리 진</div>
+                                                        </button>
+                                                    </h5>
+                                                    <div id="acc-subject02" class="accordion-collapse collapse"
+                                                        aria-labelledby="acc-header-subject02">
+                                                        <div class="accordion-body">
+                                                            <!-- accordion contents -->
+                                                            <ol class="o-list">
+                                                                <li>간호조무사 현황</li>
+                                                                <li>유아의 성장발달</li>
+                                                                <li>유아의 성장발달</li>
+                                                            </ol>
+                                                            <div class="video-info-area">
+                                                                <div>
+                                                                    <i class="ico-clock"></i>
+                                                                    <div class="value">60분</div>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="ico-user"></i>
+                                                                    <div class="value">강사 : 이순신</div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //accordion contents -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h5 class="accordion-header">
+                                                        <button type="button" id="acc-header-subject02"
+                                                            class="btn-accordion" aria-controls="acc-subject02">
+                                                            <span class="acc-type">3교시</span>
+                                                            <div class="acc-title">학령전기 아동의 정상성장발달</div>
+                                                        </button>
+                                                    </h5>
+                                                    <div id="acc-subject02" class="accordion-collapse collapse"
+                                                        aria-labelledby="acc-header-subject02">
+                                                        <div class="accordion-body">
+                                                            <!-- accordion contents -->
+                                                            <ol class="o-list">
+                                                                <li>간호조무사 현황</li>
+                                                                <li>유아의 성장발달</li>
+                                                                <li>유아의 성장발달</li>
+                                                            </ol>
+                                                            <div class="video-info-area">
+                                                                <div>
+                                                                    <i class="ico-clock"></i>
+                                                                    <div class="value">60분</div>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="ico-user"></i>
+                                                                    <div class="value">강사 : 이순신</div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //accordion contents -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h5 class="accordion-header">
+                                                        <button type="button" id="acc-header-subject02"
+                                                            class="btn-accordion" aria-controls="acc-subject02">
+                                                            <span class="acc-type">4교시</span>
+                                                            <div class="acc-title">간호조무사 근골격계 질환관리</div>
+                                                        </button>
+                                                    </h5>
+                                                    <div id="acc-subject02" class="accordion-collapse collapse"
+                                                        aria-labelledby="acc-header-subject02">
+                                                        <div class="accordion-body">
+                                                            <!-- accordion contents -->
+                                                            <ol class="o-list">
+                                                                <li>간호조무사 현황</li>
+                                                                <li>유아의 성장발달</li>
+                                                                <li>유아의 성장발달</li>
+                                                            </ol>
+                                                            <div class="video-info-area">
+                                                                <div>
+                                                                    <i class="ico-clock"></i>
+                                                                    <div class="value">60분</div>
+                                                                </div>
+                                                                <div>
+                                                                    <i class="ico-user"></i>
+                                                                    <div class="value">강사 : 이순신</div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //accordion contents -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //accordion -->
+
+                                    </section>
+                                    <section id="panel_login_03" aria-labelledby="tab_login_03" class="tab-conts "
+                                        data-quick-nav="false">
+                                        <div class="lec-box mh200">
+                                            <article class="">
+                                                <h3 class="lec-box-title">운영방침</h3>
+                                                <ul>
+                                                    <li>- 교육 시작 시 입실 불가(교통상황 및 주차시간 고려 요망</li>
+                                                    <li>- 교육생 외 입장 불가(가족, 애완동물 등)
+                                                    </li>
+                                                    <li>- 교육 중 이탈(외출, 개인업무 등)로 인해 발생한 문제에 대해서는 교육생 본인에게 책임이 있음
+                                                    </li>
+                                                    <li>- 출결 확인을 위하여 교육장 입·퇴실 시 QR코드 출결 또는 출석부에 총 1회 서명
+                                                    </li>
+
+                                                </ul>
+                                                <h3 class="lec-box-title mt20">사진·영상 활용
+                                                </h3>
+                                                <ul>
+                                                    <li>- 사용 형식 : 교육 중 강의 장면 등 사진 및 동영상 촬영</li>
+                                                    <li>- 사용 목적 : 교육 홍보, 사업 결과 보고 등
+
+                                                    </li>
+                                                    <li>- 보존기간: 간호조무사 등 규칙 제16조(보수교육 관계서류의 보존)에 의거 3년 동안 보존
+                                                    </li>
+                                                </ul>
+
+                                                <p class="fc-blue mt10">※ 초상권 사용에 대한 동의를 거부할 권리가 있습니다. 다만 위 사항은 교육 신청에
+                                                    반드시 필요한 사항으로, 거부하실 경우 교육 신청이 제한될 수 있습니다.
+                                                </p>
+                                            </article>
+
+
+
+
+                                        </div>
+
+
+
+
+                                    </section>
+                                </div>
+                                <!-- //tab contents -->
+                            </div>
+                            <!-- //tab -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- 모바일 메뉴 레이아웃  mob-menu expand 클릭시 토글 되는 영역-->
+    <div class="right-menu-panel">
+        <div class="right-menu-wrap">
+            <div class="right-menu-title">
+                <p class="right-menu-p">안녕하세요.</p>
+                <h4 class="right-menu-title-h4">
+                    <span class="name">홍길동 님,</span> 환영합니다.
+                </h4>
+            </div>
+            <ul class="right-menu-list">
+                <li>
+                    <a href="#" title="페이지 이동" class="left-menu-a">
+                        <div class="left">
+                            <i class="ico-mok"></i>
+                            <p>교육목록</p>
+                        </div>
+                        <i class="svg-icon ico-angle right"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" title="페이지 이동" class="left-menu-a">
+                        <div class="left">
+                            <i class="ico-logout"></i>
+                            <p>로그아웃</p>
+                        </div>
+                        <i class="svg-icon ico-angle right"></i>
+                    </a>
+                </li>
+            </ul>
+
+
+            <!--닫기-->
+            <button type="button" class="krds-btn medium icon btn-close right-menu-pos">
+                <span class="sr-only">닫기</span>
+                <i class="svg-icon ico-popup-close"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-right-menu"></div>
+
+    <!-- //모바일 메뉴 레이아웃-->
+
+</div>
