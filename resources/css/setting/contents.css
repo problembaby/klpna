@@ -730,8 +730,21 @@
 .business_info .work4{
     background:url(../../img/sub/business_work4.png) no-repeat center top;
 }
+.business_info.branch .work1{
+    background:url(../../img/sido/business_work1.png) no-repeat center top;
+}
+.business_info.branch .work2{
+    background:url(../../img/sido/business_work2.png) no-repeat center top;
+}
+.business_info.branch .work3{
+    background:url(../../img/sido/business_work3.png) no-repeat center top;
+}
+.business_info.branch .work4{
+    background:url(../../img/sido/business_work4.png) no-repeat center top;
+}
 .business_info div{
     padding-top: 161px;
+    width: 180px;
 }
 .business_info div p{
     text-align: center;
@@ -739,6 +752,9 @@
     font-size: 13px;
     font-weight: 700;
     padding: 20px 0px;
+}
+.business_info.branch div p{
+    color: #2BBEA9;
 }
 .business_info div ul li::before{
     content: '';
@@ -749,6 +765,9 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 6px;
+}
+.business_info div ul li::before{
+    background: #2BBEA9;
 }
 .business_info div ul li{
 
@@ -959,8 +978,12 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     font-size: 14px;
 }
 
-.transit-line .line-name.subway4 { background: var(--color-secondary, #0AF)}
-.transit-line .line-name.subway1 { background: var(--color-secondary, #0050CA)}
+.transit-line .line-name.subway4 {background: #0AF}
+.transit-line .line-name.subway1 {background: #0050CA}
+.transit-line .line-name.subwaysuin {background: #EBA900}
+.transit-line .line-name.subway-gyeongshun {background: #08AF7B}
+.transit-line .line-name.subway-daejeon {background: #3CB44A}
+.transit-line .line-name.subway-busan1 {background: #F0602F}
 
 .sch-right{display: flex; align-items: center; gap:20px; padding:0 10px}
 /*간호조무사란*/
