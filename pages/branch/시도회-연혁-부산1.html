@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연혁 - 부산시간호조무사회</title>
+
+    <!-- css -->
+	<link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../resources/css/style.css" />
+	<link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+    <link rel="stylesheet" href="../../resources/css/setting/branch_custom.css" /> <!-- 시도회 커스텀 css -->
+    <link rel="stylesheet" href="../resources/css/contents.css" />
+
+
+	<!--js-->
+	<script src="../../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+	<script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../../resources/krds/js/component/ui-script.js"></script>
+	<script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+	<script src="../../resources/js/script.js"></script>
+	<script src="../../resources/lib/aos/aos.js"></script>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+        <script><!--연혁-->
+            $(function () {
+                $(window).on('load scroll resize', function () {
+                    var scrollTop = $(this).scrollTop() + 400;
+
+                    $(".history_wrap .list > li").filter(function () {
+                        return $(this).offset().top <= scrollTop;
+                    }).addClass('effect').end().filter(function () {
+                        return $(this).offset().top > scrollTop;
+                    }).removeClass('effect');
+                });
+            });
+                
+            $.fn.classtoggle = function (options) {
+                var settings = $.extend
+                    ({
+                        'classname': 'active',     // 추가할 클래스명
+                    },
+                        options);
+            };
+        </script>
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">협회안내</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">인사말</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">연혁</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">주요사업</a>
+                        </li>
+                        <li class="lnb-item ">
+                            <a href="#" class="lnb-btn link">조직도</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">시도회</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">오시는 길</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">시도회소개</a></li>
+                            <li><a href="#;" class="txt">연혁</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">연혁</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap sido_search">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="form-tit">
+                                        <label for="local-option">전국시도회</label>
+                                    </div>
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="local-option">
+                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <option value="서울시">서울시간호조무사회</option>
+                                            <option selected="selected" value="부산시">부산시간호조무사회</option>
+                                            <option value="대구시">대구시간호조무사회</option>
+                                            <option value="인천시">인천시간호조무사회</option>
+                                            <option value="광주전남">광주전남간호조무사회</option>
+                                            <option value="대전충남">대전충남간호조무사회</option>
+                                            <option value="울산경남">울산경남간호조무사회</option>
+                                            <option value="경기도">경기도간호조무사회</option>
+                                            <option value="강원도">강원도간호조무사회</option>
+                                            <option value="충청북도">충청북도간호조무사회</option>
+                                            <option value="전북도">전북도간호조무사회</option>
+                                            <option value="경상북도">경상북도간호조무사회</option>
+                                            <option value="제주도">제주도간호조무사회</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                                <div class="guide">
+                                    각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+                    <div class="sub-content">
+                        <!--연혁-->
+                        <div id="contents_body">
+                            <div id="depth4_menu_div" class="depth4_tab_sido">
+                                <ul id="depth4_menu_ul">
+                                    <li class="active"><a href="시도회-연혁-부산1.html" title="활성 메뉴">2021-현재</a></li>
+                                    <li class="last "><a href="시도회-연혁-부산2.html" title="비활성 메뉴">1973-2020</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="history_wrap">
+                                <ol class="list">   
+                                    <li class="">
+                                        <div class="year_box">
+                                            <b class="year">2025</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2025">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">05.30</strong>
+                                                    <span>더불어민주당 정책 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.29</strong>
+                                                    <span>25년 자원봉사자단체 대표자 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.29</strong>
+                                                    <span>국민의힘 정책 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.14</strong>
+                                                    <span>역대회장 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.29</strong>
+                                                    <span>배정고등학교 진로 체험</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.29</strong>
+                                                    <span>찾아가는 현장 정책 토론회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.23</strong>
+                                                    <span>드림원격평생교육원 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.16</strong>
+                                                    <span>부산시치과의사회 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.17</strong>
+                                                    <span>22대 취임식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.13</strong>
+                                                    <span>경남정보대학교 평생교육원 방문간호 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.15</strong>
+                                                    <span>제51차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.13</strong>
+                                                    <span>김석준 부산시교육감 후보 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.12</strong>
+                                                    <span>역대회장 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.01</strong>
+                                                    <span>조정훈 국회의원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.07</strong>
+                                                    <span>부산시간호사협회 간담회</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2024</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2024">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.19</strong>
+                                                    <span>2024년 보수교육 총괄보고 및 BLPNA-DAY</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.15</strong>
+                                                    <span>일차의료 만성질환 간호조무사 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.21</strong>
+                                                    <span>국민의 힘 곽규택 국회의원(서구동구) 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.07</strong>
+                                                    <span>2024년 임상간호조무사협의회 역량강화 워크숍</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.12</strong>
+                                                    <span>BLPNA재난·재능봉사단 “4차 플로깅”</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.05</strong>
+                                                    <span>2024년 하반기 환경캠페인 및 문화탐방</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.01</strong>
+                                                    <span>간호조무사 국가시험 응시자격 학력제한 해소 토론회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.31</strong>
+                                                    <span>“파독 광부, 간호사, 간호조무사 어디로 가야하나” 정책 세미나</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.26</strong>
+                                                    <span>간호조무사 근로환경개선을 위한 전문가 좌담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.04</strong>
+                                                    <span>제16회 여성인권영화제</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.13</strong>
+                                                    <span>제51주년 창립기념식 및 간호조무사 아카데미</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.04</strong>
+                                                    <span>경남정보대학교 평생교육원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.02</strong>
+                                                    <span>2024년 상반기 환경캠페인 및 문화탐방</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.08</strong>
+                                                    <span>온천1동 어르신 경로잔치 카네이션 전달식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.07</strong>
+                                                    <span>부산노인복지관 카네이션 전달</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.30</strong>
+                                                    <span>세상에 하나밖에 없는 카네이션 만들기</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.07</strong>
+                                                    <span>2024년 법정보수교육 보고 및 임직원 연수</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.06</strong>
+                                                    <span>김대식(국민의 힘, 사상구) 후보 회원간담회 및 지지선언</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.05</strong>
+                                                    <span>노정현(민주당진보당, 연제구) 단일후보 선거사무소 내방</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.04</strong>
+                                                    <span>김미애(국민의 힘, 해운대구을) 후보 유세현장 방문</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.02</strong>
+                                                    <span>노정현(민주당진보당, 연제구) 단일후보 유세현장 방문</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.01</strong>
+                                                    <span>조경태(국민의 힘, 사하구을) 후보 회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.01</strong>
+                                                    <span>㈜착한전문장례식장 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.31</strong>
+                                                    <span>전재수(더불어민주당, 북구강서구갑) 후보 유세현장 지지</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.29</strong>
+                                                    <span>박수영 남구 후보 선거사무실 내방</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.28</strong>
+                                                    <span>박재호 남구 후보 선거사무실 내방</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.25</strong>
+                                                    <span>BLPNA 재능·재난 봉사단 운영위원회 회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.09</strong>
+                                                    <span>전재수 국회의원 회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.02</strong>
+                                                    <span>김미애 국회의원 선거 캠프 개소식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.27</strong>
+                                                    <span>각·구분회 임원 회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.27</strong>
+                                                    <span>전재수 국회의원 차담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.17</strong>
+                                                    <span>제50차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.16</strong>
+                                                    <span>인제대학교 대학원 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.10</strong>
+                                                    <span>조명희 국회의원 북콘서트</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.08</strong>
+                                                    <span>강기윤 국회의원 의정 토크 행사</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.06</strong>
+                                                    <span>김미애 국회의원 의정 보고회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.05</strong>
+                                                    <span>박대출 국회의원 의정 보고회</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2023</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2023">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.18</strong>
+                                                    <span>2024년 보수교육 활성화 방안 논의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.16</strong>
+                                                    <span>조정훈 북콘서트</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.14</strong>
+                                                    <span>2023년 법정보수교육 평가회 및 BLPNA-DAY</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.24</strong>
+                                                    <span>부산시의회 교육위원 김창석 의원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.19</strong>
+                                                    <span>박재호 국회의원 간담회</span>
+                                                </div>    
+                                                <div class="txt_box">
+                                                    <strong class="month">11.18</strong>
+                                                    <span>박재호 국회의원 북콘서트</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">10.30~11.04</strong>
+                                                    <span>LPN봉사단 해외봉사활동(캄보디아 씨엠립)</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">10.29</strong>
+                                                    <span>2023년 환경캠페인 및 하반기 문화탐방</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">10.21</strong>
+                                                    <span>BLPNA 재난·재능 봉사단 플로깅</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">10.17</strong>
+                                                    <span>2023년 임상간호조무사협의회 역량강화 워크숍</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">09.22~12.01</strong>
+                                                    <span>조정훈 국회의원 토크 콘서트</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">09.13</strong>
+                                                    <span>2040 간호조무사 차세대리더 동아리 발대식</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">09.09</strong>
+                                                    <span>전재수 국회의원 출판 기념회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">08.22</strong>
+                                                    <span>더불어민주당 부산시당 위원장 간담회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">07.20</strong>
+                                                    <span>제50주년 창립기념행사 및 간호조무사 아카데미</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">07.09</strong>
+                                                    <span>백종헌 국회의원 차담회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">06.15</strong>
+                                                    <span>창립 50주년 기념 국회 사진 전시회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">06.03</strong>
+                                                    <span>2023년 환경캠페인 및 상반기 문화탐방</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">05.22</strong>
+                                                    <span>2023년 법정보수교육 사회자 스피치 트레이닝</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">05.15</strong>
+                                                    <span>3개 보건복지의료연대 총선기획단 출범식</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">05.11</strong>
+                                                    <span>조정훈 국회의원 차담회 / 간호법·면허박탈법 폐기 전국 2차 연가투쟁</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">05.10</strong>
+                                                    <span>부산치과의사회, 부산시간호조무사회 간담회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">05.08</strong>
+                                                    <span>간호법 저지 릴레이 단식시위</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">05.03</strong>
+                                                    <span>간호법·면허박탈법 강행처리 민주당 퇴출 400만 보건복지의료연대 규탄대회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">04.30</strong>
+                                                    <span>2023년 법정보수교육 사회자 및 교육인력 역량 강화 교육</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.25</strong>
+                                                    <span>간호법 저지 전국간호조무사 대표자 연가투쟁</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.23</strong>
+                                                    <span>2023년 법정보수교육 보고 및 임원 연수</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.20</strong>
+                                                    <span>‘학력제한 폐지없는 간호법 결사반대’ 기자회견</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.16</strong>
+                                                    <span>대한민국 의료 바로세우기 보건복지의료연대 총궐기대회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.12</strong>
+                                                    <span>2030 세계박람회 유치 서명지 전달식 및 박형준 부산시장 환담회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.08</strong>
+                                                    <span>간호법저지를 위한 보건복지의료연대 긴급 합동 이사회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">03.28</strong>
+                                                    <span>2030 부산세계박람회 유치 지지 서명지 전달</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">03.23</strong>
+                                                    <span>간호법 제정 반대 국회앞 1인 시위</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">02.26</strong>
+                                                    <span>간호법·의료인면허법 강행처리 규탄 보건복지의료연대 400만 총궐기대회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">02.25</strong>
+                                                    <span>제49차 정기대의원 총회</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">02.23~03.30</strong>
+                                                    <span>간호법 강행 김민석 국회의원 지역사무실 1인 시위</span>
+                                                </div>  
+                                                <div class="txt_box">
+                                                    <strong class="month">02.09</strong>
+                                                    <span>간호단독법 제정반대 기자회견 및 집회</span>
+                                                </div>                                               
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2022</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2022">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.14</strong>
+                                                    <span>법정보수교육 총괄보고 및 각·구별보고 평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.09</strong>
+                                                    <span>체리동산(장애인주간보호시설) 어울림송년음악회 - 감사패 수상</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.08</strong>
+                                                    <span>각·구 분회장 회의 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.06</strong>
+                                                    <span>하반기 회원 문화탐방 - 산청 동의보감촌</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.28</strong>
+                                                    <span>임상간호조무사협의회 하반기 역량강화 워크숍</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.22</strong>
+                                                    <span>메타한방병원 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.26</strong>
+                                                    <span>BLPNA재난·재능봉사단 회의 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.23</strong>
+                                                    <span>김도읍 국회의원 법사위원장 - 정책 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.22</strong>
+                                                    <span>한국간호조무사 노동조합 부산지역지부 총회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.15</strong>
+                                                    <span>부산시노동권익센터 협업 “부산지역 소규모 의료기관 간호조무사 노동실태와 개선방안“ 토론회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.30</strong>
+                                                    <span>법정보수교육 강사 간담회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.21</strong>
+                                                    <span>법정보수교육 교육운영인력 O/T 시작</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.18</strong>
+                                                    <span>상반기 회원 문화탐방 - 산청 동의보감촌</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.09</strong>
+                                                    <span>임상간호조무사협의회 상반기 역량강화 워크숍 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.29</strong>
+                                                    <span>법정보수교육 총괄 준비 및 임직원 연수</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.22</strong>
+                                                    <span>간호단독법 저지 간호조무사·의협 전국 공동 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.19</strong>
+                                                    <span>치과의사회 간호조무사 직무교육 및 구인 관련 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.16</strong>
+                                                    <span>부산의사신협 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.15</strong>
+                                                    <span>간호법저지 김민석 의원(더불어민주당) 지역사무실 1인 시위</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.12</strong>
+                                                    <span>김미애 국회의원 정책 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.29</strong>
+                                                    <span>부산문화여자고등학교 간호조무사 직업 진로 비전 특강</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.27</strong>
+                                                    <span>간호단독법 심의 국회 보건복지위원회 규탄 기자회견</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.19</strong>
+                                                    <span>간호단독법저지 10개 단체 공동비상대책위원회 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.12</strong>
+                                                    <span>2022년 각·구분회 임원진 워크숍 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.11</strong>
+                                                    <span>간호법안저지 릴레이 1인 시위</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.22</strong>
+                                                    <span>제48차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.13~12.12</strong>
+                                                    <span>코로나-19 격려 및 보수교육 활성화방안 각·구별 병원 라운딩</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2021</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2021">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.18</strong>
+                                                    <span>2021년 자격신고 및 법정보수교육 운영 결과 보고</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.10</strong>
+                                                    <span>2021년 부산 재난대응 자원봉사대 정기회의 및 재난워크숍 참석</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.16</strong>
+                                                    <span>간호조무사 노조설립준비위원회 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.15</strong>
+                                                    <span>건양대학교사이버대학 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.18</strong>
+                                                    <span>신세계한방병원 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.02</strong>
+                                                    <span>치과의사회, 간호조무사회 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.29</strong>
+                                                    <span>부산노동권익센터 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.19</strong>
+                                                    <span>2021년 법정보수교육 중점 보고 및 임직원 연수</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.04</strong>
+                                                    <span>부산여자대학교 간호학과 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.29</strong>
+                                                    <span>BLPNA 언택으로 만나는 임상워크숍</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.09</strong>
+                                                    <span>간호법안 관련 유관단체장 면담 - 의사회, 의사회, 치과의사회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.20</strong>
+                                                    <span>제47차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.29</strong>
+                                                    <span>회원 소통 언택트 화상회의</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--//연혁-->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../branch/common/header_pubSample.html", "beforebegin");
+        loadHTML("../branch/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
