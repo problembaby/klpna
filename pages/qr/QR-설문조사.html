@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../../resources/img/logo/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR 출결 | 대한간호조무사협회</title>
+
+    <!-- SEO -->
+    <meta name="author" content="대한간호조무사협회">
+    <meta name="description" content="대한간호주무사협회 QR 출결 시스템 입니다.">
+    <meta name="keywords" content="대한간호조무사협회, 간호주무사, QR출석시스템">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (OG) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="대한간호조무사협회 QR 출결">
+    <meta property="og:description" content="대한간호조무사협회 QR 출결 시스템 입니다.">
+    <meta property="og:image" content="[대표 이미지 경로]">
+    <meta property="og:url" content="[페이지 URL]">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="대한간호조무사협회 QR 출결">
+    <meta name="twitter:description" content="대한간호조무사협회 QR 출결 시스템 입니다.">
+    <meta name="twitter:image" content="[대표 이미지 경로]">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+    <link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css" />
+    <link rel="stylesheet" href="../../resources/css/setting/qr_custom.css" />
+
+    <!--js-->
+    <script src="../../resources/js/jquery-3.7.1.min.js"></script>
+    <script src="../../resources/krds/js/pattern/pattern.js" defer></script>
+    <script src="../../resources/krds/js/component/ui-script.js" defer></script>
+
+    <script>
+        $(document).ready(function () {
+            // 모바일 메뉴 열기/닫기 토글
+            $('.mob-menu').on('click', function () {
+                $('.right-menu-panel').addClass('expand');
+                $('.bg-right-menu').fadeIn();
+                $('body').addClass('scroll-no');
+            });
+            $('.btn-close, .bg-right-menu').on('click', function () {
+                $('.right-menu-panel').removeClass('expand');
+                $('.bg-right-menu').fadeOut();
+                $('body').removeClass('scroll-no');
+            });
+        });
+
+        // textarea 글자 수 카운트 (최대 100)
+		window.updateTextareaCount = function (textareaEl) {
+			const $textarea = $(textareaEl);
+			const $countNowEl = $textarea.closest('.form-conts').find('.count-now');
+			if (!$countNowEl.length) return;
+
+			let value = $textarea.val();
+			if (value.length > 100) {
+				value = value.substring(0, 100);
+				$textarea.val(value);
+			}
+			$countNowEl.text(value.length);
+		};
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="wrap" id="mob-fixed">
+        <div class="mob-inner">
+
+            <header>
+                <div class="header-nav">
+                    <h1 class="header-nav-title">설문조사</h1>
+                    <button type="button" class="mob-menu" aria-expanded="false" title="메뉴열림">
+                        <span class="sr-only">전체메뉴</span>
+                    </button>
+
+                </div>
+            </header>
+
+
+            <div class="container">
+                <div class="mob-servey servey-cont">
+                    <div class="servey-banner">
+                        <div class="img">
+                            <img src="../../resources/img/qr/img-survey.svg" alt="설문이미지">
+                        </div>
+                        <div class="msg-group">
+                            <h3 class="msg-group-h3 mb5">홍*동 님께서는 교육 수강을 완료하였습니다.</h3>
+                            <p class="fs-16">더 좋은 교육을 위해 간단한 설문조사를 진행하고 있습니다.</p>
+                            <p class="fs-16">퇴실 처리를 위해 설문조사에 참여해 주세요.</p>
+                            <p class="fs-16 fc-blue fw-normal mt5">설문조사 완료 시 퇴실 처리가 완료됩니다.</p>
+                            <p class="fc-gray fs-13 mt5">(소요시간 약 5분)</p>
+                        </div>
+                    </div>
+
+                    <div class="survey-contents">
+
+                        <!--설문 : 라디오 -->
+                        <sectioin class="survey-section">
+                            <div class="servey-question">
+                                <p class="qna">1. 강의 내용이 현장 실무에 도움이 되셨는지요.</p>
+                                <span class="req">*</span>
+                            </div>
+                            <div class="survey-options-area">
+                                <ul class="survey-option-list">
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_1_1">
+                                            <label for="rdo_1_1">매우만족</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_1_2">
+                                            <label for="rdo_1_2">만족</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_1_3">
+                                            <label for="rdo_1_3">모름</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_1_4">
+                                            <label for="rdo_1_4">불만족</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="radio" name="rdo_1" id="rdo_1_5">
+                                            <label for="rdo_1_5">매우 불만족</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </sectioin>
+
+                        <!--설문 : 체크박스 -->
+                        <sectioin class="survey-section">
+                            <div class="servey-question">
+                                <p class="qna">2. 강의 내용이 현장 실무에 도움이 되셨는지요.</p>
+                                <span class="chk-vail">(중복체크가능)</span>
+                            </div>
+                            <div class="survey-options-area">
+                                <ul class="survey-option-list">
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_1_1">
+                                            <label for="chk_1_1">선택1</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_1_2">
+                                            <label for="chk_1_2">선택2</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_1_3">
+                                            <label for="chk_1_3">선택3</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_1_4">
+                                            <label for="chk_1_4">선택4</label>
+                                        </div>
+                                    </li>
+                                    <li class="survey-option-item">
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="chk_1" id="chk_1_5">
+                                            <label for="chk_1_5">선택5</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </sectioin>
+
+
+                        <!--설문 : 서술형 -->
+                        <sectioin class="survey-section">
+                            <div class="servey-question">
+                                <p class="qna">3. 강의 내용이 현장 실무에 도움이 되셨는지요.</p>
+                            </div>
+                            <div class="survey-options-area">
+                                <div class="survey-option-textarea form-conts">
+                                    <textarea name="" id="content" class="krds-input"
+                                        oninput="updateTextareaCount(this)"></textarea>
+                                    <p class="form-hint-invalid" style="display: none;">내용을 입력해주세요</p>
+                                    <input type="file" id="q_file_input" multiple style="display:none;"
+                                        onchange="handleFileSelect(this)" />
+                                    <p class="textarea-count">
+                                        <span class="count-now">0</span><span class="count-total">/100</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </sectioin>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 고정 버튼 영역 -->
+            <div class="fix-btn-wrap">
+                <div class="fbw-inner">
+                    <button class="krds-btn medium"><i class="ico-write"></i>설문조사 및 퇴실 하기</button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- 모바일 메뉴 레이아웃  mob-menu expand 클릭시 토글 되는 영역-->
+        <div class="right-menu-panel">
+            <div class="right-menu-wrap">
+                <div class="right-menu-title">
+                    <p class="right-menu-p">안녕하세요.</p>
+                    <h4 class="right-menu-title-h4">
+                        <span class="name">홍길동 님,</span> 환영합니다.
+                    </h4>
+                </div>
+                <ul class="right-menu-list">
+                    <li>
+                        <a href="#" title="페이지 이동" class="left-menu-a">
+                            <div class="left">
+                                <i class="ico-mok"></i>
+                                <p>교육목록</p>
+                            </div>
+                            <i class="svg-icon ico-angle right"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" title="페이지 이동" class="left-menu-a">
+                            <div class="left">
+                                <i class="ico-logout"></i>
+                                <p>로그아웃</p>
+                            </div>
+                            <i class="svg-icon ico-angle right"></i>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!--닫기-->
+                <button type="button" class="krds-btn medium icon btn-close right-menu-pos">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-right-menu"></div>
+
+        <!-- //모바일 메뉴 레이아웃-->
+
+    </div>
+</body>
+
+</html>
