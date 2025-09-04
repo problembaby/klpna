@@ -55,6 +55,50 @@ body.scroll-no {
     height:24px;
 }
 
+
+.ico-chk::before{
+    content:"";
+    display: block;
+    background: url(../../img/qr/ico-chk.svg);
+    width: 25px;
+    height:24px;
+}
+
+.ico-write::before{
+    content:"";
+    display: block;
+    background: url(../../img/qr/ico-write.svg);
+    width: 25px;
+    height:24px;
+}
+
+.ico-smail::before{
+    content:"";
+    display: block;
+    background: url(../../img/qr/ico-smail.svg);
+    width: 25px;
+    height:24px;
+}
+.ico-complete::before{
+    content:"";
+    display: block;
+    background: url(../../img/qr/ico-complete.svg);
+    width: 18px;
+    height:19px;
+}
+.ico-false::before{
+    content:"";
+    display: block;
+    background: url(../../img/qr/ico-false.svg);
+    width: 18px;
+    height:19px;
+}
+
+
+
+
+
+
 .left-menu-a{width: 100%; display: flex; border-radius: 10px;
 border: 1px solid var(--color-border-nomal, #C6C6C6); padding:20px }
 .left-menu-a .left{width: 100%; display: flex; gap:10px}
@@ -102,8 +146,6 @@ border: 1px solid var(--color-border-nomal, #C6C6C6); padding:20px }
 }
 
 
-
-
 /** 헤더  **/
 
 .mob-inner {
@@ -112,18 +154,18 @@ border: 1px solid var(--color-border-nomal, #C6C6C6); padding:20px }
     margin: 0 auto;
     padding: 0;
     background-color: #fff;
-    padding-bottom:40px
+    padding-bottom:200px;
+    min-height: 100vh;
 }
 
 header .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:20px
+    padding:10px 20px;
+    border-bottom: 1px solid #CDD1D5;
 
 }
-
-
 
 /** 교육정보*/
 .header-nav-title {
@@ -295,6 +337,19 @@ line-height: 120%; /* 16.8px */ }
 
 .right-menu-p{color:#0050CA; font-weight: 600;}
 
+.fix-btn-wrap{position:fixed; bottom:0; left:0; width:100%; padding:10px; background-color: #fff; z-index: 10;}
+.fix-btn-wrap .fbw-inner{max-width: 1024px; margin: 0 auto; padding:0 5px;}
+.fix-btn-wrap > .fbw-inner > button{width: 100%;}
+
+.app-edu-list{display: flex; flex-direction: column; gap:10px; padding:10px}
+.ael-edu-card{border-radius: 10px;
+border: 1px solid var(--color-border-nomal, #C6C6C6); padding:10px}
+.ael-edu-title{font-size:18px;}
+
+.mob-servey{padding:20px 10px}
+
+.mob-servey .survey-contents .survey-section{border-bottom: 1px solid var(--color-border-nomal, #C6C6C6);}
+.mob-servey .survey-contents .survey-section:last-child{border-bottom: 0;}
 
 @media (max-width: 1023px) {
 .lec-detail-list.qr > li {
@@ -303,6 +358,18 @@ line-height: 120%; /* 16.8px */ }
 }
 
 @media (max-width: 767px) {
+.mob-servey .servey-banner .img {
+    display: block;
+}
+    .servey-cont.mob-servey .servey-banner {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--color-bg-secondary, #F7F8FB);
+    flex-direction: column;
+    gap: 10px;
+}
 
     .lec-detail-list.qr li .label {
     display: flex;
