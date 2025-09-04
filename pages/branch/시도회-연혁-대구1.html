@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연혁 - 대구시간호조무사회</title>
+
+    <!-- css -->
+	<link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../resources/css/style.css" />
+	<link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+    <link rel="stylesheet" href="../../resources/css/setting/branch_custom.css" /> <!-- 시도회 커스텀 css -->
+    <link rel="stylesheet" href="../resources/css/contents.css" />
+
+
+	<!--js-->
+	<script src="../../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+	<script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../../resources/krds/js/component/ui-script.js"></script>
+	<script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+	<script src="../../resources/js/script.js"></script>
+	<script src="../../resources/lib/aos/aos.js"></script>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+        <script><!--연혁-->
+            $(function () {
+                $(window).on('load scroll resize', function () {
+                    var scrollTop = $(this).scrollTop() + 400;
+
+                    $(".history_wrap .list > li").filter(function () {
+                        return $(this).offset().top <= scrollTop;
+                    }).addClass('effect').end().filter(function () {
+                        return $(this).offset().top > scrollTop;
+                    }).removeClass('effect');
+                });
+            });
+                
+            $.fn.classtoggle = function (options) {
+                var settings = $.extend
+                    ({
+                        'classname': 'active',     // 추가할 클래스명
+                    },
+                        options);
+            };
+        </script>
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">협회안내</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">인사말</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">연혁</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">주요사업</a>
+                        </li>
+                        <li class="lnb-item ">
+                            <a href="#" class="lnb-btn link">조직도</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">시도회</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">오시는 길</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">시도회소개</a></li>
+                            <li><a href="#;" class="txt">연혁</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">연혁</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap sido_search">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="form-tit">
+                                        <label for="local-option">전국시도회</label>
+                                    </div>
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="local-option">
+                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <optionvalue="서울시">서울시간호조무사회</optionvalue=>
+                                            <option value="부산시">부산시간호조무사회</option>
+                                            <option selected="selected"  value="대구시">대구시간호조무사회</option>
+                                            <option value="인천시">인천시간호조무사회</option>
+                                            <option value="광주전남">광주전남간호조무사회</option>
+                                            <option value="대전충남">대전충남간호조무사회</option>
+                                            <option value="울산경남">울산경남간호조무사회</option>
+                                            <option value="경기도">경기도간호조무사회</option>
+                                            <option value="강원도">강원도간호조무사회</option>
+                                            <option value="충청북도">충청북도간호조무사회</option>
+                                            <option value="전북도">전북도간호조무사회</option>
+                                            <option value="경상북도">경상북도간호조무사회</option>
+                                            <option value="제주도">제주도간호조무사회</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                                <div class="guide">
+                                    각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+                    <div class="sub-content">
+                        <!--연혁-->
+                        <div id="contents_body">
+                            <div id="depth4_menu_div" class="depth4_tab_sido">
+                                <ul id="depth4_menu_ul">
+                                    <li class="active"><a href="시도회-연혁-대구1.html" title="활성 메뉴">2021-현재</a></li>
+                                    <li class="last "><a href="시도회-연혁-대구2.html" title="비활성 메뉴">1973-2020</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="history_wrap">
+                                <ol class="list">   
+                                    <li class="">
+                                        <div class="year_box">
+                                            <b class="year">2025</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2025">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">06.13</strong>
+                                                    <span>한국 나눔연맹 천사의 집 봉사활동</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.28.~연중</strong>
+                                                    <span>시군구 분회 간담회(7개 시군구)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05,24~25</strong>
+                                                    <span>임상 실무보수교육(욕창 간호 시작)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.22</strong>
+                                                    <span>제21대 대통령선거 경청 간담회(더불어민주당 대구시당)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.14</strong>
+                                                    <span>대한치과의사협회 국제종합 학술대회 참여</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.01</strong>
+                                                    <span>대구시간호조무사회 제16대 지현영회장 취임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.24</strong>
+                                                    <span>제51차 정기대의원총회 회장단, 감사 선출</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.21</strong>
+                                                    <span>영진전문대학교 방문간호 8기 수료식</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2024</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2024">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.27</strong>
+                                                    <span>한국 나눔연맹 천사의 집 후원금 전달</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.21</strong>
+                                                    <span>보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.24</strong>
+                                                    <span>영남이공대학교 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.18</strong>
+                                                    <span>한국 나눔연맹 천사의 집 봉사활동</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.10</strong>
+                                                    <span>간호 간병 통합병동 회원간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.12</strong>
+                                                    <span>한국 나눔연맹 천사의 집 봉사활동</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.02~08</strong>
+                                                    <span>총선지지 운동(7개 구)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.26</strong>
+                                                    <span>대한적십자사 대구지사 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.02</strong>
+                                                    <span>간호조무사 처우개선 적임자 조명희의원 지지 선언</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.23</strong>
+                                                    <span>제50차 정기대의원총회</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2023</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2023">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.21</strong>
+                                                    <span>한국 나눔연맹 천사의 집 후원금 전달</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.25</strong>
+                                                    <span>보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.23</strong>
+                                                    <span>국회의원 토크콘서트(조정훈 의원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.17</strong>
+                                                    <span>지역 의료사각지대 해소와 주민 생활 기반 시설 개선 토론회 참석(조명희의원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.21</strong>
+                                                    <span>총선 대책본부 제1차 회의</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">09.20</strong>
+                                                    <span>14개 보건의료연대 단체장 연석회의</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">08.25</strong>
+                                                    <span>13개 보건의료 단체 연석회의</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">05.15</strong>
+                                                    <span>간호사 특혜법 반대 및 더불어민주당 범시민 규탄대회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">05.11</strong>
+                                                    <span>13개 보건복지 의료연대와 시민들의 만남</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">05.03</strong>
+                                                    <span>더불어민주당 입법 독재 규탄 및 400만 보건복지 의료연대 총선기획단 출범식</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.25</strong>
+                                                    <span>간호법 저지 전국간호조무사 대표자 연가 투쟁</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">04.16</strong>
+                                                    <span>간호법. 의료인 면허 저지 400만 보건복지 의료연대 총파업 결의대회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">03.08~30</strong>
+                                                    <span>간호사 법 강행처리 주도한 1인시위</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">02.26</strong>
+                                                    <span>간호법. 의료인 면허법 강행처리 규탄 보건복지 의료연대 400만 총궐기대회</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">02.22</strong>
+                                                    <span>제49차 정기대의원총회</span>
+                                                </div>                                         
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2022</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2022">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.29</strong>
+                                                    <span>영진전문대학교 방문간호 6기 수료식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.27</strong>
+                                                    <span>간호법 제정 저지를 위한 보건복지 의료연대 충 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.21</strong>
+                                                    <span>보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.15</strong>
+                                                    <span>간호법 저지 보건의료연대 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.25</strong>
+                                                    <span>간호법 저지 화요집회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.28</strong>
+                                                    <span>한국간호조무사노동조합 대구지역지부 결성</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.05</strong>
+                                                    <span>역사회 통합돌봄 간호조무사 활용 선도기관 MOU 체결(대구시회, 진명요양원, 영진전문대학교, 영진방문간호 동창회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.22</strong>
+                                                    <span>간호법 저지 보건의료연대 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.16~31</strong>
+                                                    <span>병원 간호조무사회 간담회(동산병원, 파티마병원, 영남의료원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.15</strong>
+                                                    <span>간호법 저지 결의대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.13~16</strong>
+                                                    <span>간호법 저지 김민석 국회의원 사무실 앞 1인시위</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.19</strong>
+                                                    <span>간호 단독법 저지 10개 단체 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.07</strong>
+                                                    <span>간호법 저지 10개 단체 공동궐기대회 집회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.28</strong>
+                                                    <span>영진전문대학교 5기 수료식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.24</strong>
+                                                    <span>제48차 정기대의원총회 제15대 회장단 선출(연임)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.06</strong>
+                                                    <span>대한민국대전환 선대위 공정 보건의료특보단 정책간담회</span>
+                                                </div>                                             
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2021</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2021">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.29</strong>
+                                                    <span>사회복지공동모금회 2백만원(대구 남구청)기부</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.21</strong>
+                                                    <span>대구보건대학교 MOU 체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.24</strong>
+                                                    <span>대구시간호조무사회 노조설립 준비 위원회 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2021.08~2025.11</strong>
+                                                    <span>일반 치매 전문교육, 방문간호 치매 전문교육</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.05</strong>
+                                                    <span>영진전문대학교 방문간호 4기 수료식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.10</strong>
+                                                    <span>임상 실무보수교육 시작(정맥주사)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.01.~08</strong>
+                                                    <span>간호법안에 대한 입장 간담회(달성군.동구갑, 동구을 국회의원)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.10.~15</strong>
+                                                    <span>간호법안에 대한 입장 간담회(의사회,치과의사회, 한의사회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.24</strong>
+                                                    <span>제47차 정기대의원총회(비대면 화상)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--//연혁-->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../branch/common/header_pubSample.html", "beforebegin");
+        loadHTML("../branch/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
