@@ -30,21 +30,21 @@
 .ico-main-notice::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-main-notice.svg)no-repeat;
+    background: url(../../img/society/ico-main-notice.svg)no-repeat;
     width: 16px;
     height: 19px;
 }
 .ico-main-doc::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-mian-doc.svg)no-repeat;
+    background: url(../../img/society/ico-mian-doc.svg)no-repeat;
     width: 21px;
     height: 21px;
 }
 .ico-main-doc2::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-mian-doc2.svg)no-repeat;
+    background: url(../../img/society/ico-mian-doc2.svg)no-repeat;
     width: 16px;
     height: 16px;
 }
@@ -52,63 +52,63 @@
 .ico-certi01::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi01.svg)no-repeat;
+    background: url(../../img/society/ico-certi01.svg)no-repeat;
     width: 45px;
     height: 41px;
 }
 .ico-certi02::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi02.svg)no-repeat;
+    background: url(../../img/society/ico-certi02.svg)no-repeat;
     width: 38px;
     height: 45px;
 }
 .ico-certi03::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi03.svg)no-repeat;
+    background: url(../../img/society/ico-certi03.svg)no-repeat;
     width: 43px;
     height: 45px;
 }
 .ico-certi04::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-certi04.svg)no-repeat;
+    background: url(../../img/society/ico-certi04.svg)no-repeat;
     width: 37px;
     height: 37px;
 }
-.ico-license::before{
+.ico-society::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-license.svg)no-repeat;
+    background: url(../../img/society/ico-society.svg)no-repeat;
     width: 20px;
     height: 21px;
 }
-.ico-license-location::before{
+.ico-society-location::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-location.svg)no-repeat;
+    background: url(../../img/society/ico-location.svg)no-repeat;
     width: 20px;
     height: 21px;
 }
 .ico-gov::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-gov.png)no-repeat;
+    background: url(../../img/society/ico-gov.png)no-repeat;
     width: 14px;
     height: 14px;
 }
 .ico-report::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-report.svg)no-repeat;
+    background: url(../../img/society/ico-report.svg)no-repeat;
     width: 90px;
     height: 91px;
 }
 .ico-report-chk::before{
      display: block;
     content:"";
-    background: url(../../img/license/ico-report-chk.svg)no-repeat;
+    background: url(../../img/society/ico-report-chk.svg)no-repeat;
     width: 90px;
     height: 91px;
 }
@@ -119,17 +119,17 @@
     width: 18px;
     height: 18px;
 }
-.ico-license-apply-01::before{
+.ico-society-apply-01::before{
      display: block;
     content:"";
-    background: url(../../img/icon/ico-license-apply-01.svg)no-repeat;
+    background: url(../../img/icon/ico-society-apply-01.svg)no-repeat;
     width: 65px;
     height: 62px;
 }
-.ico-license-apply-02::before{
+.ico-society-apply-02::before{
      display: block;
     content:"";
-    background: url(../../img/icon/ico-license-apply-02.svg)no-repeat;
+    background: url(../../img/icon/ico-society-apply-02.svg)no-repeat;
     width: 61px;
     height: 62px;
 }
@@ -1383,7 +1383,7 @@ padding:20px;
 .ico-chk-pp::before{
     content: "";
     display: block;
-    background:url(../../img/license/ico-chk-pp.svg);
+    background:url(../../img/society/ico-chk-pp.svg);
     width:24px;
     height:25px;
     margin-right:16px
@@ -1467,28 +1467,28 @@ line-height: 150%; /* 24px */  }
 .ico-appl-action::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-action.svg)no-repeat;
+    background: url(../../img/society/ico-wayStep-action.svg)no-repeat;
     width:22px;
     height:28px
 }
 .ico-appl-flow::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-flow.svg)no-repeat;
+    background: url(../../img/society/ico-wayStep-flow.svg)no-repeat;
     width:21px;
     height:22px
 }
 .ico-appl-none::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-none.svg)no-repeat;
+    background: url(../../img/society/ico-wayStep-none.svg)no-repeat;
     width:21px;
     height:20px
 }
 .ico-appl-end::before{
     content:"";
     display: block;
-    background: url(../../img/license/ico-wayStep-end.svg)no-repeat;
+    background: url(../../img/society/ico-wayStep-end.svg)no-repeat;
     width:21px;
     height:20px
 }
@@ -1565,20 +1565,20 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url(../../img/license/ico-file2.svg) no-repeat;
+    background: url(../../img/society/ico-file2.svg) no-repeat;
     background-size: 100%;
 }
 
 .ico-mypage::before {
     content: "";
-    background: url(../../img/license/ico-mypage.svg)no-repeat;
+    background: url(../../img/society/ico-mypage.svg)no-repeat;
     width: 25px;
     height: 24px;
     display: block;
 }
 
-.ico-blue-home::before{content: ""; background: url(../../img/license/ico-blueHome.svg)no-repeat; width: 25px; height:24px; display: block;}
-.depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/license/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
+.ico-blue-home::before{content: ""; background: url(../../img/society/ico-blueHome.svg)no-repeat; width: 16px; height:16px; display: block;}
+.depth01 .gnb-main-trigger.active::before {display: block; content: ""; background: url(../../img/society/ico-menu-action.svg)no-repeat; width: 19px; height: 8px; position: absolute; top:-5px; left:50%; transform: translateX(-50%);}
 
 /* 기본 상태 - before 숨김 */
 .depth01 .gnb-main-trigger::before {
@@ -1589,7 +1589,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
   transform: translateX(-50%) translateY(0);
   width: 19px;
   height: 8px;
-  background: url(../../img/license/ico-menu-action.svg) no-repeat;
+  background: url(../../img/society/ico-menu-action.svg) no-repeat;
   opacity: 0;
   pointer-events: none;
   transition: none;
@@ -1599,7 +1599,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     content: "";
     display: inline-block;
     margin-right: 5px;
-    background: url(../../img/license/ico-notice.svg)no-repeat center;
+    background: url(../../img/society/ico-notice.svg)no-repeat center;
     width: 19px;
     height: 18px;
 }
@@ -1607,7 +1607,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 .ico-loginBtn02::before {
     content: "";
     display: block;
-    background: url(../../img/license/ico-loginBtn02.svg)no-repeat center;
+    background: url(../../img/society/ico-loginBtn02.svg)no-repeat center;
     width: 38px;
     height: 29px;
 }
@@ -1615,7 +1615,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 .ico-loginBtn01::before {
     content: "";
     display: block;
-    background: url(../../img/license/ico-loginBtn01.svg)no-repeat center;
+    background: url(../../img/society/ico-loginBtn01.svg)no-repeat center;
     width: 29px;
     height: 32px;
 }
@@ -1874,7 +1874,7 @@ align-self: stretch;
 
 .lic-loc-title{display: flex; align-items: center; gap:0 7px; flex-wrap: wrap;}
 
-.license-report-area{width: 100%; text-align: center; margin-top: 50px;}
+.society-report-area{width: 100%; text-align: center; margin-top: 50px;}
 .lic-rep-p{
     color: var(--gray-gray-90, #1D1D1D);
     font-size: 18px;
@@ -1882,7 +1882,7 @@ align-self: stretch;
     margin:30px 0;
 }
 
-.license-report-wrap {
+.society-report-wrap {
     width: 100%;
     display: flex;
     align-items: center;
@@ -1892,17 +1892,17 @@ align-self: stretch;
     margin:0 auto;
      gap: 20px 0;
 }
-.license-report-wrap > li{flex: 1 0 50%; display: flex; justify-content: center;}
+.society-report-wrap > li{flex: 1 0 50%; display: flex; justify-content: center;}
 .btn-report{width: 400px; height:200px; display: flex; align-items: center; justify-content: center; 
     flex-direction: column; gap:20px;
     border-radius: 8px;
-    border: 2px solid var(--color-license, #418200);
+    border: 2px solid var(--color-society, #418200);
 }
 .btn-report.green{
-    background: var(--color-license, #418200);
+    background: var(--color-society, #418200);
 }
 .btn-report.white{
-    background: var(--color-license, white);
+    background: var(--color-society, white);
 }
 
 .btn-report .text{
@@ -1976,13 +1976,13 @@ line-height: 150%; /* 27px */
     margin-bottom: 10px;
 }
 
-.license-appl-Btnbox{display: flex; max-width:800px; margin:0 auto; align-items: center; justify-content: center; gap:30px; padding:40px 0;}
-.license-appl-Btnbox > li{width: 100%; flex:1 auto}
-.license-appl-Btnbox li .appl-alink-btn{width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;
-border: 1px solid var(--color-license, #418200);
+.society-appl-Btnbox{display: flex; max-width:800px; margin:0 auto; align-items: center; justify-content: center; gap:30px; padding:40px 0;}
+.society-appl-Btnbox > li{width: 100%; flex:1 auto}
+.society-appl-Btnbox li .appl-alink-btn{width: 100%; display: flex; align-items: center; justify-content: center; border-radius: 8px;
+border: 1px solid var(--color-society, #418200);
 background: #FFF; padding:20px; height:140px; gap:20px}
-.license-appl-Btnbox li .appl-alink-btn .text{
-    color: var(--color-license, #418200);
+.society-appl-Btnbox li .appl-alink-btn .text{
+    color: var(--color-society, #418200);
 text-align: center;
 font-size: 18px;
 font-style: normal;
@@ -1991,7 +1991,7 @@ line-height: 150%; /* 27px */
 display: flex; align-items: center;
 }
 
-.license-appl-Btnbox li .appl-alink-btn .text .svg-icon{
+.society-appl-Btnbox li .appl-alink-btn .text .svg-icon{
     background-color: #418200;
 }
 
@@ -2448,25 +2448,25 @@ body.edu-appl-step03 .step02 {
     padding-left: 0;
     padding-bottom: 20px;
 }
-.license-appl-Btnbox{flex-direction: column;   gap: 16px;}
+.society-appl-Btnbox{flex-direction: column;   gap: 16px;}
 .appl-title-img{display: none;}
-.license-appl-Btnbox li .appl-alink-btn {
+.society-appl-Btnbox li .appl-alink-btn {
     padding: 20px;
     height: 90px;
 }
 
-.license-appl-Btnbox .ico-license-apply-01::before {
+.society-appl-Btnbox .ico-society-apply-01::before {
     display: block;
     content: "";
-    background: url(../../img/icon/ico-license-apply-01.svg)no-repeat;
+    background: url(../../img/icon/ico-society-apply-01.svg)no-repeat;
     width: 45px;
     height: 43px;
     background-size: cover;
 }
-.license-appl-Btnbox .ico-license-apply-02::before {
+.society-appl-Btnbox .ico-society-apply-02::before {
     display: block;
     content: "";
-    background: url(../../img/icon/ico-license-apply-02.svg)no-repeat;
+    background: url(../../img/icon/ico-society-apply-02.svg)no-repeat;
     width: 41px;
     height: 43px;
     background-size: cover;
