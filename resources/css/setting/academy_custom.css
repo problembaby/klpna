@@ -1944,6 +1944,30 @@ font-weight: 400;
 line-height: 150%; }
 .egl-conf-list li .text{font-size: 16px;}
 
+.card-list-items .card-box .card-img a{display: block; width: 100%; position: relative;}
+.card-list-items .card-box .card-img .edu-type {
+    position: absolute;
+    border-radius: 10px 0;
+    background: #2A2D2F;
+    min-width: 54px;
+    width:auto;
+    height: 25px;
+    flex-shrink: 0;
+    color: #fff;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding:0 10px
+}
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
