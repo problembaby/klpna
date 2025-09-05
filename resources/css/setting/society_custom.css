@@ -271,7 +271,7 @@ letter-spacing: -0.64px;
 #krds-header .header-container .header-actions{margin: 0 auto;}
 .login-box, .guest-box { background: #418200; }
 .guest-btn-list a.krds-btn {
-    color: #414189;
+    color: #1C1CB9;
 }
 .login-noti .bold {
     color: #fdff80;
@@ -450,8 +450,8 @@ line-height: 22px; /* 137.5% */}
 
 .krds-btn.blue {
     background-color: #fff;
-    border-color: #414189;
-    color: #414189;
+    border-color: #1C1CB9;
+    color: #1C1CB9;
 }
 
 
@@ -520,8 +520,8 @@ background: var(--gray-gray-5, #F8F8F8);
 }
 
 .krds-btn {
-    background-color: #414189;
-    border-color:#414189;
+    background-color: #1C1CB9;
+    border-color:#1C1CB9;
     color: var(--krds-button--color-primary-text);
 }
 
@@ -1125,10 +1125,12 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 .div-expand{display: none;}
 
 .krds-btn:hover {
-    background-color: #414189;
+    background-color: #2d2da5;
+    color:#fff;
 }
 .krds-btn:active, .krds-btn:focus {
-    background-color: #1f3b03;
+    background-color: #2d2da5;
+    color:#fff;
 }
 
 
