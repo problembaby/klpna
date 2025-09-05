@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../../../resources/krds/css/pattern/p_layout.css" />
 	<link rel="stylesheet" href="../../../resources/css/style.css" />
 	<link rel="stylesheet" href="../../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../../resources/lib/aos/aos.css">
 	<link rel="stylesheet" href="../../../resources/css/setting/society_custom.css" /> <!-- 학회 커스텀 css -->
 
 
@@ -21,6 +22,7 @@
 	<script defer src="../../../resources/krds/js/component/ui-script.js"></script>
 	<script defer src="../../../resources/krds/js/pattern/pattern.js"></script>
 	<script src="../../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+	<script src="../../resources/lib/aos/aos.js"></script>
 	<script src="../../../resources/js/script.js"></script>
 </head>
 
@@ -298,11 +300,11 @@
 
 					<div class="allmenu-link-list">
 
-						<a href="#" class="krds-btn fc-white">자격신고센터 <i class="svg-icon ico-angle down"></i></a>
+						<a href="#" class="krds-btn fc-white">학회센터 <i class="svg-icon ico-angle down"></i></a>
 						<a href="#" class="krds-btn blue">대한간호조무사협회 <i class="ico-blue-home"></i></a>
 						<a href="#" class="krds-btn blue">보수교육센터 <i class="ico-blue-home"></i></a>
 						<a href="#" class="krds-btn blue">직무교육센터 <i class="ico-blue-home"></i></a>
-						<a href="#" class="krds-btn blue">학회센터 <i class="ico-blue-home"></i></a>
+						<a href="#" class="krds-btn blue">자격신고센터 <i class="ico-blue-home"></i></a>
 					</div>
 
 				</div>
@@ -460,12 +462,20 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/society/main-banner-img.png" alt="메인1">
+									<picture>
+										<!--모바일 이미지 -->
+										<source media="(max-width: 1024px)" srcset="../../resources/img/society/mob-main-banner-img.png">
+										<!--기본 이미지 -->
+										<img src="../../resources/img/society/main-banner-img.png" alt="메인 배너">
+									</picture>
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/society/main-banner-img.png" alt="메인1">
+									<picture>
+										<source media="(max-width: 1024px)" srcset="../../resources/img/society/mob-main-banner-img.png">
+										<img src="../../resources/img/society/main-banner-img.png" alt="메인 배너">
+									</picture>
 								</a>
 							</div>
 						</div>
@@ -545,598 +555,178 @@
 			<!--//메인 섹션2-->
 
 		<!--메인 섹션3-->
-		<section class="mainSection03" id="mainSection03">
-			<div class="inner ">
-				<div class="main-bbs-wrap">
-					<ul class="main-bbs-list branch">
-						<li class="mbl-card-items">
-							<div class="mbl-box">
-								<div class="mbl-box-top">
-									<span class="mbl-badge">
-										<i class="ico-main-notice"></i>
-										<p>공지</p>
-									</span>
-								</div>
-								<a href="#" title="페이지 이동" target="_blank" class="mbl-title a-link">
-									<i class="ico-notice"></i>
-									<p class="title ellipsis-1"> 25-2차 국군수도병원 주관군무경력25-2차 </p>
-								</a>
-								<p class="mbl-text ellipsis-2">
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-								</p>
-								<div class="date">
-									2025.06.12
-								</div>
+			<section class="mainSection03" id="mainSection03">
+				<div class="inner ">
+					<div class="main-bbs-wrap">
+						<div class="notice" data-aos="fade-up" data-aos-delay="300">
+							<div class="notice-top">
+								<h3>공지사항</h3>
+								<a href="#" target="_self" title="공지사항 페이지 이동" class="view-all">전체보기<i
+										class="svg-icon ico-plus"></i></a>
 							</div>
-						</li>
-						<li class="mbl-card-items">
-							<div class="mbl-box">
-								<div class="mbl-box-top">
-									<span class="mbl-badge">
-										<i class="ico-main-notice"></i>
-										<p>공지</p>
-									</span>
-								</div>
-								<a href="#" title="페이지 이동" target="_blank" class="mbl-title a-link">
-									<p class="title ellipsis-1"> 제목이 최대 2줄까지 노출 됩니다. 말 줄임 표시 적용 합니다. </p>
-								</a>
-								<p class="mbl-text ellipsis-2">
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-								</p>
-								<div class="date">
-									2025.06.12
-								</div>
-							</div>
-						</li>
-					</ul>
-					<ul class="main-bbs-list branch">
-						<li class="mbl-card-items">
-							<div class="mbl-box">
-								<div class="mbl-box-top">
-									<span class="mbl-badge">
-										<i class="ico-main-doc"></i>
-										<p>자주하는질문</p>
-									</span>
-								</div>
-								<a href="#" title="페이지 이동" target="_blank" class="mbl-title a-link">
-									<p class="title ellipsis-1"> 제목이 최대 2줄까지 노출 됩니다. 말 줄임 표시 적용 합니다. </p>
-								</a>
-								<p class="mbl-text ellipsis-2">
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-								</p>
-								<div class="date">
-									2025.06.12
-								</div>
-							</div>
-						</li>
-						<li class="mbl-card-items">
-							<div class="mbl-box">
-								<div class="mbl-box-top">
-									<span class="mbl-badge">
-										<i class="ico-main-doc"></i>
-										<p>자주하는질문</p>
-									</span>
-								</div>
-								<a href="#" title="페이지 이동" target="_blank" class="mbl-title a-link">
-									<p class="title ellipsis-2"> 제목이 최대 2줄까지 노출 됩니다. 말 줄임 표시 적용 합니다. </p>
-								</a>
-								<p class="mbl-text ellipsis-2">
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-									25-2차 국군수도병원 주관 전문군무경력관 및 상세 내용
-								</p>
-								<div class="date">
-									2025.06.12
-								</div>
-							</div>
-						</li>
-					</ul>
-
-					<div class="banner" data-aos="fade-up" data-aos-delay="900">
-						<!-- 배너2 -->
-						<div class="swiper mainSwiper2">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<a href="#" target="_blank" title="새창이동">
-										<img src="https://placehold.co/620x900" alt="대체이미지">
+							<ul class="notice-list">
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1"><span class="ico-notice"></span>서울디지털대학교 2025학년도 2학기 신·편입생
+											모집과 제휴 장학 혜택 안내
+										</p>
+										
 									</a>
-								</div>
-								<div class="swiper-slide">
-									<a href="#" target="_blank" title="새창이동">
-										<img src="https://placehold.co/620x900" alt="대체이미지">
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1"><span class="ico-notice"></span>전국 산불피해 성금 사용 내역 공개</p>
+										
 									</a>
-								</div>
-							</div>
-							<div class="swiper-indicator swiper-btn-pos">
-								<div class="swiper-pagination"></div>
-
-								<div class="swiper-navigation">
-									<div class="swiper-button-prev"></div>
-									<div class="swiper-controller">
-										<button type="button" class="swiper-button-play" style="display: none;">
-											<span class="sr-only">슬라이드 재생</span>
-										</button>
-										<button type="button" class="swiper-button-stop">
-											<span class="sr-only">슬라이드 멈춤</span>
-										</button>
-									</div>
-									<div class="swiper-button-next"></div>
-								</div>
-
-							</div>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1">수원여자대학교 2025년 하반기 방문간호 간호조무사 교육과정 교육생 모집안내(17기)</p>
+										
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1">[공고 제 2025-008 호] 2025년 간호조무사 보수교육(임상실무) 실시기관 공모 공고</p>
+										
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1">[공고 제 2025-008 호] 2025년 간호조무사 보수교육(임상실무) 실시기관 공모 공고</p>
+										
+									</a>
+								</li>
+							</ul>
 						</div>
-
-					</div>
-				</div>
-			</div>
-
-		</section>
-		<!--//메인 섹션3-->
-
-
-		<!-- 메인 섹션4-->
-		<section class="mainSection04 branch" id="mainSection04">
-			<div class="inner">
-				<div class="sido-gallery-wrap">
-					<div class="sido-gallery-banner">
-						<div class="sido-gallery-title">
-							<h2>갤러리</h2>
-							<a href="#" target="_self" title="자주하는질문 페이지 이동" class="view-all">전체보기<i
-									class="svg-icon ico-plus"></i>
-							</a>
-						</div>
-
-						<!--
-						배너 4
-						이미지 사이즈 : 366 x 429
-						-->
-						<div class="sido-banner">
-							<div class="swiper mainSwiper4">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<a href="#" target="_blank" title="새창이동">
-											<img src="../../resources/img/branch/main-sido-img.png" alt="대체이미지">
-										</a>
-									</div>
-									<div class="swiper-slide">
-										<a href="#" target="_blank" title="새창이동">
-											<img src="../../resources/img/branch/main-sido-img.png" alt="대체이미지">
-										</a>
-									</div>
-								</div>
-								<div class="swiper-indicator swiper-btn-pos">
-									<div class="swiper-pagination"></div>
-
-									<div class="swiper-navigation">
-										<div class="swiper-button-prev"></div>
-										<div class="swiper-controller">
-											<button type="button" class="swiper-button-play" style="display: none;">
-												<span class="sr-only">슬라이드 재생</span>
-											</button>
-											<button type="button" class="swiper-button-stop">
-												<span class="sr-only">슬라이드 멈춤</span>
-											</button>
-										</div>
-										<div class="swiper-button-next"></div>
-									</div>
-
-								</div>
+						<div class="notice" data-aos="fade-up" data-aos-delay="300">
+							<div class="notice-top">
+								<h3>행사일정</h3>
+								<a href="#" target="_self" title="공지사항 페이지 이동" class="view-all">전체보기<i
+										class="svg-icon ico-plus"></i></a>
 							</div>
+							<ul class="notice-list">
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1"><span class="ico-notice"></span>서울디지털대학교 2025학년도 2학기 신·편입생
+											모집과 제휴 장학 혜택 안내
+										</p>
+										
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1"><span class="ico-notice"></span>전국 산불피해 성금 사용 내역 공개</p>
+										
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1">수원여자대학교 2025년 하반기 방문간호 간호조무사 교육과정 교육생 모집안내(17기)</p>
+										
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1">[공고 제 2025-008 호] 2025년 간호조무사 보수교육(임상실무) 실시기관 공모 공고</p>
+										
+									</a>
+								</li>
+								<li class="notice-list-item">
+									<a href="#" target="_blank" title="공지사항 새창열림">
+										<p class="ellipsis-1">[공고 제 2025-008 호] 2025년 간호조무사 보수교육(임상실무) 실시기관 공모 공고</p>
+										
+									</a>
+								</li>
+							</ul>
 						</div>
-						<!--//배너3-->
-					</div>
-					<ul class="sido-gallery-list">
-						<li class="sido-gallery-item">
-							<a href="#" target="_self" title="페이지 이동" class="sido-gallery-card">
-								<div class="sgc-img zoomimg">
-									<img src="../../resources/img/branch/main-test01.png" alt="테스트 썸네일1">
-								</div>
-								<p class="sgc-p ellipsis-2">경찰의 꿈 대신 선택한 간호조무사, 후회 없는 선택이에요</p>
-							</a>
-						</li>
-						<li class="sido-gallery-item">
-							<a href="#" target="_self" title="페이지 이동" class="sido-gallery-card">
-								<div class="sgc-img zoomimg">
-									<img src="../../resources/img/branch/main-test02.png" alt="테스트 썸네일1">
-								</div>
-								<p class="sgc-p ellipsis-2">서울 간호조무사회, 독거노인 등 위해 무료급식소에 기부</p>
-							</a>
-						</li>
-						<li class="sido-gallery-item">
-							<a href="#" target="_self" title="페이지 이동" class="sido-gallery-card">
-								<div class="sgc-img zoomimg">
-									<img src="../../resources/img/branch/main-test03.png" alt="테스트 썸네일3">
-								</div>
-								<p class="sgc-p ellipsis-2">상반기 간호조무사 국가시험’ 합격자 발표 84.1% 합격률 기록, 합격자는 국시원에 자격증</p>
-							</a>
-						</li>
-						<li class="sido-gallery-item">
-							<a href="#" target="_self" title="페이지 이동" class="sido-gallery-card">
-								<div class="sgc-img zoomimg">
-									<img src="../../resources/img/branch/main-test04.png" alt="테스트 썸네일4">
-								</div>
-								<p class="sgc-p ellipsis-2">경찰의 꿈 대신 선택한 간호조무사, 후회 없는 선택이에요</p>
-							</a>
-						</li>
-						<li class="sido-gallery-item">
-							<a href="#" target="_self" title="페이지 이동" class="sido-gallery-card">
-								<div class="sgc-img zoomimg">
-									<img src="../../resources/img/branch/main-img-default.png" alt="테스트 썸네일1">
-								</div>
-								<p class="sgc-p ellipsis-2">경찰의 꿈 대신 선택한 간호조무사, 후회 없는 선택이에요</p>
-							</a>
-						</li>
-						<li class="sido-gallery-item">
-							<a href="#" target="_self" title="페이지 이동" class="sido-gallery-card">
-								<div class="sgc-img zoomimg">
-									<img src="../../resources/img/branch/main-img-default.png" alt="테스트 썸네일1">
-								</div>
-								<p class="sgc-p ellipsis-2">경찰의 꿈 대신 선택한 간호조무사, 후회 없는 선택이에요</p>
-							</a>
-						</li>
+		
 
-					</ul>
-				</div>
-			</div>
-		</section>
-		<!-- //메인 섹션4-->
-
-
-		<!--메인 섹션5-->
-		<section class="mainSection05" id="mainSection05">
-			<div class="inner">
-				<div class="sido-location-wrap">
-					<h2 class="slw-title">
-						한눈에 보는 <br>대한간호조무사협회 시도지부
-					</h2>
-
-					<div class="main-sido-tab">
-						<div class="sido_info">
-					
-
-							<div class="cont_area">
-								<div id="sido1" class="cont" style="display:block;">
-									<img src="../../resources/img/sub/sido_map1.png" alt="서울시간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">서울시간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 서울시 용산구 한강대로 15길 11
-												</li>
-												<li class="phone">
-													대표전화 : 1661-6933
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-
-								<div id="sido2" class="cont">
-									<img src="../../resources/img/sub/sido_map2.png" alt="부산시간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">부산시간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 부산광역시 부산진구 가야대로 749-1, 7층
-												</li>
-												<li class="phone">
-													대표전화 : 051-804-6820~1
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido3" class="cont">
-									<img src="../../resources/img/sub/sido_map3.png" alt="대구시간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">대구시간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 대구광역시 동구 신천4동 299-2 1905호
-												</li>
-												<li class="phone">
-													대표전화 : 053-741-5777
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido4" class="cont">
-									<img src="../../resources/img/sub/sido_map4.png" alt="인천시간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">인천시간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 인천광역시 부평구 경원대로 1415, 602호
-												</li>
-												<li class="phone">
-													대표전화 : 1600-6959
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido5" class="cont">
-									<img src="../../resources/img/sub/sido_map5.png" alt="광주·전남간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">광주·전남간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 광주광역시 동구 양림로119번길 7 영동프라자 601호
-												</li>
-												<li class="phone">
-													대표전화 : 062-222-2457
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido6" class="cont">
-									<img src="../../resources/img/sub/sido_map6.png" alt="대전·충남간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">대전·충남간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 대전광역시 서구 문정로 64, 솔림빌딩 7층
-												</li>
-												<li class="phone">
-													대표전화 : 042-525-0235~6
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido7" class="cont">
-									<img src="../../resources/img/sub/sido_map7.png" alt="울산·경남간호조무사회  지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">울산·경남간호조무사회 </span>
-											<ul>
-												<li class="address">
-													주소 : 경남 창원시 성산구 중앙대로 263, 805호
-												</li>
-												<li class="phone">
-													대표전화 : 055-266-7031 
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido8" class="cont">
-									<img src="../../resources/img/sub/sido_map8.png" alt="경기도간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">경기도간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 경기도 수원시 권선구 효원로 268 10층
-												</li>
-												<li class="phone">
-													대표전화 : 031-223-7441~5
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido9" class="cont">
-									<img src="../../resources/img/sub/sido_map9.png" alt="강원도간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">강원도간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 강원도 춘천시 퇴계로93번길 3 401호
-												</li>
-												<li class="phone">
-													대표전화 : 033-253-3938, 033-264-3936
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido10" class="cont">
-									<img src="../../resources/img/sub/sido_map10.png" alt="충북도간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">충북도간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 충청북도 청주시 상당구 영운천로 145번길 40 2층
-												</li>
-												<li class="phone">
-													대표전화 : 043-285-1278
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido11" class="cont">
-									<img src="../../resources/img/sub/sido_map11.png" alt="전북도간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">전북도간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 전주시 덕진구 기린대로396 세광타워6층
-												</li>
-												<li class="phone">
-													대표전화 : 063-284-9347
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido12" class="cont">
-									<img src="../../resources/img/sub/sido_map12.png" alt="경북도간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">경북도간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 경북 예천군 호명면 새움3로 20 904호
-												</li>
-												<li class="phone">
-													대표전화 : 054-652-9730
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
-								<div id="sido13" class="cont">
-									<img src="../../resources/img/sub/sido_map13.png" alt="제주도간호조무사회 지도">
-									<div class="sido">
-										<div class="sido-addr">
-											<span class="tit">제주도간호조무사회</span>
-											<ul>
-												<li class="address">
-													주소 : 제주특별자치도 제주시 서사로 103-1 2층
-												</li>
-												<li class="phone">
-													대표전화 : 064-753-2508
-												</li>
-											</ul>
-										</div>
-										<span class="btn_go"><a href="#" title="새창열림" target="_blank">바로가기</a></span>
-									</div>
-								</div>
+						<div class="info-archive" data-aos="fade-up" data-aos-delay="900">
+							<div class="press-top">
+								<h3>정보자료실</h3>
+								<a href="#" target="_self" title="자주하는질문 페이지 이동" class="view-all">전체보기<i
+										class="svg-icon ico-plus"></i>
+								</a>
 							</div>
 
-							<div class="cont_menu">
-								<p>※ 아래 시도회를 클릭하시면 세부정보를 확인할 수 있습니다.</p>
-								<ul class="list">
-									<li class="is_on">
-										<a href="#sido1" class="btn">서울시간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido2" class="btn">부산시간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido3" class="btn">대구시간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido4" class="btn">인천시간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido5" class="btn">광주·전남간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido6" class="btn">대전·충남간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido7" class="btn">울산·경남간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido8" class="btn">경기도간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido9" class="btn">강원도간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido10" class="btn">충청북도간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido11" class="btn">전북도간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido12" class="btn">경상북도간호조무사회</a>
-									</li>
-									<li>
-										<a href="#sido13" class="btn">제주도간호조무사회</a>
-									</li>
-								</ul>
+							<div class="info-archive-box">
+								<!-- 분류 탭 -->
+								<div class="info-cate-tab">
+									<button class="tabBtn active" data-infoCate="tab01">분류1</button>
+									<button class="tabBtn" data-infoCate="tab02">분류2</button>
+									<button class="tabBtn" data-infoCate="tab03">분류3</button>
+								</div>
+								<!-- //분류 탭 -->
+
+								<div class="info-cate-tab-contents">
+									<div id="tab01" class="info-cate-tab-content active">
+										<ul class="info-cate-tab-list">
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사 국시원 기출문제</a>
+											</li>
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사 국시원 기출문제</a>
+											</li>
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사 국시원 기출문제</a>
+											</li>
+										</ul>
+									</div>
+									<div id="tab02" class="info-cate-tab-content">
+										<ul class="info-cate-tab-list">
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2024 간호조무사 국시원 </a>
+											</li>
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2024 간호조무사 국시원 </a>
+											</li>
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사 국시원 </a>
+											</li>
+										</ul>
+									</div>
+									<div id="tab03" class="info-cate-tab-content">
+										<ul class="info-cate-tab-list">
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사  기출문제</a>
+											</li>
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사  기출문제</a>
+											</li>
+											<li>
+												<a href="#" target="_self" title="페이지이동" class="alink ellipsis-1">2025 간호조무사  기출문제</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<script>
+									//info-archive-box 분류 탭 스크립트
+									$(document).ready(function () {
+										$('.info-cate-tab .tabBtn').on('click', function() {
+											let targetId = $(this).data('infocate');
+
+											// 버튼 active 클래스 제어
+											$('.info-cate-tab .tabBtn').removeClass('active');
+											$(this).addClass('active');
+
+											// 콘텐츠 active 클래스 제어
+											$('.info-cate-tab-contents .info-cate-tab-content').removeClass('active');
+											$('#' + targetId).addClass('active');
+										});
+									});
+								</script>
+								
 							</div>
 
 						</div>
 					</div>
-				</div>
-
-			</div>
-		</section>
-		<!--//메인 섹션5-->
-
-		<!--유관기관-->
-			<section class="related-org" id="related-org">
-				<div class="inner">
-					<!-- 배너3 -->
-
-					<div class="swiper mainSwiper3" data-aos="fade-up">
-
-						<div class="swiper-indicator">
-							<h2>유관기관 바로가기</h2>
-							<div class="swiper-navigation">
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-controller">
-									<button type="button" class="swiper-button-play" style="display: none;">
-										<span class="sr-only">슬라이드 재생</span>
-									</button>
-									<button type="button" class="swiper-button-stop">
-										<span class="sr-only">슬라이드 멈춤</span>
-									</button>
-								</div>
-								<div class="swiper-button-next"></div>
-							</div>
-
-						</div>
-
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/org/org01.png" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/org/org02.png" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/org/org03.png" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/org/org04.png" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/org/org05.png" alt="대체이미지">
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/org/org06.png" alt="대체이미지">
-								</a>
-							</div>
-
-						</div>
-
-					</div>
-
 				</div>
 
 			</section>
+			<!--//메인 섹션3-->
+
+
 
 
 	</div>

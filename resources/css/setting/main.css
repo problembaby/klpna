@@ -1190,7 +1190,7 @@ font-weight: 400; margin-top: 5px;}
     align-items: flex-start;
 }
 
-.shortcut-list-item{flex: 1 1 30%}
+.shortcut-list-item{flex: 1 1 20%}
 
 .shortcut-list-item .img {
     width: 70px;
@@ -1312,6 +1312,9 @@ font-weight: 400; margin-top: 5px;}
 
 .krds-tab-area {
     gap: var(--krds-gap-5);
+}
+.info-cate-tab-list li > a {
+   font-style: 16px;
 }
 
 }

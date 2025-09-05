@@ -205,13 +205,9 @@
     max-width: 100%;
     border-radius: 30px;
     overflow: hidden;
+    align-self: flex-start;
 }
 
-.swiper-btn-pos {
-    position: absolute;
-    bottom: 59px;
-    left: 44px;
-}
 
 .swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
     color: #fff;
@@ -220,7 +216,7 @@
 .swiper-pagination.swiper-pagination-fraction {
    color: #fff;
 }
-
+ 
 
 
 .header-util .inner.edu{
@@ -296,7 +292,8 @@ letter-spacing: -0.64px;
 
 .mainSection03 {
     margin-top: 50px;
-    background: rgba(241, 242, 246, 0.40);
+    margin-bottom:100px;
+    background:#fff;
     height: auto;
 }
 
@@ -310,6 +307,67 @@ letter-spacing: -0.64px;
     display: block;
     color: #fff;
 }
+
+.main-bbs-wrap .faq-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.edu-summary .edu-item {
+    border-radius: 30px;
+    background: #8261AC;
+    width: 161.112px;
+    height: 110px;
+    flex-shrink: 0;
+    text-align: center;
+    display: block;
+    color: #fff;
+}
+
+.main-bbs-wrap .faq-top h3{color: #0D0E10;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 28px */}
+
+.main-bbs-wrap .faq-top h3 small { color: #7E7B77; font-size: 20px; font-style: normal; font-weight: 600; line-height: 100%; margin-left: 10px}
+
+
+.faq-list{display: flex; flex-direction: column; gap:23px}
+.faq-list li a{display: flex; gap:5px; align-items: center; color: #0D0E10;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 137.5% */}
+
+
+.faq-list li a::before{
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    background: url(../../img/refre/ico-q.svg)no-repeat center;
+    width: 22px;
+    height: 20px;
+}
+
+.main-bbs-wrap .notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.main-bbs-wrap > *{
+    flex:1 1 33.3%
+}
+
+.mainSection01 > .inner {
+    display: flex;
+    gap: 50px;
+    height: auto;
+}
+
 
 
 
@@ -2033,6 +2091,26 @@ display: flex; align-items: center;
 .appl-msg-text{display:flex; gap:10px; flex-wrap: wrap;}
 
 
+
+/** 분류 탭 **/
+
+.info-archive-box{
+    border-radius: 10px;
+background: #414189;
+padding:20px
+}
+.info-cate-tab{display: flex; gap:20px; }
+.info-cate-tab > .tabBtn{border-radius: 10px;
+background: #FFF; padding:5px 0; flex:1 auto; font-size: 16px;}
+
+.info-cate-tab-content{display: none;}
+.info-cate-tab-content.active{display: flex;}
+.info-cate-tab > .tabBtn.active{ background-color: #F6EAD5;}
+.info-cate-tab-contents{height:135px; overflow: hidden;padding:20px 0}
+.info-cate-tab-list{display:flex; flex-direction: column; gap: 10px; color:#fff; width: 100%;}
+.info-cate-tab-list li > a{width: 100%; display: block;}
+
+.alink:hover{text-decoration: underline;}
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
@@ -2040,6 +2118,11 @@ display: flex; align-items: center;
 
 /** 테블릿 */
 @media (max-width: 1023px) {
+
+    /** 메인 배너 */
+.main-banner {
+    border-radius: 0;
+}
 
     .main-print-list, .main-bbs-list {
     flex-wrap: wrap;
@@ -2265,6 +2348,14 @@ body.edu-appl-step03 .step02 {
 }
 
 
+.swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
+    color: black;
+}
+
+.swiper-pagination.swiper-pagination-fraction {
+   color: black;
+}
+ 
 
 
 
