@@ -140,6 +140,14 @@
 헤더 푸터
 *************************/
 
+
+.header-util .inner.addLogo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-util .inner.addLogo .logo.klpna a{display: block;}
+
 .quick-wrap-item a:hover {
     background-color: #414189;
 }
@@ -187,6 +195,32 @@
     left: 267px;
     bottom: -41px;
 }
+
+
+
+/** 메인 배너 */
+.main-banner {
+    background: #fff;
+    flex: 1;
+    max-width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.swiper-btn-pos {
+    position: absolute;
+    bottom: 59px;
+    left: 44px;
+}
+
+.swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
+    color: #fff;
+}
+
+.swiper-pagination.swiper-pagination-fraction {
+   color: #fff;
+}
+
 
 
 .header-util .inner.edu{
@@ -1593,6 +1627,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
   opacity: 0;
   pointer-events: none;
   transition: none;
+  z-index: 5;
 }
 
 .ico-notice::before {
@@ -2584,6 +2619,8 @@ body.edu-appl-step03 .step02 {
 
 .btn-report{width: 300px; height:130px; gap:10px; padding:10px}
 .btn-report .icon i::before{width: 50px; height:51px; background-size: cover;}
+
+.header-util .inner.addLogo .logo.klpna a{display: none;}
 
 }
 

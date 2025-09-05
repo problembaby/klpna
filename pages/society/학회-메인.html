@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../../../resources/krds/css/pattern/p_layout.css" />
 	<link rel="stylesheet" href="../../../resources/css/style.css" />
 	<link rel="stylesheet" href="../../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.css" />
-	<link rel="stylesheet" href="../../../resources/css/setting/society_custom.css" /> <!-- 자격신고 커스텀 css -->
+	<link rel="stylesheet" href="../../../resources/css/setting/society_custom.css" /> <!-- 학회 커스텀 css -->
 
 
 	<!--js-->
@@ -44,27 +44,15 @@
 
 <!-- 헤더 -->
 <header id="krds-header">
-	<!-- 헤더 컨텐츠 영역  -->
+		<!-- 헤더 컨텐츠 영역  -->
 	<div class="header-util">
-		<div class="inner edu">
-			<div class="logo">
-				<h2 class="logo klpna">
-					<a href="#">
-						<span class="sr-only">간호조무사협회</span>
-					</a>
-				</h2>
+		<div class="inner addLogo">
+			<div class="logo klpna">
+				<a href="https://klpna.or.kr/" target="_blank" title="대한간호조무사협회 새창열림">
+					<img src="../../../resources/img/branch/header-top-logo.png" alt="대한간호조무사협회 로고">
+				</a>
 			</div>
 			<ul class="header-util-list">
-				<li>
-					<a href="../pages/login.html" title="로그인 페이지 이동" class="btn-navi login">로그인</a>
-					<!-- <a href="#" class="btn-navi loginout">로그아웃</a> -->
-				</li>
-				<li><a href="../pages/contact.html" title="1:1문의 페이지 이동" class="btn-navi login">1:1문의</a></li>
-				<li>
-					<a href="#" target="_blank" class="ico-mypage" title="마이페이지 페이지 이동">
-						<span class="sr-only"></span>
-					</a>
-				</li>
 				<li>
 					<button type="button" class="btn-navi all open-modal" title="협회 리스트 모달 열림" aria-expanded="false"
 						data-target="popAllMenuVIew">
@@ -472,12 +460,12 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/branch/testBanner.png" alt="메인1">
+									<img src="../../resources/img/society/main-banner-img.png" alt="메인1">
 								</a>
 							</div>
 							<div class="swiper-slide">
 								<a href="#" target="_blank" title="새창이동">
-									<img src="../../resources/img/branch/testBanner.png" alt="메인2">
+									<img src="../../resources/img/society/main-banner-img.png" alt="메인1">
 								</a>
 							</div>
 						</div>
@@ -508,365 +496,53 @@
 				</div>
 				<!--//배너영역-->
 
-				<!--로그인 후 화면 -->
-				<div class="main-login-area" style="display: none;" data-aos="flip-left">
-					<div class="login-box">
-						<div class="login-info-top">
-							<div class="user-name-wrap">
-								<div class="name">홍길동님</div>
-								<button class="btn-edit">수정</button>
-							</div>
-							<div class="user-level">정회원</div>
-						</div>
-						<ul class="user-info-list">
-							<li>
-								<span class="label">자격증번호</span>
-								<span class="value">1234</span>
-							</li>
-							<li>
-								<span class="label">최종 자격신고일</span>
-								<span class="value">2021.01.01</span>
-							</li>
-							<li>
-								<span class="label">소속시도회</span>
-								<span class="value">서울특별시</span>
-							</li>
-							<li>
-								<span class="label">근무처</span>
-								<span class="value">삼성병원</span>
-							</li>
-							<li>
-								<span class="label">연락처</span>
-								<span class="value">010-1234-5678</span>
-							</li>
-						</ul>
-					</div>
-					<div class="edu-summary">
-						<a href="#" target="_blank" title="교육이수 새창열림" class="edu-item">
-							<div class="edu-title">교육이수</div>
-							<div class="edu-count"><span class="value">1</span>건</div>
-						</a>
-						<a href="#" target="_blank" title="교육이수 새창열림" class="edu-item">
-							<div class="edu-title">교육미이수</div>
-							<div class="edu-count"><span class="value">2</span>건</div>
-						</a>
-					</div>
-				</div>
-				<!--//로그인 후 화면 -->
-
-				<!--비로그인 화면-->
-				<div class="main-login-area" data-aos="flip-left" style="display: block;">
-					<div class="guest-box">
-						<div class="guest-btn-list">
-							<a href="#" class="krds-btn tertiary guest-box-btn" title="개인회원 로그인으로 페이지 이동"
-								data-aos="fade-up" data-aos-delay="300"><i class="ico-loginBtn01"></i>개인회원 로그인</a>
-							<a href="#" class="krds-btn tertiary guest-box-btn" title="기관회원 로그인으로 페이지 이동"
-								data-aos="fade-up" data-aos-delay="600"><i class="ico-loginBtn02"></i>기관회원 로그인</a>
-						</div>
-						<div class="main-join-find">
-							<a href="#" title="회원가입으로 페이지 이동">회원가입</a>
-							<a href="#" title="회원가입으로 페이지 이동">ID/PW 찾기</a>
-						</div>
-						<p class="login-noti">
-							로그인 하시면 <span class="bold">나의 자격정보와 교육 이수현황</span>을 확인 할 수있습니다.
-						</p>
-					</div>
-
-				</div>
-
-				<!--//비로그인 화면-->
 			</div>
 		</section>
 
 		<!-- //메인 섹션1 -->
 
 		<!--메인 섹션2-->
-		<section class="mainSection02" id="mainSection02" data-aos="fade-up">
-			<div class="inner">
-				<div class="shortcut-wrap">
-					<!-- tab -->
-					<div class="krds-tab-area layer">
-						<!-- tab list -->
-						<div class="tab fill full position-relative">
-							<div class="mob-overflow-icon"><!--모바일 스크롤아이콘--></div>
-							<ul role="tablist">
-								<li id="tab_shortcut_01" role="tab" aria-selected="true"
-									aria-controls="panel_shortcut_01" class="active">
-									<button type="button" class="btn-tab">대한간호조무사협회 <i class="sr-only created">
-											선택됨</i></button>
-								</li>
-								<li id="tab_shortcut_02" role="tab" aria-selected="false"
-									aria-controls="panel_shortcut_02">
-									<button type="button" class="btn-tab">보수교육센터</button>
-								</li>
+			<section class="mainSection02" id="mainSection02" data-aos="fade-up">
+				<div class="inner">
+					<div class="shortcut-wrap">
 
-								<li id="tab_shortcut_03" role="tab" aria-selected="false"
-									aria-controls="panel_shortcut_03">
-									<button type="button" class="btn-tab">직무교육센터</button>
-								</li>
-								<li id="tab_shortcut_04" role="tab" aria-selected="false"
-									aria-controls="panel_shortcut_04">
-									<button type="button" class="btn-tab">자격신고센터</button>
-								</li>
-								<li id="tab_shortcut_05" role="tab" aria-selected="false"
-									aria-controls="panel_shortcut_05">
-									<button type="button" class="btn-tab">학회센터</button>
-								</li>
-
-							</ul>
-						</div>
-						<!-- //tab list -->
-
-						<!-- tab contents -->
-						<div class="tab-conts-wrap shortcut">
-							<!-- 탭 1 -->
-							<div id="panel_shortcut_01" aria-labelledby="tab_shortcut_01" class="tab-conts active"
-								data-quick-nav="false">
-								<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
-									<h3>대한간호조무사협회</h3>
-									<p>바로가기</p>
+						<ol class="shortcut-list">
+							<li class="shortcut-list-item">
+								<a href="#">
+									<div class="img shortImg_05_01"></div>
+									<div class="txt">학회소개</div>
 								</a>
-								<ol class="shortcut-list">
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_01"></div>
-											<div class="txt">노무상담</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_02"></div>
-											<div class="txt">회비납부</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_03"></div>
-											<div class="txt">보도자료</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_04"></div>
-											<div class="txt">회원카드신청</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_05"></div>
-											<div class="txt">국회청원</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_06"></div>
-											<div class="txt">교육변경·환불</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_01_07"></div>
-											<div class="txt">1:1문의</div>
-										</a>
-									</li>
-								</ol>
-
-							</div>
-
-							<!-- 탭 2 -->
-							<div id="panel_shortcut_02" aria-labelledby="tab_shortcut_02" class="tab-conts"
-								data-quick-nav="false">
-								<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
-									<h3>보수교육센터</h3>
-									<p>바로가기</p>
+							</li>
+							<li class="shortcut-list-item">
+								<a href="#">
+									<div class="img shortImg_05_02"></div>
+									<div class="txt">학회정관</div>
 								</a>
-								<ol class="shortcut-list">
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_01"></div>
-											<div class="txt">보수교육일정</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_02"></div>
-											<div class="txt">보수교육신청</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_03"></div>
-											<div class="txt">온라인교육 강의실</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_04"></div>
-											<div class="txt">비대면교육 강의실</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_05"></div>
-											<div class="txt">대면교육 강의실</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_06"></div>
-											<div class="txt">교육변경·환불</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_02_07"></div>
-											<div class="txt">자격신고</div>
-										</a>
-									</li>
-								</ol>
-							</div>
-
-							<!-- 탭 3 -->
-							<div id="panel_shortcut_03" aria-labelledby="tab_shortcut_03" class="tab-conts"
-								data-quick-nav="false">
-								<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
-									<h3>직무교육센터</h3>
-									<p>바로가기</p>
+							</li>
+							<li class="shortcut-list-item">
+								<a href="#">
+									<div class="img shortImg_05_03"></div>
+									<div class="txt">학회지소개</div>
 								</a>
-								<ol class="shortcut-list">
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_03_01"></div>
-											<div class="txt">직무교육</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_03_02"></div>
-											<div class="txt">치매교육</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_03_03"></div>
-											<div class="txt">실습교육</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_03_04"></div>
-											<div class="txt">외부위탁교육</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_03_05"></div>
-											<div class="txt">기타교육</div>
-										</a>
-									</li>
-
-								</ol>
-							</div>
-
-							<!-- 탭 4 -->
-							<div id="panel_shortcut_04" aria-labelledby="tab_shortcut_04" class="tab-conts"
-								data-quick-nav="false">
-								<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
-									<h3>자격신고센터</h3>
-									<p>바로가기</p>
+							</li>
+							<li class="shortcut-list-item">
+								<a href="#">
+									<div class="img shortImg_05_04"></div>
+									<div class="txt">논문투고</div>
 								</a>
-								<ol class="shortcut-list">
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_04_01"></div>
-											<div class="txt">면제 신청하기</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_04_02"></div>
-											<div class="txt">유예 신청하기</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_04_03"></div>
-											<div class="txt">비대상 신청하기</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_04_04"></div>
-											<div class="txt">자격신고하기</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_04_05"></div>
-											<div class="txt">자격신고 방법</div>
-										</a>
-									</li>
-									<li class="shortcut-list-item">
-										<a href="#">
-											<div class="img shortImg_04_06"></div>
-											<div class="txt">1:1 상담하기</div>
-										</a>
-									</li>
-								</ol>
-							</div>
-
-							<!-- 탭 5 -->
-							<div id="panel_shortcut_05" aria-labelledby="tab_shortcut_05" class="tab-conts"
-								data-quick-nav="false">
-								<a href="#" target="_blank" title="새창열림" class="shortcut-tit">
-									<h3>학회센터</h3>
-									<p>바로가기</p>
+							</li>
+							<li class="shortcut-list-item">
+								<a href="#">
+									<div class="img shortImg_05_05"></div>
+									<div class="txt">학술행사</div>
 								</a>
-								<ol class="shortcut-list">
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_01"></div>
-											<div class="txt">서비스1</div>
-										</a></li>
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_02"></div>
-											<div class="txt">서비스2</div>
-										</a></li>
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_03"></div>
-											<div class="txt">서비스3</div>
-										</a></li>
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_04"></div>
-											<div class="txt">서비스4</div>
-										</a></li>
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_05"></div>
-											<div class="txt">서비스5</div>
-										</a></li>
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_06"></div>
-											<div class="txt">서비스6</div>
-										</a></li>
-									<li class="shortcut-list-item"><a href="#">
-											<div class="img shortImg_05_07"></div>
-											<div class="txt">서비스7</div>
-										</a></li>
-								</ol>
-							</div>
-						</div>
-
+							</li>
+						</ol>
 					</div>
-					<!-- //tab -->
-
-
-
-
-
 				</div>
-			</div>
 
-		</section>
-		<!--//메인 섹션2-->
+			</section>
+			<!--//메인 섹션2-->
 
 		<!--메인 섹션3-->
 		<section class="mainSection03" id="mainSection03">
@@ -1468,237 +1144,110 @@
 
 
 
-<script>
+	<script>
 
-	// 메인 스와이퍼
-	let swiper1, swiper2, swiper3;
-	let isPlaying1 = true;
-	let isPlaying2 = true;
-	let isPlaying3 = true;
-	let progressInterval1;
+		// 메인 스와이퍼
+		let swiper1;
+		let isPlaying1 = true;
+		let progressInterval1;
 
-	function initSwiper1() {
-		swiper1 = new Swiper(".mainSwiper", {
-			navigation: {
-				nextEl: ".mainSwiper .swiper-button-next",
-				prevEl: ".mainSwiper .swiper-button-prev",
-			},
-			pagination: {
-				el: ".mainSwiper .swiper-pagination",
-				type: "fraction",
-			},
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			},
-			on: {
-				slideChangeTransitionStart: () => {
-					resetProgressBar1();
-				}
-			}
-		});
-		startProgressBar1();
-	}
-
-	function initSwiper2() {
-		swiper2 = new Swiper(".mainSwiper2", {
-			navigation: {
-				nextEl: ".mainSwiper2 .swiper-button-next",
-				prevEl: ".mainSwiper2 .swiper-button-prev",
-			},
-			pagination: {
-				el: ".mainSwiper2 .swiper-pagination",
-				type: "fraction",
-			},
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			}
-		});
-	}
-
-
-			function initSwiper3() {
-			swiper3 = new Swiper(".mainSwiper3", {
-				slidesPerView: 3,
-				spaceBetween: 20,
-				loop: true,
+		function initSwiper1() {
+			swiper1 = new Swiper(".mainSwiper", {
 				navigation: {
-					nextEl: ".mainSwiper3 .swiper-button-next",
-					prevEl: ".mainSwiper3 .swiper-button-prev",
+					nextEl: ".mainSwiper .swiper-button-next",
+					prevEl: ".mainSwiper .swiper-button-prev",
+				},
+				pagination: {
+					el: ".mainSwiper .swiper-pagination",
+					type: "fraction",
 				},
 				autoplay: {
-					delay: 2000,
+					delay: 5000,
 					disableOnInteraction: false,
 				},
-				breakpoints: {
-					0: {
-						slidesPerView: 3,
-					},
-					768: {
-						slidesPerView: 3,
-					},
-					1024: {
-						slidesPerView: 5,
+				on: {
+					slideChangeTransitionStart: () => {
+						resetProgressBar1();
 					}
 				}
 			});
-		}
-
-	function initSwiper4() {
-		swiper3 = new Swiper(".mainSwiper4", {
-			navigation: {
-				nextEl: ".mainSwiper4 .swiper-button-next",
-				prevEl: ".mainSwiper4 .swiper-button-prev",
-			},
-			pagination: {
-				el: ".mainSwiper4 .swiper-pagination",
-				type: "fraction",
-			},
-			autoplay: {
-				delay: 5000,
-				disableOnInteraction: false,
-			}
-		});
-	}
-
-
-
-	function startProgressBar1() {
-		const $progress = $('.mainSwiper .swiper-progress-fill');
-		let width = 0;
-		$progress.css('width', '0%');
-		progressInterval1 = setInterval(() => {
-			width += 2;
-			if (width >= 100) {
-				width = 100;
-				clearInterval(progressInterval1);
-			}
-			$progress.css('width', width + '%');
-		}, 100);
-	}
-
-	function resetProgressBar1() {
-		clearInterval(progressInterval1);
-		startProgressBar1();
-	}
-
-	function togglePlayPause1() {
-		const $playBtn = $('.mainSwiper .swiper-button-play');
-		const $stopBtn = $('.mainSwiper .swiper-button-stop');
-		if (isPlaying1) {
-			swiper1.autoplay.stop();
-			clearInterval(progressInterval1);
-			isPlaying1 = false;
-			$playBtn.show();
-			$stopBtn.hide();
-		} else {
-			swiper1.autoplay.start();
 			startProgressBar1();
-			isPlaying1 = true;
-			$playBtn.hide();
-			$stopBtn.show();
 		}
-	}
 
-	function togglePlayPause2() {
-		const $playBtn = $('.mainSwiper2 .swiper-button-play');
-		const $stopBtn = $('.mainSwiper2 .swiper-button-stop');
-		if (isPlaying2) {
-			swiper2.autoplay.stop();
-			isPlaying2 = false;
-			$playBtn.show();
-			$stopBtn.hide();
-		} else {
-			swiper2.autoplay.start();
-			isPlaying2 = true;
-			$playBtn.hide();
-			$stopBtn.show();
+		function startProgressBar1() {
+			const $progress = $('.mainSwiper .swiper-progress-fill');
+			let width = 0;
+			$progress.css('width', '0%');
+			progressInterval1 = setInterval(() => {
+				width += 2;
+				if (width >= 100) {
+					width = 100;
+					clearInterval(progressInterval1);
+				}
+				$progress.css('width', width + '%');
+			}, 100);
 		}
-	}
 
-	function togglePlayPause3() {
-		const $playBtn = $('.mainSwiper3 .swiper-button-play');
-		const $stopBtn = $('.mainSwiper3 .swiper-button-stop');
-		if (isPlaying3) {
-			swiper3.autoplay.stop();
-			isPlaying3 = false;
-			$playBtn.show();
-			$stopBtn.hide();
-		} else {
-			swiper3.autoplay.start();
-			isPlaying3 = true;
-			$playBtn.hide();
-			$stopBtn.show();
+		function resetProgressBar1() {
+			clearInterval(progressInterval1);
+			startProgressBar1();
 		}
-	}
 
-	function togglePlayPause4() {
-		const $playBtn = $('.mainSwiper4 .swiper-button-play');
-		const $stopBtn = $('.mainSwiper4 .swiper-button-stop');
-		if (isPlaying4) {
-			swiper3.autoplay.stop();
-			isPlaying4 = false;
-			$playBtn.show();
-			$stopBtn.hide();
-		} else {
-			swiper3.autoplay.start();
-			isPlaying4 = true;
-			$playBtn.hide();
-			$stopBtn.show();
-		}
-	}
-
-	$(document).ready(function () {
-		initSwiper1();
-		initSwiper2();
-		initSwiper3();
-		initSwiper4();
-
-		$('.mainSwiper .swiper-button-play').on('click', togglePlayPause1);
-		$('.mainSwiper .swiper-button-stop').on('click', togglePlayPause1);
-
-		$('.mainSwiper2 .swiper-button-play').on('click', togglePlayPause2);
-		$('.mainSwiper2 .swiper-button-stop').on('click', togglePlayPause2);
-
-		$('.mainSwiper3 .swiper-button-play').on('click', togglePlayPause3);
-		$('.mainSwiper3 .swiper-button-stop').on('click', togglePlayPause3);
-
-		$('.mainSwiper4 .swiper-button-play').on('click', togglePlayPause4);
-		$('.mainSwiper4 .swiper-button-stop').on('click', togglePlayPause4);
-	});
-
-
-	//시도회
-	const tabList = document.querySelectorAll('.sido_info .list li');
-	const contents = document.querySelectorAll('.sido_info .cont_area .cont')
-	let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#sido1 활성화)
-
-	for (var i = 0; i < tabList.length; i++) {
-		tabList[i].querySelector('.btn').addEventListener('click', function (e) {
-			e.preventDefault();
-			for (var j = 0; j < tabList.length; j++) {
-				// 나머지 버튼 클래스 제거
-				tabList[j].classList.remove('is_on');
-
-				// 나머지 컨텐츠 display:none 처리
-				contents[j].style.display = 'none';
+		function togglePlayPause1() {
+			const $playBtn = $('.mainSwiper .swiper-button-play');
+			const $stopBtn = $('.mainSwiper .swiper-button-stop');
+			if (isPlaying1) {
+				swiper1.autoplay.stop();
+				clearInterval(progressInterval1);
+				isPlaying1 = false;
+				$playBtn.show();
+				$stopBtn.hide();
+			} else {
+				swiper1.autoplay.start();
+				startProgressBar1();
+				isPlaying1 = true;
+				$playBtn.hide();
+				$stopBtn.show();
 			}
+		}
 
-			// 버튼 관련 이벤트
-			this.parentNode.classList.add('is_on');
 
-			// 버튼 클릭시 컨텐츠 전환
-			activeCont = this.getAttribute('href');
-			document.querySelector(activeCont).style.display = 'block';
+		$(document).ready(function () {
+			initSwiper1();
+
+			$('.mainSwiper .swiper-button-play').on('click', togglePlayPause1);
+			$('.mainSwiper .swiper-button-stop').on('click', togglePlayPause1);
 		});
-	}
 
 
 
+		//추천교육 탭 스크립트
+		$(document).ready(function () {
+			const $tabButtons = $(".ms4-tab-wrap .ms4-tab");
+			const $tabContents = $(".ms4-tab-layout");
 
-</script>
+			$tabButtons.on("click", function () {
+				const targetId = $(this).data("tab");
 
+				// 버튼 active 처리
+				$tabButtons.removeClass("active");
+				$(this).addClass("active");
+
+				// 콘텐츠 active 처리
+				$tabContents.each(function () {
+				const $content = $(this);
+				if ($content.attr("id") === targetId) {
+					$content.addClass("active");
+				} else {
+					$content.removeClass("active");
+				}
+				});
+			});
+			});
+
+
+
+	</script>
 
 
 <!-- footer -->
