@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연혁 - 전북도간호조무사회</title>
+
+    <!-- css -->
+	<link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../resources/css/style.css" />
+	<link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+    <link rel="stylesheet" href="../../resources/css/setting/branch_custom.css" /> <!-- 시도회 커스텀 css -->
+    <link rel="stylesheet" href="../resources/css/contents.css" />
+
+
+	<!--js-->
+	<script src="../../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+	<script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../../resources/krds/js/component/ui-script.js"></script>
+	<script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+	<script src="../../resources/js/script.js"></script>
+	<script src="../../resources/lib/aos/aos.js"></script>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+        <script><!--연혁-->
+            $(function () {
+                $(window).on('load scroll resize', function () {
+                    var scrollTop = $(this).scrollTop() + 400;
+
+                    $(".history_wrap .list > li").filter(function () {
+                        return $(this).offset().top <= scrollTop;
+                    }).addClass('effect').end().filter(function () {
+                        return $(this).offset().top > scrollTop;
+                    }).removeClass('effect');
+                });
+            });
+                
+            $.fn.classtoggle = function (options) {
+                var settings = $.extend
+                    ({
+                        'classname': 'active',     // 추가할 클래스명
+                    },
+                        options);
+            };
+        </script>
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">시도회소개</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">인사말</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">연혁</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">주요사업</a>
+                        </li>
+                        <li class="lnb-item ">
+                            <a href="#" class="lnb-btn link">조직도</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">시도회</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">오시는 길</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">시도회소개</a></li>
+                            <li><a href="#;" class="txt">연혁</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">연혁</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap sido_search">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="form-tit">
+                                        <label for="local-option">전국시도회</label>
+                                    </div>
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="local-option">
+                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <option value="서울시">서울시간호조무사회</option>
+                                            <option value="부산시">부산시간호조무사회</option>
+                                            <option value="대구시">대구시간호조무사회</option>
+                                            <option value="인천시">인천시간호조무사회</option>
+                                            <option value="광주전남">광주전남간호조무사회</option>
+                                            <option value="대전충남">대전충남간호조무사회</option>
+                                            <option value="울산경남">울산경남간호조무사회</option>
+                                            <option value="경기도">경기도간호조무사회</option>
+                                            <option value="강원도">강원도간호조무사회</option>
+                                            <option value="충청북도">충청북도간호조무사회</option>
+                                            <option selected="selected" value="전북도">전북도간호조무사회</option>
+                                            <option value="경상북도">경상북도간호조무사회</option>
+                                            <option value="제주도">제주도간호조무사회</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                                <div class="guide">
+                                    각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+                    <div class="sub-content">
+                        <!--연혁-->
+                        <div id="contents_body">
+                            <div id="depth4_menu_div" class="depth4_tab_sido">
+                                <ul id="depth4_menu_ul">
+                                    <li class="active"><a href="시도회-연혁-전북1.html" title="활성 메뉴">2021-현재</a></li>
+                                    <li class="last "><a href="시도회-연혁-전북2.html" title="비활성 메뉴">1973-2020</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="history_wrap">
+                                <ol class="list">   
+                                    <li class="">
+                                        <div class="year_box">
+                                            <b class="year">2025</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2025">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">07.10</strong>
+                                                    <span>2025년 전북특별자치도 해외 의료봉사단 출범식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.28</strong>
+                                                    <span>독서모임 리더스클럽 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.26</strong>
+                                                    <span>창립51주년 기념 행사 및 간호조무사 아카데미</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.25</strong>
+                                                    <span>제26차 전북여성대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.23</strong>
+                                                    <span>2036년 하계올림픽 유치 출범식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.12</strong>
+                                                    <span>특성화고 졸업 간호조무사 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.30</strong>
+                                                    <span>더불어민주당 이재명대통령후보 지지선언</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.20</strong>
+                                                    <span>중앙회 제51차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.22</strong>
+                                                    <span>제52차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.13</strong>
+                                                    <span>임상특별분회(초우회) 회원 간담회)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2024</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2024">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.19</strong>
+                                                    <span>2024년 보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.12</strong>
+                                                    <span>사랑나눔잔치 장학금 수여식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.12</strong>
+                                                    <span>인구보건복지협회 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.02</strong>
+                                                    <span>진안군보건직 돌담회 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.25</strong>
+                                                    <span>더불어민주당 박희승 의원(2025년도 예산안 국회 심사 면담)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.01</strong>
+                                                    <span>대체인력지원센터 개소(중앙회)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.24</strong>
+                                                    <span>제3회 사랑나눔잔치</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.07</strong>
+                                                    <span>하반기 예비간호조무사 자격시험 응원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.04</strong>
+                                                    <span>비전대 교무부장 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.31</strong>
+                                                    <span>또바기봉사단-역걍강화환경교육사업</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.17</strong>
+                                                    <span>파독60주년 기념 아트 메모리 행사 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.16</strong>
+                                                    <span>보건의료 얼라이언스(의료자원 효율화 분과)2차 회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.03</strong>
+                                                    <span>전북특별자치도당정기당원대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.01</strong>
+                                                    <span>더불어민주당 한병도국회의원 간담회(간호법 제정관련)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.01</strong>
+                                                    <span>간호조무사 응시자격 학력 제한 정책토론회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.26</strong>
+                                                    <span>더불어민주당 박희승 국회의원 간담회(간호법 제정관련)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.15</strong>
+                                                    <span>전북 보건의료 출범식 및 업무협약식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.08</strong>
+                                                    <span>임상특별분회(전주예수병원 성우회) 회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.14</strong>
+                                                    <span>임상특별분회(남원의료원) 회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.13</strong>
+                                                    <span>창립51주년 기념행사 및 간호조무사아카데미</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.08</strong>
+                                                    <span>파독근로60주년(ART MEMORY) 기념 미술전시회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.23</strong>
+                                                    <span>특성화고 졸업생 보건직 신규회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.20</strong>
+                                                    <span>진안군수 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.22</strong>
+                                                    <span>김관영전북특별자치도지사 간담회(여협과 함께)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.10</strong>
+                                                    <span>또바기봉사단-농가일자리 나눔 행사(라라딸기농장)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.09</strong>
+                                                    <span>전북여성가족재단-일자리협력망회의(보건의료서비스전문가 양성교육)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.04</strong>
+                                                    <span>정운천후보 정책제안 회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.03</strong>
+                                                    <span>정동영후부 정책제안 회원 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.27</strong>
+                                                    <span>전북새일자리센터여성친화일촌기업 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.17</strong>
+                                                    <span>중앙회 제50차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.09</strong>
+                                                    <span>예비간호조무사 자격시험 응원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.24</strong>
+                                                    <span>제51차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.01</strong>
+                                                    <span>진안군일자리센터 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.29</strong>
+                                                    <span>소피아여성의원 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.18</strong>
+                                                    <span>전북특별자치도 출범식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.17</strong>
+                                                    <span>진안군일자리센터 사전미팅 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">01.12</strong>
+                                                    <span>전북장기요양요원지원센터 간담회(교육연계)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2023</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2023">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.16</strong>
+                                                    <span>2023년 보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.07</strong>
+                                                    <span>여성협의회 여성NGO활동 성과보고회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.13</strong>
+                                                    <span>코로나19 감염병 대응 유공자 표창수여식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.13</strong>
+                                                    <span>임상특별분회(전주 예수병원)간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10.31~11.01</strong>
+                                                    <span>결핵협회와 대한간호조무사협회-캄보디아의료봉사</span>
+                                                </div> 
+                                                <div class="txt_box">
+                                                    <strong class="month">10.20</strong>
+                                                    <span>전라북도장기요양요원지원센타 MOU체결</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.16</strong>
+                                                    <span>제2회 사랑나눔잔치-또바기봉사단</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09.09</strong>
+                                                    <span>예비간호조무사 자격시험 응원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.31</strong>
+                                                    <span>진안홍삼스파 MOU체결</span>
+                                                </div>                                               
+                                                <div class="txt_box">
+                                                    <strong class="month">08.18</strong>
+                                                    <span>보수교육, 시·군 임상 활성화 방안 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08.05~07</strong>
+                                                    <span>2023년 새만금 세계스카우드잼버리 의료봉사</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.27</strong>
+                                                    <span>세광휘트니스MOU협약체결 및 자문, 전문위원 위촉식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.20</strong>
+                                                    <span>창립50주년 기념행사 및 간호조무사아카데미</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.19</strong>
+                                                    <span>비전대학교 유학생을 위한 밥 한끼 사랑나눔 및 후원물품전달</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.12</strong>
+                                                    <span>원광대학교병원 특별분회 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.16</strong>
+                                                    <span>대한간호조무사협회 창립50주년 기념 정책토론회 및 사진전</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.30</strong>
+                                                    <span>대통령 거부권 간호법폐기</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.11</strong>
+                                                    <span>400만보건복지의료연대 보건의료 잠시멈춤 간호법면허박탈법 폐기전국 2차 연가투쟁</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.06</strong>
+                                                    <span>간호법 강행처리 단식 릴레이 이선옥회장, 장미숙부회장참석</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.25</strong>
+                                                    <span>간호법 저지 전국간호조무사 대표자</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.21</strong>
+                                                    <span>전라북도 여성협의회와 함께한 전라북도도지사간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.16</strong>
+                                                    <span>대한민국 의료바로세우기 보건복지의료연대 총궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.26</strong>
+                                                    <span>제49차 중앙회 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.24</strong>
+                                                    <span>원광보건고등학교 간호조무사 특성화고 이선옥회장강의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.15</strong>
+                                                    <span>간호법저지를 위한 13개 단체 보건복지의료연대 전국적집회(더불어민주당사앞)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.11</strong>
+                                                    <span>간호조무사 자격시험 응원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.08</strong>
+                                                    <span>전북도회 사무처(교육장) 이전(기린대로 396, 6층)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.04</strong>
+                                                    <span>중앙회 보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.26</strong>
+                                                    <span>간호법·의료인면허법 규탄 보건복지의료대 400만총궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.25</strong>
+                                                    <span>제50차 정기대의원총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.16</strong>
+                                                    <span>효사랑요양병원간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.09</strong>
+                                                    <span>간호단독법 제정반대 기자회견</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2022</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2022">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">08.06</strong>
+                                                    <span>또바기봉사단-외국인 유학생[밥한끼 사랑나눔]</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.25</strong>
+                                                    <span>한국간호조무사회 전북지부노조설립총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.04</strong>
+                                                    <span>비전대학교 방문간호간호조무사 과정7기 수료식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.22</strong>
+                                                    <span>간호법저지를 위한 의사 간호조무사 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.16</strong>
+                                                    <span>보건의료노조 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">05.15</strong>
+                                                    <span>중앙회 보수교육설명회, 전국간호조무사노동조합 설립총회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.11~16</strong>
+                                                    <span>간호법안 반대 1인 피켓시위-김성주의원 사무소앞</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.19</strong>
+                                                    <span>간호단독법 저지 10개 단체 공동비상대책위원회 궐기대회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">04.15</strong>
+                                                    <span>제22대 회장단 전라북도청 강영석 복지여성보건국장 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.26</strong>
+                                                    <span>제22대 회장 취임</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2021</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2021">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">12.28</strong>
+                                                    <span>전라북도지역 작은 병의원보건의료노동자 실태조사 토론회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.04</strong>
+                                                    <span>한반도 평화선언 서명운동</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.04</strong>
+                                                    <span>전라북도 LPNDAY및 보수교육평가회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">12.01</strong>
+                                                    <span>보수교육 및 자격신고 홍보를 위한 광고 (13개 시군구현수막 게첩, 버스광고, 라디오 광고)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">11.18</strong>
+                                                    <span>제23회 전북여성대회 “전라북도간호조무사회” 전라북도지사 표창</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.18</strong>
+                                                    <span>KBS터놓고 말합시다 “ 간호인력 처우개선과 인력확보＂토론회 (회장 최영란)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">06.04</strong>
+                                                    <span>고용노동부 전주지청장과 함께하는 보건의료인 간호조무사 현장소통 간담회</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">02.17</strong>
+                                                    <span>코로나19 선별진료소 및 전담병원격려방문(전주시 보건소외6개 보건의료기관 방문)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--//연혁-->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../branch/common/header_pubSample.html", "beforebegin");
+        loadHTML("../branch/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>

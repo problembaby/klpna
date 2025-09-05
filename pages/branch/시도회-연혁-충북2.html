@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연혁 - 충청북도간호조무사회</title>
+
+    <!-- css -->
+	<link rel="stylesheet" href="../../resources/krds/css/plugin/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../resources/krds/css/component/output.css" />
+	<link rel="stylesheet" href="../../resources/krds/css/pattern/p_layout.css" />
+	<link rel="stylesheet" href="../../resources/css/style.css" />
+	<link rel="stylesheet" href="../../resources/lib/aos/aos.css">
+    <link rel="stylesheet" href="../../resources/css/setting/branch_custom.css" /> <!-- 시도회 커스텀 css -->
+    <link rel="stylesheet" href="../resources/css/contents.css" />
+
+
+	<!--js-->
+	<script src="../../resources/js/jquery-3.7.1.min.js"></script>
+	<script src="../../resources/lib/jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+	<script src="../../resources/krds/js/plugin/swiper-bundle.min.js"></script>
+	<script defer src="../../resources/krds/js/component/ui-script.js"></script>
+	<script defer src="../../resources/krds/js/pattern/pattern.js"></script>
+	<script src="../../resources/js/script.js"></script>
+	<script src="../../resources/lib/aos/aos.js"></script>
+
+<body>
+    <div id="wrap">
+        <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+        <script><!--연혁-->
+            $(function () {
+                $(window).on('load scroll resize', function () {
+                    var scrollTop = $(this).scrollTop() + 400;
+
+                    $(".history_wrap .list > li").filter(function () {
+                        return $(this).offset().top <= scrollTop;
+                    }).addClass('effect').end().filter(function () {
+                        return $(this).offset().top > scrollTop;
+                    }).removeClass('effect');
+                });
+            });
+                
+            $.fn.classtoggle = function (options) {
+                var settings = $.extend
+                    ({
+                        'classname': 'active',     // 추가할 클래스명
+                    },
+                        options);
+            };
+        </script>
+
+        <!-- 컨테이너 영역 -->
+        <div id="container">
+            <!-- 컨텐츠 영역 -->
+            <div class="inner in-between">
+                <!-- 사이드 메뉴 -->
+                <nav class="krds-side-navigation">
+                    <h1 class="lnb-tit">시도회소개</h1>
+                    <!-- lnb-list -->
+                    <ul class="lnb-list">
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">인사말</a>
+                        </li>
+                        <li class="lnb-item active">
+                            <a href="#" class="lnb-btn link active selected">연혁</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">주요사업</a>
+                        </li>
+                        <li class="lnb-item ">
+                            <a href="#" class="lnb-btn link">조직도</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">시도회</a>
+                        </li>
+                        <li class="lnb-item">
+                            <a href="#" class="lnb-btn link">오시는 길</a>
+                        </li>
+                    </ul>
+                    <!-- //lnb-list -->
+                </nav>
+                <!-- //사이드 메뉴 -->
+
+                <div class="contents">
+                    <!-- breadcrumb -->
+                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
+                            <li><a href="#;" class="txt">시도회소개</a></li>
+                            <li><a href="#;" class="txt">연혁</a></li>
+                        </ol>
+
+                    </nav>
+                    <!-- breadcrumb -->
+
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap" data-type="responsive">
+                        <h1 class="h-tit">연혁</h1>
+
+                        <ol class="breadcrumb-action">
+                            <li>
+                                <button class="icon-bg-round" onclick="window.print(); return false;">
+                                    <i class="svg-icon ico-print"></i>
+                                    <span class="sr-only">print</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- //페이지 타이틀 영역 -->
+
+                    <!-- 검색 입력폼 -->
+                    <form id="" name="" action="#" method="post">
+                        <fieldset class="bbs-search-wrap sido_search">
+                            <div class="search-top-box">
+                                <div class="form-col-group">
+                                    <div class="form-tit">
+                                        <label for="local-option">전국시도회</label>
+                                    </div>
+                                    <div class="sch-select select-style">
+                                        <select class="krds-form-select medium" title="선택" id="local-option">
+                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <option value="서울시">서울시간호조무사회</option>
+                                            <option value="부산시">부산시간호조무사회</option>
+                                            <option value="대구시">대구시간호조무사회</option>
+                                            <option value="인천시">인천시간호조무사회</option>
+                                            <option value="광주전남">광주전남간호조무사회</option>
+                                            <option value="대전충남">대전충남간호조무사회</option>
+                                            <option value="울산경남">울산경남간호조무사회</option>
+                                            <option value="경기도">경기도간호조무사회</option>
+                                            <option value="강원도">강원도간호조무사회</option>
+                                            <option selected="selected" value="충청북도">충청북도간호조무사회</option>
+                                            <option value="전북도">전북도간호조무사회</option>
+                                            <option value="경상북도">경상북도간호조무사회</option>
+                                            <option value="제주도">제주도간호조무사회</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="krds-btn medium black">
+                                        <i class="svg-icon ico-sch"></i>
+                                        검색
+                                    </button>
+                                </div>
+                                <div class="guide">
+                                    각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- //검색 입력폼 -->
+                    <div class="sub-content">
+                        <!--연혁-->
+                        <div id="contents_body">
+                            <div id="depth4_menu_div" class="depth4_tab_sido">
+                                <ul id="depth4_menu_ul">
+                                    <li class=""><a href="시도회-연혁-충북1.html" title="비활성 메뉴">2021-현재</a></li>
+                                    <li class="active last "><a href="시도회-연혁-충북2.html" title="활성 메뉴">1973-2020</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="history_wrap">
+                                <ol class="list">   
+                                    <li class="">
+                                        <div class="year_box">
+                                            <b class="year">2020</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2020">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">11</strong>
+                                                    <span>충북도치과의사회, ㈜미즈간호전문학원 업무 협약식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">10</strong>
+                                                    <span>충북보건과학대학교 방문간호 3기 수료식 (수료생40명)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08</strong>
+                                                    <span>충북도치과의사회 “한국형 DA제도” 간담회 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">08</strong>
+                                                    <span>코로나19 방역현장 거점 병원 위문 격려</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2019</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2019">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">11</strong>
+                                                    <span>간호조무사 차별 철폐 “법정단체 인정 촉구 전국간호조무사 결의대회”</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">09</strong>
+                                                    <span>충북도회 임상간호조무사회 대표자 및 회원 비상대책회의</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07</strong>
+                                                    <span>창립46주년 기념식 및 간호조무사 아카데미 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">03.01</strong>
+                                                    <span>2019년 제45차대의원총회:제20대회장 연영미 피선(2019.3~2022.2)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2018</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2018">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">10.12</strong>
+                                                    <span>충북LPN 봉사단 발족</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">07.01</strong>
+                                                    <span>충북간호조무사 회관 1층 문화센터 개관</span>
+                                                </div>                                          
+                                            </div>                
+                                        </div>
+                                    </li>                                    
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2010年代</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2010">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">2017.01.01</strong>
+                                                    <span>2017년 자격신고제 실시(2017.1.1실시)보건복지부</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2016.12.31</strong>
+                                                    <span>충북 임상간호조무사협의회 조직 발족(8개분과) 충북협의회장 연영미</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2016.12.31</strong>
+                                                    <span>각 시군 분회 조직(2시4구8군) 발족 (임원210명)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2016.02.24</strong>
+                                                    <span>제42차 대의원총회 : 제19대 회장 이순옥 피선(2016.3~2019.3)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2013.02.22</strong>
+                                                    <span>제39차 대의원총회 : 제18대 회장 심명희 피선(2013년~2015년)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2012.06.08</strong>
+                                                    <span>충청북도 보수교육 위원회 결성(위원장 서강희,위원:강숙희,노윤경,간사:사무국장)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2012.05.14</strong>
+                                                    <span>청주시임상분과 위원회 발촉 (대표 이경자. 부대표 강숙희, 노윤경, 총무 홍윤숙)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2011.11.19</strong>
+                                                    <span>간정회 (간호조무사의 정치세력화를 위한)창립총회 출범 및 임상위원회 조직</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2011.07.21</strong>
+                                                    <span>직업소개사업 신고 필(13개시도회 교부)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2011.06.26</strong>
+                                                    <span>병원급 이상 간호조무사 정원규정 쟁취 릴레이 출정식 개최</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2011.06.26</strong>
+                                                    <span>제38회 대한간호조무사협회 충청북도지부 창립기념 행사</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2011.04.20</strong>
+                                                    <span>청주시자원봉사센터 자원봉사 수요처 등록</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2011.02.19</strong>
+                                                    <span>제37차 대의원총회 : 회장 심명희 피선(잔여임기 2011~2012)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2010.08.31</strong>
+                                                    <span>청주시사회복지협의회 자원봉사 수요처 실무자 업무정지 신고</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2010.05.26</strong>
+                                                    <span>명칭변경 "대한간호조무사협회"로 변경</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2010.02.06</strong>
+                                                    <span>제36차 대의원총회 : 제17대 회장 조애영 피선</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">2000年代</b>
+                                        </div>
+                                        <div class="his_inner" id="his_2000">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">2009.11.30</strong>
+                                                    <span>은빛재가 장기노인요양 서비스센터 폐업신고</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2009.10</strong>
+                                                    <span>처우개선 위한 의료기관 간호조무사 임금 조정 사업전개</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2009.10</strong>
+                                                    <span>청주 국제 비엔날레 관람객 대상 의료자원 봉사활동</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2009.09</strong>
+                                                    <span>청주 공예비엔날레 의료지원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2009.05.01</strong>
+                                                    <span>건강한 가정만들기 '효' 큰 잔치</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2009.01~</strong>
+                                                    <span>자원봉사대 조직, 자원봉사활동 전개</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2008.12.12</strong>
+                                                    <span>은빛재가 장기노인요양 서비스센터 개설 신고필</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2008.06.06</strong>
+                                                    <span>충주대학교 부설 방문간호조무사교육원 개원</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2008</strong>
+                                                    <span>국비지원 요양보호사 1급반 개강</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2008.03.03</strong>
+                                                    <span>학점은행제 개설(한국교육인적자원부)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2007.08</strong>
+                                                    <span>노동부 국비지원 회원특별사업 전개</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2007.08.02</strong>
+                                                    <span>제1기 실버시터 양성교육 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2007.03.12</strong>
+                                                    <span>회관 3층 증축 준공식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2007.03.02</strong>
+                                                    <span>산업체 위탁 다이어트건강관리과 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2007.02.03</strong>
+                                                    <span>제35차 대의원총회 : 제16대 회장 하임자 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2006.03.02</strong>
+                                                    <span>산업체 위탁 보건행정과 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2006.03.02</strong>
+                                                    <span>주성대학 간호조무사협회 캠퍼스 현판식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2006.03.01</strong>
+                                                    <span>사)한국간호조무사협회(충북)주성대학 산업체위탁교육 계약</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2005.03.04</strong>
+                                                    <span>충청대학 간호조무사협회 캠퍼스 현판식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2004.12.12</strong>
+                                                    <span>산업체 위탁 노인복지전공 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2004.09.24</strong>
+                                                    <span>산학제휴위탁교육협약(충청대학)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2004.09.24</strong>
+                                                    <span>사)한국간호조무사협회충북도회. 충청대학 단학협력협동 결연</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2004.06.09</strong>
+                                                    <span>스포츠댄스 회원 야간강좌 개설</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2004.04.24</strong>
+                                                    <span>충북 강내면 1천여명 노인잔치 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2004.01.31</strong>
+                                                    <span>제31차 대의원총회 : 제15대 회장 맹순자 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2003.08.07</strong>
+                                                    <span>회관 건물 소유권보존 등기 필</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2003.04.24</strong>
+                                                    <span>회관 준공식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2003.04.07</strong>
+                                                    <span>자원봉사인증센터 지정(보건복지부)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2003.03.14</strong>
+                                                    <span>회관 대지 65평 소유권이전등기필</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2002.11.04</strong>
+                                                    <span>회관건축 착공식</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2002.10.21</strong>
+                                                    <span>산회관 신축 건축허가 필</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2002.03.06</strong>
+                                                    <span>회관부지 매입(65.6평 용암2지구 택지개발지역)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2001.02.01</strong>
+                                                    <span>충청북도 여성단체협의회 가입단체 등록</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2001.01.31</strong>
+                                                    <span>제28차 대의원 총회 : 제14대 회장 맹순자 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">2000.01.10</strong>
+                                                    <span>제27차 대의원총회 : 맹순자회장 보선(잔여임기 1년)</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="year_box">
+                                            <b class="year">1900年代</b>
+                                        </div>
+                                        <div class="his_inner" id="his_1990">
+                                            <div class="his_pager">
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.03.28</strong>
+                                                    <span>제25차 대의원 총회 : 제13대 회장 이수만 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1998.03.05</strong>
+                                                    <span>자원봉사대 발족</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1990.09.29</strong>
+                                                    <span>제1차 법정 보수교육 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.07.10</strong>
+                                                    <span>제천시분회(병의원) 결성 : 분회장 이은래(제천서울병원 대표)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1988.05.01</strong>
+                                                    <span>자격증 갱신업무 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.04.12</strong>
+                                                    <span>제13차 대의원 총회 : 제6대 회장 김한순 피선(~12대 역임) 1997까지</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1986.03.12</strong>
+                                                    <span>청주시분회(병의원) : 2대 분회장 민병애(남궁병원 대표)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1985.01.15</strong>
+                                                    <span>제12차 대의원 총회 : 회장 김한순 보선(잔여임기 1년)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1984.09.27</strong>
+                                                    <span>보건직공무원 보수교육 자체교육 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1984.03.24</strong>
+                                                    <span>병의원대표자 보수교육 자체교육 실시</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1984.01.12</strong>
+                                                    <span>청주시분회(병의원)결성 : 1대 분회장 남상호(서울병원 대표)</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1982.01.01</strong>
+                                                    <span>제9차 대의원 총회 : 제5대 회장 배선국 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1981.02.23</strong>
+                                                    <span>제7차 대의원 총회 : 제4대 회장 박재호 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1979.06.01</strong>
+                                                    <span>제5차 대의원 총회 : 제3대 회장 박재호 연임</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1977.06.01</strong>
+                                                    <span>제3차 대의원 총회 : 제2대 회장 박재호 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.12.30</strong>
+                                                    <span>3개시, 10군분회 조직</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1975.01.09</strong>
+                                                    <span>제1차 대의원총회 : 초대회장 신영자 피선</span>
+                                                </div>
+                                                <div class="txt_box">
+                                                    <strong class="month">1974.12.24</strong>
+                                                    <span>사단법인 한국간호조무사협회 충청북도지부 창립총회</span>
+                                                </div>
+                                            </div>                
+                                        </div>
+                                    </li>                                      
+                                </ol>
+                            </div>
+
+                        </div>
+                        <!--//연혁-->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+
+        <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    // 퍼블리싱 단에만 사용하는 공통 스크립트
+    // 개발에서는 절대 사용하지 말것!
+
+    document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("../branch/common/header_pubSample.html", "beforebegin");
+        loadHTML("../branch/common/footer_pubSample.html", "afterend");
+    });
+
+    function loadHTML(url, position) {
+        fetch(url)
+            .then((response) => {
+                if (response.ok) {
+                    return response.text();
+                } else {
+                    console.error(`Failed to load ${url}: ${response.status}`);
+                    return "";
+                }
+            })
+            .then((html) => {
+                if (position === "beforebegin") {
+                    document.body.insertAdjacentHTML("afterbegin", html);
+                    initializeCommonScripts();
+                } else if (position === "afterend") {
+                    document.body.insertAdjacentHTML("beforeend", html);
+                }
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+    }
+
+    function initializeCommonScripts() {
+        // 메뉴 스크립트 초기화
+        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
+        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
+        if (typeof krds_modal !== "undefined") krds_modal.init();
+        if (typeof scrollManager !== "undefined") {
+            window.addEventListener("scroll", () => {
+                scrollManager.updateScrollValues();
+                scrollManager.handleScrollDirection();
+            });
+        }
+    }
+</script>
