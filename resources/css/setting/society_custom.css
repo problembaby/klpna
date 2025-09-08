@@ -1130,7 +1130,7 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 }
 .krds-btn:active, .krds-btn:focus {
     background-color: #2d2da5;
-   
+}
 
 
 /*************************
@@ -1661,6 +1661,8 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
     background: url(../../img/society/ico-file2.svg) no-repeat;
     background-size: 100%;
 }
+
+
 
 .ico-mypage::before {
     content: "";
