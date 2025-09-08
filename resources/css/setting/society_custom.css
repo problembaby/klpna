@@ -395,10 +395,10 @@ line-height: 22px; /* 137.5% */}
 
  .krds-side-navigation .lnb-list .lnb-item .lnb-btn.selected {
     background-color: transparent;
-    color: #414189;
+    color: #1C1CB9;
 }
 .krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
-    color: #414189;
+    color: #1C1CB9;
 }
 
 
