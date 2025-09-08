@@ -541,7 +541,10 @@
     color: #0050CA;
     font-size: 24px;
     letter-spacing: -0.5px;
-}    
+}   
+.rule.society .rule_info .tit{
+    color: #1C1CB9;
+}   
 .rule_info .tit a{
     padding-top: 20px;
     display: block;
@@ -1109,6 +1112,51 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
 .krds-side-navigation .lnb-list .lnb-item.active .link::after{
     background-color: #002BC6;
 }
+.title-banner.society{
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+}
+.title-banner.society .img_info{
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.title-banner.society .text{
+    padding: 20px;
+    flex: 1 0 0;
+}
+.title-banner.society .text .title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.title-banner.society .text .title{
+    font-size: 18px;
+    font-weight: 700;
+}
+.recomend-layout.society .title{
+    display: inline-block;
+    padding: 7px 30px;
+    border-radius: 99px;
+    background: var(--color-haghoe, #414189);
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%
+}
+.recomend-layout.society .candidate-list{
+    margin-top: 10px;
+}
+.recomend-layout.society .candidate-box .cadidate-info .info-area{
+    font-size: 24px;
+}
+.recomend-layout.society .details{
+    margin-top: 10px;
+    font-size: 16px;
+}
 @media (max-width: 768px) {
     .sub-content.line p br{
         display: none;
@@ -1478,5 +1526,12 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         align-items: normal;
         gap: 10px;
         flex-direction: column;
+    }
+    .title-banner.society{
+        display: block;
+        padding: 0px 20px;
+    }
+    .title-banner.society .img_info{
+        width: 100%;
     }
 }
