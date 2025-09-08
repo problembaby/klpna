@@ -1126,12 +1126,11 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 
 .krds-btn:hover {
     background-color: #2d2da5;
-    color:#fff;
+    
 }
 .krds-btn:active, .krds-btn:focus {
     background-color: #2d2da5;
-    color:#fff;
-}
+   
 
 
 /*************************
