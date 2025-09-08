@@ -2127,6 +2127,18 @@ background: #FFF; padding:5px 0; flex:1 auto; font-size: 16px;}
 .papersub-agree .agree-title{font-size: 17px;}
 .papersub-agree.terms-section .agree-box{font-size: 14px;}
 
+.krds-structured-list.o-gallery-list {
+    border-top: 2px solid var(--color-border-top, #1C1CB9);
+}
+.krds-structured-list.o-gallery-list {
+    border-top: 2px solid var(--color-border-top, #1C1CB9);
+}
+.sch-type a.active::before {
+    background-color: #1C1CB9;
+}
+
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}

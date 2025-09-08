@@ -2697,6 +2697,15 @@ gap:5px
 .reco-user .user-name {font-weight: 400;}
 
 
+.oj-list{display: flex; flex-direction: column; gap:10px}
+.oj-list-item{display: flex; align-items: center; gap:10px; flex-wrap: wrap;}
+.oj-list-item .tit{font-weight: 600; display: flex; align-items: center; gap:10px}
+.oj-list-item .tit::after{content:""; display: block; width: 1px; height:12px; background: var(--color-border-nomal, #C6C6C6);}
+.oj-list-item .cont{display: flex; align-items: center; gap:5px}
+.oj-list-item .cont > div{ display: flex; align-items: center; gap:5px}
+.oj-list-item .cont > div::after{content:""; display: block; width: 1px; height:12px; background: var(--color-border-nomal, #C6C6C6);}
+.oj-list-item .cont > div:last-child::after{display:none}
+
 
 
 /** 노트북 */
