@@ -2597,7 +2597,7 @@ background: var(--color-bg-secondary, #F7F8FB); padding:20px; position: relative
 
 .cadidate-recomend-chkArea{margin-top: 30px; display: flex; justify-content: space-between; align-items: center; background: var(--color-text-sub_title, #464C53); padding:10px 20px; color:#fff}
 
-.recmmend-exp-h2{font-size: 19px;}
+.recmmend-exp-h2{font-size: 19px; margin-bottom: 10px;}
 .recomend-period-p{color: var(--color-text-sub_title, #464C53);
 font-size: 14px;
 font-style: normal;
@@ -2636,11 +2636,25 @@ line-height: 120%; /* 16.8px */ margin-top: 5px;}
 .candidate-recommend-btn{
   padding:0 20px; height:40px; width: 100%;
   border-radius: var(--radius-medium4, 8px);
-  background: var(--color-element-inverse, #FFF);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.candidate-recommend-btn.active{
+  background-color: #0050CA!important;
+  color:#fff!important;
+}
+.candidate-recommend-btn.redbd.active{
+  background-color: #DE3412!important;
+  color:#fff!important;
+}
+.candidate-recommend-btn.tertiary.active .ico-thumbs-up.blue::before {
+    background: url(../../img/sub/ico-thumbs-up-white.svg)no-repeat;
+}
+.candidate-recommend-btn.redbd.active .ico-thumbs-up::before {
+    background: url(../../img/sub/ico-thumbs-up-white.svg)no-repeat;
 }
 
 
@@ -2706,7 +2720,7 @@ gap:5px
 .oj-list-item .cont > div::after{content:""; display: block; width: 1px; height:12px; background: var(--color-border-nomal, #C6C6C6);}
 .oj-list-item .cont > div:last-child::after{display:none}
 
-
+.recomend-layout-list{display: flex; flex-direction: column; gap:30px}
 
 /** 노트북 */
 @media (max-width: 1440px) {
