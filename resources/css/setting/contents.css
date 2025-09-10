@@ -856,6 +856,7 @@
     width: 400px;
     flex-wrap: wrap;
     gap: 14px;
+    padding: 4px;
 }
 .sido_info .list li{
 
