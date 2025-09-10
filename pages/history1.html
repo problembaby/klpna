@@ -21,124 +21,7 @@
     <script src="../resources/krds/js/pattern/pattern.js" defer></script>
     <script src="../resources/js/script.js" defer></script>
     
-    <script><!--연혁-->
-    $(function () {
-
-        // 탭메뉴 반응형일 때
-        $('.depth4_tab').classtoggle
-        ({
-            'button': '.active a',  // 이벤트 받을 타겟 선택
-            'respond': true          // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
-        });
-        //주요연혁 효과   
-        $(window).on('load scroll resize', function () {
-            var scrollTop = $(this).scrollTop() + 400;
-
-            $(".history_wrap .list > li").filter(function () {
-                return $(this).offset().top <= scrollTop;
-            }).addClass('effect').end().filter(function () {
-                return $(this).offset().top > scrollTop;
-            }).removeClass('effect');
-        });
-
-    });
-        
-    <!---->
-    $.fn.classtoggle = function (options) {
-            var settings = $.extend
-                ({
-                    'button': '.open',      // 이벤트 받을 타겟 선택
-                    'action': 'click',      // 액션 선택 (click | over)
-                    'classname': 'active',     // 추가할 클래스명
-                    'accordion': false,		// active 될 때 형제요소의 반응 여부
-                    'respond': false,        // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
-                    'respondWidth': '768',        // 반응형 가로 사이즈
-                    'close': '.close'      // 닫기 버튼이 별도로 존재하는 경우 (닫기 버튼은 클릭시에만)
-                },
-                    options);
-
-            return this.each(function () {
-                var $selecter = $(this);
-
-                function clickActive() {
-                    if ($selecter.hasClass(settings.classname) == false) {
-                        $selecter.addClass(settings.classname);
-
-                        if (settings.accordion == true) {
-                            $selecter.siblings().removeClass(settings.classname);
-                        }
-                    }
-                    else {
-                        // 닫기 버튼 존재할 경우 토글되지 않음
-                        if ($selecter.find(settings.close).length == 0) {
-                            $selecter.removeClass(settings.classname);
-                        }
-                    }
-                }
-
-                if (settings.action == 'click') {
-                    $selecter.find(settings.button).on(settings.action, function () {
-                        if (settings.respond == false) {
-                            clickActive();
-
-                            return false;
-                        }
-                        else {
-                            if ($(window).width() <= settings.respondWidth) {
-                                clickActive();
-
-                                return false;
-                            }
-                            else {
-                                $selecter.find(settings.button).off();
-                            }
-                        }
-                    });
-                }
-                else {
-                    $selecter.find(settings.button).on
-                        ({
-                            mouseenter: function () {
-                                $selecter.addClass(settings.classname);
-                            },
-                            focusin: function () {
-                                $selecter.addClass(settings.classname);
-                            },
-                            mouseleave: function () {
-                                $selecter.removeClass(settings.classname);
-                            },
-                            focusout: function () {
-                                $selecter.removeClass(settings.classname);
-                            }
-                        });
-                }
-
-                // 닫기 버튼이 별도로 존재하는 경우
-                if ($selecter.find(settings.close).length > 0) {
-                    $selecter.find(settings.close).on('click', function () {
-                        $selecter.removeClass(settings.classname);
-
-                        return false;
-                    });
-                }
-                else {
-                    // 탭 아웃
-                    $selecter.find('a:last').keydown(function (e) {
-                        if (e.keyCode === 9) {
-                            $selecter.removeClass(settings.classname);
-                        }
-                    });
-
-                    // 역탭 아웃
-                    $selecter.find('a:first').keydown(function (e) {
-                        if (e.keyCode === 9 && e.shiftKey) {
-                            $selecter.removeClass(settings.classname);
-                        }
-                    });
-                }
-            });
-        };
-    </script>
+    
 </head>
 
 <body>
@@ -207,6 +90,124 @@
                         </ol>
                     </div>
                     <!-- //페이지 타이틀 영역 -->
+                     <script>//연혁
+                        $(function () {
+
+                            // 탭메뉴 반응형일 때
+                            $('.depth4_tab').classtoggle
+                            ({
+                                'button': '.active a',  // 이벤트 받을 타겟 선택
+                                'respond': true          // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
+                            });
+                            //주요연혁 효과   
+                            $(window).on('load scroll resize', function () {
+                                var scrollTop = $(this).scrollTop() + 400;
+
+                                $(".history_wrap .list > li").filter(function () {
+                                    return $(this).offset().top <= scrollTop;
+                                }).addClass('effect').end().filter(function () {
+                                    return $(this).offset().top > scrollTop;
+                                }).removeClass('effect');
+                            });
+
+                        });
+                            
+                        <!---->
+                        $.fn.classtoggle = function (options) {
+                                var settings = $.extend
+                                    ({
+                                        'button': '.open',      // 이벤트 받을 타겟 선택
+                                        'action': 'click',      // 액션 선택 (click | over)
+                                        'classname': 'active',     // 추가할 클래스명
+                                        'accordion': false,		// active 될 때 형제요소의 반응 여부
+                                        'respond': false,        // 반응형일 때 (true 시 반응형일때 가로 사이즈 이하에서만 / click 일때만)
+                                        'respondWidth': '768',        // 반응형 가로 사이즈
+                                        'close': '.close'      // 닫기 버튼이 별도로 존재하는 경우 (닫기 버튼은 클릭시에만)
+                                    },
+                                        options);
+
+                                return this.each(function () {
+                                    var $selecter = $(this);
+
+                                    function clickActive() {
+                                        if ($selecter.hasClass(settings.classname) == false) {
+                                            $selecter.addClass(settings.classname);
+
+                                            if (settings.accordion == true) {
+                                                $selecter.siblings().removeClass(settings.classname);
+                                            }
+                                        }
+                                        else {
+                                            // 닫기 버튼 존재할 경우 토글되지 않음
+                                            if ($selecter.find(settings.close).length == 0) {
+                                                $selecter.removeClass(settings.classname);
+                                            }
+                                        }
+                                    }
+
+                                    if (settings.action == 'click') {
+                                        $selecter.find(settings.button).on(settings.action, function () {
+                                            if (settings.respond == false) {
+                                                clickActive();
+
+                                                return false;
+                                            }
+                                            else {
+                                                if ($(window).width() <= settings.respondWidth) {
+                                                    clickActive();
+
+                                                    return false;
+                                                }
+                                                else {
+                                                    $selecter.find(settings.button).off();
+                                                }
+                                            }
+                                        });
+                                    }
+                                    else {
+                                        $selecter.find(settings.button).on
+                                            ({
+                                                mouseenter: function () {
+                                                    $selecter.addClass(settings.classname);
+                                                },
+                                                focusin: function () {
+                                                    $selecter.addClass(settings.classname);
+                                                },
+                                                mouseleave: function () {
+                                                    $selecter.removeClass(settings.classname);
+                                                },
+                                                focusout: function () {
+                                                    $selecter.removeClass(settings.classname);
+                                                }
+                                            });
+                                    }
+
+                                    // 닫기 버튼이 별도로 존재하는 경우
+                                    if ($selecter.find(settings.close).length > 0) {
+                                        $selecter.find(settings.close).on('click', function () {
+                                            $selecter.removeClass(settings.classname);
+
+                                            return false;
+                                        });
+                                    }
+                                    else {
+                                        // 탭 아웃
+                                        $selecter.find('a:last').keydown(function (e) {
+                                            if (e.keyCode === 9) {
+                                                $selecter.removeClass(settings.classname);
+                                            }
+                                        });
+
+                                        // 역탭 아웃
+                                        $selecter.find('a:first').keydown(function (e) {
+                                            if (e.keyCode === 9 && e.shiftKey) {
+                                                $selecter.removeClass(settings.classname);
+                                            }
+                                        });
+                                    }
+                                });
+                            };
+                        </script>
                     <!-- 검색 입력폼 -->
                     <form id="" name="" action="#" method="post">
                         <fieldset class="bbs-search-wrap sido_search">
