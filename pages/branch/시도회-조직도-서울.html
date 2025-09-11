@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="sch-select select-style">
                                         <select class="krds-form-select medium" title="선택" id="local-option">
-                                            <option value="">대한간호조무사협회 중앙회</option>
+                                            <option value="http://www.naver.com">대한간호조무사협회 중앙회</option>
                                             <option selected="selected" value="서울시">서울시간호조무사회</option>
                                             <option value="부산시">부산시간호조무사회</option>
                                             <option value="대구시">대구시간호조무사회</option>
@@ -116,7 +116,7 @@
                                             <option value="제주도">제주도간호조무사회</option>
                                         </select>
                                     </div>
-                                    <button type="button" class="krds-btn medium black">
+                                    <button type="button" class="krds-btn medium black" onclick="gotoSite()">
                                         <i class="svg-icon ico-sch"></i>
                                         검색
                                     </button>
@@ -127,6 +127,17 @@
                             </div>
                         </fieldset>
                     </form>
+                    <script type="text/javascript">
+                        function gotoSite() {
+                            var url = document.getElementById("local-option").value;
+                            if(url ==""){
+                                alert('시도회를 선택해주세요!');
+                            }
+                            else{
+                                location.href = url;
+                            }
+                        }
+                    </script>
                     <!-- //검색 입력폼 -->
                     <div class="sub-content">
                         <div id="contents_body">

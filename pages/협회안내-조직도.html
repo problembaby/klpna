@@ -97,9 +97,9 @@
                                         <label for="local-option">전국시도회</label>
                                     </div>
                                     <div class="sch-select select-style">
-                                        <select class="krds-form-select medium" title="선택" id="local-option">
-                                            <option value="">대한간호조무사협회 중앙회</option>
-                                            <option value="서울시">서울시간호조무사회</option>
+                                        <select class="krds-form-select medium" title="선택" onchange="if(this.value) location.href=(this.value);">
+                                            <option value="/contents/www/MOW00100/MOW00105.jsp">대한간호조무사협회 중앙회</option>
+                                            <option value="/contents/HOME/RMA00100/RMA00104.jsp">서울시간호조무사회</option>
                                             <option value="부산시">부산시간호조무사회</option>
                                             <option value="대구시">대구시간호조무사회</option>
                                             <option value="인천시">인천시간호조무사회</option>
@@ -114,10 +114,6 @@
                                             <option value="제주도">제주도간호조무사회</option>
                                         </select>
                                     </div>
-                                    <button type="button" class="krds-btn medium black">
-                                        <i class="svg-icon ico-sch"></i>
-                                        검색
-                                    </button>
                                 </div>
                                 <div class="guide">
                                     각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
@@ -130,9 +126,9 @@
                         <div id="contents_body">
                             <div class="chart_info">
                                 <!---PC 조직도 사이즈 width 1044px --->
-                                <img class="chart_pc" src="../resources/img/sub/chart_leader_pc.png">
+                                <img class="chart_pc" src="/resources/img/sub/chart_leader_pc.png">
                                 <!---PC 조직도 사이즈 width 560px --->
-                                <img class="chart_mo" src="../resources/img/sub/chart_leader_mo.png">
+                                <img class="chart_mo" src="/resources/img/sub/chart_leader_mo.png">
                             </div>
                             <div class="organizaion_info">
                                 <div class="info_tit">대한간호조무사협회 부서안내</div>

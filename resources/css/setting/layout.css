@@ -799,13 +799,16 @@ background: var(--color-bg-nomal, #F8F8F8); margin: 30px auto }
 .agree-box .ul_tlist01 {
     font-size: 15px;
 }
+.agree-box .ul_tlist01 li {
+    margin-bottom: 10px;
+}
 .agree-box .ul_tlist01 li p {
-    padding: 7px 0;
+    padding: 0px 0px 6px 0px;
     margin: 0px;
 }
 
 .agree-box .ul_tlist02 {
-    padding: 15px 0 10px 30px;
+    padding: 10px 0 0px 10px;
     font-size: 14px;
 }
 .agree-box .ul_tlist02 li {
