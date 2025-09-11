@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../resources/img/logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS로그인 - 간호조무사협회</title>
+
+    <style>
+        html, body{height: 100%; padding: 0px; margin: 0px; font-family: "Pretendard GOV";}
+        body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, a, button, select, ul, li, span, em, label, :before, :after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-text-size-adjust: none;
+            font-family: inherit;
+            line-height: var(--krds-line-height-base);
+            letter-spacing: inherit;
+            font-family: "Pretendard GOV";
+        }
+        .login-wrap{
+            background-color:#ECF2FE; 
+            height: 100%; 
+            background-image:url(../resources/img/login/cms_login_bg.png), url(../resources/img/login/cms_login_bg2.png); 
+            background-repeat: no-repeat, no-repeat;
+            background-position: 16% center, bottom right;
+            position: relative;
+        }        
+        .login-contents{display: flex; padding: 60px; flex-direction: column; align-items: flex-start; gap: 24px; align-self: stretch; 
+            width: 600px; height: 565px; background-color: #ffffff;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .login-inner{width: 100%;}
+        .login-title{text-align: center;color: #7D7D7D; font-family: "Pretendard GOV"; font-size: 18px;margin-bottom: 40px;}
+        .login-title h1{padding: 0px; margin: 0px; color: #004386; font-size: 60px; font-weight: 700; line-height: 120%; letter-spacing: 1px;}
+        .login-title p{padding: 0px; margin: 0px;}
+
+        .form-group .form-tit {width: 100%; margin-top: 10px; margin-bottom: 6px;}
+        label {
+            display: inline-flex; color: var(--color-text-basic, #0D0E10); font-size: 18px; font-style: normal; font-weight: 400; line-height: 150%;
+        }
+        .krds-input.id{background: url(../resources/img/login/myinfo.svg) no-repeat 96%;}
+        .form-group .form-conts.btn-ico-wrap {position: relative;}
+        .form-group .form-conts {display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; gap: var(--krds-gap-4); width: 100%;}
+        .form-group .form-conts.btn-ico-wrap .krds-input {
+            padding-right: var(--krds-form-group--icon-padding-right);
+            width: 100%; display: flex; height: 56px; padding: 0 16px; align-items: center; gap: 8px; align-self: stretch; border-radius: 8px; border: 1px solid var(--color-border-input-dark, #717171);
+            color: var(--color-text-basic, #0D0E10); font-size: 20px; 
+        }
+        input::placeholder {color: #cccccc;}
+        .krds-input:not(textarea):placeholder-shown {display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1;}
+        .form-conts[data-delete=true] .krds-input:not(:placeholder-shown) ~ .btn-group .btn-delete-input {display: flex;}
+        .form-group .form-conts.btn-ico-wrap .btn-group, .form-group .form-conts.btn-ico-wrap .krds-btn {
+            position: absolute; top: 50%; right: 1.3rem; transform: translateY(-50%);
+        }
+        .form-group .form-conts.btn-ico-wrap .btn-group {display: flex; align-items: center; justify-content: flex-start; flex-direction: row; gap: var(--krds-gap-3);}
+        .form-group .form-conts.btn-ico-wrap .btn-group .krds-btn {position: static; transform: translateY(0);}
+        .form-group .form-conts.btn-ico-wrap .btn-delete-input {display: none;}
+        .sr-only {position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;
+        }
+        
+        .krds-btn.icon.medium{width: 28px; height: 28px; border: 0px; background: none; display:flex;border-radius:50%;color:#fff;}
+        .krds-btn.icon.medium .svg-icon {width: 100%; height: 100%;}
+        .krds-btn.icon .svg-icon {background-color: #1e2124;}
+        .krds-input:not(textarea):placeholder-shown {display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 1;}
+        .form-group .form-hint-invalid {color: #ff0000; padding-top: 5px; font-size: 14px;}
+        .svg-icon.ico-delete-fill {
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center center;
+            -webkit-mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: contain;
+            -webkit-mask-image: url(../resources/img/login/delete.svg);
+            mask-image: url(../resources/img/login/delete.svg);
+            -webkit-mask-image: none;
+            mask-image: none;
+            background-image: url(../resources/img/login/delete.svg);
+            background-color: transparent !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            -webkit-mask: none;
+            mask: none;
+        }
+        .svg-icon.ico-pw-visible {
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center center;
+            -webkit-mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: contain;
+            -webkit-mask-image: url(../resources/img/login/visibility_off.svg);
+            mask-image: url(../resources/img/login/visibility_off.svg);
+        }
+        .svg-icon.ico-pw-visible-on {
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center center;
+            -webkit-mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: contain;
+            -webkit-mask-image: url(../resources/img/login/visibility.svg);
+            mask-image: url(../resources/img/login/visibility.svg);
+        }
+        .login-btn {width: 100%; height: 64px; border-radius: 8px; background: #004386; color: #fff; font-size: 24px; font-weight: 700; border: 0px;margin-top: 40px;}
+        .sound_only {display:inline-block !important;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+
+        @media (max-width: 768px) {
+            .login-wrap{background: none;}
+            .login-contents{width: 100%; height: 100%; padding: 40px 20px;}
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 로그인 영역 -->
+    <div class="login-wrap">
+        <div class="login-contents">
+            <div class="login-inner">
+                <div class="login-title">
+                    <h1>KCS</h1>
+                    <p>Klpna Computerized System</p>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-tit">
+                        <label for="login-id">아이디</label>
+                    </div>
+                    <div class="form-conts btn-ico-wrap" data-delete="true">
+                        <input type="text" id="login-id" class="krds-input id" placeholder="영문 소문자">
+                        <button type="button" class="krds-btn medium icon pure btn-delete-input">
+                            <span class="sr-only">내용 삭제</span>
+                            <i class="svg-icon ico-delete-fill"></i>
+                        </button>
+                    </div>
+                    <p class="form-hint-invalid" style="display: none;">에러 메시지</p>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-tit">
+                        <label for="login-pw">비밀번호</label>
+                    </div>
+                    <div class="form-conts btn-ico-wrap" data-delete="true">
+                        <input type="password" id="login-pw" class="krds-input pw"
+                            placeholder="8-12자의 영문자, 숫자, 특수문자 조합">
+                        <div class="btn-group">
+                            <button type="button"
+                                class="krds-btn medium icon pure btn-delete-input">
+                                <span class="sr-only">내용 삭제</span>
+                                <i class="svg-icon ico-delete-fill"></i>
+                            </button>
+                            <button type="button" class="krds-btn medium icon btn-pw-visible"
+                                id="btn-pw-visible">
+                                <span class="sr-only">입력한 비밀번호 보기</span>
+                                <i class="svg-icon ico-pw-visible"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="form-hint-invalid" style="display: none;">에러 메시지</p>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="login-btn" onclick="">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //로그인 영역 -->
+
+
+</body>
+
+</html>
+
+
