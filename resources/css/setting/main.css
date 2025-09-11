@@ -560,7 +560,7 @@ line-height: 100%; /* 18px */
 
 
 
-.mainSection03{margin-top: 50px; background: rgba(241, 242, 246, 0.40); height:559px;}
+.mainSection03{margin-top: 50px; background: rgba(241, 242, 246, 0.40); height:auto;}
 .mainSection03 .main-bbs-wrap{display: flex; gap:40px; padding:50px 0;}
 
 .mainSection03 .main-bbs-wrap .notice{width: 400px;}
@@ -636,7 +636,7 @@ line-height: 22px; /* 146.667% */}
 .welfare .news-gray-box{height: 146px; position: relative; margin-bottom: 13px; }
 
 .projects .news-gray-box p { padding: 48px 30px; color: #0D0E10; font-size: 16px; font-weight: 400;}
-.welfare .news-gray-box p { padding: 25px 20px; color: #0D0E10; font-size: 16px; font-weight: 400; width: 88%;}
+.welfare .news-gray-box p { padding: 19px 20px; color: #0D0E10; font-size: 16px; font-weight: 400; width: 88%;}
 
 .ico-sec0401{position: relative;}
 .ico-sec0401::before { content: ""; display: block; background: url(../../img/main/ico-sec401.svg) no-repeat center/contain; width: 51px; height: 48px; }
