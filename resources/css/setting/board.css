@@ -1168,7 +1168,7 @@ td.cell-subject > * {
   word-break: break-all;
   border-bottom: 0 solid #cbd5e1;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
   display: flex;
@@ -1183,7 +1183,7 @@ td.cell-subject > * {
 
 /* font/body/large */
 font-family: "Pretendard GOV";
-font-size: 18px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 27px */
@@ -1209,7 +1209,7 @@ line-height: 150%; /* 27px */
   flex-wrap: wrap;
 }
 .detailed-info .ul li {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
 }
@@ -1230,7 +1230,7 @@ line-height: 150%; /* 27px */
 }
 .detailed-file-wrap {
 display: flex;
-padding: 10px 16px;
+padding: 10px 0px;
 flex-direction: column;
 align-items: flex-start;
 border-top: 1px solid  #C6C6C6;
@@ -1238,8 +1238,8 @@ border-bottom: 1px solid #C6C6C6;
 
 }
 .detailed-file-wrap .tit {
-  color: var(--color-text-sub_title, #464C53);
-  font-size: 17px;
+  color: var(--color-text-sub_title, #666666);
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 25.5px */
@@ -1327,7 +1327,7 @@ border-bottom: 1px solid #C6C6C6;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 16px
+  font-size: 18px
   
 }
 
@@ -2218,6 +2218,21 @@ font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */ }
 
+.reply-submit-section .guide-txt .fw-medium{
+  font-size: 16px;;
+}
+.reply-submit-section .guide-txt .krds-info-list{
+  gap: 5px;
+}
+.reply-submit-section .guide-txt .krds-info-list > li{
+  font-size: 15px;
+}
+.krds-info-list.decimal{
+  gap: 6px;
+}
+.krds-info-list.decimal > li{
+  font-size: 16px;
+}
 
 .table.lineTable th{ color: var(--Text-02, #454545);
 text-align: center;
@@ -2381,10 +2396,14 @@ table tbody tr td .list-col{
 
 
 .form-row-group{
-      display: flex;
+    display: flex;
     gap: var(--krds-gap-5);
 }
 
+.krds-accordion.type-line .accordion-item.active .accordion-body{
+  margin-top: 10px;
+  font-size: 16px;
+}
 
 @media (max-width: 1300px) {
 
