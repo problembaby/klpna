@@ -367,6 +367,9 @@
     font-weight:500;
     margin-top:62px;
 }
+.greeting_img .txt .txt_info{
+    width:calc(100% - 320px);
+}
 .greeting_img .txt b{
     font-weight:bold;
     color: #EAFF12;
@@ -1325,6 +1328,9 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         text-align:left;
         padding: 30px;
         font-size: 18px;
+    }
+    .greeting_img .txt .txt_info{
+        width:100%;
     }
     .greeting_img br{
         display: none
