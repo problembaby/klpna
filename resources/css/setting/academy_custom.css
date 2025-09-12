@@ -2206,9 +2206,13 @@ body.edu-appl-step03 .step02 {
 }
 
 /** 모바일 */
-@media (max-width: 767px) {    
-    .systemGuide-wrap .banner-area .title-img-center {
-    display:none
+@media (max-width: 767px) {  
+.systemGuide-wrap .banner-area{
+    display: block;
+    padding-bottom: 10px;
+}  
+.systemGuide-wrap .banner-area .title-img-center {
+    margin-bottom: 20px;
 }
 
 .sch-right {
@@ -2376,8 +2380,11 @@ body.edu-appl-step03 .step02 {
     background: var(--color-text-medium, #333);
 }
 
+.banner-area{
+    display: block;
+}
 .banner-area .title-img-center {
-    display: none;
+    margin-bottom: 20px;
 }
     .allMenu-nav li.allMenu-nav-item .menu-title {
         color: var(--color-text-title, #0D0E10);

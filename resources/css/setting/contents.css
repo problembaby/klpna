@@ -1195,6 +1195,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
 .rule_info .btnList-sort{
     padding: 20px 0;
 }
+
 @media (max-width: 768px) {
     .sub-content.line p br{
         display: none;

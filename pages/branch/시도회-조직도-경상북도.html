@@ -99,27 +99,23 @@
                                         <label for="local-option">전국시도회</label>
                                     </div>
                                     <div class="sch-select select-style">
-                                        <select class="krds-form-select medium" title="선택" id="local-option">
-                                            <option value="http://www.naver.com">대한간호조무사협회 중앙회</option>
-                                            <option value="서울시">서울시간호조무사회</option>
-                                            <option value="부산시">부산시간호조무사회</option>
-                                            <option value="대구시">대구시간호조무사회</option>
-                                            <option value="인천시">인천시간호조무사회</option>
-                                            <option value="광주전남">광주전남간호조무사회</option>
-                                            <option value="대전충남">대전충남간호조무사회</option>
-                                            <option value="울산경남">울산경남간호조무사회</option>
-                                            <option value="경기도">경기도간호조무사회</option>
-                                            <option value="강원도">강원도간호조무사회</option>
-                                            <option value="충청북도">충청북도간호조무사회</option>
-                                            <option value="전북도">전북도간호조무사회</option>
-                                            <option selected="selected" value="경상북도">경상북도간호조무사회</option>
-                                            <option value="제주도">제주도간호조무사회</option>
+                                        <select class="krds-form-select medium" title="선택" onchange="if(this.value) location.href=(this.value);">
+                                            <option value="/contents/www/MOW00100/MOW00105.jsp">대한간호조무사협회 중앙회</option>
+                                            <option value="/contents/HOME/RMA00100/RMA00104.jsp">서울시간호조무사회</option>
+                                            <option value="/contents/HOME/BUS00100/BUS00104.jsp">부산시간호조무사회</option>
+                                            <option value="/contents/HOME/DGU00100/DGU00104.jsp">대구시간호조무사회</option>
+                                            <option value="/contents/HOME/ICH00100/ICH00104.jsp">인천시간호조무사회</option>
+                                            <option value="/contents/HOME/GWJ00100/GWJ00104.jsp">광주전남간호조무사회</option>
+                                            <option value="/contents/HOME/DJC00100/DJC00104.jsp">대전충남간호조무사회</option>
+                                            <option value="/contents/HOME/UGN00100/UGN00104.jsp">울산경남간호조무사회</option>
+                                            <option value="/contents/HOME/GGG00100/GGG00104.jsp">경기도간호조무사회</option>
+                                            <option value="/contents/HOME/GWK00100/GWK00104.jsp">강원도간호조무사회</option>
+                                            <option value="/contents/HOME/CBB00100/CBB00104.jsp">충청북도간호조무사회</option>
+                                            <option value="/contents/HOME/JBB00100/JBB00104.jsp도">전북도간호조무사회</option>
+                                            <option selected="selected" value="/contents/HOME/GSB00100/GSB00104.jsp">경상북도간호조무사회</option>
+                                            <option value="/contents/HOME/JJU00100/JJU00104.jsp">제주도간호조무사회</option>
                                         </select>
                                     </div>
-                                    <button type="button" class="krds-btn medium black" onclick="gotoSite()">
-                                        <i class="svg-icon ico-sch"></i>
-                                        검색
-                                    </button>
                                 </div>
                                 <div class="guide">
                                     각 시도회를 선택하시면 해당하는 내용을 보실 수 있습니다.
@@ -127,25 +123,14 @@
                             </div>
                         </fieldset>
                     </form>
-                    <script type="text/javascript">
-                        function gotoSite() {
-                            var url = document.getElementById("local-option").value;
-                            if(url ==""){
-                                alert('시도회를 선택해주세요!');
-                            }
-                            else{
-                                location.href = url;
-                            }
-                        }
-                    </script>
                     <!-- //검색 입력폼 -->
                     <div class="sub-content">
                         <div id="contents_body">
                             <div class="chart_info">
                                 <!---PC 조직도 사이즈 width 1044px --->
-                                <img class="chart_pc" src="../../resources/img/sido/chart_leader_gb_pc.png" alt="경상북도간호조무사회 조직도">
+                                <img class="chart_pc" src="/../resources/img/sido/chart_leader_gb_pc.png" alt="경상북도간호조무사회 조직도">
                                 <!---PC 조직도 사이즈 width 560px --->
-                                <img class="chart_mo" src="../../resources/img/sido/chart_leader_gb_mo.png" alt="경상북도간호조무사회 조직도">
+                                <img class="chart_mo" src="/../resources/img/sido/chart_leader_gb_mo.png" alt="경상북도간호조무사회 조직도">
                             </div>                                                   
                             
                         </div>
