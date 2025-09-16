@@ -651,7 +651,7 @@
 					<!--//배너영역-->
 
 					<!--로그인 후 화면 -->
-					<div class="main-login-area" style="display: none;" data-aos="flip-left">
+					<div class="main-login-area" style="display: ;" data-aos="flip-left">
 						<div class="login-box">
 							<div class="login-info-top">
 								<div class="user-name-wrap">
@@ -668,6 +668,10 @@
 								<li>
 									<span class="label">최종 자격신고일</span>
 									<span class="value">2021.01.01</span>
+								</li>
+								<li>
+									<span class="label">자격증발급처</span>
+									<span class="value">서울특별시</span>
 								</li>
 								<li>
 									<span class="label">소속시도회</span>
@@ -1781,7 +1785,7 @@
 			$('.mainLocalTab .tab [role=tab]').on('click', function () {
 				const tabId = $(this).attr('id');
 				const newName = localNameMap[tabId] || '대한간호조무사협회';
-				$('.local-name').html(`${newName} <i class="ico-homeGo"></i>`);
+				$('.local-name').html(newName + ' <i class="ico-homeGo"></i>');
 			});
 		});
 
