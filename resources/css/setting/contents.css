@@ -367,6 +367,9 @@
     font-weight:500;
     margin-top:62px;
 }
+.greeting_img .txt .txt_info{
+    width:calc(100% - 320px);
+}
 .greeting_img .txt b{
     font-weight:bold;
     color: #EAFF12;
@@ -1192,6 +1195,13 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
 .rule_info .btnList-sort{
     padding: 20px 0;
 }
+
+@media (max-width: 1440px) {
+
+    .site_ban ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 @media (max-width: 768px) {
     .sub-content.line p br{
         display: none;
@@ -1325,6 +1335,9 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         text-align:left;
         padding: 30px;
         font-size: 18px;
+    }
+    .greeting_img .txt .txt_info{
+        width:100%;
     }
     .greeting_img br{
         display: none
@@ -1536,10 +1549,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         height: auto;
         padding-bottom: 4px;
         letter-spacing: -1px;
-    }
-    .site_ban ul{
-        grid-template-columns: repeat(2, 1fr);
-    }
+    }    
     .site_ban ul li{
         display: block;
         text-align: center;
