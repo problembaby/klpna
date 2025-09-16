@@ -55,9 +55,25 @@ font-weight: 500;
 .login-info-top .name { color: #0D0E10; font-size: 24px; font-style: normal; font-weight: 600; line-height: 135%; /* 32.4px */}
 .user-name-wrap{width: 100%; display: flex; justify-content: space-between; align-items: center;}
 
-.btn-edit { width: 52px; height: 24px; flex-shrink: 0; border-radius: 30px; background: #B1B5C4; color: #FFF; text-align: center; font-size: 14px; font-style: normal; font-weight: 500; line-height: normal; }
+.btn-edit {
+    width: 52px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #B1B5C4;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
 
-.user-info-list{margin-top: 20px; display: flex; flex-direction: column; gap:12px}
+.user-info-list{  margin-top: 17px;display: flex;flex-direction: column;gap: 7px;}
 .user-info-list li{display: flex;}
 .user-info-list li .label{font-weight: 300; width: 50%;}
 .user-info-list li .value{width: 50%;}

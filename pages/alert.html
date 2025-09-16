@@ -26,8 +26,47 @@
     <button type="button" class="krds-btn open-modal" data-target="modal_sample_01">ALERT small 예시</button>
     <button type="button" class="krds-btn open-modal" data-target="modal_sample_02">ALERT medium 예시2</button>
     <button type="button" class="krds-btn open-modal" data-target="modal_sample_03">ALERT large 예시3</button>
+    <button type="button" class="krds-btn primary" id="programmatic-open-btn">스크립트로 모달 열기 (small)</button>
 
 
+    <script>
+        /**
+         * 지정된 ID의 모달을 엽니다.
+         */
+        function openModal(modalId) {
+            const $modal = $('#' + modalId);
+            if ($modal.length === 0) {
+                console.error('Modal with id ' + modalId + ' not found.');
+                return;
+            }
+
+            $modal.addClass('in shown');
+            $modal.find('.modal-back').addClass('in');
+            $('body').css('overflow', 'hidden');
+        }
+
+        /**
+         * 지정된 ID의 모달을 닫습니다.
+         */
+        function closeModal(modalId) {
+            const $modal = $('#' + modalId);
+            if ($modal.length === 0) {
+                console.error('Modal with id ' + modalId + ' not found.');
+                return;
+            }
+
+            $modal.removeClass('in shown');
+            $modal.find('.modal-back').removeClass('in');
+            $('body').css('overflow', '');
+        }
+
+        $(document).ready(function() {
+            // '스크립트로 모달 열기' 버튼 클릭 이벤트
+            $('#id').on('click', function() {
+                openModal('modal_sample_01');
+            });
+        });
+    </script>
 
 <!-- modal -->
 <!-- <section id="modal_sample_01" class="krds-modal fade in shown" role="dialog" aria-labelledby="tit_modal_sample_01"> -->
@@ -61,7 +100,7 @@
 			<!-- //close button -->
 		</div>
 	</div>
-	<div class="modal-back in"></div>
+	<div class="modal-back"></div>
 </section>
 
 
@@ -96,7 +135,7 @@
 			<!-- //close button -->
 		</div>
 	</div>
-	<div class="modal-back in"></div>
+	<div class="modal-back"></div>
 </section>
 
 <section id="modal_sample_03" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_02" data-type="large">
@@ -130,13 +169,10 @@
 			<!-- //close button -->
 		</div>
 	</div>
-	<div class="modal-back in"></div>
+	<div class="modal-back"></div>
 </section>
 <!-- //modal -->
 
 </body>
 
 </html>
-
-
-
