@@ -1573,6 +1573,9 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         width: auto;
         flex-wrap: nowrap;
     }
+    .sido_info.sido_map_area .cont_menu .list li{
+        width: 100%;
+    }
     .sido_info .list .mob-overflow-icon::before{
         top: auto;
         bottom: 14px;
