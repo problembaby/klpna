@@ -58,7 +58,12 @@
     padding: 1rem;
     border:0;
 }
-
+.krds-structured-list.o-gallery-list > li .card-body {
+  gap:10px
+}
+.krds-structured-list.o-gallery-list > li .card-body {
+  gap:10px
+}
 .krds-structured-list.o-gallery-list .card-body .c-text .c-tit::after {
     display:none
 }

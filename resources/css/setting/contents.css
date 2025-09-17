@@ -850,7 +850,13 @@
 .sido_info{
     margin-top: 40px;
 }
+.sido_info.sido_map_area{
+    display: unset;
+}
 .cont_menu{float: right;}
+.sido_info.sido_map_area .cont_menu{
+    float: right;
+}
 .cont_menu p{
     color: #7D7D7D;
     font-size: 14px;
@@ -1219,6 +1225,68 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     .site_ban ul{
         grid-template-columns: repeat(2, 1fr);
     }
+    .sido_info.sido_map_area{
+        display: block;
+    }
+    .sido_info .cont_menu{
+        width: 100%;
+        float: unset;
+        position: relative;
+        overflow-x: hidden;
+    }
+    .sido_info.sido_map_area .cont_menu{
+        width: 100%;
+        float: unset;
+        position: relative;
+        overflow-x: hidden;
+    }
+    .sido_info .cont_menu .list {
+        width: 100%;
+        gap: 0px;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        position: unset;
+    }
+    .cont_area .cont > img{
+        margin: 0 auto;
+        display: block;
+    }
+    .cont_area.mapinfo .cont > img{
+        margin: 0 auto;
+        display: block;
+    }
+    .sido_info .cont_area{
+        width: 100%;
+    }
+    .sido_info.sido_map_area .cont_area.mapinfo{
+        width: 100%;
+    }
+    .sido_info.sido_map_area .cont_menu .list{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .sido_info .cont_menu .list li{
+        flex: unset;
+        width: 25%;
+    }
+    .sido_info.sido_map_area .cont_menu .list li{
+        flex: unset;
+        width: 25%;
+    }
+    .sido_info .cont_menu .list .btn {
+        padding: 0px 10px;
+        line-height: 36px;
+        border-radius: 0px;
+        margin-left: -1px;
+        width: 100%;
+    }
+    .sido_info.sido_map_area .cont_menu .list .btn {
+        padding: 0px 10px;
+        line-height: 36px;
+        border-radius: 0px;
+        margin-left: -1px;
+        width: 100%;
+    }
 }
 @media (max-width: 768px) {
     .sub-content.line p br{
@@ -1501,6 +1569,10 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         padding-bottom: 10px;
         position: unset;
     }
+    .sido_info.sido_map_area .cont_menu .list {
+        width: auto;
+        flex-wrap: nowrap;
+    }
     .sido_info .list .mob-overflow-icon::before{
         top: auto;
         bottom: 14px;
@@ -1533,6 +1605,12 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     .sido_info .cont_area.mapinfo{
         width: 100%;
         padding: 20px;
+    }
+    .sido_info .cont_menu .list .btn{
+        width: auto;
+    }
+    .sido_info.sido_map_area .cont_menu .list .btn{
+        width: auto;
     }
     .sido .btn_go{
         font-size: 14px;
