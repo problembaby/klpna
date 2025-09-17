@@ -855,7 +855,7 @@
     color: #7D7D7D;
     font-size: 14px;
 }
-.sido_info .list{
+.sido_info .cont_menu .list{
     margin-top: 10px;
     overflow:hidden;
     display: flex;
@@ -872,7 +872,7 @@
     background: #08A895;
     border: 1px solid #08A895;
 }
-.sido_info .list .btn{
+.sido_info .cont_menu .list .btn{
     font-size:16px; 
     border-radius: 99px;
     border: 1px solid #C6C6C6;
@@ -881,6 +881,7 @@
     line-height: 40px;
     display: block;
     text-align: center;
+    padding: 0px;
 }
 .sido_info .cont_area{
     margin-top:10px; 
@@ -888,8 +889,17 @@
     padding: 30px;
     background:#F7F8FB;
 }
+.sido_info .cont_area.mapinfo{
+    margin-top:10px; 
+    width: calc(100% - 430px);
+    padding: 30px;
+    background:#F7F8FB;
+}
 .sido_info .cont_area .cont{
     display:none; 
+}
+.sido_info .cont_menu .list .btn{
+    color: #0D0E10;
 }
 .sido{
     font-size: 16px;
@@ -916,6 +926,14 @@
     background:url(../../img/icon/phone.svg) no-repeat left center;    
 }
 .sido .btn_go{
+    position: absolute;
+    right: 0px;
+    top: 14px;    
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;    
+}
+.cont_area.mapinfo .sido .btn_go{
     position: absolute;
     right: 0px;
     top: 14px;    
@@ -1460,6 +1478,11 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         float: none;
         position: relative;
     }
+    .sido_info .cont_menu{
+        float: none;
+        position: relative;
+        overflow-x: hidden;
+    }
     .sido_info{
         margin-top: 30px;
     }
@@ -1470,10 +1493,23 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         overflow-x: scroll;
         padding-bottom: 10px;
     }
+    .sido_info .cont_menu .list{
+        width: auto;
+        gap: 0px;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding-bottom: 10px;
+        position: unset;
+    }
     .sido_info .list .mob-overflow-icon::before{
         top: auto;
         bottom: 14px;
         right: -10px;
+    }
+    .sido_info .cont_menu .list .mob-overflow-icon::before{
+        top: auto;
+        bottom: 14px;
+        right: 0px;
     }
     .sido_info .list .btn{
         padding: 0px 10px;
@@ -1481,10 +1517,20 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         border-radius: 0px;
         margin-left: -1px;
     }    
+    .sido_info .cont_menu .list .btn{
+        padding: 0px 10px;
+        line-height: 36px;
+        border-radius: 0px;
+        margin-left: -1px;
+    }  
     .cont_menu .list::before{
         border-left: 1px solid #C6C6C6;
     }
     .sido_info .cont_area{
+        width: 100%;
+        padding: 20px;
+    }
+    .sido_info .cont_area.mapinfo{
         width: 100%;
         padding: 20px;
     }
@@ -1496,10 +1542,10 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         flex-direction: column;
         gap: 15px;
     }
-        .center-info-contact .contact-list {
-        align-items: flex-start;
-        flex-direction: column;
-        gap:0
+    .center-info-contact .contact-list {
+    align-items: flex-start;
+    flex-direction: column;
+    gap:0
     }
     .center-info-list > li {
         display: flex;
