@@ -81,11 +81,12 @@
                     </div>
                     <!-- //페이지 타이틀 영역 -->
 
-                    <!-- 게시판 상세페이지 start -->
+                    <!-- 게시판 답글 상세페이지 start -->
                     <div class="board-detailed pageWrap">
                         <div class="page-content">
                             <div class="detailed-header">
-                                <div class="title">
+                                <div class="title reply-header">
+                                    <div class="re-title">답글</div>
                                     <span class="category">보수교육</span>
                                     <p>부당해고 상담합니다.</p>
                                 </div>
@@ -148,6 +149,10 @@
                         </div>
 
                         <!-- 버튼 리스트 -->
+                        <div class="btnList-sort center">
+                            <button type="button" class="krds-btn blue">목록</button>
+                        </div>
+
                         <div class="btnList-sort both m-column" style="display: none;">
                             <button type="button" class="krds-btn black" onclick="">답글등록</button>
                             <div class="right">
@@ -156,8 +161,7 @@
                                 <button type="button" class="krds-btn blue" onclick="">목록</button>
                             </div>
                         </div>
-
-
+                        
                         <!--댓글-->
                         <div class="comment-section" style="display: none;">
                             <div class="comment-counter">
@@ -214,8 +218,8 @@
                         <!--// 댓글-->
 
 
-                        <!--답글-->
-                        <div class="reply-section">
+                        <!--답글 - 사용 안함-->
+                        <div class="reply-section" style="display: none;">
                             <div class="reply-header">
                                 <div class="re-title">답글</div>
                             </div>
@@ -278,7 +282,7 @@
 
 
                         </div>
-                        <!--//답글-->
+                        <!--//답글 - 사용 안함-->
 
 
                         <div class="page-go">

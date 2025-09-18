@@ -2211,6 +2211,7 @@ gap: 10px;
 border-radius: 4px;
 background: var(--color-secondary, #0AF);
 color:#fff;
+font-size: 17px;
 }
 
 .reply-section .detailed-info{background-color: #fff; border-bottom: 0;}
