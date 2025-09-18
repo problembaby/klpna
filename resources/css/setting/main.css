@@ -866,7 +866,7 @@ font-weight: 400; margin-top: 5px;}
   width: 150px;
 }
 
-.quick-wrap-item a:hover{
+.quick-wrap-item a:hover, .quick-wrap-item a:focus{
   background-color: #05417C;
 }
 
