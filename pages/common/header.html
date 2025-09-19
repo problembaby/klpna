@@ -80,6 +80,11 @@
 		<div class="inner">
 			<ul class="header-util-list">
 				<li>
+					<span class="fs-13 fc-blue fw-normal">남은 시간 239분 37초</span>
+					<a href="" title="로그인 페이지 이동" class="btn-navi login open-modal" data-target="modal_sample_02">로그인 연장</a>
+					<!-- <a href="#" class="btn-navi loginout">로그아웃</a> -->
+				</li>
+				<li>
 					<a href="../pages/login.html" title="로그인 페이지 이동" class="btn-navi login">로그인</a>
 					<!-- <a href="#" class="btn-navi loginout">로그아웃</a> -->
 				</li>
@@ -581,3 +586,39 @@
 </section>
 
 <!-- //모달 : 전체메뉴보기 -->
+
+<!--로그인연장 모달-->
+<section id="modal_sample_02" class="krds-modal fade" role="dialog" aria-labelledby="tit_modal_sample_02" data-type="medium">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- modal title -->
+			<div class="modal-header">
+				<h2 id="tit_modal_sample_02" class="modal-title">
+				
+				</h2>
+			</div>
+			<!-- //modal title -->
+			<!-- modal contents -->
+			<div class="modal-conts">
+				<div class="conts-area">
+					로그아웃 시간을 연장하시겠습니까? 51초
+				</div>
+			</div>
+			<!-- //modal contents -->
+			<!-- modal btn -->
+			<div class="modal-btn btn-wrap">
+				<button type="button" class="krds-btn medium tertiary close-modal">로그아웃</button>
+				<button type="button" class="krds-btn medium primary close-modal">연장하기</button>
+			</div>
+			<!-- //modal btn -->
+			<!-- close button -->
+			<button type="button" class="krds-btn medium icon btn-close close-modal">
+				<span class="sr-only">닫기</span>
+				<i class="svg-icon ico-popup-close"></i>
+			</button>
+			<!-- //close button -->
+		</div>
+	</div>
+	<div class="modal-back"></div>
+</section>
+<!--//로그인연장 모달-->
