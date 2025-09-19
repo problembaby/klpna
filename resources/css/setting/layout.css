@@ -1922,7 +1922,7 @@ line-height: 150%; /* 24px */}
 /** 모바일 */
 @media (max-width: 767px) {
 .bbs-search-wrap .select-style{width: 100%;}
-    .icon-persnal::before, .icon-institution::before {
+.icon-persnal::before, .icon-institution::before {
     width: 70px;
     height: 70px;
 }
@@ -2010,13 +2010,17 @@ line-height: 150%; /* 24px */}
     flex-wrap: wrap;
     justify-content: center;
 }
-
-.title-img-subStaff {
-    max-width: 207px;
-    width: 100%;
-    display: none;
+.title-banner.subStaff, .title-banner.subStaff2, .title-banner.subStaff3{
+    display: block;
 }
-
+.title-banner.subStaff .title-img-subStaff, .title-banner.subStaff2 .title-img-subStaff, .title-banner.subStaff3 .title-img-subStaff {
+    width: 100%;
+    max-width: unset;
+    height: 200px;
+}
+.title-banner.subStaff .title-img-subStaff::before, .title-banner.subStaff2 .title-img-subStaff::before, .title-banner.subStaff3 .title-img-subStaff::before{
+    background-position: center;
+}
 .title-banner .text {
     padding: 30px ;
 }
@@ -2024,12 +2028,10 @@ line-height: 150%; /* 24px */}
 .title-banner .text .title {
     font-size: 23px;
 }
-.subStaff2 .title-img-subStaff{
-    display: none;
-}
 
 .form-input.addList .list .list-item .date > span{margin-right: 10px; flex:0 100%;}
-
+.subStaff-section .process-list{display: block;}
+.subStaff-section .process-list .ico-process-arrow::before{transform: rotate(90deg); margin:0 auto}
 
 }
 
