@@ -2724,6 +2724,9 @@ gap:5px
 
 .recomend-layout-list{display: flex; flex-direction: column; gap:30px}
 
+
+.mypage-education-top .krds-btn.text:hover{color:#0D0E10}
+
 /** 노트북 */
 @media (max-width: 1440px) {
   .tab.bot-line::before{

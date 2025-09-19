@@ -47,7 +47,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
-    flex: 0 175px;
+    flex: 0 250px;
 
 }
 
@@ -1655,7 +1655,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 .ms-card-item-link{display: flex; flex-direction: column;}
 .ms-card-item-link .img{position: relative; border-radius: 10px; overflow: hidden;}
 .ms-card-item-link .img .edu-type{position: absolute; border-radius: 10px 0;
-background: #2A2D2F; width: 54px;
+background: #2A2D2F; width: auto; padding: 0 5px;
 height: 25px;
 flex-shrink: 0; color:#fff;
 color: #FFF;
