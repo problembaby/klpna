@@ -477,3 +477,41 @@ $(function () {
         }
     });
 });
+
+
+
+function openVerifyId(successUrl, onAuthSuccess) {
+    // 기존 iframe이 있다면 제거
+    const existingIframe = document.getElementById('hiddenFrame');
+    if (existingIframe) {
+        existingIframe.remove();
+    }
+
+    // 새로운 iframe 생성
+    const iframe = document.createElement('iframe');
+    
+    // iframe 속성 설정
+    iframe.style.display = 'none'; // 숨김 처리
+    iframe.style.width = '0';
+    iframe.style.height = '0';
+    iframe.style.border = 'none';
+    iframe.id = 'hiddenFrame';
+    
+    // 콜백 함수를 전역에 저장 (iframe에서 접근 가능하도록)
+    if (onAuthSuccess && typeof onAuthSuccess === 'function') {
+        window.verifyIdCallback = onAuthSuccess;
+    }
+    
+    // URL 설정 (successUrl 파라미터 추가)
+    const url = new URL('/login/BD_verifyId.do', window.location.origin);
+    if (successUrl) {
+        url.searchParams.set('successUrl', successUrl);
+    }
+    iframe.src = url.toString();
+    
+    // body에 iframe 추가
+    document.body.appendChild(iframe);
+    
+    return iframe;
+}
+
