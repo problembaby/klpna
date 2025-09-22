@@ -2121,6 +2121,12 @@ line-height: normal;}
     margin-bottom: 10px;
 }
 
+.sido-gallery-link{
+    display: block;
+}
+
+
+
 /** 노트북 */
 @media (max-width: 1440px) {
     .sido-gallery-list {
