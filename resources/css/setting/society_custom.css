@@ -177,7 +177,7 @@
     background-color: #fff;
     position: absolute;
     width: 100%;
-    height: 234px;
+    height: 300px;
     top: 90px;
     left: 50%;
     transform: translateX(-50%);
@@ -193,7 +193,7 @@
     height: 258px;
     position: absolute;
     left: 267px;
-    bottom: -41px;
+    bottom: 10px;
 }
 
 

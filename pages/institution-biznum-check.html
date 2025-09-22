@@ -122,14 +122,12 @@
                         <h2 class="sr-only">사업자등록번호 확인</h2>
 
                         <div class="">
-                            <h3>휴대전화 본인확인 서비스</h3>
+                            <h3>사업자등록번호 확인 서비스</h3>
                             <div class="helper-box gray">
                                 <ul class="krds-info-list decimal" role="list">
                                     <li role="listitem">
-                                        생년월일, 성명, 내/외국인, 휴대폰번호, 통신사를 입력하여 본인확인을 받습니다.
+                                        기관, 단체의 사업자등록번호로 가입 여부를 확인합니다.
                                     </li>
-                                    <li role="listitem">본인 명의의 휴대전화가 아닐 경우 본인확인이 이루어지지 않습니다.</li>
-                                    <li role="listitem"><span class="">휴대폰 본인인증을 하셔야 회원가입이 가능합니다.</span></li>
                                 </ul>
                             </div>
 
@@ -146,21 +144,18 @@
                                                 <div class="form-conts">
                                                     <ul class="input-group range">
                                                         <li>
-                                                            <select name="" id="bizNo1" class="krds-form-select medium">
-                                                                <option value="">선택</option>
-                                                                <option value="010">010</option>
-                                                                <option value="011">011</option>
-                                                            </select>
+                                                            <input type="text" id="bizNo1" class="krds-input medium"
+                                                                placeholder="">
                                                         </li>
                                                         <li class="mark">-</li>
                                                         <li>
                                                             <input type="text" id="bizNo2" class="krds-input medium"
-                                                                placeholder="" maxlength="4">
+                                                                placeholder="" >
                                                         </li>
                                                         <li class="mark">-</li>
                                                         <li>
                                                             <input type="text" id="bizNo3" class="krds-input medium"
-                                                                placeholder="" maxlength="4">
+                                                                placeholder="" >
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -176,7 +171,7 @@
                                     <!-- 대표자명 -->
                                     <div class="form-group">
                                         <div class="form-tit">
-                                            <label for="ceoName">대표자명<i class="req">*</i></label>
+                                            <label for="ceoName">대표자명</label>
                                         </div>
                                         <div class="form-input">
                                             <div class="input-group">
@@ -185,17 +180,15 @@
                                                         placeholder="대표자명 입력" maxlength="30">
                                                 </div>
                                             </div>
-                                            <div class="input-txt">
-                                                <p class="form-hint-invalid" style="display: none;">대표자명를 입력해주세요.</p>
-                                            </div>
+    
                                         </div>
                                     </div>
                                     <!-- //대표자명 -->
 
-                                    <!--가입일자-->
+                                    <!--개업일자-->
                                     <div class="form-group">
                                         <div class="form-tit">
-                                            <label for="joinYear">가입일자<i class="req">*</i></label>
+                                            <label for="joinYear">개업일자</label>
                                         </div>
                                         <div class="form-input">
                                             <div class="input-group">
@@ -225,12 +218,10 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="input-txt">
-                                                <p class="form-hint-invalid" style="display: none;">가입일자을 입력해주세요.</p>
-                                            </div>
+                                         
                                         </div>
                                     </div>
-                                    <!--//가입일자-->
+                                    <!--//개업일자-->
 
                                     
                                 </div>
