@@ -993,11 +993,25 @@ font-weight: 400; margin-top: 5px;}
     gap: 17px;
 }
 
+  /*메인 모달 팝업*/
+[id^="opShowPopup"]{
+  left: 50%!important;
+  top:50%!important;
+ transform:translate(-50%,-50%)!important;
+ max-width: calc(100% - 40px)!important;
+ height:auto!important;
+ }
+
 
 }
 
 /** 테블릿 */
 @media (max-width: 1023px) {
+
+    [id^="opShowPopup"]{
+   max-width: 320px!important;
+   }
+
 
 .mainSection05{display: block;}
 
