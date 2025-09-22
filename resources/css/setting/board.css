@@ -2134,6 +2134,7 @@ font-weight: 400;
     margin: var(--krds-pc-gap-layout-h2-h3) 0 var(--krds-gap-4);
 }
 .c-top{width: 100%; display: flex; justify-content: space-between; align-items:center}
+.card-top .value{font-size: 16px;;}
 .card-top .thumbnail{border-radius: 20px; overflow: hidden;}
 .thumbnail a{display: block}
 
@@ -2304,7 +2305,7 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
 }
 
 .krds-structured-list.o-news-list .card-body{ padding: 20px; flex:1 55%}
-.krds-structured-list.o-news-list .c-top .value{ font-size: 13px;}
+.krds-structured-list.o-news-list .c-top .value{ font-size: 15px;}
 
 .krds-structured-list.o-news-list .card-body .c-text .c-tit .span {
     display: -webkit-box;
@@ -2941,6 +2942,7 @@ table tbody tr td .list-col{
 
   .table-overscroll{overflow-x: auto;}
   .table-overscroll table{min-width: 1000px;}
+  .table-overscroll table.min-100{min-width: auto}
   .table-board table tbody tr td.txt-ell-2::after {
     display: none;
   }

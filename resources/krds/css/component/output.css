@@ -2771,6 +2771,10 @@ caption {
 .krds-table-wrap .tbl.data td {
   vertical-align: middle;
 }
+.krds-table-wrap .tbl.data.ac th,
+.krds-table-wrap .tbl.data.ac td {
+  text-align: center;
+}
 .krds-table-wrap .tbl.data thead th {
   padding: var(--krds-table--data-thead-th-padding) var(--krds-table--data-thead-th-padding-sides);
   background-color: var(--krds-table--data-thead-surface);
