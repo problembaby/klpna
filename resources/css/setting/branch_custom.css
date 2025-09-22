@@ -30,21 +30,21 @@
 .ico-main-notice::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-main-notice.svg)no-repeat;
+    background: url(../../img/license/ico-main-notice.svg)no-repeat;
     width: 16px;
     height: 19px;
 }
 .ico-main-doc::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-mian-doc.svg)no-repeat;
+    background: url(../../img/license/ico-mian-doc.svg)no-repeat;
     width: 21px;
     height: 21px;
 }
 .ico-main-doc2::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-mian-doc2.svg)no-repeat;
+    background: url(../../img/license/ico-mian-doc2.svg)no-repeat;
     width: 16px;
     height: 16px;
 }
@@ -52,63 +52,63 @@
 .ico-certi01::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-certi01.svg)no-repeat;
+    background: url(../../img/license/ico-certi01.svg)no-repeat;
     width: 45px;
     height: 41px;
 }
 .ico-certi02::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-certi02.svg)no-repeat;
+    background: url(../../img/license/ico-certi02.svg)no-repeat;
     width: 38px;
     height: 45px;
 }
 .ico-certi03::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-certi03.svg)no-repeat;
+    background: url(../../img/license/ico-certi03.svg)no-repeat;
     width: 43px;
     height: 45px;
 }
 .ico-certi04::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-certi04.svg)no-repeat;
+    background: url(../../img/license/ico-certi04.svg)no-repeat;
     width: 37px;
     height: 37px;
 }
 .ico-license::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-license.svg)no-repeat;
+    background: url(../../img/license/ico-license.svg)no-repeat;
     width: 20px;
     height: 21px;
 }
 .ico-license-location::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-location.svg)no-repeat;
+    background: url(../../img/license/ico-location.svg)no-repeat;
     width: 20px;
     height: 21px;
 }
 .ico-gov::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-gov.png)no-repeat;
+    background: url(../../img/license/ico-gov.png)no-repeat;
     width: 14px;
     height: 14px;
 }
 .ico-report::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-report.svg)no-repeat;
+    background: url(../../img/license/ico-report.svg)no-repeat;
     width: 90px;
     height: 91px;
 }
 .ico-report-chk::before{
      display: block;
     content:"";
-    background: url(../../img/branch/ico-report-chk.svg)no-repeat;
+    background: url(../../img/license/ico-report-chk.svg)no-repeat;
     width: 90px;
     height: 91px;
 }

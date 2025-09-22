@@ -383,6 +383,7 @@ line-height: 150%; /* 24px */
 .allmenu .allmenu-top a:hover{text-decoration: underline;}
 .allmenu-link-list {display:flex; gap:10px; flex-wrap: wrap;}
 .allmenu-link-list > .krds-btn.blue {flex:0 200px}
+.allmenu-link-list > .krds-btn.blue:hover {color:inherit; border-color: #0D0E10;}
 
 .krds-modal.allmenu[data-type=full] {
     background-color: #fff;
