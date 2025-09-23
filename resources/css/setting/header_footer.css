@@ -33,7 +33,7 @@ letter-spacing: -0.32px; width: 130px; transition: 0s;}
 }
 
 .header-util .inner{max-width: var(--krds-contents-wrap-size); width: 100%; margin:0 auto}
-.header-util-list{display: flex; gap:15px; justify-content: flex-end;}
+.header-util-list{display: flex; gap:15px; justify-content: flex-end; align-items: center;}
 .header-util-list li{color: #29364A;
 text-align: center;
 font-size: 15px;

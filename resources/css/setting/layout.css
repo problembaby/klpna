@@ -217,6 +217,7 @@
 
 .krds-btn.blue:hover {
     background-color: var(--krds-button--color-tertiary-fill-hover);
+    color: #0050CA;
 }
 
 .krds-btn.blue:active,
@@ -1774,6 +1775,13 @@ line-height: 150%; /* 24px */}
 .form-input.addList .list .list-item .date > span{margin-right: 10px; flex:0 100px; display: flex; justify-content: flex-end;}
 
 
+.input-group.btn-2{display: flex;}
+.input-group.btn-2 .btn-form{display: flex; gap:10px}
+
+.modal-search-area{margin-bottom:20px}
+.msa-list{display: flex; gap:20px;  width: 100%;}
+.msa-list li{display: flex; gap:10px; align-items: center; flex:1 200px;}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -1845,6 +1853,13 @@ line-height: 150%; /* 24px */}
 
 /** 테블릿 */
 @media (max-width: 1023px) {
+
+    .msa-list{display: flex; gap:10px;  width: 100%; flex-direction: column;}
+    .msa-list li{display: flex; gap:10px; align-items: center; flex:1 auto;}
+    .msa-list li label{width: 130px; font-size: 14px;}
+
+
+    .input-group.btn-2{display: flex; flex-wrap: wrap;}
     /** 로그인*/
     .login-wrap .login-img{
         display: none;
