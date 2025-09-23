@@ -7,119 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>점검중 - 간호조무사협회</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="../resources/krds/css/plugin/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../resources/krds/css/component/output.css" />
-    <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
-    <link rel="stylesheet" href="../resources/css/style.css" />
-
-    <!--js-->
-    <script src="../resources/js/jquery-3.7.1.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
-    <script src="../resources/krds/js/component/ui-script.js" defer></script>
-    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
-    <script src="../resources/js/script.js" defer></script>
 </head>
 
 <body>
-    <!-- 퍼블리싱단 header는 여기로 바로 삽입됨 -->
+    <div
+        style="display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; height:100%; text-align: center; padding-top: 100px;">
 
-
-     <div class="wrap">
-        <div id="container">
-            <div class="inner in-between">
-                <div class="contents">
-                    <!-- breadcrumb -->
-                    <nav class="krds-breadcrumb-wrap align-items-center" aria-label="현재 경로" id="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="home"><a href="#" class="txt"><span class="sr-only">홈</span></a></li>
-                            <li><a href="#;" class="txt">점검중</a></li>
-                        </ol>
-                    </nav>
-                    <!-- breadcrumb -->
-                    <!-- 페이지 타이틀 영역 -->
-                    <div class="page-title-wrap error" data-type="responsive">
-                        <h1 class="h-tit">점검중</h1>
-                    </div>
-                    <!-- //페이지 타이틀 영역 -->
-
-                    <div class="join-area">
-                        <section class="register_end-area">
-                            <div class="ico-find error1"></div>
-                            <p>원활한 사이트 이용을 위해 사이트 점검 중 입니다.</p> 
-                            <h3 class="fc-blue">
-                                점검 일시 : 25년 7월 9일 09:00~18:00
-                            </h3>
-                            <p class="small">이용에 불편을 드린 점 진심으로 사과드리며, 최대한 빠른 시일내에 점검을 마칠 수 있도록 최선을 다하겠습니다.<br>
-                                <b>어제보다 오늘 더 발전된 모습을 위해 변화하는 간호조무사협회가 되겠습니다.</b>
-                            </p>                         
-                        </section>
-
-
-                        <!-- 페이지 버튼 영역 -->
-                        <div class="btn-wrap center btnW140">
-                            <button type="button" class="krds-btn medium black" onclick="history.back(); return false">뒤로
-                            </button>
-                        </div>
-                        <!-- //페이지 버튼 영역 -->
-                     
-                </div>
-            </div>
+        <!-- 페이지 타이틀 영역 -->
+        <div style="text-align: center;">
+            <h1 style="font-size: 32px; font-weight: bold;">서비스 점검중</h1>
         </div>
-     </div>
+        <!-- //페이지 타이틀 영역 -->
 
+        <div style="display: flex;
+            width: 220px;
+            height: 220px;
+            padding: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            aspect-ratio: 1 / 1;
+            border-radius: 999px;
+            background: var(--color-bg-nomal, #F8F8F8);
+            margin: 30px auto;">
 
-    <!-- 퍼블리싱단 footer는 여기로 바로 삽입됨 -->
+            <img src="../resources/img/sub/error1.svg" alt="점검중이미지">
+        </div>
+        <p style="font-size: 18px;">원활한 사이트 이용을 위해 사이트 점검 중 입니다.</p>
+        <h3 style="font-size: 20px; color: #0d6efd; margin-top: 20px; font-weight: bold;">
+            점검 일시 : 25년 7월 9일 09:00~18:00
+        </h3>
+        <p style="font-size: 16px; margin-top:10px; line-height: 1.6;">
+            이용에 불편을 드린 점 진심으로 사과드리며, 최대한 빠른 시일내에 점검을 마칠 수 있도록 최선을 다하겠습니다.<br>
+            <b>어제보다 오늘 더 발전된 모습을 위해 변화하는 간호조무사협회가 되겠습니다.</b>
+        </p>
 
+        <!-- 페이지 버튼 영역 -->
+        <div style="margin-top:50px; display: flex; align-items: center; justify-content: center;">
+            <a href="javascript:history.back()"
+                style="background-color: rgb(37, 37, 37); color:#fff; width: 100px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 10px; text-decoration: none;">뒤로</a>
+        </div>
+        <!-- //페이지 버튼 영역 -->
 
-
+    </div>
 
 </body>
 
 </html>
-
-
-<script>
-
-    // 퍼블리싱 단에만 사용하는 공통 스크립트
-    // 개발에서는 절대 사용하지 말것!
-
-    document.addEventListener("DOMContentLoaded", function () {
-        loadHTML("../pages/common/header_pubSample.html", "beforebegin");
-        loadHTML("../pages/common/footer_pubSample.html", "afterend");
-    });
-
-    function loadHTML(url, position) {
-        fetch(url)
-            .then((response) => {
-                if (response.ok) {
-                    return response.text();
-                } else {
-                    console.error(`Failed to load ${url}: ${response.status}`);
-                    return "";
-                }
-            })
-            .then((html) => {
-                if (position === "beforebegin") {
-                    document.body.insertAdjacentHTML("afterbegin", html);
-                    initializeCommonScripts();
-                } else if (position === "afterend") {
-                    document.body.insertAdjacentHTML("beforeend", html);
-                }
-            })
-            .catch((error) => console.error("Error loading HTML:", error));
-    }
-
-    function initializeCommonScripts() {
-        // 메뉴 스크립트 초기화
-        if (typeof krds_mainMenuPC !== "undefined") krds_mainMenuPC.init();
-        if (typeof krds_mainMenuMobile !== "undefined") krds_mainMenuMobile.init();
-        if (typeof krds_modal !== "undefined") krds_modal.init();
-        if (typeof scrollManager !== "undefined") {
-            window.addEventListener("scroll", () => {
-                scrollManager.updateScrollValues();
-                scrollManager.handleScrollDirection();
-            });
-        }
-    }
-</script>

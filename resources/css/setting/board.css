@@ -615,6 +615,14 @@ table.table-hover {
 table.table-hover tr:hover > td {
   background-color: #edf8ff;
 }
+
+table.table-hover tr.selected > td{
+   background-color: #edf8ff;
+}
+table.table-hover.point tr td{
+  cursor: pointer;
+}
+
 /*테이블*/
 .table {
   border-collapse: collapse;
