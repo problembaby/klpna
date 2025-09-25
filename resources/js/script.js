@@ -131,7 +131,7 @@ const KRDSFormUtil = {
             closeTimer = setTimeout(() => {
                 const isInside = safeArea.some(el => el && el.contains(e.target));
                 if (!isInside) closeAllGnb();
-            }, 150);
+            }, 100);
         });
 
         document.addEventListener('focusout', () => {
