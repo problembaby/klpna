@@ -13,12 +13,6 @@
     <link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
     <link rel="stylesheet" href="../resources/css/style.css" />
 
-    <!--js-->
-    <script src="../resources/js/jquery-3.7.1.min.js"></script>
-    <script src="../resources/krds/js/plugin/swiper-bundle.min.js" defer></script>
-    <script src="../resources/krds/js/component/ui-script.js" defer></script>
-    <script src="../resources/krds/js/pattern/pattern.js" defer></script>
-    <script src="../resources/js/script.js" defer></script>
 </head>
 
 <body>
@@ -50,6 +44,18 @@
                         </ol>
                     </div>
                     <!-- //페이지 타이틀 영역 -->
+
+                    <!--이용약관 이동 셀릭트-->
+                    <div class="terms-content-select">
+                        <div class="tcs-inner">
+                            <select name="" id="terms-select" class="krds-form-select" onchange="if(this.value) window.location.href=this.value">
+                                <option value="/pages/이용약관.html">2025.09.10 이용약관</option>
+                                <option value="/pages/이용약관2.html">2023.01.10 이용약관</option>
+                                <option value="/pages/이용약관3.html">2020.09.10 이용약관</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--//이용약관 이동 셀릭트-->
 
                     <div class="rule">
                         <div class="rule_info pt0">
