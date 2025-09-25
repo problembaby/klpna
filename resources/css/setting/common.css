@@ -7,7 +7,7 @@
 접근성 관련 스타일 변경
 --------------------------------------------*/
 
-.gnb-menu button.gnb-main-trigger:focus, .depth2 li a:focus, .allMenu-nav li.allMenu-nav-item .menu-list > li a:focus, .quick-wrap-item a:focus {
+.gnb-menu button.gnb-main-trigger:focus, .depth2 li a:focus, .allMenu-nav li.allMenu-nav-item .menu-list > li a:focus, .quick-wrap-item a:focus, .krds-accordion .accordion-item .btn-accordion:focus  {
     outline: 0 solid var(--krds-light-color-border-inverse);
     outline-offset: 0;
     box-shadow: none;

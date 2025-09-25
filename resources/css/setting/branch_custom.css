@@ -1744,7 +1744,7 @@ line-height: 150%; /* 27px */}
 /** 시도회 :메인세션 3 */
 
 .main-bbs-list.branch{padding:0; display: flex; flex-direction: column; justify-content: flex-start; gap:20px 2%;}
-.mbl-card-items{display: block; flex:1 100%;}
+.mbl-card-items{display: block; flex:0 233px;}
 .mbl-badge{
     padding:5px 10px; border-radius: 10px;
     background: #08A895;
@@ -2233,7 +2233,7 @@ line-height: normal;}
     }
 
     .mbl-card-items {
-        flex: 1 100%;
+        flex: 0 1 223px;
     }
     .mainSection04 {margin-bottom: 50px;}
     .mbl-title {
