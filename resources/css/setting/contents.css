@@ -540,6 +540,10 @@
 .rule{
 
 }
+
+.terms-content-select{display: flex; align-items: center; justify-content: flex-end; margin-bottom: 20px;}
+.tcs-inner{max-width: 400px; width: 100%; display: flex;}
+.tcs-inner select{max-width: 400px; width: 100%; display: flex; cursor: pointer;}
 .rule_info{
     padding-top: 20px;;
 }
