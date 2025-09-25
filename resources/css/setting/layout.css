@@ -1782,6 +1782,33 @@ line-height: 150%; /* 24px */}
 .msa-list{display: flex; gap:20px;  width: 100%;}
 .msa-list li{display: flex; gap:10px; align-items: center; flex:1 200px;}
 
+.fund-donation-info{padding:20px; background: #F8F8F8; border-radius: 10px; height:500px ; overflow-y: auto;    }
+.fund-donation-info h3{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 16px;
+}
+.func-donation-info-list h4{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 16px;
+    margin-top:20px
+}
+.func-donation-info-list p{
+    color: var(--color-text-basic, #0D0E10);
+    font-size: 14px;
+}
+
+.term-text{margin-top: 20px; font-size: 14px; font-weight: bold;}
+
+.func-donation-chkArea {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-text-sub_title, #464C53);
+    padding: 10px 20px;
+    color: #fff;
+}
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -2049,6 +2076,7 @@ line-height: 150%; /* 24px */}
 .subStaff-section .process-list .ico-process-arrow::before{transform: rotate(90deg); margin:0 auto}
 
 }
+
 
 @media (max-width: 479px) {
 
