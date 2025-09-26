@@ -241,10 +241,6 @@
 /**************************
 회원,마이페이지 색상변경 - 09.26
  *****************************/
- .krds-btn{
-    border-color: #08A895;
-    color: #08A895;
- }
   /** 선 블루 */
 .krds-btn.blue {
     border-color: #008878;
@@ -309,7 +305,12 @@ table.noborder tr th{
 .complete-wrap .complete-img::before {
     background: url(../../img/join/join-complete_branch.svg) no-repeat;
 }
-
+.tab.line .active .btn-tab {
+    color: #08A895;
+}
+.tab.line .btn-tab:before{
+    background-color: #08A895;
+}
 
  /**************************
  lnb
@@ -464,7 +465,15 @@ background: var(--gray-gray-5, #F8F8F8);
     border-color:#08A895;
     color: var(--krds-button--color-primary-text);
 }
-
+.kakao-login-btn {
+    background: #FFE839;
+    border-color: #FFE839;
+    color: var(--color-text-basic, #0D0E10);
+}
+.naver-login-btn {
+    background: #03C75A;
+    border-color: #03C75A;
+}
 /*****************
 온라인교육일정 
 ******************/

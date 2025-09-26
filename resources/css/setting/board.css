@@ -2142,7 +2142,8 @@ font-weight: 400;
     margin: var(--krds-pc-gap-layout-h2-h3) 0 var(--krds-gap-4);
 }
 .c-top{width: 100%; display: flex; justify-content: space-between; align-items:center}
-.card-top .value{font-size: 16px;;}
+.c-top .value{font-size: 16px;}
+.card-top .value{font-size: 16px;}
 .card-top .thumbnail{border-radius: 20px; overflow: hidden;}
 .thumbnail a{display: block}
 
