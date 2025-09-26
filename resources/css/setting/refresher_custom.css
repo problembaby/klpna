@@ -249,7 +249,77 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
 .krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
     color: #AF77F5;
 }
+ /**************************
+회원,마이페이지 색상변경 - 09.26
+ *****************************/
+ .krds-btn{
+    border-color: #AF77F5;
+    color: #AF77F5;
+ }
+  /** 선 블루 */
+.krds-btn.blue {
+    border-color: #AF77F5;
+    color: #AF77F5;
+}
 
+.krds-btn.blue:not(.icon) .svg-icon {
+    background-color: #AF77F5;
+}
+
+.krds-btn.blue:hover {
+    background-color: #AF77F5;
+    color: #AF77F5;
+}
+/** 딥 블루*/
+.krds-btn.deepBlue {
+    background-color: #AF77F5;
+    border-color: #AF77F5;
+}
+
+.krds-btn.deepBlue:hover {
+    background-color: #9b5ce9;
+}
+
+.krds-btn.deepBlue:active,
+.krds-btn.deepBlue:focus {
+    background-color: #9b5ce9;
+}
+.guide-txt .bold{
+    color: #9b5ce9;
+}
+.login-link a:hover{
+    color: #9b5ce9;
+}
+
+.krds-btn.regist-btn{color: #9b5ce9; border-color:#9b5ce9;}
+.progress-step.active{background: #AF77F5;}
+.progress-step.none{
+    background: #9b5ce9;
+}
+.join-type-list .krds-info-list span{
+    color:#9b5ce9
+}
+.eduExemptArea-btn-list p{color: #9b5ce9;}
+.complete-wrap p .bold{
+    color: #9b5ce9;
+}
+.nice-area .nice-t{color: #222222}
+.krds-info-list .bold{ color:#9b5ce9}
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
+    color:#9b5ce9;
+}
+.idmerge-btn-area button{background:#9b5ce9;}
+.phone-box .phone-number{color: #9b5ce9}
+table.noborder tr th{
+    border-top: 2px solid #9b5ce9;
+}
+.progress-step.active::after {
+    background-image: url(../../img/login/step_after_refresher.svg);
+}
+.ico-couls::before{background: url(../../img/main/ico-couls_refresher.png) no-repeat;}
+.complete-wrap .complete-img::before {
+    background: url(../../img/join/join-complete_refresher.svg) no-repeat;
+}
 
 /*****************************
 공지사항
@@ -734,6 +804,7 @@ background: var(--color-primary-bg, #ECF2FE);
     color: #fff;
 
 }
+
 
 .progress-step.none {
     background: var(--color-primary, #AF77F5);

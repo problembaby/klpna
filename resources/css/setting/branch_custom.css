@@ -238,7 +238,77 @@
     display: block;
     color: #fff;
 }
+/**************************
+회원,마이페이지 색상변경 - 09.26
+ *****************************/
+ .krds-btn{
+    border-color: #08A895;
+    color: #08A895;
+ }
+  /** 선 블루 */
+.krds-btn.blue {
+    border-color: #008878;
+    color: #008878;
+}
 
+.krds-btn.blue:not(.icon) .svg-icon {
+    background-color: #008878;
+}
+
+.krds-btn.blue:hover {
+    background-color: #008878;
+    color: #008878;
+}
+/** 딥 블루*/
+.krds-btn.deepBlue {
+    background-color: #008878;
+    border-color: #008878;
+}
+
+.krds-btn.deepBlue:hover {
+    background-color: #008878;
+}
+
+.krds-btn.deepBlue:active,
+.krds-btn.deepBlue:focus {
+    background-color: #008878;
+}
+.guide-txt .bold{
+    color: #008878;
+}
+.login-link a:hover{
+    color: #008878;
+}
+
+.krds-btn.regist-btn{color: #08A895; border-color:#08A895;}
+.progress-step.active{background: #08A895;}
+.progress-step.none{
+    background: #08A895;
+}
+.join-type-list .krds-info-list span{
+    color:#08A895
+}
+.eduExemptArea-btn-list p{color: #08A895;}
+.complete-wrap p .bold{
+    color: #08A895;
+}
+.nice-area .nice-t{color: #08A895}
+.krds-info-list .bold{ color:#08A895}
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
+    color:#08A895;
+}
+.idmerge-btn-area button{background:#08A895;}
+.phone-box .phone-number{color: #08A895}
+table.noborder tr th{
+    border-top: 2px solid #08A895;
+}
+.progress-step.active::after {
+    background-image: url(../../img/login/step_after_branch.svg);
+}
+.ico-couls::before{background: url(../../img/main/ico-couls_branch.png) no-repeat;}
+.complete-wrap .complete-img::before {
+    background: url(../../img/join/join-complete_branch.svg) no-repeat;
+}
 
 
  /**************************

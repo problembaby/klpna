@@ -276,6 +276,77 @@ letter-spacing: -0.64px;
     display: block;
     color: #fff;
 }
+ /**************************
+회원,마이페이지 색상변경 - 09.26
+ *****************************/
+ .krds-btn{
+    border-color: #418200;
+    color: #418200;
+ }
+  /** 선 블루 */
+.krds-btn.blue {
+    border-color: #418200;
+    color: #418200;
+}
+
+.krds-btn.blue:not(.icon) .svg-icon {
+    background-color: #418200;
+}
+
+.krds-btn.blue:hover {
+    background-color: #418200;
+    color: #418200;
+}
+/** 딥 블루*/
+.krds-btn.deepBlue {
+    background-color: #2e5c00;
+    border-color: #2e5c00;
+}
+
+.krds-btn.deepBlue:hover {
+    background-color: #2e5c00;
+}
+
+.krds-btn.deepBlue:active,
+.krds-btn.deepBlue:focus {
+    background-color: #2e5c00;
+}
+.guide-txt .bold{
+    color: #2e5c00;
+}
+.login-link a:hover{
+    color: #2e5c00;
+}
+
+.krds-btn.regist-btn{color: #05417C; border-color:#418200;}
+.progress-step.active{background: #356900;}
+.progress-step.none{
+    background: #418200;
+}
+.join-type-list .krds-info-list span{
+    color:#418200
+}
+.eduExemptArea-btn-list p{color: #418200;}
+.complete-wrap p .bold{
+    color: #418200;
+}
+.nice-area .nice-t{color: #222222}
+.krds-info-list .bold{ color:#418200}
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
+    color:#418200;
+}
+.idmerge-btn-area button{background:#418200;}
+.phone-box .phone-number{color: #418200}
+table.noborder tr th{
+    border-top: 2px solid #418200;
+}
+.progress-step.active::after {
+    background-image: url(../../img/login/step_after_license.svg);
+}
+.ico-couls::before{background: url(../../img/main/ico-couls_license.png) no-repeat;}
+.complete-wrap .complete-img::before {
+    background: url(../../img/join/join-complete_license.svg) no-repeat;
+}
 
 
 
