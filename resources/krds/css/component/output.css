@@ -6632,7 +6632,7 @@ caption {
 @media (min-width: 1024px) {
   #krds-footer > .inner {
     gap: var(--krds-gap-9);
-    padding: var(--krds-padding-10) 0 var(--krds-padding-8);
+    padding: var(--krds-padding-10) var(--krds-contents-padding-x) var(--krds-padding-8);
   }
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
