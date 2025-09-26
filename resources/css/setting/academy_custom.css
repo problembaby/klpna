@@ -294,6 +294,77 @@ background: #05417C; padding: 0 27px;  }
 .krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
     color: #05417C;
 }
+ /**************************
+회원,마이페이지 색상변경 - 09.26
+ *****************************/
+ .krds-btn{
+    border-color: #05417C;
+    color: #05417C;
+ }
+  /** 선 블루 */
+.krds-btn.blue {
+    border-color: #05417C;
+    color: #05417C;
+}
+
+.krds-btn.blue:not(.icon) .svg-icon {
+    background-color: #05417C;
+}
+
+.krds-btn.blue:hover {
+    background-color: #05417C;
+    color: #05417C;
+}
+/** 딥 블루*/
+.krds-btn.deepBlue {
+    background-color: #05417C;
+    border-color: #05417C;
+}
+
+.krds-btn.deepBlue:hover {
+    background-color: #032d57;
+}
+
+.krds-btn.deepBlue:active,
+.krds-btn.deepBlue:focus {
+    background-color: #032d57;
+}
+.guide-txt .bold{
+    color: #032d57;
+}
+.login-link a:hover{
+    color: #032d57;
+}
+
+.krds-btn.regist-btn{color: #05417C; border-color:#05417C;}
+.progress-step.active{background: #05417C;}
+.progress-step.none{
+    background: #05417C;
+}
+.join-type-list .krds-info-list span{
+    color:#05417C
+}
+.eduExemptArea-btn-list p{color: #05417C;}
+.complete-wrap p .bold{
+    color: #05417C;
+}
+.nice-area .nice-t{color: #05417C}
+.krds-info-list .bold{ color:#05417C}
+.krds-side-navigation .lnb-list .lnb-item .lnb-submenu .lnb-btn.active {
+    color:#05417C;
+}
+.idmerge-btn-area button{background:#05417C;}
+.phone-box .phone-number{color: #05417C}
+table.noborder tr th{
+    border-top: 2px solid #05417C;
+}
+.progress-step.active::after {
+    background-image: url(../../img/login/step_after_academy.svg);
+}
+.ico-couls::before{background: url(../../img/main/ico-couls_academy.png) no-repeat;}
+.complete-wrap .complete-img::before {
+    background: url(../../img/join/join-complete_academy.svg) no-repeat;
+}
 
 
 /*****************************
@@ -1971,10 +2042,6 @@ line-height: 150%; }
 /** 노트북 */
 @media (max-width: 1440px) {
     .gnb-bg{display: none;}
-}
-
-/** 테블릿 */
-@media (max-width: 1023px) {
     .two-map {
         display: block;
     }
@@ -1983,6 +2050,11 @@ line-height: 150%; }
         width: 100%;
         margin-bottom: 40px;
     }
+}
+
+/** 테블릿 */
+@media (max-width: 1023px) {
+    
     .ceter-directions.location2{
         margin-top: 40px;
         padding-top: 40px;
