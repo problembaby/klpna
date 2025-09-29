@@ -466,6 +466,7 @@ td.cell-subject .smallBtn:hover{
 }
 
 td.cell-subject .subject-title{display: flex!important; align-items: center; gap:10px}
+td.cell-subject .subject-title a{font-weight: 700;}
 td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
 
 
@@ -1802,6 +1803,10 @@ td.cell-subject .subject-title {
     border-radius: 6px;
     justify-content: center;
 
+}
+.borad-list .td-appl .td-appl-area {
+    border: 0px;
+    border-top: 1px solid #d9d9d9;
 }
 .table-board table tbody tr td.td-appl {
     width: 100%;

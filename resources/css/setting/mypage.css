@@ -2856,6 +2856,10 @@ td.cell-subject .subject-title {
     justify-content: center;
 
 }
+.borad-list .td-appl .td-appl-area{
+  border: 0px;
+  border-top: 1px solid #D9D9D9;
+}
 .table-board table tbody tr td.td-appl {
     width: 100%;
     display: flex;
