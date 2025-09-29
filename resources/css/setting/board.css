@@ -168,7 +168,7 @@
     display: flex; 
     justify-content: center;
     background-color: #F7F8FB;
-    padding: 20px 0;
+    padding: 20px 10px;
     border-radius: 12px;
 }
 
@@ -1189,6 +1189,7 @@ td.cell-subject > * {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 0px;
 }
 
 .board-detailed .detailed-header .title .category{
@@ -2515,7 +2516,7 @@ table tbody tr td .list-col{
     text-overflow: clip;
     overflow: visible;
     margin-right: 0 !important;
-    padding-right:15px;
+    padding-right:15px;    
   }
   .table-board table tbody tr td.cell-subject a {
     word-break: break-all;
@@ -2525,6 +2526,7 @@ table tbody tr td .list-col{
     width: 90%;
     margin-bottom: 0px;
     margin: 5px 0;
+    font-weight: 700;
   }
   .table-board table tbody tr td.cell-subject.hasnew a {
     width: 90% !important;
@@ -2724,6 +2726,15 @@ table tbody tr td .list-col{
     display: none;
     width: 100%;
     margin-top: 10px;
+  }
+  .table-board table tbody tr td:last-child.file-td {
+    display: inline-block;
+    width: auto;
+    margin-top: 0px;
+  }
+  .table-board table tbody tr td:last-child.file-td .ico-link{
+    width: 20px;
+    margin-top: 5px;
   }
 
   .detailed-file-wrap .tit {
@@ -3120,6 +3131,9 @@ table tbody tr td .list-col{
 }
 .page-go .page-go__after .label::after {
   margin-left: 8px;
+}
+.bbs-search-wrap .search-top-box {
+  width: 100%;
 }
 .bbs-search-wrap .form-col-group{
   gap:8px

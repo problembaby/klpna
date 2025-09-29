@@ -717,6 +717,9 @@ font-weight: 400;
     position: relative;
     padding-left:10px
 }
+.edu-list.job .o-list > li{
+    padding-left: 0px;
+}
 
 .o-list > li::before{
     display: block;
@@ -2465,7 +2468,12 @@ body.edu-appl-step03 .step02 {
         padding-left: 0;
         padding-bottom: 20px;
     }
-
+.lect-info  .krds-disclosure .expand-wrap .expand-in {
+    padding: 0px;
+    background: none;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
 
 }
 
