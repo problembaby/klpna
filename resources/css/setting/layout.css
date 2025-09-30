@@ -550,7 +550,7 @@ flex: 1 0 0;}
 .naver-login-btn {background: #03C75A!important; border-color: #03C75A!important;}
 .naver-login-btn:hover, .naver-login-btn:active, .naver-login-btn:focus {background: #03C75A!important; border-color: #03C75A!important;}
 .naver-login-btn::before {display: inline-flex; content:""; align-items: center; justify-content: center; width: 75px; height: 15px; background-image: url(../../img/login/login-naver.png); background-repeat: no-repeat; background-position: center center; background-size: contain;}
-.kakao-login-btn {background: #FFE839!important; border-color: #FFE839!important; color: var(--color-text-basic, #0D0E10);}
+.kakao-login-btn {background: #FFE839!important; border-color: #FFE839!important; color: var(--color-text-basic, #0D0E10)!important;}
 .kakao-login-btn:hover, .kakao-login-btn:active, .kakao-login-btn:focus  {background: #FFE839!important; border-color: #FFE839!important; color: var(--color-text-basic, #0D0E10)!important;}
 .kakao-login-btn::before {display: inline-flex; content:""; align-items: center; justify-content: center; width: 62px; height: 22px; background-image: url(../../img/login/login-kakao.png); background-repeat: no-repeat; background-position: center center; background-size: contain;}
 .login-link{

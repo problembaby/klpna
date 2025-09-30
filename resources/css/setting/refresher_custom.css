@@ -270,6 +270,16 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
     background-color: #AF77F5;
     color: #AF77F5;
 }
+
+.allmenu-link-list .krds-btn.blue:hover{
+    color:#fff;
+}
+.allmenu-link-list .krds-btn.blue:hover .ico-blue-home::before{
+    content: "";
+    background: url(../../img/icon/ico-blueHome-wh.svg) no-repeat;
+    transition: all 0.3s;
+}
+
 /** 딥 블루*/
 .krds-btn.deepBlue {
     background-color: #AF77F5;
