@@ -1,3 +1,5 @@
+.search-list-top{align-items: center;}
+
 
 /** 게시판 accordian */
 .o-accordion-list .ico-q { color: #0050CA; font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */ margin-right: 10px;}
