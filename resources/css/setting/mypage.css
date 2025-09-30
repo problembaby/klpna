@@ -2859,6 +2859,7 @@ td.cell-subject .subject-title {
 .borad-list .td-appl .td-appl-area{
   border: 0px;
   border-top: 1px solid #D9D9D9;
+  border-radius: 0px;
 }
 .table-board table tbody tr td.td-appl {
     width: 100%;
