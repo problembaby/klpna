@@ -217,7 +217,7 @@ letter-spacing: -0.35px;}
 
 .foot-link-item.last .drop-down{ width: var(--foot-width) ;}
 
-.foot-link-item .drop-down a{width:100%; height:30px; display: flex; font-size: 13px; align-items: center; padding:0 20px }
+.foot-link-item .drop-down a{width:100%; height:30px; display: flex; font-size: 15px; align-items: center; padding:0 20px }
 .foot-link-item .drop-down a:hover{ background-color: #F1F2F6;}
 
 /* 활성 상태 - .footSelect 바로 다음 형제 drop-down 노출 */
