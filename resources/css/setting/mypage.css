@@ -383,6 +383,7 @@ line-height: 150%; /* 24px */}
 
 .c-lecturel-bottom .col .label {
   color: var(--Text-03, #7E7B77);
+  flex:0 0 auto;
 }
 
 .link-text .go-link {

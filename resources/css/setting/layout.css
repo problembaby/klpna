@@ -4,6 +4,18 @@
 
 
 
+
+
+.login-btn {
+    background-color: var(--krds-button--color-primary-fill)!important;
+    border-color: var(--krds-button--color-primary-border)!important;
+    color: var(--krds-button--color-primary-text)!important;
+}
+.krds-btn.login-btn:hover {
+    background-color: var(--krds-button--color-primary-fill-hover)!important;
+}
+
+
 /*********************
 서브 LNB
 ************************/
