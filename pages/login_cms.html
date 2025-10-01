@@ -174,4 +174,49 @@
 
 </html>
 
+<script>
+    // 문서 로딩 완료 시 초기화
+    document.addEventListener("DOMContentLoaded", function () {
+        KRDSFormUtil.init();
+    });
 
+    /**
+     * KRDSFormUtil
+     * 공통 폼 인터랙션 유틸리티 객체 (로그인 페이지에 필요한 기능만 포함)
+     */
+    const KRDSFormUtil = {
+        init() {
+            this.bindInputClear();
+            this.bindPasswordToggle();
+        },
+
+        // 입력창 'X' 버튼 클릭 시 내용 삭제
+        bindInputClear() {
+            document.querySelectorAll(".btn-delete-input").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const input = this.closest(".btn-ico-wrap").querySelector("input");
+                    if (input) input.value = "";
+                });
+            });
+        },
+
+        // 비밀번호 '눈' 아이콘 클릭 시 비밀번호 보이기/숨기기
+        bindPasswordToggle() {
+            document.querySelectorAll(".btn-pw-visible").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const icon = this.querySelector("i");
+                    const input = this.closest(".btn-ico-wrap").querySelector("input");
+
+                    if (!icon || !input) return;
+
+                    const isVisible = input.type === "text";
+                    input.type = isVisible ? "password" : "text";
+
+                    icon.classList.toggle("ico-pw-visible", isVisible);
+                    icon.classList.toggle("ico-pw-visible-on", !isVisible);
+                });
+            });
+        }
+    };
+</script>
+</html>
