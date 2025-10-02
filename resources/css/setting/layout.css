@@ -1825,7 +1825,10 @@ line-height: 150%; /* 24px */}
 
 /** 노트북 */
 @media (max-width: 1440px) {
-    .dream-col-list .dream-col-item {
+#krds-header .header-container .logo.klpna a{
+    text-align: center;
+}
+.dream-col-list .dream-col-item {
     display: flex;
     flex-direction: column;
     align-items: center;
