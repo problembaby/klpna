@@ -54,7 +54,8 @@ font-weight: 600;
 }
 
 .main-join-find{display: flex; justify-content:space-around; margin-top: 35px;}
-.main-join-find a{text-decoration: underline; font-weight: 600;}
+.main-join-find a{ font-weight: 600;}
+.main-join-find a:hover{text-decoration: underline; font-weight: 600;}
 
 .login-noti{
   margin-top: 30px;
@@ -94,6 +95,8 @@ font-weight: 500;
     justify-content: center;
 }
 
+.btn-edit:hover{background: #8087A2; color:#fff;}
+
 .user-info-list{  margin-top: 17px;display: flex;flex-direction: column;gap: 7px;}
 .user-info-list li{display: flex;}
 .user-info-list li .label{font-weight: 300; width: 50%;}
@@ -106,6 +109,10 @@ height: 110px;
 flex-shrink: 0; text-align: center; display: block; color:#fff;
     position: relative;
     overflow: hidden;
+}
+.edu-summary .edu-item:hover{
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 .edu-summary .edu-item::before{
@@ -218,6 +225,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: 100%; /* 18px */ margin-top: 5px;}
+.tab-conts-wrap.shortcut .tab-conts.active .shortcut-tit:hover{text-decoration: underline;}
 
 .shortcut-list{display: flex; gap:5rem; justify-content: space-between; width: 100%; max-width: 1000px; }
 .shortcut-list .shortcut-list-item{display: flex; width: 105px; flex-direction: column;}
@@ -623,6 +631,7 @@ line-height: 100%; /* 28px */}
 
 .main-bbs-wrap .press-top h3 small { color: #7E7B77; font-size: 20px; font-style: normal; font-weight: 600; line-height: 100%; margin-left: 10px}
 .main-bbs-wrap .notice-top .view-all, .main-bbs-wrap .press-top .view-all { color: #7E7B77; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; display: flex; align-items: center; gap: 5px; }
+.main-bbs-wrap .notice-top .view-all:hover, .main-bbs-wrap .press-top .view-all:hover { text-decoration: underline;  }
 
 .view-all .svg-icon.ico-plus {
   background-color: #7E7B77; /* 여기만 바꾸면 색 바뀜 */
@@ -636,7 +645,9 @@ font-style: normal;
 font-weight: 400;
 line-height: 22px; /* 146.667% */}
 
-.main-bbs-wrap .notice-list p:hover{color: #0050CA; text-decoration: underline;}
+.main-bbs-wrap .notice-list p:hover{ text-decoration: underline;}
+.press-list-item a:hover p.text{text-decoration: underline;}
+.press-list-item a:hover .title{ text-decoration: underline;}
 
 .ico-notice::before{content:""; display: inline-block; margin-right:5px; background: url(../../img/main/ico-notice.svg)no-repeat center; width: 19px; height:18px}
 .main-bbs-wrap .notice-list .date { color: #7E7B77; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; letter-spacing: -0.7px; margin-top: 5px; }
@@ -675,6 +686,8 @@ line-height: 22px; /* 146.667% */}
 .video-iframe{overflow: hidden; border-radius: 15px; height:305px}
 
 .news-gray-box{width: 250px; background-color: #F1F2F6; border-radius: 15px; display: block;}
+
+.news-gray-box:hover{outline: 2px solid #0050CA; transition: 0s;}
 
 .news-wrap .news-box-list .welfare{width: 250px;}
 .news-wrap .news-box-list .jobinfo{width: 250px;}
@@ -799,19 +812,20 @@ line-height: 22px; /* 146.667% */}
 .local-bbs-list .gallery-list .item a img { width:100%; aspect-ratio:5/3; object-fit:cover; }
 
 .local-bbs-list .gallery-list .item a .txt { color: var(--color-text-basic, #0D0E10); font-size: 16px; font-style: normal; font-weight: 400; margin-top: 10px; }
-
+.local-bbs-list .gallery-list .item a:hover .txt{text-decoration: underline;}
 
 .local-bbs-list .notice { max-width: 500px; width: 100%; flex:1 auto;}
 .local-bbs-list .notice-list {  padding: 10px 20px; display: flex; flex-direction: column; gap:20px }
 .local-bbs-list .notice-list a{  display: block; }
 .local-bbs-list .notice-list .txt {  font-size: 16px; }
 .local-bbs-list .notice-list .date {  color: var(--color-text-small, #555);
-font-size: 15px;
-font-weight: 400; margin-top: 5px;}
-
-.related-org .inner .mainSwiper3{
-        padding: 50px 0;
-}
+  font-size: 15px;
+  font-weight: 400; margin-top: 5px;}
+  .local-bbs-list .notice-list a:hover .txt, .local-bbs-list .notice-list a:hover .date{  text-decoration: underline;}
+  
+  .related-org .inner .mainSwiper3{
+    padding: 50px 0;
+  }
 
 .related-org .swiper-indicator {
     display: flex;

@@ -271,7 +271,7 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
 .krds-btn.blue:not(.icon) .svg-icon {
     background-color: #AF77F5;
 }
-
+/* 
 .krds-btn.blue:hover {
     background-color: #AF77F5;
     color: #AF77F5;
@@ -284,7 +284,7 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
     content: "";
     background: url(../../img/icon/ico-blueHome-wh.svg) no-repeat;
     transition: all 0.3s;
-}
+} */
 
 /** 딥 블루*/
 .krds-btn.deepBlue {
@@ -1102,7 +1102,7 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 
 .div-expand{display: none;}
 
-.krds-btn:hover {
+.krds-btn:hover, .krds-btn:focus, .krds-btn:active {
     background-color: #8261AC;
 }
 

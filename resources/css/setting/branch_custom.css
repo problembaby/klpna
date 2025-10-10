@@ -250,7 +250,7 @@
 .krds-btn.blue:not(.icon) .svg-icon {
     background-color: #008878;
 }
-
+/* 
 .krds-btn.blue:hover {
     background-color: #008878;
     color: #008878;
@@ -263,7 +263,7 @@
     content: "";
     background: url(../../img/icon/ico-blueHome-wh.svg) no-repeat;
     transition: all 0.3s;
-}
+} */
 
 /** 딥 블루*/
 .krds-btn.deepBlue {

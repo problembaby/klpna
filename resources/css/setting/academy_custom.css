@@ -317,6 +317,8 @@ background: #05417C; padding: 0 27px;  }
     background-color: #05417C;
 }
 
+
+/* 
 .krds-btn.blue:hover {
     background-color: #05417C;
     color: #05417C;
@@ -329,7 +331,7 @@ background: #05417C; padding: 0 27px;  }
     content: "";
     background: url(../../img/icon/ico-blueHome-wh.svg) no-repeat;
     transition: all 0.3s;
-}
+} */
 /** 딥 블루*/
 .krds-btn.deepBlue {
     background-color: #05417C;
@@ -1107,7 +1109,7 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 
 .div-expand{display: none;}
 
-.krds-btn:hover {
+ .krds-btn:hover, .krds-btn:focus, .krds-btn:active {
     background-color: #05417C;
 }
 
