@@ -141,6 +141,14 @@
 *************************/
 
 
+.f-btn > .krds-btn.tertiary:hover {
+    background-color: var(--krds-light-color-background-secondary-light);
+    color: var(--krds-light-color-text-action-hover, #08A895);
+    border-color: var(--krds-light-color-border-action-hover, #08A895);
+    font-weight: 700;
+}
+
+
 
 
 .quick-wrap-item a:hover {

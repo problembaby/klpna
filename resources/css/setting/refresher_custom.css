@@ -3,6 +3,14 @@
 헤더 푸터
 *************************/
 
+.f-btn > .krds-btn.tertiary:hover {
+    background-color: var(--krds-light-color-background-secondary-light);
+    color: var(--krds-light-color-text-action-hover, #8261AC);
+    border-color: var(--krds-light-color-border-action-hover, #8261AC);
+    font-weight: 700;
+}
+
+
 #krds-header .header-container .logo.klpna a {
     background-image: none;
     background-repeat: no-repeat;

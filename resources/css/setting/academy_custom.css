@@ -41,6 +41,15 @@
 /***********************
 헤더 푸터
 *************************/
+
+.f-btn > .krds-btn.tertiary:hover {
+    background-color: var(--krds-light-color-background-secondary-light);
+    color: var(--krds-light-color-text-action-hover, #05417C);
+    border-color: var(--krds-light-color-border-action-hover, #05417C);
+    font-weight: 700;
+}
+
+
 .allMenu-nav li.allMenu-nav-item .menu-title {
     color: var(--color-text-title, #0D0E10);
     font-size: 18px;

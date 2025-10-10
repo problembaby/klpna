@@ -140,6 +140,14 @@
 헤더 푸터
 *************************/
 
+.f-btn > .krds-btn.tertiary:hover {
+    background-color: var(--krds-light-color-background-secondary-light);
+    color: var(--krds-light-color-text-action-hover, #414189);
+    border-color: var(--krds-light-color-border-action-hover, #414189);
+    font-weight: 700;
+}
+
+
 
 .header-util .inner.addLogo{
     display: flex;

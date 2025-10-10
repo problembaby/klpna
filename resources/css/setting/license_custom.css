@@ -233,6 +233,15 @@ letter-spacing: -0.64px;
 
 
 /** 메인  */
+
+.f-btn > .krds-btn.tertiary:hover {
+    background-color: var(--krds-light-color-background-secondary-light);
+    color: var(--krds-light-color-text-action-hover, #418200);
+    border-color: var(--krds-light-color-border-action-hover, #418200);
+    font-weight: 700;
+}
+
+
 .depth2 li a {
     width: 180px;
 }
