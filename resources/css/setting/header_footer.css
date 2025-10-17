@@ -442,6 +442,8 @@ line-height: 150%; /* 21px */}
 
 .modal-content .inner{height:100%; overflow: auto; padding:0}
 
+#popAllMenuVIew .modal-header{padding:10px}
+
 @media(max-width:1700px) {
   .gnb-bg::after { left: 100px; }
 }
@@ -449,7 +451,19 @@ line-height: 150%; /* 21px */}
 /** 노트북 */
 @media (max-width: 1440px) {
 
-  .gnb-bg::after { display: none;}
+
+  .header-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.gnb-bg {
+    top: 100px;
+}
+
+  .gnb-bg::after { display: none!important;}
 
 
     .gnb-menu button.gnb-main-trigger {
@@ -474,7 +488,7 @@ line-height: 150%; /* 21px */}
 }
 
 .header-container{
-    padding-top:10px
+    padding-top:0
 }
 }
 

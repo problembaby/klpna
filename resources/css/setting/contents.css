@@ -958,6 +958,10 @@
     background: url('../../img/icon/arrow-right_w.svg') no-repeat 90% center #0D0E10;    
     border-radius: 99px;
 }
+.sido .btn_go a:hover{
+    background: url('../../img/icon/arrow-right_w.svg') no-repeat 90% center #555; 
+}
+
 /** 오시는길 */
 
 .center-map {

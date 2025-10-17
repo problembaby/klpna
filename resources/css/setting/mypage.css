@@ -423,6 +423,10 @@ line-height: 150%; /* 24px */}
   align-items: center;
 }
 
+.myedBtn:hover{
+      background-color: #eef2f7;
+}
+
 
 .myposts-section h2 {
   color: var(--Text-02, #454545);
@@ -1930,7 +1934,11 @@ background: var(--color-jigmu, #05417C); color:#fff;  align-items: center; justi
 .prog-circ.incompl{background: var(--color-accnet, #EB6053);}
 .prog-circ.step{background: var(--color-jigmu, #fff); color:#05417C; border:2px dotted #05417C }
 
-.td-enter{display: inline-flex; flex-direction: column; gap:5px}
+.td-enter{    display: inline-flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;}
 
 .classroom-detailed .detailed-header{width: 100%; border-top: 1px solid var(--color-border-gray, #676767);
 

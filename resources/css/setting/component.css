@@ -269,6 +269,18 @@
     background-image: url(../../img/icon/ico-chk-wh.svg);
 }
 
+.krds-accordion .accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease-in-out;
+  visibility: hidden;
+}
+
+.krds-accordion .accordion-item.active .accordion-collapse {
+  max-height: 5000px; /* 충분히 큰 값으로 설정 */
+  visibility: visible;
+  transition: max-height 1.5s ease-in-out;
+}
 
 /** 사이즈 일정 버튼 */
 .btnW140 button, .btnW140 a {

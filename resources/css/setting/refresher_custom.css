@@ -1,3 +1,15 @@
+.ico-topNoti::before{
+  content:"";
+  background: url(../../img/refre/ico-topNoti.svg)no-repeat;
+  width: 24px;
+  height:24px;
+  display: inline-block;
+}
+
+.ico-new::before{
+  background: url(../../img/refre/new.svg)no-repeat;
+}
+
 
 /***********************
 헤더 푸터
@@ -27,7 +39,6 @@
     position: absolute;
     width: 100%;
     height: 234px;
-    top: 90px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
@@ -90,7 +101,7 @@ letter-spacing: -0.64px;
 
 
 /** 메인  */
-.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#AF77F5; }
+.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover, .depth2 li a:focus {  color:#AF77F5; }
 #krds-header .header-container .header-actions{margin: 0 auto;}
 .login-box, .guest-box { background: #8261AC; }
 .guest-btn-list a.krds-btn {
@@ -448,7 +459,6 @@ table.noborder tr th{
 
 .krds-accordion .accordion-item.active .accordion-collapse {
     height: auto;
-    max-height: 100vh;
     transition: all 1.5s ease-in-out;
     visibility: visible;
 background: var(--gray-gray-5, #F8F8F8);
@@ -1110,7 +1120,11 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 
 .div-expand{display: none;}
 
-.krds-btn:hover, .krds-btn:focus, .krds-btn:active {
+.krds-btn:hover {
+    background-color: #8261AC;
+}
+
+.krds-side-navigation .lnb-list .lnb-item.active .link::after {
     background-color: #8261AC;
 }
 

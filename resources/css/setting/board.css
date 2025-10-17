@@ -1,4 +1,5 @@
 
+
 /** 게시판 accordian */
 .o-accordion-list .ico-q { color: #0050CA; font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */ margin-right: 10px;}
 .o-accordion-list .ico-a{color:#1D1D1D; font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */ margin-right: 10px;}
@@ -1337,6 +1338,7 @@ border-bottom: 1px solid #C6C6C6;
   
 }
 .page-go p.title {
+  max-width:850px;
   width: 50vw;
   white-space: nowrap;
   font-size: 18px;
@@ -1346,6 +1348,10 @@ border-bottom: 1px solid #C6C6C6;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   
+}
+
+.page-go .page-go__after:hover, .page-go .page-go__before:hover {
+      background-color: #eef2f7;
 }
 
 .page-go .page-go__before {
@@ -2334,7 +2340,7 @@ flex-shrink: 0; font-size: 15px; display: inline-flex; align-items: center; just
 .krds-structured-list.o-news-list .card-body .c-text .c-tit::after {
     display: none;
 }
-.ico-topNoti{display: flex; align-items: center; gap:5px}
+.ico-topNoti{display: flex; align-items: center; gap:5px; justify-content: center;}
 
 .news-list .news-list-top{
   border-bottom: 2px solid var(--color-border-top, #0767C7);
@@ -2425,6 +2431,25 @@ table tbody tr td .list-col{
   margin-top: 10px;
   font-size: 16px;
 }
+
+
+.ico-topNoti::before{
+  content:"";
+  background: url(../../img/icon/ico-topNoti.svg)no-repeat;
+  width: 24px;
+  height:24px;
+  display: inline-block;
+}
+td.cell-subject > .ico-new{margin-left: 5px; position: relative }
+.ico-new::before{
+  content:"";
+  background: url(../../img/icon/new.svg)no-repeat;
+  width: 20px;
+  height:20px;
+  display: inline-block;
+  position: absolute;
+  top: -18px;}
+
 
 @media (max-width: 1300px) {
 
@@ -2959,10 +2984,15 @@ table tbody tr td .list-col{
     line-height: 1.5;
 }
 
+
 }
 
 
 @media (max-width: 767px) {
+  .page-go p.title {
+    font-size: 12px;
+}
+
 
   .table-overscroll{overflow-x: auto;}
   .table-overscroll table{min-width: 1000px;}

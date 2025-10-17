@@ -1,4 +1,15 @@
 /** 아이콘 정리*/
+.ico-topNoti::before{
+  content:"";
+  background: url(../../img/academy/ico-topNoti.svg)no-repeat;
+  width: 24px;
+  height:24px;
+  display: inline-block;
+}
+.ico-new::before{
+  background: url(../../img/academy/new.svg)no-repeat;
+}
+
 .ico-phone::before{
      display: block;
     content:"";
@@ -76,7 +87,6 @@
     position: absolute;
     width: 100%;
     height: 234px;
-    top: 90px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
@@ -496,7 +506,6 @@ table.noborder tr th{
 
 .krds-accordion .accordion-item.active .accordion-collapse {
     height: auto;
-    max-height: 100vh;
     transition: all 1.5s ease-in-out;
     visibility: visible;
 background: var(--gray-gray-5, #F8F8F8);
@@ -1118,8 +1127,10 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 
 .div-expand{display: none;}
 
- .krds-btn:hover, .krds-btn:focus, .krds-btn:active {
+ .krds-btn:hover {
     background-color: #05417C;
+}
+.krds-btn:focus, .krds-btn:active {
 }
 
 /*************************
@@ -1753,6 +1764,7 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 
 .ms-card-item{width: 100%;}
 .ms-card-item-link{display: flex; flex-direction: column;}
+.ms-card-item-link:hover .txt{text-decoration: underline;}
 .ms-card-item-link .img{position: relative; border-radius: 10px; overflow: hidden;}
 .ms-card-item-link .img .edu-type{position: absolute; border-radius: 10px 0;
 background: #2A2D2F; width: auto; padding: 0 5px;

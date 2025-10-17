@@ -276,42 +276,50 @@ line-height: 100%; /* 18px */
     bottom: -7px;
 }
 
+ .mainSection02 .tab.fill ul li:nth-child(1):hover .btn-tab::after {
+    border-top: 8px solid #0050CA;
+}
+ .mainSection02 .tab.fill ul li:nth-child(1):hover .btn-tab {
+    background-color: #0050CA!important;
+    border-color: #0050CA !important;
+    color: #fff;
+}
 
-.mainSection02 .tab.fill ul li:nth-child(2).active .btn-tab::after {
+
+.mainSection02 .tab.fill ul li:nth-child(2).active .btn-tab::after, .mainSection02 .tab.fill ul li:nth-child(2):hover .btn-tab::after {
     border-top: 8px solid #8261AC;
 }
 
-.mainSection02 .tab.fill ul li:nth-child(2).active .btn-tab {
+.mainSection02 .tab.fill ul li:nth-child(2).active .btn-tab, .mainSection02 .tab.fill ul li:nth-child(2):hover .btn-tab {
     background-color: #8261AC!important;
     border-color: #8261AC !important;
     color: #fff;
 }
-
-.mainSection02 .tab.fill ul li:nth-child(3).active .btn-tab::after {
+.mainSection02 .tab.fill ul li:nth-child(3).active .btn-tab::after, .mainSection02 .tab.fill ul li:nth-child(3):hover .btn-tab::after {
     border-top: 8px solid #05417C;
 }
 
-.mainSection02 .tab.fill ul li:nth-child(3).active .btn-tab {
+.mainSection02 .tab.fill ul li:nth-child(3).active .btn-tab, .mainSection02 .tab.fill ul li:nth-child(3):hover .btn-tab {
     background-color: #05417C!important;
     border-color: #05417C !important;
     color: #fff;
 }
 
-.mainSection02 .tab.fill ul li:nth-child(4).active .btn-tab::after {
+.mainSection02 .tab.fill ul li:nth-child(4).active .btn-tab::after, .mainSection02 .tab.fill ul li:nth-child(4):hover .btn-tab::after {
     border-top: 8px solid #356900;
 }
 
-.mainSection02 .tab.fill ul li:nth-child(4).active .btn-tab {
+.mainSection02 .tab.fill ul li:nth-child(4).active .btn-tab, .mainSection02 .tab.fill ul li:nth-child(4):hover .btn-tab {
     background-color: #356900!important;
     border-color: #356900 !important;
     color: #fff;
 }
 
-.mainSection02 .tab.fill ul li:nth-child(5).active .btn-tab::after {
+.mainSection02 .tab.fill ul li:nth-child(5).active .btn-tab::after, .mainSection02 .tab.fill ul li:nth-child(5):hover .btn-tab::after {
     border-top: 8px solid #414189;
 }
 
-.mainSection02 .tab.fill ul li:nth-child(5).active .btn-tab {
+.mainSection02 .tab.fill ul li:nth-child(5).active .btn-tab, .mainSection02 .tab.fill ul li:nth-child(5):hover .btn-tab {
     background-color: #414189!important;
     border-color: #414189 !important;
     color: #fff;
@@ -1429,4 +1437,3 @@ line-height: 22px; /* 146.667% */}
 
 @media (max-width: 320px) {
 }
-

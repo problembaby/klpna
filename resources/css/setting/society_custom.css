@@ -1,4 +1,15 @@
 /** 아이콘 정리*/
+.ico-topNoti::before{
+  content:"";
+  background: url(../../img/society/ico-topNoti.svg)no-repeat;
+  width: 24px;
+  height:24px;
+  display: inline-block;
+}
+.ico-new::before{
+  background: url(../../img/society/new.svg)no-repeat;
+}
+
 .ico-phone::before{
      display: block;
     content:"";
@@ -186,7 +197,6 @@
     position: absolute;
     width: 100%;
     height: 300px;
-    top: 90px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
@@ -217,14 +227,7 @@
 }
 
 
-.swiper-pagination.swiper-pagination-fraction .swiper-pagination-current {
-    color: #fff;
-}
 
-.swiper-pagination.swiper-pagination-fraction {
-   color: #fff;
-}
- 
 
 
 .header-util .inner.edu{
@@ -275,7 +278,7 @@ letter-spacing: -0.64px;
     width: 180px;
 }
 
-.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#414189; }
+.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover, .depth2 li a:focus{  color:#414189; }
 #krds-header .header-container .header-actions{margin: 0 auto;}
 .login-box, .guest-box { background: #418200; }
 .guest-btn-list a.krds-btn {
@@ -520,7 +523,6 @@ line-height: 22px; /* 137.5% */}
 
 .krds-accordion .accordion-item.active .accordion-collapse {
     height: auto;
-    max-height: 100vh;
     transition: all 1.5s ease-in-out;
     visibility: visible;
 background: var(--gray-gray-5, #F8F8F8);
@@ -1143,9 +1145,7 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
     background-color: #2d2da5;
     
 }
-.krds-btn:active, .krds-btn:focus {
-    background-color: #2d2da5;
-}
+
 
 
 /*************************

@@ -1,4 +1,15 @@
 /** 아이콘 정리*/
+.ico-topNoti::before{
+  content:"";
+  background: url(../../img/license/ico-topNoti.svg)no-repeat;
+  width: 24px;
+  height:24px;
+  display: inline-block;
+}
+.ico-new::before{
+  background: url(../../img/license/new.svg)no-repeat;
+}
+
 .ico-phone::before{
      display: block;
     content:"";
@@ -170,7 +181,6 @@
     position: absolute;
     width: 100%;
     height: 234px;
-    top: 90px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
@@ -246,7 +256,7 @@ letter-spacing: -0.64px;
     width: 180px;
 }
 
-.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover{  color:#356900; }
+.depth01 .gnb-main-trigger:hover, .depth01 .gnb-main-trigger.active, .depth2 li a:hover, .depth2 li a:focus{  color:#356900; }
 #krds-header .header-container .header-actions{margin: 0 auto;}
 .login-box, .guest-box { background: #418200; }
 .guest-btn-list a.krds-btn {
@@ -336,7 +346,7 @@ letter-spacing: -0.64px;
     color: #2e5c00;
 }
 
-.krds-btn.regist-btn{color: #05417C; border-color:#418200;}
+.krds-btn.regist-btn{color: #356900; border-color:#418200;}
 .progress-step.active{background: #356900;}
 .progress-step.none{
     background: #418200;
@@ -502,7 +512,6 @@ table.noborder tr th{
 
 .krds-accordion .accordion-item.active .accordion-collapse {
     height: auto;
-    max-height: 100vh;
     transition: all 1.5s ease-in-out;
     visibility: visible;
 background: var(--gray-gray-5, #F8F8F8);
@@ -1123,9 +1132,6 @@ line-height: 120%; /* 16.8px */ margin-bottom: 5px;}
 
 .krds-btn:hover {
     background-color: #356900;
-}
-.krds-btn:active, .krds-btn:focus {
-    background-color: #1f3b03;
 }
 
 
