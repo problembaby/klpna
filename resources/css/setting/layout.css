@@ -1827,6 +1827,14 @@ line-height: 150%; /* 24px */}
     color: #fff;
 }
 
+/*****************************
+에디터수정
+*****************************/
+#cke_htmlContent{
+    width:100%!important;
+}
+
+.tab-conts img{width: 100%!important;}
 
 
 /** 노트북 */
@@ -2197,7 +2205,7 @@ line-height: 150%; /* 24px */}
         background: #fff !important;
     }
 
-    header, nav, aside, footer,  button, .no-print,  #aside,
+    header, nav, aside, footer, .no-print,  #aside, .breadcrumb-action,
     .krds-breadcrumb-wrap,
     .page-title-wrap h1.h-tit,
     .krds-pagination, .bbs-search-wrap   {

@@ -183,7 +183,6 @@ line-height: 22px; /* 137.5% */}
 }
 .faq-list li a:hover{
     text-decoration: underline;
-    color:#0050CA;
     transition: 0s;
 }
 
@@ -250,6 +249,14 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
  lnb
  *****************************/
 
+ #krds-header .header-container .logo.klpna {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+}
+
+
+
  .krds-side-navigation .lnb-tit {
     /* font-size: var(--krds-side-navigation--title-font-size); */
     font-size: 32px;
@@ -290,12 +297,12 @@ background: #B094D3; padding: 0 27px;   transition: transform 0.3s ease; }
 .krds-btn.blue:not(.icon) .svg-icon {
     background-color: #AF77F5;
 }
-/* 
+
 .krds-btn.blue:hover {
-    background-color: #AF77F5;
-    color: #AF77F5;
+    color: #AF77F5!important;
 }
 
+/*
 .allmenu-link-list .krds-btn.blue:hover{
     color:#fff;
 }

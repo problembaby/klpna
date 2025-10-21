@@ -151,6 +151,13 @@
 헤더 푸터
 *************************/
 
+#krds-header .header-container .logo.klpna {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+}
+
+
 .f-btn > .krds-btn.tertiary:hover {
     background-color: var(--krds-light-color-background-secondary-light);
     color: var(--krds-light-color-text-action-hover, #414189);
@@ -272,6 +279,9 @@ letter-spacing: -0.64px;
     letter-spacing: -2.16px;
 }
 
+.krds-btn.blue:hover {
+    color: #1C1CB9;
+}
 
 /** 메인  */
 .depth2 li a {
@@ -365,7 +375,6 @@ line-height: 22px; /* 137.5% */}
 }
 .faq-list li a:hover{
     text-decoration: underline;
-    color:#0050CA;
     transition: 0s;
 }
 

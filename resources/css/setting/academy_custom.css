@@ -225,7 +225,6 @@ line-height: 22px; /* 137.5% */}
 }
 .faq-list li a:hover{
     text-decoration: underline;
-    color:#0050CA;
     transition: 0s;
 }
 
@@ -294,6 +293,13 @@ background: #05417C; padding: 0 27px;  }
  lnb
  *****************************/
 
+ #krds-header .header-container .logo.klpna {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+}
+
+
  .krds-side-navigation .lnb-tit {
     /* font-size: var(--krds-side-navigation--title-font-size); */
     font-size: 32px;
@@ -337,11 +343,12 @@ background: #05417C; padding: 0 27px;  }
 }
 
 
-/* 
+
 .krds-btn.blue:hover {
-    background-color: #05417C;
     color: #05417C;
 }
+
+/*
 
 .allmenu-link-list .krds-btn.blue:hover{
     color:#fff;

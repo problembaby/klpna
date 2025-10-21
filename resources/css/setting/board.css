@@ -749,6 +749,7 @@ table.table-hover.point tr td{
   text-align: left;
   position: relative;
 }
+
 .table-board table tbody tr td.cell-subject.text-center {
   text-align: center;
   position: relative;
@@ -1175,6 +1176,9 @@ td.cell-subject > * {
   background: #fff;
   margin-top: 16px;
 }
+
+
+
 .board-detailed .detailed-header .title {
   color: #1D1D1D;
   letter-spacing: -0.96px;
@@ -2448,7 +2452,7 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
   height:20px;
   display: inline-block;
   position: absolute;
-  top: -18px;}
+  top: -22px;}
 
 
 @media (max-width: 1300px) {
@@ -3236,6 +3240,11 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
 .krds-structured-list.o-news-list {
     grid-template-columns: 1fr;
 }
+
+.board-detailed .page-content img, .board-detailed .page-content video {
+  width: 100%;
+}
+
 
 }
 

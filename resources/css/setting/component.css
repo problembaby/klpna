@@ -737,6 +737,12 @@ label.checkbox-inline.checked:before {
 }
 
 
+/* 모바일 GNB */
+.krds-main-menu-mobile .gnb-wrap .gnb-body .gnb-menu .menu-wrap .gnb-main-trigger {
+    word-break: break-all;  /* 긴 단어도 줄바꿈 */
+}
+
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;

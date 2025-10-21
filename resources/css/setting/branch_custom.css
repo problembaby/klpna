@@ -269,12 +269,11 @@
 .krds-btn.blue:not(.icon) .svg-icon {
     background-color: #008878;
 }
-/* 
+
 .krds-btn.blue:hover {
-    background-color: #008878;
     color: #008878;
 }
-
+/*
 .allmenu-link-list .krds-btn.blue:hover{
     color:#fff;
 }
@@ -2096,7 +2095,7 @@ line-height: normal;}
 
   .sido-gallery-card{display:block}
   .sido-gallery-card .sgc-img{overflow: hidden; border-radius: 10px; border:1px solid #fff}
-  .sido-gallery-card .sgc-img img{width: 100%; }
+  .sido-gallery-card .sgc-img img{width: 100%; aspect-ratio: 5 / 3; object-fit: cover;}
 .sgc-p{font-size: 16px; margin-top: 5px;}
 
 .sgc-img:hover{border:1px solid #08A895}

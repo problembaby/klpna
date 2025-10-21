@@ -147,6 +147,9 @@
 
 
 
+
+
+
 /***********************
 헤더 푸터
 *************************/
@@ -242,13 +245,31 @@ letter-spacing: -0.64px;
 }
 
 
+.krds-side-navigation .lnb-list .lnb-item.active .link::after {
+    background-color: #356900;
+}
+
+
+
 /** 메인  */
+
+#krds-header .header-container .logo.klpna {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+}
+
 
 .f-btn > .krds-btn.tertiary:hover {
     background-color: var(--krds-light-color-background-secondary-light);
     color: var(--krds-light-color-text-action-hover, #418200);
     border-color: var(--krds-light-color-border-action-hover, #418200);
     font-weight: 700;
+}
+
+.krds-btn:active, .krds-btn:focus {
+    background-color: #356900;
+    color:#fff;
 }
 
 
@@ -312,10 +333,10 @@ letter-spacing: -0.64px;
     background-color: #418200;
 }
 
-/* .krds-btn.blue:hover {
-    background-color: #418200;
+.krds-btn.blue:hover {
     color: #418200;
 }
+/* 
 .allmenu-link-list .krds-btn.blue:hover{
     color:#fff;
 }
