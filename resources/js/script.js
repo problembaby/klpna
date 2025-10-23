@@ -515,3 +515,17 @@ function openVerifyId(successUrl, onAuthSuccess) {
     return iframe;
 }
 
+
+// 이메일 입력란에서 한글 입력 방지
+document.addEventListener('DOMContentLoaded', function() {
+    const emailInputs = document.querySelectorAll('input.email');
+    emailInputs.forEach(input => {
+        input.addEventListener('input', function(event) {
+            const koreanRegex = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g;
+            if (koreanRegex.test(this.value)) {
+                this.value = this.value.replace(koreanRegex, '');
+            }
+        });
+        
+    });
+});

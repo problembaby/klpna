@@ -1292,7 +1292,7 @@ align-self: stretch;
 
 .lec-detail-list{display: flex; flex-direction: column; width: 100%; padding:20px 0; gap:10px}
 .lec-detail-list li{display: flex; width: 100%;}
-.lec-detail-list li .label{display: flex; gap:5px; align-items: center; color:#464C53; font-size: 13px; margin-right:10px; }
+.lec-detail-list li .label{display: flex; gap:5px; align-items: center; color:#464C53; font-size: 13px; margin-right:10px; flex:0 0 auto }
 .lec-detail-list li .date{color: var(--color-text-basic, #0D0E10);
 font-size: 16px;
 font-style: normal;
@@ -2392,7 +2392,7 @@ line-height: 120%; /* 16.8px */
 .video-wrap{display: flex; gap:20px}
 .video-info-panel{padding:20px; background: var(--color-bg-secondary, #F7F8FB); border-radius: 12px; display: flex; flex-direction: column; gap:10px; min-width: 250px; width: 100%;}
 
-.video-info-area{position: relative;}
+.video-info-area{position: relative; flex: 0 0 260px; }
 
 
 .video-subject-title{
@@ -2426,6 +2426,10 @@ background: #E3ECFF;}
 .video-info-top{margin-bottom: 10px; display: flex; justify-content: flex-end; display: none;}
 
 .btn-fold{ width: 100px; height:30px}
+
+
+.krds-tab-area.video .tab.fill.gary .btn-tab{width: 130px;}
+.login-time-area{display: flex; gap:10px; align-items: center;}
 
 /*************************************
 직무교육강의실 

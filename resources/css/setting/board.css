@@ -2445,6 +2445,9 @@ table tbody tr td .list-col{
   display: inline-block;
 }
 td.cell-subject > .ico-new{margin-left: 5px; position: relative }
+
+.krds-structured-list .card-body .c-tit{position:relative}
+
 .ico-new::before{
   content:"";
   background: url(../../img/icon/new.svg)no-repeat;
@@ -2452,8 +2455,13 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
   height:20px;
   display: inline-block;
   position: absolute;
-  top: -22px;}
+  top: -17px;}
 
+  
+.c-tit .ico-new::before {
+    top: 4px;
+    margin-left: 5px;
+}
 
 @media (max-width: 1300px) {
 

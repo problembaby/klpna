@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../resources/krds/css/component/output.css" />
 	<link rel="stylesheet" href="../resources/krds/css/pattern/p_layout.css" />
 	<link rel="stylesheet" href="../resources/css/style.css" />
+	<link rel="stylesheet" href="../resources/css/setting/videoStyle.css" /> <!--video 컨트롤러 스타일 -->
 
 	<!--js-->
 	<script src="../resources/js/jquery-3.7.1.min.js"></script>
@@ -49,73 +50,198 @@
 				<div class="modal-conts">
 					<div class="video-wrap">
 						<div class="video-player-area">
-							<video width="100%" height="500" controls>
+							<video width="100%" height="380" controls>
 								<source src="#" type="video/mp4">
 								브라우저가 비디오 태그를 지원하지 않습니다.
 							</video>
+						<div class="video-player-controler">
+							<div class="video-controls">
+								<!-- 프로그레스 바와 정보 표시 영역 -->
+								<div class="progress-info-wrapper">
+									<div class="progress-action-bar" id="progressContainer">
+										<div class="progress-fill" id="videoProgressBar" style="width: 0%;"></div>
+									</div>
+
+									<!-- 정보 표시 영역 -->
+									<div class="video-info-display">
+										<span class="time-display" id="timeDisplay">00:00 / 00:00</span>
+										<span class="page-counter" id="pageCounter">전체페이지 1/1</span>
+									</div>
+								</div>
+
+							<!-- 컨트롤 버튼 -->
+							<div class="control-buttons">
+								<!-- 재생/일시정지  -->
+								<button class="control-btn play-pause-btn" id="playPauseBtn">
+									<svg id="playIcon" viewBox="0 0 24 24">
+										<path d="M8 5v14l11-7z" />
+									</svg>
+									<svg id="pauseIcon" viewBox="0 0 24 24" style="display: none;">
+										<path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+									</svg>
+									<span class="btn-label" id="playPauseLabel">재생</span>
+								</button>
+
+								<!-- 음량 조절  -->
+								<button class="control-btn volume-btn" id="volumeDownBtn">
+									<svg viewBox="0 0 24 24">
+										<path d="M7 11v2h10v-2H7z"/>
+									</svg>
+									<span class="btn-label">작게</span>
+								</button>
+								
+								<button class="control-btn volume-btn" id="muteBtn">
+									<svg id="volumeIcon" viewBox="0 0 24 24">
+										<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+									</svg>
+									<svg id="muteIcon" viewBox="0 0 24 24" style="display: none;">
+										<path d="M3 9v6h4l5 5V4L7 9H3z M16.5 12l-3-3"/>
+									</svg>
+									<span class="btn-label" id="muteLabel">음소거</span>
+								</button>
+								
+								<button class="control-btn volume-btn" id="volumeUpBtn">
+									<svg viewBox="0 0 24 24">
+										<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+									</svg>
+									<span class="btn-label">크게</span>
+								</button>
+
+								<!-- 전체화면  -->
+								<button class="control-btn fullscreen-btn" id="fullscreenBtn">
+									<svg viewBox="0 0 24 24">
+										<path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+									</svg>
+									<span class="btn-label">크게보기</span>
+								</button>
+							</div>
+							</div>
+						</div>
 						</div>
 
 						<div class="video-info-area">
-							<div class="video-info-panel">
-								<div class="video-subject">
-									<h3 class="video-subject-title">과목명이 노출됩니다. text...</h3>
-								</div>
 
-								<div class="bar"></div>
+							<!-- tab -->
+							<div class="krds-tab-area layer video">
+								<!-- tab list -->
+								<div class="tab fill gary">
+									<ul role="tablist">
+										<li id="tab_login_01" role="tab" aria-selected="true"
+											aria-controls="video_tab_01" class="active">
+											<button type="button" class="btn-tab">
+												목차
+												<i class="sr-only created">
+													선택됨</i></button>
+										</li>
+										<li id="tab_login_02" role="tab" aria-selected="false"
+											aria-controls="video_tab_02">
+											<button type="button" class="btn-tab">강의자료</button>
+										</li>
+									</ul>
 
-								<div class="video-chapter">
-									<h3 class="video-chapter-title">목차</h3>
-									<ol class="video-chapter-list">
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">1. 간호조무사현황</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">2. 간호조무사현황</a>
-										</li>
-										<li class="video-chapter-item selected">
-											<a href="#" target="_self" class="video-charpter-a">3. 간호조무사현황</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">4.
-												간호조무사현황간호조무사현황간호조무사현황</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">5. 간호조무사현황</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-										<li class="video-chapter-item">
-											<a href="#" target="_self" class="video-charpter-a">6. 간호조무사현황간호조</a>
-										</li>
-									</ol>
-									<div class="bar"></div>
+									<div class="bottom-border"></div>
 								</div>
+								<!-- //tab list -->
+
+								<!-- tab contents -->
+								<div class="tab-conts-wrap">
+									<section id="video_tab_01" aria-labelledby="tab_login_01" class="tab-conts active"
+										data-quick-nav="false">
+
+										<div class="video-info-panel">
+											<div class="video-subject">
+												<h3 class="video-subject-title">과목명이 노출됩니다. text...</h3>
+											</div>
+
+											<div class="bar"></div>
+
+											<div class="video-chapter">
+												<h3 class="video-chapter-title">목차</h3>
+												<ol class="video-chapter-list">
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">1.
+															간호조무사현황</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">2.
+															간호조무사현황</a>
+													</li>
+													<li class="video-chapter-item selected">
+														<a href="#" target="_self" class="video-charpter-a">3.
+															간호조무사현황</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">4.
+															간호조무사현황간호조무사현황간호조무사현황</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">5.
+															간호조무사현황</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+													<li class="video-chapter-item">
+														<a href="#" target="_self" class="video-charpter-a">6.
+															간호조무사현황간호조</a>
+													</li>
+												</ol>
+												<div class="bar"></div>
+											</div>
+										</div>
+
+
+									</section>
+									<section id="video_tab_02" aria-labelledby="tab_login_02" class="tab-conts"
+										data-quick-nav="false">
+										
+											<button class="krds-btn medium black">
+						<i class="svg-icon ico-down mr3"></i>
+						교안다운로드</button>
+										
+
+									</section>
+
+								</div>
+								<!-- //tab contents -->
 							</div>
+							<!-- //tab -->
+
+
+							
 						</div>
 					</div>
 
@@ -123,7 +249,12 @@
 				<!-- //modal contents -->
 
 
-				<div class="modal-btn btn-wrap center">
+				<div class="modal-btn btn-wrap center mt10">
+					
+					<div class="login-time-area">
+						<p>남은시간 14분 00초</p>
+						<button type="button" class="krds-btn medium red">로그인연장</button>
+					</div>
 					<button type="button" class="krds-btn medium black close-modal">학습종료</button>
 				</div>
 

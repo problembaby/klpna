@@ -1,0 +1,420 @@
+/* 동영상 목록 비활성화 스타일 */
+.video-chapter-item .video-charpter-a.disabled {
+	color: #999 !important;
+	cursor: not-allowed !important;
+	opacity: 0.6;
+	text-decoration: none !important;
+}
+
+.video-chapter-item .video-charpter-a.disabled:hover {
+	color: #999 !important;
+	text-decoration: none !important;
+}
+
+/* 잠긴 동영상 스타일 */
+.video-chapter-item .video-charpter-a.disabled.locked {
+	color: #ccc !important;
+	opacity: 0.4;
+}
+
+.video-chapter-item .video-charpter-a.disabled.locked::before {
+	content: "";
+	margin-right: 0px;
+}
+
+/* 다음 동영상 잠긴 상태 스타일 */
+.video-chapter-item .video-charpter-a.disabled.locked-next {
+	color: #bbb !important;
+	opacity: 0.5;
+}
+
+.video-chapter-item .video-charpter-a.disabled.locked-next::after {
+	content: " (이전 동영상 완료 후 시청 가능)";
+	font-size: 0.9em;
+	color: #999;
+	font-style: italic;
+}
+
+/* Video.js 전체화면 스타일 수정 */
+.video-js.vjs-fullscreen {
+	width: 100vw !important;
+	height: 100vh !important;
+}
+
+.video-js.vjs-fullscreen .vjs-tech {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: contain !important;
+}
+
+/* Video.js 기본 컨트롤 숨김 */
+.video-js .vjs-control-bar {
+	display: none !important;
+}
+
+/* 커스텀 컨트롤 스타일 -  디자인 */
+.video-player-controler {
+	background: #2c2c2c;
+	padding: 10px 25px 20px 25px;
+	border-radius: 0 0 8px 8px;
+    width:100%
+}
+
+.video-controls {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* 프로그레스 바와 정보 표시 영역을 수평 배치 */
+.progress-info-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.progress-info-wrapper .progress-action-bar {
+	flex: 1;
+	min-width: 0; /* flex-shrink 방지 */
+}
+
+.progress-info-wrapper .video-info-display {
+	display: flex;
+	gap: 15px;
+	flex-shrink: 0; /* 정보 영역은 고정 크기 유지 */
+	padding: 0;
+	border: none;
+}
+
+/* 비디오 플레이어 전용 프로그레스 바 스타일 -  (두껍고 명확) */
+.video-player-controler .progress-action-bar {
+	width: 100%;
+	height: 12px;
+	background: #4a4a4a;
+	border-radius: 6px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid #666;
+}
+
+.video-player-controler .progress-fill {
+	height: 100% !important;
+	background: #7c3aed !important;
+	border-radius: 4px !important;
+	position: relative !important;
+	transition: width 0.2s ease !important;
+	/* width는 JavaScript에서 동적으로 설정 */
+}
+
+.video-player-controler .progress-fill::after {
+	content: '';
+	position: absolute;
+	right: -10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+	border: 3px solid #7c3aed;
+}
+
+/* 컨트롤 버튼 영역 -  (크고 간격 넓음) */
+.control-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	color: #fff;
+	flex-wrap: wrap;
+}
+
+.control-btn {
+	background: #3a3a3a;
+	border: 2px solid #666;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	transition: all 0.3s;
+	border-radius: 8px;
+	min-width: 85px;
+}
+
+.control-btn:hover {
+	background: #7c3aed;
+	border-color: #7c3aed;
+	transform: scale(1.05);
+}
+
+.control-btn:active {
+	transform: scale(0.95);
+}
+
+.control-btn svg {
+	width: 36px;
+	height: 36px;
+	fill: currentColor;
+}
+
+/* 버튼 레이블 (텍스트) */
+.control-btn .btn-label {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+
+/* 정보 표시 영역 -  (크고 명확) */
+.video-info-display {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #666;
+}
+
+.time-display {
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	min-width: 120px;
+	background: #3a3a3a;
+	padding:5px 10px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.page-counter {
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	background: #3a3a3a;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+
+/* 볼륨 컨트롤 그룹 -  (버튼형) */
+.volume-control-group {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.volume-btn {
+	min-width: 90px;
+}
+
+/* ============================================ */
+/* 반응형 디자인 -  UI 유지 */
+/* ============================================ */
+
+/* 태블릿 (768px ~ 1024px) */
+@media (max-width: 1024px) {
+	.video-player-controler {
+		padding: 10px 25px;
+	}
+
+	.control-buttons {
+		gap: 20px;
+	}
+
+	.control-btn {
+		padding: 10px 10px;
+		min-width: 85px;
+	}
+
+	.control-btn svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	.control-btn .btn-label {
+		font-size: 14px;
+	}
+
+	.time-display, .page-counter {
+		font-size: 16px;
+		padding: 8px 16px;
+	}
+
+	.volume-btn {
+		min-width: 80px;
+	}
+}
+
+/* 모바일 가로 (481px ~ 767px) */
+@media (max-width: 767px) {
+	.video-player-controler {
+		padding: 15px 20px;
+	}
+
+	.video-controls {
+		gap: 15px;
+	}
+
+	/* 프로그레스와 정보를 세로 배치 */
+	.progress-info-wrapper {
+		flex-direction: column;
+		gap: 15px;
+		align-items: stretch;
+	}
+
+	.progress-info-wrapper .video-info-display {
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.control-buttons {
+		gap: 12px;
+		justify-content: space-around;
+	}
+
+	.control-btn {
+		padding: 10px 15px;
+		min-width: 70px;
+		gap: 5px;
+	}
+
+	.control-btn svg {
+		width: 28px;
+		height: 28px;
+	}
+
+	.control-btn .btn-label {
+		font-size: 12px;
+	}
+
+	.video-info-display {
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px 0 0 0;
+	}
+
+	.time-display, .page-counter {
+		font-size: 14px;
+		padding: 8px 12px;
+		min-width: auto;
+		width: 100%;
+		text-align: center;
+	}
+
+	.volume-btn {
+		min-width: 65px;
+	}
+
+	/* 프로그레스 바 - 터치 영역 확대 */
+	.video-player-controler .progress-action-bar {
+		height: 14px;
+	}
+
+	.video-player-controler .progress-fill::after {
+		width: 24px;
+		height: 24px;
+		right: -12px;
+	}
+}
+
+/* 모바일 세로 (~ 480px) */
+@media (max-width: 480px) {
+	.video-player-controler {
+		padding: 12px 15px;
+	}
+
+	.video-controls {
+		gap: 12px;
+	}
+
+	.control-buttons {
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	.control-btn {
+		padding: 8px 12px;
+		min-width: 60px;
+		gap: 4px;
+		flex: 1 1 calc(25% - 8px); /* 한 줄에 4개 */
+	}
+
+	/* 재생/일시정지 버튼 - 두 배 크기 */
+	.play-pause-btn {
+		flex: 1 1 calc(50% - 8px);
+		min-width: 120px;
+	}
+
+	/* 전체화면 버튼 - 두 배 크기 */
+	.fullscreen-btn {
+		flex: 1 1 calc(50% - 8px);
+		min-width: 120px;
+	}
+
+	.control-btn svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.control-btn .btn-label {
+		font-size: 11px;
+	}
+
+	.time-display, .page-counter {
+		font-size: 13px;
+		padding: 6px 10px;
+	}
+
+	.volume-btn {
+		min-width: 55px;
+	}
+
+	/* 프로그레스 바 - 모바일에서 더 크게 */
+	.video-player-controler .progress-action-bar {
+		height: 16px;
+	}
+
+	.video-player-controler .progress-fill::after {
+		width: 26px;
+		height: 26px;
+		right: -13px;
+		border: 4px solid #7c3aed;
+	}
+}
+
+/* 초소형 모바일 (~ 360px) */
+@media (max-width: 360px) {
+	.video-player-controler {
+		padding: 10px 12px;
+	}
+
+	.control-btn {
+		padding: 6px 10px;
+		min-width: 50px;
+	}
+
+	.control-btn svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.control-btn .btn-label {
+		font-size: 10px;
+	}
+
+	.time-display, .page-counter {
+		font-size: 12px;
+		padding: 5px 8px;
+	}
+
+	.volume-btn {
+		min-width: 48px;
+	}
+
+	.play-pause-btn, .fullscreen-btn {
+		min-width: 100px;
+	}
+}

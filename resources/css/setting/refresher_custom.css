@@ -15,6 +15,7 @@
 헤더 푸터
 *************************/
 
+
 .f-btn > .krds-btn.tertiary:hover {
     background-color: var(--krds-light-color-background-secondary-light);
     color: var(--krds-light-color-text-action-hover, #8261AC);
@@ -548,7 +549,6 @@ td.cell-subject .subject-title .btn-list{display: flex; gap:5px}
 
 .krds-modal .modal-dialog .modal-btn.center{justify-content: center!important;}
 
-
 .videoSample .s-name{
     font-size: 24px;
 }
@@ -572,7 +572,7 @@ align-self: stretch;
 
 .lec-detail-list{display: flex; flex-direction: column; width: 100%; padding:20px 0; gap:10px}
 .lec-detail-list li{display: flex; width: 100%;}
-.lec-detail-list li .label{display: flex; gap:5px; align-items: center; color:#464C53; font-size: 13px; margin-right:10px; }
+.lec-detail-list li .label{display: flex; gap:5px; align-items: center; color:#464C53; font-size: 13px; margin-right:10px; flex:0 0 auto }
 .lec-detail-list li .date{color: var(--color-text-basic, #0D0E10);
 font-size: 16px;
 font-style: normal;

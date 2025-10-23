@@ -1772,7 +1772,8 @@ background: var(--color-text-medium, #333); width: 50px; height:50px; display: f
 .ms-card-item{width: 100%;}
 .ms-card-item-link{display: flex; flex-direction: column;}
 .ms-card-item-link:hover .txt{text-decoration: underline;}
-.ms-card-item-link .img{position: relative; border-radius: 10px; overflow: hidden;}
+.ms-card-item-link .img{position: relative; border-radius: 10px; overflow: hidden; }
+.ms-card-item-link .img img{width:100%; height:auto; aspect-ratio: 5/3; object-fit: cover;}
 .ms-card-item-link .img .edu-type{position: absolute; border-radius: 10px 0;
 background: #2A2D2F; width: auto; padding: 0 5px;
 height: 25px;
@@ -1958,7 +1959,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     overflow: hidden;
 height:100%;
 }
-
+.card-list-items .card-box .card-img img{width: 100%; height:auto; aspect-ratio: 5/3; object-fit: cover;}
 .card-list-items .card-box .card-img a{display: block; width: 100%;}
 .card-list-items .card-box .card-body{padding:20px; width:100%;}
 .card-list-items .card-box .card-title{display: block; margin-bottom: 10px; color: var(--color-text-basic, #0D0E10);

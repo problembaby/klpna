@@ -743,6 +743,19 @@ label.checkbox-inline.checked:before {
 }
 
 
+
+/* loading(svg), 2025.06.20 jsc 추가 */
+/* .loading {display:none;position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(255,255,255,1);z-index:1100;} */
+.loading {display:none;position:fixed;left:0;top:0;right:0;bottom:0;background:none;z-index:1100;}
+.loading.on {display:block;}
+.loading svg {display:block;position:absolute;left:50%;top:50%;transform: translate(-50%, -50%);width:120px;height:120px;}
+
+/* .loading.type1 {background:rgba(255,255,255,0.5);} */ /* 글자 있을 경우 */
+.loading.type1 {background:none} 
+.loading.type1 svg {transform: translate(0, 0); margin: -70px 0 0 -60px;}
+.loading.type1 .text-loading {display:block;position:absolute;left:50%;top:50%; transform: translate(-50%); padding-top:35px; font-size: 1.4rem; font-weight: 700;}
+
+
 @media (max-width: 1024px){
     .krds-modal {
     --krds-modal--size-large: 70rem;
