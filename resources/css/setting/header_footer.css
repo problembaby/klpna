@@ -254,7 +254,7 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 letter-spacing: -0.84px;} 
- .f-top .right a:hover{color: var(--krds-color-text-action-hover, #0050CA); text-decoration: underline;} 
+ .f-top .right a:hover{ text-decoration: underline;} 
  .f-top .right a.bold{color: #0050CA; font-weight: 700;} 
 
 .krds-btn.icon.border {
@@ -443,6 +443,19 @@ line-height: 150%; /* 21px */}
 .modal-content .inner{height:100%; overflow: auto; padding:0}
 
 #popAllMenuVIew .modal-header{padding:10px}
+
+/** 로그인 세션 */
+.login-session{display:flex;}
+.login-time-text{display: flex; align-items: center; gap:2px; margin-right:10px}
+.timer-btn{height:24px;}
+.ico-clock-blue::before {
+    display: block;
+    content: "";
+    background: url(../../img/icon/ico-clock-blue.svg)no-repeat;
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
 
 @media(max-width:1700px) {
   .gnb-bg::after { left: 100px; }

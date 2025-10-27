@@ -80,9 +80,10 @@
 		<div class="inner">
 			<ul class="header-util-list">
 				<li>
-					<span class="fs-13 fc-blue fw-normal">남은 시간 239분 37초</span>
-					<a href="" title="로그인 페이지 이동" class="btn-navi login open-modal" data-target="modal_sample_02">로그인 연장</a>
-					<!-- <a href="#" class="btn-navi loginout">로그아웃</a> -->
+					<div class="login-session">
+						<span class="fs-13 fc-blue login-time-text"><i class="ico ico-clock-blue"></i> <span class="timer-minutes">0</span>분 <span class="timer-seconds">0</span>초</span>
+						<button type="button"  onclick="healthCheck();">로그인연장</button>
+					</div>
 				</li>
 				<li>
 					<a href="../pages/login.html" title="로그인 페이지 이동" class="btn-navi login">로그인</a>

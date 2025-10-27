@@ -16,8 +16,9 @@
     color: var(--krds-button--color-primary-text);
 }
 
+a.krds-btn:hover{color:#fff;}
 .krds-btn:hover {
-    color: #fff;
+    /* color: #fff; */
     background-color: var(--krds-button--color-primary-fill-hover);
 }
 

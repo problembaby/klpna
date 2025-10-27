@@ -138,7 +138,7 @@
 	cursor: pointer;
 	padding: 10px 20px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
@@ -268,18 +268,24 @@
 	.progress-info-wrapper .video-info-display {
 		justify-content: space-between;
 		width: 100%;
+        flex-direction: row;
 	}
 
 	.control-buttons {
 		gap: 12px;
-		justify-content: space-around;
+		justify-content: flex-start;
 	}
+    
+    
 
 	.control-btn {
 		padding: 10px 15px;
 		min-width: 70px;
 		gap: 5px;
+        flex: 1 1 calc(33.33% - 12px); /* 한 줄에 3개 */
 	}
+    .play-pause-btn{flex: 1 100%}
+
 
 	.control-btn svg {
 		width: 28px;
@@ -335,24 +341,8 @@
 		flex-wrap: wrap;
 	}
 
-	.control-btn {
-		padding: 8px 12px;
-		min-width: 60px;
-		gap: 4px;
-		flex: 1 1 calc(25% - 8px); /* 한 줄에 4개 */
-	}
 
-	/* 재생/일시정지 버튼 - 두 배 크기 */
-	.play-pause-btn {
-		flex: 1 1 calc(50% - 8px);
-		min-width: 120px;
-	}
 
-	/* 전체화면 버튼 - 두 배 크기 */
-	.fullscreen-btn {
-		flex: 1 1 calc(50% - 8px);
-		min-width: 120px;
-	}
 
 	.control-btn svg {
 		width: 24px;
