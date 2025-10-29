@@ -338,8 +338,13 @@ line-height: 120%; /* 16.8px */ }
 .right-menu-p{color:#0050CA; font-weight: 600;}
 
 .fix-btn-wrap{position:fixed; bottom:0; left:0; width:100%; padding:10px; background-color: #fff; z-index: 10;}
-.fix-btn-wrap .fbw-inner{max-width: 1024px; margin: 0 auto; padding:0 5px;}
-.fix-btn-wrap > .fbw-inner > button{width: 100%;}
+.fix-btn-wrap .fbw-inner{max-width: 100%; margin: 0 auto; padding:0 5px; box-sizing: border-box;}
+@media (min-width: 1025px) {
+    .fix-btn-wrap .fbw-inner {
+        max-width: 1024px;
+    }
+}
+.fix-btn-wrap > .fbw-inner > button{width: 100%; max-width: 100%; box-sizing: border-box;}
 
 .app-edu-list{display: flex; flex-direction: column; gap:10px; padding:10px}
 .ael-edu-card{border-radius: 10px;

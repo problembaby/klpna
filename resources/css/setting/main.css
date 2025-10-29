@@ -80,6 +80,7 @@ font-weight: 500;
 .login-info-top{background-color: #fff; color:#0D0E10; border-radius: 20px; padding:14px 22px;}
 .login-info-top .name { color: #0D0E10; font-size: 24px; font-style: normal; font-weight: 600; line-height: 135%; /* 32.4px */}
 .user-name-wrap{width: 100%; display: flex; justify-content: space-between; align-items: center;}
+.user-name-wrap .name a:hover{text-decoration: underline;}
 
 .btn-edit {
     width: 52px;
@@ -171,7 +172,7 @@ font-weight: 500; margin-right: 5px;}
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+   /*  object-fit: cover; */
 }
 .main-banner .swiper-slide img {
     min-height:auto;
@@ -817,17 +818,18 @@ line-height: 22px; /* 146.667% */}
 .local-bbs-list .bbs-top .view-all { color: #7E7B77; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; display: flex; align-items: center; gap: 5px; }
 .local-bbs-list .bbs-top .view-all:hover { text-decoration: underline;  }
 
-.local-bbs-list .gallery { max-width: 530px; flex:1 auto;}
+.local-bbs-list .gallery { max-width: 530px; flex:2; width: 100%;}
 .local-bbs-list .gallery-list { display: flex; flex-direction: row; flex-wrap: wrap; }
 .local-bbs-list .gallery-list .item { flex: 0 0 50%; padding: 10px 20px; }
 .local-bbs-list .gallery-list .item a { display: flex; flex-direction: column; width: 100%; height:200px; overflow: hidden; border-radius: 8px;}
+.local-bbs-list .gallery-list .item a .img { overflow: hidden; }
 .local-bbs-list .gallery-list .item a img { width:100%; aspect-ratio:5/3; object-fit:cover; }
 
 .local-bbs-list .gallery-list .item a .txt { color: var(--color-text-basic, #0D0E10); font-size: 16px; font-style: normal; font-weight: 400; margin-top: 10px; }
 .local-bbs-list .gallery-list .item a:hover .txt{text-decoration: underline;}
 
 
-.local-bbs-list .notice { max-width: 500px; width: 100%; flex:1 auto;}
+.local-bbs-list .notice { max-width: 500px; width: 100%; flex:1;}
 .local-bbs-list .notice-list {  padding: 10px 20px; display: flex; flex-direction: column; gap:20px }
 .local-bbs-list .notice-list a{  display: block; }
 .local-bbs-list .notice-list .txt {  font-size: 16px; }
@@ -1035,6 +1037,14 @@ line-height: 22px; /* 146.667% */}
  max-width: calc(100% - 40px)!important;
  height:auto!important;
  }
+
+}
+
+
+@media (max-width: 1280px) {
+  .mainLocalTab .tab {
+    max-width: 269px;
+  }
 
 }
 

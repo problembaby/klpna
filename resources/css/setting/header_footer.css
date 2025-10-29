@@ -42,6 +42,10 @@ font-weight: 500;
 line-height: normal;
 letter-spacing: -0.35px;}
 
+.header-util-list li a{
+  font-size:14px
+}
+
 .header-util-list li .btn-navi.all::before {
     content: "";
     display: inline-flex;
@@ -445,9 +449,24 @@ line-height: 150%; /* 21px */}
 #popAllMenuVIew .modal-header{padding:10px}
 
 /** 로그인 세션 */
-.login-session{display:flex;}
-.login-time-text{display: flex; align-items: center; gap:2px; margin-right:10px}
-.timer-btn{height:24px;}
+.login-session{display:flex; background-color:rgb(225, 230, 255); border-radius: 20px; padding:2px 8px; align-items: center; gap:5px;  height:34px; margin-right:10px}
+.login-time-text{display: flex; align-items: center; gap:2px; margin-right:5px; margin-left:3px}
+.timer-btn{}
+.login-session > button{
+    color: #333;
+    background-color: #fff!important;
+    border: 1px solid #757575;
+    font-size: 12px;
+    font-weight: 500;
+    background: none;
+    border-radius: 20px;
+    padding: 2px 8px;
+    cursor: pointer;
+    height:24px
+}
+.login-session > button:hover{
+    background-color: #f7f7f7!important;
+}
 .ico-clock-blue::before {
     display: block;
     content: "";
@@ -663,7 +682,7 @@ line-height: 150%; /* 21px */}
         padding-inline: 0;
         padding-bottom: 0;
 }
-
+.login-session{margin-right:0}
 
 }
 
@@ -681,6 +700,9 @@ line-height: 150%; /* 21px */}
     justify-content: center;
 }
 
+.header-util-list {
+    gap: 10px;
+}
 
 }
 

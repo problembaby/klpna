@@ -1631,6 +1631,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
         line-height: 36px;
         border-radius: 0px;
         margin-left: -1px;
+        font-size: 14px;
     }  
     .cont_menu .list::before{
         border-left: 1px solid #C6C6C6;

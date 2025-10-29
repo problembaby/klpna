@@ -308,6 +308,9 @@ a.krds-btn:hover{color:#fff;}
     border-color: var(--krds-button--color-tertiary-border);
     color: var(--krds-button--color-tertiary-text);
 }
+a.krds-btn.tertiary:hover{
+    color:var(--krds-button--color-tertiary-text)
+}
 
 textarea.krds-input {
         font-size: var(--krds-input--pc-font-size-medium);
@@ -457,7 +460,7 @@ html .ui-button.ui-state-disabled:active {
 
 
 .mob-overflow-icon{display: none;}
-.mob-overflow-icon::before{content: ""; display: block; background: url(../../img/icon/ico-mobSlide.svg); width: 30px; height:30px; position: absolute; z-index: 99; right:5px; top: 50%; transform: translateY(-50%);}
+.mob-overflow-icon::before{content: ""; display: block; background: url(../../img/icon/ico-mobSlide.svg); width: 30px; height:30px; position: absolute; z-index: 5; right:5px; top: 50%; transform: translateY(-50%);}
 
 
 .mainSection05 .mob-overflow-icon::before{right:5px; top: 50%; transform: translateY(77%);}

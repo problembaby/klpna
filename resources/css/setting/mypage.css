@@ -628,7 +628,7 @@ line-height: 150%; /* 24px */}
   align-self: stretch;
   border-top: 0;
   border-bottom: 0;
-  background: #fff;
+ /*  background: #fff; */
   color: var(--color-text-sub_title, #464C53);
   font-size: 14px;
   font-style: normal;
@@ -3254,6 +3254,11 @@ font-size: 18px;
 .acc-recommend-list li {
     flex: 0 1 48%;
 }
+
+.lecture .s-name {
+    font-size: 18PX;
+}
+.c-name{display:none}
 
   }
 

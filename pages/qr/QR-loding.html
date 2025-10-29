@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩</title>
+    <script src="../../resources/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 로딩 오버레이 표시
+            showLoading();
+
+            // 로딩 표시 함수
+            function showLoading() {
+                $('.loading-overlay').addClass('active');
+            }
+            // 로딩 숨김 함수
+            function hideLoading() {
+                $('.loading-overlay').removeClass('active');
+            }
+        });
+    </script>
+</head>
+<body>
+<style>
+    /* 로딩 오버레이 스타일 */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+</style>
+
+      <!-- 로딩 오버레이 -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">교육 과정을 불러오는 중입니다...</div>
+        </div>
+    </div>
+    <!-- //로딩 오버레이 -->
+    
+</body>
+</html>
