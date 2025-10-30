@@ -2108,6 +2108,22 @@ line-height: 150%; /* 24px */}
 .subStaff-section .process-list{display: block;}
 .subStaff-section .process-list .ico-process-arrow::before{transform: rotate(90deg); margin:0 auto}
 
+
+
+.join-page-btn button {
+    height: 56px
+}
+
+/* 회원탈퇴 */
+.withdrawal-area .why-text {
+    font-size: 20px;
+}
+
+.withdrawal-area .krds-form-check.large > input[type=radio] ~ label {
+    gap: var(--krds-form-check--gap);
+    font-size: 16px;
+}
+
 }
 
 

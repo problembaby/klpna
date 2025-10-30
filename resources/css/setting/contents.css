@@ -1228,14 +1228,16 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     padding: 20px 0;
 }
 .modal-title.guide{
-    font-size: 30px !important;
-    font-weight: 400 !important;
-    display: block !important;
+    display: block; 
     text-align: center;
+}
+.modal-title.guide p{
+    font-size: 18px; 
+    font-weight: 400;
 }
 .modal-title.guide b{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 24px;
     display: block;
 }
 
@@ -1243,8 +1245,7 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     text-align: center;
 }
 .popup-guide .w600 img{
-    min-width: 600px;
-    max-width: 600px;
+    max-width: 400px;
 }
 .popup-guide .guide-list{
     padding: 30px 0px 40px;
@@ -1741,17 +1742,22 @@ height: 14px; background: #CDD1D5; display: block; content: ""; margin: 0 10px; 
     .title-banner.society .img_info{
         width: 100%;
     }
-    .modal-title.guide{
+/*     .modal-title.guide{
         font-size: 24px !important;
     }
     .modal-title.guide b {
         font-size: 30px;
-    }
+    } */
     .guide-list .msg-group .fs-18.fc-blue{
         font-size: 15px !important;
     }
-    .popup-guide .w600 img{
-        min-width: 100%;
-        max-width: 100%;
+
+}
+
+
+@media(max-width:480px){
+    .popup-guide .w600 img {
+    max-width: 250px;
+    margin:0 auto;
 }
 }
