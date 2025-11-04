@@ -221,6 +221,7 @@ a.krds-btn:hover{color:#fff;}
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+    
 }
 
 .ellipsis-2{

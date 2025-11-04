@@ -795,6 +795,7 @@ td.cell-subject > * {
 }
 
 
+
 .table-board table td.newPost a {
   position: relative;
   display: flex !important;
@@ -2453,13 +2454,16 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
 .krds-structured-list .card-body .c-tit{position:relative}
 
 .ico-new::before{
-  content:"";
-  background: url(../../img/icon/new.svg)no-repeat;
-  width: 20px;
-  height:20px;
-  display: inline-block;
-  position: absolute;
-  top: -17px;}
+    content: "";
+    background: url(../../img/icon/new.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-102%);
+    margin-left: 10px;
+}
 
   
 .c-tit .ico-new::before {

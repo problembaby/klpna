@@ -2649,7 +2649,9 @@ body.edu-appl-step03 .step02 {
     height: 43px;
     background-size: cover;
 }
-
+.faq-list li a{
+font-size: 16px;
+}
 
 }
 

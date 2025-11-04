@@ -2522,6 +2522,10 @@ body.edu-appl-step03 .step02 {
     padding-top: 10px;
 }
 
+.faq-list li a{
+font-size: 16px;
+}
+
 }
 
 @media (max-width: 479px) {
