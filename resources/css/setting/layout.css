@@ -504,6 +504,8 @@ width:var(--krds-modal--size-large);
     justify-content: center;
     align-items: flex-start;
 }
+
+/*
 .login-wrap .login-img{
     flex:1 40%;
     background: var(--color-bg-nomal, #F8F8F8);
@@ -524,6 +526,35 @@ width:var(--krds-modal--size-large);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+} */
+
+.login-wrap .login-img{
+    flex:1 40%;
+    background: var(--color-bg-nomal, #F8F8F8);
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-self: stretch;
+    position: relative;
+
+    
+}
+
+
+.login-wrap .login-img::before{
+    content: "";
+    display: block;
+    width: 325px;
+    height: 191px;
+    background-image: url(../../img/login/login-bg2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position:absolute;
+    top:calc(50% - 150px);
+
 }
 .login-wrap .login-contents{
     flex:1 60%

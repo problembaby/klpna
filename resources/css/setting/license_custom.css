@@ -191,14 +191,9 @@
 }
 
 .gnb-bg::after {
-    content: "";
-    display: block;
-    background: url(../../img/main/gnbBg.png)no-repeat center;
-    width: 310px;
-    height: 258px;
     position: absolute;
-    left: 267px;
-    bottom: -41px;
+    left: 180px;
+    bottom: -10px;
 }
 
 
