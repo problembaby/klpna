@@ -2752,6 +2752,8 @@ gap:5px
 
 .mypage-education-top .krds-btn.text:hover{color:#0D0E10}
 
+.recomend-verify-area{width:100%; padding:20px 0; background-color: #F8F8F8; display: flex; justify-content: center;     border-radius: 12px;}
+
 /** 노트북 */
 @media (max-width: 1440px) {
   .tab.bot-line::before{

@@ -794,6 +794,11 @@ td.cell-subject > * {
   display: inline-block !important;
 }
 
+.cell-category {
+}
+.cell-category-wrap{
+   border-right: 1px solid #ececec;
+}
 
 
 .table-board table td.newPost a {
@@ -2474,7 +2479,6 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
 @media (max-width: 1300px) {
 
 
-
   .board-search-wrap {
     background-color: #f6f9ff;
     padding: 26px 10px;
@@ -2524,6 +2528,16 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
 }
 
 @media (max-width: 1023px) {
+.table-board table tbody tr td.cell-category{display: block;
+        height: auto !important;
+        padding: 0;
+        max-width: 100%;
+        position: relative;
+        text-overflow: clip;
+        overflow: visible;
+        margin-right: 0 !important;
+        padding-right: 15px;
+      margin-top:5px;}
 
 
   .table-board.borad-list{
