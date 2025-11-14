@@ -119,6 +119,126 @@
   height: 28px;
 }
 
+/*가상계좌 */
+
+/* 가상계좌 박스 */
+.virtual-account-box {
+  width: 100%;
+  min-height: 110px;
+  border-radius: 30px;
+  background: #4A90E2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 15px 20px;
+}
+
+.virtual-account-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.virtual-account-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.virtual-account-bank {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.virtual-account-number {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.virtual-bank {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-left: 5px;
+}
+
+.virtual-account-expiry {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.virtual-account-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-copy-account {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #4A90E2;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-copy-account:hover {
+  background-color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-copy-account:active {
+  transform: translateY(0);
+}
+
+.btn-copy-account.copied {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.ico-copy::before {
+  content: "📋";
+  font-size: 14px;
+}
+
+.ico-bank::before {
+  content: "";
+  display: inline-block;
+  background: url(../../img/sub/ico-account.svg) no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 16px;
+} 
+
+
+
+
 .license-box {
   width: 100%;
   height: 110px;
@@ -2188,7 +2308,7 @@ border-radius: 10px;
 border: 1px solid var(--color-border-top, #0767C7);
 }
 
-.exam-info-title{font-style: 18px; border-bottom: 1px solid var(--color-border-nomal, #C6C6C6); padding-bottom: 10px;}
+.exam-info-title{font-size: 18px; border-bottom: 1px solid var(--color-border-nomal, #C6C6C6); padding-bottom: 10px;}
 
 .exam-info-body{width:100%; display: flex; justify-content:space-between; padding:10px 0;}
 
@@ -2377,7 +2497,7 @@ line-height: 120%; /* 16.8px */
     color: var(--color-text-title, #0D0E10);
     font-size: 18px;
 }
-.lecture .s-name{font-style: 24px;}
+.lecture .s-name{font-size: 24px;}
 
 .video-player-area{
   display: flex;
@@ -2451,7 +2571,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */} 
 
-.job-clsBox-cont{display:flex; flex-direction: column; padding:20px 0; min-height: 300px; }
+.job-clsBox-cont{display:flex; flex-direction: column; padding:20px 0; min-height: 200px; }
 .job-clsBox-cont .label{display:flex; align-items: center; gap:5px; color: var(--color-text-sub_title, #0D0E10); font-size: 14px;}
 .job-clsBox-cont .text{font-size: 14px;}
 
@@ -2753,6 +2873,11 @@ gap:5px
 .mypage-education-top .krds-btn.text:hover{color:#0D0E10}
 
 .recomend-verify-area{width:100%; padding:20px 0; background-color: #F8F8F8; display: flex; justify-content: center;     border-radius: 12px;}
+
+.edu-stat .krds-btn:focus{color:#fff;}
+.edu-stat .krds-btn.tertiary:focus{color: var(--krds-button--color-tertiary-text);}
+
+
 
 /** 노트북 */
 @media (max-width: 1440px) {
@@ -3166,6 +3291,10 @@ font-size: 18px;
     flex: 0 49%;
 }
 
+.user-box .user-info-list .label {
+    font-size: 16px;
+}
+
   }
 
 
@@ -3261,6 +3390,20 @@ font-size: 18px;
     font-size: 18PX;
 }
 .c-name{display:none}
+
+.myposts-item .ico {
+    width: 70px;
+    height: 70px;
+}
+
+.myposts-list>* {
+    flex: 0 0 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.myposts-list .text, .c-lecturel-bottom .col {font-size: 14px;}
 
   }
 

@@ -2570,7 +2570,6 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
   }
 
   .table-board table tbody tr td.num, .table-board table tbody tr td:last-child.file-td {
-    display: ;  /*보임*/
   }
   .table-board table tbody tr td.cell-subject {
     display: block;
@@ -3020,6 +3019,13 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
     line-height: 1.5;
 }
 
+.cell-category-wrap{
+   border-right: 0 solid #ececec;
+}
+
+.table-board table tbody tr td.cell-category:after {
+    width:0
+}
 
 }
 
@@ -3284,6 +3290,14 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
 
 .detailed-file-wrap .krds-btn.fileBtn{
   display: none;
+}
+
+.search-list-top.edu-board {
+    flex-direction: row;
+}
+
+.search-list-top .sch-info, .search-list-top .sch-left {
+    order: 0;
 }
 
 

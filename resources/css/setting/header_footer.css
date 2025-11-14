@@ -685,6 +685,11 @@ line-height: 150%; /* 21px */}
 }
 .login-session{margin-right:0}
 
+.krds-main-menu-mobile .gnb-wrap .gnb-header .gnb-service-menu .qk-menu {
+   gap:5px
+}
+
+
 }
 
 

@@ -3,7 +3,6 @@
 @import url('./mypage.css');
 
 
-
 .krds-breadcrumb-wrap .breadcrumb li a.txt{
     text-decoration: none; cursor: initial;
 }
@@ -546,14 +545,14 @@ width:var(--krds-modal--size-large);
 .login-wrap .login-img::before{
     content: "";
     display: block;
-    width: 325px;
-    height: 191px;
+    width: 491px;
+    height: 287px;
     background-image: url(../../img/login/login-bg2.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position:absolute;
-    top:calc(50% - 150px);
+    top:calc(50% - 270px);
 
 }
 .login-wrap .login-contents{
@@ -695,7 +694,7 @@ background: var(--color-bg-nomal, #F8F8F8); margin: 30px auto }
 .ico-find.withdraw::before { content:""; display: block; background: url(../../img/icon/ico-withdraw.svg)no-repeat; width: 76px; height:100px}
 
 
-.find-id-area{width: 100%; display: flex; justify-content: center; align-items: center; padding:20px; 0}
+.find-id-area{width: 100%; display: flex; justify-content: center; align-items: center; padding:20px; }
 .find-id-area .label { color: var(--color-text-subtle, #464C53); font-size: 17px; font-style: normal; font-weight: 400; line-height: 150%; /* 24px */ margin-right:20px}
 .find-id-area .user-id { color: var(--color-text-title, #0D0E10); font-size: 24px; font-style: normal; font-weight: 700; line-height: 150%; /* 36px */}
 
@@ -1018,6 +1017,14 @@ border-radius: 8px;
 border: 1px solid #58616A;
 background: #FFF;
 }
+
+ .phoneVerify.active{
+    background-color: #e0ecff;
+ }
+ .phoneVerify.false{
+    background-color: #ffcbcb;
+ }
+
 
 .ico-verti::before{content:""; display: block; background: url(../../img/join/ico-verti.svg)no-repeat; width: 60px; height:60px}
 
