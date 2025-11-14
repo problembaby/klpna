@@ -19,6 +19,66 @@
     <script src="../resources/krds/js/component/ui-script.js"></script>
     <script src="../resources/krds/js/pattern/pattern.js" defer></script>
     <script src="../resources/js/script.js"></script>
+
+
+    <script>
+        
+	// 가상계좌 번호 복사 함수
+	function copyAccountNumber() {
+		var accountNumber = document.getElementById('accountNumber').innerText;
+		var button = event.currentTarget;
+
+		// Clipboard API 사용 (최신 브라우저)
+		if (navigator.clipboard && window.isSecureContext) {
+			navigator.clipboard.writeText(accountNumber).then(function() {
+				showCopySuccess(button);
+			}).catch(function(err) {
+				// Clipboard API 실패 시 fallback
+				fallbackCopyTextToClipboard(accountNumber, button);
+			});
+		} else {
+			// 구형 브라우저 fallback
+			fallbackCopyTextToClipboard(accountNumber, button);
+		}
+	}
+
+	// Clipboard API를 지원하지 않는 브라우저를 위한 fallback
+	function fallbackCopyTextToClipboard(text, button) {
+		var textArea = document.createElement("textarea");
+		textArea.value = text;
+		textArea.style.position = "fixed";
+		textArea.style.left = "-999999px";
+		textArea.style.top = "-999999px";
+		document.body.appendChild(textArea);
+		textArea.focus();
+		textArea.select();
+
+		try {
+			var successful = document.execCommand('copy');
+			if (successful) {
+				showCopySuccess(button);
+			} else {
+				alert('복사에 실패했습니다.');
+			}
+		} catch (err) {
+			alert('복사에 실패했습니다.');
+		}
+
+		document.body.removeChild(textArea);
+	}
+
+	// 복사 성공 시 버튼 상태 변경
+	function showCopySuccess(button) {
+		var originalText = button.innerHTML;
+		button.classList.add('copied');
+		button.innerHTML = '<i class="ico-copy"></i> 복사완료!';
+
+		setTimeout(function() {
+			button.classList.remove('copied');
+			button.innerHTML = originalText;
+		}, 2000);
+	}
+    </script>
 </head>
 
 <body>
@@ -133,6 +193,32 @@
                                         </li>
                                     </ul>
                                 </div>
+
+                                 <!--가상계좌 정보-->
+                                <c:if test="${not empty dataVo07 and not empty dataVo07.issuBankNm}">
+                                <div class="virtual-account-box">
+                                    <div class="virtual-account-title">
+                                        <i class="ico-bank"></i>
+                                        입금 대기 중인 가상계좌
+                                    </div>
+                                    <div class="virtual-account-info">
+                                        <div class="virtual-account-number">
+                                            <span id="accountNumber">101010-23212333</span>
+                                            <span class="virtual-bank">(신한은행)</span>
+                                        </div>
+                                        <div class="virtual-account-expiry">만료일: 2025-11-07 12:50 </div>
+                                        <div class="virtual-account-actions">
+                                            <button type="button" class="btn-copy-account" onclick="copyAccountNumber()">
+                                                <i class="ico-copy"></i>
+                                                계좌번호 복사
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </c:if>
+                                <!--//가상계좌 정보-->
+
+
                                 <!--자격신고 대상자 바로가기-->
                                 <a href="#" class="license-box">
                                     <div class="lincense-box-txt">
