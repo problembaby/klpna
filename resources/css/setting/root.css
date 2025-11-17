@@ -7,11 +7,13 @@
     --krds-contents-wrap-size: 1440px;
     --color-border-nomal: #C6C6C6;
     --color-bg-nomal: #F8F8F8;
+
+    --krds-typo-font-type: Pretendard GOV;
+    --krds-typo-font-weight-regular: Regular;
+    --krds-typo-font-weight-bold: Bold;
+    --krds-typo-letter-spacing-0: 0rem;
+    --krds-typo-letter-spacing-1: 0.1rem;
     
-
-
-    
-
 }
 
 

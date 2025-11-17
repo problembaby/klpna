@@ -1,3 +1,4 @@
+@import url('./fonts/pretendard-gov.css');  /** 폰트 */
 @import url('./setting/root.css');  /** 루트 */
 @import url('./setting/common.css'); /** 공통 */
 @import url('./setting/layout.css'); /** 컴포넌트 */ 
