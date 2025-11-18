@@ -834,7 +834,7 @@ line-height: 22px; /* 146.667% */}
 .local-bbs-list .gallery-list .item a .img { overflow: hidden; }
 .local-bbs-list .gallery-list .item a img { width:100%; aspect-ratio:5/3; object-fit:cover; }
 
-.local-bbs-list .gallery-list .item a .txt { color: var(--color-text-basic, #0D0E10); font-size: 16px; font-style: normal; font-weight: 400; margin-top: 10px; }
+.local-bbs-list .gallery-list .item a .txt { color: var(--color-text-basic, #0D0E10); font-size: 16px; font-style: normal; font-weight: 400; margin-top: 10px; word-break: break-all; }
 .local-bbs-list .gallery-list .item a:hover .txt{text-decoration: underline;}
 
 
