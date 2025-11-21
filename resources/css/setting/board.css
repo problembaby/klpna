@@ -2470,6 +2470,21 @@ td.cell-subject > .ico-new{margin-left: 5px; position: relative }
     margin-left: 10px;
 }
 
+.krds-structured-list .card-body .c-tit .c-tit-link{position:relative}
+.krds-structured-list .card-body .c-tit .c-tit-link .ico-new{ display:inline-block; position: relative;}
+.krds-structured-list .card-body .c-tit .c-tit-link .ico-new::before {
+    content: "";
+    background: url(../../img/icon/new.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-85%);
+    margin-left: 0;
+}
+}
+
   
 .c-tit .ico-new::before {
     top: 4px;

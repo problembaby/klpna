@@ -1713,12 +1713,12 @@ line-height: 150%;
     gap: 5px;
 }
 
-.edu-sel-summary  .lec-detail-list li .text {
+.edu-sel-summary .lec-detail-list li .text {
     font-size: 14px;
 }
-.edu-sel-summary  .lec-detail-list li .subject {
+.edu-sel-summary .lec-detail-list li .subject {
 color: var(--color-text-bosu_txt, #0050CA);
-font-size: 18px;
+font-size: 16px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 27px */
