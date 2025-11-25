@@ -2017,6 +2017,24 @@ line-height: 150%; /* 24px */  }
 
 }
 
+/* 환불금액 0원 안내 메시지 */
+.refund-zero-notice {
+  margin-top: 20px;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: #FFF3F5;
+  border: 1px solid #FFCDD2;
+}
+
+.refund-zero-notice .notice-text {
+/*   color: var(--color-system-danger, #DE3412); */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  margin: 0;
+  text-align: left;
+}
+
 .refund-acct-box .msg{
 color: var(--color-system-danger, #DE3412);
 font-size: 16px;
