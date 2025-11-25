@@ -1825,7 +1825,7 @@ line-height: 150%; /* 36px */
 margin-bottom: 20px;
  }
 
- .cwc-list{gap:14px}
+ .cwc-list{gap:10px}
 .cwc-text{display: flex; flex-direction: column; gap:14px; margin-top: 20px;}
 .cwc-list2{padding:10px 0;}
 .cwc-list2 li{
