@@ -689,7 +689,7 @@ line-height: 22px; /* 146.667% */}
     font-weight: var(--krds-font-weight-bold);
     border: 0;
     border-radius: var(--krds-radius-max);
-    background-color: rgba(250, 250, 250, 1);
+    background-color: rgb(255, 255, 255);
 }
 .mainSwiper2 .swiper-indicator [class^=swiper-button-] { display: flex; align-items: center; justify-content: center; flex-direction: row; width: var(--krds-size-height-6); height: var(--krds-size-height-6); flex-shrink: 0; border-radius: 0; border: 0; background-color: var(--krds-light-color-action-white); }
 .mainSwiper2 .swiper-btn-pos { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); }
