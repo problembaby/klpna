@@ -2949,6 +2949,11 @@ body.edu-appl-step03 .step02 {
     padding: 20px 0px;
     background-color: unset;
 }
+
+.sgc-p {
+    font-size: 12px;
+}
+
 }
 
 @media (max-width: 360px) {
